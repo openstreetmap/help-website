@@ -1,4 +1,4 @@
-#!usr/bin/env python3
+#!/usr/bin/env python3
 #
 # fetch-questions.py
 # Import questions from an OSQA site.
