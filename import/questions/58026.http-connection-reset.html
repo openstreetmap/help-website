@@ -1,0 +1,1865 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>HTTP connection reset - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi everyone. I have a persistent problem between my local machine and an external HTTP server. Everytime I try to download a page the connection resets and I have to retry with the remaining bytes. In wireshark I see TCP dup acks, retransmissions, and RST for every segment! Can somebody help me to d..." />
+        <meta name="keywords" content="dup-ack,reset,http,d-sack,sack" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/58026/http-connection-reset" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/58026/http-connection-reset?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='MPbiylNiUGeTrMmBITXBqfCjrwEAZbcw' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/58026/http-connection-reset">HTTP connection reset</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-58026-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58026/up/" rel="nofollow"> </a>
+<div id="post-58026-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-58026-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58026/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/58026/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi everyone. I have a persistent problem between my local machine and an external HTTP server. Everytime I try to download a page the connection resets and I have to retry with the remaining bytes.
+In wireshark I see TCP dup acks, retransmissions, and RST for every segment!</p>
+<p>Can somebody help me to debug it?</p>
+<p><a href="https://www.cloudshark.org/captures/7af8a5c691c7">https://www.cloudshark.org/captures/7af8a5c691c7</a></p>
+<p>Thanks a lot!</p>
+<p>Hugo</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/dup-ack/" class="post-tag tag-link-dup-ack"
+                                        title="see questions tagged 'dup-ack'" rel="tag">dup-ack</a>
+                                
+                                    <a href="/tags/reset/" class="post-tag tag-link-reset"
+                                        title="see questions tagged 'reset'" rel="tag">reset</a>
+                                
+                                    <a href="/tags/http/" class="post-tag tag-link-http"
+                                        title="see questions tagged 'http'" rel="tag">http</a>
+                                
+                                    <a href="/tags/d-sack/" class="post-tag tag-link-d-sack"
+                                        title="see questions tagged 'd-sack'" rel="tag">d-sack</a>
+                                
+                                    <a href="/tags/sack/" class="post-tag tag-link-sack"
+                                        title="see questions tagged 'sack'" rel="tag">sack</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Dec '16, 11:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/771fa0a83292f45d181b6d82da5c6f17?s=32&amp;d=identicon&amp;r=g" alt="huguei's gravatar image" />
+    <p><a href="/users/26924/huguei">huguei</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="huguei has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/58026/">
+                retagged
+                <strong>20 Dec '16, 20:08</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/35a0c1d0cf15b9d54d73bf54ae28abcd?s=32&amp;d=identicon&amp;r=g" alt="Philst's gravatar image" />
+            <p><a href="/users/26122/philst">Philst</a><br/>
+            <span class="score" title="431 reputation points">431</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="16 badges"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-58026">
+    
+        <a name="58028"></a>
+        <div class="comment" id="comment-58028">
+            <div id="post-58028-score" class="comment-score"></div>
+            <div class="comment-text"><p>i have no idea why the server should retransmit (at #21) bytes 10137 to 10562 in such short time interval (0.010 ms). The iRTT is 144 ms.</p>
+
+<p>any ideas?</p></div>
+            <div class="comment-info" id="comment-58028-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Dec '16, 12:17)</span>
+                <a class="comment-user userinfo" href="/users/25986/soochi">soochi</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58026" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58026-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    6 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/58026/http-connection-reset?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/58026/http-connection-reset?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/58026/http-connection-reset?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/58026/http-connection-reset?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="58204"></a>
+                    <div id="answer-container-58204" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-58204-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58204/up/" rel="nofollow"> </a>
+<div id="post-58204-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-58204-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58204/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="huguei has selected this answer as the correct answer"
+        href="/accept_answer/58204/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As usual for "hard to solve” problems, this one involves a combination of behaviours in various devices.</p>
+<p>RELEVANT OBSERVATIONS:</p>
+<ol>
+<li>Round Trip Time is around 144 ms.</li>
+<li>The client’s SYN specifies a Windows Scale of 7 (factor 128), the server’s ACK has Scale 0 (factor 1).</li>
+<li>The client’s SYN has a Receive Window absolute value of 5840.</li>
+<li>The client’s ACK and GET advertise a Receive Window absolute value of 46 (x 128 = 5888 bytes.</li>
+<li>The server’s response ignores that RWIN value and sends the whole 10 KB file in one burst.</li>
+<li>Packets are lost in the network after RWIN is exceeded (plus one packet or so, around 7 KB).</li>
+<li>The ACKs (or SACKs) from the client trigger Resets from the “server” instead of triggering retransmissions of the lost data.</li>
+<li>The “server” IP address of 72.21.81.189 resolves to “ianadata.vip.icann.org”, giving a strong clue that our TCP connection is going to a load balancer and not the “real” server that is behind it.</li>
+<li>The IP IDs of the initial server ACK and all the Resets are different to the IP IDs of the “server” data packets. </li>
+<li>The second initial server ACK (just 0.2ms after the first) has an IP ID that matches the server data packets.</li>
+<li>A later capture file, “web2-iana-nosack-full-bis”, contains both failed and successful transactions. The second successful transaction differs from the failed ones only in that there is a small burst of 4 KB of server data, then just 1.3 ms until a second larger burst. The failed transactions have one single large burst of 10 KB (with packets being dropped after about 7 KB.</li>
+</ol>
+<p>HYPOTHESES:</p>
+<p>A. The TCP connection from the client ends at the load balancer. A different connection is made from the load balancer to the “real” server.</p>
+<p>B. The first “server” ACK at the start and the final Resets all originate from the load balancer.</p>
+<p>C. The second ACK and all data packets originate from the “real” server.</p>
+<p>D. The real server sends the full response to the load balancer very quickly.</p>
+<p>E. The load balancer buffers the full response and takes responsibility for delivering the data to the client.</p>
+<p>F. The load balancer is ignoring the client’s Receive Window value of 5888 and transmitting the full 10KB response in one large burst – having 10 KB of “packets in flight”. Could the load balancer be using the Receive Window value in the client’s SYN packet rather than the client’s GET packet, then applying the client’s Windows Scale factor (x 128)?</p>
+<p>G. A device in the path is dropping packets that exceed the client’s Receive Window (but can “catch” one or two packets in excess). We’ll call this the “dropping device” and it could be a router, firewall, etc.</p>
+<p>H. From “web2-iana-nosack-full-bis” we can guess that this “dropping device” is within 1.3 ms of the client (i.e., an RTT of less than 2.6ms).</p>
+<p>I. The failed and successful transactions seem to indicate that the load balancer knows when the “dropping device” has dropped packets, because only then does it enter the “Reset everything” state.</p>
+<p>If the “dropping device” notifies the load balancer, what form might such a notification take? ICMP? Reset?</p>
+<p>The first hypothesis was related to the separate connections between the client-load balancer and then load balancer-server. However, the additional capture file uploaded by <a href="/users/26924/huguei"><a href="/users/26924/huguei">@huguei</a></a>, "web2-iana-nosack-full-bis", contained successful transactions that provided evidence against it. Just for information and discussion, I've included the diagram for this first hypothesis at the end of this post.</p>
+<p>The second hypothesis is now the one I believe to have the most chance of being closer to the truth.</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/58026-7.png"></p>
+<p>OTHER OBSERVATIONS:</p>
+<p>The HTTP header information tells us:</p>
+<pre><code>  User-Agent:     curl/7.15.5 (x86_64-redhat-linux-gnu) libcurl/7.15.5 OpenSSL/0.9.8b zlib/1.2.3
+</code></pre>
+<p>The HTTP header does not ask for persistent connections, that is, does not contain: </p>
+<pre><code>  Connection:          Keep-Alive
+</code></pre>
+<p>MORE QUESTIONS:</p>
+<ul>
+<li>What device is a candidate for the “dropping device” – at under 2.6 ms RTT from the client?</li>
+<li>Could the local client “TCP Offload” feature be dropping the “excess” packets?</li>
+<li>If the “dropping device” notifies the load balancer, what form might such a notification take? ICMP? Reset?</li>
+<li>Is it possible to get a capture taken on the wire at the client PC?</li>
+<li>Is it possible to get a capture taken at the Internet edge at the client location?</li>
+</ul>
+<p>POSSIBLE FIXES OR WORKAROUNDS:</p>
+<p>The apparent “root cause” is that the server (load balancer) appears to be ignoring the client’s advertised Receive Window of 5888 bytes. It is transmitting the whole response of 10 KB in a single packet burst.</p>
+<p>The correct fix for this would need to be made at the IANA server or load balancer.</p>
+<p>We don’t have the ability to do anything at the server/load balancer end. All we can do is try some configuration changes at the client:</p>
+<ul>
+<li>
+<p>Set a larger initial Receive Window size (RWIN &gt;10KB). The “dropping” device and client will be then be able to receive the full 10KB burst.</p>
+</li>
+<li>
+<p>Try disabling the TCP Window Scaling option.</p>
+</li>
+<li>
+<p>Try disabling the local "TCP Offload" function.</p>
+</li>
+<li>
+<p>Add, “Connection:  Keep-Alive” to the client’s HTTP GET request header. The server/LB may not terminate the connection prematurely (this is more related to the "First Hyothesis").</p>
+</li>
+</ul>
+<p>PROBLEMS AT THE IANA SERVER END:</p>
+<p>Apparently, the load balancer and/or server appears to be ignoring the client’s advertised Receive Window and transmits a burst of in-flight data that significantly exceeds it.</p>
+<ul>
+<li>Examine the load balancer/server and adjust this behaviour. Could the load balancer be using the Receive Window value in the client’s SYN packet rather than the client’s GET packet, then applying the client’s Windows Scale factor (x 128)?</li>
+</ul>
+<p>Apparently, both the load balancer and server appears to transmit their own ACK to the client’s GET request. We observe both ACKs arriving at the client.</p>
+<ul>
+<li>Examine the load balancer and adjust this behaviour so that only one ACK is sent to the client.</li>
+</ul>
+<p>We observe an unnecessary retransmission of the last smaller data packet of the response (when SACK is enabled). This arrives just 10ms or less after the original. It occurs for different files retrieved from the same site.</p>
+<ul>
+<li>Investigate a possible network anomaly within the IANA data centre. Possibly anywhere between the “real” server, load balancer and WAN router.</li>
+</ul>
+<p>WIRESHARK OUTPUTS</p>
+<p>Here are the Wireshark packets lists, with notations, for each of the capture files:</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/58026-1.png"></p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/58026-2.png"></p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/58026-3.png"></p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/58026-4.png"></p>
+<p>Finally, the diagram for the First Hypothesis:</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/58026-6_oCTdshG.png"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/58204/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Dec '16, 22:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/35a0c1d0cf15b9d54d73bf54ae28abcd?s=32&amp;d=identicon&amp;r=g" alt="Philst's gravatar image" />
+    <p><a href="/users/26122/philst">Philst</a><br/>
+    <span class="score" title="431 reputation points">431</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="16 badges"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Philst has 6 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/58204/">
+                edited
+                <strong>19 Dec '16, 14:38</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-58204">
+    
+        <a name="58218"></a>
+        <div class="comment" id="comment-58218">
+            <div id="post-58218-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've just updated the post to add another possible reason for the load balancer to misbehave. </p>
+
+<p>Could the load balancer be using the Receive Window value in the client’s SYN packet rather than the client’s GET packet, then applying the client’s Windows Scale factor (x 128)?</p></div>
+            <div class="comment-info" id="comment-58218-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '16, 18:44)</span>
+                <a class="comment-user userinfo" href="/users/26122/philst">Philst</a>
+                
+            </div>
+        </div>
+    
+        <a name="64336"></a>
+        <div class="comment" id="comment-64336">
+            <div id="post-64336-score" class="comment-score"></div>
+            <div class="comment-text"><p>It seems images are lost with the new site. They're still on:
+<a href="https://osqa-ask.wireshark.org/upfiles/58026-1.png">https://osqa-ask.wireshark.org/upfiles/58026-1.png</a>
+<a href="https://osqa-ask.wireshark.org/upfiles/58026-2.png">https://osqa-ask.wireshark.org/upfiles/58026-2.png</a>
+<a href="https://osqa-ask.wireshark.org/upfiles/58026-3.png">https://osqa-ask.wireshark.org/upfiles/58026-3.png</a>
+<a href="https://osqa-ask.wireshark.org/upfiles/58026-4.png">https://osqa-ask.wireshark.org/upfiles/58026-4.png</a>
+<a href="https://osqa-ask.wireshark.org/upfiles/58026-6_oCTdshG.png">https://osqa-ask.wireshark.org/upfiles/58026-6_oCTdshG.png</a></p></div>
+            <div class="comment-info" id="comment-64336-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Dec '17, 09:53)</span>
+                <a class="comment-user userinfo" href="/users/26924/huguei">huguei</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58204" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58204-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="58135"></a>
+                    <div id="answer-container-58135" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-58135-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58135/up/" rel="nofollow"> </a>
+<div id="post-58135-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-58135-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58135/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Building on the other answers, there must be something in the path reacting to your all of your ACK packets with a TCP/RST. I just tried connecting to the same server and did not have the same issue. I assume our paths towards the server are different, but the same in the last part, so it must be something in your packets. I closely examined your packets and see that all the incoming packets have <code>0010 10.. = Differentiated Services Codepoint: Assured Forwarding 11 (10)</code>. Now I expected to see the packets on my side with DSCP 0x00, but I also got a DSCP marking, but mine is <code>0000 10.. = Differentiated Services Codepoint: Unknown (2)</code>.</p>
+<p>Do you have a QoS policy in your network in such a way that packets leave your network with DSCP markings? Maybe there is a device near or at IANA that does not like your markings after the 3-way handshake.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/58135/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Dec '16, 04:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-58135">
+    
+        <a name="58159"></a>
+        <div class="comment" id="comment-58159">
+            <div id="post-58159-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I did the test to download <a href="http://data.iana.org/TLD/tlds-alpha-by-domain.txt">http://data.iana.org/TLD/tlds-alpha-by-domain.txt</a> from a Windows 7 client using Firefox. There was no DSCP marking at all.</p>
+
+<p>Then I did another test to send out packets with DSCP AF11 marking (from a windows XP client using IE). The returning packets did not have any marking. </p>
+
+<p>It could be that the markings set by me were cleared somewhere on the path. But unluckily the problem could not be reproduced :(
+here is the capture made with AF11 marking -&gt; <a href="https://drive.google.com/open?id=0B7Io9WiIN49VbmhiS0psNXIyaEE">https://drive.google.com/open?id=0B7Io9WiIN49VbmhiS0psNXIyaEE</a></p></div>
+            <div class="comment-info" id="comment-58159-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Dec '16, 01:32)</span>
+                <a class="comment-user userinfo" href="/users/25986/soochi">soochi</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58135" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58135-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="58027"></a>
+                    <div id="answer-container-58027" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-58027-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58027/up/" rel="nofollow"> </a>
+<div id="post-58027-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-58027-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58027/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The client seems to have a bug in the SACK implementation.</p>
+<p>1424 bytes (segment 7265-8689) got lost after frame #16. First duplicate acknowledgement is issued for this missing block at frame #18 which also selectively acknowledges bytes from 8689 to 10137. Second duplicate acknowledgement is issued at frame #20 which again selectively acknowledges bytes 8689 to 10562. Once the frame #21 arrives third duplicate acknowledgement is transmitted which has 2 SACK blocks 8689 to 10562 and 10137 to 10562.</p>
+<p>Even if these segments are contiguous they are represented as 2 different blocks. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/58027/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Dec '16, 12:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5de3f05c3183608f6986dd68fa7eb0f3?s=32&amp;d=identicon&amp;r=g" alt="soochi's gravatar image" />
+    <p><a href="/users/25986/soochi">soochi</a><br/>
+    <span class="score" title="57 reputation points">57</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="soochi has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-58027">
+    
+        <a name="58042"></a>
+        <div class="comment" id="comment-58042">
+            <div id="post-58042-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks soochi!
+However I disabled sack in kernel and the problem persists:
+<a href="https://www.cloudshark.org/captures/eef50236731a">https://www.cloudshark.org/captures/eef50236731a</a>
+:(</p></div>
+            <div class="comment-info" id="comment-58042-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Dec '16, 05:31)</span>
+                <a class="comment-user userinfo" href="/users/26924/huguei">huguei</a>
+                
+            </div>
+        </div>
+    
+        <a name="58044"></a>
+        <div class="comment" id="comment-58044">
+            <div id="post-58044-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Check IP ID field - it's different in RST packets. It looks like another device is sending these RSTs. Increasing TCP Seq of RSTs tells us that they were sent in response to every our ACK being sent after 200 OK HTTP server reply.</p></div>
+            <div class="comment-info" id="comment-58044-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Dec '16, 05:57)</span>
+                <a class="comment-user userinfo" href="/users/25315/packet_vlad">Packet_vlad</a>
+                
+            </div>
+        </div>
+    
+        <a name="58053"></a>
+        <div class="comment" id="comment-58053">
+            <div id="post-58053-score" class="comment-score"></div>
+            <div class="comment-text"><p>It could be something from the application which triggers the reset. It seems that the server resets all the segments which it send for some reason. Can you provide a trace where the application layer data is also visible.</p></div>
+            <div class="comment-info" id="comment-58053-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Dec '16, 13:26)</span>
+                <a class="comment-user userinfo" href="/users/25986/soochi">soochi</a>
+                
+            </div>
+        </div>
+    
+        <a name="58093"></a>
+        <div class="comment" id="comment-58093">
+            <div id="post-58093-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, here it's with full packets:</p>
+
+<p><a href="https://www.cloudshark.org/captures/f7af91207479">https://www.cloudshark.org/captures/f7af91207479</a></p>
+
+<p>Application is curl, but happens the same using wget.</p></div>
+            <div class="comment-info" id="comment-58093-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 10:53)</span>
+                <a class="comment-user userinfo" href="/users/26924/huguei">huguei</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58027" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58027-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="58069"></a>
+                    <div id="answer-container-58069" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-58069-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58069/up/" rel="nofollow"> </a>
+<div id="post-58069-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-58069-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58069/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Frame #21 is a retransmission of #19 - which arrives just 10.47ms later.  There is no apparent indication of why this data is retransmitted.</p>
+<p>Frame #22 is not just a SACK, it is a D-SACK (Duplicate SACK) which is an extended way of using the SACK mechanism to report that an unnecessary duplicate data has been received. This extension functionality is documented in RFC 2883.</p>
+<p>The Resets appear one RTT after the client sends the D-SACK.</p>
+<p>My guess would be that the server doesn't understand D-SACKs at all and issues the Resets in response to this one. The RFC specifies that the duplicated data should be in the first SACK block.
+This is correct in this case, the first SACK block is the sequence numbers for #19 and #21. The second SACK block is the larger range that is still being selectively ACKed (the gap between #15 and #17).</p>
+<p>Disabling SACKs would be a workaround for this. The "proper" fix would be to stop the unnecessary retransmissions.  Note that #21 (IP ID = 37041) is a genuine retransmission of #19 (IP ID 37040).</p>
+<p>The RTT seems to be just under 142ms but the Resets appear just 134ms after the D-SACK.  Perhaps Packet_Vlad is onto something?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/58069/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Dec '16, 02:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/35a0c1d0cf15b9d54d73bf54ae28abcd?s=32&amp;d=identicon&amp;r=g" alt="Philst's gravatar image" />
+    <p><a href="/users/26122/philst">Philst</a><br/>
+    <span class="score" title="431 reputation points">431</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="16 badges"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Philst has 6 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/58069/">
+                edited
+                <strong>15 Dec '16, 18:36</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-58069">
+    
+        <a name="58086"></a>
+        <div class="comment" id="comment-58086">
+            <div id="post-58086-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Philst. I disabled SACK and it seems to have solved the retransmissions, however the resets are still there :(</p>
+
+<p><a href="https://www.cloudshark.org/captures/eef50236731a">https://www.cloudshark.org/captures/eef50236731a</a></p>
+
+<p>So it seems the culprit is some middlebox resetting the connection.</p>
+
+<p>Thanks!</p></div>
+            <div class="comment-info" id="comment-58086-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 09:26)</span>
+                <a class="comment-user userinfo" href="/users/26924/huguei">huguei</a>
+                
+            </div>
+        </div>
+    
+        <a name="58130"></a>
+        <div class="comment" id="comment-58130">
+            <div id="post-58130-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/26122/philst">@Philst</a> Thanks for the explanation with regards to extended SACK. </p>
+
+<p>what is the logic behind calculating the delta time from #22? should it not be the total time from #9? because the relative sequence of 1461 is being reseted at #23 which happened after 145ms.</p></div>
+            <div class="comment-info" id="comment-58130-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '16, 01:55)</span>
+                <a class="comment-user userinfo" href="/users/25986/soochi">soochi</a>
+                
+            </div>
+        </div>
+    
+        <a name="58149"></a>
+        <div class="comment" id="comment-58149">
+            <div id="post-58149-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You're absolutely right <a href="/users/25986/soochi"></a><a href="/users/25986/soochi">@soochi</a>.  There is a Reset in response to every one of the client's ACKs. There are 8 ACKs and 8 Resets.
+ #23 is a response to #8, #24 to #10, #25 to #12 .... #30 to #22.
+The sequence numbers in the Resets match to the ACK sequence numbers in the ACK packets. The RTT between those pairs is as you'd expect.</p>
+
+<p>This pattern is the same in the other captures too.</p>
+
+<p>I'm very unhappy with my answer because I was far too hasty - and didn't give it enough thought before posting the answer. I'm especially disappointed in myself because <a href="/users/26924/huguei"></a><a href="/users/26924/huguei">@huguei</a> had already stated that he ran a test after disabling SACK. That nullifies my "guess" straight away. The time between the D-SACK and Resets doesn't mean anything.</p>
+
+<p>From now on, I'm not going to answer any question unless I've:</p>
+
+<ul>
+<li>Read everything on the question page.</li>
+<li>Factored in every available piece of evidence.</li>
+<li>Slept on it, to allow time for more thought processes.</li>
+</ul>
+
+<p>Now that I've looked at all 3 of the available capture files, I'm working on a hypothesis. I'll post a separate answer once I've solidified my thinking.</p>
+
+<p>The "nosack-full" file is likely to yield the best results but it is good to have more than one sample to cross-check ideas.</p></div>
+            <div class="comment-info" id="comment-58149-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '16, 15:00)</span>
+                <a class="comment-user userinfo" href="/users/26122/philst">Philst</a>
+                
+            </div>
+        </div>
+    
+        <a name="58168"></a>
+        <div class="comment" id="comment-58168">
+            <div id="post-58168-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks <a href="/users/26122/philst">@Philst</a> ! :) all your answers are valuable to me.</p>
+
+<p>I did another test, uploaded here <a href="https://www.cloudshark.org/captures/3e5241cb876c">https://www.cloudshark.org/captures/3e5241cb876c</a></p>
+
+<p>This time it was without SACK, and:</p>
+
+<ul>
+<li>packets 1 to 21 was the same curl command as always, that was aborted</li>
+<li>packets 22 to 39 was a "wget" command to the same target, that failed too, however from packet 40 to 52 wget itselfs retries with a Range header, finishing to download the rest of file. Ends successfully.</li>
+<li>packets 53 to 73, a curl command again, and this time it worked!</li>
+<li>a few seconds after, packets 74 to 91, tried again with curl and this time failed.</li>
+</ul>
+
+<p>Hope it helps to confirm your hypothesis!</p></div>
+            <div class="comment-info" id="comment-58168-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Dec '16, 06:38)</span>
+                <a class="comment-user userinfo" href="/users/26924/huguei">huguei</a>
+                
+            </div>
+        </div>
+    
+        <a name="58174"></a>
+        <div class="comment" id="comment-58174">
+            <div id="post-58174-score" class="comment-score"></div>
+            <div class="comment-text"><p>why does the trace have packets larger than MSS. okay could be offloading, then why does the server only send reset to those segments in the trace.</p>
+
+<p>I noticed this a couple of time in the traces. example from trace web2iana-nosack-full-bis.pcap: #30 carries 2852 bytes of data, it has ID of 47601. #32 the next frame from server has ID of 47603. In this case i believe that the ID 47602 is missing because of offloading. Then why are the resets only sent for sequences 1461, 4313, 5761 and 7221 and interestingly these are having ID of 60014-60017. </p>
+
+<p>I cannot imagine of a reason for this :(</p></div>
+            <div class="comment-info" id="comment-58174-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Dec '16, 13:18)</span>
+                <a class="comment-user userinfo" href="/users/25986/soochi">soochi</a>
+                
+            </div>
+        </div>
+    
+        <a name="58177"></a>
+        <div class="comment not_top_scorer" id="comment-58177">
+            <div id="post-58177-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thankyou <a href="/users/26924/huguei"></a><a href="/users/26924/huguei">@huguei</a>, I really appreciate your comments.</p>
+
+<p>I'm nearly ready to post a new answer. The long version is quite a story and I need to finish some diagrams to include with it.</p>
+
+<p>To answer your question though.</p>
+
+<p>Yes, the new capture does confirm my hypothesis. The clue to why the two of your new samples worked is that:</p>
+
+<ul>
+<li>
+<p>the first one was a small response (under 4KB) and, more interestingly,</p>
+</li>
+<li>
+<p>I believe the reason the second one succeeded is that #65 was 1.3ms behind the previous data, #63.</p>
+</li>
+</ul>
+
+<p>That last one is a valuable clue. Your homework is to work out what device is between 1ms and 1.3ms away from your client PC (i.e., RTT of 2ms to 2.6ms).  My guess is a low cost router.</p>
+
+<p>Now for <a href="/users/25986/soochi"></a><a href="/users/25986/soochi">@soochi</a>'s questions.</p>
+
+<p>The Resets are always in response to the client's ACKs, you'll see that the number of Resets always matches the number of client ACKs. The sequence numbers in the Resets match the ACK sequence numbers in the ACKs.</p>
+
+<p>In your example of data packet #30, the ACK for that is #31 (ACK Seq 4313) and the corresponding Reset is #37 (Seq 4313).
+The pairings are (#29, #36); (#31, #37); (#33, #38); (#35, #39).</p>
+
+<p>The IP IDs of the Resets are always different too, because I believe they are originating from a load balancer, not the "real" server.
+Try a DNS lookup for "ianadata.vip.icann.org"</p>
+
+<p>Hopefully it won't be too long before I post my new answers.</p></div>
+            <div class="comment-info" id="comment-58177-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Dec '16, 19:19)</span>
+                <a class="comment-user userinfo" href="/users/26122/philst">Philst</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58069" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58069-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="58223"></a>
+                    <div id="answer-container-58223" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-58223-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58223/up/" rel="nofollow"> </a>
+<div id="post-58223-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-58223-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58223/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>(Sorry this isn't an answer but I wanted to post my comment here to let everybody knows!)</p>
+<p>I tried to change the initrwnd but is not possible in my server (CentOS 5.11, with a 2.6.18 linux kernel). So I tried the second workaround of <a href="/users/26122/philst"><a href="/users/26122/philst">@Philst</a></a>, disabling the TCP window scaling option, and it works! I can download the entire page in a single connection every time I test it. Here's a capture with 3 attempts:</p>
+<p><a href="https://www.cloudshark.org/captures/eb6a42c86853">https://www.cloudshark.org/captures/eb6a42c86853</a></p>
+<p>So, I just wanted to thanks everyone for your time and help... and <a href="/users/26122/philst"><a href="/users/26122/philst">@Philst</a></a> for its great answer. I'll surely keep debugging it and let the server side knows their load balancer problem!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/58223/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Dec '16, 06:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/771fa0a83292f45d181b6d82da5c6f17?s=32&amp;d=identicon&amp;r=g" alt="huguei's gravatar image" />
+    <p><a href="/users/26924/huguei">huguei</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="huguei has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-58223">
+    
+        <a name="58224"></a>
+        <div class="comment" id="comment-58224">
+            <div id="post-58224-score" class="comment-score"></div>
+            <div class="comment-text"><p>And to add more information, disabling tcp_timestamps didn't work, neither the Connection: Keep-Alive header.</p></div>
+            <div class="comment-info" id="comment-58224-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 06:26)</span>
+                <a class="comment-user userinfo" href="/users/26924/huguei">huguei</a>
+                
+            </div>
+        </div>
+    
+        <a name="58225"></a>
+        <div class="comment" id="comment-58225">
+            <div id="post-58225-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I think it should also work using range headers. lets say just by downloading in 5000 Byte blocks. can you try this too.</p></div>
+            <div class="comment-info" id="comment-58225-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 06:44)</span>
+                <a class="comment-user userinfo" href="/users/25986/soochi">soochi</a>
+                
+            </div>
+        </div>
+    
+        <a name="58245"></a>
+        <div class="comment" id="comment-58245">
+            <div id="post-58245-score" class="comment-score">1</div>
+            <div class="comment-text"><p>That's good news <a href="/users/26924/huguei">@huguei</a>.</p>
+
+<p>In your latest "working" capture file, we can see that you now receive the 10 KB response in two separate bursts (so it costs you an extra round trip of 143 ms).</p>
+
+<p>Your initial Receive Window is 5840 (advertised in #1, #3, #4) and the server sends 5804 bytes in the first burst (#7, #9, #11).</p>
+
+<p>Your ACKs (#8, #10, #12) step up your RWIN to 14600, but that doesn't really matter because you receive the last 4757 bytes, one RTT later, in the second burst (#13 - which would have been two packets on the wire).</p>
+
+<p>You can re-enable SACKs now - and you really only need to disable Window Scaling when going to the IANA website.</p>
+
+<p>It would have been interesting to see if disabling your "TCP Offload" function had any effect. It would have been nice to confirm whether that was the "dropper".</p>
+
+<p>Without the drops, you probably would never have had the error in the first place. Each of your ACKs would have made room in your receive buffer for more data, just in time before the next packet arrived. I wonder if this may have been keeping the problem hidden for other IANA users?</p>
+
+<p>I'm glad I could help. It was a nice little exercise and I think it will become an entry on my blog one day.</p></div>
+            <div class="comment-info" id="comment-58245-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 15:28)</span>
+                <a class="comment-user userinfo" href="/users/26122/philst">Philst</a>
+                
+            </div>
+        </div>
+    
+        <a name="58256"></a>
+        <div class="comment" id="comment-58256">
+            <div id="post-58256-score" class="comment-score"></div>
+            <div class="comment-text"><p>I tried disabling "TCP offload" and didn't work ("ethtool -K eth0 tso off", if that's what you mean!)</p>
+
+<p>My default router is &lt;1ms RTT away. So it has to be something upstream. I'll keep hunting for it!</p></div>
+            <div class="comment-info" id="comment-58256-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Dec '16, 07:53)</span>
+                <a class="comment-user userinfo" href="/users/26924/huguei">huguei</a>
+                
+            </div>
+        </div>
+    
+        <a name="58261"></a>
+        <div class="comment" id="comment-58261">
+            <div id="post-58261-score" class="comment-score"></div>
+            <div class="comment-text"><p>I noticed that I said, "between 1ms and 1.3ms" in my comment - but I really meant "less than 1.3 ms". Apologies for that.</p>
+
+<p>There just had to be enough time for the client ACK to get to the "dropper" before the next data packet(s) arrived from the server. We saw a 1.3ms time delay between the server data packets - meaning that the "dropper" must be closer to the client than that.</p>
+
+<p>So the "dropper" could be your local router, your WAN router, a firewall, intrusion detection device, etc.  Anything that would not like seeing server data packets exceed the advertised client Receive Window.</p>
+
+<p>Note that the "dropper" is a symptom of the real problem, not a problem itself.</p></div>
+            <div class="comment-info" id="comment-58261-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Dec '16, 16:29)</span>
+                <a class="comment-user userinfo" href="/users/26122/philst">Philst</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58223" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58223-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="58181"></a>
+                    <div id="answer-container-58181" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-58181-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58181/up/" rel="nofollow"> </a>
+<div id="post-58181-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-58181-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58181/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think the problem is due to different MSS sizes negotiated between the client and a load balancer (1460) and the load balancer and the server (1448) and the load balancer not very robust in handling </p>
+<p>You can try disabling tcp_timestamps via <code>echo 0&gt;/proc/sys/net/ipv4/tcp_timestamp</code> and see if this cures your problem.<br>
+Regards Matthias </p>
+<hr>
+<p>Here is the picture that kind of explains what is happening in the first trace you provided.
+<img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/Selection_751.png"></p>
+<p>The three way handshake (that we see in your trace) is Linux client (RHEL) asking for timestamp option but the 'server' does not allow it. So the net MSS on this TCP session is 1460 bytes. <br>
+The first three segments that arrive have a payload 1460 1460 and <strong>1424</strong> bytes. <br>
+Why would the server send just 1424 bytes whe it could send 3 X 1460 bytes in one go as these fit into the clients initially offered window:size? <br>
+When you sum up those bytes you will notice that this is exactly 3 X 1448 bytes , which is the MSS on a 1500 MTU sized network when timestamp option had been enabled in both SYN and SYN:ACK packets of the session.<br>
+(As we don't have a trace at the server's end and probably never will get this is for now just a guess)  <br>
+The second batch of 3 segments again consists of 1460 1460 and  1424 bytes of which only the first 2 arrive at the capture point.  <br>
+(Substract the  tcp.nxtseq of the last 1426 bytes segment from the tcp.seq from the follow on packet to see how many bytes are missing.)      <br>
+So, my suggestion to disable tcp timestamp at the client aims at disabling tcp timestamp at the backend session also,  resulting in the same MSS on both cascaded sessions. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/58181/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Dec '16, 05:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5500bd1decb766660522dfb347eedc49?s=32&amp;d=identicon&amp;r=g" alt="mrEEde's gravatar image" />
+    <p><a href="/users/4668/mreede">mrEEde</a><br/>
+    <span class="score" title="3892 reputation points"><span class="">3.9k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="70 badges"><span class="bronze">&#9679;</span><span class="badgecount">70</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mrEEde has 48 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/58181/">
+                edited
+                <strong>17 Dec '16, 08:39</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-58181">
+    
+        <a name="58188"></a>
+        <div class="comment" id="comment-58188">
+            <div id="post-58188-score" class="comment-score"></div>
+            <div class="comment-text"><p>How could you interpret from the capture about the MSS negotiation between the load balancer and server?</p>
+
+<p>and why do you think that disabling time stamps should resolve the issue? I interpret that the server does not support time stamps and thereby it ignores that tcp option.</p></div>
+            <div class="comment-info" id="comment-58188-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Dec '16, 07:48)</span>
+                <a class="comment-user userinfo" href="/users/25986/soochi">soochi</a>
+                
+            </div>
+        </div>
+    
+        <a name="58202"></a>
+        <div class="comment" id="comment-58202">
+            <div id="post-58202-score" class="comment-score"></div>
+            <div class="comment-text"><p>That is quite a good observation.</p>
+
+<p>I was using the first two "server" ACKs and the different IP IDs of the first ACK and Resets to infer the idea that there is a load balancer with separate back-end TCP connection to the "real" server.</p>
+
+<p>This observation adds to the evidence for that.</p></div>
+            <div class="comment-info" id="comment-58202-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Dec '16, 21:43)</span>
+                <a class="comment-user userinfo" href="/users/26122/philst">Philst</a>
+                
+            </div>
+        </div>
+    
+        <a name="58203"></a>
+        <div class="comment" id="comment-58203">
+            <div id="post-58203-score" class="comment-score"></div>
+            <div class="comment-text"><p>It was actually your comment Philst that sent me down that route inspecting the length of the arriving - and missing - packets. So good collaboration on this one</p></div>
+            <div class="comment-info" id="comment-58203-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Dec '16, 22:16)</span>
+                <a class="comment-user userinfo" href="/users/4668/mreede">mrEEde</a>
+                
+            </div>
+        </div>
+    
+        <a name="58206"></a>
+        <div class="comment" id="comment-58206">
+            <div id="post-58206-score" class="comment-score"></div>
+            <div class="comment-text"><p>After reading throuh Phil's hipotheses I'd say increasing the initialrwin will resolve this issue. I'm using RHEL7 and my initial windowsize offering is 29200 and I don't have the problem getting to this site. Here is how to do it. </p>
+
+<p><a href="https://blog.habets.se/2011/10/Optimizing-TCP-slow-start">https://blog.habets.se/2011/10/Optimizing-TCP-slow-start</a><br>
+</p>
+
+<p>ip route change default via x.x.x.x initrwnd 20</p></div>
+            <div class="comment-info" id="comment-58206-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Dec '16, 23:18)</span>
+                <a class="comment-user userinfo" href="/users/4668/mreede">mrEEde</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58181" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58181-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/58026/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='MPbiylNiUGeTrMmBITXBqfCjrwEAZbcw' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/58026/http-connection-reset?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/58026/http-connection-reset?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/http/"
+            class="tag-link-http"
+            title="see questions tagged'http'using tags"
+            rel="tag">http</a> <span class="tag-number">&#215;293</span><br/>
+        
+        <a href="/tags/dup-ack/"
+            class="tag-link-dup-ack"
+            title="see questions tagged'dup-ack'using tags"
+            rel="tag">dup-ack</a> <span class="tag-number">&#215;42</span><br/>
+        
+        <a href="/tags/reset/"
+            class="tag-link-reset"
+            title="see questions tagged'reset'using tags"
+            rel="tag">reset</a> <span class="tag-number">&#215;27</span><br/>
+        
+        <a href="/tags/sack/"
+            class="tag-link-sack"
+            title="see questions tagged'sack'using tags"
+            rel="tag">sack</a> <span class="tag-number">&#215;17</span><br/>
+        
+        <a href="/tags/d-sack/"
+            class="tag-link-d-sack"
+            title="see questions tagged'd-sack'using tags"
+            rel="tag">d-sack</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 12, 2016, 11:11 a.m.">12 Dec '16, 11:11</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>12,633 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 27, 2017, 9:53 a.m.">27 Dec '17, 09:53</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/39760/retransmission-troubleshooting">Retransmission Troubleshooting</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54598/periodic-reset-cycles-including-tcp-dup-acks-and-tcp-retransmissions">Periodic Reset cycles including TCP Dup ACKs and TCP Retransmissions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43361/why-retransmission-occured-before-duplicated-ack">Why retransmission occured before duplicated ACK ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/701/display-all-streams-with-a-matching-uri">Display all streams with a matching URI</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3658/http-packets">HTTP packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7268/http-continuation-vs-tcp-segment">HTTP Continuation vs. TCP segment</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8997/how-can-i-tell-which-http-get-a-particular-response-belongs-to">How can I tell which HTTP GET a particular response belongs to?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10282/how-do-i-extract-the-cookie-path">How do I Extract the cookie path?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13622/how-decode-a-gzip-url">How decode a gzip url</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16964/analyzing-http-protocol-using-tshark">Analyzing HTTP protocol using Tshark</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

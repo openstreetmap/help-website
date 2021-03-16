@@ -1,0 +1,863 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to cross compile Wireshark x64 on an x86 Windows machine - Wireshark Q&amp;A</title>
+        <meta name="description" content="I am using rev 37663 of Wireshark (1.7.0) and VS 2008 on Windows XP x86 and I would like to compile a 64-bit version of Wireshark. I have followed all the instructions detailed in   http://wiki.wireshark.org/Development/Win64 Here&#39;s what I&#39;ve done:  prepared cmd.exe by running:&quot;C:\Program Files\Micr..." />
+        <meta name="keywords" content="development,cross-compile,windows,win64" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/8986/how-to-cross-compile-wireshark-x64-on-an-x86-windows-machine" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/8986/how-to-cross-compile-wireshark-x64-on-an-x86-windows-machine?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='eOfJ77vx0D5MyPmLnzhg3f9ffkNoA418' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/8986/how-to-cross-compile-wireshark-x64-on-an-x86-windows-machine">How to cross compile Wireshark x64 on an x86 Windows machine</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-8986-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8986/up/" rel="nofollow"> </a>
+<div id="post-8986-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-8986-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8986/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/8986/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am using rev 37663 of Wireshark (1.7.0) and VS 2008 on Windows XP x86 and I would like to compile a 64-bit version of Wireshark. I have followed all the instructions detailed in 
+    <a href="http://wiki.wireshark.org/Development/Win64">http://wiki.wireshark.org/Development/Win64</a></p>
+<p>Here's what I've done:</p>
+<ul>
+<li>prepared cmd.exe by running:<blockquote>"C:\Program Files\Microsoft Visual Studio 9.0\VC\vcvarsall.bat" x86_amd64</blockquote>
+</li>
+<li>
+<p>I've also tried running this command as well, with the same result:<br>
+</p>
+<blockquote>
+<p>"C:\Program Files\Microsoft Visual Studio 9.0\VC\bin\x86_amd64\vcvarsx86_amd64.bat"</p>
+</blockquote>
+</li>
+<li>
+<p>I've downloaded vcredist_x64.exe and put it into:<br>
+</p>
+<blockquote>
+<p>C:\wireshark-win64-libs</p>
+</blockquote>
+</li>
+<li>
+<p>I've modified a line in config.nmake to this:<br>
+</p>
+<blockquote>
+<p>WIRESHARK_TARGET_PLATFORM=win64</p>
+</blockquote>
+</li>
+</ul>
+<p>I've run the following commands:</p>
+<pre><code>nmake -f Makefile.nmake verify_tools
+nmake -f Makefile.nmake setup
+nmake -f Makefile.nmake distclean
+nmake -f Makefile.nmake all
+</code></pre>
+<p>which all succeed until the last command. Here is the output of the last command:</p>
+<pre><code>Microsoft (R) Program Maintenance Utility Version 9.00.21022.08
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+Verifying library package files ...
+
+Microsoft (R) Program Maintenance Utility Version 9.00.21022.08
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+Wireshark is ready to build.
+        sed -e s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8bddced9d8c2c4c5cb">[email&#160;protected]</a>/1.7.0"-HONE-TEST-x64-1"/  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8dc5ccdbc8d2ced2ccdfc8decd">[email&#160;protected]</a>/#define
+ HAVE_C_ARES 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="61292037243e262f343e20252f3221">[email&#160;protected]</a>//"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c0888196859f9083928580">[email&#160;protected]</a>//"  -e "s/@HAVE_KF
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bee9fe">[email&#160;protected]</a>//"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="723a3324372d3c3726263e3732">[email&#160;protected]</a>//"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d39b9285968c9f9a918993">[email&#160;protected]</a>/#define HAVE_LIBZ 1/"  -e "s/@H
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="76372033293a3f342635372636">[email&#160;protected]</a>/#define HAVE_LIBPCAP 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="31797067746e617270616e77787f75707d7d7574676271">[email&#160;protected]</a>/#define HAV
+E_PCAP_FINDALLDEVS 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ace4edfae9f3fcefedfcf3e8edf8ede0e5e2e7f3e2ede1e9f3f8e3f3faede0ec">[email&#160;protected]</a>/#define HAVE_PCAP
+_DATALINK_NAME_TO_VAL 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1f9f0e7f4eee1f2f0e1eef5f0e5f0fdf8fffaeee7f0fdeee5feeefff0fcf4f1">[email&#160;protected]</a>/#define HAVE_P
+CAP_DATALINK_VAL_TO_NAME 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="71393027342e213230212e353025303d383f3a2e27303d2e253e2e3534223223382125383e3f31">[email&#160;protected]</a>/#def
+ine HAVE_PCAP_DATALINK_VAL_TO_DESCRIPTION 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="440c0512011b140705141b061601050f080b0b1404">[email&#160;protected]</a>//"  -
+e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e1a9a0b7a4beb3a4acaeb5a4a1">[email&#160;protected]</a>/#define HAVE_REMOTE 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bcf4fdeaf9e3ecfffdece3eef9f1f3e8f9fc">[email&#160;protected]</a>/#define HAV
+E_PCAP_REMOTE 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="024a4354475d524143525d4d52474c42">[email&#160;protected]</a>/#define HAVE_PCAP_OPEN 1/"  -e "s/@HAV
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1f5a404f5c5e4f40504f5a51405b5a5e5b5f">[email&#160;protected]</a>/#define HAVE_PCAP_OPEN_DEAD 1/"  -e "s/@HAVE_PCAP_LIST_DATALIN
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f6bda5b6">[email&#160;protected]</a>/#define HAVE_PCAP_LIST_DATALINKS 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e4aca5b2a1bbb4a7a5b4bba2b6a1a1bba0a5b0a5a8adaaafb7a4">[email&#160;protected]</a>/#defi
+ne HAVE_PCAP_FREE_DATALINKS 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5810190e1d07081b1908070b1d0c071c190c191411161318">[email&#160;protected]</a>/#define HAVE_PCA
+P_SET_DATALINK 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a0e8e1f6e5fff0e3e1f0fff3e5f4f3e1edf0ece9eee7e0">[email&#160;protected]</a>/#define HAVE_PCAP_SETSAMPLING
+1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4e060f180b110c1e081107030f090b0e">[email&#160;protected]</a>/#define HAVE_BPF_IMAGE 1/"  -e "s/@HAVE_LIBWIRESHARK
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="67232b2b27">[email&#160;protected]</a>/#define HAVE_LIBWIRESHARKDLL 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eea6afb8abb1a2a7aca9a0bbbaa2bdae">[email&#160;protected]</a>/#define HAVE_LIBGN
+UTLS 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3d757c6b786271747f7a7e6f646d697d">[email&#160;protected]</a>/#define HAVE_LIBGCRYPT 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ac2cbdccfd5c6dfcbca">[email&#160;protected]</a>/#d
+efine HAVE_LUA 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9dd5dccbd8c2d1c8dcc2a8c2acdd">[email&#160;protected]</a>/#define HAVE_LUA_5_1 1/"  -e "s/@HAVE_P
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="90c9c4d8dfded0">[email&#160;protected]</a>//"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="40080116051f0109121003011000">[email&#160;protected]</a>//"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b4fcf5e2f1ebf5fde6e4f0f7f5e4f4">[email&#160;protected]</a>//"  -e "s/@HAVE_LIBPOR
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="693d283c2d202629">[email&#160;protected]</a>/#define HAVE_LIBPORTAUDIO 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cb9b84999f8a9e8f8284948a9b8294fa8b">[email&#160;protected]</a>//"  -e "s/@HAVE_S
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="420f0b02">[email&#160;protected]</a>//"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ca828b9c8f958d8f85839a8a">[email&#160;protected]</a>/#define HAVE_GEOIP 1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8bc2c5cedfbdcb">[email&#160;protected]</a>/#define INET6 1
+/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c747d6a7963726878787278756f63747c">[email&#160;protected]</a>/#define HAVE_NTDDNDIS_H 1/"  -e "s/@MAIN_MENU_USE_UI
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5e131f101f191b0c1e">[email&#160;protected]</a>//"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7621373822292637353d33222933323f22392436">[email&#160;protected]</a>//"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6e262f382b312621202b2e">[email&#160;protected]</a>/#define HAVE_HONE
+1/"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0b434a5d4e54594e46445f4e5447444c4c42454c4b">[email&#160;protected]</a>//"  -e "s/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="276f6671627875626a687362786b6860606e696078646f6e6b6367">[email&#160;protected]</a>//"  -e "s
+/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="df979e899a808c8c938093969d8c9f">[email&#160;protected]</a>//"  &lt; config.h.win32 &gt; config.h
+        cd tools
+        "C:\Program Files\Microsoft Visual Studio 9.0\VC\BIN\nmake.exe" /
+            -f Makefile.nmake
+
+Microsoft (R) Program Maintenance Utility Version 9.00.21022.08
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        cd lemon
+        ..\native-nmake "C:\Program Files\Microsoft Visual Studio 9.0\VC\BIN\nma
+ke.exe" /                   -f Makefile.nmake
+Setting environment for using Microsoft Visual Studio 2008 x86 tools.
+
+Microsoft (R) Program Maintenance Utility Version 9.00.21022.08
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        cl -WX -D_U_="" /Zi /W3 /MD /DWIN32_LEAN_AND_MEAN /DMSC_VER_REQUIRED=150
+0  /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /MP /GS lemon.c
+Microsoft (R) C/C++ Optimizing Compiler Version 15.00.21022.08 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+lemon.c
+Microsoft (R) Incremental Linker Version 9.00.21022.08
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:lemon.exe
+/debug
+lemon.obj
+MSVCRT.lib(chkstk.obj) : fatal error LNK1112: module machine type 'X86' conflict
+s with target machine type 'x64'
+NMAKE : fatal error U1077: '"C:\Program Files\Microsoft Visual Studio 9.0\VC\BIN
+\x86_amd64\cl.EXE"' : return code '0x2'
+Stop.
+NMAKE : fatal error U1077: '..\native-nmake.CMD' : return code '0x2'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files\Microsoft Visual Studio 9.0\VC\BIN
+\nmake.exe"' : return code '0x2'
+Stop.
+</code></pre>
+<p>What am I missing?
+-Russ</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/development/" class="post-tag tag-link-development"
+                                        title="see questions tagged 'development'" rel="tag">development</a>
+                                
+                                    <a href="/tags/cross-compile/" class="post-tag tag-link-cross-compile"
+                                        title="see questions tagged 'cross-compile'" rel="tag">cross-compile</a>
+                                
+                                    <a href="/tags/windows/" class="post-tag tag-link-windows"
+                                        title="see questions tagged 'windows'" rel="tag">windows</a>
+                                
+                                    <a href="/tags/win64/" class="post-tag tag-link-win64"
+                                        title="see questions tagged 'win64'" rel="tag">win64</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Feb '12, 18:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/043a3cdec1b6228c8cbd690de705fd84?s=32&amp;d=identicon&amp;r=g" alt="ruslanad's gravatar image" />
+    <p><a href="/users/2228/ruslanad">ruslanad</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ruslanad has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/8986/">
+                edited
+                <strong>13 Feb '12, 19:56</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/362ba1008ad9a075d1556d33e97dfed6?s=32&amp;d=identicon&amp;r=g" alt="helloworld's gravatar image" />
+            <p><a href="/users/817/helloworld">helloworld</a><br/>
+            <span class="score" title="3149 reputation points"><span class="">3.1k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="20 badges"><span class="silver">&#9679;</span><span class="badgecount">20</span></span><span title="41 badges"><span class="bronze">&#9679;</span><span class="badgecount">41</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-8986">
+    
+</div>
+<div id="comment-tools-8986" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8986-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/8986/how-to-cross-compile-wireshark-x64-on-an-x86-windows-machine?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/8986/how-to-cross-compile-wireshark-x64-on-an-x86-windows-machine?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/8986/how-to-cross-compile-wireshark-x64-on-an-x86-windows-machine?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/8986/how-to-cross-compile-wireshark-x64-on-an-x86-windows-machine?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="8989"></a>
+                    <div id="answer-container-8989" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-8989-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8989/up/" rel="nofollow"> </a>
+<div id="post-8989-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-8989-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8989/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Somehow you have an x86 object (chkstk.obj) module that obviously won't link with amd64 code.</p>
+<p>There are some lines in the output that intrigues me:</p>
+<pre><code>        cd lemon
+        ..\native-nmake "C:\Program Files\Microsoft Visual Studio 9.0\VC\BIN\nmake.exe" -f Makefile.nmake
+Setting environment for using Microsoft Visual Studio 2008 x86 tools.
+</code></pre>
+<p>Why is the environment being set for x86?  chkstk.obj is a Visual Studio/SDK object file and is provided in both x86 and amd64 versions.  I suspect that the library search path is being set to x86 by the last line I've shown above.</p>
+<p>I can't see what would be causing this looking at Makefile.nmake in the lemon directory.  Have you made any source modifications at all?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/8989/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Feb '12, 01:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+    <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+    <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grahamb has 274 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-8989">
+    
+        <a name="9004"></a>
+        <div class="comment" id="comment-9004">
+            <div id="post-9004-score" class="comment-score"></div>
+            <div class="comment-text"><p>The environment is being set back to x86 in native-nmake.cmd by calling vcvarsall.bat without any arguments. This is in fact the correct behavior, because when I changed that line in native-nmake.cmd to set the environment for cross-compiling, the build process failed later on. It turns out that the lemon executable gets executed later in the build process. This means that it does indeed need to be compiled in the x86 environment. The problem is that NMAKE thinks that it should be compiling 64-bit code and fails because we are (correctly) trying to generate 32-bit code in this one instance.</p></div>
+            <div class="comment-info" id="comment-9004-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Feb '12, 12:19)</span>
+                <a class="comment-user userinfo" href="/users/2228/ruslanad">ruslanad</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-8989" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8989-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/8986/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='eOfJ77vx0D5MyPmLnzhg3f9ffkNoA418' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8986/how-to-cross-compile-wireshark-x64-on-an-x86-windows-machine?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8986/how-to-cross-compile-wireshark-x64-on-an-x86-windows-machine?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/windows/"
+            class="tag-link-windows"
+            title="see questions tagged'windows'using tags"
+            rel="tag">windows</a> <span class="tag-number">&#215;254</span><br/>
+        
+        <a href="/tags/development/"
+            class="tag-link-development"
+            title="see questions tagged'development'using tags"
+            rel="tag">development</a> <span class="tag-number">&#215;158</span><br/>
+        
+        <a href="/tags/win64/"
+            class="tag-link-win64"
+            title="see questions tagged'win64'using tags"
+            rel="tag">win64</a> <span class="tag-number">&#215;11</span><br/>
+        
+        <a href="/tags/cross-compile/"
+            class="tag-link-cross-compile"
+            title="see questions tagged'cross-compile'using tags"
+            rel="tag">cross-compile</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 13, 2012, 6:47 p.m.">13 Feb '12, 18:47</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,797 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 14, 2012, 12:19 p.m.">14 Feb '12, 12:19</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/4194/wireshark-106-compatibility-in-windows-7-x-64-bit-environment">Wireshark 1.0.6 - Compatibility in Windows 7 x 64 bit environment</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8065/wireshark-build-for-windows-7-64-bit">Wireshark Build for windows 7 64-bit</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12153/couldnt-load-modulespecified-module-cannot-be-found">Couldn&#39;t load module....specified module cannot be found.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4725/file-win32mak-not-found-stop">file &#39;win32.mak&#39; not found Stop.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6892/glib-directory-not-being-created-or-updated-in-149">glib directory not being created or updated in 1.4.9</a>
+        </p>
+        
+        <p>
+            <a href="/questions/108/checksum-errors-on-windows">Checksum errors on Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5962/how-to-determine-which-windows-program-is-consuming-internet-bandwidth">How to determine which  Windows program is consuming Internet bandwidth</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7990/cannot-capture-wireless-traffic-anymore">Cannot capture wireless traffic anymore?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10975/npf-driver-fails-to-start">NPF Driver fails to start</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13311/operating-system-tcp-tcp-protocol-implementation">Operating System TCP &amp; TCP protocol implementation</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

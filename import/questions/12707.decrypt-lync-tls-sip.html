@@ -1,0 +1,3666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Decrypt Lync TLS SIP - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, I&#39;m running Wireshark 1.8 and I try to decrypt a SIP communication on a Lync server (Microsft voip server). Lync use TLS v1 to crypt sip flows but I can&#39;t decrypt with wireshark. Somebody can maybe help me, this is the logs, thank&#39;s : ssl_load_key: can&#39;t import pem data  dissect_ssl enter frame ..." />
+        <meta name="keywords" content="tls,ssl,sip,decrypt,lync" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/12707/decrypt-lync-tls-sip" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/12707/decrypt-lync-tls-sip?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='pa4vnQaIfsu6qcIE18bmaFSZvd36TLMf' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/12707/decrypt-lync-tls-sip">Decrypt Lync TLS SIP</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-12707-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12707/up/" rel="nofollow"> </a>
+<div id="post-12707-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-12707-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12707/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/12707/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,
+I'm running Wireshark 1.8 and I try to decrypt a SIP communication on a Lync server (Microsft voip server). Lync use TLS v1 to crypt sip flows but I can't decrypt with wireshark.
+Somebody can maybe help me, this is the logs, thank's :</p>
+<pre>ssl_load_key: can't import pem data
+
+dissect_ssl enter frame #39 (first time)
+ssl_session_init: initializing ptr 0528416C size 588
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 70
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 65, ssl state 0x00
+association_find: TCP port 1264 found 00000000
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 61 bytes, remaining 70 
+packet_from_server: is from server - FALSE
+ssl_find_private_key server 192.168.0.141:5061
+ssl_find_private_key can't find private key for this server! Try it again with universal port 0
+ssl_find_private_key can't find private key for this server (universal port)! Try it again with universal address 0.0.0.0
+ssl_find_private_key can't find any private key!
+dissect_ssl3_hnd_hello_common found CLIENT RANDOM -&gt; state 0x01
+
+dissect_ssl enter frame #40 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #41 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 2444
+dissect_ssl3_record found version 0x0301(TLS 1.0) -&gt; state 0x11
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 2439, ssl state 0x11
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 70 bytes, remaining 2444 
+dissect_ssl3_hnd_hello_common found SERVER RANDOM -&gt; state 0x13
+dissect_ssl3_hnd_srv_hello found CIPHER 0x0005 -&gt; state 0x17
+dissect_ssl3_hnd_srv_hello trying to generate keys
+ssl_generate_keyring_material not enough data to generate key (0x17 required 0x37 or 0x57)
+dissect_ssl3_hnd_srv_hello can't generate keyring material
+dissect_ssl3_handshake iteration 0 type 11 offset 79 length 1390 bytes, remaining 2444 
+dissect_ssl3_handshake iteration 0 type 13 offset 1473 length 963 bytes, remaining 2444 
+dissect_ssl3_handshake iteration 0 type 14 offset 2440 length 0 bytes, remaining 2444 
+
+dissect_ssl enter frame #89 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 321
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 269, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 11 offset 5 length 3 bytes, remaining 274 
+dissect_ssl3_handshake iteration 0 type 16 offset 12 length 258 bytes, remaining 274 
+trying to use SSL keylog in C:\Documents and Settings\Jerome.LYNC.001\Bureau\<a href="http://MasterSecretlog.txt">MasterSecretlog.txt</a>
+  record: offset = 274, reported_length_remaining = 47
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - FALSE
+ssl_change_cipher CLIENT
+  record: offset = 280, reported_length_remaining = 41
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 36, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 62 offset 285 length 7005420 bytes, remaining 321 
+
+dissect_ssl enter frame #90 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 47
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - TRUE
+ssl_change_cipher SERVER
+  record: offset = 6, reported_length_remaining = 41
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 36, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 231 offset 11 length 12244221 bytes, remaining 47 
+
+dissect_ssl enter frame #91 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 325
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 320, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #92 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 361
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 356, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #93 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 792
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 787, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #94 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 690
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 685, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #95 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1043
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1038, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #96 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #97 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #99 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 3831
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 3826, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #101 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #102 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #103 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 2934
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 2929, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #105 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 599
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 594, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #106 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1026
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1021, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #107 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 966
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 961, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #108 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 604
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 599, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #109 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 470
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 465, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #110 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 293
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 288, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #111 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 511
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 506, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #112 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 666
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 393, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 398, reported_length_remaining = 268
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 263, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #113 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1460
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1090, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1095, reported_length_remaining = 365
+  need_desegmentation: offset = 1095, reported_length_remaining = 365
+
+dissect_ssl enter frame #114 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 969
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 964, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #116 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #117 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 2920
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 2313, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 2318, reported_length_remaining = 602
+  need_desegmentation: offset = 2318, reported_length_remaining = 602
+
+dissect_ssl enter frame #119 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 2062
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1445, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1450, reported_length_remaining = 612
+  need_desegmentation: offset = 1450, reported_length_remaining = 612
+
+dissect_ssl enter frame #121 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 2072
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 742, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 747, reported_length_remaining = 1325
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 196, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 948, reported_length_remaining = 1124
+  need_desegmentation: offset = 948, reported_length_remaining = 1124
+
+dissect_ssl enter frame #122 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 2584
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1165, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1170, reported_length_remaining = 1414
+  need_desegmentation: offset = 1170, reported_length_remaining = 1414
+
+dissect_ssl enter frame #124 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 2232
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1736, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1741, reported_length_remaining = 491
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 486, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #125 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 358
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 353, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #126 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1103
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1098, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #130 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 982
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 977, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #131 (first time)
+ssl_session_init: initializing ptr 0528ADBC size 588
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 78
+packet_from_server: is from server - FALSE
+ssl_find_private_key server 192.168.0.141:443
+ssl_find_private_key can't find private key for this server! Try it again with universal port 0
+ssl_find_private_key can't find private key for this server (universal port)! Try it again with universal address 0.0.0.0
+ssl_find_private_key can't find any private key!
+client random len: 16 padded to 32
+dissect_ssl2_hnd_client_hello found CLIENT RANDOM -&gt; state 0x01
+
+dissect_ssl enter frame #132 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #133 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 1477
+dissect_ssl3_record found version 0x0300 -&gt; state 0x11
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 1472, ssl state 0x11
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 70 bytes, remaining 1477 
+dissect_ssl3_hnd_hello_common found SERVER RANDOM -&gt; state 0x13
+dissect_ssl3_hnd_srv_hello found CIPHER 0x0005 -&gt; state 0x17
+dissect_ssl3_hnd_srv_hello trying to generate keys
+ssl_generate_keyring_material not enough data to generate key (0x17 required 0x37 or 0x57)
+dissect_ssl3_hnd_srv_hello can't generate keyring material
+dissect_ssl3_handshake iteration 0 type 11 offset 79 length 1390 bytes, remaining 1477 
+dissect_ssl3_handshake iteration 0 type 14 offset 1473 length 0 bytes, remaining 1477 
+
+dissect_ssl enter frame #135 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 336
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 260, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 16 offset 5 length 256 bytes, remaining 265 
+trying to use SSL keylog in C:\Documents and Settings\Jerome.LYNC.001\Bureau\<a href="http://MasterSecretlog.txt">MasterSecretlog.txt</a>
+  record: offset = 265, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - FALSE
+ssl_change_cipher CLIENT
+  record: offset = 271, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 60, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 237 offset 276 length 12255752 bytes, remaining 336 
+
+dissect_ssl enter frame #136 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - TRUE
+ssl_change_cipher SERVER
+  record: offset = 6, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 60, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 220 offset 11 length 11369201 bytes, remaining 71 
+
+dissect_ssl enter frame #137 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #138 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 170
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 165, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #139 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 2031
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1581, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1586, reported_length_remaining = 445
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 440, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #140 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #142 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 2331
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1870, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1875, reported_length_remaining = 456
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 451, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #143 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 432
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 427, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #144 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #145 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #146 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 4380
+  need_desegmentation: offset = 0, reported_length_remaining = 4380
+
+dissect_ssl enter frame #148 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 5469
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 5464, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #150 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #151 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #153 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 4380
+  need_desegmentation: offset = 0, reported_length_remaining = 4380
+
+dissect_ssl enter frame #154 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 5622
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 5617, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #156 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 433
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 428, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #157 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #158 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #160 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 4380
+  need_desegmentation: offset = 0, reported_length_remaining = 4380
+
+dissect_ssl enter frame #161 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 4976
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 4971, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #166 (first time)
+ssl_session_init: initializing ptr 0528D960 size 588
+  conversation = 0528D494, ssl_session = 0528D960
+  record: offset = 0, reported_length_remaining = 102
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 97, ssl state 0x00
+association_find: TCP port 1270 found 00000000
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 93 bytes, remaining 102 
+packet_from_server: is from server - FALSE
+ssl_find_private_key server 192.168.0.141:443
+ssl_find_private_key can't find private key for this server! Try it again with universal port 0
+ssl_find_private_key can't find private key for this server (universal port)! Try it again with universal address 0.0.0.0
+ssl_find_private_key can't find any private key!
+dissect_ssl3_hnd_hello_common found CLIENT RANDOM -&gt; state 0x01
+
+dissect_ssl enter frame #167 (first time)
+  conversation = 0528D494, ssl_session = 0528D960
+  record: offset = 0, reported_length_remaining = 150
+dissect_ssl3_record found version 0x0300 -&gt; state 0x11
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 74, ssl state 0x11
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 70 bytes, remaining 79 
+dissect_ssl3_hnd_hello_common found SERVER RANDOM -&gt; state 0x13
+ssl_restore_session can't find stored session
+dissect_ssl3_hnd_srv_hello found CIPHER 0x0005 -&gt; state 0x17
+dissect_ssl3_hnd_srv_hello trying to generate keys
+ssl_generate_keyring_material not enough data to generate key (0x17 required 0x37 or 0x57)
+dissect_ssl3_hnd_srv_hello can't generate keyring material
+  record: offset = 79, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - TRUE
+ssl_change_cipher SERVER
+  record: offset = 85, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 60, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 222 offset 90 length 14924092 bytes, remaining 150 
+
+dissect_ssl enter frame #168 (first time)
+  conversation = 0528D494, ssl_session = 0528D960
+  record: offset = 0, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - FALSE
+ssl_change_cipher CLIENT
+  record: offset = 6, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 60, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 222 offset 11 length 11467023 bytes, remaining 71 
+
+dissect_ssl enter frame #169 (first time)
+  conversation = 0528D494, ssl_session = 0528D960
+  record: offset = 0, reported_length_remaining = 433
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 428, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #170 (first time)
+  conversation = 0528D494, ssl_session = 0528D960
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #172 (first time)
+  conversation = 0528D494, ssl_session = 0528D960
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #174 (first time)
+  conversation = 0528D494, ssl_session = 0528D960
+  record: offset = 0, reported_length_remaining = 4380
+  need_desegmentation: offset = 0, reported_length_remaining = 4380
+
+dissect_ssl enter frame #175 (first time)
+  conversation = 0528D494, ssl_session = 0528D960
+  record: offset = 0, reported_length_remaining = 5197
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 5192, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #177 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #178 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 1797
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1792, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #180 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 479
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 474, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #181 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #182 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #183 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 4242
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 4237, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #185 (first time)
+  conversation = 0528D494, ssl_session = 0528D960
+  record: offset = 0, reported_length_remaining = 1065
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1060, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #186 (first time)
+  conversation = 0528A7DC, ssl_session = 0528ADBC
+  record: offset = 0, reported_length_remaining = 820
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 815, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #187 (first time)
+  conversation = 0528D494, ssl_session = 0528D960
+  record: offset = 0, reported_length_remaining = 411
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 406, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #188 (first time)
+  conversation = 0528D494, ssl_session = 0528D960
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #189 (first time)
+  conversation = 0528D494, ssl_session = 0528D960
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #191 (first time)
+  conversation = 0528D494, ssl_session = 0528D960
+  record: offset = 0, reported_length_remaining = 4270
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 4265, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #193 (first time)
+  conversation = 0528D494, ssl_session = 0528D960
+  record: offset = 0, reported_length_remaining = 743
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 738, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #195 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1210
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1205, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #198 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 750
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 745, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #200 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 253
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 248, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #201 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1059
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1054, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #203 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 265
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 260, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #205 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 642
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 637, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #251 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 161
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 156, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #252 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 649
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 644, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #253 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #254 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1581
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1576, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #256 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 297
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 292, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #258 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 426
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 181, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 186, reported_length_remaining = 240
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 235, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #266 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 178
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 173, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #271 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 949
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 944, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #274 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 348
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 343, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #278 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 136
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 131, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #281 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 536
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 531, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #285 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 131
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 126, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #290 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 242
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 237, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #293 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 120
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 115, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #295 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 222
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 217, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #296 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 110
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 105, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #298 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 608
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 603, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #299 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1460
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1403, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1408, reported_length_remaining = 52
+  need_desegmentation: offset = 1408, reported_length_remaining = 52
+
+dissect_ssl enter frame #300 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 74
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 69, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #302 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1460
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1413, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1418, reported_length_remaining = 42
+  need_desegmentation: offset = 1418, reported_length_remaining = 42
+
+dissect_ssl enter frame #303 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 103
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 98, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #305 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 689
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 684, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #338 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 176
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 171, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #340 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 280
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 275, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #343 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 204
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 199, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #344 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 797
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 792, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #345 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 1460
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1321, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1326, reported_length_remaining = 134
+  need_desegmentation: offset = 1326, reported_length_remaining = 134
+
+dissect_ssl enter frame #347 (first time)
+  conversation = 05283BD8, ssl_session = 0528416C
+  record: offset = 0, reported_length_remaining = 543
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 538, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #39 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 70
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 61 bytes, remaining 70 
+
+dissect_ssl enter frame #41 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 2444
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 70 bytes, remaining 2444 
+dissect_ssl3_handshake iteration 0 type 11 offset 79 length 1390 bytes, remaining 2444 
+dissect_ssl3_handshake iteration 0 type 13 offset 1473 length 963 bytes, remaining 2444 
+dissect_ssl3_handshake iteration 0 type 14 offset 2440 length 0 bytes, remaining 2444 
+
+dissect_ssl enter frame #89 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 321
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 11 offset 5 length 3 bytes, remaining 274 
+dissect_ssl3_handshake iteration 0 type 16 offset 12 length 258 bytes, remaining 274 
+  record: offset = 274, reported_length_remaining = 47
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 280, reported_length_remaining = 41
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 62 offset 285 length 7005420 bytes, remaining 321 
+
+dissect_ssl enter frame #90 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 47
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 6, reported_length_remaining = 41
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 231 offset 11 length 12244221 bytes, remaining 47 
+
+dissect_ssl enter frame #91 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 325
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #92 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 361
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #93 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 792
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #94 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 690
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #95 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1043
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #99 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 3831
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #103 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 2934
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #105 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 599
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #106 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1026
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #107 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 966
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #108 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 604
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #109 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 470
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #110 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 293
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #111 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 511
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #112 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 666
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 398, reported_length_remaining = 268
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #113 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1460
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1095, reported_length_remaining = 365
+  need_desegmentation: offset = 1095, reported_length_remaining = 365
+
+dissect_ssl enter frame #114 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 969
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #117 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 2920
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 2318, reported_length_remaining = 602
+  need_desegmentation: offset = 2318, reported_length_remaining = 602
+
+dissect_ssl enter frame #119 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 2062
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1450, reported_length_remaining = 612
+  need_desegmentation: offset = 1450, reported_length_remaining = 612
+
+dissect_ssl enter frame #121 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 2072
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 747, reported_length_remaining = 1325
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 948, reported_length_remaining = 1124
+  need_desegmentation: offset = 948, reported_length_remaining = 1124
+
+dissect_ssl enter frame #122 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 2584
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1170, reported_length_remaining = 1414
+  need_desegmentation: offset = 1170, reported_length_remaining = 1414
+
+dissect_ssl enter frame #124 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 2232
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1741, reported_length_remaining = 491
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #125 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 358
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #126 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1103
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #130 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 982
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #131 (already visited)
+  conversation = 0528A7DC, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 78
+
+dissect_ssl enter frame #133 (already visited)
+  conversation = 0528A7DC, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1477
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 70 bytes, remaining 1477 
+dissect_ssl3_handshake iteration 0 type 11 offset 79 length 1390 bytes, remaining 1477 
+dissect_ssl3_handshake iteration 0 type 14 offset 1473 length 0 bytes, remaining 1477 
+
+dissect_ssl enter frame #135 (already visited)
+  conversation = 0528A7DC, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 336
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 16 offset 5 length 256 bytes, remaining 265 
+  record: offset = 265, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 271, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 237 offset 276 length 12255752 bytes, remaining 336 
+
+dissect_ssl enter frame #136 (already visited)
+  conversation = 0528A7DC, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 6, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 220 offset 11 length 11369201 bytes, remaining 71 
+
+dissect_ssl enter frame #138 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 170
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #139 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 2031
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1586, reported_length_remaining = 445
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #142 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 2331
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1875, reported_length_remaining = 456
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #143 (already visited)
+  conversation = 0528A7DC, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 432
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #148 (already visited)
+  conversation = 0528A7DC, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 5469
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #154 (already visited)
+  conversation = 0528A7DC, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 5622
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #156 (already visited)
+  conversation = 0528A7DC, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 433
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #161 (already visited)
+  conversation = 0528A7DC, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 4976
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #166 (already visited)
+  conversation = 0528D494, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 102
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 93 bytes, remaining 102 
+
+dissect_ssl enter frame #167 (already visited)
+  conversation = 0528D494, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 150
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 70 bytes, remaining 79 
+  record: offset = 79, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 85, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 222 offset 90 length 14924092 bytes, remaining 150 
+
+dissect_ssl enter frame #168 (already visited)
+  conversation = 0528D494, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 6, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 222 offset 11 length 11467023 bytes, remaining 71 
+
+dissect_ssl enter frame #169 (already visited)
+  conversation = 0528D494, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 433
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #175 (already visited)
+  conversation = 0528D494, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 5197
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #178 (already visited)
+  conversation = 0528A7DC, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1797
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #180 (already visited)
+  conversation = 0528A7DC, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 479
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #183 (already visited)
+  conversation = 0528A7DC, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 4242
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #185 (already visited)
+  conversation = 0528D494, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1065
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #186 (already visited)
+  conversation = 0528A7DC, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 820
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #187 (already visited)
+  conversation = 0528D494, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 411
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #191 (already visited)
+  conversation = 0528D494, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 4270
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #193 (already visited)
+  conversation = 0528D494, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 743
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #195 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1210
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #198 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 750
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #200 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 253
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #201 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1059
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #203 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 265
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #205 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 642
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #251 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 161
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #252 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 649
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #254 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1581
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #256 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 297
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #258 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 426
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 186, reported_length_remaining = 240
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #266 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 178
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #271 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 949
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #274 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 348
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #278 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 136
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #281 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 536
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #285 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 131
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #290 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 242
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #293 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 120
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #295 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 222
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #296 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 110
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #298 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 608
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #299 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1460
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1408, reported_length_remaining = 52
+  need_desegmentation: offset = 1408, reported_length_remaining = 52
+
+dissect_ssl enter frame #300 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 74
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #302 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1460
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1418, reported_length_remaining = 42
+  need_desegmentation: offset = 1418, reported_length_remaining = 42
+
+dissect_ssl enter frame #303 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 103
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #305 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 689
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #338 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 176
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #340 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 280
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #343 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 204
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #344 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 797
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #345 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1460
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+  record: offset = 1326, reported_length_remaining = 134
+  need_desegmentation: offset = 1326, reported_length_remaining = 134
+
+dissect_ssl enter frame #347 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 543
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #39 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 70
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 61 bytes, remaining 70 
+
+dissect_ssl enter frame #41 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 2444
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 70 bytes, remaining 2444 
+dissect_ssl3_handshake iteration 0 type 11 offset 79 length 1390 bytes, remaining 2444 
+dissect_ssl3_handshake iteration 0 type 13 offset 1473 length 963 bytes, remaining 2444 
+dissect_ssl3_handshake iteration 0 type 14 offset 2440 length 0 bytes, remaining 2444 
+
+dissect_ssl enter frame #89 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 321
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 11 offset 5 length 3 bytes, remaining 274 
+dissect_ssl3_handshake iteration 0 type 16 offset 12 length 258 bytes, remaining 274 
+  record: offset = 274, reported_length_remaining = 47
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 280, reported_length_remaining = 41
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 62 offset 285 length 7005420 bytes, remaining 321 
+
+dissect_ssl enter frame #90 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 47
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 6, reported_length_remaining = 41
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 231 offset 11 length 12244221 bytes, remaining 47 
+
+dissect_ssl enter frame #91 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 325
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #92 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 361
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #93 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 792
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #94 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 690
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #95 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1043
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #135 (already visited)
+  conversation = 0528A7DC, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 336
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 16 offset 5 length 256 bytes, remaining 265 
+  record: offset = 265, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 271, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 237 offset 276 length 12255752 bytes, remaining 336 
+
+dissect_ssl enter frame #99 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 3831
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #103 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 2934
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #105 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 599
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #106 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1026
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #107 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 966
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #108 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 604
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1264 found 00000000
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #109 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 470
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 5061 found 049BF9C0
+
+dissect_ssl enter frame #39 (already visited)
+  conversation = 05283BD8, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 70
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 61 bytes, remaining 70 
+
+dissect_ssl enter frame #131 (first time)
+ssl_session_init: initializing ptr 0528A824 size 588
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 78
+packet_from_server: is from server - FALSE
+ssl_find_private_key server 192.168.0.141:443
+ssl_find_private_key can't find private key for this server! Try it again with universal port 0
+ssl_find_private_key can't find private key for this server (universal port)! Try it again with universal address 0.0.0.0
+ssl_find_private_key can't find any private key!
+client random len: 16 padded to 32
+dissect_ssl2_hnd_client_hello found CLIENT RANDOM -&gt; state 0x01
+
+dissect_ssl enter frame #132 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #133 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1477
+dissect_ssl3_record found version 0x0300 -&gt; state 0x11
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 1472, ssl state 0x11
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 70 bytes, remaining 1477 
+dissect_ssl3_hnd_hello_common found SERVER RANDOM -&gt; state 0x13
+dissect_ssl3_hnd_srv_hello found CIPHER 0x0005 -&gt; state 0x17
+dissect_ssl3_hnd_srv_hello trying to generate keys
+ssl_generate_keyring_material not enough data to generate key (0x17 required 0x37 or 0x57)
+dissect_ssl3_hnd_srv_hello can't generate keyring material
+dissect_ssl3_handshake iteration 0 type 11 offset 79 length 1390 bytes, remaining 1477 
+dissect_ssl3_handshake iteration 0 type 14 offset 1473 length 0 bytes, remaining 1477 
+
+dissect_ssl enter frame #135 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 336
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 260, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 16 offset 5 length 256 bytes, remaining 265 
+trying to use SSL keylog in C:\Documents and Settings\Jerome.LYNC.001\Bureau\<a href="http://MasterSecretlog.txt">MasterSecretlog.txt</a>
+  record: offset = 265, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - FALSE
+ssl_change_cipher CLIENT
+  record: offset = 271, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 60, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 237 offset 276 length 12255752 bytes, remaining 336 
+
+dissect_ssl enter frame #136 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - TRUE
+ssl_change_cipher SERVER
+  record: offset = 6, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 60, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 220 offset 11 length 11369201 bytes, remaining 71 
+
+dissect_ssl enter frame #143 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 432
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 427, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #144 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #145 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #146 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 4380
+  need_desegmentation: offset = 0, reported_length_remaining = 4380
+
+dissect_ssl enter frame #148 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 5469
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 5464, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #150 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #151 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #153 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 4380
+  need_desegmentation: offset = 0, reported_length_remaining = 4380
+
+dissect_ssl enter frame #154 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 5622
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 5617, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #156 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 433
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 428, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #157 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #158 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #160 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 4380
+  need_desegmentation: offset = 0, reported_length_remaining = 4380
+
+dissect_ssl enter frame #161 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 4976
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 4971, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #166 (first time)
+ssl_session_init: initializing ptr 0528D348 size 588
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 102
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 97, ssl state 0x00
+association_find: TCP port 1270 found 00000000
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 93 bytes, remaining 102 
+packet_from_server: is from server - FALSE
+ssl_find_private_key server 192.168.0.141:443
+ssl_find_private_key can't find private key for this server! Try it again with universal port 0
+ssl_find_private_key can't find private key for this server (universal port)! Try it again with universal address 0.0.0.0
+ssl_find_private_key can't find any private key!
+dissect_ssl3_hnd_hello_common found CLIENT RANDOM -&gt; state 0x01
+
+dissect_ssl enter frame #167 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 150
+dissect_ssl3_record found version 0x0300 -&gt; state 0x11
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 74, ssl state 0x11
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 70 bytes, remaining 79 
+dissect_ssl3_hnd_hello_common found SERVER RANDOM -&gt; state 0x13
+ssl_restore_session can't find stored session
+dissect_ssl3_hnd_srv_hello found CIPHER 0x0005 -&gt; state 0x17
+dissect_ssl3_hnd_srv_hello trying to generate keys
+ssl_generate_keyring_material not enough data to generate key (0x17 required 0x37 or 0x57)
+dissect_ssl3_hnd_srv_hello can't generate keyring material
+  record: offset = 79, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - TRUE
+ssl_change_cipher SERVER
+  record: offset = 85, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 60, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 222 offset 90 length 14924092 bytes, remaining 150 
+
+dissect_ssl enter frame #168 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - FALSE
+ssl_change_cipher CLIENT
+  record: offset = 6, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 60, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 222 offset 11 length 11467023 bytes, remaining 71 
+
+dissect_ssl enter frame #169 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 433
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 428, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #170 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #172 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #174 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 4380
+  need_desegmentation: offset = 0, reported_length_remaining = 4380
+
+dissect_ssl enter frame #175 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 5197
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 5192, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #177 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #178 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1797
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1792, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #180 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 479
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 474, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #181 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #182 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #183 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 4242
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 4237, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #185 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 1065
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1060, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #186 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 820
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 815, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #187 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 411
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 406, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #188 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #189 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #191 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 4270
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 4265, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #193 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 743
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 738, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #131 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 78
+
+dissect_ssl enter frame #133 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1477
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 70 bytes, remaining 1477 
+dissect_ssl3_handshake iteration 0 type 11 offset 79 length 1390 bytes, remaining 1477 
+dissect_ssl3_handshake iteration 0 type 14 offset 1473 length 0 bytes, remaining 1477 
+
+dissect_ssl enter frame #135 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 336
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 16 offset 5 length 256 bytes, remaining 265 
+  record: offset = 265, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 271, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 237 offset 276 length 12255752 bytes, remaining 336 
+
+dissect_ssl enter frame #136 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 6, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 220 offset 11 length 11369201 bytes, remaining 71 
+
+dissect_ssl enter frame #143 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 432
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #148 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 5469
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #154 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 5622
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #156 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 433
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #131 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 78
+
+dissect_ssl enter frame #131 (first time)
+ssl_session_init: initializing ptr 0528A824 size 588
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 78
+packet_from_server: is from server - FALSE
+ssl_find_private_key server 192.168.0.141:443
+ssl_find_private_key can't find private key for this server! Try it again with universal port 0
+ssl_find_private_key can't find private key for this server (universal port)! Try it again with universal address 0.0.0.0
+ssl_find_private_key can't find any private key!
+client random len: 16 padded to 32
+dissect_ssl2_hnd_client_hello found CLIENT RANDOM -&gt; state 0x01
+
+dissect_ssl enter frame #132 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #133 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1477
+dissect_ssl3_record found version 0x0300 -&gt; state 0x11
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 1472, ssl state 0x11
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 70 bytes, remaining 1477 
+dissect_ssl3_hnd_hello_common found SERVER RANDOM -&gt; state 0x13
+dissect_ssl3_hnd_srv_hello found CIPHER 0x0005 -&gt; state 0x17
+dissect_ssl3_hnd_srv_hello trying to generate keys
+ssl_generate_keyring_material not enough data to generate key (0x17 required 0x37 or 0x57)
+dissect_ssl3_hnd_srv_hello can't generate keyring material
+dissect_ssl3_handshake iteration 0 type 11 offset 79 length 1390 bytes, remaining 1477 
+dissect_ssl3_handshake iteration 0 type 14 offset 1473 length 0 bytes, remaining 1477 
+
+dissect_ssl enter frame #135 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 336
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 260, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 16 offset 5 length 256 bytes, remaining 265 
+trying to use SSL keylog in C:\Documents and Settings\Jerome.LYNC.001\Bureau\<a href="http://MasterSecretlog.txt">MasterSecretlog.txt</a>
+  record: offset = 265, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - FALSE
+ssl_change_cipher CLIENT
+  record: offset = 271, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 60, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 237 offset 276 length 12255752 bytes, remaining 336 
+
+dissect_ssl enter frame #136 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - TRUE
+ssl_change_cipher SERVER
+  record: offset = 6, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 60, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 220 offset 11 length 11369201 bytes, remaining 71 
+
+dissect_ssl enter frame #143 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 432
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 427, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #144 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #145 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #146 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 4380
+  need_desegmentation: offset = 0, reported_length_remaining = 4380
+
+dissect_ssl enter frame #148 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 5469
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 5464, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #150 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #151 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #153 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 4380
+  need_desegmentation: offset = 0, reported_length_remaining = 4380
+
+dissect_ssl enter frame #154 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 5622
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 5617, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #156 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 433
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 428, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #157 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #158 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #160 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 4380
+  need_desegmentation: offset = 0, reported_length_remaining = 4380
+
+dissect_ssl enter frame #161 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 4976
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 4971, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #166 (first time)
+ssl_session_init: initializing ptr 0528D348 size 588
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 102
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 97, ssl state 0x00
+association_find: TCP port 1270 found 00000000
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 93 bytes, remaining 102 
+packet_from_server: is from server - FALSE
+ssl_find_private_key server 192.168.0.141:443
+ssl_find_private_key can't find private key for this server! Try it again with universal port 0
+ssl_find_private_key can't find private key for this server (universal port)! Try it again with universal address 0.0.0.0
+ssl_find_private_key can't find any private key!
+dissect_ssl3_hnd_hello_common found CLIENT RANDOM -&gt; state 0x01
+
+dissect_ssl enter frame #167 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 150
+dissect_ssl3_record found version 0x0300 -&gt; state 0x11
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 74, ssl state 0x11
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 70 bytes, remaining 79 
+dissect_ssl3_hnd_hello_common found SERVER RANDOM -&gt; state 0x13
+ssl_restore_session can't find stored session
+dissect_ssl3_hnd_srv_hello found CIPHER 0x0005 -&gt; state 0x17
+dissect_ssl3_hnd_srv_hello trying to generate keys
+ssl_generate_keyring_material not enough data to generate key (0x17 required 0x37 or 0x57)
+dissect_ssl3_hnd_srv_hello can't generate keyring material
+  record: offset = 79, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - TRUE
+ssl_change_cipher SERVER
+  record: offset = 85, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 60, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 222 offset 90 length 14924092 bytes, remaining 150 
+
+dissect_ssl enter frame #168 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - FALSE
+ssl_change_cipher CLIENT
+  record: offset = 6, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 60, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 222 offset 11 length 11467023 bytes, remaining 71 
+
+dissect_ssl enter frame #169 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 433
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 428, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #170 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #172 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #174 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 4380
+  need_desegmentation: offset = 0, reported_length_remaining = 4380
+
+dissect_ssl enter frame #175 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 5197
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 5192, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #177 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #178 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1797
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1792, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #180 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 479
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 474, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #181 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #182 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #183 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 4242
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 4237, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #185 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 1065
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1060, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #186 (first time)
+  conversation = 0528A244, ssl_session = 0528A824
+  record: offset = 0, reported_length_remaining = 820
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 815, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #187 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 411
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 406, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #188 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #189 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 2920
+  need_desegmentation: offset = 0, reported_length_remaining = 2920
+
+dissect_ssl enter frame #191 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 4270
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 4265, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 1270 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #193 (first time)
+  conversation = 0528CE7C, ssl_session = 0528D348
+  record: offset = 0, reported_length_remaining = 743
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 738, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #131 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 78
+
+dissect_ssl enter frame #133 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 1477
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 70 bytes, remaining 1477 
+dissect_ssl3_handshake iteration 0 type 11 offset 79 length 1390 bytes, remaining 1477 
+dissect_ssl3_handshake iteration 0 type 14 offset 1473 length 0 bytes, remaining 1477 
+
+dissect_ssl enter frame #135 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 336
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 16 offset 5 length 256 bytes, remaining 265 
+  record: offset = 265, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 271, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 237 offset 276 length 12255752 bytes, remaining 336 
+
+dissect_ssl enter frame #136 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 71
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 6, reported_length_remaining = 65
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 220 offset 11 length 11369201 bytes, remaining 71 
+
+dissect_ssl enter frame #143 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 432
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #148 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 5469
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #154 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 5622
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #156 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 433
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 1269 found 00000000
+association_find: TCP port 443 found 04973120
+
+dissect_ssl enter frame #131 (already visited)
+  conversation = 0528A244, ssl_session = 00000000
+  record: offset = 0, reported_length_remaining = 78
+
+</pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tls/" class="post-tag tag-link-tls"
+                                        title="see questions tagged 'tls'" rel="tag">tls</a>
+                                
+                                    <a href="/tags/ssl/" class="post-tag tag-link-ssl"
+                                        title="see questions tagged 'ssl'" rel="tag">ssl</a>
+                                
+                                    <a href="/tags/sip/" class="post-tag tag-link-sip"
+                                        title="see questions tagged 'sip'" rel="tag">sip</a>
+                                
+                                    <a href="/tags/decrypt/" class="post-tag tag-link-decrypt"
+                                        title="see questions tagged 'decrypt'" rel="tag">decrypt</a>
+                                
+                                    <a href="/tags/lync/" class="post-tag tag-link-lync"
+                                        title="see questions tagged 'lync'" rel="tag">lync</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Jul '12, 14:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f575fc1fd76c7c1763fb1f3f6076479f?s=32&amp;d=identicon&amp;r=g" alt="Jerome's gravatar image" />
+    <p><a href="/users/3066/jerome">Jerome</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jerome has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/12707/">
+                edited
+                <strong>13 Jul '12, 15:29</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+            <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+            <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-12707">
+    
+        <a name="22629"></a>
+        <div class="comment" id="comment-22629">
+            <div id="post-22629-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi ,</p>
+
+<p>Was your problem resolved ? If yes ..can you please help me know how you could resolve the issue..i have a similar problem </p>
+
+<p>I have lync.cer file and lync.pem file ..but wireshark does not show the sip messages decrypted ..any idea how i can get this done ?</p>
+
+<p>Thanks in advance,
+SL.</p></div>
+            <div class="comment-info" id="comment-22629-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jul '13, 22:37)</span>
+                <a class="comment-user userinfo" href="/users/5234/srinivas-lolla">Srinivas Lolla</a>
+                
+            </div>
+        </div>
+    
+        <a name="22638"></a>
+        <div class="comment" id="comment-22638">
+            <div id="post-22638-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes we had found the solution, if my memory is good, in your pem file you have got an encrypted private key, you have to uncrypt your key. We had used openssl and after you should have the RSA private key in clear who should be understandable by Wireshark.</p></div>
+            <div class="comment-info" id="comment-22638-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jul '13, 02:18)</span>
+                <a class="comment-user userinfo" href="/users/3066/jerome">Jerome</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-12707" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12707-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/12707/decrypt-lync-tls-sip?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/12707/decrypt-lync-tls-sip?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/12707/decrypt-lync-tls-sip?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/12707/decrypt-lync-tls-sip?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="12709"></a>
+                    <div id="answer-container-12709" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-12709-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12709/up/" rel="nofollow"> </a>
+<div id="post-12709-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-12709-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12709/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You seem to have configured both a private key (which could not be read properly by Wireshark) and a SSL session key logfile (in C:\Documents and Settings\Jerome.LYNC.001\Bureau\<a href="http://MasterSecretlog.txt">MasterSecretlog.txt</a>). Please share your current SSL preferences for further analysis. </p>
+<p>Could you also explain how you got hold of the SSL session keys?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/12709/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Jul '12, 16:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-12709">
+    
+        <a name="12716"></a>
+        <div class="comment" id="comment-12716">
+            <div id="post-12716-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi,
+These private key come from my Lync server. I work on virtual machines for a university project on interoperability between some voip solutions.
+Lync use TLS v1 to crypt sip communications with its softphone cients. 
+I try to decrypt a communication between two clients to compare standard SIP packets and Lync SIP packets.
+Lync server : 192.168.0.141
+Lync client 1 : 192.168.0.143
+I have export the certificat with private key and used OpenSSL to extract the key in a .pem file, but I dont understand why Wireshark can't use it.
+I have check my Mastersecretlog file but the file is empty...
+Thank's,</p></div>
+            <div class="comment-info" id="comment-12716-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jul '12, 05:02)</span>
+                <a class="comment-user userinfo" href="/users/3066/jerome">Jerome</a>
+                
+            </div>
+        </div>
+    
+        <a name="12717"></a>
+        <div class="comment" id="comment-12717">
+            <div id="post-12717-score" class="comment-score"></div>
+            <div class="comment-text"><p>Your key file should not have a passphrase if it is in pem format.</p>
+
+<p>And you should use something like "192.168.0.141,5061,sip,&lt;path-to-keyfile&gt;" in your SSL settings. The field for the master secret log should be empty, this is for reading known session keys from earlier decryption or from debug logging.</p></div>
+            <div class="comment-info" id="comment-12717-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jul '12, 05:57)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-12709" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12709-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/12707/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='pa4vnQaIfsu6qcIE18bmaFSZvd36TLMf' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12707/decrypt-lync-tls-sip?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12707/decrypt-lync-tls-sip?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ssl/"
+            class="tag-link-ssl"
+            title="see questions tagged'ssl'using tags"
+            rel="tag">ssl</a> <span class="tag-number">&#215;319</span><br/>
+        
+        <a href="/tags/sip/"
+            class="tag-link-sip"
+            title="see questions tagged'sip'using tags"
+            rel="tag">sip</a> <span class="tag-number">&#215;109</span><br/>
+        
+        <a href="/tags/tls/"
+            class="tag-link-tls"
+            title="see questions tagged'tls'using tags"
+            rel="tag">tls</a> <span class="tag-number">&#215;75</span><br/>
+        
+        <a href="/tags/decrypt/"
+            class="tag-link-decrypt"
+            title="see questions tagged'decrypt'using tags"
+            rel="tag">decrypt</a> <span class="tag-number">&#215;62</span><br/>
+        
+        <a href="/tags/lync/"
+            class="tag-link-lync"
+            title="see questions tagged'lync'using tags"
+            rel="tag">lync</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 13, 2012, 2:10 p.m.">13 Jul '12, 14:10</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,616 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 4, 2013, 2:18 a.m.">04 Jul '13, 02:18</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/17630/cant-decrypt-tlsv1-traffic">Can&#39;t Decrypt TLSv1 Traffic</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47721/unable-to-decrypt-sip-tls-traffic-with-wireshark">unable to decrypt SIP TLS traffic with Wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37383/how-do-i-followdecrypt-a-tlsssl-session-containing-a-tls-ticket-change">How do I follow/decrypt a TLS/SSL session containing a TLS ticket change?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37419/decrypt-error-after-handshake-protocol-certificate">Decrypt error after Handshake protocol: certificate</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43815/tls-half-decryption-problem">TLS &quot;half&quot; decryption problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52808/tls12-with-client-cert-auth-doesnt-send-certificate-verify-message">TLS1.2 with client cert auth doesn&#39;t send &quot;Certificate Verify&quot; message</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59073/decrypting-tlsv12-traffic">Decrypting TLSv1.2 traffic</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27590/decrypting-sip-packets-sometimes-not-shown-packets-fromto-endpoint">decrypting SIP packets sometimes not shown packets from/to endpoint</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28823/decryption-with-ssltls-pre-master">Decryption with SSL/TLS pre-master</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37556/how-to-dissect-the-mms-pdu-encrypted-with-tls">How to dissect the MMS pdu encrypted with TLS?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

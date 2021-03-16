@@ -1,0 +1,974 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Adding/appending packet comments in pcapng file with the Lua API - Wireshark Q&amp;A</title>
+        <meta name="description" content="I looked through the API and coulnd find anything about adding/appending comments to pcapng files.  I need to lable 12mb of data..." />
+        <meta name="keywords" content="comment,lua,pcapng,script" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/52324/addingappending-packet-comments-in-pcapng-file-with-the-lua-api" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/52324/addingappending-packet-comments-in-pcapng-file-with-the-lua-api?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Dx9VrBAMMYUXNFxVPeYnAPyFUN7m2Kto' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/52324/addingappending-packet-comments-in-pcapng-file-with-the-lua-api">Adding/appending packet comments in pcapng file with the Lua API</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-52324-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52324/up/" rel="nofollow"> </a>
+<div id="post-52324-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52324-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52324/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/52324/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I looked through the API and coulnd find anything about adding/appending comments to pcapng files. 
+I need to lable 12mb of data...</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/comment/" class="post-tag tag-link-comment"
+                                        title="see questions tagged 'comment'" rel="tag">comment</a>
+                                
+                                    <a href="/tags/lua/" class="post-tag tag-link-lua"
+                                        title="see questions tagged 'lua'" rel="tag">lua</a>
+                                
+                                    <a href="/tags/pcapng/" class="post-tag tag-link-pcapng"
+                                        title="see questions tagged 'pcapng'" rel="tag">pcapng</a>
+                                
+                                    <a href="/tags/script/" class="post-tag tag-link-script"
+                                        title="see questions tagged 'script'" rel="tag">script</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 May '16, 15:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f9df4644e8c578c944b68144e0e7adce?s=32&amp;d=identicon&amp;r=g" alt="13utters's gravatar image" />
+    <p><a href="/users/24094/13utters">13utters</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="13utters has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52324/">
+                edited
+                <strong>09 May '16, 06:57</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e0564001bb7deb960d5d9d9c1e0ba074?s=32&amp;d=identicon&amp;r=g" alt="JeffMorriss's gravatar image" />
+            <p><a href="/users/655/jeffmorriss">JeffMorriss ♦</a><br/>
+            <span class="score" title="6219 reputation points"><span class="">6.2k</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="72 badges"><span class="bronze">&#9679;</span><span class="badgecount">72</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-52324">
+    
+        <a name="52326"></a>
+        <div class="comment" id="comment-52326">
+            <div id="post-52326-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I looked through the API </p>
+</blockquote>
+
+<p>Which API?</p></div>
+            <div class="comment-info" id="comment-52326-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '16, 15:41)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52327"></a>
+        <div class="comment" id="comment-52327">
+            <div id="post-52327-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://wiki.wireshark.org/LuaAPI">https://wiki.wireshark.org/LuaAPI</a></p></div>
+            <div class="comment-info" id="comment-52327-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '16, 15:48)</span>
+                <a class="comment-user userinfo" href="/users/24094/13utters">13utters</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52324" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52324-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/52324/addingappending-packet-comments-in-pcapng-file-with-the-lua-api?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/52324/addingappending-packet-comments-in-pcapng-file-with-the-lua-api?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/52324/addingappending-packet-comments-in-pcapng-file-with-the-lua-api?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/52324/addingappending-packet-comments-in-pcapng-file-with-the-lua-api?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="52347"></a>
+                    <div id="answer-container-52347" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52347-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52347/up/" rel="nofollow"> </a>
+<div id="post-52347-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-52347-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52347/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Check out <code>captureinfo.comment</code> and <code>frameinfo.comment</code> in the <a href="https://www.wireshark.org/docs/wsdg_html_chunked/lua_module_File.html">Developer's Guide</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52347/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 May '16, 07:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e0564001bb7deb960d5d9d9c1e0ba074?s=32&amp;d=identicon&amp;r=g" alt="JeffMorriss's gravatar image" />
+    <p><a href="/users/655/jeffmorriss">JeffMorriss ♦</a><br/>
+    <span class="score" title="6219 reputation points"><span class="">6.2k</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="72 badges"><span class="bronze">&#9679;</span><span class="badgecount">72</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JeffMorriss has 103 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52347">
+    
+        <a name="52471"></a>
+        <div class="comment" id="comment-52471">
+            <div id="post-52471-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have trouble writing a new <code>captureinfo.comment</code> to the file my tab listing on. I only found examples of writing to .txt files, can u show me the way to do it ?</p></div>
+            <div class="comment-info" id="comment-52471-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 May '16, 07:32)</span>
+                <a class="comment-user userinfo" href="/users/24094/13utters">13utters</a>
+                
+            </div>
+        </div>
+    
+        <a name="52481"></a>
+        <div class="comment" id="comment-52481">
+            <div id="post-52481-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Oh, shoot.  It looks like that whole section I pointed you to is about <em>writing</em> file handlers in Lua.  PCAPNG files are already handled by the C code.</p>
+
+<p>So: my answers's no good.  I don't see a method to access PCAPNG comments in Lua.</p>
+
+<p>[I'd vote down my answer but apparently I'm not allowed!]</p></div>
+            <div class="comment-info" id="comment-52481-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 May '16, 14:18)</span>
+                <a class="comment-user userinfo" href="/users/655/jeffmorriss">JeffMorriss ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52747"></a>
+        <div class="comment" id="comment-52747">
+            <div id="post-52747-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi JeffMorriss,</p>
+
+<p>I am not sure where i go from there..</p>
+
+<p>Is there a way to add comments to specific packets (e.g all ip.addr == 8.8.8.8) in ANSI C ?
+Do you have a good source for wireshark ANSI C ?
+Will lua be able to handle PCAPNG ?</p></div>
+            <div class="comment-info" id="comment-52747-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 May '16, 15:15)</span>
+                <a class="comment-user userinfo" href="/users/24094/13utters">13utters</a>
+                
+            </div>
+        </div>
+    
+        <a name="52762"></a>
+        <div class="comment not_top_scorer" id="comment-52762">
+            <div id="post-52762-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just to make sure... you need the automatically generated comments to be stored into the pcapng file so that the resulting file could be open using any other Wireshark fresh installation and the comments would be there.</p>
+
+<p>I.e. distributing a Lua post-dissector along with the pcapng file, which would add expert info or protocol fields during dissection, thus allowing packet filtering on the presence or contents of these forged fields, would not do the trick for you, correct?</p></div>
+            <div class="comment-info" id="comment-52762-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 May '16, 04:46)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="52764"></a>
+        <div class="comment not_top_scorer" id="comment-52764">
+            <div id="post-52764-score" class="comment-score"></div>
+            <div class="comment-text"><p>My task is to label specific packets with a specific comments. Is the packet malicious or a consequences of malicious traffic and an identifier (attack_&lt;protocol_n&gt;:&lt;[mal|con]_N&gt;). 
+My result will be fed into a machine learning algorithmus, to teach it how different attacks can look like.</p></div>
+            <div class="comment-info" id="comment-52764-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 May '16, 05:54)</span>
+                <a class="comment-user userinfo" href="/users/24094/13utters">13utters</a>
+                
+            </div>
+        </div>
+    
+        <a name="52765"></a>
+        <div class="comment" id="comment-52765">
+            <div id="post-52765-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Do you need to be doing this in Wireshark?  Who is inputting the comments--a human or a computer?</p>
+
+<p>I worked on one project where we used packet comments to give the user some information.  We just wrote the PCAPNG file directly--it's not that hard.</p>
+
+<p>Or could you use <code>editcap -a &lt;frame.comment&gt;</code>?</p></div>
+            <div class="comment-info" id="comment-52765-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 May '16, 06:57)</span>
+                <a class="comment-user userinfo" href="/users/655/jeffmorriss">JeffMorriss ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52767"></a>
+        <div class="comment" id="comment-52767">
+            <div id="post-52767-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I understand <a href="/users/24094/13utters">@13utters</a>' workflow the way that he needs to use Wireshark's dissection capabilities, further enhanced using Lua post-dissectors, to generate the packet classifications, but then the raw packet data, not packet dissections, shall be fed to the expert system together with the classifications. So I could still imagine two files could be used for this purpose - the original input pcapng and it's companion csv file which would be a result of a tshark run over the original input and contain only frame numbers (or timestamps or both as frame numbers are not explicitly stored in the pcapng and the timestamps may not be unique) and the classifications. Alternatively, "empty" classifications could be used, so that each frame of the original pcapng would have a classification on its own line of text, and either the expert system would handle this file set directly, or a script would read the original input pcapng and the classifications file synchronously and generate an output pcapng with comments.</p></div>
+            <div class="comment-info" id="comment-52767-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 May '16, 07:11)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="52773"></a>
+        <div class="comment not_top_scorer" id="comment-52773">
+            <div id="post-52773-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://ask.wireshark.org/users/655/jeffmorriss"></a><a href="/users/655/jeffmorriss">@JeffMorriss</a> I dont have to do it in Wireshark/Lua (thought it would be easy) and the comments can be written by computers, but humans have to decide weather the packet is malicious in this context or else, but the amount of data is to large to be handled by a human alone.</p>
+
+<p>Just gave editcap a quick look and it seems to to do the job maybe (still need to get the speficic frame.number and feed it into editcap)</p>
+
+<p><a href="https://ask.wireshark.org/users/19586/sindy"></a><a href="/users/19586/sindy">@sindy</a> I guess i have to learn about tshark creating csv files to understand your answer. </p></div>
+            <div class="comment-info" id="comment-52773-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 May '16, 08:14)</span>
+                <a class="comment-user userinfo" href="/users/24094/13utters">13utters</a>
+                
+            </div>
+        </div>
+    
+        <a name="52786"></a>
+        <div class="comment not_top_scorer" id="comment-52786">
+            <div id="post-52786-score" class="comment-score"></div>
+            <div class="comment-text"><p>not too much to learn, see below:</p>
+
+<p><code>tshark -r "c:\Users\your_login\Captures\in.cap" -T fields -e frame.number -e ip.dst -E separator=, &gt; out.csv</code> creates the following contents of out.csv:</p>
+
+<pre><code>1,10.20.127.53
+2,212.47.21.121
+3,10.20.127.53
+4,10.20.127.53
+5,212.47.21.121
+6,212.47.21.121
+...
+</code></pre>
+
+<p>So your Lua post-dissector would create a single field (named e.g. <code>classification</code>) for those packets which are worth it, and you would replace <code>-e ip.dst</code> with <code>-e classification</code> in the example above. For those packets for which the Lua script would create the field, its value would be output to the file after the packet number; for the rest, only the packet number would be printed. By adding <code>-Y classification</code>, you would prevent these "packet number only" lines from being written to the output file.</p>
+
+<p>Or, vice versa, you could let the Lua post-dissector create the classification field for every single packet, except that it would contain some special "don't care" value for packets which the expert system should ignore. In that case, you could omit the <code>-e frame.number</code> and you would get just the classification string for each packet, so the merging script could simply be reading one packet from the pcap file and one line from the list of classifications at a time, rather than keep track of packet numbers.</p></div>
+            <div class="comment-info" id="comment-52786-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 May '16, 12:55)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52347" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52347-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/52324/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Dx9VrBAMMYUXNFxVPeYnAPyFUN7m2Kto' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52324/addingappending-packet-comments-in-pcapng-file-with-the-lua-api?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52324/addingappending-packet-comments-in-pcapng-file-with-the-lua-api?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/lua/"
+            class="tag-link-lua"
+            title="see questions tagged'lua'using tags"
+            rel="tag">lua</a> <span class="tag-number">&#215;431</span><br/>
+        
+        <a href="/tags/pcapng/"
+            class="tag-link-pcapng"
+            title="see questions tagged'pcapng'using tags"
+            rel="tag">pcapng</a> <span class="tag-number">&#215;36</span><br/>
+        
+        <a href="/tags/script/"
+            class="tag-link-script"
+            title="see questions tagged'script'using tags"
+            rel="tag">script</a> <span class="tag-number">&#215;31</span><br/>
+        
+        <a href="/tags/comment/"
+            class="tag-link-comment"
+            title="see questions tagged'comment'using tags"
+            rel="tag">comment</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 8, 2016, 3:23 p.m.">08 May '16, 15:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,028 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 19, 2016, 12:55 p.m.">19 May '16, 12:55</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/21388/addingappending-packets-comment-in-pcapng-file">Adding/appending packets comment in pcapng file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36252/lua-script-for-wireshark">lua script for wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41697/automatically-exporting-csv-info">Automatically exporting csv info</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52453/filtering-packets-in-lua">Filtering packets in LUA</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19995/automated-tcp-reassembler">Automated TCP Reassembler?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20264/split-bundled-packets-into-single">Split bundled packets into single</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27356/ask-about-lua-scripting">ask about lua scripting</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60412/how-do-i-trigger-an-alert-on-specific-frame-captured-during-live-scan">How do I trigger an alert on specific frame captured during live scan?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32290/lua-script-order-of-execution">Lua script order of execution</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34726/lua-script-update-info-field">lua script update Info field</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

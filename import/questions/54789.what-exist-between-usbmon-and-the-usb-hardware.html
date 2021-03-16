@@ -1,0 +1,975 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>What exist between usbmon and the usb hardware? - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi people! I am finally using wireshark with USB! Cheers! Here is my problem: I am developing a Linux USB V4L2 driver for some hardware. My driver sends some bulk messages to the hardware when the driver is probed. I see those bulk messages on wireshark during capturing. Now the hardware is supposed..." />
+        <meta name="keywords" content="driver,usbmon,linux" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/54789/what-exist-between-usbmon-and-the-usb-hardware" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/54789/what-exist-between-usbmon-and-the-usb-hardware?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='3NG1p6OLuT330Cty8W6Yd5B1CgUHRKAJ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/54789/what-exist-between-usbmon-and-the-usb-hardware">What exist between usbmon and the usb hardware?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-54789-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54789/up/" rel="nofollow"> </a>
+<div id="post-54789-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54789-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54789/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/54789/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi people! I am finally using wireshark with USB! Cheers!</p>
+<p>Here is my problem: I am developing a Linux USB V4L2 driver for some hardware. My driver sends some bulk messages to the hardware when the driver is probed. I see those bulk messages on wireshark during capturing. Now the hardware is supposed to act in some specific way when it gets this sequence of bulk messages, but "sometimes" it does not, given that everytime I confirm that the message was actually sent by the driver using wireshark. I am trying to understand where the problem could be happening, so bare with me. Here I list my potential problems<br>
+</p>
+<p>1 - The hardware has a bug?<br>
+2 - Due to my lack of understanding of how usbmon works, I list this as a potential problem: the hardware is not getting the bulk messages although they are listed in wireshark's capture. That means, that something between wireshark and the hardware is holding these bulk messages. Does this assumption hold grounds?<br>
+3 - My driver is causing some corruption/overflow/illegal access in the Linux OS, which causes this deterministic behaviour? Does this assumption hold grounds?</p>
+<p>I find it very hard to believe that 2 &amp; 3 may be occuring. Can someone agree or disagree with me on my potential problems and perhaps shed the light on something that I am not seeing?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/driver/" class="post-tag tag-link-driver"
+                                        title="see questions tagged 'driver'" rel="tag">driver</a>
+                                
+                                    <a href="/tags/usbmon/" class="post-tag tag-link-usbmon"
+                                        title="see questions tagged 'usbmon'" rel="tag">usbmon</a>
+                                
+                                    <a href="/tags/linux/" class="post-tag tag-link-linux"
+                                        title="see questions tagged 'linux'" rel="tag">linux</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Aug '16, 04:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bc05331089e123840d72991e06961c61?s=32&amp;d=identicon&amp;r=g" alt="dawood's gravatar image" />
+    <p><a href="/users/25061/dawood">dawood</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dawood has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54789/">
+                edited
+                <strong>14 Aug '16, 04:46</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+            <p><a href="/users/19586/sindy">sindy</a><br/>
+            <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-54789">
+    
+        <a name="54793"></a>
+        <div class="comment" id="comment-54793">
+            <div id="post-54793-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you publish the capture of the "working" and "non-working" case and provide a link to them?</p>
+
+<p>To answer your question - there is the kernel and the host controller (root hub) between the usbmon and the USB bus; depending on the design of the board you are using, a single chip may contain several root hubs.</p>
+
+<p>Normally, you should see a "S" (submit) type URB, marked as "from host to full endpoint address (x.y.z)", carrying the bulk data you give to the root hub to deliver it to the hardware, and a "C" (complete) type URB, marked as "from endpoint address to host", as soon as the host controller has finished sending them. Due to the relatively slow timing on the USB bus, you'll often see a C immediately followed by a S for the same URB ID, but these two do not belong to the same transfer.</p>
+
+<p>In any case:</p>
+
+<ul>
+<li>if you cannot see as many C URBs as S URBs for the endpoint address in question, there is something wrong with the root hub or its kernel driver,</li>
+<li>if you cannot see all your bulk data in the S USBs, there is something wrong with your driver.</li>
+</ul></div>
+            <div class="comment-info" id="comment-54793-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '16, 05:59)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54814"></a>
+        <div class="comment not_top_scorer" id="comment-54814">
+            <div id="post-54814-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Sindy, thanks for your prompt reply. Here is a link to a single dump that has both "working" and "non-working".</p>
+
+<p><a href="https://drive.google.com/open?id=0B9Rd-5KDpqFJdmI5TW5haFdCazQ">https://drive.google.com/open?id=0B9Rd-5KDpqFJdmI5TW5haFdCazQ</a></p>
+
+<p>First you need to filter for device 4 using this command
+usb.device_address == 4</p>
+
+<p>What I did was I probed the driver (modprobe) then I removed it (rmmod) several times. Upon probing, the driver does bulk writes requesting the device to perform some operations, and then the driver does bulk reads reading some info from the device. An example of the "working" transaction is in number 1427-1430 (Write, Success, Read, Success). An example of a "non-working" transaction is 1779-1784 (Write, Success, Read, -ENOENT).</p>
+
+<p>Where do I see the "S"s and the "C"s? Are you referring to WireShark or some file in the kernel that I can look at? </p>
+
+<p>Here is one more discovery: If I reset the usb connection by writing 0 then 1 to /sys/bus/usb/devices/bus-device/authorized file, everything goes back to normal until I unload and load the driver several times again.</p></div>
+            <div class="comment-info" id="comment-54814-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 05:14)</span>
+                <a class="comment-user userinfo" href="/users/25061/dawood">dawood</a>
+                
+            </div>
+        </div>
+    
+        <a name="54816"></a>
+        <div class="comment not_top_scorer" id="comment-54816">
+            <div id="post-54816-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am referring to Wireshark. In your file, e.g. in frame 1426, in the dissection pane, after clicking the <code>USB URB</code> tree open, you can see two lines marked here with <code>!!!!!!</code> because it is impossible to use bold in code:</p>
+
+<p><code>USB URB
+    [Source: 3.4.2]
+    [Destination: host]
+    URB id: 0xffff8800a2c74000
+    URB type: URB_COMPLETE ('C')    !!!!!!
+    URB transfer type: URB_BULK (0x03)
+    Endpoint: 0x02, Direction: OUT
+    Device: 4
+    URB bus id: 3
+    Device setup request: not relevant ('-')
+    Data: not present ('&gt;')
+    URB sec: 1471262056
+    URB usec: 943464
+    URB status: Success (0)    !!!!!!
+    URB length [bytes]: 4
+    Data length [bytes]: 0
+    [Request in: 1425]
+    [Time from request: 0.000031000 seconds]
+    [bInterfaceClass: Unknown (0xffff)]
+    Unused Setup Header
+    Interval: 0
+    Start frame: 0
+    Copy of Transfer Flags: 0x00000000
+    Number of ISO descriptors: 0</code></p>
+
+<p>Now if you apply a display filter <code>!(usb.urb_status == 0) and usb.device_address == 4 and usb.dst == host</code>, you can see four URBs reporting a non-zero status <code>-ENOENT</code> where you've asked the hardware to send you something and that something wasn't available. I assume it is correlated with the failure case, is it?</p>
+
+<p>As you describe it I would assume the hardware to be nervous from getting the same bulk data again without a reset, but it is not more than an experienced speculation. Have you compared the bulk transfer payload extracted from the capture to be identical between the working and non-working case?</p></div>
+            <div class="comment-info" id="comment-54816-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 05:30)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54818"></a>
+        <div class="comment not_top_scorer" id="comment-54818">
+            <div id="post-54818-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the explanation. Yes, all 4 cases are correlated.</p>
+
+<p>I have looked at the bulk transfer payload in both cases. In the non-working case, the data sometimes appears , while other times does not, and sometimes comes out of order. I cannot see any deterministic behaviour.</p>
+
+<p>In my assumption number 2, is it valid to think that there may be a possiblility that the hardware is not getting the bulk write messages although they are listed in wireshark's capture? Is there a way where I can confirm that? </p>
+
+<p>The device has a windows driver, and we have never seen such an issue, so I am inclined to think that there may be a chance that it is not a hardware bug.</p></div>
+            <div class="comment-info" id="comment-54818-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 05:42)</span>
+                <a class="comment-user userinfo" href="/users/25061/dawood">dawood</a>
+                
+            </div>
+        </div>
+    
+        <a name="54819"></a>
+        <div class="comment not_top_scorer" id="comment-54819">
+            <div id="post-54819-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>In the non-working case, the data sometimes appears , while other times does not, and sometimes comes out of order.</p>
+</blockquote>
+
+<p>I'm afraid I may not have been clear enough, I had in mind to compare between the good and bad cases the data which your driver sends to the hardware.</p>
+
+<p>If you got me that way and so you also talk about the <strong>sent</strong> data in the captured URBs to appear or not or to come in swapped order, it is an issue of the driver. <code>usbmon</code> shows you the URBs in the order the device driver has sent them to the host controller. If they are garbled already there, the device driver is to be blamed.</p>
+
+<p>If you compare the responses of the device and they come garbled although the sent data were exactly the same as in the working case, you would need a hardware monitor of the USB bus (which is a box worth hundreds of $) to be able to see what has happened to the sent data between the host controller and the wire.</p></div>
+            <div class="comment-info" id="comment-54819-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 05:53)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54820"></a>
+        <div class="comment not_top_scorer" id="comment-54820">
+            <div id="post-54820-score" class="comment-score"></div>
+            <div class="comment-text"><p>I see what you mean. Yes, I tried to reduce the bulk payload sent from the driver as much as possible, and yet cause this behavior for comparison purposes. And we compared the data sent by the driver in the good and the bad cases, but we found nothing suspicous. They are even identical. </p>
+
+<p>We also confirmed that the bulk messages sent by the driver are in order, but the usb payload that we read back from the hardware (or what appears to be coming back from hardware) either comes out of order, or does not come at all.</p>
+
+<p>Ok, I see, maybe we can try to get our hands on a hardware monitor of the USB bus. Thanks a lot Sindy!</p></div>
+            <div class="comment-info" id="comment-54820-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 06:07)</span>
+                <a class="comment-user userinfo" href="/users/25061/dawood">dawood</a>
+                
+            </div>
+        </div>
+    
+        <a name="54821"></a>
+        <div class="comment" id="comment-54821">
+            <div id="post-54821-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Maybe you could send the GET DESCRIPTOR each time rather than just once? In the first case in the capture, you send GET DESCRIPTOR request, get the response, exchange a couple of bulk out and bulk in, and then use SET INTERFACE to alternate setting 0 which is the only one available. But then, you start from bulk_out, so maybe the internal context of the device is different and the device treats the same data in the bulk out in a different way, so a GET DESCRIPTOR is necessary to put the state machine in it to the correct state?</p></div>
+            <div class="comment-info" id="comment-54821-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 06:21)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54822"></a>
+        <div class="comment not_top_scorer" id="comment-54822">
+            <div id="post-54822-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, that is a great idea. I was just looking at that. I tried to reset the connection by writing 0 and 1 to the authorized file, and on wireshark I see  a GET DESCRIPTOR, SET CONFIGURATION. So maybe that is exactly what I am going to do!</p></div>
+            <div class="comment-info" id="comment-54822-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 06:24)</span>
+                <a class="comment-user userinfo" href="/users/25061/dawood">dawood</a>
+                
+            </div>
+        </div>
+    
+        <a name="54823"></a>
+        <div class="comment not_top_scorer" id="comment-54823">
+            <div id="post-54823-score" class="comment-score"></div>
+            <div class="comment-text"><p>Wow man! It worked! Thanks a lot!</p></div>
+            <div class="comment-info" id="comment-54823-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 06:52)</span>
+                <a class="comment-user userinfo" href="/users/25061/dawood">dawood</a>
+                
+            </div>
+        </div>
+    
+        <a name="54824"></a>
+        <div class="comment" id="comment-54824">
+            <div id="post-54824-score" class="comment-score">1</div>
+            <div class="comment-text"><p>So if I get all that right: in normal case, the issue wouldn't have happened, but as you were rmmod'ing and insmod'ing the driver as you were debugging it, you've confused the hardware by sending bulk outs without resetting the FSM first.</p></div>
+            <div class="comment-info" id="comment-54824-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 07:08)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54825"></a>
+        <div class="comment not_top_scorer" id="comment-54825">
+            <div id="post-54825-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, in the normal circumstance, it does not happen. But should the hardware get confused? Did I mess up the USB protocol standard initialization process? That is why the FSM was out of sync when I insmod and rmmod? Or is this a potential bug?</p></div>
+            <div class="comment-info" id="comment-54825-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 07:15)</span>
+                <a class="comment-user userinfo" href="/users/25061/dawood">dawood</a>
+                
+            </div>
+        </div>
+    
+        <a name="54826"></a>
+        <div class="comment" id="comment-54826">
+            <div id="post-54826-score" class="comment-score">1</div>
+            <div class="comment-text"><p>To me the concept used by the hardware vendor seems messy enough.</p>
+
+<p>The clean way would be to have two alternate settings. Alternate setting 0, which is the default one at device startup, would be used for the exchange of bulk transfers in the initialisation phase, and alternate setting 1 would be used for the operation phase. Here, the philosophy seems to be that the init phase spawns from GET DESCRIPTOR to SET INTERFACE, and the operation phase is from SET INTERFACE onwards.</p>
+
+<p>Are you reverse engineering the protocol from a Windows version? Have you captured the communication on Windows?</p></div>
+            <div class="comment-info" id="comment-54826-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 07:26)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54827"></a>
+        <div class="comment not_top_scorer" id="comment-54827">
+            <div id="post-54827-score" class="comment-score"></div>
+            <div class="comment-text"><p>I see. No I am not reverse engineering. We developed the chip ourselves but we bought a third party USB IP, and we developed the windows driver inhouse. I could obtain the communication on windows though in the near future. Could this shed the light on something?</p></div>
+            <div class="comment-info" id="comment-54827-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 07:30)</span>
+                <a class="comment-user userinfo" href="/users/25061/dawood">dawood</a>
+                
+            </div>
+        </div>
+    
+        <a name="54828"></a>
+        <div class="comment" id="comment-54828">
+            <div id="post-54828-score" class="comment-score">1</div>
+            <div class="comment-text"><p>If the windows driver is an in-house development, capturing its behaviour could shed light on why you've never experienced the issue on Windows but did on linux :-) I.e. maybe you'll find out that the driver on Windows needs revisiting as well if a reinitialisation similar to rmmod followed by insmod is theoretically possible.</p>
+
+<p>But initially I had in mind that if you were not reverse engineering, the programmer's guide to the device (or to its software stack, I don't know what "IP" means in your "USB IP") should have told you in advance what we had  to painfully discover (actually, reverse engineer).</p></div>
+            <div class="comment-info" id="comment-54828-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 07:39)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54829"></a>
+        <div class="comment not_top_scorer" id="comment-54829">
+            <div id="post-54829-score" class="comment-score"></div>
+            <div class="comment-text"><p>I see, yes I agree. I should be able to obtain the dump in the near future.
+My explanation was not clear; USB IP = USB intellectual property core (digital circuit that takes care of USB stuff). Yes, the programmer guide should have this information listed in it. I should double check this with them. Thanks a lot though, you have helped a lot!</p></div>
+            <div class="comment-info" id="comment-54829-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 07:45)</span>
+                <a class="comment-user userinfo" href="/users/25061/dawood">dawood</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54789" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 15
+        </span>
+        <a href="#" class="show-all-comments-link">show 10 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54789-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/54789/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='3NG1p6OLuT330Cty8W6Yd5B1CgUHRKAJ' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54789/what-exist-between-usbmon-and-the-usb-hardware?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54789/what-exist-between-usbmon-and-the-usb-hardware?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/linux/"
+            class="tag-link-linux"
+            title="see questions tagged'linux'using tags"
+            rel="tag">linux</a> <span class="tag-number">&#215;154</span><br/>
+        
+        <a href="/tags/usbmon/"
+            class="tag-link-usbmon"
+            title="see questions tagged'usbmon'using tags"
+            rel="tag">usbmon</a> <span class="tag-number">&#215;15</span><br/>
+        
+        <a href="/tags/driver/"
+            class="tag-link-driver"
+            title="see questions tagged'driver'using tags"
+            rel="tag">driver</a> <span class="tag-number">&#215;14</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 14, 2016, 4:38 a.m.">14 Aug '16, 04:38</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,561 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 15, 2016, 7:45 a.m.">15 Aug '16, 07:45</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/35660/determine-physical-usb-port-in-wireshark-dump">Determine Physical USB Port in Wireshark Dump</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36116/what-does-port-1-mean-in-a-usb-capture">What does [Port 1] mean in a USB capture?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/170/wireshark-only-showing-one-way-communication-over-vpn-tunnel">Wireshark only showing one way communication over VPN tunnel</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10784/can-download-wireshark-for-ubuntu-linux">Can Download Wireshark for Ubuntu Linux?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18435/how-do-i-set-up-wireshark-for-linux">How do I set up Wireshark for Linux?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24613/what-does-sll-stand-for-as-in-the-context-of-linux-cooked-headers">What does SLL stand for (as in the context of Linux &quot;cooked&quot; headers)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29024/compiled-wireshark-does-not-color-the-packets-by-default">Compiled wireshark does not color the packets by default</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35615/expert-information-field">Expert information field</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43707/how-to-get-individual-vlan-information-of-same-frame-from-a-wireshark-8021q-packet">How to get individual vlan information of same frame from a Wireshark 802.1q packet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48124/start-development-wireshark-build-on-linux">Start development wireshark build on linux</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

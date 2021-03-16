@@ -1,0 +1,1105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How To Enable Packet Re-Assembly - Wireshark Q&amp;A</title>
+        <meta name="description" content="According to the documentation, there should be a &#39;Packet Pane&#39; that assembles all the packet data into a single hex dump https://www.wireshark.org/docs/wsug_html_chunked/ChAdvReassemblySection.html However, whenever I try to capture the data I&#39;m sending, basically 52 ascii characters (repeated ever..." />
+        <meta name="keywords" content="reassembly" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/52821/how-to-enable-packet-re-assembly" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/52821/how-to-enable-packet-re-assembly?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='YZhaDWC17i76wUD0318fqUlyALZfTvlH' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/52821/how-to-enable-packet-re-assembly">How To Enable Packet Re-Assembly</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-52821-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52821/up/" rel="nofollow"> </a>
+<div id="post-52821-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52821-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52821/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/52821/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>According to the documentation, there should be a 'Packet Pane' that assembles all the packet data into a single hex dump
+<a href="https://www.wireshark.org/docs/wsug_html_chunked/ChAdvReassemblySection.html">https://www.wireshark.org/docs/wsug_html_chunked/ChAdvReassemblySection.html</a></p>
+<p>However, whenever I try to capture the data I'm sending, basically 52 ascii characters (repeated every second),  all I see is [TCP Retransmission] and [TCP segment of a reassembled PDU] but neither show the raw hex data.   I was hoping to see Wireshark assemble the packets and display each 52 ascii character burst.
+<a href="http://imgur.com/jOfDowV">http://imgur.com/jOfDowV</a></p>
+<p>My setup is similar to the "Switch + Tap" setup described in the documentation,
+<a href="https://wiki.wireshark.org/CaptureSetup/Ethernet">https://wiki.wireshark.org/CaptureSetup/Ethernet</a></p>
+<p>Except, that my device who's traffic I'm capturing is connected to this tap, 
+<a href="https://greatscottgadgets.com/throwingstar/">https://greatscottgadgets.com/throwingstar/</a></p>
+<p>where one port goes to the router, and the other port goes to the pc running wireshark.   I understand the last port should also connect to my pc/wireshark, except at the moment, I'm not interested in the data going  to my device, I just want the data my device sends.   Also, the complexity of using a 2nd nic for that port and having wireshark merge those 2 streams seems like it would be very difficult for a newcomer like myself.</p>
+<p>How can I configure Wireshark to reassemble the data it sees coming from the device?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/reassembly/" class="post-tag tag-link-reassembly"
+                                        title="see questions tagged 'reassembly'" rel="tag">reassembly</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 May '16, 21:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ed4e218a4f08a17c9ba1bf2c2fd6e214?s=32&amp;d=identicon&amp;r=g" alt="benn%20n's gravatar image" />
+    <p><a href="/users/21771/benn-n">benn n</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="benn n has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-52821">
+    
+        <a name="52822"></a>
+        <div class="comment" id="comment-52822">
+            <div id="post-52822-score" class="comment-score"></div>
+            <div class="comment-text"><p>So did you write a dissector for this "52 ASCII characters per message" protocol?</p></div>
+            <div class="comment-info" id="comment-52822-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 May '16, 00:16)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52823"></a>
+        <div class="comment" id="comment-52823">
+            <div id="post-52823-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you share the capture rather than the screenshot? The screenshot suggests that</p>
+
+<ul>
+<li>
+<p>you have completely suppressed the display of the packet bytes pane in Wireshark settings (make sure that there is a checkmark next to <code>View -&gt; Packet Bytes</code>)</p>
+</li>
+<li>
+<p>either there are real retransmissions, or you've somehow somehow managed to interleave two sessions with identical source and destination socket tuples, which causes not only Wireshark but also the receiving application understand the incoming packets as retransmissions.</p>
+</li>
+</ul>
+
+<p>Re-assembly means that if a higher layer (application) PDU is so large that more a single transport layer packet is not sufficient to transfer it, the last packet carrying that PDU contains the dissection of it in the dissection pane and a hex dump of the complete PDU as a separate tab in the packet bytes pane; dissection of all the previous transport packets shows the part of PDU as "data", and the packet bytes pane has no tabs in it.</p>
+
+<p>If the whole PDU of the application protocol fits into a single transport packet (or even if more PDUs fit), you do not need any re-assembly to have them dissected and displayed. However, in case of an unsupported application protocol, you won't get a proper (e.g. ASCII) representation of the PDU unless you create a dissector for your protocol, which is a piece of code which instructs Wireshark what to do with the data of your protocol.</p></div>
+            <div class="comment-info" id="comment-52823-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 May '16, 03:05)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="52824"></a>
+        <div class="comment" id="comment-52824">
+            <div id="post-52824-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks, confirmed the View-&gt;Packet Bytes is checked.   The re-transmissions does seem strange, especially since everything works correctly (i.e. the device, an arduino, is sending the data to the plot.ly server and it charts correctly).  <br>
+</p>
+
+<p>Because it sends the plotting data as ascii character strings, I didn't setup any kind of dissector/interpreter for the data.. I was hoping that as long as I can see the full data sent at every burst (52 characters every second), that would be enough to see how I can port this to a non-arduino device.   For some reason, when I try it on an MSP430, it doesn't work.</p>
+
+<p>I don't see where to attach a capture file here, so I placed it online:
+<a href="https://www.cloudshark.org/captures/9563f9aef707">https://www.cloudshark.org/captures/9563f9aef707</a></p>
+
+<p>Not sure if it would help, but I was thinking of removing the Throwing Star, and trying to monitor this wirelessly.  I initially wanted to avoid this approach since I'm using Win7/8 and apparently Wireshark/WinPCap doesn't support monitor mode... also there's tons of non-related wifi traffic so filtering becomes key. 
+<a href="https://wiki.wireshark.org/CaptureSetup/WLAN">https://wiki.wireshark.org/CaptureSetup/WLAN</a></p>
+
+<p>I did look into Riverbed's AIRPCAP but it's cost prohibitive.. even though I have wifi hardware that would seem to support monitor mode : Netgear A6200 / ZyXEL AC240 / TP Link TL-WN722N 
+<a href="https://www.acrylicwifi.com/en/blog/how-to-capture-wifi-traffic-using-wireshark-on-windows/">https://www.acrylicwifi.com/en/blog/how-to-capture-wifi-traffic-using-wireshark-on-windows/</a>
+<a href="http://www.tamos.com/products/commwifi/adapterlist.php">http://www.tamos.com/products/commwifi/adapterlist.php</a></p></div>
+            <div class="comment-info" id="comment-52824-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 May '16, 16:34)</span>
+                <a class="comment-user userinfo" href="/users/21771/benn-n">benn n</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52821" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52821-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/52821/how-to-enable-packet-re-assembly?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/52821/how-to-enable-packet-re-assembly?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/52821/how-to-enable-packet-re-assembly?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/52821/how-to-enable-packet-re-assembly?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="52825"></a>
+                    <div id="answer-container-52825" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52825-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52825/up/" rel="nofollow"> </a>
+<div id="post-52825-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52825-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52825/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The first set of TCP packets from the Arduino <em>does</em> get reassembled; look at frame 492.  All the segments before it are marked as "TCP segment of a reassembled PDU" because they're TCP segments that are part of a reassembled HTTP request.  There are a lot of them because your Arduino is, as <a href="/users/19586/sindy"><a href="/users/19586/sindy"><a href="/users/19586/sindy"><a href="/users/19586/sindy">@sindy</a></a></a></a> says, sending really tiny TCP segments.</p>
+<p>After that, there are two TCP segments that are somehow not getting handled correctly by Wireshark - the TCP dissector isn't showing the CR in the first segment or the LF in the second segment and isn't handing it to a dissector, either.  Then there's a ACK and a FIN+ACK; presumably both sides closed the connection.</p>
+<p>Then Weird Stuff Happens, as <a href="/users/19586/sindy"><a href="/users/19586/sindy"><a href="/users/19586/sindy"><a href="/users/19586/sindy">@sindy</a></a></a></a> indicates.  As Wireshark isn't seeing both sides of the conversation, it might not realize that the connection is closed, and thinks there are retransmissions.</p>
+<p>I'm not seeing any 52-byte packets there; I'm just seeing the two HTTP connections, a bunch of broadcast/multicast traffic, and a few other packets.  Maybe your 52-byte packets aren't even getting sent; what protocol are they using, and, if it's something like TCP or UDP, what port are they going to?  Or are they being sent as HTTP packets, in a way that expands them to a lot more than 52 characters?  Are you sending them by directly writing to a TCP connection, or are you passing 52 bytes to some "send this as plot data over HTTP" library?  I'm not seeing any actual <em>data points</em> in the HTTP POST request, however.</p>
+<p>None of the reassembly issue has anything whatsoever with the low-level details of how it's being captured - not with the tap, not with wired vs. wireless, none of that. Changing the tap would make no difference; doing a wireless capture would make no difference.</p>
+<p>As for the retransmissions, there's nothing that can be done to determine what's going on there without capturing the traffic going <em>to</em> your device, as well as the traffic coming <em>from</em> your device, in a single capture.  It might be that retransmissions are really happening, or it might be that Wireshark's analysis of the TCP traffic is confused by the absence of the traffic going to your device.</p>
+<p>If I take the capture and throw away all packets before the last SYN, the retransmission errors go away, and what I see is another HTTP POST request; this one uses chunked encoding - but it's incomplete.  Is it just sending an endless stream of points?  If I tell Wireshark to reassemble HTTP headers but <em>not</em> HTTP bodies, it still looks as if it's reassembling the body of the request, which is arguably a bug, but I'd need to look at that some more.  If it's an endless stream of points, Wireshark won't be able to reassemble it, as there's no end.  At <em>best</em>, it'd be able to show you each chunk.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52825/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 May '16, 17:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52825/">
+                edited
+                <strong>23 May '16, 17:02</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52825">
+    
+        <a name="52845"></a>
+        <div class="comment" id="comment-52845">
+            <div id="post-52845-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not sure if there's underlying errors in the transmission, or if there's re-transmissions, but the data does seem to get accepted since it plots correctly...   I can disable http processing since this is not a standard port 80 usage.</p>
+
+<p>I have a usb NIC that I can add to the laptop, but not sure how easy it is to bond or trunk the 2 so that Wireshark captures merged data.  Maybe the better way to do this, will be to use an active tap (ex.dual-comm DCSW-1005)?</p>
+
+<p><a href="https://www.gigamon.com/sites/default/files/resources/whitepaper/wp-understanding-network-taps-the-first-step-to-visibility-3164.pdf">https://www.gigamon.com/sites/default/files/resources/whitepaper/wp-understanding-network-taps-the-first-step-to-visibility-3164.pdf</a></p></div>
+            <div class="comment-info" id="comment-52845-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 May '16, 23:00)</span>
+                <a class="comment-user userinfo" href="/users/21771/benn-n">benn n</a>
+                
+            </div>
+        </div>
+    
+        <a name="52852"></a>
+        <div class="comment" id="comment-52852">
+            <div id="post-52852-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Not sure if there's underlying errors in the transmission, or if there's re-transmissions,</p>
+</blockquote>
+
+<p>The correct answer is "there's an underlying error somewhere in Wireshark".  It's properly reporting frame 521 as a retransmission of frame 514, as they're on the same connection and have the same sequence number,, but it shouldn't be reporting frame 522 as a retransmission, as there's no other TCP transmission from 192.168.1.148 port 1026 to 52.1.214.92 port 80, on any connection, with that sequence number.</p>
+
+<blockquote>
+<p>I can disable http processing since this is not a standard port 80 usage.</p>
+</blockquote>
+
+<p>There's nothing non-standard about it; the second connection is <em>unusual</em>, in that it just keeps sending points to the plot.ly server indefinitely, and presumably expects the server to render the points as they arrive rather than waiting for the entire body to be sent, but that's not <em>non-standard</em>.</p>
+
+<p>Given that this <em>is</em> HTTP, disabling HTTP processing would mean that Wireshark would do a <em>worse</em> job of displaying the traffic.  The only real problem here is that, if I strip out everything before packet 513, so that the first connection, and the initial SYN and client-side RST, are removed, so that Wireshark doesn't get confused and think it has a ton of retransmitted TCP segments, and can properly process the HTTP request in the second connection, it treats all the TCP segments containing the (un-ending) <em>body</em> of the request as data to be reassembled, <em>even though I've turned off all of HTTP's reassembly preferences other than "reassemble the HTTP headers"</em>.</p></div>
+            <div class="comment-info" id="comment-52852-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '16, 00:55)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="54103"></a>
+        <div class="comment" id="comment-54103">
+            <div id="post-54103-score" class="comment-score"></div>
+            <div class="comment-text"><p>With both sides of the communication captured and in-sync, 
+<a href="https://www.cloudshark.org/captures/a08f1590cc7c">https://www.cloudshark.org/captures/a08f1590cc7c</a></p>
+
+<p>how can I format the display to show the few lines of ascii text that is being sent and received?</p>
+
+<p>For example, I'm trying to find out what is being sent immediately after the connection closes..  since the streaming data does get plotted, I imagine the connection must re-open, but I can't find it within all the packet fragments!</p></div>
+            <div class="comment-info" id="comment-54103-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jul '16, 19:55)</span>
+                <a class="comment-user userinfo" href="/users/21771/benn-n">benn n</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52825" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52825-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="52831"></a>
+                    <div id="answer-container-52831" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52831-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52831/up/" rel="nofollow"> </a>
+<div id="post-52831-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52831-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52831/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Oh man... the code sending the data does many things wrong.</p>
+<p>In fact, re-assembly in Wireshark does work, and as you actually do use HTTP, there is no need that you'd write your own dissector.</p>
+<p>Take the capture you've posted, and look at frame 492. You'll see that the Protocol column of the packet list doesn't say just TCP like for all the previous tcp packets but HTTP, and the INFO column shows the <code>POST /clientresp ...</code> beginning of the http request, and in the packet bytes pane, you have two tabs, one containing the hex dump of that TCP packet alone and the other one containing the complete HTTP request.</p>
+<p>So the first trouble is that you're effectively using TCP almost like a serial line. Wireshark shows the PSH bit to be set in all data packets, which, unless there is something wrong with the TCP stack you use, means that you write the bytes to the socket with a PUSH flag set. Doing so causes the tcp stack to send the data collected so far packet immediately, rather than to wait for the whole message to be put together and send it in a single packet. There are exceptions to this rule, like frame 661 where the payload has 16 bytes rather than a single one like in the other cases.</p>
+<p>The second trouble is the missing reverse channel as <a href="/users/79/guy-harris"><a href="/users/79/guy-harris">@Guy Harris</a></a> has stated in his Answer. The point is that unless the Wireshark dissector can see both directions of the session termination, it doesn't recognize the session to be closed and new one to be open. Look at frames 510, 511, 512. Arduino sends a SYN packet from port 1026, followed by a RST packet, and then another SYN packet from port 1026. This indicates that it attempted to open a new tcp session, then changed its mind and did an emergency closure (RST), and immediately after it has sent a new SYN from the same local port, attempting to open a new session. Without the RST, this would definitely be illegal as some timeouts have to be followed before reusing the same local socket to open a new session towards the same server; with the RST, I am not sure. However, from that point on, Wireshark considers all packets coming from 1026 to be retransmissions, as it considers the session to have been emergency-closed in the meantime, and doesn't bother to dissect them deeper. Look into the TCP RFC whether it is legal to reuse the local port so quickly after sending a RST packet from it; if yes, the receiving server may have dealt with it properly and only Wireshark may be confused as the opposite direction is missing.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52831/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 May '16, 03:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52831">
+    
+        <a name="52832"></a>
+        <div class="comment" id="comment-52832">
+            <div id="post-52832-score" class="comment-score"></div>
+            <div class="comment-text"><p>Also, it is not a good idea to close a TCP session right after sending the first packet through it if you know that during a couple of seconds you'll need to send another data to the same server. It is better to keep it open for future use and only close it if you know in advance that you won't send anything else soon, or if the remote side (the server in your case) closes it on its own initiative. If you don't know how long it is going to take before you'll need to send another piece of data (not your case currently), it is wise to start a timer each time you send a piece of data, and close the session upon that timer's expiration.</p></div>
+            <div class="comment-info" id="comment-52832-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 May '16, 03:38)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="52844"></a>
+        <div class="comment" id="comment-52844">
+            <div id="post-52844-score" class="comment-score"></div>
+            <div class="comment-text"><p>I can't say for sure about how the TCP sessions are controlled, because the project example I'm following abstracts all the low-level information out :<br>
+<a href="http://www.instructables.com/id/Plotly-Arduino-Data-Visualization/">http://www.instructables.com/id/Plotly-Arduino-Data-Visualization/</a>  <br>
+</p>
+
+<p>From what I see in the Arduino code however, it does check to see if the connection is still alive before sending the data:   <a href="http://pastebin.com/4bmTuLsa">http://pastebin.com/4bmTuLsa</a>  <br>
+</p>
+
+<p>It sounds like the only way to reconcile the data I think I'm sending, with the actual network traffic is to re-capture , but in both directions.   Then will Wireshark's Re-Assembly of port 80 be something readable?</p></div>
+            <div class="comment-info" id="comment-52844-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 May '16, 22:56)</span>
+                <a class="comment-user userinfo" href="/users/21771/benn-n">benn n</a>
+                
+            </div>
+        </div>
+    
+        <a name="52853"></a>
+        <div class="comment" id="comment-52853">
+            <div id="post-52853-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Then will Wireshark's Re-Assembly of port 80 be something readable?</p>
+</blockquote>
+
+<p>Probably not.  It's <em>impossible</em> for Wireshark to reassemble the body of the second POST request, as you don't have all the packets including the Arduino saying "I have no more points to plot" and closing the connection, and, for some reason, telling Wireshark to reassemble the HTTP headers but not the body, so that you'd see each individual segment of the body as HTTP data, doesn't seem to be working.</p></div>
+            <div class="comment-info" id="comment-52853-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '16, 00:58)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52855"></a>
+        <div class="comment" id="comment-52855">
+            <div id="post-52855-score" class="comment-score"></div>
+            <div class="comment-text"><p>Depending on what is your actual goal, it might help you reach it to export the packets belonging to that second tcp session (i.e. everything from the last SYN packet, 512, in the original capture) into a new file, using <code>File -&gt; Export Specified Packets -&gt; Captured -&gt; Range -&gt; 512-</code>, and after opening that new file, to choose any of the packets belonging to the session in the packet list and go <code>Analysis -&gt; Follow -&gt; TCP stream</code>. This shows you, in a new window, the payload of the TCP session regardless its (optionally existing) internal structure, the default display format is ASCII which should suit your needs.</p>
+
+<p>As <a href="/users/79/guy-harris">@Guy Harris</a> wrote, the reassembly works on PDUs (in this case, HTTP ones) which are split among several adjacent packets <strong>and</strong> complete (finished). The plotly thing seems to never stop sending, so the PDU is never complete (at least until you stop it manually if it is possible at all). So on one hand, it is slightly saving bandwidth by sending all the values as a body of a single common HTTP POST, on the other hand, it is terribly wasting it by adding 59 bytes of overhead to almost every data byte it sends. (Sending each {x,y,streamtoken} tuple using a dedicated POST could still be done inside a single TCP session).</p></div>
+            <div class="comment-info" id="comment-52855-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '16, 02:49)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54102"></a>
+        <div class="comment" id="comment-54102">
+            <div id="post-54102-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's been a while, but I got it to work!  Actually, unlike before, now I captured both sides of the network tap. <br>
+</p>
+
+<p><a href="https://www.cloudshark.org/captures/a08f1590cc7c">https://www.cloudshark.org/captures/a08f1590cc7c</a></p>
+
+<p>So now in theory all the data that is sent/received is there and synchronized correctly, but Wireshark still doesn't show it as nice re-assembled packet! <br>
+</p>
+
+<p>For example, I know for sure that plotly sends "All Streams Go" yet I can't find it in the capture.  Since there's not much data being sent, is there a way to reconstruct the packets to view all data at once?</p></div>
+            <div class="comment-info" id="comment-54102-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jul '16, 19:50)</span>
+                <a class="comment-user userinfo" href="/users/21771/benn-n">benn n</a>
+                
+            </div>
+        </div>
+    
+        <a name="54105"></a>
+        <div class="comment not_top_scorer" id="comment-54105">
+            <div id="post-54105-score" class="comment-score"></div>
+            <div class="comment-text"><p>What you can do is to use <code>Analyze -&gt; Follow -&gt; TCP Stream</code>. You have to choose a TCP packet in the packet list pane so that the <code>TCP Stream</code> choice would become active in the drop-down menu. In the new window which opens, you'll find a Stream selector in the right bottom corner.</p>
+
+<p>In your case, there is stream 0, which is the initial POST which plot.ly has responded with a 200 OK, and stream 1 which contains only the request. There is nothing in the request body itself which could tell the Wireshark dissector that it is complete. Plus the last packet of that request is the last packet in the capture, so the http dissector in Wireshark cannot use a recognized beginning of another request to conclude that the previous one has been completed. So it is waiting for an event which never comes, and so it marks all packets as "TCP segment of a re-assembled PDU".</p>
+
+<p>But I suspect there is no closing event expected to ever come, i.e. that it is the principle of the service that you feed it with data continuously, within a single HTTP POST's payload, until you manually stop the sending application. So <code>Analyze -&gt; Follow -&gt; TCP Stream</code> may be your only way to view the sequence of <code>{"x", "y", "streamtoken"}</code> messages.</p>
+
+<p>I've written before that I'd like to see the reverse direction in the capture in order to see whether Wireshark wouldn't eventually recognize the end of a PDU by seeing a proper closure of the TCP session carrying it; in this capture, you've provided both directions but the capture is cut while the TCP session is still in progress, so the idea got ruined.</p>
+
+<p>Worse than that, you seem to have cut the capture in the middle of transmission of a point - the last packet carries the "35" string expressing the length of the <code>{"x", "y", "streamtoken"}</code> tuple but the tuple itself is missing.</p></div>
+            <div class="comment-info" id="comment-54105-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jul '16, 00:41)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52831" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52831-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/52821/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='YZhaDWC17i76wUD0318fqUlyALZfTvlH' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52821/how-to-enable-packet-re-assembly?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52821/how-to-enable-packet-re-assembly?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/reassembly/"
+            class="tag-link-reassembly"
+            title="see questions tagged'reassembly'using tags"
+            rel="tag">reassembly</a> <span class="tag-number">&#215;78</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 21, 2016, 9:47 p.m.">21 May '16, 21:47</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,758 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 17, 2016, 12:41 a.m.">17 Jul '16, 00:41</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/344/conditional-tcp-reassembly-based-on-dscp-bits">Conditional TCP reassembly based on DSCP bits</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18443/tshark-issues-with-ip-defragmentation-sip">tshark - Issues with IP Defragmentation - SIP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33344/how-wireshark-reassembles-tcpsip-segments">How wireshark reassembles TCP/SIP segments</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44329/multiple-time-showing-same-message-name-for-gsm_map-message">Multiple time showing same message name for gsm_map message</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59151/how-to-reassemble-custom-protocols-with-lua">How to reassemble custom protocols with Lua?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1357/lua-tcp-reassembly">Lua TCP reassembly</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18694/is-the-rlc-reassembly-take-too-much-time">is the rlc reassembly take too much time?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34106/-w-options-changing-the-packetnot-giving-all-the-details">-w options changing the packet(not giving all the details)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44364/why-tcp-reassembly-not-successful">Why TCP reassembly not successful?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59314/tcp-reassembly-issues">TCP Reassembly issues</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

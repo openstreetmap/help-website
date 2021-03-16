@@ -1,0 +1,1392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to filter LWAPP-encapsulated wlan traffic with a capture filter - Wireshark Q&amp;A</title>
+        <meta name="description" content="As we known, &quot;wlan&quot; is a display filter for wireless network, then I need a capture filter do the same thing, &quot;wlan&quot; just don&#39;t work with dumpcap. Any reply will be appreciated." />
+        <meta name="keywords" content="capture-filter,wlan,lwapp" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/26350/how-to-filter-lwapp-encapsulated-wlan-traffic-with-a-capture-filter" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/26350/how-to-filter-lwapp-encapsulated-wlan-traffic-with-a-capture-filter?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Qi4Z6TzMfWshrip9fb9lGaqhjUgmQ9wS' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/26350/how-to-filter-lwapp-encapsulated-wlan-traffic-with-a-capture-filter">How to filter LWAPP-encapsulated wlan traffic with a capture filter</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-26350-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26350/up/" rel="nofollow"> </a>
+<div id="post-26350-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-26350-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26350/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/26350/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>As we known, "wlan" is a display filter for wireless network, then I need a capture filter do the same thing, "wlan" just don't work with dumpcap. Any reply will be appreciated.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/capture-filter/" class="post-tag tag-link-capture-filter"
+                                        title="see questions tagged 'capture-filter'" rel="tag">capture-filter</a>
+                                
+                                    <a href="/tags/wlan/" class="post-tag tag-link-wlan"
+                                        title="see questions tagged 'wlan'" rel="tag">wlan</a>
+                                
+                                    <a href="/tags/lwapp/" class="post-tag tag-link-lwapp"
+                                        title="see questions tagged 'lwapp'" rel="tag">lwapp</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Oct '13, 00:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/13679628c84abac93be65773340d2589?s=32&amp;d=identicon&amp;r=g" alt="metamatrix's gravatar image" />
+    <p><a href="/users/5942/metamatrix">metamatrix</a><br/>
+    <span class="score" title="56 reputation points">56</span><span title="16 badges"><span class="badge1">&#9679;</span><span class="badgecount">16</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="metamatrix has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/26350/">
+                edited
+                <strong>27 Oct '13, 19:08</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+            <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+            <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-26350">
+    
+        <a name="26376"></a>
+        <div class="comment" id="comment-26376">
+            <div id="post-26376-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you're capturing on a wireless network (and not getting pseudo-Ethernet frames), <em>all</em> frames would match "wlan", so filtering, while capturing on a wireless network, so that you only capture wireless network packets is pointless.</p>
+
+<p>Are you trying to filter for particular <em>types</em> of 802.11 packets, or packets with particular RA, SA, DA, or TA addresses, or something such as that, so the display filter wouldn't be "wlan", it'd be "wlan.{something}"?</p></div>
+            <div class="comment-info" id="comment-26376-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '13, 14:56)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26378"></a>
+        <div class="comment" id="comment-26378">
+            <div id="post-26378-score" class="comment-score"></div>
+            <div class="comment-text"><p>... and the capture filter would be <code>wlan {something}</code>.  Refer to the <a href="http://www.tcpdump.org/manpages/pcap-filter.7.html">pcap-filter</a> man page for what <code>{something}</code> could be.</p>
+
+<p>Edit: Hmm, but <code>wlan</code> alone should work as a capture filter.  What's the output of <code>dumpcap -v</code>?  Not sure when <code>wlan</code> was added; maybe your version of [Win|lib]pcap doesn't support it?</p></div>
+            <div class="comment-info" id="comment-26378-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '13, 15:10)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26380"></a>
+        <div class="comment" id="comment-26380">
+            <div id="post-26380-score" class="comment-score"></div>
+            <div class="comment-text"><p>Also, what's the output of <code>dumpcap -i {interface} -L</code> ... where {interface} is the name of the interface you're trying to capture on?</p></div>
+            <div class="comment-info" id="comment-26380-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '13, 15:23)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26382"></a>
+        <div class="comment" id="comment-26382">
+            <div id="post-26382-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p><code>wlan</code> alone should work as a capture filter.</p>
+</blockquote>
+
+<p>Nope.  <code>wlan</code> is a "proto qualifier", so it can be used to qualify other qualifiers, such as <code>wlan src host</code>, but it can't be used by itself, just as, for example, <code>ether</code> can't.  (You get "link layer applied in wrong context" as the error.)</p>
+
+<p>I.e., there needs to be a "{something}" for <code>wlan {something}</code>.</p></div>
+            <div class="comment-info" id="comment-26382-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '13, 16:40)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26385"></a>
+        <div class="comment" id="comment-26385">
+            <div id="post-26385-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for clarifying.  The proto qualifier rules do seem a bit misleading to me though.  I mean, the <code>pcap-filter</code> man page also lists ip, ip6, arp, rarp, decnet, tcp and udp as proto qualifiers, all of which you can use alone.  To quote:</p>
+
+<p><em>proto</em> qualifiers restrict the match to a particular protocol. Possible protos are: <strong>ether</strong>, <strong>fddi</strong>, <strong>tr</strong>, <strong>wlan</strong>, <strong>ip</strong>, <strong>ip6</strong>, <strong>arp</strong>, <strong>rarp</strong>, <strong>decnet</strong>, <strong>tcp</strong> and <strong>udp</strong>.</p>
+
+<p>Actually, further down the man page, it indicates that <em>"<strong>tcp</strong>, <strong>udp</strong>, <strong>icmp</strong> [are] Abbreviations for: <strong>proto</strong> p where </em>p<em> is one of the above protocols"</em>.  And in fact, you can use icmp alone as well, so perhaps it should also be listed with the other proto qualifiers?  And you can also use icmp6 alone too, which isn't mentioned in either the proto qualifiers list or the proto p list.</p>
+
+<p>Anyway, maybe you can understand my confusion when I saw <strong>wlan</strong> listed alongside the others, many of which can be used alone?  Would it be worth clarifying the man page somehow?</p></div>
+            <div class="comment-info" id="comment-26385-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '13, 19:34)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26389"></a>
+        <div class="comment not_top_scorer" id="comment-26389">
+            <div id="post-26389-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for all your replies. </p>
+
+<p>1.I'm capturing wlan packets on an access controller, and I need all wlan packets, then what is the appropriate filter.</p>
+
+<p>2.The dumpcap -v command shows as below. The filter "wlan addr2 0:2:3:4:5:6" works,but dumpcap show a rumtime error without any more error code or message.I've copied all the dll needed from the compile directory. </p>
+
+<p>Dumpcap 1.10.3-dpi (SVN Rev Unknown from unknown)</p>
+
+<p>Copyright 1998-2013 Gerald Combs <a href="/cdn-cgi/l/email-protection#91f6f4e3f0fdf5d1e6f8e3f4e2f9f0e3fabffee3f6"><span class="__cf_email__" data-cfemail="8cebe9feede0e8ccfbe5fee9ffe4edfee7a2e3feeb">[email&#160;protected]</span></a> and contributors.
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+
+<p>Compiled (32-bit) with GLib 2.34.1, with WinPcap (4_1_3), with libz 1.2.5,
+without POSIX capabilities, without libnl.</p>
+
+<p>Running on 64-bit Windows 7 Service Pack 1, build 7601, without WinPcap.
+        Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz, with 3772MB of physical memory.</p></div>
+            <div class="comment-info" id="comment-26389-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '13, 20:48)</span>
+                <a class="comment-user userinfo" href="/users/5942/metamatrix">metamatrix</a>
+                
+            </div>
+        </div>
+    
+        <a name="26393"></a>
+        <div class="comment not_top_scorer" id="comment-26393">
+            <div id="post-26393-score" class="comment-score"></div>
+            <div class="comment-text"><p>the windows log of dumpcap error is:
+error app name: dumpcap.exe，ver: 1.10.3.0，timestamp: 0x525f5ef6
+error module name: wpcap.dll，ver: 4.1.0.2980，timestamp: 0x51300419
+exception code: 0x40000015
+error offset: 0x00009fdc
+error process ID: 0x5918</p></div>
+            <div class="comment-info" id="comment-26393-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '13, 23:08)</span>
+                <a class="comment-user userinfo" href="/users/5942/metamatrix">metamatrix</a>
+                
+            </div>
+        </div>
+    
+        <a name="26395"></a>
+        <div class="comment not_top_scorer" id="comment-26395">
+            <div id="post-26395-score" class="comment-score"></div>
+            <div class="comment-text"><p>The problem is that there are both proto qualifiers and protocol abbreviations, and some tokens, such as <code>ip</code>, <code>ip6</code>, <code>tcp</code>, and <code>udp</code>, serve both purposes, as they:</p>
+
+<ol>
+<li>correspond to protocols that have filterable items (protocols, ports) that multiple protocols understood by libpcap's filtering mechanism have, so they can be proto qualifiers (<code>tcp port</code> vs. <code>udp port</code>, <code>ip address</code> vs. <code>ip6 address</code> vs. <code>ether address</code>);</li>
+<li>correspond to protocols that have protocol types, so that they can be arguments to, for example, <code>ip proto</code> for <code>tcp</code> and <code>udp</code> or <code>ether proto</code> for <code>ip</code> or <code>ip6</code>.</li>
+</ol>
+
+<p><code>icmp</code>, however, is a protocol abbreviation (2 above), so you can use <code>icmp</code> alone as an abbreviation for <code>ip proto icmp</code>, but it's <em>not</em> a proto qualifier (i.e., not 1 above), as there's no <code>icmp address</code> or <code>icmp port</code>.</p>
+
+<p>See <a href="http://sharkfest.wireshark.org/sharkfest.11/presentations/McCanne-Sharkfest'11_Keynote_Address.pdf">Steve McCanne's Sharkfest 2011 presentation slides</a>, starting with the "The Challenge" slide, for some discussion of the libpcap filter language.</p>
+
+<blockquote>
+<p>Would it be worth clarifying the man page somehow?</p>
+</blockquote>
+
+<p>Probably.  File an issue at the <a href="https://github.com/the-tcpdump-group/libpcap/issues">libpcap issues list</a>.</p></div>
+            <div class="comment-info" id="comment-26395-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '13, 00:35)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26396"></a>
+        <div class="comment not_top_scorer" id="comment-26396">
+            <div id="post-26396-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I'm capturing wlan packets on an access controller</p>
+</blockquote>
+
+<p>...which means that "all wlan packets" means "all packets"...</p>
+
+<blockquote>
+<p>and I need all wlan packets</p>
+</blockquote>
+
+<p>...which means you want all packets...</p>
+
+<blockquote>
+<p>then what is the appropriate filter</p>
+</blockquote>
+
+<p>The appropriate filter is <em>no</em> filter, as you don't want to filter out any packets.  (Filters <em>exclude</em> packets from the set of all packets; there are no filters that will give you more packets than using no filter at all.)</p>
+
+<p>However:</p>
+
+<blockquote>
+<p>Running on ... Windows ...</p>
+</blockquote>
+
+<p>Unless you have an AirPcap device and are capturing with that, you will only be able to capture 802.11 data packets, and they will have fake Ethernet headers (so the filter <code>wlan</code> will match <em>none</em> of them), and you will only see packets going to and from your machine, not any other packets.</p>
+
+<p>Furthermore:</p>
+
+<blockquote>
+<p>... without WinPcap ...</p>
+</blockquote>
+
+<p>it will not, in fact, be able to capture <em>any</em> packets, as WinPcap is the library that handles packet capture on Windows.  (It's libpcap on UN*X; WinPcap is a port of libpcap to Windows, including a device driver needed to support packet capture.)</p>
+
+<p>If dumpcap is crashing, it might be that it's not properly handling the lack of WinPcap.  Unfortunately, Windows crash reports are extraordinarily useless for debugging these problems, as they give no stack trace information whatsoever.</p>
+
+<blockquote>
+<p>I've copied all the dll needed from the compile directory.</p>
+</blockquote>
+
+<p>That might not be sufficient.</p></div>
+            <div class="comment-info" id="comment-26396-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '13, 00:49)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26398"></a>
+        <div class="comment not_top_scorer" id="comment-26398">
+            <div id="post-26398-score" class="comment-score"></div>
+            <div class="comment-text"><p>In fact, I mirror the access controller's wire port(not wireless port) to my own machine's local link controller.So I can capture not only the wlan packets but also the packets on wire.Then I need a capture filter that only capture wlan packets.</p></div>
+            <div class="comment-info" id="comment-26398-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '13, 02:02)</span>
+                <a class="comment-user userinfo" href="/users/5942/metamatrix">metamatrix</a>
+                
+            </div>
+        </div>
+    
+        <a name="26400"></a>
+        <div class="comment not_top_scorer" id="comment-26400">
+            <div id="post-26400-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Probably. File an issue at the libpcap issues list.</p>
+</blockquote>
+
+<p>Filed as issue <a href="https://github.com/the-tcpdump-group/libpcap/issues/326">#326</a>.</p></div>
+            <div class="comment-info" id="comment-26400-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '13, 08:25)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26402"></a>
+        <div class="comment not_top_scorer" id="comment-26402">
+            <div id="post-26402-score" class="comment-score"></div>
+            <div class="comment-text"><p>A few more comments:</p>
+
+<ul>
+<li>How are you able to capture any packets without WinPcap installed?</li>
+<li>Have you tried capturing with the properly installed latest "off-the-shelf" version of dumpcap rather than your customized version to see if that resolves your run-time error?</li>
+<li>If you somehow managed to capture packets, maybe you could post a small capture file to <a href="http://cloudshark.org/">cloudshark</a> or some other place of your choice so that it's easier to see what your packets look like and how best to differentiate, if possible, between the mirrored wired packets and the wireless packets of interest.</li>
+<li>Maybe this is a dumb question, but why are you mirroring the wired packets so you can capture them ... but then trying to filter them out?  Wouldn't it be easier to simply stop mirroring those other packets during the capture session of wlan traffic?</li>
+</ul></div>
+            <div class="comment-info" id="comment-26402-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '13, 08:35)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26408"></a>
+        <div class="comment not_top_scorer" id="comment-26408">
+            <div id="post-26408-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>In fact, I mirror the access controller's wire port(not wireless port) to my own machine's local link controller.So I can capture not only the wlan packets but also the packets on wire.</p>
+</blockquote>
+
+<p>So, on the machine running Wireshark, which interfaces are you capturing on?</p></div>
+            <div class="comment-info" id="comment-26408-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '13, 10:20)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26409"></a>
+        <div class="comment not_top_scorer" id="comment-26409">
+            <div id="post-26409-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>In fact, <strong>I mirror the access controller's wire port</strong> (not wireless port) to my own machine's local link controller.</p>
+</blockquote>
+
+<p>O.K. then what you see is just the communication between the AP and the WLAN controller, which is most certainly TCP or UDP <strong>and</strong> encrypted! So, there is <strong>no filter</strong> at all <strong>you can apply</strong> to <strong>see wlan traffic</strong>, as those 'wlan frames' are forwarded to the controller via the encrypted 'tunnel' (like a VPN tunnel), from where it is forwarded to internal networks by the access controller (depends on the access controller configuration).</p>
+
+<p>So, if you need the wireless frames, you can only capture directly via a wlan card (AirPcap on Windows or a supported card on Linux). If the traffic, that is transmitted via the AP, is sufficient you should be able to see that traffic on one of the ethernet ports of the access controller, as the frames need to be forwarded by the controller. In that case, just filter on the subnet that is assigned to the WLAN clients. </p>
+
+<p>This all depends on your architecture, but in general that's the way it is done in a lot of companies.</p>
+
+<p>Regards <br>
+Kurt</p></div>
+            <div class="comment-info" id="comment-26409-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '13, 10:42)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26450"></a>
+        <div class="comment not_top_scorer" id="comment-26450">
+            <div id="post-26450-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry, when I use "add a comment", the page just says my post is spam, so I have to add an answer every time.</p>
+
+<p>A few more comments:</p>
+
+<blockquote>
+<p>How are you able to capture any packets without WinPcap installed?</p>
+</blockquote>
+
+<p>I have a WinPcap dll in my system directory.</p>
+
+<blockquote>
+<p>Have you tried capturing with the properly installed latest "off-the-shelf" version of dumpcap rather than your customized version to see if that resolves your run-time error?</p>
+</blockquote>
+
+<p>I used 1.10.1 from official site, the same run-time error occured.</p>
+
+<blockquote>
+<p>If you somehow managed to capture packets, maybe you could post a small capture file to cloudshark or some other place of your choice so that it's easier to see what your packets look like and how best to differentiate, if possible, between the mirrored wired packets and the wireless packets of interest.
+Maybe this is a dumb question, but why are you mirroring the wired packets so you can capture them ... but then trying to filter them out? Wouldn't it be easier to simply stop mirroring those other packets during the capture session of wlan traffic?</p>
+</blockquote>
+
+<p>I need to find out wlan control and management messages such as associate/disassociate, authentication, and so on.
+<a href="http://www.cloudshark.org/captures/12defc616d65">http://www.cloudshark.org/captures/12defc616d65</a></p></div>
+            <div class="comment-info" id="comment-26450-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '13, 18:24)</span>
+                <a class="comment-user userinfo" href="/users/5942/metamatrix">metamatrix</a>
+                
+            </div>
+        </div>
+    
+        <a name="26451"></a>
+        <div class="comment not_top_scorer" id="comment-26451">
+            <div id="post-26451-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry, when I use "add a comment", the page just says my post is spam, so I have to add an answer every time.</p>
+
+<ul>
+<li>So, on the machine running Wireshark, which interfaces are you capturing on?
+ I captured on the "Local link" controller.</li>
+</ul>
+
+<p>-O.K. then what you see is just the communication between the AP and the WLAN controller, which is most certainly TCP or UDP and encrypted! So, there is no filter at all you can apply to see wlan traffic, as those 'wlan frames' are forwarded to the controller via the encrypted 'tunnel' (like a VPN tunnel), from where it is forwarded to internal networks by the access controller (depends on the access controller configuration).</p>
+
+<p>So, if you need the wireless frames, you can only capture directly via a wlan card (AirPcap on Windows or a supported card on Linux). If the traffic, that is transmitted via the AP, is sufficient you should be able to see that traffic on one of the ethernet ports of the access controller, as the frames need to be forwarded by the controller. In that case, just filter on the subnet that is assigned to the WLAN clients.</p>
+
+<p>This all depends on your architecture, but in general that's the way it is done in a lot of companies.</p>
+
+<p></p><hr>
+<p>My architecture is: the access controller's uplink and downlink are mirrored to my local PC's ethernet controller, and I want to get a capture filter just like the display filter "wlan".</p>
+<p>Sample packets are at  <a href="http://www.cloudshark.org/captures/12defc616d65">http://www.cloudshark.org/captures/12defc616d65</a> .</p><p></p></div>
+            <div class="comment-info" id="comment-26451-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '13, 18:37)</span>
+                <a class="comment-user userinfo" href="/users/5942/metamatrix">metamatrix</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-26350" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 16
+        </span>
+        <a href="#" class="show-all-comments-link">show 11 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26350-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/26350/how-to-filter-lwapp-encapsulated-wlan-traffic-with-a-capture-filter?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/26350/how-to-filter-lwapp-encapsulated-wlan-traffic-with-a-capture-filter?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/26350/how-to-filter-lwapp-encapsulated-wlan-traffic-with-a-capture-filter?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/26350/how-to-filter-lwapp-encapsulated-wlan-traffic-with-a-capture-filter?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="26452"></a>
+                    <div id="answer-container-26452" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-26452-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26452/up/" rel="nofollow"> </a>
+<div id="post-26452-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-26452-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26452/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="metamatrix has selected this answer as the correct answer"
+        href="/accept_answer/26452/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p><a href="http://www.cloudshark.org/captures/12defc616d65">http://www.cloudshark.org/captures/12defc616d65</a></p>
+</blockquote>
+<p>OK, the 802.11 packets are encapsulated in LWAPP (<a href="https://tools.ietf.org/html/rfc5412">RFC 5412</a>) over UDP; Wireshark recognizes UDP traffic to or from ports 12222 and 12223 as LWAPP-over-UDP, so the capture filter you need in your particular situation is <code>udp port 12222 or 12223</code>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/26452/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Oct '13, 19:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/26452/">
+                edited
+                <strong>27 Oct '13, 19:34</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-26452">
+    
+        <a name="26454"></a>
+        <div class="comment" id="comment-26454">
+            <div id="post-26454-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the particular filter. An additional question is, if I want to select wlan control and management packets from all LWAPP packets(I don't need data packets), what's the particular filter?</p></div>
+            <div class="comment-info" id="comment-26454-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '13, 23:48)</span>
+                <a class="comment-user userinfo" href="/users/5942/metamatrix">metamatrix</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-26452" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26452-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="26463"></a>
+                    <div id="answer-container-26463" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-26463-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26463/up/" rel="nofollow"> </a>
+<div id="post-26463-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-26463-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26463/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>if I want to select wlan control and management packets from all LWAPP packets(I don't need data packets), <strong>what's the particular filter?</strong></p>
+</blockquote>
+<p>please try this:</p>
+<blockquote>
+<p>lwapp and (wlan.fc.type == 0 or wlan.fc.type == 1)</p>
+</blockquote>
+<p>Regards <br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/26463/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Oct '13, 07:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/26463/">
+                edited
+                <strong>29 Oct '13, 05:04</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-26463">
+    
+        <a name="26498"></a>
+        <div class="comment" id="comment-26498">
+            <div id="post-26498-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for reply, but it's a display filter, and I need a <strong>capture filter.</strong></p></div>
+            <div class="comment-info" id="comment-26498-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Oct '13, 20:38)</span>
+                <a class="comment-user userinfo" href="/users/5942/metamatrix">metamatrix</a>
+                
+            </div>
+        </div>
+    
+        <a name="26508"></a>
+        <div class="comment" id="comment-26508">
+            <div id="post-26508-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is the equivalent <strong>capture filter:</strong> </p>
+
+<blockquote>
+<p>'udp port 12222 and udp[8]&amp;4=0 and (udp[14]&amp;12=0 or udp[14]&amp;12=4)'</p>
+</blockquote>
+
+<p>This will only work if the header lengths (IP and UDP) are constant. With UDP this will be the case. With IP things can change (and get tricky) if IP options are being used. However, according to your capture file, there are no IP options. </p>
+
+<p>Regards<br>
+Kurt</p></div>
+            <div class="comment-info" id="comment-26508-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '13, 04:58)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26530"></a>
+        <div class="comment" id="comment-26530">
+            <div id="post-26530-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you, Kurt, it works ：）</p></div>
+            <div class="comment-info" id="comment-26530-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '13, 00:57)</span>
+                <a class="comment-user userinfo" href="/users/5942/metamatrix">metamatrix</a>
+                
+            </div>
+        </div>
+    
+        <a name="26535"></a>
+        <div class="comment" id="comment-26535">
+            <div id="post-26535-score" class="comment-score"></div>
+            <div class="comment-text"><p>I know ;-))</p></div>
+            <div class="comment-info" id="comment-26535-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '13, 05:55)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-26463" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26463-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/26350/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Qi4Z6TzMfWshrip9fb9lGaqhjUgmQ9wS' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/26350/how-to-filter-lwapp-encapsulated-wlan-traffic-with-a-capture-filter?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/26350/how-to-filter-lwapp-encapsulated-wlan-traffic-with-a-capture-filter?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/capture-filter/"
+            class="tag-link-capture-filter"
+            title="see questions tagged'capture-filter'using tags"
+            rel="tag">capture-filter</a> <span class="tag-number">&#215;184</span><br/>
+        
+        <a href="/tags/wlan/"
+            class="tag-link-wlan"
+            title="see questions tagged'wlan'using tags"
+            rel="tag">wlan</a> <span class="tag-number">&#215;76</span><br/>
+        
+        <a href="/tags/lwapp/"
+            class="tag-link-lwapp"
+            title="see questions tagged'lwapp'using tags"
+            rel="tag">lwapp</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 24, 2013, 12:50 a.m.">24 Oct '13, 00:50</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,213 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 30, 2013, 5:55 a.m.">30 Oct '13, 05:55</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/58710/wlan-capture-capwap-arp-packets">WLAN capture capwap arp packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12/how-do-you-filter-different-types-of-icmpv6-messages">How do you filter different types of ICMPv6 messages?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7410/required-hardware-for-capture-filter">required hardware for capture filter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13408/tshark-capture-and-display-filters-for-httphttps">TShark: Capture and Display Filters for HTTP/HTTPS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17862/count-connected-computer-to-ap">count connected computer to ap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21191/how-to-capture-the-information-just-for-one-ip-address-t-shark">How to capture the information just for one IP ADDRESS? (T-SHARK)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25901/wireshark-capture-filter-syntax">wireshark capture filter syntax</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32747/analyzing-rip-frames-with-wireshark">Analyzing RIP frames with Wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37600/capture-filter-coding-for-mdshdr">Capture filter coding for MDSHDR</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42971/how-to-capture-between-remote-server-and-remote-network">How to capture between remote server and remote network</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

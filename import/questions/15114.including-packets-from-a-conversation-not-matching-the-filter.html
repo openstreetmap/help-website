@@ -1,0 +1,909 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Including packets from a conversation not matching the filter - Wireshark Q&amp;A</title>
+        <meta name="description" content="I am trying to determine the amount of data received and transmitted back to a remote telematic device that communicates over GPRS on port TCP X to find out if my wireless carrier is overcharging me. The trick is that the server receives data on that same port from several units. Capture filter: tcp..." />
+        <meta name="keywords" content="filter,packets,stream,missing" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/15114/including-packets-from-a-conversation-not-matching-the-filter" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/15114/including-packets-from-a-conversation-not-matching-the-filter?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='idTNAe1UNvlvmkVfFgdsmBj7bU6b9pmZ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/15114/including-packets-from-a-conversation-not-matching-the-filter">Including packets from a conversation not matching the filter</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-15114-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15114/up/" rel="nofollow"> </a>
+<div id="post-15114-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-15114-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15114/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/15114/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am trying to determine the amount of data received and transmitted back to a remote telematic device that communicates over GPRS on port TCP X to find out if my wireless carrier is overcharging me. The trick is that the server receives data on that same port from several units.</p>
+<p>Capture filter: tcp port X
+Display filter: tcp contains "6033," and (tcp contains ",1710," or tcp contains ",121017,")</p>
+<p>6033 is the unique identifier for the device I want to get information from, and 1710 or 121017 is the date I'm interested in the two different possible formats included in the TCP stream.</p>
+<p>I'm missing some TCP packets that don't have the string '6033' in them, however they are part of the same TCP stream/conversation and should be included in my filtered results.</p>
+<p>How can I include in my results the missing packets that are part of the TCP stream/conversation BUT don't contain the unique identifier in it?</p>
+<p>i.e.
+$G6033,1710,232239,5319.4470,N,00627.4218,W,000
+1710,232324,5319.4372,N,00627.4342,W,000
+1710,232739,5319.4328,N,00627.4310,W,000
+1710,232824,5319.4328,N,00627.4310,W,000
+1710,233239,5319.4312,N,00627.4129,W,000
+1710,233324,5319.4312,N,00627.4129,W,000
+1710,233739,5319.4394,N,00627.4296,W,000</p>
+<p>--------- Packet divider (missing from this point on)---------<br>
+1710,233824,5319.4243,N,00627.4141,W,000
+1710,234239,5319.4326,N,00627.4288,W,000
+1710,234324,5319.4326,N,00627.4288,W,000*94<br>
+---------- Packet divider (missing until this point)----------</p>
+<p>$A6033,232239,121017,234408*D9</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/filter/" class="post-tag tag-link-filter"
+                                        title="see questions tagged 'filter'" rel="tag">filter</a>
+                                
+                                    <a href="/tags/packets/" class="post-tag tag-link-packets"
+                                        title="see questions tagged 'packets'" rel="tag">packets</a>
+                                
+                                    <a href="/tags/stream/" class="post-tag tag-link-stream"
+                                        title="see questions tagged 'stream'" rel="tag">stream</a>
+                                
+                                    <a href="/tags/missing/" class="post-tag tag-link-missing"
+                                        title="see questions tagged 'missing'" rel="tag">missing</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Oct '12, 15:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/88f148c12acee9290da8b95a85e7468a?s=32&amp;d=identicon&amp;r=g" alt="juanclau's gravatar image" />
+    <p><a href="/users/3662/juanclau">juanclau</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="juanclau has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-15114">
+    
+</div>
+<div id="comment-tools-15114" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15114-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/15114/including-packets-from-a-conversation-not-matching-the-filter?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/15114/including-packets-from-a-conversation-not-matching-the-filter?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/15114/including-packets-from-a-conversation-not-matching-the-filter?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/15114/including-packets-from-a-conversation-not-matching-the-filter?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="15115"></a>
+                    <div id="answer-container-15115" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15115-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15115/up/" rel="nofollow"> </a>
+<div id="post-15115-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-15115-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15115/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As far as I understand this, each unit connects to your server with it's own tcp communication. The "trick" of using always the same port on the server is not really a trick, it is what every server does today (for example the web server of this Q&amp;A page runs on port 80 and takes lots of connections on it). Did you try filtering on the client IP and port instead (meaning the TCP port that the remote device uses)? It is standard filtering operation to isolate TCP flows by filtering on it's socket pairs, or on the unique flow number assigned to each flow by Wireshark.</p>
+<p>So what you'd need to do is:</p>
+<ol>
+<li>filter on the packets that contain the string you're looking for</li>
+<li>use the conversation statistics (found in the statistics menu) to see which communications are left. Use the "limit to display filter" checkbox to force it to only show filtered out packets, and go to the TCP tab.</li>
+<li>filter on each conversation that you see by filtering on it's socket pairs. You can do that from the conversations list by using the popup menu going "apply as filter -&gt; selected -&gt; A &lt;-&gt; B".</li>
+<li>repeat </li>
+</ol>
+<p>You can automate this by using command line scripts with tshark.exe instead, but that might be a bit too complicated for starters.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15115/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Oct '12, 07:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15115">
+    
+        <a name="15233"></a>
+        <div class="comment" id="comment-15233">
+            <div id="post-15233-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the quick reply and the help provided.</p>
+
+<p>When I said "the trick" I referred to the fact that I needed to separate the traffic from different sources, not that traffic was on the same port.</p>
+
+<p>Unfortunately these are mobile devices that can change their IPs quite often (several times per day), simply using IP filtering is not really the right way to go.</p>
+
+<p>When I do your suggested solution I get 4 conversations with 4 different IPs. Can I assume the device changed IPs 4 times and the total sum of the 'bytes' column is the amount of data transfer between the server and the mobile device?</p></div>
+            <div class="comment-info" id="comment-15233-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '12, 16:56)</span>
+                <a class="comment-user userinfo" href="/users/3662/juanclau">juanclau</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15115" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15115-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="15122"></a>
+                    <div id="answer-container-15122" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15122-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15122/up/" rel="nofollow"> </a>
+<div id="post-15122-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-15122-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15122/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>I'm missing some TCP packets that don't have the string '6033' in them, however they are part of the same TCP stream/conversation and should be included in my filtered results.</p>
+</blockquote>
+<p>O.K. so, you can't use a capture filter. Instead I suggest to record the whole communication and later filter it with a display filter. To automate the process on <strong>Windows</strong>, you can use Powershell.</p>
+<p>Start powershell and enter these commands (without the 'PS &gt;'). input.cap is the capture file containing the whole communication.</p>
+<blockquote>
+<p><code>PS &gt; $display_filter =""; tshark -r input.pcap -R "tcp contains 6033 or tcp contains 1710 or tcp contains 121017" -T fields -e tcp.stream | sort-object | get-unique | foreach { $display_filter += "tcp.stream eq $_ or "}; $display_filter = $display_filter -replace "...$" ; write-host "starting Wireshark with filter: $display_filter" ; wireshark -r input.pcap -R $display_filter</code><br>
+</p>
+</blockquote>
+<p>Output should look similar to this: </p>
+<blockquote>
+<p><code>starting Wireshark with filter: tcp.stream eq 13 or tcp.stream eq 14 or tcp.stream eq 9</code><br>
+</p>
+</blockquote>
+<p>Wireshark will start with the given display filter and you will see only those streams that contain the search strings.</p>
+<p>If you want to do the same on <strong>Unix</strong>:</p>
+<blockquote>
+<p><code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="631016110506112310161105101702170a0c0d">[email&#160;protected]</a>:# tshark -r input.pcap -R "tcp contains 6033 or tcp contains 1710 or tcp contains 121017" -T fields -e tcp.stream | sort -u | awk  '{filter = sprintf("tcp.stream eq %s or %s",$0,filter)}; END {filter=substr(filter,0,length(filter)-3); print filter; system("wireshark -r input.pcap -R \"" filter "\"")}'</code>  <br>
+</p>
+</blockquote>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15122/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Oct '12, 04:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/15122/">
+                edited
+                <strong>21 Oct '12, 04:27</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15122">
+    
+        <a name="15234"></a>
+        <div class="comment" id="comment-15234">
+            <div id="post-15234-score" class="comment-score"></div>
+            <div class="comment-text"><p>Kurt,</p>
+
+<p>Thanks for your answer. Can you explain to me what the command does in a little more detail?</p>
+
+<p>Also, correct me if I'm wrong but I believe the filter in the command should be: "tcp contains 6033 and (tcp contains 1710 or tcp contains 121017)"</p>
+
+<p>I can't simply use "tcp contains 6033 or tcp contains 1710 or tcp contains 121017" since that would capture other devices with the same date stamps but a different SID (6033).</p></div>
+            <div class="comment-info" id="comment-15234-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '12, 17:24)</span>
+                <a class="comment-user userinfo" href="/users/3662/juanclau">juanclau</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15122" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15122-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/15114/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='idTNAe1UNvlvmkVfFgdsmBj7bU6b9pmZ' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15114/including-packets-from-a-conversation-not-matching-the-filter?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15114/including-packets-from-a-conversation-not-matching-the-filter?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/filter/"
+            class="tag-link-filter"
+            title="see questions tagged'filter'using tags"
+            rel="tag">filter</a> <span class="tag-number">&#215;349</span><br/>
+        
+        <a href="/tags/packets/"
+            class="tag-link-packets"
+            title="see questions tagged'packets'using tags"
+            rel="tag">packets</a> <span class="tag-number">&#215;205</span><br/>
+        
+        <a href="/tags/stream/"
+            class="tag-link-stream"
+            title="see questions tagged'stream'using tags"
+            rel="tag">stream</a> <span class="tag-number">&#215;82</span><br/>
+        
+        <a href="/tags/missing/"
+            class="tag-link-missing"
+            title="see questions tagged'missing'using tags"
+            rel="tag">missing</a> <span class="tag-number">&#215;42</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 19, 2012, 3:56 p.m.">19 Oct '12, 15:56</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,824 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 24, 2012, 5:24 p.m.">24 Oct '12, 17:24</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/50598/tcp-streams-missing-first-2-packets-of-3-way-handshake">TCP streams missing first 2 packets of 3-way handshake</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44157/filterpackets-on-tcp-stream-always-filters-the-first-appearing-on-the-convesations-dialog">FilterPackets on TCP Stream always filters the first appearing on the Convesations dialog</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7664/wont-capture-packets-that-i-know-are-there">Won&#39;t Capture Packets That I Know Are There</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17833/how-to-filter-out-streams-that-contain-multiple-syn-packets">How to filter out streams that contain multiple SYN packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2960/drop-packets">Drop packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44706/can-this-filter-indicate-the-lost-packets">[closed] can this filter indicate the lost packets?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34553/cumulative-bytes">Cumulative Bytes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56873/blank-output-when-applying-reading-filter">Blank output when applying reading filter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26308/grab-url-stream-from-udp-packets-screenshot">Grab URL stream from UDP packets [+screenshot]</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21715/how-to-display-some-udp-missing-packets">How to display some UDP missing packets?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

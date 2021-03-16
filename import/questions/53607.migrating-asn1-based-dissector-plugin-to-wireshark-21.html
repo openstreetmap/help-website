@@ -1,0 +1,963 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Migrating ASN.1 based dissector plugin to Wireshark 2.1 - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, in our company we use some Wireshark plugins. They worked fine for Wireshark 1.x. For Wireshark 2.1 they do no longer work and I am trying to migrate them to Wireshark 2.1. I managed to compile them for Windows 64 bit. The generation of c files from the .asn files didn&#39;t work with CMake but I ma..." />
+        <meta name="keywords" content="asn.1,dissector,plugin" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/53607/migrating-asn1-based-dissector-plugin-to-wireshark-21" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/53607/migrating-asn1-based-dissector-plugin-to-wireshark-21?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='sQKkUU0h9AGn7PJh2EWzZd7EUvF9hbnJ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/53607/migrating-asn1-based-dissector-plugin-to-wireshark-21">Migrating ASN.1 based dissector plugin to Wireshark 2.1</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-53607-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53607/up/" rel="nofollow"> </a>
+<div id="post-53607-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53607-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53607/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/53607/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>in our company we use some Wireshark plugins. They worked fine for Wireshark 1.x.
+For Wireshark 2.1 they do no longer work and I am trying to migrate them to Wireshark 2.1.</p>
+<p>I managed to compile them for Windows 64 bit. The generation of c files from the .asn files didn't work with CMake but I managed to create them manually using awn2wrs.
+I updated some renamed functions and now Windows 64 bit works fine.</p>
+<p>What causes some headache is compiling for Linux. (Ubuntu 14.04 64bit)</p>
+<p>I found instructions in README.plugins and followed them.
+They are not fully complete but I managed to build some plugins that do not use asn.1 files.</p>
+<p>What I did is updating these files to include my plugins:
+ - CMakeListsCustom.txt
+ - configure.ac
+ - plugins/Custom.m4
+ - plugins/Custom.make</p>
+<p>I also deleted my Makefile.common and Makefile.am files and created new ones based on plugins/gryphon example.</p>
+<p>Doing this for non-ASN.1 dissectors works fine but it doesn't help if ASN.1 is used.</p>
+<p>All samples and instructions I found lack some hints on how to use them with latest Wireshark version.</p>
+<p>Also the <a href="https://wiki.wireshark.org/ASN1_sample">ASN.1 sample</a> dissector does not build:</p>
+<pre><code>Making all in toyasn1
+...
+make  all-am
+make[4]: Entering directory `/Development/x/Wireshark/plugins/toyasn1'
+make[4]: *** No rule to make target `../../tools/make-dissector-reg', needed by `plugin.c'.  Stop.
+</code></pre>
+<p>Are there any updated build instructions available to create plugins?
+Are there any migration instructions available?</p>
+<p>I never compiled for Wireshark before. I am not aware with which version the changes in the dissector API and in the build process were introduced with.</p>
+<p>I hope the experts here can ease my pain. ;)</p>
+<p>BR,
+Gerhard</p>
+<hr>
+<p>Edit1:
+When I updated the non ASN.1 plugins I had to remove the rule to create plugin.c from Makefile.am. This is what causes the error message about missing make-dissector-re.py tool.
+I also applied this change to the ASN.1 based plugins.
+But this only shifts the problem a bit further:</p>
+<pre><code>make  all-am
+make[4]: Entering directory `/Development/x/Wireshark/plugins/toyasn1'
+Makefile:1100: warning: overriding commands for target `checkapi'
+Makefile:1074: warning: ignoring old commands for target `checkapi'
+Making plugin.c
+No files found
+make[4]: *** [plugin.c] Error 1
+make[4]: Leaving directory `/Development/x/Wireshark/plugins/toyasn1'
+</code></pre>
+<p>Now there is no file plugin.c created.
+I cannot apply all the other changes from the makefiles as they are rather different with regards to the autogenerated files and I cannot really figure out which part I still need or with what other rules I have to replace the content.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/asn.1/" class="post-tag tag-link-asn.1"
+                                        title="see questions tagged 'asn.1'" rel="tag">asn.1</a>
+                                
+                                    <a href="/tags/dissector/" class="post-tag tag-link-dissector"
+                                        title="see questions tagged 'dissector'" rel="tag">dissector</a>
+                                
+                                    <a href="/tags/plugin/" class="post-tag tag-link-plugin"
+                                        title="see questions tagged 'plugin'" rel="tag">plugin</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Jun '16, 08:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/99008d0e4c4c15ab03d77938ad9e345b?s=32&amp;d=identicon&amp;r=g" alt="gerhardh's gravatar image" />
+    <p><a href="/users/24592/gerhardh">gerhardh</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="gerhardh has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/53607/">
+                edited
+                <strong>24 Jun '16, 04:30</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-53607">
+    
+</div>
+<div id="comment-tools-53607" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53607-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/53607/migrating-asn1-based-dissector-plugin-to-wireshark-21?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/53607/migrating-asn1-based-dissector-plugin-to-wireshark-21?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/53607/migrating-asn1-based-dissector-plugin-to-wireshark-21?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/53607/migrating-asn1-based-dissector-plugin-to-wireshark-21?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="53641"></a>
+                    <div id="answer-container-53641" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-53641-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53641/up/" rel="nofollow"> </a>
+<div id="post-53641-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53641-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53641/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The "No files found" text means that tools/make-dissector-reg.py was called with an empty $REGISTER_SRC_FILES list.
+If you look at plugins\Makefile.common.inc, you will get this definition:</p>
+<pre><code>REGISTER_SRC_FILES = \
+    $(FLEX_GENERATED_REGISTER_C_FILES) \
+    $(FLEX_GENERATED_REGISTER_CPP_FILES) \
+    $(LEMON_GENERATED_REGISTER_C_FILES) \
+    $(LEMON_GENERATED_REGISTER_CPP_FILES) \
+    $(NONGENERATED_REGISTER_C_FILES) \
+    $(NONGENERATED_REGISTER_CPP_FILES)
+</code></pre>
+<p>Where those lists are supposed to be defined in the Makefile.common file in your plugin folder. So ensure to have something like:</p>
+<pre><code>NONGENERATED_REGISTER_C_FILES = \
+    packet-toyasn1.c
+</code></pre>
+<p>Where you replace packet-toyasn1.c by whatever file name contains your register and handoff functions.</p>
+<p>PS: given that you were able to compile with CMake on Windows, it might be easier to use CMake on Linux also rather that updating the Makefile.(am|common) files.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/53641/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jun '16, 06:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/713f24fd877861260b71ecd455018625?s=32&amp;d=identicon&amp;r=g" alt="Pascal%20Quantin's gravatar image" />
+    <p><a href="/users/1538/pascal-quantin">Pascal Quantin</a><br/>
+    <span class="score" title="5544 reputation points"><span class="">5.5k</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="60 badges"><span class="bronze">&#9679;</span><span class="badgecount">60</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Pascal Quantin has 92 accepted answers">30&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-53641">
+    
+        <a name="53669"></a>
+        <div class="comment" id="comment-53669">
+            <div id="post-53669-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks a lot for your answer.</p>
+
+<p>Calling tools/make-dissector-reg.py will not be possible even with proper parameters. This tool does not exist any longer. I had to remove the whole part where plugin.c was created.</p>
+
+<p>I tried to apply the same changes as with the non-ASN.1 plugins and add the differences for ASN.1 on top of them.
+After some fiddling around I managed to get a version of the Makefiles that work for me (more or less).</p>
+
+<p></p><hr>
+<p>The new content of Makefile.am is:</p>
+<pre><code>include Makefile.common
+include $(top_srcdir)/Makefile.am.inc
+include ../Makefile.am.inc<p></p>
+<p>plugindir = @<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="91e1fde4f6f8fff5f8e3d1">[email&#160;protected]</a>
+BUILT_SOURCES = packet-toyasn1.h</p>
+<p>plugin_LTLIBRARIES = toyasn1.la
+toyasn1_la_SOURCES = \
+    plugin.c \
+    moduleinfo.h \
+    $(DISSECTOR_SRC) \
+    $(DISSECTOR_INCLUDES)</p>
+<p>toyasn1_la_CPPFLAGS = $(AM_CPPFLAGS) $(PLUGIN_CPPFLAGS)</p>
+<p>toyasn1_la_CFLAGS = $(AM_CFLAGS) $(PLUGIN_CFLAGS)</p>
+<p>toyasn1_la_LDFLAGS = $(PLUGIN_LDFLAGS)</p>
+<p>generate_dissector: $(DISSECTOR_FILES)</p>
+<p>generate_export: $(EXPORT_FILES)</p>
+<p>PROTO_OPT ?= -p $(PLUGIN_NAME)</p>
+<p>$(DISSECTOR_FILES): $(top_srcdir)/tools/asn2wrs.py $(SRC_FILES) $(EXTRA_CNF)
+    python $(top_srcdir)/tools/asn2wrs.py \
+    $(A2W_FLAGS) \
+    $(PROTO_OPT) \
+    -c $(srcdir)/$(PLUGIN_NAME).cnf \
+    -s $(srcdir)/packet-$(PLUGIN_NAME)-template \
+    -D $(srcdir) $(EXT_ASN_FILE_LIST) $(ASN_FILE_LIST) $(EXT_ASN_FILE_LIST_LATE)</p>
+<p>$(EXPORT_FILES): $(top_srcdir)/tools/asn2wrs.py $(SRC_FILES)
+    python $(top_srcdir)/tools/asn2wrs.py \
+    -E $(A2W_FLAGS) \
+    $(PROTO_OPT) \
+    -c $(srcdir)/$(PLUGIN_NAME).cnf \
+    -D $(srcdir) $(EXT_ASN_FILE_LIST) $(ASN_FILE_LIST) $(EXT_ASN_FILE_LIST_LATE)</p>
+<p>CLEANFILES = \
+parsetab.py \
+parsetab.pyc \
+$(DISSECTOR_FILES) \
+<em>-exp.cnf \
+packet-</em>-{dis-tab,ettarr,ett,fn,hfarr,hf,table<em>,val,exp}.[hc] \
+</em>~</p>
+<p>MAINTAINERCLEANFILES = \
+Makefile.in \
+plugin.c</p>
+</code><p><code>EXTRA_DIST = \
+Makefile.common     \
+Makefile.nmake      \
+$(ASN_FILE_LIST) \
+packet-$(PLUGIN_NAME)-template.c \
+packet-$(PLUGIN_NAME)-template.h \
+$(PLUGIN_NAME).cnf \
+$(PLUGIN_NAME).asn \
+moduleinfo.nmake    \
+plugin.rc.in
+</code></p></pre>
+<hr>
+<p>The new content of Makefile.common is:</p>
+<pre><code>PLUGIN_NAME = toyasn1
+PLUG = toyasn1<p></p>
+<h1>Non-generated sources to be scanned for registration routines</h1>
+<p>NONGENERATED_REGISTER_C_FILES = \
+packet-toyasn1.c</p>
+<h1>Non-generated sources</h1>
+<p>NONGENERATED_C_FILES = \
+$(NONGENERATED_REGISTER_C_FILES)</p>
+<h1>Headers.</h1>
+<p>CLEAN_HEADER_FILES = \
+packet-toyasn1.h</p>
+<p>HEADER_FILES = \
+$(CLEAN_HEADER_FILES)</p>
+<h1>the dissector sources (without any helpers)</h1>
+<p>DISSECTOR_SRC = \
+packet-toyasn1.c</p>
+<h1>corresponding headers</h1>
+<p>DISSECTOR_INCLUDES =    \
+packet-toyasn1.h</p>
+<p>DISSECTOR_FILES = $(DISSECTOR_SRC) $(DISSECTOR_INCLUDES)</p>
+<p>BUILT_FILES = packet-$(PLUG)-template.c packet-$(PLUG)-template.h $(PLUG).cnf $(PLUG).asn</p>
+<p>A2W_FLAGS= -b -L</p>
+<p>ASN_FILE_LIST = $(PLUGIN_NAME).asn</p>
+<p>PROTO_OPT = -p $(PLUGIN_NAME)</p>
+<p>srcdir = .</p>
+<p>EXTRA_CNF =</p>
+<h1>Dissector helpers. They're included in the source files in this</h1>
+<h1>directory, but they're not dissectors themselves, i.e. they're not</h1>
+<h1>used to generate "plugin.c".</h1>
+<p>DISSECTOR_SUPPORT_SRC =</p>
+</code><p><code>include ../Makefile.common.inc
+</code></p></pre>
+<hr>
+<p>The only drawback of these Makefiles is that packet-toyasn1.c|h are only created from packet-toyasn1-template.c|h if they do not exist.
+If they already exist and the template files are changed, asn2wrs tool ist not called again to update the autogenerated files.
+As I do not need to touch the dissector code itself a lot, this limitation is fine for me.</p>
+<p>When using cmake for building the Windows version these C and H files were not created from the template files automatically at all. This is one of the reasons why I didn't use cmake to build the Linux version.</p>
+<p>With this solution my problem is solved.
+Thanks for helping</p><p></p></div>
+            <div class="comment-info" id="comment-53669-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jun '16, 06:01)</span>
+                <a class="comment-user userinfo" href="/users/24592/gerhardh">gerhardh</a>
+                
+            </div>
+        </div>
+    
+        <a name="53674"></a>
+        <div class="comment" id="comment-53674">
+            <div id="post-53674-score" class="comment-score"></div>
+            <div class="comment-text"><p>I do not know why you say that tools/make-dissector-reg.py does not exist anymore. It does and in master branch it is called from plugins/Makefile.am.inc file (you are supposed to include it in your Makefile, see Makefile.am in plugins/gryphon folder for example).</p></div>
+            <div class="comment-info" id="comment-53674-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jun '16, 08:14)</span>
+                <a class="comment-user userinfo" href="/users/1538/pascal-quantin">Pascal Quantin</a>
+                
+            </div>
+        </div>
+    
+        <a name="53690"></a>
+        <div class="comment" id="comment-53690">
+            <div id="post-53690-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am sorry.
+I provided wrong link to ASN.1 sample plugin in the initial question.
+I didn't use foo.tar.gz sample file but toyasn1.tar.gz sample file from here: <a href="https://wiki.wireshark.org/ASN1_plugin">https://wiki.wireshark.org/ASN1_plugin</a></p>
+
+<p>Maybe it would have worked better if I had used to foo ASN.1 example.</p>
+
+<p>With toyasn1 sample code I got the error message about missing ../../tools/make-dissector-reg script that I showed in initial question.
+That shell script is not existing in the git repository.</p>
+
+<p>What I didn't notice is the missing file extension.
+You were talking about make-dissector-reg.py which does exist in tools directory.</p>
+
+<p>Looking a bit closer into Makefile.am it seems that it assumes that there is a script for use with Python and one without Python. But the latter is not existing in the folder, causing the error message.</p>
+
+<p>Sorry for the confusion.</p></div>
+            <div class="comment-info" id="comment-53690-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jun '16, 01:02)</span>
+                <a class="comment-user userinfo" href="/users/24592/gerhardh">gerhardh</a>
+                
+            </div>
+        </div>
+    
+        <a name="53693"></a>
+        <div class="comment" id="comment-53693">
+            <div id="post-53693-score" class="comment-score"></div>
+            <div class="comment-text"><p>Indeed toyasn1 plugin is really out of date (if you check the wiki page you will see that it was last updated in 2010) and does not work out of the box with current master branch (as you unfortunately discovered).</p></div>
+            <div class="comment-info" id="comment-53693-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jun '16, 01:43)</span>
+                <a class="comment-user userinfo" href="/users/1538/pascal-quantin">Pascal Quantin</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-53641" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53641-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/53607/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='sQKkUU0h9AGn7PJh2EWzZd7EUvF9hbnJ' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53607/migrating-asn1-based-dissector-plugin-to-wireshark-21?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53607/migrating-asn1-based-dissector-plugin-to-wireshark-21?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/dissector/"
+            class="tag-link-dissector"
+            title="see questions tagged'dissector'using tags"
+            rel="tag">dissector</a> <span class="tag-number">&#215;637</span><br/>
+        
+        <a href="/tags/plugin/"
+            class="tag-link-plugin"
+            title="see questions tagged'plugin'using tags"
+            rel="tag">plugin</a> <span class="tag-number">&#215;173</span><br/>
+        
+        <a href="/tags/asn.1/"
+            class="tag-link-asn.1"
+            title="see questions tagged'asn.1'using tags"
+            rel="tag">asn.1</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 22, 2016, 8:06 a.m.">22 Jun '16, 08:06</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,352 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 28, 2016, 1:43 a.m.">28 Jun '16, 01:43</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/22722/backporting-a-wireshark-dissector-plugin">Backporting a wireshark dissector plugin</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33457/multiple-c-files">Multiple .c files</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36193/couldnt-load-module-undefinded-symbol-dissector_add">Couldnt load module:  undefinded symbol: dissector_add</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47261/error-building-plugin">error building plugin</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49690/decode-new-protocolmessage-in-wireshark-using-a-xml-file-in-input">decode new protocol/message in wireshark using a xml file in input</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51758/qt-vs-gtk-info-column-differences-in-201-and-newer">QT vs GTK Info Column Differences in 2.0.1 and Newer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16009/compiling-problem-installing-a-dissector-plugin-to-wireshark">Compiling problem installing a dissector plugin to wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26204/status_access_violation-dissector-accessed-an-invalid-memory-address-when-calling-g_free">STATUS_ACCESS_VIOLATION: dissector accessed an invalid memory address when calling g_free</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33958/dissector-parameter-question">Dissector parameter question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34966/migration-of-a-plugin-dissector-to-64-bit">Migration of a plugin dissector to 64-bit</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

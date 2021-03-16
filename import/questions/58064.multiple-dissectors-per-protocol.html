@@ -1,0 +1,1177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Multiple dissectors per protocol - Wireshark Q&amp;A</title>
+        <meta name="description" content="I would like rework the dissector for Google Protobuf found under the name &quot;protobuf-wireshark-runtime-0.1.tar.gz&quot; here: I cannot promise that I can finish the work for upstream, but I will try :-) Google Protobuf is not a protocol itself, it&#39;s more a generator for different protocols (message types..." />
+        <meta name="keywords" content="google,protocol,protobuf,buffers" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/58064/multiple-dissectors-per-protocol" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/58064/multiple-dissectors-per-protocol?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='UmD5nqRSFQGgCpmKqgdhydkZozjb3acJ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/58064/multiple-dissectors-per-protocol">Multiple dissectors per protocol</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-58064-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58064/up/" rel="nofollow"> </a>
+<div id="post-58064-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-58064-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58064/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/58064/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I would like rework the dissector for Google Protobuf found under the name "protobuf-wireshark-runtime-0.1.tar.gz" <a href="https://code.google.com/archive/p/protobuf-wireshark/">here</a>:</p>
+<p>I cannot promise that I can finish the work for upstream, but I will try :-)</p>
+<p>Google Protobuf is not a protocol itself, it's more a generator for different protocols (<em>message types</em> in protobuf). Protobuf uses text files called <em>protofiles</em> which contain the definition for one or more message types. I think this may be comparable to Corba IDL or SOAP.</p>
+<p>Although encoded protobuf messages are somehow self contained (tags, length, wire type), they contain absolutely no information about the top level message type. So the message type must be known by wireshark (e.g. user defined mapping between TCP/UDP port numbers and the message type).</p>
+<p>As as first step I've defined preferences for the protobuf protocol so that the user can specify multiple (UAT) entries containing protofiles and the name of the messages types.</p>
+<p><strong>Main question:</strong></p>
+<p>How shall I implement the dissection of the different message types in wireshark?</p>
+<p><strong>Alternative 1:</strong></p>
+<p>Instantiate as much dissectors as there are different message types. Let wireshark dispatch the frame to the corresponding dissector (e.g. by TCP/UDP port number / decode as... dialog).</p>
+<p><strong>Questions regarding alternative 1:</strong></p>
+<ol>
+<li>Can I create multiple dissectors "inside" one protocol?</li>
+<li>Can I pass individual <em>this pointers</em> (e.g. void *) to the dissectors dissect function?</li>
+<li>dissector_add_for_decode_as() seems not to allow registering multiple dissectors for the same protocol. Am I correct?</li>
+</ol>
+<p><strong>Alternative 2:</strong></p>
+<p>Create only one dissector and differentiate between the different message type inside the dissector function.</p>
+<p><strong>Questions regarding alternative 2:</strong></p>
+<ol>
+<li>In the dissect function, I need information about the lower layers (e.g. TCP/UDP port number) in order dissect the message correctly (choose the right message type). How can I get these information?</li>
+<li>Can I also get information about the lower layers if the message has not been received by other protocols than TCP or UDP (e.g. HDLC)?</li>
+</ol>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/google/" class="post-tag tag-link-google"
+                                        title="see questions tagged 'google'" rel="tag">google</a>
+                                
+                                    <a href="/tags/protocol/" class="post-tag tag-link-protocol"
+                                        title="see questions tagged 'protocol'" rel="tag">protocol</a>
+                                
+                                    <a href="/tags/protobuf/" class="post-tag tag-link-protobuf"
+                                        title="see questions tagged 'protobuf'" rel="tag">protobuf</a>
+                                
+                                    <a href="/tags/buffers/" class="post-tag tag-link-buffers"
+                                        title="see questions tagged 'buffers'" rel="tag">buffers</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Dec '16, 22:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/65f16ed12a561d0357e35088b02f1bc5?s=32&amp;d=identicon&amp;r=g" alt="Christian%20Eggers's gravatar image" />
+    <p><a href="/users/26940/christian-eggers">Christian Eg...</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Christian Eggers has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-58064">
+    
+        <a name="58070"></a>
+        <div class="comment" id="comment-58070">
+            <div id="post-58070-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi,
+Disclaimer I don't know much about googles protocol buffers.</p>
+
+<p>One way of looking at it is that Google protocol buffer provides you with the means of easily design a protocol which means that you actually have different protocols using the same frame work. E.G you need a dissector per protocol. It might be possible to use one dissector with configuration files
+or data structures for the protocol in question in which case there should be preference settings saying decode port xx as protocol yy or something along those lines or have a script creating a dissector from input files like asn1 based dissectors do.</p></div>
+            <div class="comment-info" id="comment-58070-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 03:45)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58064" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58064-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/58064/multiple-dissectors-per-protocol?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/58064/multiple-dissectors-per-protocol?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/58064/multiple-dissectors-per-protocol?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/58064/multiple-dissectors-per-protocol?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="58076"></a>
+                    <div id="answer-container-58076" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-58076-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58076/up/" rel="nofollow"> </a>
+<div id="post-58076-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-58076-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58076/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="http://wsgd.free.fr/">Wireshark Generic Dissector</a> (WSGD) uses a couple of text files to indicate what to dissect and how to format the dissection, a similar approach could be used for Google Protocol Buffers.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/58076/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Dec '16, 05:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+    <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+    <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grahamb has 274 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-58076">
+    
+        <a name="58095"></a>
+        <div class="comment" id="comment-58095">
+            <div id="post-58095-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for pointing to something which is similar to my purpose. It looks like WSGD registers exactly one protocol and one dissector per WSDG file. </p>
+
+<p>So lets think about alternative 3:
+Register one fixed protocol as a placeholder where the use can configure preferences for protobuf. I will check whether dynamic registration and deregistration of protocols is possible or the user has to restart wireshark after altering the list of protobuf message types.</p></div>
+            <div class="comment-info" id="comment-58095-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 11:06)</span>
+                <a class="comment-user userinfo" href="/users/26940/christian-eggers">Christian Eg...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58076" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58076-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="58096"></a>
+                    <div id="answer-container-58096" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-58096-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58096/up/" rel="nofollow"> </a>
+<div id="post-58096-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-58096-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58096/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Similar (I think) to Anders' suggestion, I think the right answer is probably close to Alternative 2 but slightly different (call it Alternative 3): one dissector per protocol where a protocol is effectively a collection of related messages.</p>
+<p>To answer your Alternative 2 questions: if your dissector is called based on a matching uint field (e.g., the TCP port number) then <code>pinfo-&gt;match_uint</code> will be set to the uint value.  This works for dissectors registered for specific ports but I'm not sure if this will include Decode-as cases.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/58096/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Dec '16, 11:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e0564001bb7deb960d5d9d9c1e0ba074?s=32&amp;d=identicon&amp;r=g" alt="JeffMorriss's gravatar image" />
+    <p><a href="/users/655/jeffmorriss">JeffMorriss ♦</a><br/>
+    <span class="score" title="6219 reputation points"><span class="">6.2k</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="72 badges"><span class="bronze">&#9679;</span><span class="badgecount">72</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JeffMorriss has 103 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-58096">
+    
+        <a name="58100"></a>
+        <div class="comment" id="comment-58100">
+            <div id="post-58100-score" class="comment-score"></div>
+            <div class="comment-text"><p>Most protocols have either a fixed (iana assigned) port number or one particular TCP OR UDP port number can be configured in the protocols preferences.</p>
+
+<p>In the case of Google Protocol Buffers I don't like the scheme because ...
+... protocol buffers are not a protocol itself, so they have no standard port numbers.
+... protobuf messages may be sent via TCP, UDP or something completely different (e.g. HDLC or raw ethernet frames).
+... I don't see a way to let the user configure this various possibilities via the protocols preferences page</p>
+
+<p>I would prefer when exclusively the "Decode As..." dialog can used to select protobuf as the dissector for data using a particular transport. Unfortunately it seems that I'll have to call dissector_add_for_decode_as() for each dissector table individually.</p>
+
+<p>In case my dissector is called this way, pinfo-&gt;match_uint may contain something like the port or protocol number, but this is not useful for me because if don't let the user configure the port number via the protocol preferences page, I also don't have any relation between pinfo-&gt;match_uint and the assigned protobuf message type (did anybody understand my problem?).</p>
+
+<p>Conclusion:
+I think that alternative 2 is not an ideal option. If multiple dissectors per protocol are not possible, I will have to register multiple protocols.</p></div>
+            <div class="comment-info" id="comment-58100-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 12:16)</span>
+                <a class="comment-user userinfo" href="/users/26940/christian-eggers">Christian Eg...</a>
+                
+            </div>
+        </div>
+    
+        <a name="58102"></a>
+        <div class="comment" id="comment-58102">
+            <div id="post-58102-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's true that protocol buffers aren't a protocol themselves but generally people are implementing a protocol using protocol buffers (i.e., they make a protocol with N message types whose formatting happens to be the protocol buffers format).  When they are implementing a protocol they often (in my experience) do things like choose a transport and a (probably not IANA registered) port.  IOW I don't think just knowing the port number will tell you the message type.  But it could tell you what group of message types the message will be from.</p>
+
+<p>If your dissector had a configuration file or UAT which allowed the user to specify the name of the protocol, the transport, the "port" (or equivalent), and the path to the proto file then you could establish a (dynamically configured) dissector for that protocol(**).  If the port wasn't specified (or was 0) then the "protocol" would only be available via Decode-As.</p>
+
+<p>(**) Actually I think I'm starting to remember that the .proto file doesn't give you enough information.  You need the "compiled" output to match the names to the numbers.  Or something like that...</p></div>
+            <div class="comment-info" id="comment-58102-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 12:39)</span>
+                <a class="comment-user userinfo" href="/users/655/jeffmorriss">JeffMorriss ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58107"></a>
+        <div class="comment" id="comment-58107">
+            <div id="post-58107-score" class="comment-score"></div>
+            <div class="comment-text"><p>Perhaps I think too complicated, but how can I let the user choose a transport via UAT? Do I have to use UAT_VS_DEF() and code my own enum with transports which I think may be suitable for protobuf together with an additional uint field?</p>
+
+<p>Option 1:
+Offer a list of transports I personally use for protobuf --&gt; Users who use another transport than me, will have to change the code.</p>
+
+<p>Option 2:
+Make protobuf available for ALL transports. No idea how to do this. In order to be available in "Decode As...", I would have to call dissector_add_for_decode_as() for ALL dissector tables. Not sure whether this makes sense.</p>
+
+<p>Both options depend on that my preferred/all dissector tables use an uint for matching the higher layer protocol.</p>
+
+<p>Decoding protobuf itself (by giving a textual proto file) is already solved in the original protobuf-runtime implementation. The protobuf definition is "compiled" on the fly inside wireshark and dissection is done by a protobuf feature called "reflection".</p></div>
+            <div class="comment-info" id="comment-58107-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 13:28)</span>
+                <a class="comment-user userinfo" href="/users/26940/christian-eggers">Christian Eg...</a>
+                
+            </div>
+        </div>
+    
+        <a name="58111"></a>
+        <div class="comment" id="comment-58111">
+            <div id="post-58111-score" class="comment-score"></div>
+            <div class="comment-text"><p>So as an example if you "told" the Tcp dissector to decode port x as protocol buffer and had a preference in the protocol buffer dissector to decode to port x as protocol type Y and loaded the protocol description for that port. That would work? In that case use a unit dissector table in the protocol buffer dissector per transport type and dynamically register a dissector with the Def there.</p></div>
+            <div class="comment-info" id="comment-58111-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 14:32)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58136"></a>
+        <div class="comment" id="comment-58136">
+            <div id="post-58136-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not too familiar with UATs but I would think there would be a way to do it with an enum.</p>
+
+<p>Personally I don't think it's realistic to support ALL transports.  Maybe there is a way to do it gracefully but I think trying to register for all dissector tables isn't very nice.</p>
+
+<p>You'll probably cover 99% of use cases by doing TCP and UDP and another 0.9% by adding SCTP.  And anyway it's Open Source software: if someone actually wants to run protobufs over, say, Bluetooth, they can always add support when they find the need.  And Wireshark doesn't get bloated with a bunch of stuff that nobody actually uses.</p></div>
+            <div class="comment-info" id="comment-58136-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '16, 05:59)</span>
+                <a class="comment-user userinfo" href="/users/655/jeffmorriss">JeffMorriss ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58096" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58096-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="58140"></a>
+                    <div id="answer-container-58140" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-58140-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58140/up/" rel="nofollow"> </a>
+<div id="post-58140-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-58140-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58140/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Thanks to all who gave information about this topic. I will try to summarize:</p>
+<h1>1. Similar work</h1>
+<p><a href="http://wsgd.free.fr/">Wireshark Generic Dissector</a> does something similar. At startup it scans particular directories for configuration files and instantiates as much protocols+dissectors as there are configuration files.</p>
+<h1>2. Multiple dissectors per protocol?</h1>
+<p>As nobody wrote something else, I assume that it is only possible to register one dissector per protocol. If I want to register more (e.g. dynamically) dissectors, I'll have to register them together with an individual protocol.</p>
+<h1>3. One or multiple dissectors at all?</h1>
+<p>One protofile usually contains a "tree" of message type definitions. My intention for "alternative 1" was to have one dissector per "tree" of message types. So I think I agree to what JeffMorriss answered.</p>
+<p>It is most likely that I will register one "static" protocol+dissector for protobuf, which is able to perform "raw decoding" which means that no protofile is needed and only "raw" tag numbers + values can be shown in the proto tree.</p>
+<p>This "static" protocol will have a UAT in its preferences page, which allows the user to define further "dynamic" protocols (in contrast to let the user create configuration files as WSGD does).</p>
+<h1>4. Registration in dissector tables?</h1>
+<p>Nobody wrote that it is usual/acceptable to register a dissector for all transport protocols. So the "normal" way is to add a <em>enum preference</em> with a selection of pre-defined transport names and a <em>range preference</em> for the (uint) port/protocol number.</p>
+<h1>Remaining issues</h1>
+<h2>1. Dynamic deregistration is not possible.</h2>
+<p>At least <code>proto_deregister_protocol()</code>, <code>prefs_deregister_protocol()</code>, <code>uat_destroy()</code> and <code>deregister_dissector()</code> are not exported to wireshark plugins. So there seems to be no possibility to remove "dynamically" instantiated protocols after the user removed them from the preferences UAT.</p>
+<p>Because of this, I would also register "dynamic" protocol only on startup, so the user has to restart Wireshark after altering the list of dynamic protocols.</p>
+<h2>2. Missing <em>this</em> pointer in <code>dissector_t</code></h2>
+<p>Most C functions which use a pointer to a user defined callback let also define a <code>void *</code> pointer which will usually be passed as first/last parameter when to callback is executed. When <code>call_dissector_through_handle()</code> runs a dissector, nothing like this is provided (only <code>pinfo-&gt;current_proto</code> seems to contain something useful, the last parameter (void *) is used for something different by <code>call_dissector_with_data()</code>).</p>
+<p>For dynamically created dissectors this can be a difficult challenge because usually they all share the same dissector callback. WSGD creates a fixed "pool" of callback functions so there is an arbitrary limit on the number of dynamic dissectors the user can define. A similar solution I have found <a href="http://p-nand-q.com/programming/cplusplus/using_member_functions_with_c_function_pointers.html">here</a>, but generally the lack of a <em>this pointer</em> makes things more complicated than necessary.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/58140/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Dec '16, 10:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/65f16ed12a561d0357e35088b02f1bc5?s=32&amp;d=identicon&amp;r=g" alt="Christian%20Eggers's gravatar image" />
+    <p><a href="/users/26940/christian-eggers">Christian Eg...</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Christian Eggers has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-58140">
+    
+        <a name="58141"></a>
+        <div class="comment" id="comment-58141">
+            <div id="post-58141-score" class="comment-score"></div>
+            <div class="comment-text"><ol>
+<li>There are two solutions: 1) The preferred is to not write your dissector as a plugin but rather as a built-in dissector (in <code>epan/dissectors/</code>); in fact we generally don't accept new plugins.  The main exception to this rule is for dissectors that end up requiring lots of files. 2) The second option (if there are good reasons for it to be a plugin) is to submit a patch that exports those APIs so they can be used by plugins.</li>
+<li>The old way (before any dissector calls had <code>void *</code>'s) was to use <code>pinfo-&gt;private_data</code>.  That can be mildly tricky and painful (especially with regards to restoring the old <code>private_data</code> after an exception was thrown) but it can be made to work.  You could probably do that if adding <code>void *</code>'s to the existing stuff isn't feasible.</li>
+</ol></div>
+            <div class="comment-info" id="comment-58141-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '16, 11:29)</span>
+                <a class="comment-user userinfo" href="/users/655/jeffmorriss">JeffMorriss ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58147"></a>
+        <div class="comment" id="comment-58147">
+            <div id="post-58147-score" class="comment-score"></div>
+            <div class="comment-text"><ol>
+<li>
+<p>This is clear for me. I would like to start with a plugin and submit a built-in later. For the built-in, I'll try to (de)register the new protocols immediately in the apply callback.</p>
+</li>
+<li>
+<p>How can I influence what Wireshark passes to my dissector function via the void* pointer when it is directly called by wireshark (e.g. as a result of dissector_table match)? I could only find many cases where NULL is passed. I would like to specify the value directly after registering the protocol / dissector.</p>
+</li>
+</ol></div>
+            <div class="comment-info" id="comment-58147-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '16, 14:06)</span>
+                <a class="comment-user userinfo" href="/users/26940/christian-eggers">Christian Eg...</a>
+                
+            </div>
+        </div>
+    
+        <a name="58173"></a>
+        <div class="comment" id="comment-58173">
+            <div id="post-58173-score" class="comment-score"></div>
+            <div class="comment-text"><ol>
+<li>So you could always make the necessary APIs public/exported to plugins during development (and drop that part of the change when it's time to submit it).</li>
+<li>(I assume you mean the <code>void *</code> in the top-level dissector function.)  You can't.  That's why I was suggesting using <code>pinfo-&gt;private_data</code> instead.  Or maybe I'm mis-understanding your question.</li>
+</ol></div>
+            <div class="comment-info" id="comment-58173-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Dec '16, 11:36)</span>
+                <a class="comment-user userinfo" href="/users/655/jeffmorriss">JeffMorriss ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58176"></a>
+        <div class="comment" id="comment-58176">
+            <div id="post-58176-score" class="comment-score"></div>
+            <div class="comment-text"><p>I would suggest doing the general dissector first and submit that with sample traces. Them it would be easier to discuss the next step.</p></div>
+            <div class="comment-info" id="comment-58176-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Dec '16, 15:33)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58140" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58140-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/58064/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='UmD5nqRSFQGgCpmKqgdhydkZozjb3acJ' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/58064/multiple-dissectors-per-protocol?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/58064/multiple-dissectors-per-protocol?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/protocol/"
+            class="tag-link-protocol"
+            title="see questions tagged'protocol'using tags"
+            rel="tag">protocol</a> <span class="tag-number">&#215;124</span><br/>
+        
+        <a href="/tags/google/"
+            class="tag-link-google"
+            title="see questions tagged'google'using tags"
+            rel="tag">google</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/protobuf/"
+            class="tag-link-protobuf"
+            title="see questions tagged'protobuf'using tags"
+            rel="tag">protobuf</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/buffers/"
+            class="tag-link-buffers"
+            title="see questions tagged'buffers'using tags"
+            rel="tag">buffers</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 13, 2016, 10:25 p.m.">13 Dec '16, 22:25</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,863 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 16, 2016, 3:33 p.m.">16 Dec '16, 15:33</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/27378/how-to-make-wireshark-tool-support-protocol-buffers">How to make Wireshark tool support Protocol Buffers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13490/how-and-which-version-libprotobuf-to-install">How and which version libprotobuf to install ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29203/protocol-buffer-wireshark-plugin">Protocol Buffer Wireshark Plugin</a>
+        </p>
+        
+        <p>
+            <a href="/questions/337/where-did-the-google-ssl-video-go">Where did the Google SSL video go?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1023/fix-protocol-dissector">FIX Protocol dissector</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3550/if-support-filter-bssap-protocol-in-wireshark">If support filter BSSAP+ protocol in Wireshark?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12749/adding-a-new-protocol-to-wireshark">Adding a new protocol to Wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19180/can-wireshark-decode-sy-protocol">Can wireshark decode sy protocol ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26021/filter-traffic-by-protocol">filter traffic by protocol</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39260/how-can-i-see-the-protocol-number-instead-of-protocol-name">How can I see the protocol number instead of protocol name?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

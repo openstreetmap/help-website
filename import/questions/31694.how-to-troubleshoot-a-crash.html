@@ -1,0 +1,1111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>how to troubleshoot a crash? - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, Is there a good writeup on how to troubleshoot Wireshark crashes, preferably covering all major operating systems? I have Wireshark running NOT capturing live traffic but analyzing a pcap file (less than 1MB). It was doing fine for a while. Then it crashed. I have a suspicion that it may be caus..." />
+        <meta name="keywords" content="lua,crash" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/31694/how-to-troubleshoot-a-crash" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/31694/how-to-troubleshoot-a-crash?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Uw2OrbllF1oRNZ28naKTlsQFKWTtUnNm' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/31694/how-to-troubleshoot-a-crash">how to troubleshoot a crash?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-31694-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31694/up/" rel="nofollow"> </a>
+<div id="post-31694-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31694-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31694/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/31694/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>Is there a good writeup on how to troubleshoot Wireshark crashes, preferably covering all major operating systems?</p>
+<p>I have Wireshark running NOT capturing live traffic but analyzing a pcap file (less than 1MB).  It was doing fine for a while.  Then it crashed.  I have a suspicion that it may be caused by an error in the Lua dissector I wrote, but I have no idea what's the error.</p>
+<p>I didn't start from a console, so no info there.  I did get the crash report, but it makes no sense to me, as seen below.</p>
+<p>My questions: what evidences can we get after a crash, and how to make sense of them, without having 10 years of experience in this field?</p>
+<p>partial crash report:</p>
+<pre><code>Process:         Wireshark [7020]
+Path:            /Applications/Wireshark.app/Contents/MacOS/Wireshark
+Identifier:      org.wireshark.Wireshark
+Version:         1.11.3-1864-geef0fa6 (1.11.3-1864-geef0fa6)
+Code Type:       X86-64 (Native)
+Parent Process:  launchd [181]
+Responsible:     Wireshark [7020]
+User ID:         502
+
+Date/Time:       2014-04-03 17:12:29.978 -0500
+OS Version:      Mac OS X 10.9.2 (13C64)
+Report Version:  11
+Anonymous UUID:  3C1BACD2-261C-95A3-7B77-F6E256111417
+
+Sleep/Wake UUID: 4CC28C83-FB62-4ACB-A214-181F8BE906E8
+
+Crashed Thread:  0  Dispatch queue: com.apple.main-thread
+
+Exception Type:  EXC_BREAKPOINT (SIGTRAP)
+Exception Codes: 0x0000000000000002, 0x0000000000000000
+
+Application Specific Information:
+wireshark 1.11.3-1864-geef0fa6 (wireshark-1.11.3-rc1-1864-geef0fa6-dirty from unknown)
+
+Compiled (64-bit) with Qt 5.2.1 with GLib 2.36.0, with libpcap, with libz 1.2.3,
+without POSIX capabilities, with SMI 0.4.8, without c-ares, without ADNS, with
+Lua 5.1, without Python, with GnuTLS 2.12.19, with Gcrypt 1.5.0, with MIT
+Kerberos, with GeoIP, without PortAudio, with AirPcap.
+
+Running on Mac OS X 10.9.2, build 13C64 (Darwin 13.1.0), without locale, with
+libpcap version 1.3.0 - Apple version 41, with libz 1.2.5, GnuTLS 2.12.19,
+Gcrypt 1.5.0, without AirPcap.
+      Intel(R) Core(TM) i7-3615QM CPU @ 2.30GHz
+
+Built using llvm-gcc 4.2.1 (Based on Apple Inc. build 5658) (LLVM build
+2336.9.00).
+
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   libglib-2.0.0.dylib             0x000000010811005b g_logv + 1371
+1   libglib-2.0.0.dylib             0x00000001081102dd g_log + 381
+2   libwireshark.0.dylib            0x00000001035d7289 proto_register_field_init + 57
+3   libwireshark.0.dylib            0x00000001035d7fd1 proto_register_field_array + 161
+4   libwireshark.0.dylib            0x00000001040feb33 Proto_commit + 579
+5   libwireshark.0.dylib            0x0000000104114652 wslua_init + 1058
+6   org.wireshark.Wireshark         0x0000000103199c17 main + 1879
+7   org.wireshark.Wireshark         0x0000000103132cb4 start + 52
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/lua/" class="post-tag tag-link-lua"
+                                        title="see questions tagged 'lua'" rel="tag">lua</a>
+                                
+                                    <a href="/tags/crash/" class="post-tag tag-link-crash"
+                                        title="see questions tagged 'crash'" rel="tag">crash</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Apr '14, 16:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b18cada3e3589f311e24f5ffbd1737bc?s=32&amp;d=identicon&amp;r=g" alt="YXI's gravatar image" />
+    <p><a href="/users/6804/yxi">YXI</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="20 badges"><span class="silver">&#9679;</span><span class="badgecount">20</span></span><span title="23 badges"><span class="bronze">&#9679;</span><span class="badgecount">23</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="YXI has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/31694/">
+                edited
+                <strong>09 Apr '14, 17:09</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d02f20c18a7742ec73a666f1974bf6dc?s=32&amp;d=identicon&amp;r=g" alt="Hadriel's gravatar image" />
+            <p><a href="/users/4318/hadriel">Hadriel</a><br/>
+            <span class="score" title="2652 reputation points"><span class="">2.7k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="39 badges"><span class="bronze">&#9679;</span><span class="badgecount">39</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-31694">
+    
+</div>
+<div id="comment-tools-31694" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31694-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/31694/how-to-troubleshoot-a-crash?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/31694/how-to-troubleshoot-a-crash?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/31694/how-to-troubleshoot-a-crash?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/31694/how-to-troubleshoot-a-crash?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="31702"></a>
+                    <div id="answer-container-31702" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31702-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31702/up/" rel="nofollow"> </a>
+<div id="post-31702-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-31702-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31702/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I suppose I should actually try to answer the question being asked. :)</p>
+<p>I don't know if there's a good write-up on troubleshooting wireshark crashes in particular, but I'll try to give the 30-second simplifies overview. Ultimately though, this requires some basic understanding of programming, and the C language in particular, because you'd have to look into <a href="https://code.wireshark.org/review/gitweb?p=wireshark.git;a=tree">the source code</a> itself.</p>
+<p>Basically what I do is start with the exception type and crash dump stack trace (or sometimes called a backtrace).</p>
+<p>This is the exception type:</p>
+<pre><code>Exception Type:  EXC_BREAKPOINT (SIGTRAP)
+</code></pre>
+<p>That tells you a <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man3/signal.3.html">SIGTRAP</a> was issued, either on purpose or due to an exception. In this case it's not that helpful, because you could guess that from the stack trace... but sometimes it is useful, for divide by zero, memory errors, etc.</p>
+<p>This is the stack trace:</p>
+<pre><code>0   libglib-2.0.0.dylib             0x000000010811005b g_logv + 1371
+1   libglib-2.0.0.dylib             0x00000001081102dd g_log + 381
+2   libwireshark.0.dylib            0x00000001035d7289 proto_register_field_init + 57
+3   libwireshark.0.dylib            0x00000001035d7fd1 proto_register_field_array + 161
+4   libwireshark.0.dylib            0x00000001040feb33 Proto_commit + 579
+5   libwireshark.0.dylib            0x0000000104114652 wslua_init + 1058
+6   org.wireshark.Wireshark         0x0000000103199c17 main + 1879
+7   org.wireshark.Wireshark         0x0000000103132cb4 start + 52
+</code></pre>
+<p>What a stack trace tells you is the last set of functions, in reverse order, that were called and are in the call stack. I.e., it stopped in <code>g_logv()</code>, which it got to from within <code>g_log()</code>, which it got to from within <code>proto_register_field_init()</code>, etc. (note that it's not all functions the program executed, just the ones still on the stack, meaning the ones to still be returned from and popped from the stack)</p>
+<p>Those are literally the function names from within the source code - if the program was compiled with full debug symbols, you'd even see source code filenames and such.  The hex numbers to the left of the function names are the program counter addresses, which won't be helpful.</p>
+<p>The names on the left tell you which program/library it's executing for that function. "<code>libglib-2.0.0.dylib</code>" is the <a href="https://developer.gnome.org/glib/">Glib</a> library, while "<code>libwireshark.0.dylib</code>" is the core Wireshark library, and "<code>org.wireshark.Wireshark</code>" is the Wireshark application itself (or really a symbolic link to it). The "<code>dylib</code>" extension tells you it's a dynamic library in Mac (similar to a "DLL" dynamic linked library in Windows, and a "so" shared object in Linux).</p>
+<p>So using the stack trace you gave, I can tell the crash happens during the internal registering of Lua fields. Because I know that's what <code>Proto_commit()</code> does, when it is calling <code>proto_register_field_array()</code>.</p>
+<p>Technically the "crash" occurs in <code>g_logv()</code> in the sense of that's the function that caused the SIGTRAP, but that's really just a <a href="https://developer.gnome.org/glib/">Glib</a> function that was called by <code>g_log()</code> which is another Glib function, and that one was apparently called by <code>proto_register_field_init()</code>.  I say "apparently", because it was something that is really a macro or inlined, because there is no direct call to <code>g_log()</code> inside <code>proto_register_field_init()</code>.</p>
+<p>With full debug symbols it's a lot easier to figure out exactly where it happened, because you'd get the source code line numbers too.  But ultimately it's not really telling you <em>why</em> it crashed, in the sense of what was the root cause - it's more telling you <em>how</em> it crashed.</p>
+<p>My guess is it's actually "<code>g_error()</code>" being called, <strong>on purpose</strong>, inside <code>proto_register_field_init()</code>... because it encountered something that is a programming error and needs to be fixed. <code>g_error()</code> is a macro, not a function, so it won't show up in the stack trace. (a macro is a pre-processor directive during compilation) In fact <code>proto_register_field_init()</code> doesn't even directly call <code>g_error()</code>, so it could be being called via one of the other macros used in <code>proto_register_field_init()</code>, or via some function that the compiler chose to inline. (by "inline" I mean it didn't keep the function separate, but instead moved its logic into the calling function, to increase performance)</p>
+<p>The fact that it crashes is really a C-code programming error, not a Lua one - the Wireshark Lua API C-code tries to prevent actual crashes for bad Lua scripts, by doing verification checking before calling the rest of the C-code.</p>
+<p>So it's probably some incorrect Lua <code>ProtoField</code> in the script, that isn't being properly verified by the C-code. Of course ultimately the Lua script itself is probably wrong too, or maybe it's a fine Lua script and there's some bug in the Wirehark Lua API code. (it could just be a bug - that field registration code was changed recently... although more recently than your version I think... 1.11.3-rc1-1864 isn't very recent)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31702/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Apr '14, 18:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d02f20c18a7742ec73a666f1974bf6dc?s=32&amp;d=identicon&amp;r=g" alt="Hadriel's gravatar image" />
+    <p><a href="/users/4318/hadriel">Hadriel</a><br/>
+    <span class="score" title="2652 reputation points"><span class="">2.7k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="39 badges"><span class="bronze">&#9679;</span><span class="badgecount">39</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hadriel has 30 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31702">
+    
+        <a name="31712"></a>
+        <div class="comment" id="comment-31712">
+            <div id="post-31712-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks.  That is a very helpful crash course (no pun intended) with an example.</p>
+
+<p>Your mentioning of my build being old alerted me to check the build info in the crash report.  Then I realized that this is not the crash report for what happened yesterday.  However, when I went to ~/Library/Logs/DiagnosticReport yesterday, there was only one crash report, the one I uploaded.  It was from last week!  Why there was no crash reports for the crashes happened yesterday?  Could they be found somewhere else on my Mac?</p>
+
+<p>You also mentioned that "if the program was compiled with full debug symbols" ... I thought the Wireshark binaries we download are already compiled with debugging turned on.  That's not the case in the nightly builds?  What do we have to do to have the full debug symbols?</p>
+
+<p>Thanks.</p></div>
+            <div class="comment-info" id="comment-31712-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Apr '14, 08:53)</span>
+                <a class="comment-user userinfo" href="/users/6804/yxi">YXI</a>
+                
+            </div>
+        </div>
+    
+        <a name="31725"></a>
+        <div class="comment" id="comment-31725">
+            <div id="post-31725-score" class="comment-score"></div>
+            <div class="comment-text"><p>You asked:</p>
+
+<pre><code>Could they be found somewhere else on my Mac?
+</code></pre>
+
+<p>They might be in <code>/Library/Logs/DiagonosticReports</code> (note the lack of a <code>~</code> tilde), but they really should be where you said. You can also view them in the Console app instead of in a terminal - i.e., Applications-&gt;Utilities-&gt;Console.</p>
+
+<p></p><hr>
+<pre><code>What do we have to do to have the full debug symbols?
+</code></pre>
+<p>You have to compile it yourself. I get full debug symbols with the one I compile locally.</p>
+<p>Most programs aren't released with full debug symbols, because it increases the size of the program quite a bit. (and commercial products don't do it so they don't reveal internal stuff)</p><p></p></div>
+            <div class="comment-info" id="comment-31725-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Apr '14, 10:55)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="31729"></a>
+        <div class="comment" id="comment-31729">
+            <div id="post-31729-score" class="comment-score"></div>
+            <div class="comment-text"><p>BTW, please submit this as a bug - Wireshark really isn't supposed to crash even with a wrong Lua script.</p>
+
+<p>You don't need to include your whole script - just the portion that creates the <code>ProtoField</code>s, i.e. the part that does this type of thing:</p>
+
+<pre><code>local foo = ProtoField.new(...)
+local bar = ProtoField.uint16(...)
+</code></pre></div>
+            <div class="comment-info" id="comment-31729-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Apr '14, 12:12)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="31731"></a>
+        <div class="comment" id="comment-31731">
+            <div id="post-31731-score" class="comment-score"></div>
+            <div class="comment-text"><p>To compile it with full debug symbols, do you simply change the Makefile?
+I see in the Makefile there are two flag sets:
+CFLAG = -g ...
+CFLAG_FOR_BUILD = ...
+So do I just add "-g" to CFLAG_FOR_BUILD?</p>
+
+<p>I'm not going to submit a bug now as I don't have a relevant crash report.  The crash report I have is from last week (couldn't find another one even following your new advice) and I have since changed my ProtoFields quite a bit.  I will submit a bug report if Wireshark crashes again after the rebuild with debug symbols and also with Wireshark launched through gdb.  That way you guys will have some stuff to work with.  It will probably be done in the Linux system.  If it crashes in Linux, it should also do it in Mac and Windows, right (assuming they all come from exactly the same version of source code)?</p></div>
+            <div class="comment-info" id="comment-31731-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Apr '14, 12:50)</span>
+                <a class="comment-user userinfo" href="/users/6804/yxi">YXI</a>
+                
+            </div>
+        </div>
+    
+        <a name="31732"></a>
+        <div class="comment" id="comment-31732">
+            <div id="post-31732-score" class="comment-score"></div>
+            <div class="comment-text"><p>You asked:</p>
+
+<pre><code> So do I just add "-g" to CFLAG_FOR_BUILD?
+</code></pre>
+
+<p>No you shouldn't have to. The Makefile is auto-generated by the <code>configure</code> script, so as long as you did <code>autogen.sh</code> followed by <code>configure</code>, then just doing <code>make</code> after that should work.</p>
+
+<p></p><hr>
+<pre><code>If it crashes in Linux, it should also do it in Mac and Windows, right?
+</code></pre>
+<p>Not necessarily, no. It might not even crash consistently every time in Mac... for example if a Lua object being garbage collected is causing the issue, then it's a roll of the dice. (though I don't think that's the case here)</p><p></p></div>
+            <div class="comment-info" id="comment-31732-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Apr '14, 13:01)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="31795"></a>
+        <div class="comment not_top_scorer" id="comment-31795">
+            <div id="post-31795-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just read the official INSTALL instructions came in the source tarball and there was no mention of running autogen.sh before running ./configure.<br>
+So is the act of running autogen.sh before configure that ensures the debug symbols will be added for the compile?</p></div>
+            <div class="comment-info" id="comment-31795-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Apr '14, 09:14)</span>
+                <a class="comment-user userinfo" href="/users/6804/yxi">YXI</a>
+                
+            </div>
+        </div>
+    
+        <a name="31797"></a>
+        <div class="comment not_top_scorer" id="comment-31797">
+            <div id="post-31797-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't know which exact script is necessary to eventually get the Makefiles to generate full debug symbols. <code>autogen.sh</code> runs <code>libtool</code>, <code>automake</code>, and <code>autoconf</code>, which are GNU tools for figuring out platform-specific stuff and generating the appropriate inputs to the rest of the <code>make</code> process (and thus eventually the Makefiles generated by <code>configure</code>).</p>
+
+<p>If I recall right, just running <code>configure</code> might be ok because I seem to recall it will actually run <code>autogen.sh</code> itself if it doesn't find the right info already.  Personally I always run <code>autogen.sh</code> myself instead of just only <code>configure</code>, because I'm used to doing it. <code>:)</code></p></div>
+            <div class="comment-info" id="comment-31797-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Apr '14, 10:41)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="31798"></a>
+        <div class="comment not_top_scorer" id="comment-31798">
+            <div id="post-31798-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yeah, I think autogen.sh is probably not needed.  I just scanned through configure script and seems to have autoconf and automake stuff in there already.</p></div>
+            <div class="comment-info" id="comment-31798-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Apr '14, 11:47)</span>
+                <a class="comment-user userinfo" href="/users/6804/yxi">YXI</a>
+                
+            </div>
+        </div>
+    
+        <a name="31809"></a>
+        <div class="comment not_top_scorer" id="comment-31809">
+            <div id="post-31809-score" class="comment-score"></div>
+            <div class="comment-text"><p>FYI: The default <code>CFLAGS</code> from a <code>./configure</code> include <code>-g -O2</code> (debug symbols plus optimization).</p>
+
+<p>Sometimes when debugging with gdb, it's useful to disable optimization: i.e., use <code>-g -O0</code> so that the code being debugged matches the source code.</p>
+
+<p>This can be done easily as follows:</p>
+
+<pre><code>CFLAGS='-g -O0' ./configure [your options]
+</code></pre>
+
+<p>Note that disabling optimization may possibly cause the code to work differently: e.g. not crash when using -O2 causes a crash.</p>
+
+<p>Also: when <code>-O2</code> is used, certain additional compile time checks are performed.</p>
+
+<p>======</p>
+
+<p>re: use of <code>autogen.sh</code></p>
+
+<p>I believe that downloading and building from the Wireshark "source tarball" does not require that <code>./autogen.sh</code> be run.</p>
+
+<p>If the Wireshark sources are downloaded from the git repository, <code>./autogen.sh</code> will need to be run before running <code>./configure</code></p>
+
+<p>As noted previously, any further source changes requiring <code>./autogen.sh</code> to be rerun will be automatically handled when doing a <code>make</code>.</p></div>
+            <div class="comment-info" id="comment-31809-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Apr '14, 16:17)</span>
+                <a class="comment-user userinfo" href="/users/22/bill-meier">Bill Meier ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31702" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31702-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="31700"></a>
+                    <div id="answer-container-31700" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31700-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31700/up/" rel="nofollow"> </a>
+<div id="post-31700-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-31700-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31700/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Generally you're not expected to debug a crash yourself - I mean it's great if you can, but I don't think it's a big deal if you don't. Just submit a new bug in <a href="https://bugs.wireshark.org/bugzilla/">bugs.wireshark.org</a>, with the info you provided above.</p>
+<p>Usually it helps to have the capture file that caused the crash, but in this case it's not a capture file - it's something wrong happening inside Wireshark during startup, when it's trying to internally register the <code>ProtoField</code>s from your Lua script. (After all the Lua scripts are loaded and executed, Wireshark internally registers the protocols and fields created by the scripts)</p>
+<p>It may well be something incorrect in your Lua script, but it still shouldn't crash. It should just generate an error and continue; preferably it should fail while loading your Lua script, before even trying to register the field(s) internally.</p>
+<p>So to help debug this you need to attach the Lua script itself to the bug ticket - or some minimal version of the script with just enough to cause the crash. Like even just the portion of the script that creates <code>ProtoField</code>s will probably be enough to figure it out - you don't need to include the dissector function or anything else really.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31700/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Apr '14, 17:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d02f20c18a7742ec73a666f1974bf6dc?s=32&amp;d=identicon&amp;r=g" alt="Hadriel's gravatar image" />
+    <p><a href="/users/4318/hadriel">Hadriel</a><br/>
+    <span class="score" title="2652 reputation points"><span class="">2.7k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="39 badges"><span class="bronze">&#9679;</span><span class="badgecount">39</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hadriel has 30 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31700">
+    
+</div>
+<div id="comment-tools-31700" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31700-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/31694/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Uw2OrbllF1oRNZ28naKTlsQFKWTtUnNm' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31694/how-to-troubleshoot-a-crash?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31694/how-to-troubleshoot-a-crash?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/lua/"
+            class="tag-link-lua"
+            title="see questions tagged'lua'using tags"
+            rel="tag">lua</a> <span class="tag-number">&#215;431</span><br/>
+        
+        <a href="/tags/crash/"
+            class="tag-link-crash"
+            title="see questions tagged'crash'using tags"
+            rel="tag">crash</a> <span class="tag-number">&#215;84</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 9, 2014, 4:37 p.m.">09 Apr '14, 16:37</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,312 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 15, 2014, 2:26 a.m.">15 Apr '14, 02:26</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/15933/lua-code-broke-after-update-to-wireshark-183">Lua code broke after update to wireshark 1.8.3</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47671/lua-script-segmentation-fault-11-in-200rc3-on-os-x">Lua script - Segmentation fault 11 in 2.0.0rc3 on OS X</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1641/crashing-after-first-installation">Crashing after first installation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6031/wireshark-is-faulting-on-windows-7">Wireshark is faulting on Windows 7</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29733/how-to-handle-exceptions-on-linux">How to handle exceptions on Linux</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45202/undefined-symbol-wslua_count_plugins">undefined symbol: wslua_count_plugins</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59718/program-crashes-when-opening-damaged-pcap-files">Program crashes when opening damaged pcap files</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4115/lua-modifying-httppost-datadata">LUA: modifying http.post data.data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5724/adding-a-listener">adding a listener?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7843/better-json-access">Better JSON access?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

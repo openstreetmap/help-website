@@ -1,0 +1,930 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Filter for detecting the third packet in a 3-way handshake - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello, I am working on putting together a training for my team on recognizing a SYN flood attack.  There are many ways to recognize one, for sure. The high volume of SYNs, sessions in SYN_SENT, etc.  What I would like to do, however, is provide three filters for use with the I/O graphs to show, with..." />
+        <meta name="keywords" content="handshake,syn" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/26174/filter-for-detecting-the-third-packet-in-a-3-way-handshake" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/26174/filter-for-detecting-the-third-packet-in-a-3-way-handshake?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='zaU9dm0pU41kCo6stMDmVmI6SdVIlq2Y' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/26174/filter-for-detecting-the-third-packet-in-a-3-way-handshake">Filter for detecting the third packet in a 3-way handshake</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-26174-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26174/up/" rel="nofollow"> </a>
+<div id="post-26174-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-26174-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26174/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/26174/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I am working on putting together a training for my team on recognizing a SYN flood attack.<br>
+</p>
+<p>There are many ways to recognize one, for sure.  The high volume of SYNs, sessions in SYN_SENT, etc. </p>
+<p>What I would like to do, however, is provide three filters for use with the I/O graphs to show, without question, that the SYN,ACK is not being honored. </p>
+<p>I have this, so far .. </p>
+<p>Filter 1: tcp.flags.syn == 1 &amp;&amp; tcp.flags.ack == 0
+Filter 2: tcp.flags.syn == 1 &amp;&amp; tcp.flags.ack == 1
+Filter 3: tcp.seq == 1 &amp;&amp; tcp.ack == 1 &amp;&amp; tcp.len == 0 &amp;&amp; !(tcp.flags.push == 1)</p>
+<p>I am pretty sure I am missing something here.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/handshake/" class="post-tag tag-link-handshake"
+                                        title="see questions tagged 'handshake'" rel="tag">handshake</a>
+                                
+                                    <a href="/tags/syn/" class="post-tag tag-link-syn"
+                                        title="see questions tagged 'syn'" rel="tag">syn</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Oct '13, 09:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ad02d2c94bb362339b32ac9e2ca8468e?s=32&amp;d=identicon&amp;r=g" alt="Qwert's gravatar image" />
+    <p><a href="/users/5893/qwert">Qwert</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Qwert has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-26174">
+    
+        <a name="26175"></a>
+        <div class="comment" id="comment-26175">
+            <div id="post-26175-score" class="comment-score"></div>
+            <div class="comment-text"><p>Looks like the formatting got lost </p>
+
+<p>Filter 1: tcp.flags.syn == 1 &amp;&amp; tcp.flags.ack == 0 </p>
+
+<p>Filter 2: tcp.flags.syn == 1 &amp;&amp; tcp.flags.ack == 1 </p>
+
+<p>Filter 3: tcp.seq == 1 &amp;&amp; tcp.ack == 1 &amp;&amp; tcp.len == 0 &amp;&amp; !(tcp.flags.push == 1)</p></div>
+            <div class="comment-info" id="comment-26175-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '13, 09:30)</span>
+                <a class="comment-user userinfo" href="/users/5893/qwert">Qwert</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-26174" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26174-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/26174/filter-for-detecting-the-third-packet-in-a-3-way-handshake?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/26174/filter-for-detecting-the-third-packet-in-a-3-way-handshake?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/26174/filter-for-detecting-the-third-packet-in-a-3-way-handshake?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/26174/filter-for-detecting-the-third-packet-in-a-3-way-handshake?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="26181"></a>
+                    <div id="answer-container-26181" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-26181-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26181/up/" rel="nofollow"> </a>
+<div id="post-26181-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-26181-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26181/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Qwert has selected this answer as the correct answer"
+        href="/accept_answer/26181/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think this should get you what you want... </p>
+<p>SYN packet from Clients: 
+    tcp[13]==02</p>
+<p>SYN_ACK packets from Server: 
+    tcp[13]==12</p>
+<p>ACK 3-way handshake: 
+    tcp.seq==1 &amp;&amp; tcp.ack==1 &amp;&amp; tcp.len==0 &amp;&amp;  tcp.window_size_scalefactor ge 0</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/26181/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Oct '13, 10:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5500bd1decb766660522dfb347eedc49?s=32&amp;d=identicon&amp;r=g" alt="mrEEde's gravatar image" />
+    <p><a href="/users/4668/mreede">mrEEde</a><br/>
+    <span class="score" title="3892 reputation points"><span class="">3.9k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="70 badges"><span class="bronze">&#9679;</span><span class="badgecount">70</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mrEEde has 48 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-26181">
+    
+        <a name="26189"></a>
+        <div class="comment" id="comment-26189">
+            <div id="post-26189-score" class="comment-score"></div>
+            <div class="comment-text"><p>That did the trick.  Thank you for the answer.</p></div>
+            <div class="comment-info" id="comment-26189-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '13, 10:32)</span>
+                <a class="comment-user userinfo" href="/users/5893/qwert">Qwert</a>
+                
+            </div>
+        </div>
+    
+        <a name="26194"></a>
+        <div class="comment" id="comment-26194">
+            <div id="post-26194-score" class="comment-score"></div>
+            <div class="comment-text"><p>Improvement on the third (assuming you're looking for a filter that shows all final acks that are part of the handshake), with the additional warning that both will fail when sequence numbers are not set to relative: </p>
+
+<p><code>tcp.seq==1 &amp;&amp; tcp.ack==1 &amp;&amp; tcp.len==0 &amp;&amp; (tcp.window_size_scalefactor ge 0 or tcp.window_size_scalefactor eq -2)</code></p>
+
+<p>Advantage is that with the filter of <a href="/users/4668/mreede"></a><a href="/users/4668/mreede">@mrEEde</a> you'd miss sessions that do not use window scaling, but have a full handshake.</p>
+
+<p>By the way, I think I'm probably too tired by now, but why did you accept the answer if you're looking for a filter to find SYN/ACKs that are not answered by a final ACK to complete the handshake? With the filter you accepted you'll find all ACKs that are completing the handshake. </p>
+
+<p>I have to admit that, as far as I can tell, there is no way to find SYN - SYN/ACK sequences that have now final ACK with Wireshark. So maybe your way is to find all connections that have a full handshake, and substract the number from the count of all SYN/ACKs you see? </p>
+
+<p>Anyway, all real SYN floods I have seen so far are pretty obvious (to put it mildly) - I'd have to be completely blind not to see the attack in 5 seconds flat, and without any filter :-)</p></div>
+            <div class="comment-info" id="comment-26194-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '13, 11:04)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26201"></a>
+        <div class="comment" id="comment-26201">
+            <div id="post-26201-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Jasper,</p>
+
+<p>Thanks for your response.  I'm still very much a packet-analysis novice, so I appreciate the comment on window scaling.  It didn't occur to me that some sessions would not use it until after you mentioned it.</p>
+
+<p>My thought is that by using a filter that will reliably capture the third packet in the 3-way, the absence of matches will provide categorical proof that the SYN.ACK is not being answered (given that there should be thousands(+) SYNs).<br>
+</p>
+
+<p>And yes .. I absolutely agree that there are plenty of indicators when a real SYN flood is occurring, and really .. these are not a problem in most large scale networks with a robust IPS implementation.<br>
+</p>
+
+<p>This is for a training doc to give the TCP-novice a clear way to determine whether a SYN flood is occurring (thus .. hopefully .. mitigating the need to reach out to an oncall at OMGam).<br>
+</p>
+
+<p>Thanks,
+Kevin</p></div>
+            <div class="comment-info" id="comment-26201-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '13, 14:59)</span>
+                <a class="comment-user userinfo" href="/users/5893/qwert">Qwert</a>
+                
+            </div>
+        </div>
+    
+        <a name="26202"></a>
+        <div class="comment" id="comment-26202">
+            <div id="post-26202-score" class="comment-score"></div>
+            <div class="comment-text"><p>Okay, as long as you got an answer that helps I'm fine with it ;-)</p>
+
+<p>Just a final comment: I agree, even robust IPS implementations do not always help. I've been involved in cases where the SYN flood was so big that it took down two upstream providers that provided the data connections to the customer. 70Gbit/s is just too much... :-)</p></div>
+            <div class="comment-info" id="comment-26202-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '13, 15:17)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-26181" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26181-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="36117"></a>
+                    <div id="answer-container-36117" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-36117-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36117/up/" rel="nofollow"> </a>
+<div id="post-36117-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-36117-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36117/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Try this (must use relative SEQ #s):</p>
+<p>(tcp.seq == 1 &amp;&amp; tcp.ack == 1&amp;&amp;tcp.len==0 &amp;&amp; !tcp.flags.fin == 1)||tcp.flags.syn==1</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/36117/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Sep '14, 11:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8919ee3cfc855dc549409d5a02c2c161?s=32&amp;d=identicon&amp;r=g" alt="akaplan's gravatar image" />
+    <p><a href="/users/9528/akaplan">akaplan</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="akaplan has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-36117">
+    
+</div>
+<div id="comment-tools-36117" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36117-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/26174/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='zaU9dm0pU41kCo6stMDmVmI6SdVIlq2Y' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/26174/filter-for-detecting-the-third-packet-in-a-3-way-handshake?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/26174/filter-for-detecting-the-third-packet-in-a-3-way-handshake?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/syn/"
+            class="tag-link-syn"
+            title="see questions tagged'syn'using tags"
+            rel="tag">syn</a> <span class="tag-number">&#215;55</span><br/>
+        
+        <a href="/tags/handshake/"
+            class="tag-link-handshake"
+            title="see questions tagged'handshake'using tags"
+            rel="tag">handshake</a> <span class="tag-number">&#215;44</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 18, 2013, 9:29 a.m.">18 Oct '13, 09:29</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>30,977 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 9, 2014, 11:09 a.m.">09 Sep '14, 11:09</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/18817/syn-is-answered-by-a-strange-ack-rst-is-ignored-windows">SYN is answered by a strange ACK, RST is ignored. Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19235/syn-synack-ack">SYN - SYN/ACK - ACK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/230/displaying-all-tcp-connections-with-syn-packets">Displaying all TCP connections with SYN packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19511/only-syn-packetsoutgoing-captures">Only SYN packets(outgoing) captures</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38470/syn-packets-missing">SYN Packets Missing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58184/syn-and-then-rstack">syn and then rst&amp;ack</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24017/no-ack-after-synack">No ACK after SYN/ACK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45028/capturing-tcp-handshake-but-no-data-traffic">Capturing TCP handshake but no data traffic</a>
+        </p>
+        
+        <p>
+            <a href="/questions/378/using-wireshark-to-determine-port-usage">Using Wireshark to determine port usage</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23756/initial-syn-handshake">Initial SYN handshake</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

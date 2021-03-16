@@ -1,0 +1,1193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TLSV1 &quot;Ignored Unknown Record&quot; - Wireshark Q&amp;A</title>
+        <meta name="description" content="A wireshark trace of a TLS mailflow has packets with &quot;Ignored Unknown Record&quot; and I can&#39;t seem to find a solution to display them.  Allow Subdissector to Reassemble TCP Streams as suggested by Laura&#39;s is already checked.  http://ask.wireshark.org/questions/703/ssl-and-tls-ignored-unknown-record  Wha..." />
+        <meta name="keywords" content="tls,ignored,record,smtp,unknown" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/27773/tlsv1-ignored-unknown-record" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/27773/tlsv1-ignored-unknown-record?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='yPTPXvMQHYx5zNnW7txGeyeuT1MwF42t' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/27773/tlsv1-ignored-unknown-record">TLSV1 &quot;Ignored Unknown Record&quot;</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-27773-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27773/up/" rel="nofollow"> </a>
+<div id="post-27773-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-27773-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27773/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/27773/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>A wireshark trace of a TLS mailflow has packets with "Ignored Unknown Record" and I can't seem to find a solution to display them. </p>
+<p>Allow Subdissector to Reassemble TCP Streams as suggested by Laura's is already checked.</p>
+<blockquote>
+<p><a href="http://ask.wireshark.org/questions/703/ssl-and-tls-ignored-unknown-record">http://ask.wireshark.org/questions/703/ssl-and-tls-ignored-unknown-record</a></p>
+</blockquote>
+<p>What else may cause Ignored Unknown Record ?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tls/" class="post-tag tag-link-tls"
+                                        title="see questions tagged 'tls'" rel="tag">tls</a>
+                                
+                                    <a href="/tags/ignored/" class="post-tag tag-link-ignored"
+                                        title="see questions tagged 'ignored'" rel="tag">ignored</a>
+                                
+                                    <a href="/tags/record/" class="post-tag tag-link-record"
+                                        title="see questions tagged 'record'" rel="tag">record</a>
+                                
+                                    <a href="/tags/smtp/" class="post-tag tag-link-smtp"
+                                        title="see questions tagged 'smtp'" rel="tag">smtp</a>
+                                
+                                    <a href="/tags/unknown/" class="post-tag tag-link-unknown"
+                                        title="see questions tagged 'unknown'" rel="tag">unknown</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>04 Dec '13, 11:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bcfdf26904f3a8a9fb69c7ca0dc5e7b1?s=32&amp;d=identicon&amp;r=g" alt="net_tech's gravatar image" />
+    <p><a href="/users/249/net_tech">net_tech</a><br/>
+    <span class="score" title="116 reputation points">116</span><span title="30 badges"><span class="badge1">&#9679;</span><span class="badgecount">30</span></span><span title="33 badges"><span class="silver">&#9679;</span><span class="badgecount">33</span></span><span title="37 badges"><span class="bronze">&#9679;</span><span class="badgecount">37</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="net_tech has 2 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-27773">
+    
+</div>
+<div id="comment-tools-27773" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27773-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/27773/tlsv1-ignored-unknown-record?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/27773/tlsv1-ignored-unknown-record?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/27773/tlsv1-ignored-unknown-record?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/27773/tlsv1-ignored-unknown-record?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="27796"></a>
+                    <div id="answer-container-27796" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27796-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27796/up/" rel="nofollow"> </a>
+<div id="post-27796-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-27796-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27796/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You probably have a SMTP handshake happening before the TLS negotiation.
+See <a href="http://en.wikipedia.org/wiki/SMTP_Authentication">http://en.wikipedia.org/wiki/SMTP_Authentication</a> 
+. So, if you do the "Decode as SSL" on all packets wireshark will treat those as unknown TLS.  <br>
+</p>
+<pre><code>&gt; S: 220 smtp.example.com ESMTP Server  
+&gt; C: EHLO client.example.com   S:
+&gt; 250-smtp.example.com Hello
+&gt; client.example.com   S: 250-AUTH
+&gt; GSSAPI DIGEST-MD5   S:
+&gt; 250-ENHANCEDSTATUSCODES   S: 250
+&gt; STARTTLS   C: STARTTLS   S: 220 Ready
+&gt; to start TLS
+&gt;     ... TLS negotiation proceeds. 
+&gt;      Further commands protected by TLS layer ...   C: EHLO client.example.com
+&gt; S: 250-smtp.example.com Hello
+&gt; client.example.com   S: 250 AUTH
+&gt; GSSAPI DIGEST-MD5 PLAIN   C: AUTH
+&gt; PLAIN dGVzdAB0ZXN0ADEyMzQ=   S: 235
+&gt; 2.7.0 Authentication successful
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27796/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Dec '13, 21:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5500bd1decb766660522dfb347eedc49?s=32&amp;d=identicon&amp;r=g" alt="mrEEde's gravatar image" />
+    <p><a href="/users/4668/mreede">mrEEde</a><br/>
+    <span class="score" title="3892 reputation points"><span class="">3.9k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="70 badges"><span class="bronze">&#9679;</span><span class="badgecount">70</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mrEEde has 48 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27796">
+    
+        <a name="27800"></a>
+        <div class="comment" id="comment-27800">
+            <div id="post-27800-score" class="comment-score"></div>
+            <div class="comment-text"><p>Good idea!</p></div>
+            <div class="comment-info" id="comment-27800-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '13, 02:17)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="27803"></a>
+        <div class="comment" id="comment-27803">
+            <div id="post-27803-score" class="comment-score"></div>
+            <div class="comment-text"><p>while you are right regarding the "Decode as" part (Wireshark indeed shows the SMTP traffic as "Ignored Unknown Record", it is <strong>not necessary</strong> to run "Decode as", because Wireshark detects the STARTTLS command and shows the following frames as TLS.</p>
+
+<p>So I wonder why the OP should have done "Decode as" !?! Let's see if <a href="/users/249/net_tech"></a><a href="/users/249/net_tech">@net_tech</a> ever responds to this....</p></div>
+            <div class="comment-info" id="comment-27803-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '13, 04:26)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-27796" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27796-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="27785"></a>
+                    <div id="answer-container-27785" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27785-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27785/up/" rel="nofollow"> </a>
+<div id="post-27785-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-27785-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27785/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>What else may cause Ignored Unknown Record ?</p>
+</blockquote>
+<p>Maybe your mail server (deducted from the phrase 'mailflow') uses a TLS record type that is unknown to Wireshark (in general, or the version you are using).</p>
+<p>From the code: packet-ssl.c
+</p><pre>       /<em> TLS 1.0/1.1 just ignores unknown records - RFC 2246 chapter 6. The TLS Record Protocol </em>/
+        if ((<em>conv_version==SSL_VER_TLS || </em>conv_version==SSL_VER_TLSv1DOT1 || *conv_version==SSL_VER_TLSv1DOT2) &amp;&amp;
+            (available_bytes &gt;=1 ) &amp;&amp; <b>!ssl_is_valid_content_type</b>(tvb_get_guint8(tvb, offset))) {
+            <b>proto_tree_add_text(tree, tvb, offset, available_bytes, "Ignored Unknown Record");</b><p></p>
+</pre>
+
+<p>Then from RFC2246 chapter 6</p>
+<pre>   Any new record types should
+   allocate type values immediately beyond the ContentType values for
+   the four record types described here (see Appendix A.2). <b>If a TLS
+   implementation receives a record type it does not understand, it
+   should just ignore it.</b>
+</pre>
+
+<p>Then from packet-ssl-utils.c</p>
+<pre><code>int
+ssl_is_valid_content_type(guint8 type)
+{
+    if ((type &gt;= 0x14) &amp;&amp; (type &lt;= 0x18))
+    {
+        return 1;
+    }
+
+    return 0;
+</code></pre>
+<p>So, Wireshark will only be able to 'understand' types between 0x14 and 0x18. What do you see in your capture file?</p>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27785/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Dec '13, 14:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/27785/">
+                edited
+                <strong>04 Dec '13, 15:04</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27785">
+    
+        <a name="27809"></a>
+        <div class="comment" id="comment-27809">
+            <div id="post-27809-score" class="comment-score"></div>
+            <div class="comment-text"><p>Got a little problem here.  As I was working with the trace, instead of saving the file I exported it as text from Wireshark 1.4 and could not import it back.  I can open the exported file in 1.10, but I think some of the metadata was lost during the export. To make the problem worse, the issue was corrected at the receiver’s end and I can’t recapture questionable traffic. </p>
+
+<p>I did however find several references to TLS &amp; encryption issues caused by watchguard firebox firewall, which is exactly what is used at the other side of the wire </p>
+
+<p><a href="https://support.google.com/postini/answer/138468?hl=en">https://support.google.com/postini/answer/138468?hl=en</a></p></div>
+            <div class="comment-info" id="comment-27809-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '13, 06:05)</span>
+                <a class="comment-user userinfo" href="/users/249/net_tech">net_tech</a>
+                
+            </div>
+        </div>
+    
+        <a name="27812"></a>
+        <div class="comment" id="comment-27812">
+            <div id="post-27812-score" class="comment-score"></div>
+            <div class="comment-text"><p>Upgraded to Wireshark 1.10.3 but I still see "Ignored Unknown Records" in other SMTP connections.</p>
+
+<p>If I do "Decode as SSL" or simply "Follow SSL Stream" as mrEEde suggested I get decrypted SMTP communication. (private key is added to SSL protocol)</p></div>
+            <div class="comment-info" id="comment-27812-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '13, 06:32)</span>
+                <a class="comment-user userinfo" href="/users/249/net_tech">net_tech</a>
+                
+            </div>
+        </div>
+    
+        <a name="27813"></a>
+        <div class="comment" id="comment-27813">
+            <div id="post-27813-score" class="comment-score"></div>
+            <div class="comment-text"><p>Kurt,</p>
+
+<p>is content type stored in tcp.flags field ?</p></div>
+            <div class="comment-info" id="comment-27813-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '13, 06:39)</span>
+                <a class="comment-user userinfo" href="/users/249/net_tech">net_tech</a>
+                
+            </div>
+        </div>
+    
+        <a name="27814"></a>
+        <div class="comment not_top_scorer" id="comment-27814">
+            <div id="post-27814-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Upgraded to Wireshark 1.10.3 but I still see "Ignored Unknown Records" in other SMTP connections.</p>
+</blockquote>
+
+<p>can you post a sample capture (without key) on google drive, dropbox, cloudshark.org or mega.co.nz?</p>
+
+<blockquote>
+<p>is content type stored in tcp.flags field ?</p>
+</blockquote>
+
+<p>no, in ssl.record.content_type</p></div>
+            <div class="comment-info" id="comment-27814-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '13, 06:55)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="27815"></a>
+        <div class="comment not_top_scorer" id="comment-27815">
+            <div id="post-27815-score" class="comment-score"></div>
+            <div class="comment-text"><p>can't post a capture, but can share a screenshot</p>
+
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/jpg2.JPG"></p></div>
+            <div class="comment-info" id="comment-27815-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '13, 07:05)</span>
+                <a class="comment-user userinfo" href="/users/249/net_tech">net_tech</a>
+                
+            </div>
+        </div>
+    
+        <a name="27816"></a>
+        <div class="comment not_top_scorer" id="comment-27816">
+            <div id="post-27816-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think I figured it out. the packet shown below becomes "Ignored Unknown Records" when private key is added to the SSL protocol</p>
+
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/pack.JPG"></p></div>
+            <div class="comment-info" id="comment-27816-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '13, 07:20)</span>
+                <a class="comment-user userinfo" href="/users/249/net_tech">net_tech</a>
+                
+            </div>
+        </div>
+    
+        <a name="27817"></a>
+        <div class="comment not_top_scorer" id="comment-27817">
+            <div id="post-27817-score" class="comment-score"></div>
+            <div class="comment-text"><p>well, is that with or without "Decode as ..." ? Please check</p>
+
+<blockquote>
+<p>Analyze -&gt; Decode as -&gt; Show current</p>
+</blockquote>
+
+<p>If there is any entry for port 25, delete it and test again.</p></div>
+            <div class="comment-info" id="comment-27817-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '13, 07:37)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="27819"></a>
+        <div class="comment not_top_scorer" id="comment-27819">
+            <div id="post-27819-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not sure if I explained what happens clear enough.
+If I go to Edit -&gt; Preferences -&gt; Protocols -&gt; SSL  and remove my private key from the RSA key list, frame 5578 is displayed as shown below.</p>
+
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/smtp.JPG"></p>
+
+<p>If I go back and add the private key and specify IP, TCP port and protocol, the same frame changes it’s display to the Ignored Unknown Record. </p>
+
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/ign.JPG"></p></div>
+            <div class="comment-info" id="comment-27819-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '13, 08:08)</span>
+                <a class="comment-user userinfo" href="/users/249/net_tech">net_tech</a>
+                
+            </div>
+        </div>
+    
+        <a name="27821"></a>
+        <div class="comment not_top_scorer" id="comment-27821">
+            <div id="post-27821-score" class="comment-score"></div>
+            <div class="comment-text"><p>ah, so you <strong>only</strong> see that message when you are decrypting the TLS data in the SMTP connection? There is no "Decode as" configured, right?</p></div>
+            <div class="comment-info" id="comment-27821-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '13, 08:14)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="27822"></a>
+        <div class="comment not_top_scorer" id="comment-27822">
+            <div id="post-27822-score" class="comment-score"></div>
+            <div class="comment-text"><p>correct, no "Decode as" configured</p></div>
+            <div class="comment-info" id="comment-27822-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '13, 08:20)</span>
+                <a class="comment-user userinfo" href="/users/249/net_tech">net_tech</a>
+                
+            </div>
+        </div>
+    
+        <a name="27824"></a>
+        <div class="comment" id="comment-27824">
+            <div id="post-27824-score" class="comment-score">1</div>
+            <div class="comment-text"><p>O.K. could be a 'bug' with the TLS (SMTP) decryption routine, as Frame #5578 is dissected as SMTP traffic 'before' you decrypt it.</p></div>
+            <div class="comment-info" id="comment-27824-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '13, 08:29)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="27832"></a>
+        <div class="comment" id="comment-27832">
+            <div id="post-27832-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I can confirm the behavior <a href="/users/249/net_tech"></a><a href="/users/249/net_tech">@net_tech</a> found. As soon as a key is used to decrypt 'STARTTLS traffic' the former SMTP frames will be shown as "Ignored Unknown Record". Looks like a bug. Not sure if that is easy to fix....</p>
+
+<p><a href="/users/249/net_tech"></a><a href="/users/249/net_tech">@net_tech</a>: please file a bug report at <a href="https://bugs.wireshark.org">https://bugs.wireshark.org</a></p>
+
+<p>Hint: If a supplied answer resolves your question can you please "accept" it by clicking the checkmark icon next to it. This highlights good answers for the benefit of subsequent users with the same or similar questions.</p></div>
+            <div class="comment-info" id="comment-27832-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '13, 09:38)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="27837"></a>
+        <div class="comment not_top_scorer" id="comment-27837">
+            <div id="post-27837-score" class="comment-score"></div>
+            <div class="comment-text"><p>submitted as bug # 9515</p></div>
+            <div class="comment-info" id="comment-27837-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '13, 10:37)</span>
+                <a class="comment-user userinfo" href="/users/249/net_tech">net_tech</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-27785" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 13
+        </span>
+        <a href="#" class="show-all-comments-link">show 8 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27785-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/27773/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='yPTPXvMQHYx5zNnW7txGeyeuT1MwF42t' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/27773/tlsv1-ignored-unknown-record?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/27773/tlsv1-ignored-unknown-record?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tls/"
+            class="tag-link-tls"
+            title="see questions tagged'tls'using tags"
+            rel="tag">tls</a> <span class="tag-number">&#215;75</span><br/>
+        
+        <a href="/tags/unknown/"
+            class="tag-link-unknown"
+            title="see questions tagged'unknown'using tags"
+            rel="tag">unknown</a> <span class="tag-number">&#215;29</span><br/>
+        
+        <a href="/tags/smtp/"
+            class="tag-link-smtp"
+            title="see questions tagged'smtp'using tags"
+            rel="tag">smtp</a> <span class="tag-number">&#215;25</span><br/>
+        
+        <a href="/tags/ignored/"
+            class="tag-link-ignored"
+            title="see questions tagged'ignored'using tags"
+            rel="tag">ignored</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/record/"
+            class="tag-link-record"
+            title="see questions tagged'record'using tags"
+            rel="tag">record</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 4, 2013, 11:54 a.m.">04 Dec '13, 11:54</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>62,553 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 5, 2013, 10:37 a.m.">05 Dec '13, 10:37</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/57641/tls12-record-length-gt-16k-valid">TLS1.2  record length gt 16K  valid?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1080/all-protocols-unknown">All Protocols Unknown</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38111/unknown-command-ripv2">Unknown command Ripv2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23854/computer-sending-emails-via-phishing-program">Computer sending emails via phishing program.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60335/wireshark-tshark-230-export-imf-object-error-a-bug">wireshark (tshark) 2.3.0 export imf object error, a bug?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32292/ssltls-decrypt-doesnt-work-if-capture-started-mid-session">SSL/TLS decrypt doesn&#39;t work if capture started mid-session</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44409/sslv2-client-hello-alert-level-fatal-description-handshake-failure">SSLv2 Client Hello - Alert (Level: Fatal, Description: Handshake Failure)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50584/not-decrypting-all-http2-traffic-in-session">Not Decrypting all HTTP/2 traffic in session.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57384/tls-finished-packet-renamed-encrypted-handshake-message">TLS finished packet renamed Encrypted handshake message?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1501/packet-with-unknown-ethernet-type-0x4d45">Packet with unknown Ethernet type 0x4d45</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

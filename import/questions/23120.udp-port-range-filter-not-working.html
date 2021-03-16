@@ -1,0 +1,1335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>UDP port range filter not working - Wireshark Q&amp;A</title>
+        <meta name="description" content="I am trying to filter the traffic by udp port and find out that range filter is not working. For example, I have two filters. Filter 1: udp.port == 48777 Filter 2: (udp.port &amp;gt; 48776) and (udp.port &amp;lt; 48778) In my point of view, these two filters should give be same results. But in fact filter 2..." />
+        <meta name="keywords" content="port,range,udp,wireshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/23120/udp-port-range-filter-not-working" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/23120/udp-port-range-filter-not-working?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='17vZJnEYOPMl0tfD16WwFO9Yg6zQcmMn' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/23120/udp-port-range-filter-not-working">UDP port range filter not working</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-23120-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23120/up/" rel="nofollow"> </a>
+<div id="post-23120-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-23120-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23120/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/23120/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am trying to filter the traffic by udp port and find out that range filter is not working.</p>
+<p>For example, I have two filters.</p>
+<p>Filter 1: <code>udp.port == 48777</code></p>
+<p>Filter 2: <code>(udp.port &gt; 48776) and (udp.port &lt; 48778)</code></p>
+<p>In my point of view, these two filters should give be same results. But in fact filter 2 will give me all udp traffic, regardless of port number. If I just need a small range of ports, I can use equal to do the same job. But it becomes impossible if I am trying to look at a large range of ports.</p>
+<p>Any ideas?</p>
+<p>========</p>
+<p>update</p>
+<p>I changed the filter into the following and still getting different results. I think both of them should give me udp traffic with source port 48777 only.</p>
+<p>Filter 1: <code>udp.srcport == 48777</code></p>
+<p>Filter 2: <code>(udp.srcport &gt; 48776) and (udp.srcport &lt; 48778)</code></p>
+<p>========</p>
+<p>update (7/19/2013)</p>
+<p>Part of capture is uploaded at here(<a href="http://www.cloudshark.org/captures/d9353f10683c)">http://www.cloudshark.org/captures/d9353f10683c)</a></p>
+<p>The problem is there are two UDP headers in the capture. Thus there are two source ports to be considered while filtered. Thanks <a href="/users/402/cmaynard"><a href="/users/402/cmaynard">@cmaynard</a></a>.</p>
+<p>Now the question is, how to just filter the UDP header inside GTP and disregard the port of UDP header beyond GTP? </p>
+<p>UDP inside GTP is GTP-U and this is the one I am looking into. The other one is for GTP-C and I don't really care about it.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/port/" class="post-tag tag-link-port"
+                                        title="see questions tagged 'port'" rel="tag">port</a>
+                                
+                                    <a href="/tags/range/" class="post-tag tag-link-range"
+                                        title="see questions tagged 'range'" rel="tag">range</a>
+                                
+                                    <a href="/tags/udp/" class="post-tag tag-link-udp"
+                                        title="see questions tagged 'udp'" rel="tag">udp</a>
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Jul '13, 15:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ba45e73e0de9fab6575a7042757e345d?s=32&amp;d=identicon&amp;r=g" alt="Jay%20Tang's gravatar image" />
+    <p><a href="/users/5312/jay-tang">Jay Tang</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jay Tang has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/23120/">
+                edited
+                <strong>19 Jul '13, 09:29</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-23120">
+    
+</div>
+<div id="comment-tools-23120" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23120-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/23120/udp-port-range-filter-not-working?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/23120/udp-port-range-filter-not-working?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/23120/udp-port-range-filter-not-working?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/23120/udp-port-range-filter-not-working?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="23132"></a>
+                    <div id="answer-container-23132" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23132-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23132/up/" rel="nofollow"> </a>
+<div id="post-23132-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-23132-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23132/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Jay Tang has selected this answer as the correct answer"
+        href="/accept_answer/23132/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The problem here is that you have 2 UDP headers, and thus 2 UDP source ports to consider.  Take frame 82, for example:</p>
+<pre><code>Frame 82: 140 bytes on wire (1120 bits), 140 bytes captured (1120 bits)
+Ethernet II, Src: Cisco-Li_8c:cf:7a (00:16:b6:8c:cf:7a), Dst: Azurewav_ce:5d:f9 (00:25:d3:ce:5d:f9)
+Internet Protocol Version 4, Src: 212.129.65.81 (212.129.65.81), Dst: 212.129.65.23 (212.129.65.23)
+User Datagram Protocol, Src Port: gtp-user (2152), Dst Port: gtp-user (2152)
+GPRS Tunneling Protocol
+T-PDU Data 86 bytes
+Internet Protocol Version 4, Src: 70.48.208.171 (70.48.208.171), Dst: 192.168.111.20 (192.168.111.20)
+User Datagram Protocol, Src Port: 59008 (59008), Dst Port: 63529 (63529)
+Data (58 bytes)
+</code></pre>
+<p>When you apply a display filter of <code>udp.srcport == 48777</code>, Wireshark is looking for an exact match on any UDP source port field matching that filter.  Since neither the first UDP source port occurrence of 2152 nor the second UDP source port occurrence of 59008 matches that filter, this frame is not displayed.</p>
+<p>Now let's consider what happens when you apply the next filter, <code>(udp.srcport &gt; 48776) and (udp.srcport &lt; 48778)</code>:  Wireshark determines that the second UDP source port of 59008 satisfies the first constraint and the first UDP source port of 2152 satisfies the second constraint, so this frame is determined to match the filter and is displayed.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23132/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Jul '13, 20:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" alt="cmaynard's gravatar image" />
+    <p><a href="/users/402/cmaynard">cmaynard ♦♦</a><br/>
+    <span class="score" title="9361 reputation points"><span class="">9.4k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">&#9679;</span><span class="badgecount">142</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cmaynard has 108 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/23132/">
+                edited
+                <strong>18 Jul '13, 20:58</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23132">
+    
+        <a name="23133"></a>
+        <div class="comment" id="comment-23133">
+            <div id="post-23133-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the answer. Now I am using (udp.srcport &gt; 48776) and (udp.srcport &lt; 48778) and (udp.srcport != 2152) but it cannot filter out the gtp port.</p></div>
+            <div class="comment-info" id="comment-23133-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 21:21)</span>
+                <a class="comment-user userinfo" href="/users/5312/jay-tang">Jay Tang</a>
+                
+            </div>
+        </div>
+    
+        <a name="23134"></a>
+        <div class="comment" id="comment-23134">
+            <div id="post-23134-score" class="comment-score"></div>
+            <div class="comment-text"><p>Again, you have 2 UDP source ports to contend with.  The second occurrence is UDP source port 59008, which is not equal to 2152.</p></div>
+            <div class="comment-info" id="comment-23134-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 21:38)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23135"></a>
+        <div class="comment" id="comment-23135">
+            <div id="post-23135-score" class="comment-score"></div>
+            <div class="comment-text"><p>By the way, what exactly are you trying to accomplish by all of this?  i.e., which packets are you really trying to find?</p></div>
+            <div class="comment-info" id="comment-23135-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 21:47)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23136"></a>
+        <div class="comment" id="comment-23136">
+            <div id="post-23136-score" class="comment-score"></div>
+            <div class="comment-text"><p>Also, you probably noticed that the filter you tried caused the background to display in yellow.  Maybe what you wanted was <code>(udp.srcport &gt; 48776) and (udp.srcport &lt; 48778) and !(udp.srcport == 2152)</code>?</p></div>
+            <div class="comment-info" id="comment-23136-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 21:50)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23153"></a>
+        <div class="comment not_top_scorer" id="comment-23153">
+            <div id="post-23153-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am trying to filter the udp srcport inside GTP. I don't really care about one beyond GTP.</p></div>
+            <div class="comment-info" id="comment-23153-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 08:01)</span>
+                <a class="comment-user userinfo" href="/users/5312/jay-tang">Jay Tang</a>
+                
+            </div>
+        </div>
+    
+        <a name="23156"></a>
+        <div class="comment not_top_scorer" id="comment-23156">
+            <div id="post-23156-score" class="comment-score"></div>
+            <div class="comment-text"><p>For example I want to see peer-to-peer traffic so I filter udp srcport from 49152 to 65535. But with another UDP srcport 2152, which is for GTP control panel, I will get all UDP traffic if I just do  (udp.srcport &gt; 49152) and (udp.srcport &lt; 65535).</p></div>
+            <div class="comment-info" id="comment-23156-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 08:14)</span>
+                <a class="comment-user userinfo" href="/users/5312/jay-tang">Jay Tang</a>
+                
+            </div>
+        </div>
+    
+        <a name="23158"></a>
+        <div class="comment not_top_scorer" id="comment-23158">
+            <div id="post-23158-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, then <em>maybe</em> this filter will do the trick for you?</p>
+
+<pre><code>udp and !(udp.srcport eq 2152) and !(udp.dstport eq 2152)
+</code></pre></div>
+            <div class="comment-info" id="comment-23158-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 08:25)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23160"></a>
+        <div class="comment not_top_scorer" id="comment-23160">
+            <div id="post-23160-score" class="comment-score"></div>
+            <div class="comment-text"><p>Or you could dispense with udp port matching altogether if you use another filter, which is really what you're after.  For example, if I apply this next filter to the same trace file you provided, the same 2 packets are shown:</p>
+
+<pre><code>(gtp.message == 0x10) || (gtp.message == 0x11)
+</code></pre>
+
+<p>So this is why I was asking what you really wanted to find.</p></div>
+            <div class="comment-info" id="comment-23160-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 08:37)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23162"></a>
+        <div class="comment not_top_scorer" id="comment-23162">
+            <div id="post-23162-score" class="comment-score"></div>
+            <div class="comment-text"><p>I tried</p>
+
+<p>(udp.srcport &gt; 48776) and (udp.srcport &lt; 48778) and !(udp.srcport eq 2152) </p>
+
+<p>and there is no match for this filter. Looks like no packet with udp source port 2152 can get through this filter...</p></div>
+            <div class="comment-info" id="comment-23162-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 08:47)</span>
+                <a class="comment-user userinfo" href="/users/5312/jay-tang">Jay Tang</a>
+                
+            </div>
+        </div>
+    
+        <a name="23163"></a>
+        <div class="comment not_top_scorer" id="comment-23163">
+            <div id="post-23163-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hmm, when you say you want to see peer-to-peer traffic, are you referring to the bittorrent traffic?  If so, you could just use a display filter of:</p>
+
+<pre><code>bittorrent
+</code></pre>
+
+<p>Applying it yields 47 frames of the 9999 in your test.pcap capture file.</p></div>
+            <div class="comment-info" id="comment-23163-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 08:54)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23164"></a>
+        <div class="comment not_top_scorer" id="comment-23164">
+            <div id="post-23164-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well I just take peer-to-peer as an example. I also need to look into other kind of traffic, and I will need different port ranges. But all of the traffic I am looking into is encapsulated by GTP so there will always be two udp headers.</p></div>
+            <div class="comment-info" id="comment-23164-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 09:01)</span>
+                <a class="comment-user userinfo" href="/users/5312/jay-tang">Jay Tang</a>
+                
+            </div>
+        </div>
+    
+        <a name="23165"></a>
+        <div class="comment" id="comment-23165">
+            <div id="post-23165-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Well, maybe you would be better off stripping off the outer headers so you can avoid dealing with multiple UDP headers?  To do this, you can use <a href="http://www.wireshark.org/docs/man-pages/editcap.html">editcap</a>, something like:</p>
+
+<pre><code>editcap -T user0 -F libpcap -C 42 in.pcap out.pcap
+</code></pre>
+
+<p>(Note: 42 is the number of bytes to remove from the beginning of each frame and comprises 14 bytes for the Ethernet header + 20 bytes for the outer IP header + 8 bytes for the outer UDP header.)</p>
+
+<p>When you launch Wireshark, your packets won't be dissected correctly (yet), but you should notice an indication in the packet details pane, <em>"User encapsulation not handled: DLT=147, check your Preferences-&gt;Protocols-&gt;DLT_USER"</em> (assuming of course that you don't already have a protocol assigned to this DLT).  Now you need to assign DLT 147 to gtp via: <code>Edit -&gt; Preferences -&gt; Protocols -&gt; DLT_USER -&gt; Encapsulations Table: Edit -&gt; New -&gt; DLT: User 0 (DLT=147) -&gt; Payload protocol: gtp -&gt; OK -&gt; OK -&gt; OK</code></p>
+
+<p>At this point, all the UDP filters should be easier to work with because you will only have a single UDP header now. </p></div>
+            <div class="comment-info" id="comment-23165-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 09:47)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23132" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 12
+        </span>
+        <a href="#" class="show-all-comments-link">show 7 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23132-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="23121"></a>
+                    <div id="answer-container-23121" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23121-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23121/up/" rel="nofollow"> </a>
+<div id="post-23121-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-23121-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23121/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You encountered a pretty common misunderstanding :)
+Filter 1 requires to have UDP source port OR UDP destination port within a single packet to match exaclty port number 48777.</p>
+<p>Filter 2 states that you must have ONE UDP port greater than 48776 AND ONE UDP port smaller than 48778 which is independent of being source and/or destination port -&gt; so UDP Port 22 to UDP Port 50000 will match filter 2 since you match each condition, one with udp.srcport and the other with udp.dstport</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23121/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Jul '13, 15:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/36b41326bff63eb5ad73a0436914e05c?s=32&amp;d=identicon&amp;r=g" alt="Landi's gravatar image" />
+    <p><a href="/users/146/landi">Landi</a><br/>
+    <span class="score" title="2269 reputation points"><span class="">2.3k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="14 badges"><span class="silver">&#9679;</span><span class="badgecount">14</span></span><span title="42 badges"><span class="bronze">&#9679;</span><span class="badgecount">42</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Landi has 28 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23121">
+    
+        <a name="23123"></a>
+        <div class="comment" id="comment-23123">
+            <div id="post-23123-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the answer.</p>
+
+<p>Let's put it this way.</p>
+
+<p>Filter 1: udp.srcport == 48777</p>
+
+<p>Filter 2: (udp.srcport &gt; 48776) and (udp.srcport &lt; 48778)</p>
+
+<p>And I am still getting different results. So how should I write the filter that it can give me udp traffic with certain source or destination range?</p></div>
+            <div class="comment-info" id="comment-23123-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 15:34)</span>
+                <a class="comment-user userinfo" href="/users/5312/jay-tang">Jay Tang</a>
+                
+            </div>
+        </div>
+    
+        <a name="23124"></a>
+        <div class="comment" id="comment-23124">
+            <div id="post-23124-score" class="comment-score"></div>
+            <div class="comment-text"><p>Then you have to specify the ranges for source AND destination port
+e.g. 
+(udp.srcport &gt; 48776 and udp.srcport &lt; 48778) or (udp.dstport &gt; 48776 and udp.dstport &lt; 48778)</p>
+
+<p>meaning that either udp source or destination port will match your desired range</p>
+
+<p>BTW: Your recent commented filters should do exactly the same regarding source port only filtering</p></div>
+            <div class="comment-info" id="comment-23124-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 15:47)</span>
+                <a class="comment-user userinfo" href="/users/146/landi">Landi</a>
+                
+            </div>
+        </div>
+    
+        <a name="23125"></a>
+        <div class="comment" id="comment-23125">
+            <div id="post-23125-score" class="comment-score"></div>
+            <div class="comment-text"><p>But the interesting thing is this filter, (udp.srcport &gt; 48776) and (udp.srcport &lt; 48778), is not doing its job...</p>
+
+<p>I am using the latest wireshark 1.10.0 so I don't know what is wrong here. People are filtering port ranges everyday so there should not be a bug here.</p>
+
+<p>Actually what I need to do is using tshark to generate the filtered stats. I found it not right so then tried to verify it in wireshark.</p></div>
+            <div class="comment-info" id="comment-23125-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 16:00)</span>
+                <a class="comment-user userinfo" href="/users/5312/jay-tang">Jay Tang</a>
+                
+            </div>
+        </div>
+    
+        <a name="23126"></a>
+        <div class="comment" id="comment-23126">
+            <div id="post-23126-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well that's strange - could you upload the trace (or parts of it) to www.cloudshark.org so that we can verify if maybe this is a local problem with your installation and do some more troubleshooting?</p></div>
+            <div class="comment-info" id="comment-23126-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 16:12)</span>
+                <a class="comment-user userinfo" href="/users/146/landi">Landi</a>
+                
+            </div>
+        </div>
+    
+        <a name="23130"></a>
+        <div class="comment" id="comment-23130">
+            <div id="post-23130-score" class="comment-score"></div>
+            <div class="comment-text"><p>Why the link will be considered as spam? OK, just the capture ID: d9353f10683c</p>
+
+<p>Its basically BitTorrent traffic encapsulated by GTP. So it will look like cellular traffic.</p></div>
+            <div class="comment-info" id="comment-23130-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 17:42)</span>
+                <a class="comment-user userinfo" href="/users/5312/jay-tang">Jay Tang</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23121" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23121-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="23122"></a>
+                    <div id="answer-container-23122" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23122-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23122/up/" rel="nofollow"> </a>
+<div id="post-23122-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-23122-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23122/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The problem is that each UDP packet has two port numbers, source and destination. Your filter checks if any of both is greater than 48776 and less than 48778 - but unless both are 48777 it will always allow the packet through. </p>
+<p>What you need to do is to specify whether you mean source or destination port (e.g. "(udp.srcport &gt; 48776) and (udp.srcport &lt; 48778)". </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23122/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Jul '13, 15:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/23122/">
+                edited
+                <strong>18 Jul '13, 15:29</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23122">
+    
+        <a name="23131"></a>
+        <div class="comment" id="comment-23131">
+            <div id="post-23131-score" class="comment-score"></div>
+            <div class="comment-text"><p><em>Why the link will be considered as spam?</em></p>
+
+<p>That in itself is a good question to ask.  It should work.</p>
+
+<p>Anyway, here's the link: <a href="http://cloudshark.org/captures/d9353f10683c">http://cloudshark.org/captures/d9353f10683c</a></p></div>
+            <div class="comment-info" id="comment-23131-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 20:37)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23122" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23122-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/23120/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='17vZJnEYOPMl0tfD16WwFO9Yg6zQcmMn' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23120/udp-port-range-filter-not-working?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23120/udp-port-range-filter-not-working?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+        <a href="/tags/udp/"
+            class="tag-link-udp"
+            title="see questions tagged'udp'using tags"
+            rel="tag">udp</a> <span class="tag-number">&#215;166</span><br/>
+        
+        <a href="/tags/port/"
+            class="tag-link-port"
+            title="see questions tagged'port'using tags"
+            rel="tag">port</a> <span class="tag-number">&#215;69</span><br/>
+        
+        <a href="/tags/range/"
+            class="tag-link-range"
+            title="see questions tagged'range'using tags"
+            rel="tag">range</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 18, 2013, 3:22 p.m.">18 Jul '13, 15:22</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>43,033 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 19, 2013, 9:47 a.m.">19 Jul '13, 09:47</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/42569/receiving-udp-packets-on-blocked-port">Receiving udp packets on blocked port</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10823/program-running-on-some-machine-and-some-not-wireshark-report">program running on some machine and some not wireshark report</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2859/port-mirroring-with-wireshark">port mirroring with wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14373/bad-packets-udp-port-incrementing-network-canon-printer">Bad packets - UDP port incrementing - Network Canon printer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23981/how-to-export-a-global-data-structure-defined-in-epandissectorspacket-radius-to-make-it-accessible-in-uigtk">How to export a global data structure defined in epan/dissectors/packet-radius to make it accessible in ui/gtk?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26732/incoming-udp-only-works-while-capturing-packages-with-wireshark">Incoming UDP only works while capturing packages with Wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39346/unable-to-detect-tcp-using-airpcap">Unable to detect TCP using Airpcap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30237/wireshark-not-detecting-udp-snmptrap162-port">Wireshark not detecting udp snmptrap/162 port</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1805/how-port-name-resolution-is-done-in-wireshark">How port name resolution is done in Wireshark ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7499/wireshark-can-capture-traffice-of-switches-configured-in-port-mirroring">wireshark can capture traffice of switches configured in port mirroring?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

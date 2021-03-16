@@ -1,0 +1,1291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Why is server (CentOS 6) sending RST after TCP three-way handshake? - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello, Many times, my server is responding the way described is this question title (some other times stuff work just fine). My topology is something (simplified) like this (I&#39;m not the network admin): Mobile web (ajax based) clients  |  | FW (NAT/PAT)   |  | Internet &amp;lt;--&amp;gt; Eudeamon FW &amp;lt;--&amp;g..." />
+        <meta name="keywords" content="rst,handshake,three-way,tcp" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/57187/why-is-server-centos-6-sending-rst-after-tcp-three-way-handshake" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/57187/why-is-server-centos-6-sending-rst-after-tcp-three-way-handshake?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='R50SVzQMkoHNSlhjItG3YKE5KruivRjY' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/57187/why-is-server-centos-6-sending-rst-after-tcp-three-way-handshake">Why is server (CentOS 6) sending RST after TCP three-way handshake?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-57187-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57187/up/" rel="nofollow"> </a>
+<div id="post-57187-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-57187-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57187/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/57187/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>Many times, my server is responding the way described is this question title (some other times stuff work just fine).</p>
+<p>My topology is something (simplified) like this (I'm not the network admin):</p>
+<pre>Mobile web (ajax based) clients
+    |
+    |
+FW (NAT/PAT)    
+    |
+    |
+Internet &lt;--&gt; Eudeamon FW &lt;--&gt; Cisco ACE LB &lt;--&gt; Web server farm (CentOS 6)
+</pre>
+
+<p>According to Apache stats there are still free workers/threads to receive requests and CPU/RAM usage is quite normal.</p>
+<p>Please take a look at the following image (from a tcpdump capture on one of web servers &amp; open in Wireshark) and provide some ideas about what the issue might be (I've struggled with this for several weeks now)</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/Capture_0cbpwQl.PNG"></p>
+<p>Capture file uploaded here: <a href="https://www.cloudshark.org/captures/4a87072e66c5">https://www.cloudshark.org/captures/4a87072e66c5</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rst/" class="post-tag tag-link-rst"
+                                        title="see questions tagged 'rst'" rel="tag">rst</a>
+                                
+                                    <a href="/tags/handshake/" class="post-tag tag-link-handshake"
+                                        title="see questions tagged 'handshake'" rel="tag">handshake</a>
+                                
+                                    <a href="/tags/three-way/" class="post-tag tag-link-three-way"
+                                        title="see questions tagged 'three-way'" rel="tag">three-way</a>
+                                
+                                    <a href="/tags/tcp/" class="post-tag tag-link-tcp"
+                                        title="see questions tagged 'tcp'" rel="tag">tcp</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Nov '16, 14:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5b7d53e8a8a80f8be8fcf744c2050cf4?s=32&amp;d=identicon&amp;r=g" alt="diazdw's gravatar image" />
+    <p><a href="/users/26288/diazdw">diazdw</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="diazdw has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/57187/">
+                edited
+                <strong>11 Nov '16, 07:30</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-57187">
+    
+        <a name="57188"></a>
+        <div class="comment" id="comment-57188">
+            <div id="post-57188-score" class="comment-score"></div>
+            <div class="comment-text"><p>Here is a similar problem:
+<a href="https://ask.wireshark.org/questions/43648/spurious-retransmission-and-dup-ack">https://ask.wireshark.org/questions/43648/spurious-retransmission-and-dup-ack</a></p></div>
+            <div class="comment-info" id="comment-57188-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '16, 14:15)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="57190"></a>
+        <div class="comment" id="comment-57190">
+            <div id="post-57190-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/16160/christian_r">@Christian_R</a> Thanks for commenting. I'd checked the thread you posted beforehand. The problem they discussing is about a client delayed response and no solution was found regardind server side. In my case, I don't see that delay; I think the client 2nd ACK is ignored/lost in my case too, though :-( I don't know why yet...</p></div>
+            <div class="comment-info" id="comment-57190-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '16, 15:07)</span>
+                <a class="comment-user userinfo" href="/users/26288/diazdw">diazdw</a>
+                
+            </div>
+        </div>
+    
+        <a name="57203"></a>
+        <div class="comment" id="comment-57203">
+            <div id="post-57203-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you share a capture in a publicly accessible spot, e.g. <a href="http://cloudshark.org">CloudShark</a>?</p></div>
+            <div class="comment-info" id="comment-57203-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '16, 02:24)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="57208"></a>
+        <div class="comment" id="comment-57208">
+            <div id="post-57208-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you have a layer 4 device in the path it is often a good idea to take a capture in front of and behind the layer 4 device.</p></div>
+            <div class="comment-info" id="comment-57208-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '16, 07:52)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="57211"></a>
+        <div class="comment" id="comment-57211">
+            <div id="post-57211-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/4/jaap">@Jaap</a> Capture file uploaded to CloudShark. Please check the link added to main question.</p></div>
+            <div class="comment-info" id="comment-57211-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '16, 08:20)</span>
+                <a class="comment-user userinfo" href="/users/26288/diazdw">diazdw</a>
+                
+            </div>
+        </div>
+    
+        <a name="57212"></a>
+        <div class="comment not_top_scorer" id="comment-57212">
+            <div id="post-57212-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/16160/christian_r">@Christian_R</a> The device immediately before clients reach web servers is a Cisco ACE load balancer. Do you know if capture by using port mirroring is possible there?</p></div>
+            <div class="comment-info" id="comment-57212-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '16, 08:21)</span>
+                <a class="comment-user userinfo" href="/users/26288/diazdw">diazdw</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-57187" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57187-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/57187/why-is-server-centos-6-sending-rst-after-tcp-three-way-handshake?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/57187/why-is-server-centos-6-sending-rst-after-tcp-three-way-handshake?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/57187/why-is-server-centos-6-sending-rst-after-tcp-three-way-handshake?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/57187/why-is-server-centos-6-sending-rst-after-tcp-three-way-handshake?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="57300"></a>
+                    <div id="answer-container-57300" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-57300-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57300/up/" rel="nofollow"> </a>
+<div id="post-57300-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-57300-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57300/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are a couple of things out-of-the-ordinary me in this trace:</p>
+<p><strong>Retransmission of the SYN/ACK</strong><br>
+As already mentioned by other people, it seems the ACK of the 3-way-handshake seems to get lost on the way to the server. As we are capturing on the server, a sugestion was made that it went south somewhere in the TCP/IP stack. This does not seem plausable. After some googling I found <a href="https://ask.wireshark.org/questions/43648/spurious-retransmission-and-dup-ack">another occurrence of this issue</a>. So it seems this could be "normal" behavior under certain circumstances. So googling a bit more resulted in <a href="https://labs.ripe.net/Members/gih/the-curious-case-of-the-crooked-tcp-handshake">an article discribing this behavior</a>. In short, there is an option <code>TCP_DEFER_ACCEPT</code> on linux that tells the TCP/IP stack to not pass a new session to the application on the ACK of the 3-way-handshake, but to wait for incoming data and then present the new session <em>with</em> the data to the application, which reduces context switching on the server. The result is that the SYN/ACK is being retransmitted as the server basically ignores the ACK packet. This happens only when the first data does not follow the SYN/ACK quickly, which is the case in this trace file.</p><p>
+<strong>Long delay before first HTTP request</strong><br>
+There is a ~1,5 sec gap between the ACK and the first GET request from the client. Is the client opening up multiple connections to be used later on when needed? Is the ACE loadbalancer opening up connections to the server before actually needing them (don't know if this is functionality that the ACE offers though). A trace on the clientside and on the serverside of the ACE would be useful to determine the cause of this delay.</p><p></p>
+<p><strong>Wrong ACK number on HTTP request</strong><br>
+Then there is the ACK number on the HTTP request that is not correct, it should have been 2962498563 as in frame 72, but instead it is 2106390967. This does not ACK the SYN/ACK, so I assume the server discards this packet as it does not complete the 3-way handshake as it should (taking into account that is discarded the ACK in the first place because of <code>TCP_FEFER_ACCEPT</code>). It sends out a TCP/RST in response to all packets that do not have the right ACK and tries to establish a correct session by keep retransmitting the SYN/ACK until the timer set in the <code>TCP_DEFER_ACCEPT</code> option runs out.</p><p></p>
+<p><strong><em>Next troubleshooting steps could be:</em></strong></p>
+<ol>
+<li><em>Confirm retransmission of the SYN/ACK</em><br>Open a telnet to the server port and don't send a request. Look at the trace, do you see the same retranmission behavior of the SYN/ACK?<p></p></li>
+<li><em>Test whether the SYN/ACK retransmission is triggering a bug on the ACE</em><br>It could be that the retransmission of the SYN/ACK is triggering a bug on the Cisco ACE in sending the wrong sequence number? Test this by manually telnetting to the VIP address/port on the ACE, wait until the retransmission of the SYN/ACK and then send a http request. Observe the ACK of the request on the server.<p></p></li>
+<li><em>Analyze more instances of this issue</em><br>In all other cases, is the ACK in the first request incorrect? Does that happen sometimes when there is no restransmission of the SYN/ACK too? If you would like, you can post a larger tracefile with a couple of problematic sessions and we could have a look at the pattern some more.</li>
+</ol>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/57300/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Nov '16, 03:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-57300">
+    
+        <a name="57316"></a>
+        <div class="comment" id="comment-57316">
+            <div id="post-57316-score" class="comment-score"></div>
+            <div class="comment-text"><p>Great answer!
+There is an interesting phrase in the article Sake has mentioned:
+ "...some configurations that involve server farms and front end load balancers assume that there is a clean separation on the initial TCP handshake and the subsequent transaction and there are complex failure modes that arise when this option is used in such a case..." </p>
+
+<p>This is very close to our case. It looks like handshake is made by ACE itself, and then ACE starts to forward requests directly from client. (Look at the TTL behavior).
+Acting this way assumes performing SEQ and ACK numbers manipulation in order to achieve matching between ACE's own packets and client's packets (coming to the server side).
+Maybe "out-of-order" SYN-ACK server's retrasnmissions somehow mess ACE's state machine that leads to bug in SEQ-ACK manipulation mechanism inside of it.</p>
+
+<p>If you can, just try to turn TCP_DEFER_ACCEPT setting off and spot the difference.
+If you can't do it, try to spot the next pattern: SYN-ACK retransmission seen BEFORE GET request will cause RSTs from server.</p></div>
+            <div class="comment-info" id="comment-57316-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Nov '16, 07:56)</span>
+                <a class="comment-user userinfo" href="/users/25315/packet_vlad">Packet_vlad</a>
+                
+            </div>
+        </div>
+    
+        <a name="57317"></a>
+        <div class="comment" id="comment-57317">
+            <div id="post-57317-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/5/syn-bit">@SYN-bit</a> Thanks for you deep review. Regarding the 3 issues you've pointed out:</p>
+
+<ul>
+<li>
+<p>Retransmission of the SYN/ACK: I'm (now) aware of the TCP_DEFER_ACCEPT. Maybe in my case this behavior is present due to following point...</p>
+</li>
+<li>
+<p>Long delay before first HTTP request: HTTP requests come from mobile phone web (AJAX based) clients (a.k.a. "app-like" site), so I think that heavy AJAX using + mobile network latency might cause that kind of delays (I updated the network ASCII diagram posted on initial question to show this)</p>
+</li>
+<li>
+<p>Wrong ACK number on HTTP request: I've asked my network admin. team to check on the load balancer. They're talking now about enabling HTTP connection stickiness on the ACE...</p>
+</li>
+</ul>
+
+<p>I'll do some more troubleshooting as you suggest and see what I find out.</p>
+
+<p>Thanks again for your time and help.</p></div>
+            <div class="comment-info" id="comment-57317-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Nov '16, 08:01)</span>
+                <a class="comment-user userinfo" href="/users/26288/diazdw">diazdw</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-57300" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57300-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="57209"></a>
+                    <div id="answer-container-57209" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-57209-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57209/up/" rel="nofollow"> </a>
+<div id="post-57209-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-57209-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57209/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As the SEQ of the TCP/RST does not seem to match the SEQ and ACK of the 3-way-handshake, I would like to see the real tracefile to look at the SEQ and ACK of the http request. I would also like to look at the IP TTL to see whether an intermediate device might be sending the TCP/RST and I would like to look at the ip.id to help in the analysis. In short, no good analysis could be done (at least not by me) just based on the screenshot. Too much important information is missing...</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/57209/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Nov '16, 08:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-57209">
+    
+        <a name="57210"></a>
+        <div class="comment" id="comment-57210">
+            <div id="post-57210-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes I think it, too.</p></div>
+            <div class="comment-info" id="comment-57210-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '16, 08:18)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="57214"></a>
+        <div class="comment" id="comment-57214">
+            <div id="post-57214-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/5/syn-bit">@SYN-bit</a> &amp; <a href="/users/16160/christian_r">@Christian_R</a> I just uploaded the (original tcpdump) capture to Cloudshark: <a href="https://www.cloudshark.org/captures/4a87072e66c5">https://www.cloudshark.org/captures/4a87072e66c5</a> . Please take a look at it.</p></div>
+            <div class="comment-info" id="comment-57214-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '16, 08:28)</span>
+                <a class="comment-user userinfo" href="/users/26288/diazdw">diazdw</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-57209" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57209-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="57207"></a>
+                    <div id="answer-container-57207" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-57207-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57207/up/" rel="nofollow"> </a>
+<div id="post-57207-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-57207-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57207/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It looks like the server connection is never opened. That's why the server is sending those resets.</p>
+<p>In Frame 71, the server sends it's SYN-ACK, but then resends it, according to the screenshot you provided, in Frame 73. But it also looks like the server did get the ACK from the client, according to the capture.</p>
+<p>Was this capture taken directly on a specific web server?</p>
+<p>What's going on with the SYN-ACK being resent and the ACK not being acknowledged by the server suggests that the capture was taken outside of the web server farm, likely on the FW or LB.</p>
+<p>And there seems to be some retransmissions as well.</p>
+<p>So if the capture was not taken on a specific web server and there are retransmissions, it's likely that Frame 72 is never received by any server, and is actually dropped, but you just don't see it. Therefore, when the client sends it's HTTP GET, the server doesn't OK it because the connection's not opened yet. That's why in Frame 80, the server resends the SYN-ACK in another attempt to open the connection.</p>
+<p>So I would verify that you're capturing data from a specific web server, if you can, and also look into those retransmissions. What causing that? Since you're not the network admin, this is something you can probably bring up with that person.</p>
+<p>As Jaap mentioned, a capture you can share would help to take a better look at this, but I think that's what is happening here.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/57207/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Nov '16, 07:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0eafb94fc68881ab754f30924ce504ad?s=32&amp;d=identicon&amp;r=g" alt="jeantunis's gravatar image" />
+    <p><a href="/users/22895/jeantunis">jeantunis</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jeantunis has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-57207">
+    
+        <a name="57213"></a>
+        <div class="comment" id="comment-57213">
+            <div id="post-57213-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/22895/jeantunis">@jeantunis</a> It looks to me (2nd) client ACK made its way to the server NIC, but somehow that ACK never climbs up the TCP stak.</p>
+
+<p>Capture was taken directly on a specific web server.</p>
+
+<p>I have shared the needed (original) capture made by using tcpdump at <a href="https://www.cloudshark.org/captures/4a87072e66c5">https://www.cloudshark.org/captures/4a87072e66c5</a></p></div>
+            <div class="comment-info" id="comment-57213-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '16, 08:26)</span>
+                <a class="comment-user userinfo" href="/users/26288/diazdw">diazdw</a>
+                
+            </div>
+        </div>
+    
+        <a name="57215"></a>
+        <div class="comment" id="comment-57215">
+            <div id="post-57215-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hm, if the capture has been taken at the web server, then problem is maybe inside the system or after the point capture. </p>
+
+<p>Because, I came to the same finding like <a href="/users/22895/jeantunis">@jeantunis</a>.</p></div>
+            <div class="comment-info" id="comment-57215-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '16, 09:11)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="57247"></a>
+        <div class="comment" id="comment-57247">
+            <div id="post-57247-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is very interesting capture.
+It seems that we're on the server side (on the server itself actually). I think that because: 1) timing analysis of 3-way handshake; 2) TTL of outgoing packets = 64; 3) IP packets of 2960 Bytes in size (in working connection sample, that means we're capturing before NIC does LSO).</p>
+
+<p>But how in that case an ACK (frame no.72) that we've already seen in the capture could be dropped? Only somewhere up the server's IP stack, after capture point. </p>
+
+<p>And two more points:
+- Packet 74 (GET) has TTL of 59, not 127 as packet 72 had. Also packet 74 has wrong ACK of 2106390967, whereas initially ACK packet 72 had 2962498563. It looks like these two packets have different sources? How could it be?</p>
+
+<ul>
+<li>Why after receiving RSTs client (which one of the two?) keeps sending and sending it's requests? Probably it does not see or does not process RST packets. It will not process RSTs in a case if they are not in window bounds, so it is expecting to see another SEQ.</li>
+</ul></div>
+            <div class="comment-info" id="comment-57247-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Nov '16, 02:46)</span>
+                <a class="comment-user userinfo" href="/users/25315/packet_vlad">Packet_vlad</a>
+                
+            </div>
+        </div>
+    
+        <a name="57248"></a>
+        <div class="comment" id="comment-57248">
+            <div id="post-57248-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just looked at the working stream. It contains the same TTL transition, probably some proxy is involved on the path.</p></div>
+            <div class="comment-info" id="comment-57248-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Nov '16, 02:50)</span>
+                <a class="comment-user userinfo" href="/users/25315/packet_vlad">Packet_vlad</a>
+                
+            </div>
+        </div>
+    
+        <a name="57250"></a>
+        <div class="comment" id="comment-57250">
+            <div id="post-57250-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/25315/packet_vlad">@packet_vlad</a>: seems that there is somekind of virtual environment.
+The lost ACK: Yes it is strange. Maybe it is some kind of a driver issue.</p></div>
+            <div class="comment-info" id="comment-57250-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Nov '16, 02:55)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="57270"></a>
+        <div class="comment not_top_scorer" id="comment-57270">
+            <div id="post-57270-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/16160/christian_r">@Christian_R</a> is correct. There does seem to be some sort of virtual environment with VSS Monitoring. And in that environment, you need to be careful how and where you capture data.</p>
+
+<p>The second thing is around the Retransmission Timeout and IP ID. If you look at frame 74, originally sent at 161.2 seconds, we would expect a retransmission anywhere between 1 and 3 seconds, depending on TCP implementation, if there's no response from the server. The retransmission happens about 1.5 seconds later at 162.6. With the backoff algorithm, we should expect a retransmission after 3 seconds, then 6 seconds, then 12 seconds, and so on. And the IP IDs should increment accordingly.</p>
+
+<p>Everything happens the way they should until after the retransmission in frame 83 at 165.5 with an IP ID = 3334. The next frame we see from the client is frame 85 at 182.5 with IP ID = 3336. </p>
+
+<p>What happened to the frame that should have occurred around 171.5 (or so) with IP ID = 3335? That doesn't exist. The packet capture doesn't have it. And there could be a number of reasons for this.</p>
+
+<p>So wherever this capture was taken, whether on a physical or virtual server, it doesn't look like you can completely rely on the capture taken there.</p>
+
+<p>My suggestion would be to 1) capture as close to the server as possible, but not on it, and 2) capture at multiple points.</p>
+
+<p>Based on the diagram you showed, you have a FW and ACE boxes that are manipulating the packets, and that's just what we know. There could be other things we don't know. You want to be able to trace a stream of packets going from the edge of your network across the FW, ACE and anything else all the way to the server.</p>
+
+<p>Last, I could be wrong, but I don't think frame 72 was seen by the capture and then got dropped on its way up the stack. That's unlikely to happen for just one client and one TCP connection. I also don't think it's a NIC driver issue because other communication between the client and server is happening without any problems earlier in the capture.</p>
+
+<p>If this is a physical server, and you are sure the issue is there, you should narrow your focus on that box with a profiling tool along with tcpdump. But don't just capture the communication between the server and client -- capture everything to see what's happening to other clients as well. That could clue you in to whether this is server-related (like any recent changes to the server farm) , network-related (like any recent network changes) or something else entirely.</p></div>
+            <div class="comment-info" id="comment-57270-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Nov '16, 08:52)</span>
+                <a class="comment-user userinfo" href="/users/22895/jeantunis">jeantunis</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-57207" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57207-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/57187/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='R50SVzQMkoHNSlhjItG3YKE5KruivRjY' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/57187/why-is-server-centos-6-sending-rst-after-tcp-three-way-handshake?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/57187/why-is-server-centos-6-sending-rst-after-tcp-three-way-handshake?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tcp/"
+            class="tag-link-tcp"
+            title="see questions tagged'tcp'using tags"
+            rel="tag">tcp</a> <span class="tag-number">&#215;752</span><br/>
+        
+        <a href="/tags/rst/"
+            class="tag-link-rst"
+            title="see questions tagged'rst'using tags"
+            rel="tag">rst</a> <span class="tag-number">&#215;81</span><br/>
+        
+        <a href="/tags/handshake/"
+            class="tag-link-handshake"
+            title="see questions tagged'handshake'using tags"
+            rel="tag">handshake</a> <span class="tag-number">&#215;44</span><br/>
+        
+        <a href="/tags/three-way/"
+            class="tag-link-three-way"
+            title="see questions tagged'three-way'using tags"
+            rel="tag">three-way</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 8, 2016, 2:05 p.m.">08 Nov '16, 14:05</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,981 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 11, 2016, 8:10 a.m.">11 Nov '16, 08:10</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/40603/client-sends-rst-immediately-after-it-sent-an-ack">Client sends RST immediately after it sent an ACK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4932/not-honoring-own-mss">Not honoring own MSS?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14212/router-replies-with-rst-after-fin-ack">Router replies with [RST] after [FIN, ACK]</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25166/ie-sends-rstack-right-after-ack-from-server">IE sends [RST,ACK] right after [ACK] from server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25374/server-sending-rst-message">Server sending RST Message</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29913/strange-tcp-rst-with-sslscan">Strange TCP RST with sslscan</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58283/what-would-cause-devices-not-to-respond-to-an-ip-cameras-synack-intermittently">What would cause devices not to respond to an IP camera&#39;s SYN/ACK intermittently?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60799/modbus-tcp-connection-drops-after-7-hours-and-20-minutes">Modbus TCP connection drops after 7 hours and 20 minutes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6872/zero-window-and-rst">Zero window and RST</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61417/ie11-sent-rst-flag">IE11 sent RST flag</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

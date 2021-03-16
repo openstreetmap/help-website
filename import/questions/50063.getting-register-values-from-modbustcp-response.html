@@ -1,0 +1,893 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Getting register values from Modbus/TCP response? - Wireshark Q&amp;A</title>
+        <meta name="description" content="I am parsing a log of a large number of Modbus/TCP transactions and want to grab the raw data that is returned for function code 4 (Read Input Registers). I can grab all the relevant fields for the Modbus/TCP packet except for the register value. For example, here is the Modbus/TCP portion of a pack..." />
+        <meta name="keywords" content="modbus,tshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/50063/getting-register-values-from-modbustcp-response" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/50063/getting-register-values-from-modbustcp-response?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='IaR3huQCQhafppHWJHFBLp7Klt3sRjHo' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/50063/getting-register-values-from-modbustcp-response">Getting register values from Modbus/TCP response?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-50063-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50063/up/" rel="nofollow"> </a>
+<div id="post-50063-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-50063-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50063/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/50063/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am parsing a log of a large number of Modbus/TCP transactions and want to grab the raw data that is returned for function code 4 (Read Input Registers). I can grab all the relevant fields for the Modbus/TCP packet except for the register value.</p>
+<p>For example, here is the Modbus/TCP portion of a packet which requests a single register read on input register 401 (hex <code>01 90</code>) :</p>
+<pre><code>00 01 00 00 00 06 28 04 01 90 00 01
+</code></pre>
+<p>And the corresponding slave response:</p>
+<pre><code>00 01 00 00 00 05 28 04 02 01 0c
+</code></pre>
+<p>The actual value returned for register 401 is the final two bytes of the response: <code>01 0c</code> (or decimal 268) The status bar at the bottom of wireshark, as well as the display filter, indicates that this value is denoted by <code>modbus.reg16</code>. Looking at the actual modbus section of the packet in Wireshark confirms that register 401 holds the value 268.</p>
+<p>However, running tshark on the packet doesn't output 268, but instead it outputs 0.</p>
+<p><code># tshark -r ./modbus.cap -T fields -e modbus.reg16
+100</code></p>
+<p>If I run a similar command on more than one register, the output is a sequential list of numbers starting with 0. For example, running it on a capture with a read request for 8 sequential registers starting at 401 whose contents are various 16-bit integer values:</p>
+<p><code># tshark -r ./modbus_multiple.cap -T fields -e modbus.reg16
+100,101,102,103,104,105,106,107</code></p>
+<p>It is clear that <code>modbus.reg16</code> uses the register address (reference number) for sorting, but is there any way to access the value returned in that register instead or in addition to this?</p>
+<p><strong>Update 02/11/2016</strong></p>
+<p>I've uploaded a section of the capture <a href="https://www.cloudshark.org/captures/a6676570937e">here</a>. The first three requests/responses only request a single register, while the last one requests 8 sequential input registers.</p>
+<p>Here's the (abbreviated) output of <code>tshark --version</code> on my system:</p>
+<pre><code>TShark (Wireshark) 2.0.1
+
+[...]
+
+Compiled (64-bit) with libpcap, with POSIX capabilities (Linux), with libnl 3,
+with libz 1.2.8, with GLib 2.46.2, without SMI, without c-ares, without ADNS,
+with Lua 5.2, with GnuTLS 3.4.7, with Gcrypt 1.6.4, with MIT Kerberos, without
+GeoIP.
+
+Running on Linux 4.4.1-2-ARCH, with locale en_US.UTF-8, with libpcap version
+1.7.4, with libz 1.2.8, with GnuTLS 3.4.9, with Gcrypt 1.6.5.
+        Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz (with SSE4.2)
+
+Built using gcc 5.3.0.
+</code></pre>
+<p>I have found a workaround using the pyshark library in Python (which itself issues calls to tshark on the backend). I believe that it just uses raw tshark calls to parse the packet data and store it in various data structures; in this case, it does appear to store the registers as a list of individual key/value pairs. Some example code in the interactive Python 3.5.1 shell:</p>
+<pre><code>&gt;&gt;&gt; import pyshark
+&gt;&gt;&gt; capture = pyshark.FileCapture('/tmp/mbtcp.pcap')
+&gt;&gt;&gt; print(capture[7].modbus.reg16.all_fields[1].showname_key)
+Register 101 (UINT16)
+&gt;&gt;&gt; print(capture[7].modbus.reg16.all_fields[1].showname_value)
+4100
+&gt;&gt;&gt; print(capture[7].modbus.reg16.all_fields[7].showname_key)
+Register 107 (UINT16)
+&gt;&gt;&gt; print(capture[7].modbus.reg16.all_fields[7].shoename_value)
+65535
+</code></pre>
+<p>This suits my needs, but it is definitely a workaround. Given sindy's explanation, it is strange albeit understandable that this is not currently a feature of the dissector. That said, what I'm trying to do could be far enough outside the typical usage of Wireshark that a workaround in the form of an external script or library may be necessary. If it turns out that there truly is no way to do this with tshark, then I may submit an enhancement request at the provided bugzilla link.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/modbus/" class="post-tag tag-link-modbus"
+                                        title="see questions tagged 'modbus'" rel="tag">modbus</a>
+                                
+                                    <a href="/tags/tshark/" class="post-tag tag-link-tshark"
+                                        title="see questions tagged 'tshark'" rel="tag">tshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Feb '16, 10:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/07096de36b2c86fc5188ddbc9c29f5d9?s=32&amp;d=identicon&amp;r=g" alt="evan's gravatar image" />
+    <p><a href="/users/23063/evan">evan</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="evan has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/50063/">
+                edited
+                <strong>11 Feb '16, 08:29</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-50063">
+    
+        <a name="50100"></a>
+        <div class="comment" id="comment-50100">
+            <div id="post-50100-score" class="comment-score"></div>
+            <div class="comment-text"><p>The <a href="https://code.wireshark.org/review/gitweb?p=wireshark.git;a=commit;h=35a13838146ac5d83b57435ff34f2960ea911248">commit</a> that modified that area of the dissector noted:</p>
+
+<blockquote>
+For decoded register tree objects, use register 'address' instead of 'value' for the filter field to provide a more useful filter.                                                                                                      
+</blockquote>
+
+<p>I also think it would be useful to get the register data value.  It might also be useful to have fields that show the value in any of the usual Modbus formats, e.g. signed\unsigned, 16 bit, 32 bit, float etc.</p></div>
+            <div class="comment-info" id="comment-50100-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Feb '16, 07:36)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="50105"></a>
+        <div class="comment" id="comment-50105">
+            <div id="post-50105-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am afraid that while for display <em>filtering</em>, it is indeed in most cases more useful to get access to the register "address", for the actual <em>display</em> at tshark output, the register "value" (or "contents") is required more often.</p>
+
+<p>As the (pseudo)field identifier (<code>modbus.reg16</code> in this case) is common for both cases, so is the value to be used for filtering and for display.</p>
+
+<p>But the fact that if "register address" and "register value" cannot be linked together using a display filter leads me to an idea that display of the registers as address:value pairs, such as <code>100:0,101:4100,102:225,103:225,104:0,105:0,106:65535,107:65535</code>, could be useful.</p>
+
+<p>As backward compatibility seems not to be really important here (as the meaning of <code>modbus.reg16</code> has changed between dissector releases), if you are going to file the "enhancement" bug, I'd say <code>modbus.reg16.address</code>, <code>modbus.reg16.value</code>, and <code>modbus.reg16.address_value_pair</code> would remove confusion and even allow filtering by specific value of a specific register, like <code>-Y modbus.reg16.address_value_pair = 101:4100</code>. The value format as suggested by <a href="/users/1225/grahamb"></a><a href="/users/1225/grahamb">@grahamb</a> could be added as another suffix to .value and .address_value_pair.</p>
+
+<p>Looking at that more generically, I'm missing the possibility to use constructions like <code>modbus[2:2]</code>, which can be used in the display filter, also as values of the <code>-e</code> parameter to tshark. Correct me if I'm wrong but I believe this would not require modification of the individual dissectors and could be added to tshark as a whole.</p>
+
+<p><a href="/users/23063/evan"></a><a href="/users/23063/evan">@evan</a>, if you happen to know it without googling, can a single query indicate several reference numbers of registers, or only contiguous sets of registers may be read out using a single query? I.e. does my example in the answer with a query for registers with reference numbers 5,9, and 16 make sense?</p>
+
+<p>Also, I'm still puzzled by the fact that your 2.0.1 shows the index of the values (0..7) while both Cloudshark (which I don't suspect to run on Windows) as well as my Windows version of 2.0.1 properly show 100,101,..., i.e. the address (or reference number if you please), although no protocol preference of either Modbus/TCP or Modbus are related to this.</p></div>
+            <div class="comment-info" id="comment-50105-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Feb '16, 08:12)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="50106"></a>
+        <div class="comment" id="comment-50106">
+            <div id="post-50106-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb">@grahamb</a> Good find on that commit. From the perspective of sorting and displaying, it does make sense to sort that way (as per <a href="/users/19586/sindy"></a><a href="/users/19586/sindy">@sindy</a>'s response).</p>
+
+<p><a href="/users/19586/sindy"></a><a href="/users/19586/sindy">@sindy</a> Registers can only be polled sequentially given the structure of a modbus request (i.e., you tell it which register to start at and tell it how many to query). It is possible to make custom function codes (which not all devices/implementations support) but I think that trying to do something like what you suggest in your answer would just comprise several individual register reads combined into a single command and thus still fit within spec (and would likely only appear to read separated registers to the software/driver layer and not actually appear as a single modbus request on the packet level.)</p>
+
+<p>As to your last point, I believe I made a mistake somewhere in transcribing the command and will edit my post to reflect this. It is indeed showing the reference number/address when I enter the command as shown above. Sorry for the confusion.</p>
+
+<p>Given all of the comments/responses, does it make sense at this point for me to accept and file a request at the Bugzilla?</p></div>
+            <div class="comment-info" id="comment-50106-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Feb '16, 08:26)</span>
+                <a class="comment-user userinfo" href="/users/23063/evan">evan</a>
+                
+            </div>
+        </div>
+    
+        <a name="50107"></a>
+        <div class="comment" id="comment-50107">
+            <div id="post-50107-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>does it make sense at this point for me to accept and file a request at the Bugzilla?</p>
+</blockquote>
+
+<p>I'm afraid it does.</p></div>
+            <div class="comment-info" id="comment-50107-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Feb '16, 08:34)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="50108"></a>
+        <div class="comment" id="comment-50108">
+            <div id="post-50108-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sounds good, thanks for the help!</p></div>
+            <div class="comment-info" id="comment-50108-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Feb '16, 08:35)</span>
+                <a class="comment-user userinfo" href="/users/23063/evan">evan</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-50063" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50063-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/50063/getting-register-values-from-modbustcp-response?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/50063/getting-register-values-from-modbustcp-response?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/50063/getting-register-values-from-modbustcp-response?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/50063/getting-register-values-from-modbustcp-response?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="50081"></a>
+                    <div id="answer-container-50081" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-50081-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50081/up/" rel="nofollow"> </a>
+<div id="post-50081-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-50081-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50081/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="evan has selected this answer as the correct answer"
+        href="/accept_answer/50081/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Looking at that on a sample capture as you haven't provided the real one (the one with several registers requested in a single query would be the best), I'm afraid it is a bug of the dissector.</p>
+<p>But it is even more complex, which version of Wireshark do you use? Because <em>in your case</em>, the dissector provides the index of the value rather than the value itself, while in Wireshark 2.0.1, it still does not provide the value but it provides the reference number of the register, i.e. you can use a display filter like <code>modbus.reg16 == N</code> where <code>N</code> is the reference number of the register as requested in the corresponding query, not the order number (index) of the value in the response. Can you publish your pcap(ng) file as referred above at some file sharing service and put a link to it to your original question (use <code>edit</code> to do so), so that I could double-check that 2.0.1 is really better than your version in this regard?</p>
+<p>I understand the current (2.0.1) behaviour of the dissector in such a way that it does its best to display the reference number of the register and make it available for use in a display filter in the response packet where it does not exist as a protocol field. To do so, the dissector has to maintain state information and render this information taken from the query packet when dissecting the response.</p>
+<p>If the assumption is correct, you would have to file an "enhancement" severity level bug at <a href="https://bugs.wireshark.org/bugzilla/enter_bug.cgi">wireshark bugzilla</a>, asking for another field like <code>modbus.reg16.value</code>, to make the value of the register available for display in tshark.</p>
+<p><strong>edit:</strong> changed the register "addresses" and values in the example below to match the modbus reality.</p>
+<p>However, it may still not be all that simple to use even if such enhancement would be implemented, as the display filter only chooses the whole packet, not a particular field in it, and it does not link together the individual expressions. So if the query would ask for registers 5, 6 and 7, and the values of these registers in the response would be 50, 600 and 7000 respectively, use of <code>-Y "modbus.reg16 == 5" -T fields -e modbus.reg16.value</code> would return <code>50,600,7000</code>, not just <code>50</code>. Similarly, you would not be able to filter out only packets where the value of register 5 would contain a value of 50, because <code>-Y "modbus.reg16 == 5 and modbus.reg16.value == 50"</code> would display all responses where <em>any</em> of the registers would have a reference number 5 and <em>any</em> of the values would be 50.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/50081/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Feb '16, 16:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/50081/">
+                edited
+                <strong>11 Feb '16, 08:39</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-50081">
+    
+</div>
+<div id="comment-tools-50081" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50081-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/50063/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='IaR3huQCQhafppHWJHFBLp7Klt3sRjHo' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/50063/getting-register-values-from-modbustcp-response?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/50063/getting-register-values-from-modbustcp-response?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tshark/"
+            class="tag-link-tshark"
+            title="see questions tagged'tshark'using tags"
+            rel="tag">tshark</a> <span class="tag-number">&#215;832</span><br/>
+        
+        <a href="/tags/modbus/"
+            class="tag-link-modbus"
+            title="see questions tagged'modbus'using tags"
+            rel="tag">modbus</a> <span class="tag-number">&#215;32</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 10, 2016, 10:18 a.m.">10 Feb '16, 10:18</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,521 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 11, 2016, 8:39 a.m.">11 Feb '16, 08:39</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/41951/use-capture-filter-on-tshark-when-reading-a-file">Use capture filter on tshark when reading a file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43342/how-to-extract-basic-authorization-details-from-a-pcap-file">How to extract basic authorization details from a pcap file ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44371/tshark-export-tcp-conversations-while-running">TShark - export TCP conversations while running</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45418/specific-ip-address-display-filter-using-tshark">Specific IP address display filter using tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46194/error-while-trying-to-use-tshark">error while trying to use tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47671/lua-script-segmentation-fault-11-in-200rc3-on-os-x">Lua script - Segmentation fault 11 in 2.0.0rc3 on OS X</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48767/tshark-parameter-for-filtering-by-given-ip-and-decode-it-using-ssl">Tshark parameter for filtering by given ip and decode it using ssl</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50146/how-to-include-frame-time-in-tshark-when-o-is-used">how to include frame time in tshark when -O is used</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50948/automate-network-performance-data-collection">automate network performance data collection</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52220/can-i-run-two-tshark-instances-analysing-different-ports">Can I run two tshark instances analysing different ports?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

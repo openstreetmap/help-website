@@ -1,0 +1,1314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>packet reassembly not succesful - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi  Whats wrong in my below code? Reassembly of packets not happening.i can able to build but its not processing any? iamn creating tvb mine_tvb whih is re assembled data and pass to a function.  please help.  static reassembly_table mine_reassembly_table;   static int hf_mine_fragments = -1;  stati..." />
+        <meta name="keywords" content="reassembly" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/37987/packet-reassembly-not-succesful" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/37987/packet-reassembly-not-succesful?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='L3jZzg3PEl9nmwQb0ram0eUHVUAnz6R3' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/37987/packet-reassembly-not-succesful">packet reassembly not succesful</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-37987-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/37987/up/" rel="nofollow"> </a>
+<div id="post-37987-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-37987-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/37987/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/37987/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi </p>
+<p>Whats wrong in my below code? Reassembly of packets not happening.i can able to build but its not processing any?</p>
+<p>iamn creating tvb mine_tvb whih is re assembled data and pass to a function. </p>
+<p>please help.</p>
+<pre><code>    static reassembly_table mine_reassembly_table;
+
+    static int hf_mine_fragments = -1;
+    static int hf_mine_fragment = -1;
+    static int hf_mine_fragment_overlap = -1;
+    static int hf_mine_fragment_overlap_conflicts = -1;
+    static int hf_mine_fragment_multiple_tails = -1;
+    static int hf_mine_fragment_too_long_fragment = -1;
+    static int hf_mine_fragment_error = -1;
+    static int hf_mine_fragment_count = -1;
+    static int hf_mine_reassembled_in = -1;
+    static int hf_mine_reassembled_length = -1;
+
+    static gint ett_mine_fragment = -1;
+    static gint ett_mine_fragments = -1;
+
+    static const fragment_items mine_frag_items = {
+    /* Fragment subtrees */
+    &amp;ett_mine_fragment,
+    &amp;ett_mine_fragments,
+    /* Fragment fields */
+    &amp;hf_mine_fragments,
+    &amp;hf_mine_fragment,
+    &amp;hf_mine_fragment_overlap,
+    &amp;hf_mine_fragment_overlap_conflicts,
+    &amp;hf_mine_fragment_multiple_tails,
+    &amp;hf_mine_fragment_too_long_fragment,
+    &amp;hf_mine_fragment_error,
+    &amp;hf_mine_fragment_count,
+    /* Reassembled in field */
+    &amp;hf_mine_reassembled_in,
+    /* Reassembled length field */
+    &amp;hf_mine_reassembled_length,
+    /* Reassembled data field */
+    NULL,
+    /* Tag */
+    "mine fragments"
+    };
+
+    static void mine_init_protocol(void)
+        {
+
+            /* fragment_table_init(&amp;mine_fragment_table); */
+            /* reassembled_table_init(&amp;mine_reassembled_table); */
+            reassembly_table_init(&amp;mine_reassembly_table, &amp;addresses_reassembly_table_functions);
+        }
+
+    save_fragmented = pinfo-&gt;fragmented;
+
+    pinfo-&gt;fragmented = TRUE;
+
+    mine_frag_msg = fragment_add_seq_next(&amp;mine_reassembly_table,next_tvb, offset_payload, pinfo, mine_seqid, NULL,
+                                                 reassebled_data_total_length, more_frags);
+
+    mine_tvb = process_reassembled_data( next_tvb, offset_payload, pinfo, "Reassembled PDU", mine_frag_msg,
+        &amp;mine_frag_items, NULL, FT_BCnPDU_tree );
+
+    reassebled_data_total_length =0;
+
+    proto_tree_add_text(FT_BCnPDU_tree, mine_tvb, offset_payload, 1, " reassebled data ");
+
+    ALSIGPDU(mine_tvb, pinfo, tree);
+</code></pre>
+<p>please help.</p>
+<p>Thanks</p>
+<p>Raj</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/reassembly/" class="post-tag tag-link-reassembly"
+                                        title="see questions tagged 'reassembly'" rel="tag">reassembly</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Nov '14, 19:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1339589a92af9455063c09e56bfc6299?s=32&amp;d=identicon&amp;r=g" alt="umar's gravatar image" />
+    <p><a href="/users/7392/umar">umar</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="22 badges"><span class="badge1">&#9679;</span><span class="badgecount">22</span></span><span title="24 badges"><span class="silver">&#9679;</span><span class="badgecount">24</span></span><span title="27 badges"><span class="bronze">&#9679;</span><span class="badgecount">27</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="umar has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/37987/">
+                edited
+                <strong>21 Nov '14, 03:05</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-37987">
+    
+        <a name="38097"></a>
+        <div class="comment" id="comment-38097">
+            <div id="post-38097-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Is your code compiling ? Show us your fragmentation function please cause I don't think the code above build successfully</p></div>
+            <div class="comment-info" id="comment-38097-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Nov '14, 05:49)</span>
+                <a class="comment-user userinfo" href="/users/5483/afrim">Afrim</a>
+                
+            </div>
+        </div>
+    
+        <a name="38151"></a>
+        <div class="comment" id="comment-38151">
+            <div id="post-38151-score" class="comment-score"></div>
+            <div class="comment-text"><p>hi afrim </p>
+
+<p>My code is compiling without any error , but when end of message packet comes, it get crash.</p>
+
+<p>only the above steps i have followed. what is the fragmentation function mean? what are the other steps there to complete the reassembly. Please help.</p>
+
+<p>i have refered this and followed the steps.
+<a href="http://www.linuxtopia.org/online_books/network_security/wireshark_development_guide/wireshark_ChDissectReassemble.html">http://www.linuxtopia.org/online_books/network_security/wireshark_development_guide/wireshark_ChDissectReassemble.html</a></p></div>
+            <div class="comment-info" id="comment-38151-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Nov '14, 22:50)</span>
+                <a class="comment-user userinfo" href="/users/7392/umar">umar</a>
+                
+            </div>
+        </div>
+    
+        <a name="38158"></a>
+        <div class="comment not_top_scorer" id="comment-38158">
+            <div id="post-38158-score" class="comment-score"></div>
+            <div class="comment-text"><p>If I copy/past your code above it definitely not work. I need to see your fragmentation function (there is no function in the code above).</p>
+
+<p>Your function should return a new buffer with all data reassembled in "mine_tvb" if the reassembly is successfull. Otherwise you should call data dissector because the reassembly is unsuccessful (because it's not the last fragment or maybe wrong parameter is your fragment_add_seq_next() function)</p></div>
+            <div class="comment-info" id="comment-38158-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Nov '14, 03:24)</span>
+                <a class="comment-user userinfo" href="/users/5483/afrim">Afrim</a>
+                
+            </div>
+        </div>
+    
+        <a name="38159"></a>
+        <div class="comment not_top_scorer" id="comment-38159">
+            <div id="post-38159-score" class="comment-score"></div>
+            <div class="comment-text"><p>note : I have 3 type of frames in different packets. 1. Beginning of message 2. continuation of message 3. End of message. </p>
+
+<p>I will have the information about total length of the PDU message in the Beginning of Messsage packet. and my messeges are coming in order ie. beginning message , continuation of  the message (in other packet )
+and end of message (here i should combine all data and reassemble). </p>
+
+<p>Its look like some process iam missing out. please help!</p></div>
+            <div class="comment-info" id="comment-38159-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Nov '14, 03:25)</span>
+                <a class="comment-user userinfo" href="/users/7392/umar">umar</a>
+                
+            </div>
+        </div>
+    
+        <a name="38160"></a>
+        <div class="comment not_top_scorer" id="comment-38160">
+            <div id="post-38160-score" class="comment-score"></div>
+            <div class="comment-text"><p>more_frags=0;</p>
+
+<pre><code>                                        reas_tvb=tvb_new_subset(tvb, offset, sdu_length, -1);
+
+                                        pinfo-&gt;fragmented = TRUE;
+
+                                        mine_frag_msg = fragment_add_seq_next(&amp;_reassembly_table,
+                                                        reas_tvb, offset, pinfo, mine_seqid, NULL,
+                                                     frag_data_len, more_frags);
+
+                                        save_fragmented = pinfo-&gt;fragmented;
+
+                                        pinfo-&gt;fragmented = save_fragmented;
+</code></pre></div>
+            <div class="comment-info" id="comment-38160-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Nov '14, 03:30)</span>
+                <a class="comment-user userinfo" href="/users/7392/umar">umar</a>
+                
+            </div>
+        </div>
+    
+        <a name="38161"></a>
+        <div class="comment" id="comment-38161">
+            <div id="post-38161-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You'r creating a new buffer and passing this new buffer as a parameter to the fragment_add_seq_next() function. The real offset of your reas_tvb is 0 and the value of your offset is not 0.</p>
+
+<p>Also, I dont know how your more_frags is created but it should be something like :</p>
+
+<p>msg_type = 3 ? more_frags = 0:1</p></div>
+            <div class="comment-info" id="comment-38161-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Nov '14, 03:48)</span>
+                <a class="comment-user userinfo" href="/users/5483/afrim">Afrim</a>
+                
+            </div>
+        </div>
+    
+        <a name="38192"></a>
+        <div class="comment not_top_scorer" id="comment-38192">
+            <div id="post-38192-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Afrim Thanks for your support!</p>
+
+<p>I hope iam almost there  i have corrected my code as below but end of message not showing as reassembled tab. is there any other step i should write to display the reassembled tvb in a seperate TAB??</p>
+
+<p>my Code :<br>
+</p>
+
+<pre><code>guint32 rem_length;
+gint frag_data_len=0;
+guint8 save_fragmented;
+const guint32 mine_seqid=0;
+const void *data = NULL; 
+gboolean more_frags=TRUE;
+
+case 0x00: // Continuation of Message 
+bctsdu_length+=1;   
+rem_length = (guint32) tvb_length_remaining(next_tvb, offset_payload);
+     rem_length-=2;
+proto_tree_add_text(FT_BCnPDU_tree, next_tvb, offset_payload, rem_length , "PDU data : %d", rem_length);
+                                    offset_payload +=rem_length;
+                                        bctsdu_length-=rem_length;
+                                        ras_calc_length+=rem_length;
+                                        pinfo-&gt;fragmented = TRUE;
+
+     mine_frag_msg = fragment_add_seq_next(&amp;mine_reassembly_table, next_tvb, offset_payload, pinfo, mine_seqid, NULL, rem_length, more_frags);                          
+     save_fragmented = pinfo-&gt;fragmented;
+
+     pinfo-&gt;fragmented = save_fragmented;
+     break;
+
+case 0x01: // Beginning of Message
+
+                ras_total_length=0; 
+                                            proto_tree_add_text(BCnPDU_bom_tree, next_tvb, offset_payload, 2, "PDU Length : 0x%02x (%d)",pl_val,pl_val);
+    ras_total_length = (guint32)pl_val;
+                                                     ras_calc_length = (guint32)pl_val;
+                                            offset_payload+=2;
+                                            bctsdu_length+=2;
+                                            rem_length= (guint32) tvb_length_remaining(next_tvb, offset_payload);
+                                            rem_length-=2;
+                                            if (rem_length &gt;= ras_calc_length){
+
+                                            rem_length-=2;
+                                    proto_tree_add_text(BCnPDU_bom_tree, next_tvb, offset_payload, rem_length, "PDU data (if) : %d ", rem_length);
+                                            offset_payload+=bctsdu_length;
+                                        } else {
+                                            proto_tree_add_text(BCnPDU_bom_tree, next_tvb, offset_payload, rem_length, "PDU data (else) : %d ", rem_length);                                offset_payload+=rem_length;                             }
+                                            mine_init_protocol();
+                                            save_fragmented = pinfo-&gt;fragmented;
+
+      pinfo-&gt;fragmented = TRUE;
+                                        ras_calc_length+=rem_length;
+                                        proto_tree_add_text(BCnPDU_bom_tree, next_tvb, offset_payload, 1, " ras_total_length : %d", ras_total_length);
+                                        mine_frag_msg = fragment_add_seq_next(&amp;mine_reassembly_table,
+                                            next_tvb, offset_payload, pinfo, mine_seqid, NULL,rem_length, more_frags);
+pinfo-&gt;fragmented = TRUE;
+                                    save_fragmented = pinfo-&gt;fragmented;
+      break;
+
+case 0x02: // End of Message 
+                                        more_frags=FALSE;
+     rem_length = (guint32) bctsdu_length;
+                                        proto_tree_add_text(FT_BCnPDU_tree, next_tvb, offset_payload, rem_length , "PDU data : %d", rem_length);
+
+                                        offset_payload +=rem_length;
+                                        ras_calc_length+=rem_length;
+                                    disable_CRC=1;
+                                        mine_frag_msg = fragment_add_seq_next(&amp;mine_reassembly_table,next_tvb, offset_payload, pinfo, mine_seqid, NULL, rem_length, more_frags);
+
+      pinfo-&gt;fragmented = TRUE;
+                                        save_fragmented = pinfo-&gt;fragmented;
+mine_tvb = process_reassembled_data(next_tvb, offset_payload, pinfo, "Reassembled PDU", mine_frag_msg, &amp;mine_frag_items, NULL, tree );                                      
+     if (mine_tvb){
+                                        pinfo-&gt;fragmented = TRUE;
+                                        save_fragmented = pinfo-&gt;fragmented;
+                                        offset_payload=0;
+                                        ALSIGPDU(mine_tvb, pinfo, FT_BCnPDU_tree);
+        }                           offset_payload+=bctsdu_length;
+                                        ras_total_length=0;
+                                        ras_calc_length=0;                                          
+                                break;
+</code></pre></div>
+            <div class="comment-info" id="comment-38192-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Nov '14, 20:43)</span>
+                <a class="comment-user userinfo" href="/users/7392/umar">umar</a>
+                
+            </div>
+        </div>
+    
+        <a name="38201"></a>
+        <div class="comment not_top_scorer" id="comment-38201">
+            <div id="post-38201-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi</p>
+
+<p>Any one can help me on this?</p></div>
+            <div class="comment-info" id="comment-38201-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '14, 02:41)</span>
+                <a class="comment-user userinfo" href="/users/7392/umar">umar</a>
+                
+            </div>
+        </div>
+    
+        <a name="38202"></a>
+        <div class="comment" id="comment-38202">
+            <div id="post-38202-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Well it's not the way you reassamble data. Did you take a look at an exemple of reassemble in epan directory ? Take a look at an exemple in epan/dissectors.</p>
+
+<p>You don't need "case", the "mine_init_protocol()" function should not be called there. Try to look at a dissector in epan directory and keep the same code architecture for your dissector.</p></div>
+            <div class="comment-info" id="comment-38202-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '14, 02:55)</span>
+                <a class="comment-user userinfo" href="/users/5483/afrim">Afrim</a>
+                
+            </div>
+        </div>
+    
+        <a name="38203"></a>
+        <div class="comment not_top_scorer" id="comment-38203">
+            <div id="post-38203-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Afrim </p>
+
+<p>you mean this? in reassemble.c ?</p>
+
+<pre><code>  tvbuff_t *
+ process_reassembled_data(tvbuff_t *tvb, const int offset,   packet_info *pinfo,
+const char *name, fragment_head *fd_head, const fragment_items *fit,
+gboolean *update_col_infop, proto_tree *tree)
+</code></pre>
+
+<p>{
+    tvbuff_t <em>next_tvb;
+    gboolean update_col_info;
+    proto_item </em>frag_tree_item;</p>
+
+<pre><code>if (fd_head != NULL &amp;&amp; pinfo-&gt;fd-&gt;num == fd_head-&gt;reassembled_in) {
+    /*
+     * OK, we've reassembled this.
+     * Is this something that's been reassembled from more
+     * than one fragment?
+     */
+    if (fd_head-&gt;next != NULL) {
+        /*
+         * Yes.
+         * Allocate a new tvbuff, referring to the
+         * reassembled payload, and set
+         * the tvbuff to the list of tvbuffs to which
+         * the tvbuff we were handed refers, so it'll get
+         * cleaned up when that tvbuff is cleaned up.
+         */
+        next_tvb = tvb_new_chain(tvb, fd_head-&gt;tvb_data);
+
+        /* Add the defragmented data to the data source list. */
+        add_new_data_source(pinfo, next_tvb, name);
+
+        /* show all fragments */
+        if (fd_head-&gt;flags &amp; FD_BLOCKSEQUENCE) {
+            update_col_info = !show_fragment_seq_tree(
+                fd_head, fit,  tree, pinfo, next_tvb, &amp;frag_tree_item);
+        } else {
+            update_col_info = !show_fragment_tree(fd_head,
+                fit, tree, pinfo, next_tvb, &amp;frag_tree_item);
+        }
+    } else {
+        /*
+         * No.
+         * Return a tvbuff with the payload.
+         */
+        next_tvb = tvb_new_subset_remaining(tvb, offset);
+        pinfo-&gt;fragmented = FALSE;  /* one-fragment packet */
+        update_col_info = TRUE;
+    }
+    if (update_col_infop != NULL)
+        *update_col_infop = update_col_info;
+} else {
+    /*
+     * We don't have the complete reassembled payload, or this
+     * isn't the final frame of that payload.
+     */
+    next_tvb = NULL;
+
+    /*
+     * If we know what frame this was reassembled in,
+     * and if there's a field to use for the number of
+     * the frame in which the packet was reassembled,
+     * add it to the protocol tree.
+     */
+    if (fd_head != NULL &amp;&amp; fit-&gt;hf_reassembled_in != NULL) {
+        proto_tree_add_uint(tree,
+            *(fit-&gt;hf_reassembled_in), tvb,
+            0, 0, fd_head-&gt;reassembled_in);
+    }
+}
+return next_tvb;
+</code></pre>
+
+<p>}</p></div>
+            <div class="comment-info" id="comment-38203-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '14, 03:04)</span>
+                <a class="comment-user userinfo" href="/users/7392/umar">umar</a>
+                
+            </div>
+        </div>
+    
+        <a name="38206"></a>
+        <div class="comment not_top_scorer" id="comment-38206">
+            <div id="post-38206-score" class="comment-score"></div>
+            <div class="comment-text"><p>Disclaimer: I have not checked your code...
+Take a look at packet-sccp.c I think it has a pretty straight forward implementation of reassembly.</p></div>
+            <div class="comment-info" id="comment-38206-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '14, 04:44)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="38220"></a>
+        <div class="comment not_top_scorer" id="comment-38220">
+            <div id="post-38220-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Anders i have followed thew same steps and i have a condition like </p>
+
+<pre><code>    mte_frag_msg = fragment_add_seq_next(&amp;mte_reassembly_table,next_tvb, offset_payload, pinfo, mte_seqid, NULL, rem_length, more_frags);
+
+                                        save_fragmented = pinfo-&gt;fragmented;
+                                        pinfo-&gt;fragmented = TRUE;
+    mte_tvb = process_reassembled_data(next_tvb, offset_payload, pinfo, "mte Reassembled PDU", mte_frag_msg, &amp;mte_frag_items, NULL, FT_BCnPDU_tree );
+
+    if (mte_frag_msg) { /* Reassembled */
+                try_tvb=mte_tvb;
+                col_append_str(pinfo-&gt;cinfo, COL_INFO,"(Message reassembled) ");
+                    } else { /* Not last packet of reassembled message */
+                            col_append_str(pinfo-&gt;cinfo, COL_INFO,"(Message fragment) ");
+   }
+
+    if (try_tvb){
+     ALSIGPDU(try_tvb, pinfo, tree);
+  } else {
+  ALSIGPDU(next_tvb, pinfo, tree);
+}
+</code></pre>
+
+<p>Iam getting always Message Fragmented in col info. looks like Some thing wrong and a majot step i have missed. mte_frag_msg itself not succesful.  is ther any steps for diplaying in seperate tab as Reassembled data ?? Please Help!</p></div>
+            <div class="comment-info" id="comment-38220-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '14, 19:59)</span>
+                <a class="comment-user userinfo" href="/users/7392/umar">umar</a>
+                
+            </div>
+        </div>
+    
+        <a name="38221"></a>
+        <div class="comment not_top_scorer" id="comment-38221">
+            <div id="post-38221-score" class="comment-score"></div>
+            <div class="comment-text"><p>Are you stepping the sequence number for each packet and setting more_fragments to false for the last packet?</p></div>
+            <div class="comment-info" id="comment-38221-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '14, 20:36)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="38222"></a>
+        <div class="comment not_top_scorer" id="comment-38222">
+            <div id="post-38222-score" class="comment-score"></div>
+            <div class="comment-text"><p>HI </p>
+
+<p>My Sequence number set to 0 Zero. Because my packets messages always comes in order. More frags i have set to TRUE and in the last packet i made it FALSE.</p></div>
+            <div class="comment-info" id="comment-38222-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '14, 21:39)</span>
+                <a class="comment-user userinfo" href="/users/7392/umar">umar</a>
+                
+            </div>
+        </div>
+    
+        <a name="38224"></a>
+        <div class="comment" id="comment-38224">
+            <div id="post-38224-score" class="comment-score">1</div>
+            <div class="comment-text"><p>As you have first middle and last packet try setting the sequence number to 1 2 3 respectivly.</p></div>
+            <div class="comment-info" id="comment-38224-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '14, 22:32)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="38226"></a>
+        <div class="comment not_top_scorer" id="comment-38226">
+            <div id="post-38226-score" class="comment-score"></div>
+            <div class="comment-text"><p>one more doubt! my pdu length bit is 12 bit and when i stor in 32 bit gint. How one byte by byte the data stord in table? How does it copy the data into the table?</p></div>
+            <div class="comment-info" id="comment-38226-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '14, 23:56)</span>
+                <a class="comment-user userinfo" href="/users/7392/umar">umar</a>
+                
+            </div>
+        </div>
+    
+        <a name="38260"></a>
+        <div class="comment not_top_scorer" id="comment-38260">
+            <div id="post-38260-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi anyone help me on this please.</p></div>
+            <div class="comment-info" id="comment-38260-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Dec '14, 11:27)</span>
+                <a class="comment-user userinfo" href="/users/7392/umar">umar</a>
+                
+            </div>
+        </div>
+    
+        <a name="38271"></a>
+        <div class="comment not_top_scorer" id="comment-38271">
+            <div id="post-38271-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi </p>
+
+<p>Anders , ANyone Help Me please!</p>
+
+<p>I Have tried setting up seq number 1,2,3 and tried . still same. </p>
+
+<pre><code>     mte_frag_msg = fragment_add_seq_next(&amp;mte_reassembly_table,next_tvb, offset_payload, pinfo, mte_seqid, NULL, rem_length, more_frags);
+
+    mte_tvb = process_reassembled_data(next_tvb, offset_payload, pinfo, "mte Reassembled PDU", mte_frag_msg, &amp;mte_frag_items, NULL, FT_BCnPDU_tree );
+</code></pre>
+
+<p>do i need to create GHASh Table ? </p>
+
+<p>My table decleration is</p>
+
+<pre><code>   static reassembly_table mte_reassembly_table;
+</code></pre>
+
+<p>table init is </p>
+
+<pre><code>    static void mte_init_protocol(void)
+                                 {
+
+             reassembly_table_init(&amp;mte_reassembly_table, &amp;addresses_reassembly_table_functions);
+                        }
+</code></pre>
+
+<p>please help.</p></div>
+            <div class="comment-info" id="comment-38271-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Dec '14, 18:20)</span>
+                <a class="comment-user userinfo" href="/users/7392/umar">umar</a>
+                
+            </div>
+        </div>
+    
+        <a name="38279"></a>
+        <div class="comment not_top_scorer" id="comment-38279">
+            <div id="post-38279-score" class="comment-score"></div>
+            <div class="comment-text"><p>In my opinion you don't even need sequence number. i've done my own reassemble without sequence number. Btw if your col_info shows "Message reassembled" it mean that the reassemble was successfull so "mte_frag_msg" is not NULL.</p></div>
+            <div class="comment-info" id="comment-38279-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Dec '14, 05:52)</span>
+                <a class="comment-user userinfo" href="/users/5483/afrim">Afrim</a>
+                
+            </div>
+        </div>
+    
+        <a name="38286"></a>
+        <div class="comment not_top_scorer" id="comment-38286">
+            <div id="post-38286-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi I got the "message Fragmengted" in beginning of message and continuation of message. In end of message iam geting error "not reassembled" . I have the issue of counting the remaining length. In beginning of message iam haing the length of the PDU . the length iam passing to fragment_add_seq is guint 32</p>
+
+<pre><code>                mte_frag_msg = fragment_add_seq_next(&amp;mte_reassembly_table,next_tvb, offset_payload, pinfo, mte_seqid, NULL, rem_length, more_frags);
+</code></pre>
+
+<p>Is there any method to count in this value ? Iam not getting it.</p></div>
+            <div class="comment-info" id="comment-38286-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Dec '14, 18:36)</span>
+                <a class="comment-user userinfo" href="/users/7392/umar">umar</a>
+                
+            </div>
+        </div>
+    
+        <a name="38294"></a>
+        <div class="comment not_top_scorer" id="comment-38294">
+            <div id="post-38294-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Afrim,</p>
+
+<p>iam not creating a tvb in beginning of message and continuation of message. Only in End of message (last message)i have created a tvb and proceess_reassemble. iam not getting message reassembled in colinfo. </p>
+
+<p>Here i got problem. tvb itself not created because</p>
+
+<p>my code  like this </p>
+
+<pre><code>         if (mte_tvb) { /* Reassembled */
+col_append_str(pinfo-&gt;cinfo, COL_INFO,"(Message reassembled) ");             
+       } else { /* Not successful reassembled message */
+      col_append_str(pinfo-&gt;cinfo, COL_INFO,"(Message fragment ) ");
+   }
+</code></pre>
+
+<p>so tvb itself not created. please suggest.</p></div>
+            <div class="comment-info" id="comment-38294-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Dec '14, 23:04)</span>
+                <a class="comment-user userinfo" href="/users/7392/umar">umar</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-37987" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 21
+        </span>
+        <a href="#" class="show-all-comments-link">show 16 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-37987-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/37987/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='L3jZzg3PEl9nmwQb0ram0eUHVUAnz6R3' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37987/packet-reassembly-not-succesful?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37987/packet-reassembly-not-succesful?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/reassembly/"
+            class="tag-link-reassembly"
+            title="see questions tagged'reassembly'using tags"
+            rel="tag">reassembly</a> <span class="tag-number">&#215;78</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 19, 2014, 7:40 p.m.">19 Nov '14, 19:40</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,495 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 2, 2014, 11:04 p.m.">02 Dec '14, 23:04</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/344/conditional-tcp-reassembly-based-on-dscp-bits">Conditional TCP reassembly based on DSCP bits</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18443/tshark-issues-with-ip-defragmentation-sip">tshark - Issues with IP Defragmentation - SIP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33344/how-wireshark-reassembles-tcpsip-segments">How wireshark reassembles TCP/SIP segments</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44364/why-tcp-reassembly-not-successful">Why TCP reassembly not successful?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59151/how-to-reassemble-custom-protocols-with-lua">How to reassemble custom protocols with Lua?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1357/lua-tcp-reassembly">Lua TCP reassembly</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18694/is-the-rlc-reassembly-take-too-much-time">is the rlc reassembly take too much time?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34106/-w-options-changing-the-packetnot-giving-all-the-details">-w options changing the packet(not giving all the details)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44655/tcp_dissect_pdu-warning-c4013-c4024-and-c4047">tcp_dissect_pdu Warning C4013, C4024 and C4047</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59314/tcp-reassembly-issues">TCP Reassembly issues</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,765 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Decoding MPLS data - Wireshark Q&amp;A</title>
+        <meta name="description" content="Prior to upgrading to v2.2.0-0-g5368c50 from master-2.2, wireshark would decode the embedded ethernet packets that are encapsulated inside 2 layers of MPLS. Now wireshark, simply shows the embedded ethernet frames as &quot;Data&quot;. How can I configure wireshark to decode this?" />
+        <meta name="keywords" content="mpls" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/55965/decoding-mpls-data" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/55965/decoding-mpls-data?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='dvIX3S71dCfuOOodeduyUhh57uovLKuq' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/55965/decoding-mpls-data">Decoding MPLS data</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-55965-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55965/up/" rel="nofollow"> </a>
+<div id="post-55965-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55965-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55965/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/55965/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Prior to upgrading to v2.2.0-0-g5368c50 from master-2.2, wireshark would decode the embedded ethernet packets that are encapsulated inside 2 layers of MPLS.  Now wireshark, simply shows the embedded ethernet frames as "Data".  How can I configure wireshark to decode this?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/mpls/" class="post-tag tag-link-mpls"
+                                        title="see questions tagged 'mpls'" rel="tag">mpls</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Sep '16, 09:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f9bd22e9c0b43cf04c28c2715122d204?s=32&amp;d=identicon&amp;r=g" alt="yohio's gravatar image" />
+    <p><a href="/users/25514/yohio">yohio</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="yohio has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-55965">
+    
+        <a name="55968"></a>
+        <div class="comment" id="comment-55968">
+            <div id="post-55968-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hard to say without the capture file. There are several types of encapsulation of the payload into MPLS which cannot be unambiguously recognized just by the data, so all the time there were complaints like "why Wireshark is dissecting my MPLS packets as XXX when they are YYY". So my <strong>guess</strong> is that in 2.2.0, the auto-detection has been disabled completely, or just the detection algorithm has been modified.</p>
+
+<p>To know more, you'd have to publish the file, login-free, at Cloudshark or some plain file sharing service and edit your Question with a link to it.</p></div>
+            <div class="comment-info" id="comment-55968-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Sep '16, 10:46)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="55975"></a>
+        <div class="comment" id="comment-55975">
+            <div id="post-55975-score" class="comment-score"></div>
+            <div class="comment-text"><p>If I remember correctly this functionality was changed at some point, requiring you to use "Decode As" on the packets you want decoded. Not sure though.</p></div>
+            <div class="comment-info" id="comment-55975-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Sep '16, 15:05)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56026"></a>
+        <div class="comment" id="comment-56026">
+            <div id="post-56026-score" class="comment-score"></div>
+            <div class="comment-text"><p>I uploaded a snippet from the capture to cloudshark here: <a href="https://www.cloudshark.org/captures/6da65676be67">https://www.cloudshark.org/captures/6da65676be67</a></p>
+
+<p>The MPLS data is clearly encapsulated IP over ethernet 2.  I would like wireshark to automatically decode this.</p></div>
+            <div class="comment-info" id="comment-56026-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Sep '16, 08:47)</span>
+                <a class="comment-user userinfo" href="/users/25514/yohio">yohio</a>
+                
+            </div>
+        </div>
+    
+        <a name="56027"></a>
+        <div class="comment" id="comment-56027">
+            <div id="post-56027-score" class="comment-score"></div>
+            <div class="comment-text"><p>To be more clear, the MPLS data in the above capture is ethernet IP - containing GTP (UDP port 2152) which in turn encapsulates TCP traffic</p></div>
+            <div class="comment-info" id="comment-56027-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Sep '16, 09:06)</span>
+                <a class="comment-user userinfo" href="/users/25514/yohio">yohio</a>
+                
+            </div>
+        </div>
+    
+        <a name="56028"></a>
+        <div class="comment" id="comment-56028">
+            <div id="post-56028-score" class="comment-score"></div>
+            <div class="comment-text"><p>As already said - currently, you have to use <code>Decode as</code> to tell Wireshark to dissect the MPLS payload as <code>Ethernet PW (no CW)</code> for each top level MPLS label (two in your snippet, one per direction).</p>
+
+<p>This way you in fact give Wireshark the information about MPLS border router configuration for that label.</p>
+
+<p>There are so many possible MPLS payloads that no heuristic tried so far was 100% successful in recognizing them by contents, resulting in confusion as described above. Even the detection whether a control word (CW) is used or not in the pseudowire (PW) encapsulation was not always reliable.</p>
+
+<p>BTW, the use of test MAC addresses with many <code>00</code> in them, like one of yours here, is one of the reasons of the heuristic failure, because zero bits at these positions are valid for many types of payload so more than one type meets the criteria of the heuristic. So <strong>maybe</strong> (I'm not the author of the MPLS dissector) the current heuristic just says "I don't know what it is as there is more than one possibility" where the old has returned the first successful match.</p></div>
+            <div class="comment-info" id="comment-56028-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Sep '16, 09:08)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="56112"></a>
+        <div class="comment not_top_scorer" id="comment-56112">
+            <div id="post-56112-score" class="comment-score"></div>
+            <div class="comment-text"><p>Clue #1:  If offset 12 of the MPLS data contains the value 0x800 then there is a 99% chance that the MPLS data is encapsulated IP over ethernet.  I may undertake changing the MPLS decoder myself to do this based upon a new property.</p></div>
+            <div class="comment-info" id="comment-56112-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Oct '16, 15:41)</span>
+                <a class="comment-user userinfo" href="/users/25514/yohio">yohio</a>
+                
+            </div>
+        </div>
+    
+        <a name="56116"></a>
+        <div class="comment not_top_scorer" id="comment-56116">
+            <div id="post-56116-score" class="comment-score"></div>
+            <div class="comment-text"><p>First, 1% of false positives would still be way too high.</p>
+
+<p>Second, if your Ethernet frame would be encapsulated into MPLS as Ethernet pseudo-wire with control word, and the source MAC address of the payload Ethernet frame would contain <code>08:00</code> in the middle of the source MAC address (see first example below), then using your Clue #1 would end up dissecting your packet the way shown in the second example below.</p>
+
+<p>Not to be misunderstood: I'd also love to see Wireshark auto-detect everything, but false positives are much more harmful to protocol analysis than false negatives.</p>
+
+<p>So the second example is still quite good as you can see that something went wrong, but in other cases such frame could be dissected completely wrong but without any errors reported.</p>
+
+<p><code>Frame 1: 1505 bytes on wire (12040 bits), 1505 bytes captured (12040 bits)
+Ethernet II, Src: Nokia_e5:94:93 (38:52:1a:e5:94:93), Dst: Nokia_90:8e:04 (8c:90:d3:90:8e:04)
+802.1Q Virtual LAN, PRI: 0, CFI: 0, ID: 10
+MultiProtocol Label Switching Header, Label: 262118, Exp: 0, S: 0, TTL: 255
+MultiProtocol Label Switching Header, Label: 262134, Exp: 0, S: 1, TTL: 255
+PW Ethernet Control Word
+Ethernet II, Src: 18:80:08:00:97:d8 (18:80:08:00:97:d8), Dst: ae:00:00:00:00:01 (ae:00:00:00:00:01)
+    Destination: ae:00:00:00:00:01 (ae:00:00:00:00:01)
+    Source: 18:80:08:00:97:d8 (18:80:08:00:97:d8)
+    Type: IPv4 (0x0800)
+    Trailer: 926168
+Internet Protocol Version 4, Src: 10.155.182.18, Dst: 10.155.182.251
+User Datagram Protocol, Src Port: 2152, Dst Port: 2152
+GPRS Tunneling Protocol
+Internet Protocol Version 4, Src: 208.4.120.128, Dst: 64.34.170.24
+Transmission Control Protocol, Src Port: 46608, Dst Port: 80, Seq: 1, Ack: 1, Len: 1370</code></p>
+
+<p><code>Frame 1: 1505 bytes on wire (12040 bits), 1505 bytes captured (12040 bits)
+Ethernet II, Src: Nokia_e5:94:93 (38:52:1a:e5:94:93), Dst: Nokia_90:8e:04 (8c:90:d3:90:8e:04)
+802.1Q Virtual LAN, PRI: 0, CFI: 0, ID: 10
+MultiProtocol Label Switching Header, Label: 262118, Exp: 0, S: 0, TTL: 255
+MultiProtocol Label Switching Header, Label: 262134, Exp: 0, S: 1, TTL: 255
+Ethernet II, Src: 00:00:00_01:18:80 (00:00:00:01:18:80), Dst: 00:00:00_00:ae:00 (00:00:00:00:ae:00)
+    Destination: 00:00:00_00:ae:00 (00:00:00:00:ae:00)
+    Source: 00:00:00_01:18:80 (00:00:00:01:18:80)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4
+    1001 .... = Version: 9
+        [Expert Info (Error/Protocol): Bogus IPv4 version]</code></p></div>
+            <div class="comment-info" id="comment-56116-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Oct '16, 23:08)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55965" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55965-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/55965/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='dvIX3S71dCfuOOodeduyUhh57uovLKuq' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55965/decoding-mpls-data?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55965/decoding-mpls-data?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mpls/"
+            class="tag-link-mpls"
+            title="see questions tagged'mpls'using tags"
+            rel="tag">mpls</a> <span class="tag-number">&#215;25</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 28, 2016, 9:54 a.m.">28 Sep '16, 09:54</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,015 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 3, 2016, 11:08 p.m.">03 Oct '16, 23:08</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1334/how-to-set-capture-filter-for-different-mpls-label">how to set capture filter for different MPLS label</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49875/how-to-make-wireshark-parse-ethernet-frame-over-mpls-as-no-cw">How to make wireshark parse ethernet frame over MPLS as no CW?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3248/wireshark-decoder-for-mpls-tp">Wireshark decoder for MPLS-TP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50765/lua-script-to-force-interpret-mpls-payload-as-ether-frame-without-pw">lua script to force interpret mpls payload as ether frame without PW</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4723/mpls-exp-bits-have-been-renamed-traffic-class">MPLS EXP bits have been renamed &quot;Traffic Class&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51393/how-to-convert-hex-value-into-numeric-in-wireshark">How to convert hex value into numeric in Wireshark?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15139/wireshark-version-180-or-above-does-not-decode-mpls-over-ppp">Wireshark version 1.8.0 or above does not decode MPLS over PPP.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54754/mpls-problem">MPLS Problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16112/no-capture-mpls-frame">no capture mpls frame</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55189/packet-content-difference-in-different-versions">packet content difference in different versions</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

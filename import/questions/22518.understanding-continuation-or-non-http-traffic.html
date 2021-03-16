@@ -1,0 +1,864 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Understanding Continuation or non-HTTP traffic - Wireshark Q&amp;A</title>
+        <meta name="description" content="I&#39;m writing some code to integrate an in-house app into a DVR to retrieve a video file. This is all reverse engineered as there isn&#39;t any official documentation, and I&#39;m having trouble understanding the following sequence of events (captured by playing with the DVR&#39;s Android app). 936 72.985204 192...." />
+        <meta name="keywords" content="continuation,post,http" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/22518/understanding-continuation-or-non-http-traffic" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/22518/understanding-continuation-or-non-http-traffic?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='S2QK8asG2YxBjPugLJHAAfVz2esD0ZWE' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/22518/understanding-continuation-or-non-http-traffic">Understanding Continuation or non-HTTP traffic</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-22518-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22518/up/" rel="nofollow"> </a>
+<div id="post-22518-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-22518-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22518/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/22518/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm writing some code to integrate an in-house app into a DVR to retrieve a video file. This is all reverse engineered as there isn't any official documentation, and I'm having trouble understanding the following sequence of events (captured by playing with the DVR's Android app).</p>
+<pre><code>936 72.985204   192.168.0.1     192.168.0.200   HTTP    468     POST /cgi-bin/supervisor/NetworkBk.cgi HTTP/1.1  (application/x-www-form-urlencoded)
+937 72.985368   192.168.0.200   192.168.0.1     TCP     54      mit-ml-dev &gt; 41859 [ACK] Seq=1 Ack=415 Win=65535 Len=0
+938 73.933676   192.168.0.200   192.168.0.1     HTTP    275     HTTP/1.0 200 OK  (video/mpeg4)
+939 73.933983   192.168.0.1     192.168.0.200   TCP     54      41859 &gt; mit-ml-dev [ACK] Seq=415 Ack=222 Win=15544 Len=0
+940 74.004433   192.168.0.200   192.168.0.1     TCP     74      [TCP segment of a reassembled PDU]
+941 74.004887   192.168.0.1     192.168.0.200   TCP     54      41859 &gt; mit-ml-dev [ACK] Seq=415 Ack=242 Win=15544 Len=0
+942 74.024669   192.168.0.200   192.168.0.1     HTTP    1346    Continuation or non-HTTP traffic
+</code></pre>
+<p>The HTTP POST requests the video file, which then results in an HTTP 200 response consisting of the string "OK". I get confused as to what happens next. It looks like the video file comes later as part of the Continuation or non-HTTP traffic as I get a lot of these. Isn't the request complete when the HTTP 200 response is received? Why then is it continuing to receive TCP data and then getting a HTTP Continuation or non-HTTP traffic? The subsequent TCP packets contain the video file I'm intending to download. When I manually craft a HTTP POST I get the HTTP OK response and then I'm stumped. How do I access the non-HTTP packets?</p>
+<p>This is the code I use to simulate the HTTP POST.</p>
+<pre><code>import requests
+dc = {"action":"download", "start_time":"2013 7 1 13 59 00", "end_time":"2013 7 14 3 0", "num":"255", "ch":"5"}
+r = requests.post("http://192.168.0.200/cgi-bin/supervisor/NetworkBk.cgi", data=dc, auth=(username, password))
+</code></pre>
+<p>This is the RAW response of the HTTP OK reply. As far as I can tell, there is nothing there about expecting extra content. </p>
+<pre><code>HTTP/1.0 200 OK
+Date: Mon, 01 Jul 2013 15:01:34 GMT
+nServer: Linux/2.x UPnP/1.0 Avtech/1.0
+Expires: 0
+Pragma: no-cache
+Cache-Control: no-cache
+Connection: close
+Content-Type: video/mpeg4
+Content-Length: 5
+
+0
+OK
+</code></pre>
+<p>What's going on and how do I get to the Continuation or non-HTTP traffic?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/continuation/" class="post-tag tag-link-continuation"
+                                        title="see questions tagged 'continuation'" rel="tag">continuation</a>
+                                
+                                    <a href="/tags/post/" class="post-tag tag-link-post"
+                                        title="see questions tagged 'post'" rel="tag">post</a>
+                                
+                                    <a href="/tags/http/" class="post-tag tag-link-http"
+                                        title="see questions tagged 'http'" rel="tag">http</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 Jul '13, 12:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e949f61d6c30ea44c4f970ffcdc34925?s=32&amp;d=identicon&amp;r=g" alt="CadentOrange's gravatar image" />
+    <p><a href="/users/5215/cadentorange">CadentOrange</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="CadentOrange has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-22518">
+    
+</div>
+<div id="comment-tools-22518" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22518-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/22518/understanding-continuation-or-non-http-traffic?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/22518/understanding-continuation-or-non-http-traffic?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/22518/understanding-continuation-or-non-http-traffic?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/22518/understanding-continuation-or-non-http-traffic?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="22521"></a>
+                    <div id="answer-container-22521" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-22521-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22521/up/" rel="nofollow"> </a>
+<div id="post-22521-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-22521-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22521/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The HTTP data part of the response is:</p>
+<pre><code>0\r\n
+OK
+</code></pre>
+<p>Which is a response of 5 bytes. This is inline with the Content-Length header. The server should not send any more data after these 5 bytes. If it does, it is not following the RFC's. That is probably why Wireshark has some difficulty showing the HTTP data in a normal manner.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/22521/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Jul '13, 13:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-22521">
+    
+        <a name="22536"></a>
+        <div class="comment" id="comment-22536">
+            <div id="post-22536-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is what I suspected which would explain why tools like wget and my own Python code don't work as expected.</p></div>
+            <div class="comment-info" id="comment-22536-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Jul '13, 23:49)</span>
+                <a class="comment-user userinfo" href="/users/5215/cadentorange">CadentOrange</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-22521" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22521-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="22520"></a>
+                    <div id="answer-container-22520" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-22520-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22520/up/" rel="nofollow"> </a>
+<div id="post-22520-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-22520-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22520/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The 200 OK is HTTPs return code to the request you sent before - if data is to be delivered as part of the requests answer it will immediately start delivering it withing the very same packet containing the HTTP (Response) Header with the Return Code. So the 200 OK is the start of the data transmission following your request</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/22520/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Jul '13, 13:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/36b41326bff63eb5ad73a0436914e05c?s=32&amp;d=identicon&amp;r=g" alt="Landi's gravatar image" />
+    <p><a href="/users/146/landi">Landi</a><br/>
+    <span class="score" title="2269 reputation points"><span class="">2.3k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="14 badges"><span class="silver">&#9679;</span><span class="badgecount">14</span></span><span title="42 badges"><span class="bronze">&#9679;</span><span class="badgecount">42</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Landi has 28 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-22520">
+    
+        <a name="22537"></a>
+        <div class="comment" id="comment-22537">
+            <div id="post-22537-score" class="comment-score"></div>
+            <div class="comment-text"><p>I guess the part that throws me off is that the content of the HTTP OK response is 5 bytes and the connection is closed immediately after. As SYN-bit has said, this is not RFC compliant and is probably why I'm having trouble reading the response with standard tools. It looks like I will have to keep the socket open and read from it once I've got the OK response.</p></div>
+            <div class="comment-info" id="comment-22537-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Jul '13, 23:51)</span>
+                <a class="comment-user userinfo" href="/users/5215/cadentorange">CadentOrange</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-22520" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22520-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/22518/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='S2QK8asG2YxBjPugLJHAAfVz2esD0ZWE' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/22518/understanding-continuation-or-non-http-traffic?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/22518/understanding-continuation-or-non-http-traffic?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/http/"
+            class="tag-link-http"
+            title="see questions tagged'http'using tags"
+            rel="tag">http</a> <span class="tag-number">&#215;293</span><br/>
+        
+        <a href="/tags/post/"
+            class="tag-link-post"
+            title="see questions tagged'post'using tags"
+            rel="tag">post</a> <span class="tag-number">&#215;31</span><br/>
+        
+        <a href="/tags/continuation/"
+            class="tag-link-continuation"
+            title="see questions tagged'continuation'using tags"
+            rel="tag">continuation</a> <span class="tag-number">&#215;11</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 1, 2013, 12:57 p.m.">01 Jul '13, 12:57</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>17,953 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 1, 2013, 11:51 p.m.">01 Jul '13, 23:51</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/7268/http-continuation-vs-tcp-segment">HTTP Continuation vs. TCP segment</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37296/tshark-not-displaying-http-traffic-fully">tshark not displaying http traffic fully</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8028/variable-name-in-post-request">Variable name in POST request</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54318/extract-http-post-packets-using-tshark">Extract HTTP POST packets using tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58282/how-can-i-capture-http-request-post-packet-and-post-data-continuation-packet">How Can I capture http request POST packet and POST data (Continuation) packet?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7738/why-cant-i-see-post-or-get-http-statements">Why can&#39;t I see POST or GET HTTP statements?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47003/tcp-out-of-sequence-on-http-post">TCP out of sequence on HTTP POST</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47015/howto-capture-live-mms-traffic-without-big-logfiles">Howto capture live MMS traffic without BIG logfiles?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8565/how-to-find-out-passwords-in-continuation-or-non-http-traffic">how to find out passwords in continuation or non- http traffic?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15468/wireless-http-getpost-not-seen-in-80211g-mode">Wireless HTTP GET/POST not seen in 802.11g mode ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

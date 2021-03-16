@@ -1,0 +1,1124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Does WireShark/Windows ignore the hosts file? - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, i&#39;m using wireshark (Windows 10 Pro x64 1607) to track my internet traffic and after 10 hours i got 30 outgoing hostnames (after some filtering) which i want to block, so i add them to my hosts file: 0.0.0.0 localhost 0.0.0.0 gateway.skyprod.akadns.net 0.0.0.0 db5wns1b.wns.windows.com 0.0.0.0 ts..." />
+        <meta name="keywords" content="outgoing,hostnames,block,dns,wireshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/56661/does-wiresharkwindows-ignore-the-hosts-file" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/56661/does-wiresharkwindows-ignore-the-hosts-file?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='IulMWuPxPwQ3hprVd6Ds8nyghwgxWXN6' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/56661/does-wiresharkwindows-ignore-the-hosts-file">Does WireShark/Windows ignore the hosts file?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-56661-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56661/up/" rel="nofollow"> </a>
+<div id="post-56661-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-56661-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56661/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/56661/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,
+i'm using wireshark (Windows 10 Pro x64 1607) to track my internet traffic and after 10 hours i got 30 <strong>outgoing</strong> hostnames (after some filtering) which i want to block, so i add them to my hosts file:</p>
+<p>0.0.0.0 localhost<br>
+0.0.0.0 gateway.skyprod.akadns.net<br>
+0.0.0.0 db5wns1b.wns.windows.com<br>
+0.0.0.0 tsfe.tsws.mp.microsoft.com.nsatc.net<br>
+0.0.0.0 DB5SCH101100127.wns.windows.com<br>
+0.0.0.0 msnbot-191-232-139-174.search.msn.com<br>
+0.0.0.0 time.microsoft.akadns.net<br>
+0.0.0.0 login.live.com.nsatc.net<br>
+0.0.0.0 fe2.update.microsoft.com.nsatc.net<br>
+0.0.0.0 sls.update.microsoft.com.nsatc.net<br>
+0.0.0.0 fe3.delivery.dsp.mp.microsoft.com.nsatc.net<br>
+0.0.0.0 a1856.dspw65.akamai.net<br>
+0.0.0.0 a767.dscd.akamai.net<br>
+0.0.0.0 a1683.dspw65.akamai.net<br>
+0.0.0.0 e10198.b.akamaiedge.net<br>
+0.0.0.0 db5.settings.data.microsoft.com.akadns.net<br>
+0.0.0.0 fg.download.windowsupdate.com.c.footprint.net<br>
+0.0.0.0 e9659.dspg.akamaiedge.net<br>
+0.0.0.0 c-0001.c-msedge.net<br>
+0.0.0.0 4-c-0003.c-msedge.net<br>
+0.0.0.0 a1621.g.akamai.net<br>
+0.0.0.0 g.msn.com.nsatc.net<br>
+0.0.0.0 msnbot-191-232-139-174.search.msn.com<br>
+0.0.0.0 a23-60-200-231.deploy.static.akamaitechnologies.com<br>
+</p>
+<p>At least i disabled the service DNS-Client.
+After that i restarted the tracking with wireshark over 10 hours and after filtering again i got the same hostnames. I think that the hosts file works because when i ping the hostnames "ping a1621.g.akamai.net" its unreachable. Now iam confused. Can someone explain whats wrong here...why wireshark tracks the same hostnames which i already blocked?</p>
+<p>Thanks in advance :)</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/outgoing/" class="post-tag tag-link-outgoing"
+                                        title="see questions tagged 'outgoing'" rel="tag">outgoing</a>
+                                
+                                    <a href="/tags/hostnames/" class="post-tag tag-link-hostnames"
+                                        title="see questions tagged 'hostnames'" rel="tag">hostnames</a>
+                                
+                                    <a href="/tags/block/" class="post-tag tag-link-block"
+                                        title="see questions tagged 'block'" rel="tag">block</a>
+                                
+                                    <a href="/tags/dns/" class="post-tag tag-link-dns"
+                                        title="see questions tagged 'dns'" rel="tag">dns</a>
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Oct '16, 15:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a056611ad554055cb676db5f2feb53c8?s=32&amp;d=identicon&amp;r=g" alt="Trolleule's gravatar image" />
+    <p><a href="/users/26034/trolleule">Trolleule</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Trolleule has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-56661">
+    
+        <a name="56669"></a>
+        <div class="comment" id="comment-56669">
+            <div id="post-56669-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is that the <em>Windows</em> hosts file (<code>%SystemRoot%\System32\drivers\etc\hosts</code>, on all NT versions - so including Windows 10 - if the Wikipedia article is to be believed)?</p></div>
+            <div class="comment-info" id="comment-56669-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '16, 23:19)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56706"></a>
+        <div class="comment" id="comment-56706">
+            <div id="post-56706-score" class="comment-score"></div>
+            <div class="comment-text"><p>yes it is. The path is %SystemRoot%\System32\drivers\etc\hosts</p></div>
+            <div class="comment-info" id="comment-56706-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '16, 09:44)</span>
+                <a class="comment-user userinfo" href="/users/26034/trolleule">Trolleule</a>
+                
+            </div>
+        </div>
+    
+        <a name="56707"></a>
+        <div class="comment" id="comment-56707">
+            <div id="post-56707-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is the entry <code>0.0.0.0 localhost</code> going to be helpful?</p></div>
+            <div class="comment-info" id="comment-56707-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '16, 10:20)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56708"></a>
+        <div class="comment" id="comment-56708">
+            <div id="post-56708-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb">@grahamb</a>, my understanding of the quest is the following: to prevent connections to some server (fqdn) from establishing, instead of using an external firewall, we use a record in <code>hosts</code> file, believing it will prevent the machine from resolving the fqdn using an external DNS. Therefore, the 0.0.0.0 may be a good value if the whole model works.</p>
+
+<p>Wireshark is used here as a tool to verify whether it works or not.</p>
+
+<p><a href="/users/26034/trolleule">@Trolleule</a>, I am afraid some caching in browser may interfere with the idea, as you say that <code>ping f.qd.n</code> indicates that the idea works, while the browser still manages to establish the sessions.</p></div>
+            <div class="comment-info" id="comment-56708-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '16, 10:48)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="56709"></a>
+        <div class="comment" id="comment-56709">
+            <div id="post-56709-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy"></a><a href="/users/19586/sindy">@sindy</a>, I understand the intent, playing whack-a-mole with MS "phone-home" connections, but still don't think that null routing <code>localhost</code> is going to be a good idea.</p></div>
+            <div class="comment-info" id="comment-56709-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '16, 11:18)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56714"></a>
+        <div class="comment not_top_scorer" id="comment-56714">
+            <div id="post-56714-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy"></a><a href="/users/19586/sindy">@sindy</a> i think iam lacking in basic Windows/Network knowledge cause i don't understand, why the browser relates to these connections that i try to block :/
+like <a href="/users/1225/grahamb"></a><a href="/users/1225/grahamb"></a><a href="/users/1225/grahamb"></a><a href="/users/1225/grahamb">@grahamb</a> said the intent is to stop that w10 spy and the only way i know to prove that is currently wireshark -&gt; "Wireshark is used here as a tool to verify whether it works or not."</p>
+
+<p>so thats the reason why i dont understand the role the browser has in this case? -&gt; i don't want to block internet sites, i want to block the hidden traffic of windows.</p>
+
+<p><a href="/users/1225/grahamb"></a><a href="/users/1225/grahamb"></a><a href="/users/1225/grahamb"></a><a href="/users/1225/grahamb">@grahamb</a> i will delete the "0.0.0.0 localhost" entry...that was only hopeless try :D</p></div>
+            <div class="comment-info" id="comment-56714-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '16, 13:53)</span>
+                <a class="comment-user userinfo" href="/users/26034/trolleule">Trolleule</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56661" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56661-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/56661/does-wiresharkwindows-ignore-the-hosts-file?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/56661/does-wiresharkwindows-ignore-the-hosts-file?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/56661/does-wiresharkwindows-ignore-the-hosts-file?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/56661/does-wiresharkwindows-ignore-the-hosts-file?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="56710"></a>
+                    <div id="answer-container-56710" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-56710-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56710/up/" rel="nofollow"> </a>
+<div id="post-56710-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-56710-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56710/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The answer to your question is "yes".  Wireshark does address -&gt; host name resolution by itself, rather than by relying on the OS's resolution routines, and does it using its own hosts file (if you've provided one - Wireshark doesn't ship with one), your own personal hosts file (if you've provided one), and <a href="https://c-ares.haxx.se">the C-ARES DNS resolution library</a>.  It does <em>not</em> use the system's hosts file.</p>
+<p>And this isn't just on Windows - it's the same on UN*Xes.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/56710/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Oct '16, 11:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-56710">
+    
+        <a name="56716"></a>
+        <div class="comment" id="comment-56716">
+            <div id="post-56716-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you. Consider pls that iam not interested in resolving ips. I use the windows hosts file to block hostnames. But if we mean the same: does this mean that my hosts file solution block the traffic but only wireshark still tracks these connections cause it ignores the file. So how can i check if the hidden traffic is really blocked ?</p></div>
+            <div class="comment-info" id="comment-56716-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '16, 14:00)</span>
+                <a class="comment-user userinfo" href="/users/26034/trolleule">Trolleule</a>
+                
+            </div>
+        </div>
+    
+        <a name="56718"></a>
+        <div class="comment" id="comment-56718">
+            <div id="post-56718-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>does this mean that my hosts file solution block the traffic but only wireshark still tracks these connections cause it ignores the file.</p>
+</blockquote>
+
+<p>Probably not.  If Wireshark is showing packets going to those host names, it probably means that, for whatever reason, your machine is still trying to contact those hosts.  Perhaps some software has their IP addresses saved somewhere.  Perhaps there are <em>incoming</em> connections or other <em>incoming</em> packets <em>from</em> those hosts, so that your machine gets the IP address from there.</p></div>
+            <div class="comment-info" id="comment-56718-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '16, 14:19)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56755"></a>
+        <div class="comment" id="comment-56755">
+            <div id="post-56755-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hmm iam helpless now :/ Meanwhile i did some further tweaks and tests:<br>
+ 1. I have the hosts file, that seems to work cause pings are unreachable<br>
+ 2. The router iam using is a Fritzbox 4790 and i added these hostnames to a blacklist that i can assign to the standard user profile<br>
+ 3. I unchecked IPv6 in LAN adapter properties<br>
+ 4. I played around woith windows firewall, blocked internet explorer and edge<br>
+</p>
+
+<p>I took some screenshots, i think they are helpfully:<br>
+<a href="http://imageshack.com/a/img922/3200/lgoF6N.png">http://imageshack.com/a/img922/3200/lgoF6N.png</a><br>
+<a href="http://imageshack.com/a/img922/4277/Yc3O2R.png">http://imageshack.com/a/img922/4277/Yc3O2R.png</a><br>
+<a href="http://imageshack.com/a/img922/2189/fQnWTZ.png">http://imageshack.com/a/img922/2189/fQnWTZ.png</a><br>
+<a href="http://imageshack.com/a/img923/2483/MbLJIh.png">http://imageshack.com/a/img923/2483/MbLJIh.png</a><br>
+<a href="http://imageshack.com/a/img922/2471/8m5QPU.png">http://imageshack.com/a/img922/2471/8m5QPU.png</a><br>
+<a href="http://imageshack.com/a/img921/7680/PmWG8U.png">http://imageshack.com/a/img921/7680/PmWG8U.png</a><br>
+<a href="http://imageshack.com/a/img923/8880/DdJtca.png">http://imageshack.com/a/img923/8880/DdJtca.png</a><br>
+<a href="http://imageshack.com/a/img924/3395/BdbT3R.png">http://imageshack.com/a/img924/3395/BdbT3R.png</a><br>
+</p>
+
+<p>When i start capturing with wireshark over 5 hours, still getting these hostnames :/
+Does somone have an idea what i can try now?</p></div>
+            <div class="comment-info" id="comment-56755-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 14:37)</span>
+                <a class="comment-user userinfo" href="/users/26034/trolleule">Trolleule</a>
+                
+            </div>
+        </div>
+    
+        <a name="56756"></a>
+        <div class="comment" id="comment-56756">
+            <div id="post-56756-score" class="comment-score"></div>
+            <div class="comment-text"><p>What exactly means you are "getting those hostnames"? To me, it should mean that the IP addresses to which these hostnames resolve occur in your captures, and Wireshark reverse-translates them to hostnames (or, more precisely, fqdns).</p>
+
+<p>Now can you see from the capture whether the information exchanges with these IPs are initiated by your PC or by that IP?</p>
+
+<p>I've missed that you were attempting to handle the "Windows 10 calling home" issue, so I've mentioned browser cache, but Windows may also cache DNS responses (and, unlike in the browser, it won't be easy to empty their cache).</p>
+
+<p>Blocking Internet Explorer and Edge doesn't prevent the Microsoft Update or some other background process from establishing connections - the browsers are just applications like any other one, not the sole channels to internet which all other applications would have to use to get there.</p></div>
+            <div class="comment-info" id="comment-56756-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 14:45)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="56757"></a>
+        <div class="comment" id="comment-56757">
+            <div id="post-56757-score" class="comment-score"></div>
+            <div class="comment-text"><p>"To me, it should mean that the IP addresses to which these hostnames resolve occur in your captures, and Wireshark reverse-translates them to hostnames (or, more precisely, fqdns)." -&gt; yes thats what i mean. One of the screenshots shows the query i did with phpmyadmin (all outgoing ips with ports and hostnames that i captured within the 5 hours).</p>
+
+<p>"Now can you see from the capture whether the information exchanges with these IPs are initiated by your PC or by that IP?" I dont really understand the question, sorry...engl is not my mother lang :/ maybe it helps if you have a look on the screenshot with the phpmyadmin query</p>
+
+<p>Btw i disabled the windows service DNS Client.</p></div>
+            <div class="comment-info" id="comment-56757-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 15:28)</span>
+                <a class="comment-user userinfo" href="/users/26034/trolleule">Trolleule</a>
+                
+            </div>
+        </div>
+    
+        <a name="56763"></a>
+        <div class="comment not_top_scorer" id="comment-56763">
+            <div id="post-56763-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Btw i disabled the windows service DNS Client.</p>
+</blockquote>
+
+<p>That won't affect Wireshark, which uses its own DNS client.</p></div>
+            <div class="comment-info" id="comment-56763-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 16:11)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56764"></a>
+        <div class="comment not_top_scorer" id="comment-56764">
+            <div id="post-56764-score" class="comment-score"></div>
+            <div class="comment-text"><p>None of the screenshots help, as none of them are Wireshark screenshots.</p>
+
+<p>You said</p>
+
+<blockquote>
+<p>After that i restarted the tracking with wireshark over 10 hours and after filtering again i got the same hostnames.</p>
+</blockquote>
+
+<p>Could you show a screenshot from that, where Wireshark is displaying those host names?</p></div>
+            <div class="comment-info" id="comment-56764-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 16:14)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56765"></a>
+        <div class="comment not_top_scorer" id="comment-56765">
+            <div id="post-56765-score" class="comment-score"></div>
+            <div class="comment-text"><p>of course :)<br>
+<a href="http://imageshack.com/a/img923/6486/ZTh3MH.png">http://imageshack.com/a/img923/6486/ZTh3MH.png</a><br>
+<a href="http://imageshack.com/a/img924/5884/mLEuVX.png">http://imageshack.com/a/img924/5884/mLEuVX.png</a><br>
+</p>
+
+<p>hope this helps</p>
+
+<p>Edit: <a href="http://imageshack.com/a/img922/1386/UlwoN1.png">http://imageshack.com/a/img922/1386/UlwoN1.png</a><br>
+if you need the information col</p></div>
+            <div class="comment-info" id="comment-56765-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 17:24)</span>
+                <a class="comment-user userinfo" href="/users/26034/trolleule">Trolleule</a>
+                
+            </div>
+        </div>
+    
+        <a name="56766"></a>
+        <div class="comment not_top_scorer" id="comment-56766">
+            <div id="post-56766-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, it indicates that editing the hosts file does not prevent some piece of software on 192.168.178.51 from sending traffic to 157.55.240.89.  Trying to look up that IP address on my machine fails, and attempting to resolve the host name "sls.update.microsoft.com" gets 134.170.51.188, but perhaps Microsoft resolves sls.update.microsoft.com resolves to different addresses at different times or in different locations.</p></div>
+            <div class="comment-info" id="comment-56766-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 17:38)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56767"></a>
+        <div class="comment not_top_scorer" id="comment-56767">
+            <div id="post-56767-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think if i would block some of these IPs, windows would take another route and we don't know how often one blocked IP will be replaced with another one :/  so thats the reason why i try to block the hostname instead of the IP -&gt; correct me if iam wrong...a host like sls.update.microsoft.com.nsatc.net can be resolved to serveral IPs or?</p>
+
+<p>As you can see here...same hostname<br>
+<a href="http://imageshack.com/a/img924/5884/mLEuVX.png">http://imageshack.com/a/img924/5884/mLEuVX.png</a><br>
+</p>
+
+<p>191.234.72.183 fe2.update.microsoft.com.nsatc.net<br>
+134.170.58.125 fe2.update.microsoft.com.nsatc.net<br>
+</p>
+
+<p>What would you suggest now?</p></div>
+            <div class="comment-info" id="comment-56767-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 19:56)</span>
+                <a class="comment-user userinfo" href="/users/26034/trolleule">Trolleule</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56710" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56710-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/56661/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='IulMWuPxPwQ3hprVd6Ds8nyghwgxWXN6' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56661/does-wiresharkwindows-ignore-the-hosts-file?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56661/does-wiresharkwindows-ignore-the-hosts-file?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+        <a href="/tags/dns/"
+            class="tag-link-dns"
+            title="see questions tagged'dns'using tags"
+            rel="tag">dns</a> <span class="tag-number">&#215;109</span><br/>
+        
+        <a href="/tags/outgoing/"
+            class="tag-link-outgoing"
+            title="see questions tagged'outgoing'using tags"
+            rel="tag">outgoing</a> <span class="tag-number">&#215;13</span><br/>
+        
+        <a href="/tags/block/"
+            class="tag-link-block"
+            title="see questions tagged'block'using tags"
+            rel="tag">block</a> <span class="tag-number">&#215;12</span><br/>
+        
+        <a href="/tags/hostnames/"
+            class="tag-link-hostnames"
+            title="see questions tagged'hostnames'using tags"
+            rel="tag">hostnames</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 25, 2016, 3:35 p.m.">25 Oct '16, 15:35</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,907 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 27, 2016, 7:57 p.m.">27 Oct '16, 19:57</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/18469/dns-leak-looking-up-own-hostname-with-dns-queries">DNS leak: Looking up own hostname with DNS queries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28775/block-an-ip-with-iptables">block an ip with iptables</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45968/resolving-server-from-dns">Resolving server from DNS?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31573/question-on-dns-query-type">Question on DNS Query Type</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46093/vpn-and-wireshark">VPN and wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5303/how-to-capture-dns-packets-for-external-addresses">How to capture DNS packets for external addresses</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54013/dns-request-duplicating">dns request duplicating</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27/are-this-questions-for-users-or-developers">Are this questions for Users or Developers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1230/after-updating-mac-ports-wireshark-is-dead">after updating mac ports wireshark is dead!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2091/wireshark-built-in-dissector-needs-to-be-changed-to-a-plugin">Wireshark built in dissector needs to be changed to a plugin??</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

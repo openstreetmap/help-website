@@ -1,0 +1,910 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>SSL Record Layer vs SSLv3 Record Layer - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, I have two captures, one of an successful SSL handshake, and one of an unsuccessful SSL handshake (server never responded with server hello but instead sent a FIN,ACK). The successful one displays in wireshark protocol column as SSLv3, and in the decoding window shows like so: Secure Socket Laye..." />
+        <meta name="keywords" content="ssl,sslv3,wireshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/14419/ssl-record-layer-vs-sslv3-record-layer" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/14419/ssl-record-layer-vs-sslv3-record-layer?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='m4oWCjca65rH5eBwJDMXu1Rt9t2yPPbJ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/14419/ssl-record-layer-vs-sslv3-record-layer">SSL Record Layer vs SSLv3 Record Layer</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-14419-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/14419/up/" rel="nofollow"> </a>
+<div id="post-14419-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-14419-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/14419/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/14419/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I have two captures, one of an successful SSL handshake, and one of an unsuccessful SSL handshake (server never responded with server hello but instead sent a FIN,ACK).</p>
+<p>The successful one displays in wireshark protocol column as SSLv3, and in the decoding window shows like so:</p>
+<pre><code>Secure Socket Layer
+    SSLv3 Record Layer: Handshake Protocol: Client Hello
+        Content Type: Handshake (22)
+        Version: SSL 3.0 (0x0300)
+        Length: 117
+        Handshake Protocol: Client Hello
+</code></pre>
+<p>The unsuccessful one shows in wireshark protocol column as merely SSL (not SSLv3), and in the decoding window as:</p>
+<pre><code>Secure Socket Layer
+    SSL Record Layer: Handshake Protocol: Client Hello
+        Content Type: Handshake (22)
+        Version: SSL 3.0 (0x0300)
+        Length: 117
+        Handshake Protocol: Client Hello
+</code></pre>
+<p>Both have SSL3.0 in the version field, so what subtle difference is wireshark detecting that makes it display as SSL rather than SSLv3 ?</p>
+<p>Thanks in advance for any help you can offer.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ssl/" class="post-tag tag-link-ssl"
+                                        title="see questions tagged 'ssl'" rel="tag">ssl</a>
+                                
+                                    <a href="/tags/sslv3/" class="post-tag tag-link-sslv3"
+                                        title="see questions tagged 'sslv3'" rel="tag">sslv3</a>
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Sep '12, 02:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dff1ae27592f30f7991ebdd5aa3898ed?s=32&amp;d=identicon&amp;r=g" alt="adrian777uk's gravatar image" />
+    <p><a href="/users/3476/adrian777uk">adrian777uk</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="adrian777uk has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-14419">
+    
+</div>
+<div id="comment-tools-14419" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-14419-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/14419/ssl-record-layer-vs-sslv3-record-layer?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/14419/ssl-record-layer-vs-sslv3-record-layer?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/14419/ssl-record-layer-vs-sslv3-record-layer?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/14419/ssl-record-layer-vs-sslv3-record-layer?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="14422"></a>
+                    <div id="answer-container-14422" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-14422-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/14422/up/" rel="nofollow"> </a>
+<div id="post-14422-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-14422-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/14422/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The subtle difference is (without looking at the actual trace, so I might be wrong) that in the unsuccesful case, the SSL record has version 2 and the SSL handshake message has version 3.0. Does your SSL record start with 0x80 or with 0x16?</p>
+<p>In the transition from SSLv2 to SSLv3 backward compatibility was ensured by using a SSLv2 record layer header. But today most servers won't allow (the insecure) SSLv2 protocol, so if the client tries a SSLv2 compatible handshake, the server just denies the connection.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/14422/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Sep '12, 03:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-14422">
+    
+        <a name="14423"></a>
+        <div class="comment" id="comment-14423">
+            <div id="post-14423-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks. I think they both start with 22 (0x16) as they both have </p>
+
+<pre><code>    Content Type: Handshake (22)
+    Version: SSL 3.0 (0x0300)
+</code></pre>
+
+<p>in the header. Here's a more comprehensive dump of the unsuccessful one:</p>
+
+<pre><code>No.     Time            Source                Destination           Protocol Info
+    542 16:06:25.801354 172.16.0.15           10.185.116.11         SSL      Client Hello
+
+Frame 542 (176 bytes on wire, 176 bytes captured)
+Internet Protocol, Src: 172.16.0.15 (172.16.0.15), Dst: 10.185.116.11 (10.185.116.11)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 162
+    Identification: 0xb641 (46657)
+    Flags: 0x02 (Don't Fragment)
+        0.. = Reserved bit: Not Set
+        .1. = Don't fragment: Set
+        ..0 = More fragments: Not Set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x5931 [correct]
+        [Good: True]
+        [Bad : False]
+    Source: 172.16.0.15 (172.16.0.15)
+    Destination: 10.185.116.11 (10.185.116.11)
+Transmission Control Protocol, Src Port: 39767 (39767), Dst Port: https (443), Seq: 1, Ack: 1, Len: 122
+    Source port: 39767 (39767)
+    Destination port: https (443)
+    [Stream index: 2]
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 123    (relative sequence number)]
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x18 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgement: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 5440
+    Checksum: 0x41dd [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [Number of bytes in flight: 122]
+Secure Socket Layer
+    SSL Record Layer: Handshake Protocol: Client Hello
+        Content Type: Handshake (22)
+        Version: SSL 3.0 (0x0300)
+        Length: 117
+        Handshake Protocol: Client Hello
+            Handshake Type: Client Hello (1)
+            Length: 113
+            Version: SSL 3.0 (0x0300)
+            Random
+                gmt_unix_time: Sep 10, 2012 16:06:25.000000000
+                random_bytes: BF21E5DA81585DA77701ED324B3A8C03938A4375A6EFB741...
+            Session ID Length: 32
+            Session ID: 37DFA6901134DA4015FD365E790211A85D98C05504D18347...
+            Cipher Suites Length: 42
+            Cipher Suites (21 suites)
+            Compression Methods Length: 1
+            Compression Methods (1 method)
+                Compression Method: null (0)
+</code></pre>
+
+<p>and the successful one:</p>
+
+<pre><code>No.     Time                       Source                Destination           Protocol Info
+    401 2012-09-21 09:45:04.539900 172.16.100.10         10.185.116.11         SSLv3    Client Hello
+
+Frame 401 (176 bytes on wire, 176 bytes captured)
+Internet Protocol, Src: 172.16.100.10 (172.16.100.10), Dst: 10.185.116.11 (10.185.116.11)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 162
+    Identification: 0x92ff (37631)
+    Flags: 0x02 (Don't Fragment)
+        0.. = Reserved bit: Not Set
+        .1. = Don't fragment: Set
+        ..0 = More fragments: Not Set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (0x06)
+    Header checksum: 0x1878 [correct]
+    Source: 172.16.100.10 (172.16.100.10)
+    Destination: 10.185.116.11 (10.185.116.11)
+Transmission Control Protocol, Src Port: 33386 (33386), Dst Port: https (443), Seq: 1, Ack: 1, Len: 122
+    Source port: 33386 (33386)
+    Destination port: https (443)
+    [Stream index: 2]
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 123    (relative sequence number)]
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x18 (PSH, ACK)
+        0... .... = Congestion Window Reduced (CWR): Not set
+        .0.. .... = ECN-Echo: Not set
+        ..0. .... = Urgent: Not set
+        ...1 .... = Acknowledgement: Set
+        .... 1... = Push: Set
+        .... .0.. = Reset: Not set
+        .... ..0. = Syn: Not set
+        .... ...0 = Fin: Not set
+    Window size: 5840
+    Checksum: 0xb900 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [Number of bytes in flight: 122]
+Secure Socket Layer
+    SSLv3 Record Layer: Handshake Protocol: Client Hello
+        Content Type: Handshake (22)
+        Version: SSL 3.0 (0x0300)
+        Length: 117
+        Handshake Protocol: Client Hello
+            Handshake Type: Client Hello (1)
+            Length: 113
+            Version: SSL 3.0 (0x0300)
+            Random
+                gmt_unix_time: Sep 21, 2012 09:45:04.000000000
+                random_bytes: 6AEA044A8357E2C4599E20EAB712601A1C224D3B63C4F2B4...
+            Session ID Length: 32
+            Session ID: 1C2938C6CCE3EA7E117CAC9623B9B0DC17E13E480B166D26...
+            Cipher Suites Length: 42
+            Cipher Suites (21 suites)
+            Compression Methods Length: 1
+            Compression Methods (1 method)
+                Compression Method: null (0)
+</code></pre></div>
+            <div class="comment-info" id="comment-14423-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Sep '12, 03:50)</span>
+                <a class="comment-user userinfo" href="/users/3476/adrian777uk">adrian777uk</a>
+                
+            </div>
+        </div>
+    
+        <a name="14425"></a>
+        <div class="comment" id="comment-14425">
+            <div id="post-14425-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, I just tested it myself, Wireshark will only set the info column to SSLv3 when it sees the ServerHello. I think this is due to the SSLv2, SSLv3 scenario I sketched in my first response. So in fact you have two (almost) identical ClientHello's.</p>
+
+<p>Then it is either the source IP which might not be allowed to connect or the server might limit the amount of connections? What kind of server are you running? Does the FIN come straight after the ClientHello or is there a delay between them?</p></div>
+            <div class="comment-info" id="comment-14425-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Sep '12, 04:09)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-14422" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-14422-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/14419/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='m4oWCjca65rH5eBwJDMXu1Rt9t2yPPbJ' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/14419/ssl-record-layer-vs-sslv3-record-layer?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/14419/ssl-record-layer-vs-sslv3-record-layer?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+        <a href="/tags/ssl/"
+            class="tag-link-ssl"
+            title="see questions tagged'ssl'using tags"
+            rel="tag">ssl</a> <span class="tag-number">&#215;319</span><br/>
+        
+        <a href="/tags/sslv3/"
+            class="tag-link-sslv3"
+            title="see questions tagged'sslv3'using tags"
+            rel="tag">sslv3</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 21, 2012, 2:39 a.m.">21 Sep '12, 02:39</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>12,204 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 21, 2012, 4:10 a.m.">21 Sep '12, 04:10</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/15117/tls_empty_renegotiation_info_scsv-query">TLS_EMPTY_RENEGOTIATION_INFO_SCSV query</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38718/getting-strange-ssl-record-size">Getting strange SSL record size</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35600/not-able-to-configure-wireshark-with-gnutls">Not able to configure Wireshark with gnutls!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28145/cant-decrypt-ssl-in-capture-from-windump">Can&#39;t decrypt ssl in capture from windump</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23449/wireshark-ssl-and-tlsv1-protocol">Wireshark SSL and TLSv1 protocol</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37949/examples-of-wireshark-dissectors-run-on-top-of-ssl">Examples of Wireshark dissectors run on top of SSL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40386/some-detective-expert-help-needed-puzzle-with-lost-packets">Some detective expert help needed: puzzle with lost packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62441/decrypt-secure-web-socket-traffic-not-working">Decrypt Secure Web Socket traffic not working</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61629/decrypt-ssl-traffic-from-android-device-emulator">Decrypt SSL traffic from Android Device (Emulator)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10324/how-to-view-the-encrypted-key-during-ssl-key-exchange">How to view the encrypted key during ssl key exchange?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,983 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Why is message Time To Live only 1? - Wireshark Q&amp;A</title>
+        <meta name="description" content="About half of my packets are window size 32768 and TTL = 64, which is what I would expect. I&#39;m on a dedicated VLAN for iSCSI. The other half of my packets are window size 524 and TTL = 1. All these packets come from one host. Like I said, this is a dedicated non-routed VLAN. The customer is experien..." />
+        <meta name="keywords" content="analysis" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/11309/why-is-message-time-to-live-only-1" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/11309/why-is-message-time-to-live-only-1?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='lqC6WpwoI5RogyjU0bPJwAueeu0Epayg' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/11309/why-is-message-time-to-live-only-1">Why is message Time To Live only 1?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-11309-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11309/up/" rel="nofollow"> </a>
+<div id="post-11309-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-11309-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11309/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/11309/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>About half of my packets are window size 32768 and TTL = 64, which is what I would expect. I'm on a dedicated VLAN for iSCSI. The other half of my packets are window size 524 and TTL = 1. All these packets come from one host. Like I said, this is a dedicated non-routed VLAN.
+The customer is experiencing latency issues across the board from several hosts. I'll be getting a network capture from a second host today.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/analysis/" class="post-tag tag-link-analysis"
+                                        title="see questions tagged 'analysis'" rel="tag">analysis</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 May '12, 06:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a472d068843eefd8a4ef69c4f94e4160?s=32&amp;d=identicon&amp;r=g" alt="gipper's gravatar image" />
+    <p><a href="/users/2732/gipper">gipper</a><br/>
+    <span class="score" title="30 reputation points">30</span><span title="12 badges"><span class="badge1">&#9679;</span><span class="badgecount">12</span></span><span title="12 badges"><span class="silver">&#9679;</span><span class="badgecount">12</span></span><span title="16 badges"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="gipper has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/11309/">
+                edited
+                <strong>25 May '12, 10:41</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/362ba1008ad9a075d1556d33e97dfed6?s=32&amp;d=identicon&amp;r=g" alt="helloworld's gravatar image" />
+            <p><a href="/users/817/helloworld">helloworld</a><br/>
+            <span class="score" title="3149 reputation points"><span class="">3.1k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="20 badges"><span class="silver">&#9679;</span><span class="badgecount">20</span></span><span title="41 badges"><span class="bronze">&#9679;</span><span class="badgecount">41</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-11309">
+    
+        <a name="11310"></a>
+        <div class="comment" id="comment-11310">
+            <div id="post-11310-score" class="comment-score"></div>
+            <div class="comment-text"><p>...and your question is what exactly? :-)</p>
+
+<p>You should either provide a trace (keep in mind that you might expose sensitive data) via <a href="http://www.cloudshark.org">www.cloudshark.org</a>, or tell us more about your observations. For example: what host is sending the TTL 1 packets, what protocol is it, which direction (to client, to server) etc.</p></div>
+            <div class="comment-info" id="comment-11310-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '12, 06:26)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11312"></a>
+        <div class="comment" id="comment-11312">
+            <div id="post-11312-score" class="comment-score"></div>
+            <div class="comment-text"><p>I suggest to do either of these:</p>
+
+<ol>
+<li>
+<p>check your routing infrastructure in the iSCSI "subnet". According to your description it's just a flat net within one VLAN, however: never trust any assumptions, so better check ;-)</p>
+</li>
+<li>
+<p>figure out the vendor of that device and contact their support (regarding the TTL and the window size). Maybe they already know this (bug or something)</p>
+</li>
+<li>
+<p>As <a href="/users/145/jasper"></a><a href="/users/145/jasper">@Jasper</a> said: if you can provide a capture sample, we might be able to help.</p>
+</li>
+</ol>
+
+<p>Regards<br>
+Kurt</p></div>
+            <div class="comment-info" id="comment-11312-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '12, 07:39)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11313"></a>
+        <div class="comment" id="comment-11313">
+            <div id="post-11313-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not sure how to attach my trace export file</p></div>
+            <div class="comment-info" id="comment-11313-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '12, 08:02)</span>
+                <a class="comment-user userinfo" href="/users/2732/gipper">gipper</a>
+                
+            </div>
+        </div>
+    
+        <a name="11314"></a>
+        <div class="comment" id="comment-11314">
+            <div id="post-11314-score" class="comment-score"></div>
+            <div class="comment-text"><ol>
+<li>
+<p>You can upload it to <a href="http://cloudshark.org">cloudshark.org</a>. BEWARE: You cannot delete an uploaded file. </p>
+</li>
+<li>
+<p>You can use a one-click file hoster (search google) to upload the file and then post the link. <a href="http://netload.in">http://netload.in</a> seems to be acceptable in terms of user annoyance and ads.</p>
+</li>
+</ol></div>
+            <div class="comment-info" id="comment-11314-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '12, 08:49)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11333"></a>
+        <div class="comment" id="comment-11333">
+            <div id="post-11333-score" class="comment-score"></div>
+            <div class="comment-text"><p>I uploaded some of the capture. Had to cut it in to pieces due to 10MB size limit. <a href="http://cloudshark.org/captures/2b1890434ed9">http://cloudshark.org/captures/2b1890434ed9</a>
+Look at frame 1.</p></div>
+            <div class="comment-info" id="comment-11333-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '12, 08:43)</span>
+                <a class="comment-user userinfo" href="/users/2732/gipper">gipper</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-11309" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11309-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/11309/why-is-message-time-to-live-only-1?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/11309/why-is-message-time-to-live-only-1?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/11309/why-is-message-time-to-live-only-1?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/11309/why-is-message-time-to-live-only-1?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="11334"></a>
+                    <div id="answer-container-11334" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-11334-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11334/up/" rel="nofollow"> </a>
+<div id="post-11334-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-11334-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11334/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The trace is a bit problematic since there is lots of packets missing from it, and not so many big packets at all. I guess most large packets were coming in too fast and too big to be captured by your capture device...</p>
+<p>Anyway, working with what we have, here's what I think: </p>
+<ol>
+<li>
+<p>The TTL = 1 is uncommon, but a reason could be that the system using it wants to make sure that the packet is not routed, because that isn't exactly something you want to happen when talking to a storage array with as little latency as possible. I just checked with my own ESX servers talking to an iSCSI SAN (using the software iSCSI adapter) to see if it does the same, but it uses a TTL of 64, so it's not a default to have TTL 1.</p>
+</li>
+<li>
+<p>Regarding the Window size - unfortunately there is no TCP Session Start (SYN SYN/ACK ACK), so we do not know if Window Scaling was negotiated. Usually when I see a window hovering around a value of 500 bytes (or in this case, staying dead center on 524 bytes) it is because there was a scale factor negotiated, usually 8. Which would mean that the window size needs to be multiplied by 256. But one can't say for sure unless you capture a session start. Also, it doesn't look like the other node is sending back chunks of 524 bytes, but some larger packets as well (above 1000 bytes), even when it's rare. Which is probably due to packet loss problems on the capture device.</p>
+</li>
+</ol>
+<p>Preliminary verdict: I doubt the TTL is a problem. Also, the window size is too constant and the other node is sending more data than it would if the window size would not have to be scaled. But this is something that needs verification, and without packet loss on capture (a.k.a. "drops"). So you probably need a capable gigabit capture solution.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/11334/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 May '12, 09:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-11334">
+    
+        <a name="11337"></a>
+        <div class="comment" id="comment-11337">
+            <div id="post-11337-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the reply. I'm having some ICMP issues longe reply times since I investigated further. So I'm waiting for the customer to capture a trace of this. I figure I need to work at this layer first and correct the problems there.
+What capture filter would I use to get the syn syn/ack ack?</p></div>
+            <div class="comment-info" id="comment-11337-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '12, 10:04)</span>
+                <a class="comment-user userinfo" href="/users/2732/gipper">gipper</a>
+                
+            </div>
+        </div>
+    
+        <a name="11373"></a>
+        <div class="comment" id="comment-11373">
+            <div id="post-11373-score" class="comment-score"></div>
+            <div class="comment-text"><p>You could use a filter like "tcp[tcpflags] &amp; tcp-syn != 0" to get all packets with a SYN flag. Those are the ones containing the Window Scaling parameters.</p></div>
+            <div class="comment-info" id="comment-11373-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 May '12, 06:05)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-11334" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11334-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="11336"></a>
+                    <div id="answer-container-11336" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-11336-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11336/up/" rel="nofollow"> </a>
+<div id="post-11336-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-11336-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11336/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I also believe the trace is problematic, however due to other reasons:</p>
+<ol>
+<li>
+<p>If you select tcp.stream 0 you see a lot of ACK packages for "unseen" data. Possible causes are: </p>
+<ul>
+<li>the data is coming in to fast and your capture device is dropping it (as <a href="/users/145/jasper"><a href="/users/145/jasper">@Jasper</a></a> said).</li>
+<li>your capture setup might be faulty, e.g. capturing only on one physical interface of an aggregated link (LACP / "Adapter Teaming" on your ESX server). How did you capture the data?</li>
+</ul>
+</li>
+<li>
+<p>If you look at <code>tcp.stream eq 2</code> and <code>tcp.stream eq 3</code> there is virtually unidirectional TCP communication for 18 seconds. That's traffic from one src to one dst, no data the other way round. These packets are mostly ACKs, sometimes SCSI "commands". Where is the data that has been ACKed?</p>
+</li>
+</ol>
+<p>This leads me to the conclusion, that your capture setup might be faulty. Please tell us more about how you captured the data. </p>
+<p>Unless we can't trust the capture data, no assumptions can be made about the possible problems.</p>
+<p>Regarding the TTL: Only one of your VMware servers seems to set the TTL=1. Is there any difference in the version of the VMWare software running on that host (10.1.10.121)?</p>
+<p>Regards<br>
+Kurt </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/11336/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 May '12, 10:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/11336/">
+                edited
+                <strong>25 May '12, 10:15</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-11336">
+    
+</div>
+<div id="comment-tools-11336" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11336-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/11309/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='lqC6WpwoI5RogyjU0bPJwAueeu0Epayg' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/11309/why-is-message-time-to-live-only-1?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/11309/why-is-message-time-to-live-only-1?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/analysis/"
+            class="tag-link-analysis"
+            title="see questions tagged'analysis'using tags"
+            rel="tag">analysis</a> <span class="tag-number">&#215;100</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 24, 2012, 6:15 a.m.">24 May '12, 06:15</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>15,675 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 11, 2013, 7:23 p.m.">11 Nov '13, 19:23</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/527/rtp-analysis-and-assessment">RTP Analysis and Assessment</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6750/analysing-a-video-stream">analysing a video stream</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12016/tcp-analysis-interpertation-acks-and-lost-segments">TCP analysis / interpertation - ACKs and lost segments</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21240/how-to-view-filter-search-a-raw-capture-running-on-redhat-linux-command-line-analysis-like-usage-of-gui">How to view, filter, search a raw capture running on RedHat Linux / Command line analysis like usage of GUI</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32582/rtp-stream-analysis-on-large-files-greater-than-10gb">RTP stream analysis on large files (greater than 10GB)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43372/is-there-a-wireshark-plugin-available-to-analyze-dvb-ip-compliance-of-udp-multicast-streams">Is there a wireshark plugin available, to analyze DVB-IP compliance of UDP multicast streams?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62237/https-session-drops">HTTPS session drops</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1142/jitter-for-rtp-stream-shown-as-0">Jitter for RTP stream shown as 0</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6850/ip-addr-generating-the-most-traffic">IP Addr. Generating the Most Traffic</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12535/10gbps-stream-to-disk-capture-appliance">10Gbps+ stream to disk capture appliance</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

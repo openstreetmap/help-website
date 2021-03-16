@@ -1,0 +1,1024 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>which interface to listen on - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello, I need to troubleshoot an issue which is occurring while the client is connected from home via VPN. While connected I can see two network cards. One is customer LAN connection let&#39;s call it LAN-2 and the other one seams to be the virtual NIC that got created at the time CISCO AnyConnect softw..." />
+        <meta name="keywords" content="vpn" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/54494/which-interface-to-listen-on" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/54494/which-interface-to-listen-on?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='1HZuSQPt7JnpwRahP2RdkziLFQ0Letq3' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/54494/which-interface-to-listen-on">which interface to listen on</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-54494-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54494/up/" rel="nofollow"> </a>
+<div id="post-54494-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54494-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54494/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/54494/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I need to troubleshoot an issue which is occurring while the client is connected from home via VPN. While connected I can see two network cards. One is customer LAN connection let's call it LAN-2 and the other one seams to be the virtual NIC that got created at the time CISCO AnyConnect software was installed. Which interface should is listen on ? </p>
+<p>Thank you ! </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/vpn/" class="post-tag tag-link-vpn"
+                                        title="see questions tagged 'vpn'" rel="tag">vpn</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Aug '16, 00:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2b3f26f3a24449776af62dd8cca7715a?s=32&amp;d=identicon&amp;r=g" alt="adasko's gravatar image" />
+    <p><a href="/users/13062/adasko">adasko</a><br/>
+    <span class="score" title="86 reputation points">86</span><span title="34 badges"><span class="badge1">&#9679;</span><span class="badgecount">34</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="42 badges"><span class="bronze">&#9679;</span><span class="badgecount">42</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="adasko has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54494/">
+                edited
+                <strong>02 Aug '16, 01:00</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-54494">
+    
+        <a name="54733"></a>
+        <div class="comment" id="comment-54733">
+            <div id="post-54733-score" class="comment-score"></div>
+            <div class="comment-text"><p>another update - need to confirm with you guys.</p>
+
+<p>I've installed openSSL on the client to try to connect to the server on port 443:</p>
+
+<p>Openssl.exe s_cleint –connect 172.16.5.245:443 –status –debug<br>
+</p>
+
+<p>I can see that the server is sending it's certificate but at the end in the command prompt I can see:</p>
+
+<p>SSL3 alert read:warning:close notify 
+SSL3 alert write:warning:close notify</p>
+
+<p>I'm wondering if this is an error message? I'm asking because I was checking on my laptop and got the same "errors" but the client can download the policy from server. </p>
+
+<p>I appreciate all feedback! </p></div>
+            <div class="comment-info" id="comment-54733-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '16, 01:13)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="54735"></a>
+        <div class="comment" id="comment-54735">
+            <div id="post-54735-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Adam, this is not the way to do it. Although for you it is a follow-up of the current question as you are troubleshooting the same thing, from the point of view this site, capturing at VPN interface and analyzing SSL/TLS negotiation are really different subjects. Please post it as a new question, possibly referring to the current one if you think such reference is useful.</p></div>
+            <div class="comment-info" id="comment-54735-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '16, 01:19)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54494" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54494-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/54494/which-interface-to-listen-on?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/54494/which-interface-to-listen-on?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/54494/which-interface-to-listen-on?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/54494/which-interface-to-listen-on?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="54496"></a>
+                    <div id="answer-container-54496" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54496-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54496/up/" rel="nofollow"> </a>
+<div id="post-54496-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-54496-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54496/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <ul>
+<li>
+<p>if you want to analyse an issue with the VPN connection, you have to capture at the physical interface.</p>
+</li>
+<li>
+<p>if you want to analyse an issue with the tunnelled data, you have to capture at the virtual interface.</p>
+</li>
+</ul>
+<p>Unfortunately, two points make your task really hard:</p>
+<ul>
+<li>
+<p>an issue with the tunnelled data may be a consequence of an issue with the VPN connection<br>
+</p>
+</li>
+<li>
+<p>not all frames on the virtual interface may be captured (my own experience with Cisco VPN client and both WinPcap and NPcap, just reconfirmed for the latter)<br>
+</p>
+</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54496/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Aug '16, 01:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54496">
+    
+        <a name="54497"></a>
+        <div class="comment" id="comment-54497">
+            <div id="post-54497-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you <a href="/users/19586/sindy">@sindy</a>. </p>
+
+<p>It might be the case that not all frames are captured on the virtual interface. Let me describe the issue in grater detail, maybe you can point me in the right direction on how to troubleshoot further. We have a client software that needs to download a policy from server. It fails while connected via VPN. I've tried to perform a Wireshark capture but I cannot see any SYN packets coming from the client's IP address at all. I was capturing on the affected laptop but what's strange that I can see his IP as the destination and not as the source in the packets. Do you have any ideas? </p>
+
+<p>Thank you 
+Adam</p></div>
+            <div class="comment-info" id="comment-54497-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Aug '16, 02:23)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="54498"></a>
+        <div class="comment" id="comment-54498">
+            <div id="post-54498-score" class="comment-score"></div>
+            <div class="comment-text"><p>Unfortunately, there is no way to affect how a proprietary code, like the one of the Cisco virtual interface, handles packet capturing. So if I've understood you right, you have already captured at server side and haven't seen there any incoming SYN packets from the client. As you cannot usefully capture at the virtual interface on the laptop, you have to use different approach to the analysis.</p>
+
+<p>The first thing I would ask myself at your place would be "is the routing correct"? AFAIK the Cisco VPN supports two modes, one where the default route at the client PC is changed to the VPN tunnel, and another one where the default route remains as it was and only a list of IPs and subnets which should be routed to the tunnel is sent to the client.</p>
+
+<p>So when the VPN connection is active, check your routing table and see whether the route to the server is the tunnel or to the LAN's router.</p>
+
+<p>Or, as we are on a Wireshark site, capture at the client's LAN interface and start the application. If you can see SYN packets towards the server's IP address there, it means that they are misrouted.</p>
+
+<p>If any of the two methods shows routing misconfiguration, fix it in client's settings at the VPN access gateway.</p>
+
+<p>Another possibility could theoretically be that the client application somehow binds to the address of the LAN interface and uses that address as source for the packets it sends regardless the actual source interface, and the virtual interface filters out any packets bearing different source address than its own one.</p></div>
+            <div class="comment-info" id="comment-54498-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Aug '16, 02:52)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54574"></a>
+        <div class="comment" id="comment-54574">
+            <div id="post-54574-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy">@sindy</a> I highly appreciate your feedback. Thank you. I was testing it with another VPN solution and it worked BUT the VPN solution i was testing with didn't install a virtual NIC unlike CISCO AnyConnect. Can it be somehow linked with what you wrote " Another possibility could theoretically be that the client application somehow binds to the address of the LAN interface and uses that address as source for the packets it sends regardless the actual source interface, and the virtual interface filters out any packets bearing different source address than its own one." ? If yes, how would I troubleshoot that ?</p></div>
+            <div class="comment-info" id="comment-54574-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '16, 04:13)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="54577"></a>
+        <div class="comment" id="comment-54577">
+            <div id="post-54577-score" class="comment-score"></div>
+            <div class="comment-text"><p>I wonder how a VPN solution could work without a virtual interface it would offer to the network stack. It is more likely that it creates one dynamically, but that doesn't help you solve your issue.</p>
+
+<p>You haven't said how the routes looked like when the Cisco VPN connection was active; did you check that?</p>
+
+<p>To confirm that the application chooses one IP address and uses it as source for all requests regardless from which interface they are actually sent, you would need to use another network card (an USB one should be easiest to deploy) and another router to which it would be connected; the "WAN" interface of the router would be connected to the same network like the other network card of the laptop.</p>
+
+<pre><code>                          internet
+                             |
+                [gateway router of subnet A]
+                             |
+Subnet A --------------------------------------------
+             |                              |
+             |                [gateway router of subnet B]
+             |                              |
+             |       Subnet B -----------------------------
+             |                              |
+      on-board NIC ... of the laptop ... USB NIC
+</code></pre>
+
+<p>Then you would set the default route of the PC first to the "LAN" IP addres of the gateway router of subnet A (or just check that it is set like that), start capturing at both network interfaces of the PC, and start the application. You should see the SYN packet on one of the interfaces. Next, you would change the default route of the PC to the "LAN" IP address of the gateway router of subnet B and do the same.</p>
+
+<p>Now:</p>
+
+<ul>
+<li>
+<p>if in both cases the source IP of the SYN packet is the same (matching one of the two interfaces' IP addresses), the hypothesis is confirmed;</p>
+</li>
+<li>
+<p>if in both cases the source IP of the SYN packet matches the IP of the interface from which it is physically sent, the hypothesis is denied.</p>
+</li>
+</ul></div>
+            <div class="comment-info" id="comment-54577-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '16, 04:52)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54585"></a>
+        <div class="comment" id="comment-54585">
+            <div id="post-54585-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy"></a><a href="/users/19586/sindy">@Sindy</a>. I'm going to troubleshoot it further tomorrow but there's something i don't understand in relation to the routing hints. I mean, I can still ping / telnet to the server while connected via VPN. Wouldn't that mean that the routing is fine (I know that I didn't mention that ping and telnet work though). Or is your concern related to the issue that the application chooses one IP and uses it as source for all requests regardles from which interface they are actually sent ?</p></div>
+            <div class="comment-info" id="comment-54585-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '16, 12:48)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="54586"></a>
+        <div class="comment not_top_scorer" id="comment-54586">
+            <div id="post-54586-score" class="comment-score"></div>
+            <div class="comment-text"><p>If telnet and ping work correctly, the routing must be fine. In that case, the theory that the application chooses one of local IPs as source for all its requests, regardless through which interface it actually sends them, is my only explanation of what happens. If some packets carrying payload would be lost, we could think of MTU mismatch, but a SYN packet is normally small enough to fit to any reasonable MTU.</p></div>
+            <div class="comment-info" id="comment-54586-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '16, 13:02)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54587"></a>
+        <div class="comment not_top_scorer" id="comment-54587">
+            <div id="post-54587-score" class="comment-score"></div>
+            <div class="comment-text"><p>And isn't there any other way to capture the packets like RawCap or something else ?</p></div>
+            <div class="comment-info" id="comment-54587-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '16, 13:17)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="54588"></a>
+        <div class="comment not_top_scorer" id="comment-54588">
+            <div id="post-54588-score" class="comment-score"></div>
+            <div class="comment-text"><p>I was just checking right now, and you right. As soon I connected with the other VPN solution i can see now a new virtual NIC and i can see also the packets coming from source = ip addr assigned to that interface...</p></div>
+            <div class="comment-info" id="comment-54588-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '16, 13:34)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="54589"></a>
+        <div class="comment not_top_scorer" id="comment-54589">
+            <div id="post-54589-score" class="comment-score"></div>
+            <div class="comment-text"><p>There sure is, yet I'm not sure whether these tools will make better friends with the virtual network adaptor from Cisco :-)</p>
+
+<p>If there is normally no traffic through the VPN, you might also capture at the main interface and filter the IP of the VPN server. In that case, if there are several small packets after you launch the application and then silence again, it would indicate that the SYN is transmitted through the tunnel (and retransmitted several times before the TCP stack gives up).</p></div>
+            <div class="comment-info" id="comment-54589-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '16, 13:36)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54590"></a>
+        <div class="comment not_top_scorer" id="comment-54590">
+            <div id="post-54590-score" class="comment-score"></div>
+            <div class="comment-text"><p>My previous comment was related to the RawCap.</p>
+
+<p>If with the other VPN the SYN packets are sent with that interface's IP rather than the primary one's one, my hypothesis about the application using the primary interface's IP to all packets is wrong. In that case, I'm out of ideas.</p></div>
+            <div class="comment-info" id="comment-54590-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '16, 13:45)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54605"></a>
+        <div class="comment not_top_scorer" id="comment-54605">
+            <div id="post-54605-score" class="comment-score"></div>
+            <div class="comment-text"><p>just to update, I was using ProcessMonitor and tcpview from sysinternals I was not able to see any TCP connection being initiated at all. I my lost :/</p></div>
+            <div class="comment-info" id="comment-54605-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Aug '16, 03:21)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54496" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 11
+        </span>
+        <a href="#" class="show-all-comments-link">show 6 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54496-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/54494/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='1HZuSQPt7JnpwRahP2RdkziLFQ0Letq3' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54494/which-interface-to-listen-on?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54494/which-interface-to-listen-on?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/vpn/"
+            class="tag-link-vpn"
+            title="see questions tagged'vpn'using tags"
+            rel="tag">vpn</a> <span class="tag-number">&#215;45</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 2, 2016, 12:59 a.m.">02 Aug '16, 00:59</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,149 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 11, 2016, 1:19 a.m.">11 Aug '16, 01:19</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/170/wireshark-only-showing-one-way-communication-over-vpn-tunnel">Wireshark only showing one way communication over VPN tunnel</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22157/reading-output-between-fw-and-router">Reading output between FW and router</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46093/vpn-and-wireshark">VPN and wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/748/wireshark-placement-question">Wireshark placement question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25088/using-wireshark-over-vpn">Using WireShark over VPN</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47747/tcp-package-loss-via-vpn-connection">TCP package loss? via VPN connection</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1087/help-diagnosing-pptp-throughput-issue">Help diagnosing PPTP throughput issue.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25977/tcp-reassembly-error-while-capturing-cisco-vpn-client-traffic">TCP Reassembly error while capturing Cisco VPN client traffic</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47753/plpmtud-vpn-mtu-mss">PLPMTUD, vpn, mtu, mss</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1324/vpn-connection">VPN connection</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

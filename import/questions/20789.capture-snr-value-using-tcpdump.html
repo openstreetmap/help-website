@@ -1,0 +1,937 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Capture SNR value using tcpdump - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi everyone. Does anybody know how to capture SNR value of a WiFi link using tcpdump? I tried capturing using wireshark by showing the signal and noise but those values never exists during capturing. Thanks" />
+        <meta name="keywords" content="snr" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/20789/capture-snr-value-using-tcpdump" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/20789/capture-snr-value-using-tcpdump?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='2tu8HmctaRvbI1VP0JhHZcR6IimxFpvf' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/20789/capture-snr-value-using-tcpdump">Capture SNR value using tcpdump</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-20789-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20789/up/" rel="nofollow"> </a>
+<div id="post-20789-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-20789-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20789/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/20789/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi everyone. Does anybody know how to capture SNR value of a WiFi link using tcpdump? I tried capturing using wireshark by showing the signal and noise but those values never exists during capturing. Thanks</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/snr/" class="post-tag tag-link-snr"
+                                        title="see questions tagged 'snr'" rel="tag">snr</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Apr '13, 22:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a3291ae3aa2fd3100059945d1afa121c?s=32&amp;d=identicon&amp;r=g" alt="Tyanium's gravatar image" />
+    <p><a href="/users/3983/tyanium">Tyanium</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tyanium has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-20789">
+    
+        <a name="20813"></a>
+        <div class="comment" id="comment-20813">
+            <div id="post-20813-score" class="comment-score"></div>
+            <div class="comment-text"><p>What version of what OS is this?  (For Linux, that means both "what version of the kernel" and "what distribution and what version of that distribution".)</p>
+
+<p>What does <code>tcpdump -h</code> print?</p></div>
+            <div class="comment-info" id="comment-20813-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Apr '13, 18:59)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="21044"></a>
+        <div class="comment" id="comment-21044">
+            <div id="post-21044-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is what printed after tcpdump -h</p>
+
+<pre><code>tcpdump version 3.9.8
+libpcap version 0.9.8
+</code></pre>
+
+<p>Im using fedora release 9 with kernel version 2.6.27.25-78.2.56.fc9.i686</p></div>
+            <div class="comment-info" id="comment-21044-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '13, 20:00)</span>
+                <a class="comment-user userinfo" href="/users/3983/tyanium">Tyanium</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-20789" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20789-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/20789/capture-snr-value-using-tcpdump?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/20789/capture-snr-value-using-tcpdump?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/20789/capture-snr-value-using-tcpdump?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/20789/capture-snr-value-using-tcpdump?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="20791"></a>
+                    <div id="answer-container-20791" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-20791-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20791/up/" rel="nofollow"> </a>
+<div id="post-20791-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-20791-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20791/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Capturing WiFi traffic including the 802.11 layer requires a little more preparation, especially on Windows (which may not be the OS in your case since you mentioned tcpdump) where you need to have an AirPCAP USB adapter to do it. See this Wiki page: <a href="http://wiki.wireshark.org/CaptureSetup/WLAN">http://wiki.wireshark.org/CaptureSetup/WLAN</a></p>
+<p>I'm not sure if TCPdump is capable of capturing the radio layer, but there are tools like <a href="http://www.aircrack-ng.org/doku.php?id=airodump-ng">airodump-ng</a> that could help you out.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/20791/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Apr '13, 01:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-20791">
+    
+        <a name="21047"></a>
+        <div class="comment" id="comment-21047">
+            <div id="post-21047-score" class="comment-score"></div>
+            <div class="comment-text"><p>tcpdump can capture the radio layer, but, on most OSes, you have to be in monitor mode to do that, and his libpcap and tcpdump are too old to support having tcpdump do it with the <code>-I</code> flag.</p></div>
+            <div class="comment-info" id="comment-21047-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '13, 20:30)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-20791" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20791-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="21046"></a>
+                    <div id="answer-container-21046" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-21046-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/21046/up/" rel="nofollow"> </a>
+<div id="post-21046-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-21046-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/21046/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You'll have to put your adapter into monitor mode in order to get the radio information.  Try using the <a href="http://www.aircrack-ng.org/doku.php?id=airmon-ng">airmon-ng</a> script from <a href="http://www.aircrack-ng.org">aircrack-ng</a>; there might be a Fedora 9 RPM for aircrack-ng.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/21046/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 May '13, 20:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-21046">
+    
+        <a name="21161"></a>
+        <div class="comment" id="comment-21161">
+            <div id="post-21161-score" class="comment-score"></div>
+            <div class="comment-text"><p>Now I put my computer in monitor mode already. But when I try to capture packets, this is what happen:</p>
+
+<pre><code>tcpdump -U -w ./test.cap
+tcpdump: WARNING: eth0: no IPv4 address assigned
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 96 bytes
+^C0 packets captured
+tcpdump -L -i ath0
+tcpdump: bind: Network is down
+</code></pre>
+
+<p>My goal is to capture SINR value of a wifi channel. Do u have any idea what's going on? And please guide me to achieve my goal. Thanks</p></div>
+            <div class="comment-info" id="comment-21161-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 May '13, 21:21)</span>
+                <a class="comment-user userinfo" href="/users/3983/tyanium">Tyanium</a>
+                
+            </div>
+        </div>
+    
+        <a name="21162"></a>
+        <div class="comment" id="comment-21162">
+            <div id="post-21162-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p><code>tcpdump: WARNING: eth0: no IPv4 address assigned</code></p>
+</blockquote>
+
+<p>So that was capturing on <code>eth0</code>.  Is that your Wi-Fi adapter?</p>
+
+<p>Also:</p>
+
+<blockquote>
+<p><code>tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 96 bytes</code></p>
+</blockquote>
+
+<p>Sadly, this is an old version of tcpdump, which defaults (when it supports IPv6) to a snapshot length of 96 bytes.  Try doing <code>-s 0</code> as part of your tcpdump argument list, to capture the <em>entire</em> packet (the radiotap header might not fit in 96 bytes).</p></div>
+            <div class="comment-info" id="comment-21162-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 May '13, 21:31)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="21164"></a>
+        <div class="comment" id="comment-21164">
+            <div id="post-21164-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank for your comment. I tried again yet still not working. No packets are captured.</p>
+
+<p>[<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="98eaf7f7ecd8fcf0fbe8afa9adac">[email&#160;protected]</a> ~]# tcpdump -s 0 -i ath0
+tcpdump: bind: Network is down
+[<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="483a27273c082c202b387f797d7c">[email&#160;protected]</a> ~]# tcpdump -s 0 -i wifi0
+tcpdump: WARNING: wifi0: no IPv4 address assigned
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on wifi0, link-type IEEE802_11 (802.11), capture size 65535 bytes
+^C
+0 packets captured
+0 packets received by filter
+0 packets dropped by kernel</p></div>
+            <div class="comment-info" id="comment-21164-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 May '13, 22:22)</span>
+                <a class="comment-user userinfo" href="/users/3983/tyanium">Tyanium</a>
+                
+            </div>
+        </div>
+    
+        <a name="21168"></a>
+        <div class="comment" id="comment-21168">
+            <div id="post-21168-score" class="comment-score"></div>
+            <div class="comment-text"><p>I still don't get it, I put ath0 in monitor mode already but once typing tcpdump using ath0 it won't work</p>
+
+<p>[<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5c2e3333281c38343f2c6b6d6968">[email&#160;protected]</a> ~]# iwconfig
+lo        no wireless extensions.</p>
+
+<p>eth0      no wireless extensions.</p>
+
+<p>wifi0     no wireless extensions.</p>
+
+<p>pan0      no wireless extensions.</p>
+
+<p>ath0      IEEE 802.11g  ESSID:""  Nickname:""
+          Mode:Monitor  Channel:0  Access Point: Not-Associated <br>
+          Bit Rate:0 kb/s   Tx-Power:18 dBm   Sensitivity=1/1<br>
+          Retry:off   RTS thr:off   Fragment thr:off
+          Encryption key:off
+          Power Management:off
+          Link Quality=0/70  Signal level=-98 dBm  Noise level=-98 dBm
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:0   Missed beacon:0</p>
+
+<p>[<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="93e1fcfce7d3f7fbf0e3a4a2a6a7">[email&#160;protected]</a> ~]# tcpdump -i ath0 -s 0 -w stress.pcap
+tcpdump: bind: Network is down</p></div>
+            <div class="comment-info" id="comment-21168-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 May '13, 23:07)</span>
+                <a class="comment-user userinfo" href="/users/3983/tyanium">Tyanium</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-21046" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-21046-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/20789/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='2tu8HmctaRvbI1VP0JhHZcR6IimxFpvf' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/20789/capture-snr-value-using-tcpdump?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/20789/capture-snr-value-using-tcpdump?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/snr/"
+            class="tag-link-snr"
+            title="see questions tagged'snr'using tags"
+            rel="tag">snr</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 24, 2013, 10:15 p.m.">24 Apr '13, 22:15</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,541 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 15, 2013, 11:07 p.m.">15 May '13, 23:07</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3330/get-snr-from-wlan-capture">Get SNR from WLAN capture.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16489/how-to-calculate-snr-values">How to calculate SNR values?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

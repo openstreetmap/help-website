@@ -1,0 +1,750 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Analyzing Large PCAP files (46GB) in Wireshark? - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello all,  I am currently at University in the UK and I have been given a large pcap file that has been capturing traffic from a Network over the course of three days, the file is separated into 306 smaller files when I was given it.  Basically I have been asked to analyse this pcap file and report..." />
+        <meta name="keywords" content="forensic,pcap,homework,analysis,wireshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/50975/analyzing-large-pcap-files-46gb-in-wireshark" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/50975/analyzing-large-pcap-files-46gb-in-wireshark?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='9X6kwJvK09I8ELXPwY7YUwcmAqPD0qnI' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/50975/analyzing-large-pcap-files-46gb-in-wireshark">Analyzing Large PCAP files (46GB) in Wireshark?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-50975-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50975/up/" rel="nofollow"> </a>
+<div id="post-50975-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-50975-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50975/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/50975/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello all, </p>
+<p>I am currently at University in the UK and I have been given a large pcap file that has been capturing traffic from a Network over the course of three days, the file is separated into 306 smaller files when I was given it. </p>
+<p>Basically I have been asked to analyse this pcap file and report upon my findings, I have been asked to produce the following; </p>
+<ul>
+<li>A Timeline of actions and events </li>
+<li>A List of nodes (Internal and External) </li>
+<li>A Traffic Follow Analysis </li>
+<li>Anything else that I believe I need. </li>
+</ul>
+<p>I have been asked to create two reports on my findings. 
+So I have read several books surrounding the area of analyzing a pcap file in wireshark, but still feel incompetent in doing so, we have not been given any guidance on using wireshark, and have not been told any specifics on what we should be looking for. </p>
+<p>Would anyone be able to provide any assistance on where I should start my 'investigation', any helpful hits and tips that would be able to aid me in completing the task I have been set. I don't want any answers, and am willing to put the work in, just guidance on where to start and maybe what to look for. </p>
+<p>Any help provided would be greatly appreciated. </p>
+<p>Regards.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/forensic/" class="post-tag tag-link-forensic"
+                                        title="see questions tagged 'forensic'" rel="tag">forensic</a>
+                                
+                                    <a href="/tags/pcap/" class="post-tag tag-link-pcap"
+                                        title="see questions tagged 'pcap'" rel="tag">pcap</a>
+                                
+                                    <a href="/tags/homework/" class="post-tag tag-link-homework"
+                                        title="see questions tagged 'homework'" rel="tag">homework</a>
+                                
+                                    <a href="/tags/analysis/" class="post-tag tag-link-analysis"
+                                        title="see questions tagged 'analysis'" rel="tag">analysis</a>
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>16 Mar '16, 13:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a4f121d9dd2c7f0f0312f5b2432ada2c?s=32&amp;d=identicon&amp;r=g" alt="RaffertyLewis's gravatar image" />
+    <p><a href="/users/23519/raffertylewis">RaffertyLewis</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="RaffertyLewis has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/50975/">
+                edited
+                <strong>16 Mar '16, 13:05</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+            <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+            <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-50975">
+    
+        <a name="50979"></a>
+        <div class="comment" id="comment-50979">
+            <div id="post-50979-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I'd recommend to take one of the files, open in it Wireshark, and start getting familiar with the tools in <code>Statistics</code> and <code>Analyze</code> menus. As you said you've read the books and it doesn't tell you where to start, maybe the hands-on experience will be a better entry point.</p>
+
+<p>But your last point sounds puzzling: anything else I believe I need. For what should you need that anything? I.e. does the submission give you a particular issue to look for or is it an exercise on general network health assessment?</p></div>
+            <div class="comment-info" id="comment-50979-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Mar '16, 13:50)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="50982"></a>
+        <div class="comment" id="comment-50982">
+            <div id="post-50982-score" class="comment-score">2</div>
+            <div class="comment-text"><p>If you really want to do this with wireshark alone, you should learn tshark. 
+A good freeware addon is <a href="https://www.tracewrangler.com/">https://www.tracewrangler.com/</a> ; but you have to split your file in 2GB pieces.
+Or you can look here:
+<a href="https://ask.wireshark.org/questions/50840/packet-analyzer-pe-value-for-wireshark-users">https://ask.wireshark.org/questions/50840/packet-analyzer-pe-value-for-wireshark-users</a></p></div>
+            <div class="comment-info" id="comment-50982-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Mar '16, 14:12)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="50999"></a>
+        <div class="comment" id="comment-50999">
+            <div id="post-50999-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sindy
+Thank you, I have had decent go using wireshark, looking at the statistics and analyze menus, I think that is the way to go. But yeah i agree the assignment brief was puzzling, it doesnt really state what would class as anything else, nor have we been given an issue to look for, so when looking at a file that is 46GB its very daunting.</p>
+
+<p>Christian_R
+Thank you also, I am looking at the PA-PE now, and going to download that see where that takes me, at the moment I have the files into smaller folders of about 3GB to reduce loading times etc.</p>
+
+<p>For what I have been told as of late, it sounds like command line tools, such as tshark and tcpdump might be the way forward.</p>
+
+<p>Thank you both for your help</p></div>
+            <div class="comment-info" id="comment-50999-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Mar '16, 02:20)</span>
+                <a class="comment-user userinfo" href="/users/23519/raffertylewis">RaffertyLewis</a>
+                
+            </div>
+        </div>
+    
+        <a name="51001"></a>
+        <div class="comment" id="comment-51001">
+            <div id="post-51001-score" class="comment-score"></div>
+            <div class="comment-text"><p>Tracewrangler can give you a endpoint &amp; conversation statistics ("Communication Details" in the "Tools" menu) for that amount of data, if you split it into 2GB files and add them all to the file list. PA-PE is a very tool for your kind of task as well.</p></div>
+            <div class="comment-info" id="comment-51001-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Mar '16, 03:28)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="51016"></a>
+        <div class="comment" id="comment-51016">
+            <div id="post-51016-score" class="comment-score"></div>
+            <div class="comment-text"><p>For the 306 original files you have, I'd probably just do a few -z commands in Tshark. Especially if those files have a naming convention that you can write into a "FOR" loop in a quick shell script, something like "tshark -qnr $file -z conv,tcp" would output all TCP sessions between all IP endpoints, all byte counts in either direction, across each time interval. That would cross off much of your list right there as a one-liner.</p></div>
+            <div class="comment-info" id="comment-51016-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Mar '16, 20:40)</span>
+                <a class="comment-user userinfo" href="/users/4985/quadratic">Quadratic</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-50975" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50975-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/50975/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='9X6kwJvK09I8ELXPwY7YUwcmAqPD0qnI' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/50975/analyzing-large-pcap-files-46gb-in-wireshark?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/50975/analyzing-large-pcap-files-46gb-in-wireshark?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+        <a href="/tags/pcap/"
+            class="tag-link-pcap"
+            title="see questions tagged'pcap'using tags"
+            rel="tag">pcap</a> <span class="tag-number">&#215;238</span><br/>
+        
+        <a href="/tags/analysis/"
+            class="tag-link-analysis"
+            title="see questions tagged'analysis'using tags"
+            rel="tag">analysis</a> <span class="tag-number">&#215;100</span><br/>
+        
+        <a href="/tags/homework/"
+            class="tag-link-homework"
+            title="see questions tagged'homework'using tags"
+            rel="tag">homework</a> <span class="tag-number">&#215;23</span><br/>
+        
+        <a href="/tags/forensic/"
+            class="tag-link-forensic"
+            title="see questions tagged'forensic'using tags"
+            rel="tag">forensic</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 16, 2016, 1 p.m.">16 Mar '16, 13:00</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,790 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 17, 2016, 8:40 p.m.">17 Mar '16, 20:40</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/41197/how-to-analyze-pcap-files-for-slow-internet-communication">How to analyze pcap files for slow internet communication</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46972/see-commands-describe-setup-play-teardown-in-the-log-for-vod-streaming">See commands Describe, Setup, Play , Teardown in the log for VOD streaming</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46463/forensic-analysis-xmpp">Forensic Analysis (XMPP)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18469/dns-leak-looking-up-own-hostname-with-dns-queries">DNS leak: Looking up own hostname with DNS queries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43194/how-to-output-wireshark-captures-to-a-new-file">how to output wireshark captures to a new file ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49568/why-cant-this-wireshark-produced-1-packet-pcap-file-not-be-processed-using-winpcap-or-dpkt">Why can&#39;t this Wireshark produced 1 Packet PCAP file not be processed using WinPcap or DPKT?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9080/implementing-autostop-condition-on-packet-capture">implementing autostop condition on packet capture!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13023/filter-multiple-ips">Filter multiple IPs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29380/info-about-this-udp-stream">info about this UDP stream</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31378/sniffing-packets-from-mobile-devices-what-wifi-card-to-use">Sniffing packets from mobile devices, what wifi card to use?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

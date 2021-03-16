@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>CAPWAP Malformed packets - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, Recently I found on my company network that CAPWAP protocol packets sent from different access points (registered in a Cisco Wireless Controller) to the address 255.255.255.255 were decoded like Malformed Packets. After &quot;googling it&quot; I found several forums where other engineers found that was du..." />
+        <meta name="keywords" content="capwap,wlc,malformedpacket" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/42019/capwap-malformed-packets" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/42019/capwap-malformed-packets?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='LV34HQXHYDAVTATeKnYbvkysC7VRf6WL' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/42019/capwap-malformed-packets">CAPWAP Malformed packets</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-42019-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/42019/up/" rel="nofollow"> </a>
+<div id="post-42019-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-42019-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/42019/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/42019/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>Recently I found on my company network that CAPWAP protocol packets sent from different access points (registered in a Cisco Wireless Controller) to the address 255.255.255.255 were decoded like Malformed Packets. After "googling it" I found several forums where other engineers found that was due to an (by default) unchecked option called "Cisco Wireless Controller Support" in the menu Edit/preferences/protocols/CAPWAP. It was true, when I enabled this options Wireshark didn't show the error "Malformed Packets" any more.</p>
+<p>My question is: why are these packets considered malformed if this check is not enabled since they are necessary packets for the WLC access points functioning?</p>
+<p>Some forums consider this like a bug but, from my point of view is not a bug because the option Cisco Wireless Controller Support decodes well packets. The point is that I don´t understand the necessity of this option, I´m assuming that has some sense the possibility of check/uncheck the option. If I´m right I would like to know why is implemented on this way.</p>
+<p>Thanks in advance.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/capwap/" class="post-tag tag-link-capwap"
+                                        title="see questions tagged 'capwap'" rel="tag">capwap</a>
+                                
+                                    <a href="/tags/wlc/" class="post-tag tag-link-wlc"
+                                        title="see questions tagged 'wlc'" rel="tag">wlc</a>
+                                
+                                    <a href="/tags/malformedpacket/" class="post-tag tag-link-malformedpacket"
+                                        title="see questions tagged 'malformedpacket'" rel="tag">malformedpacket</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 May '15, 03:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1dcc4b16407e544312bbeb965544e7cf?s=32&amp;d=identicon&amp;r=g" alt="Francisco%20Torrecillas's gravatar image" />
+    <p><a href="/users/16656/francisco-torrecillas">Francisco To...</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Francisco Torrecillas has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-42019">
+    
+</div>
+<div id="comment-tools-42019" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-42019-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/42019/capwap-malformed-packets?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/42019/capwap-malformed-packets?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/42019/capwap-malformed-packets?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/42019/capwap-malformed-packets?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="42023"></a>
+                    <div id="answer-container-42023" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-42023-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/42023/up/" rel="nofollow"> </a>
+<div id="post-42023-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-42023-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/42023/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Because in your case the packets conform to a Draft-8 version of the protocol what was to become CAPWAP. With equipment that is CAPWAP compliant these specific packets look different. Unfortunately it's not possible to know automagically which version of the CAPWAP protocol these packets adhere to ("Is it really Draft-8 compliant or is it an error?") so you have to decide, though a preference.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/42023/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 May '15, 14:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2337f0406681e5c72ea0e6f1f0d6c0b0?s=32&amp;d=identicon&amp;r=g" alt="Jaap's gravatar image" />
+    <p><a href="/users/4/jaap">Jaap ♦</a><br/>
+    <span class="score" title="11680 reputation points"><span class="">11.7k</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="101 badges"><span class="bronze">&#9679;</span><span class="badgecount">101</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jaap has 155 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-42023">
+    
+        <a name="42052"></a>
+        <div class="comment" id="comment-42052">
+            <div id="post-42052-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your comments, Jaap. The problem was affecting only to CAPWAP Control Messages (Type: Primary Discovery Request). After reviewing RFC 5415 (CAPWAP Protocol Specification) I saw that this protocol status is still a proposed standard however, if, I'm not misunderstanding it, Cisco implementation is not being unconditionally compliant with the "proposed standard" and that´s why Wireshark adds the option "Cisco Wireless Controller Support". Considering the message type of these packets I think that should´t depend on protocol version implemented, a primary discovery request format should be always the same irrespective of the access controller type. As additional note, one of RFC 5415 authors (P. Calhoun) worked for Cisco when proposed standard was created.</p></div>
+            <div class="comment-info" id="comment-42052-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 May '15, 03:06)</span>
+                <a class="comment-user userinfo" href="/users/16656/francisco-torrecillas">Francisco To...</a>
+                
+            </div>
+        </div>
+    
+        <a name="42054"></a>
+        <div class="comment" id="comment-42054">
+            <div id="post-42054-score" class="comment-score"></div>
+            <div class="comment-text"><p>Your answer has been converted to a comment as that's how this site works. Please read the FAQ for more information.</p></div>
+            <div class="comment-info" id="comment-42054-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 May '15, 04:54)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="42055"></a>
+        <div class="comment" id="comment-42055">
+            <div id="post-42055-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well, that's a welcome to the ugly world of standardization. When you develop a technology/protocol and work it into a standard two things can happen. Either you get incompatible changes with respect to the pre-standard equipment you put out in the market, or you get standards with numerous optional features. The latter opens the gate to all kinds of standard compliant but incompatible equipment. When that happens they start putting together so called profiles, to define proper selections of optional features to implement for a specific application. Try to figure that one out is a bit of a nightmare.</p></div>
+            <div class="comment-info" id="comment-42055-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 May '15, 04:59)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-42023" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-42023-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/42019/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='LV34HQXHYDAVTATeKnYbvkysC7VRf6WL' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/42019/capwap-malformed-packets?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/42019/capwap-malformed-packets?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/capwap/"
+            class="tag-link-capwap"
+            title="see questions tagged'capwap'using tags"
+            rel="tag">capwap</a> <span class="tag-number">&#215;7</span><br/>
+        
+        <a href="/tags/malformedpacket/"
+            class="tag-link-malformedpacket"
+            title="see questions tagged'malformedpacket'using tags"
+            rel="tag">malformedpacket</a> <span class="tag-number">&#215;7</span><br/>
+        
+        <a href="/tags/wlc/"
+            class="tag-link-wlc"
+            title="see questions tagged'wlc'using tags"
+            rel="tag">wlc</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 2, 2015, 3:54 a.m.">02 May '15, 03:54</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,270 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 4, 2015, 4:59 a.m.">04 May '15, 04:59</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/5526/malformed-packet-radius">[Malformed Packet: RADIUS]</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34609/malformed-packet-that-is-not-malformed-with-websocket-and-wireshark-1108">Malformed packet (that is NOT malformed) with Websocket and Wireshark 1.10.8</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43888/how-to-throw-malformed-packet-exception">How to Throw Malformed Packet Exception</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57516/t38-malformed-packet">T38 Malformed Packet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60474/can-the-ble-info-be-configured-for-specific-data">Can the BLE Info be configured for specific data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62379/dnp-serial-malformed-packet">DNP Serial Malformed Packet.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25254/wireless-cisco-capwap-header-size">Wireless Cisco CAPWAP header size</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29494/capwap-malformed-packet-exception-occurred">CAPWAP Malformed Packet (Exception occurred)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55804/capwap-80111-data-header-fcf-swapped-why">CAPWAP 801.11 Data Header FCF Swapped - why?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58710/wlan-capture-capwap-arp-packets">WLAN capture capwap arp packets</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,968 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Capture traffic from printer to smtp relay - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi all, I&#39;ve been searching online for some help to this, but so far I haven&#39;t found an answer (or at least I have not recognized the answer). I have a MFP (mock IP 192.168.0.20) and a SMTP relay which is setup on our DC/print server (mock IP 192.168.0.10). I&#39;ve installed wireshark and winpcap on th..." />
+        <meta name="keywords" content="mfp,printer,smtp,relay" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/24645/capture-traffic-from-printer-to-smtp-relay" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/24645/capture-traffic-from-printer-to-smtp-relay?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='22efJfnj0dtk8BflH8tzQu4fmakaUohu' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/24645/capture-traffic-from-printer-to-smtp-relay">Capture traffic from printer to smtp relay</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-24645-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24645/up/" rel="nofollow"> </a>
+<div id="post-24645-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-24645-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24645/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/24645/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all,
+I've been searching online for some help to this, but so far I haven't found an answer (or at least I have not recognized the answer).</p>
+<p>I have a MFP (mock IP 192.168.0.20) and a SMTP relay which is setup on our DC/print server (mock IP 192.168.0.10).
+I've installed wireshark and winpcap on the DC/print server.</p>
+<p>I'm trying to configure the MFP for scan to email using the SMTP relay on the DC/print server which is pointing to a Office 365 SMTP server.</p>
+<p>When a scan to email job is started from the printer, I get a connection error message (it is not descriptive at all. Just "error connecting".) I am not sure if the job is being rejected by the SMTP relay on the DC/print server or if it is being rejected by Office 365 SMTP.</p>
+<p>I'd like to setup Wireshark to capture traffic from the MFP (192.168.0.20) to the DC/print server SMTP relay (IP 192.168.0.20).  I'd consider myself a novice when it comes to Wireshark, though I'm understanding more and more as I use it.</p>
+<p>I've googled for help as well, but I just might not have enough understanding of wireshark/packet capturing to utilize the advise/info I've found in my google searches.</p>
+<p>Any help is greatly appreciated.</p>
+<p>Thanks</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/mfp/" class="post-tag tag-link-mfp"
+                                        title="see questions tagged 'mfp'" rel="tag">mfp</a>
+                                
+                                    <a href="/tags/printer/" class="post-tag tag-link-printer"
+                                        title="see questions tagged 'printer'" rel="tag">printer</a>
+                                
+                                    <a href="/tags/smtp/" class="post-tag tag-link-smtp"
+                                        title="see questions tagged 'smtp'" rel="tag">smtp</a>
+                                
+                                    <a href="/tags/relay/" class="post-tag tag-link-relay"
+                                        title="see questions tagged 'relay'" rel="tag">relay</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Sep '13, 06:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/365ae88f9233f4317fd29928fc340cdc?s=32&amp;d=identicon&amp;r=g" alt="tkal's gravatar image" />
+    <p><a href="/users/5653/tkal">tkal</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tkal has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/24645/">
+                edited
+                <strong>13 Sep '13, 06:56</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-24645">
+    
+</div>
+<div id="comment-tools-24645" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24645-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/24645/capture-traffic-from-printer-to-smtp-relay?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/24645/capture-traffic-from-printer-to-smtp-relay?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/24645/capture-traffic-from-printer-to-smtp-relay?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/24645/capture-traffic-from-printer-to-smtp-relay?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="24648"></a>
+                    <div id="answer-container-24648" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24648-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24648/up/" rel="nofollow"> </a>
+<div id="post-24648-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-24648-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24648/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Alright, installing WinPCAP and Wireshark on a Domain Controller? I wouldn't dare to do that... :-)</p>
+<p>Anyway, since you've already done it and it obviously didn't crash or otherwise have an impact on the server (you'd be asking other questions otherwise) you can proceed. I'd go with a capture on the network card where the MFP data is due to arrive at (the card with IP 192.168.0.10), and set a capture filter on the IP of the MFP to ignore everything that is not coming from the device. The filter would be set in the capture options of the NIC you capture on, and be something like "<code>host 192.168.0.20 and tcp port 25</code>" - without the quotation marks. That way you only get packets that arrive from your MFP and are coming in on port 25. </p>
+<p>Two things might happen:</p>
+<ol>
+<li>you see no traffic at all. In that case you have set the wrong capture filter, or the traffic is never even arriving at the DC</li>
+<li>you see SMTP packets and it is your task to interpret what is happening. If the communication to the printer looks fine you need to repeat the capture, but this time using the office 365 IP for your filter.</li>
+</ol>
+<p>Good luck!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24648/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Sep '13, 07:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/24648/">
+                edited
+                <strong>13 Sep '13, 07:23</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24648">
+    
+        <a name="24656"></a>
+        <div class="comment" id="comment-24656">
+            <div id="post-24656-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for the info. Seeing the traffic come through. Now I need to wait for a user to run a scan to email test.</p>
+
+<p>Much appreciated :)</p></div>
+            <div class="comment-info" id="comment-24656-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Sep '13, 09:29)</span>
+                <a class="comment-user userinfo" href="/users/5653/tkal">tkal</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-24648" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24648-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24651"></a>
+                    <div id="answer-container-24651" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24651-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24651/up/" rel="nofollow"> </a>
+<div id="post-24651-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-24651-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24651/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Presumably the MFP will be attempting to connect to the standard SMTP port which is TCP port 25, so setting a capture filter of "port 25" in Wireshark should get you the traffic, make sure you select the correct interface on the </p>
+<p>Once you've captured the traffic, then you'll need to look at the actual SMTP conversation, however given your error message of "error connecting" it's likely that the MFP isn't able to make a connection at all.  You should at least see the TCP "SYN" packets coming in from the MFP to open the connection.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24651/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Sep '13, 07:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+    <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+    <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grahamb has 274 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24651">
+    
+</div>
+<div id="comment-tools-24651" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24651-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24672"></a>
+                    <div id="answer-container-24672" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24672-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24672/up/" rel="nofollow"> </a>
+<div id="post-24672-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-24672-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24672/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>Just <strong>"error connecting"</strong>. I am not sure if the job is being rejected by the SMTP relay on the DC/print server or if it is being rejected by Office 365 SMTP.</p>
+</blockquote>
+<p>The connection error results from your local system, otherwise the error message would be different. Reason: Your mail <strong>relay</strong> works with the principle store and forward, that means it will receive the full mail from your local client and then forward it to the Office 365 server. So, if you get a "connection error" in your client log, the chances are pretty good, that it was not able to connect to port 25 on your DC/print server. As you did not explain how you setup a mail relay on that system I cannot give any advice, other than trying to telnet to port 25 on that machine and to check if it reacts at all.</p>
+<blockquote>
+<p>telnet 192.168.0.10 25</p>
+</blockquote>
+<p>If there is no telnet client on your Win 7, install it from an elevated DOS box with</p>
+<blockquote>
+<p>pkgmgr /iu:"TelnetClient"</p>
+</blockquote>
+<ol>
+<li>
+<p>If you don't get a connection to the SMTP server (timeout in the client), you have found the problem. Then you need to check the firewall on the DC, if it allows connections to port 25 (I doubt it).</p>
+</li>
+<li>
+<p>If you do get a connection, the problem is either only related to your MFP, or somewhere else. Here only a cpature of the traffic would help.</p>
+</li>
+</ol>
+<p>I tend to believe that 1.) is your problem.</p>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24672/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Sep '13, 04:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24672">
+    
+</div>
+<div id="comment-tools-24672" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24672-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/24645/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='22efJfnj0dtk8BflH8tzQu4fmakaUohu' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/24645/capture-traffic-from-printer-to-smtp-relay?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/24645/capture-traffic-from-printer-to-smtp-relay?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/smtp/"
+            class="tag-link-smtp"
+            title="see questions tagged'smtp'using tags"
+            rel="tag">smtp</a> <span class="tag-number">&#215;25</span><br/>
+        
+        <a href="/tags/printer/"
+            class="tag-link-printer"
+            title="see questions tagged'printer'using tags"
+            rel="tag">printer</a> <span class="tag-number">&#215;13</span><br/>
+        
+        <a href="/tags/relay/"
+            class="tag-link-relay"
+            title="see questions tagged'relay'using tags"
+            rel="tag">relay</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/mfp/"
+            class="tag-link-mfp"
+            title="see questions tagged'mfp'using tags"
+            rel="tag">mfp</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 13, 2013, 6:53 a.m.">13 Sep '13, 06:53</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,651 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 14, 2013, 4:27 a.m.">14 Sep '13, 04:27</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/8513/cant-see-other-traffic-but-my-own">Can&#39;t see other traffic but my own</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50026/tcpsmtp-mail-flow-cannot-be-understand">TCP/SMTP mail flow cannot be understand ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42510/wireshark-on-mac-os-x-does-not-open-anymore-maybe-wrong-program-association">Wireshark on Mac OS X does not open anymore (maybe wrong program association)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8729/missing-smtp-traffic">missing SMTP traffic</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53121/is-there-a-way-to-replay-a-packet-capture-of-a-smtp-session-for-the-purpose-of-debugging">Is there a way to “replay” a packet capture of a smtp session for the purpose of debugging?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55368/check-print-job-size">Check print job size</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15071/554-message-is-not-rfc-compliantmissing-date-header">554 message is not RFC compliant;missing &quot;date&quot; header</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56272/java-email-fails">[closed] Java email fails</a>
+        </p>
+        
+        <p>
+            <a href="/questions/63743/printing-and-tcp-receive-windows">Printing and TCP Receive Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16511/wireshark-decode-smtp">Wireshark decode SMTP</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1006 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>wireshark-1.12.0: make is failing even after resolving dependencies(wireshark-iface_monitor.o) - Wireshark Q&amp;A</title>
+        <meta name="description" content="Build output: make[2]: Leaving directory `/home/user/Sharan/Softwares/wireshark-1.12.0/ui/cli&#39; Making all in . make[2]: Entering directory `/home/user/Sharan/Softwares/wireshark-1.12.0&#39;  CC wireshark-capture-pcap-util-unix.o  CC wireshark-capture-pcap-util.o  CC wireshark-cfile.o  CC wireshark-cfuti..." />
+        <meta name="keywords" content="make,error,iface_monitor.c" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/35927/wireshark-1120-make-is-failing-even-after-resolving-dependencieswireshark-iface_monitoro" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/35927/wireshark-1120-make-is-failing-even-after-resolving-dependencieswireshark-iface_monitoro?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='CRoG5UVk7oqmzlBe47fAivMOmEcKFSrM' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/35927/wireshark-1120-make-is-failing-even-after-resolving-dependencieswireshark-iface_monitoro">wireshark-1.12.0: make is failing even after resolving dependencies(wireshark-iface_monitor.o)</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-35927-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35927/up/" rel="nofollow"> </a>
+<div id="post-35927-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-35927-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35927/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/35927/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Build output:</p>
+<pre><code>make[2]: Leaving directory `/home/user/Sharan/Softwares/wireshark-1.12.0/ui/cli'
+Making all in .
+make[2]: Entering directory `/home/user/Sharan/Softwares/wireshark-1.12.0'
+  CC       wireshark-capture-pcap-util-unix.o
+  CC       wireshark-capture-pcap-util.o
+  CC       wireshark-cfile.o
+  CC       wireshark-cfutils.o
+  CC       wireshark-clopts_common.o
+  CC       wireshark-frame_tvbuff.o
+  CC       wireshark-sync_pipe_write.o
+  PERL     version.h
+Version configuration file version.conf not found.  Using defaults.
+version.h unchanged.
+  CC       wireshark-version_info.o
+  CC       wireshark-capture_ifinfo.o
+  CC       wireshark-capture_sync.o
+  CC       wireshark-capture_ui_utils.o
+  CC       wireshark-airpcap_loader.o
+  CC       wireshark-capture.o
+  CC       wireshark-capture_info.o
+  CC       wireshark-capture_opts.o
+  CC       wireshark-color_filters.o
+  CC       wireshark-file.o
+  CC       wireshark-fileset.o
+  CC       wireshark-filters.o
+  CC       wireshark-iface_monitor.o
+  CC       wireshark-proto_hier_stats.o
+  CC       wireshark-summary.o
+  CC       wireshark-ws80211_utils.o
+  CCLD     wireshark
+wireshark-iface_monitor.o: In function `iface_mon_handler2':
+/home/user/Sharan/Softwares/wireshark-1.12.0/iface_monitor.c:80: undefined reference to `rtnl_link_alloc'
+/home/user/Sharan/Softwares/wireshark-1.12.0/iface_monitor.c:92: undefined reference to `rtnl_link_get_flags'
+/home/user/Sharan/Softwares/wireshark-1.12.0/iface_monitor.c:93: undefined reference to `rtnl_link_get_name'
+/home/user/Sharan/Softwares/wireshark-1.12.0/iface_monitor.c:110: undefined reference to `rtnl_link_put'
+wireshark-ws80211_utils.o: In function `get_iface_info_handler':
+/home/user/Sharan/Softwares/wireshark-1.12.0/ws80211_utils.c:350: undefined reference to `genlmsg_attrlen'
+/home/user/Sharan/Softwares/wireshark-1.12.0/ws80211_utils.c:350: undefined reference to `genlmsg_attrdata'
+wireshark-ws80211_utils.o: In function `__ws80211_get_iface_info':
+/home/user/Sharan/Softwares/wireshark-1.12.0/ws80211_utils.c:405: undefined reference to `genlmsg_put'
+wireshark-ws80211_utils.o: In function `get_phys_handler':
+/home/user/Sharan/Softwares/wireshark-1.12.0/ws80211_utils.c:206: undefined reference to `genlmsg_attrlen'
+/home/user/Sharan/Softwares/wireshark-1.12.0/ws80211_utils.c:206: undefined reference to `genlmsg_attrdata'
+wireshark-ws80211_utils.o: In function `ws80211_init':
+/home/user/Sharan/Softwares/wireshark-1.12.0/ws80211_utils.c:83: undefined reference to `genl_connect'
+/home/user/Sharan/Softwares/wireshark-1.12.0/ws80211_utils.c:89: undefined reference to `genl_ctrl_resolve'
+wireshark-ws80211_utils.o: In function `ws80211_create_on_demand_interface':
+/home/user/Sharan/Softwares/wireshark-1.12.0/ws80211_utils.c:549: undefined reference to `genlmsg_put'
+wireshark-ws80211_utils.o: In function `ws80211_set_freq':
+/home/user/Sharan/Softwares/wireshark-1.12.0/ws80211_utils.c:587: undefined reference to `genlmsg_put'
+wireshark-ws80211_utils.o: In function `ws80211_get_phys':
+/home/user/Sharan/Softwares/wireshark-1.12.0/ws80211_utils.c:301: undefined reference to `genlmsg_put'
+collect2: error: ld returned 1 exit status
+make[2]: *** [wireshark] Error 1
+make[2]: Leaving directory `/home/user/Sharan/Softwares/wireshark-1.12.0'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory `/home/user/Sharan/Softwares/wireshark-1.12.0'
+make: *** [all] Error 2
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5b2934342f1b2e392e352f2e76332b76373a2b2f342b">[email&#160;protected]</a>:/home/user/Sharan/Softwares/wireshark-1.12.0 #
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/make/" class="post-tag tag-link-make"
+                                        title="see questions tagged 'make'" rel="tag">make</a>
+                                
+                                    <a href="/tags/error/" class="post-tag tag-link-error"
+                                        title="see questions tagged 'error'" rel="tag">error</a>
+                                
+                                    <a href="/tags/iface_monitor.c/" class="post-tag tag-link-iface_monitor.c"
+                                        title="see questions tagged 'iface_monitor.c'" rel="tag">iface_monitor.c</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Sep '14, 03:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/46521255c9360a018c61fe9f828b7e62?s=32&amp;d=identicon&amp;r=g" alt="Sharan's gravatar image" />
+    <p><a href="/users/9307/sharan">Sharan</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Sharan has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/35927/">
+                edited
+                <strong>04 Sep '14, 01:28</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+            <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+            <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-35927">
+    
+        <a name="35931"></a>
+        <div class="comment" id="comment-35931">
+            <div id="post-35931-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I would guess that it's related to libnl. Try to build without it.</p></div>
+            <div class="comment-info" id="comment-35931-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Sep '14, 08:32)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-35927" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35927-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/35927/wireshark-1120-make-is-failing-even-after-resolving-dependencieswireshark-iface_monitoro?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/35927/wireshark-1120-make-is-failing-even-after-resolving-dependencieswireshark-iface_monitoro?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/35927/wireshark-1120-make-is-failing-even-after-resolving-dependencieswireshark-iface_monitoro?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/35927/wireshark-1120-make-is-failing-even-after-resolving-dependencieswireshark-iface_monitoro?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="35953"></a>
+                    <div id="answer-container-35953" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-35953-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35953/up/" rel="nofollow"> </a>
+<div id="post-35953-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-35953-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35953/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Goggelse says:
+libnl - Netlink Protocol Library Suite - Infradead.org
+www.infradead.org/~tgr/libnl/</p>
+<p>It got something to do with capturing Wlan traffic, the particular code failing to build creates a toolbar to fill in channel info etc I think. For some reason configure isn't picking up the right headers I suspect or perhaps you have more than one version of libnl installed. If you don't need to do wireless captures you can do without it. if you do need it you need to install the right development package for libnl I suspect.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/35953/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Sep '14, 03:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2d3d425a7a829209431fb38d326b53af?s=32&amp;d=identicon&amp;r=g" alt="Anders's gravatar image" />
+    <p><a href="/users/42/anders">Anders ♦</a><br/>
+    <span class="score" title="4578 reputation points"><span class="">4.6k</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="52 badges"><span class="bronze">&#9679;</span><span class="badgecount">52</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Anders has 56 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-35953">
+    
+        <a name="35952"></a>
+        <div class="comment" id="comment-35952">
+            <div id="post-35952-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Anders. Without libnl, make is working. I got few more queries on the same line,</p>
+
+<ul>
+<li>What would be the side effects for compiling wireshark without libnl? (./configure --without-libnl).</li>
+<li>What actually libn do?</li>
+</ul>
+
+<p>I got following warnings after compiling:</p>
+
+<p><strong> (process:550): WARNING </strong>: Preference "column.hidden" has been converted to "gui.column.hidden"
+Save your preferences to make this change permanent.</p>
+
+<p><strong> (process:550): WARNING </strong>: Preference "column.format" has been converted to "gui.column.format"
+Save your preferences to make this change permanent.</p></div>
+            <div class="comment-info" id="comment-35952-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Sep '14, 03:04)</span>
+                <a class="comment-user userinfo" href="/users/9307/sharan">Sharan</a>
+                
+            </div>
+        </div>
+    
+        <a name="35956"></a>
+        <div class="comment" id="comment-35956">
+            <div id="post-35956-score" class="comment-score"></div>
+            <div class="comment-text"><p>Oh and
+process:550): WARNING : Preference "column.hidden" has been converted to "gui.column.hidden" Save your preferences to make this change permanent</p>
+
+<p>As the Warning says the preference has been changed and the "old" and "new" preference file foramt does not match. Resaving the preferences will update to the new format.</p></div>
+            <div class="comment-info" id="comment-35956-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Sep '14, 04:57)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="35989"></a>
+        <div class="comment" id="comment-35989">
+            <div id="post-35989-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you build without libnl,  the wireless toolbar will be missing, and Wireshark won't automatically detect the addition of or removal of interfaces.</p>
+
+<p>Libnl is, as the page Anders mentioned, "a collection of libraries providing APIs to netlink protocol based Linux kernel interfaces", and netlink is "a IPC mechanism primarly between the kernel and user space processes. It was designed to be a more flexible successor to ioctl to provide mainly networking related kernel configuration and monitoring interfaces."</p>
+
+<p>Among other things, netlink can be used to get notifications about changes to network interfaces (so, without libnl, Wireshark can't get those notifications and can't automatically update its list of interfaces) and get information about and control wireless interfaces (so, without libnl, Wireshark can't get that information and control those interfaces, so it can't implement the wireless toolbar).</p></div>
+            <div class="comment-info" id="comment-35989-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Sep '14, 01:37)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="35990"></a>
+        <div class="comment" id="comment-35990">
+            <div id="post-35990-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>(process:550): WARNING : Preference "column.hidden" has been converted to "gui.column.hidden" Save your preferences to make this change permanent.</p>
+</blockquote>
+
+<p>That's a change between whatever version of Wireshark you were using and 1.12.0.  Some GUI preferences were given new names beginning with "gui."; Wireshark converts them internally, but warns about it - if you save your preferences, they will be written out with the new name</p></div>
+            <div class="comment-info" id="comment-35990-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Sep '14, 01:39)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-35953" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35953-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="35992"></a>
+                    <div id="answer-container-35992" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-35992-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/35992/up/" rel="nofollow"> </a>
+<div id="post-35992-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-35992-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/35992/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There's probably a bug somewhere in the configure script, so that it configured support in for the parts that use libnl but either didn't link with libnl or linked with the wrong version of libnl.</p>
+<p>Could you do a <code>make distclean</code>, re-run the configure script with the same arguments that you used the last time, run <code>make V=1</code>, and file a bug on <a href="http://bugs.wireshark.org/">the Wireshark bugzilla</a>, and attach both the complete <code>config.log</code> file produced by the configure script and the output of <code>make V=1</code>?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/35992/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Sep '14, 01:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-35992">
+    
+        <a name="36001"></a>
+        <div class="comment" id="comment-36001">
+            <div id="post-36001-score" class="comment-score"></div>
+            <div class="comment-text"><p>Harris, I've raised a bug as you suggested. 
+<a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=10444">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=10444</a></p></div>
+            <div class="comment-info" id="comment-36001-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Sep '14, 05:57)</span>
+                <a class="comment-user userinfo" href="/users/9307/sharan">Sharan</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-35992" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-35992-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/35927/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='CRoG5UVk7oqmzlBe47fAivMOmEcKFSrM' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/35927/wireshark-1120-make-is-failing-even-after-resolving-dependencieswireshark-iface_monitoro?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/35927/wireshark-1120-make-is-failing-even-after-resolving-dependencieswireshark-iface_monitoro?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/error/"
+            class="tag-link-error"
+            title="see questions tagged'error'using tags"
+            rel="tag">error</a> <span class="tag-number">&#215;193</span><br/>
+        
+        <a href="/tags/make/"
+            class="tag-link-make"
+            title="see questions tagged'make'using tags"
+            rel="tag">make</a> <span class="tag-number">&#215;18</span><br/>
+        
+        <a href="/tags/iface_monitor.c/"
+            class="tag-link-iface_monitor.c"
+            title="see questions tagged'iface_monitor.c'using tags"
+            rel="tag">iface_monitor.c</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 2, 2014, 3:55 a.m.">02 Sep '14, 03:55</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,709 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 4, 2014, 5:57 a.m.">04 Sep '14, 05:57</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/33849/plugin-dissector-compilation-error-request-for-implicit-conversion">Plugin Dissector Compilation Error &quot;request for implicit conversion ..&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19558/error-while-make">Error while make</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14081/ws-version-102-patched-make-all-error-2">WS version 1.02 patched make: *** [all] Error 2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27165/make-error-solaris-10-x86">make error Solaris 10 x86</a>
+        </p>
+        
+        <p>
+            <a href="/questions/153/building-latest-trunk">Building Latest Trunk</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4171/can-not-open-file-over-2gbthere-is-an-error">Can not open file over 2GB,there is an error .</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7572/compile-error-in-windows">Compile error in windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13305/mac-os-x-106-installation-problem">Mac OS X 10.6 Installation problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16306/ip4-errors-i-got-sometimes-lags-in-games">IP4 Errors - I got sometimes lags in games</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23519/ipv6-dissecting-throws-lua-ft-not-yet-supported-error-why">IPv6 Dissecting throws Lua FT not yet supported error! Why?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

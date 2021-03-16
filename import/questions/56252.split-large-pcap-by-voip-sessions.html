@@ -1,0 +1,1178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Split large pcap by VoIP sessions - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi. I&#39;ve got really large dump with plenty of VoIP sessions (over RTP). I wan&#39;t to split it into smaller files, but not by time or by size. I want to store each call-session into separate file. Is it possible with Wireshark, tshark or some other tools? I&#39;ve tried to use the Lua script from examples:..." />
+        <meta name="keywords" content="pcap,voip" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/56252/split-large-pcap-by-voip-sessions" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/56252/split-large-pcap-by-voip-sessions?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='gv3waQImgQMbg0tydZILfkDB4k4NsuaI' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/56252/split-large-pcap-by-voip-sessions">Split large pcap by VoIP sessions</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-56252-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56252/up/" rel="nofollow"> </a>
+<div id="post-56252-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-56252-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56252/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/56252/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi. I've got really large dump with plenty of VoIP sessions (over RTP). I wan't to split it into smaller files, but not by time or by size. I want to store each call-session into separate file. Is it possible with Wireshark, tshark or some other tools? I've tried to use the Lua script from examples: <a href="https://wiki.wireshark.org/Lua/Examples#Dump_VoIP_calls_into_separate_files">https://wiki.wireshark.org/Lua/Examples#Dump_VoIP_calls_into_separate_files</a> But I'm not sure if it really works: nothing happens after script execution...</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/pcap/" class="post-tag tag-link-pcap"
+                                        title="see questions tagged 'pcap'" rel="tag">pcap</a>
+                                
+                                    <a href="/tags/voip/" class="post-tag tag-link-voip"
+                                        title="see questions tagged 'voip'" rel="tag">voip</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Oct '16, 04:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9d8e7bdd418d0b727f76b47e655bc465?s=32&amp;d=identicon&amp;r=g" alt="trixter's gravatar image" />
+    <p><a href="/users/24827/trixter">trixter</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="trixter has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/56252/">
+                edited
+                <strong>09 Oct '16, 04:43</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-56252">
+    
+        <a name="56259"></a>
+        <div class="comment" id="comment-56259">
+            <div id="post-56259-score" class="comment-score"></div>
+            <div class="comment-text"><p>The Lua script you refer to says</p>
+
+<pre><code>require "rex_pcre"
+require "luasql.mysql"
+</code></pre>
+
+<p>so to work, it needs a library processing posix-compliant regular expressions and a library allowing to interface a database (both seem an overkill to me but that's another story).</p>
+
+<p>During runtime, the script creates a separate capture file for each VoIP call initiated using SIP and dumps to it all packets which belong to that call, based on the RTP and udptl (t38) dissectors' ability to identify the packet of a signalling protocol which contained the command setting up that particular RTP or udptl stream.</p>
+
+<p>So what surprises me is that you say it does nothing at all, it should  at least woe that the libraries are unavailable, or that </p>
+
+<p>Are your VoIP calls initiated using SIP or using another protocol (because the script doesn't deal with MGCP, H.323, or H.248/MEGACO)?</p>
+
+<p>Is Lua enabled in your Wireshark setup?</p>
+
+<p>If it is, does Wireshark complain about anything wrong about Lua?</p>
+
+<p>If you run tshark, can you see the <code>Starting voip.lua script.</code> line in its output?</p>
+
+<p>Does the user under which you run Wireshark enough privileges to write into the destination directory?</p></div>
+            <div class="comment-info" id="comment-56259-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 07:08)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="56260"></a>
+        <div class="comment" id="comment-56260">
+            <div id="post-56260-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, I've installed pcre and luasql dependencies, now I'm getting: "Lua: Error During execution of dialog callback: [string "-- voip.lua..."]:11: attempt to index global 'luasql' (a nil value)" when trying to execute this script in Wireshark.</p></div>
+            <div class="comment-info" id="comment-56260-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 07:36)</span>
+                <a class="comment-user userinfo" href="/users/24827/trixter">trixter</a>
+                
+            </div>
+        </div>
+    
+        <a name="56261"></a>
+        <div class="comment" id="comment-56261">
+            <div id="post-56261-score" class="comment-score"></div>
+            <div class="comment-text"><p>Have you created a database <code>voiper</code> accessible using username <code>voiper</code> and password <code>password</code> in your MySQL before running the script?</p>
+
+<p>After reading the script a bit more carefully, the use of an SQL database still seems to me an overkill as it works with just a single table of few columns so Lua tables (one per column), but I'd recommend to first pushstart it as it is and then eventually get rid of the SQL.</p>
+
+<p>Besides, it also seems to me that the regexp is required only to extract a proprietary header <code>x-inin-crn</code> from the SIP messages, so it should be possible to leave it out completely.</p>
+
+<p>And there is also <code>os.clock()</code> used to check whether a packet is still worth handling, so maybe the intention was to use the script only during live capture. Since you seem to be parsing existing files, you should skip this part as well.</p></div>
+            <div class="comment-info" id="comment-56261-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 07:53)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="56262"></a>
+        <div class="comment" id="comment-56262">
+            <div id="post-56262-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well, looks like dead end for me, because I'm not familiar with Lua in any way and can't make even small changes to this script - it's a blackbox to me :(</p></div>
+            <div class="comment-info" id="comment-56262-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 08:03)</span>
+                <a class="comment-user userinfo" href="/users/24827/trixter">trixter</a>
+                
+            </div>
+        </div>
+    
+        <a name="56263"></a>
+        <div class="comment" id="comment-56263">
+            <div id="post-56263-score" class="comment-score"></div>
+            <div class="comment-text"><p>The alternative way would be to use MATE, but I assume it would mean just another hue of black to you, and although there is less to learn, there is also less to achieve - namely, MATE won't save the calls to files.</p>
+
+<p>However, what is the ultimate goal of the exercise? 5000 files, each containing a single call, is also nothing convenient for manual search-through?</p></div>
+            <div class="comment-info" id="comment-56263-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 08:10)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="56264"></a>
+        <div class="comment not_top_scorer" id="comment-56264">
+            <div id="post-56264-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's just for the sake of convenience: I've got pretty powerful computer, but still opening such a huge file and manipulating with it is a true pain. Also I want to load some sessions to external software for another kinds of processing, but I have to be sure that each file contains a separate session: not just pieces of some sessions split by time or size.</p></div>
+            <div class="comment-info" id="comment-56264-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 08:14)</span>
+                <a class="comment-user userinfo" href="/users/24827/trixter">trixter</a>
+                
+            </div>
+        </div>
+    
+        <a name="56265"></a>
+        <div class="comment not_top_scorer" id="comment-56265">
+            <div id="post-56265-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you have ever programmed anything, Lua is not that complex to learn, and the business logic is quite simple:</p>
+
+<ul>
+<li>
+<p>register your tap to get all SIP, RTP and udptl packets</p>
+</li>
+<li>
+<p>create a new output file with each new SIP Call-ID value you extract from an incoming SIP INVITE packet with no To-tag, and maintain a table mapping the Call-ID values to file names</p>
+</li>
+<li>
+<p>copy each SIP packet bearing that Call-ID to the corresponding file, and if it contains an SDP, create a row in a table <code>frame2callid</code> where the value is the Call-ID or the file handle associated to it and the index is the frame number</p>
+</li>
+<li>
+<p>for each RTP (or udptl) packet, use the <code>rt.setup-frame</code> value as an index to the <code>frame2callid</code> table to learn where (to which file) to copy it (and ignore RTP packets which don't have that value).</p>
+</li>
+<li>
+<p>at the end of the capture, close all output files.</p>
+</li>
+</ul>
+
+<p>This way you'll save all calls whose initial INVITE is present in that capture; calls which had already been running when the capture started will be ignored. So you'll get just the beginning of calls spanning multiple source files. </p>
+
+<p>Another limitation is that if the telephony engine of Wireshark fails to detect an RTP stream for whatever reason, you miss it too.</p>
+
+<p>And yet another limitation is that if the traffic contains some complex scenarios like call transfers, or if there is just a B2BUA which decouples the Call-IDs between two branches of the same actual call, you'll have to merge several output files together to get everything related into a single file.</p></div>
+            <div class="comment-info" id="comment-56265-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 08:56)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56252" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56252-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/56252/split-large-pcap-by-voip-sessions?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/56252/split-large-pcap-by-voip-sessions?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/56252/split-large-pcap-by-voip-sessions?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/56252/split-large-pcap-by-voip-sessions?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="56253"></a>
+                    <div id="answer-container-56253" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-56253-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56253/up/" rel="nofollow"> </a>
+<div id="post-56253-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-56253-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56253/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can try do to that with <a href="https://www.tracewrangler.com">TraceWrangler</a>, using an "Extraction" task. By default, that task will split your file into sessions based on socket pairs. My guess is that each of your VoIP session has one specific socket pair which is different from all others.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/56253/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Oct '16, 04:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-56253">
+    
+        <a name="56255"></a>
+        <div class="comment" id="comment-56255">
+            <div id="post-56255-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've tried it on a sample small dump with 2 RTP sessions, but it "extracted" dozens of files... How do I filter only VoIP traffic for extraction?</p></div>
+            <div class="comment-info" id="comment-56255-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 05:43)</span>
+                <a class="comment-user userinfo" href="/users/24827/trixter">trixter</a>
+                
+            </div>
+        </div>
+    
+        <a name="56256"></a>
+        <div class="comment" id="comment-56256">
+            <div id="post-56256-score" class="comment-score"></div>
+            <div class="comment-text"><p>Nope. Handling FTP is a rose garden as compared to handling VoIP. VoIP uses one protocol (set) to organize calls, and another protocol to deliver the media. The sockets used by the media are indicated in the application layer of the control/signalling protocol, so TraceWrangler would have to parse the control protocol to control handling of other protocols dynamically.</p></div>
+            <div class="comment-info" id="comment-56256-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 05:44)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="56257"></a>
+        <div class="comment" id="comment-56257">
+            <div id="post-56257-score" class="comment-score"></div>
+            <div class="comment-text"><p>Okay, I'm not that familiar with VoIP captures I have to admit. In this case Tracewrangler won't be of much help, as it doesn't parse VoIP protocols at this time.</p></div>
+            <div class="comment-info" id="comment-56257-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 05:47)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56258"></a>
+        <div class="comment" id="comment-56258">
+            <div id="post-56258-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, got it. So is there any other solution? Maybe I can use some scripting like Pyshark? I've already extracted all sessions as list (CSV) using Wireshark capabilities (~5k sessions). It contains: "Source Address","Source Port","Destination Address","Destination Port","SSRC" and some other fields. Is it possible now to extract correspondent RTP streams line-by-line to separate pcap-files?</p></div>
+            <div class="comment-info" id="comment-56258-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '16, 05:56)</span>
+                <a class="comment-user userinfo" href="/users/24827/trixter">trixter</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56253" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56253-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="56269"></a>
+                    <div id="answer-container-56269" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-56269-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56269/up/" rel="nofollow"> </a>
+<div id="post-56269-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-56269-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56269/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I've never collected enough motivation to write a Lua listener, and now I know why.</p>
+<p>If you are 150 % sure that the SIP part of your VoIP traffic uses solely non-fragmented UDP packets as transport, the Lua code below is what you asked for, except that I haven't tested it on captures containing RTCP or T.38 packets.</p>
+<p>Fragmentation of SIP packets as well as use of TCP as SIP transport renders it unusable, because the way it is written, the listener always receives only the last fragment of reassembled SIP PDUs, regardless whether they have been reassembled from IP fragments or TCP segments (or both), because the SIP dissector is invoked only when processing the reassembled transport layer.</p>
+<p>To fix this, it would be necessary to send to the listener all the IP fragments and TCP segments, and the listener would have to remember them until they would become reassembled and then, depending on whether the result of the reassembly contained a valid SIP PDU or not, either save them to the output file (possibly creating weird negative timestamp deltas if an RTP packet would squeeze between two fragments of a SIP PDU) or just drop them.</p>
+<p>Also, bear in mind that the <code>Dumper.new</code> method <strong>appends</strong> data to existing files, so you have to clean up the output directory before opening the same source capture another time.</p>
+<pre><code>-- the output directory may be "hardcoded" this simple way,
+-- but if you use command line (tshark) and thus you can set
+-- environment variables, use
+-- local outputdir = os.getenv("my_output_path")
+-- as a way to fetch the path from an environment
+-- variable "my_output_path" instead
+
+local outputdir = "c:/Users/your_login/Documents"
+
+-- declare the Lua table for file handles
+local files = {}
+
+-- declare the Lua table of frames containing SDPs
+local sdp_frames = {}
+
+-- prepare the field extractors for the individual protocol types which we are tapping
+local frame_number_f = Field.new("frame.number")
+
+local rtp_setup_frame_f = Field.new("rtp.setup-frame")
+
+local t38_setup_frame_f = Field.new("t38.setup-frame")
+
+local rtcp_setup_frame_f = Field.new("rtcp.setup-frame")
+
+local sip_callid_f = Field.new("sip.Call-ID")
+local sip_method_f = Field.new("sip.Method")
+local sip_to_tag_f = Field.new("sip.to.tag")
+
+local sdp_version_f = Field.new("sdp.version")
+
+-- create and register the listener
+local tap = Listener.new("ip", "rtp or rtcp or t38 or (sip and !(sip.CSeq.method == REGISTER) and !(sip.CSeq.method == OPTIONS))")
+
+-- declare the executive body of the tap
+function tap.packet(pinfo,tvb,ip)
+
+-- declare a common function handling all media-like packets
+  function handle_media(setup_frame)
+    -- if a setup frame for this media stream has actually been encountered, save the packet
+    if sdp_frames[setup_frame] then
+      files[sdp_frames[setup_frame]]:dump_current()
+    end
+  end
+
+-- attempt to extract all signature values
+  local frame_number = frame_number_f().value -- I can do it this because frame.number always exists
+  local sip_callid = sip_callid_f()
+  local sip_method = sip_method_f()
+  local sip_to_tag = sip_to_tag_f()
+  local sdp_version = sdp_version_f()
+  local rtp_setup_frame = rtp_setup_frame_f()
+  local rtcp_setup_frame = rtcp_setup_frame_f()
+  local t38_setup_frame = t38_setup_frame_f()
+
+-- handle SIP packets
+  if sip_callid then
+    sip_callid_v = sip_callid.value
+
+-- check whether the PDU is an initial INVITE, and create a call if it is and if that call doesn't exist yet
+-- because there was an unauthorized initial INVITE before
+    sip_method = sip_method_f()
+    if sip_method then
+      if (sip_method.value == "INVITE" and not(sip_to_tag_f()) and not(files[sip_callid_v])) then
+        local f_handle = Dumper.new_for_current( outputdir .. "/" .. tostring(sip_callid) ..".pcap" )
+        files[sip_callid_v] = f_handle
+      end
+    end
+
+-- check whether the PDU contains an SDP and if so, add the frame to the list
+-- of those responsible for media stream establishment
+    if files[sip_callid_v] then
+      if sdp_version then
+        sdp_frames[frame_number] = sip_callid_v
+      end
+    end
+
+-- finally, if the frame belongs to an existing call, copy it to the output file
+    local f_handle = files[sip_callid_v]
+    if f_handle then
+      f_handle:dump_current()
+    end
+  end
+
+-- handle "media" packets
+  if rtp_setup_frame then
+    handle_media(rtp_setup_frame.value)
+  end
+
+  if rtcp_setup_frame then
+    handle_media(rtcp_setup_frame.value)
+  end
+
+  if t38_setup_frame then
+    handle_media(t38_setup_frame.value)
+  end
+
+end
+
+-- declare the function to print the progress, not actually necessary
+function tap.draw()
+end
+
+-- declare what to do after the last packet has been processed
+function tap.reset()
+  -- close all files at once here, which may be way too late if there are hundreds of calls
+  -- and so you may run out of your file handle quota
+  for call_id,f_handle in pairs(files) do
+    f_handle:flush()
+    f_handle:close()
+  end
+end
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/56269/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Oct '16, 14:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/56269/">
+                edited
+                <strong>09 Oct '16, 14:27</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-56269">
+    
+</div>
+<div id="comment-tools-56269" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56269-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/56252/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='gv3waQImgQMbg0tydZILfkDB4k4NsuaI' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56252/split-large-pcap-by-voip-sessions?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56252/split-large-pcap-by-voip-sessions?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/pcap/"
+            class="tag-link-pcap"
+            title="see questions tagged'pcap'using tags"
+            rel="tag">pcap</a> <span class="tag-number">&#215;238</span><br/>
+        
+        <a href="/tags/voip/"
+            class="tag-link-voip"
+            title="see questions tagged'voip'using tags"
+            rel="tag">voip</a> <span class="tag-number">&#215;139</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 9, 2016, 4:40 a.m.">09 Oct '16, 04:40</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,121 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 9, 2016, 2:27 p.m.">09 Oct '16, 14:27</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/6277/tool-for-splitting-voip-calls-to-separate-files">Tool for splitting voip calls to separate files</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7585/how-to-split-voip-to-saperate-pcap-files-in-easy-way">How to split voip to saperate pcap files in easy way</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47363/decoding-vonage-call-via-pcap">Decoding Vonage call via PCAP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37353/pcap-file-voip-analysis-issue">pcap file VoIP analysis issue</a>
+        </p>
+        
+        <p>
+            <a href="/questions/146/combining-rtp-streams-for-analysis">Combining RTP streams for analysis</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3899/prepaid-voip-phone">Prepaid VoIP phone?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12344/tshark-voip-call-listing">tshark VoIP call listing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18733/voip-why-do-dtmf-events-not-show-up-on-wireshark-capture">VOIP:  Why do DTMF events not show up on Wireshark capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30953/decoding-h263-1998">Decoding H263-1998</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38908/voip-calls-flow-distinguish-uas-by-ipport-instead-of-ip">VoIP Calls Flow - distinguish UAs by IP:port instead of IP</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

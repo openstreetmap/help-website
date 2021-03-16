@@ -1,0 +1,941 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>RTT for TCP with netem - Wireshark Q&amp;A</title>
+        <meta name="description" content="I have the following simple network topology:  Two Laptops using Linux Ubuntu 14.04 and 16.04 with Kernel Version 4.4.0 They are directly connected using 1Gbps Ethernet interface. PC1: 10.0.0.1/24 &amp;amp; PC2: 10.0.0.2/24 PC2 runs netem to add artificial delay of 100ms Both laptops run iperf v2.0.9 PC..." />
+        <meta name="keywords" content="iperf,capture,tcp,rtt" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/57275/rtt-for-tcp-with-netem" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/57275/rtt-for-tcp-with-netem?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='TVihpdC3XmMJE20ZMUdkzOaj97fmIbcm' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/57275/rtt-for-tcp-with-netem">RTT for TCP with netem</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-57275-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57275/up/" rel="nofollow"> </a>
+<div id="post-57275-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-57275-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57275/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/57275/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have the following simple network topology:</p>
+<ol>
+<li>Two Laptops using Linux Ubuntu 14.04 and 16.04 with Kernel Version 4.4.0</li>
+<li>They are directly connected using 1Gbps Ethernet interface.</li>
+<li>PC1: 10.0.0.1/24 &amp; PC2: 10.0.0.2/24</li>
+<li>PC2 runs netem to add artificial delay of 100ms</li>
+<li>Both laptops run iperf v2.0.9</li>
+<li>PC1 runs as a server and PC2 as a client</li>
+</ol>
+<p>When I start the TCP connection on PC2, iperf reports the correct RTT which is around 100ms, however when I capture the traffic using wireshark again on PC2 and try to analyze the RTT. The RTT given by Wireshark is very small compared to what it should be. My question what is the cause of this behavior?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/iperf/" class="post-tag tag-link-iperf"
+                                        title="see questions tagged 'iperf'" rel="tag">iperf</a>
+                                
+                                    <a href="/tags/capture/" class="post-tag tag-link-capture"
+                                        title="see questions tagged 'capture'" rel="tag">capture</a>
+                                
+                                    <a href="/tags/tcp/" class="post-tag tag-link-tcp"
+                                        title="see questions tagged 'tcp'" rel="tag">tcp</a>
+                                
+                                    <a href="/tags/rtt/" class="post-tag tag-link-rtt"
+                                        title="see questions tagged 'rtt'" rel="tag">rtt</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Nov '16, 12:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/566cfe38b17a31f0dc825c86538cf3d4?s=32&amp;d=identicon&amp;r=g" alt="Hany%20Assasa's gravatar image" />
+    <p><a href="/users/17710/hany-assasa">Hany Assasa</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hany Assasa has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/57275/">
+                edited
+                <strong>10 Nov '16, 13:15</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-57275">
+    
+        <a name="57276"></a>
+        <div class="comment" id="comment-57276">
+            <div id="post-57276-score" class="comment-score"></div>
+            <div class="comment-text"><p>Which PC is running Wireshark?  Which side reports this RTT?  Both, or just the client?  Can you post a short piece of trace in a public location?  Since it is iperf traffic, there should not be any confidentiality issues.</p></div>
+            <div class="comment-info" id="comment-57276-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Nov '16, 13:13)</span>
+                <a class="comment-user userinfo" href="/users/112/bob-jones">Bob Jones</a>
+                
+            </div>
+        </div>
+    
+        <a name="57278"></a>
+        <div class="comment" id="comment-57278">
+            <div id="post-57278-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/112/bob-jones">@Bob Jones</a>, I added more description. Tomorrow I will upload the capture files.</p></div>
+            <div class="comment-info" id="comment-57278-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Nov '16, 13:16)</span>
+                <a class="comment-user userinfo" href="/users/17710/hany-assasa">Hany Assasa</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-57275" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57275-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/57275/rtt-for-tcp-with-netem?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/57275/rtt-for-tcp-with-netem?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/57275/rtt-for-tcp-with-netem?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/57275/rtt-for-tcp-with-netem?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="57279"></a>
+                    <div id="answer-container-57279" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-57279-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57279/up/" rel="nofollow"> </a>
+<div id="post-57279-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-57279-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57279/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>When the client runs at the same PC like netem (PC2), Wireshark shows the actual RTT (the delay from the SYN packet sent by the client to the SYN,ACK sent by the server) as seen on the wire because the client's SYN packet is delayed before reaching the wire and the server's SYN,ACK packet is delayed on the way from the wire to the IP stack, and netem is further from the wire than libpcap.</p>
+<p>If you swap the roles and run the client at PC1 and server at PC2, the values shown by iperf and Wireshark should match.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/57279/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Nov '16, 13:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-57279">
+    
+        <a name="57293"></a>
+        <div class="comment" id="comment-57293">
+            <div id="post-57293-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's probably another example of why capturing on one of the two systems involved is not a good idea. A third, independent capture PC between sender and receiver should show what really happens.</p></div>
+            <div class="comment-info" id="comment-57293-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Nov '16, 01:00)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="57299"></a>
+        <div class="comment" id="comment-57299">
+            <div id="post-57299-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/145/jasper">@Jasper</a>, I disagree, for this particular case it is irrelevant whether you capture "in the middle of the wire" or at one end of it. </p>
+
+<p>The problem here is that the delay is inserted between the wire and the client application, and the RTT is evaluated as "SYN+ACK.timestamp - SYN.timestamp". So the "software delay" between the wire and the application has to be inserted at the server end.</p></div>
+            <div class="comment-info" id="comment-57299-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Nov '16, 02:24)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="57301"></a>
+        <div class="comment" id="comment-57301">
+            <div id="post-57301-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy">@sindy</a> okay, maybe I'm overthinking this. I always evaluate RTT via SYN - SYN/ACK - ACK.</p></div>
+            <div class="comment-info" id="comment-57301-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Nov '16, 03:20)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="57307"></a>
+        <div class="comment" id="comment-57307">
+            <div id="post-57307-score" class="comment-score"></div>
+            <div class="comment-text"><p>Why?</p>
+
+<pre><code> client                server
+    |--------            | \
+    |        SYN         |  &gt; forward delay
+    |           --------&gt;| /
+    |                    |
+    |             -------| \
+    |      SYN/ACK       |  &gt; return delay
+    |&lt;-----              | /
+    |                    |
+    |--------            | \
+    |        ACK         |  &gt; forward delay
+    |           --------&gt;| /
+</code></pre>
+
+<p>So to me, both (SYN to SYN/ACK delay) and (SYN/ACK to ACK) delay contain the complete round trip, i.e. one pass through the client-&gt;server path and one pass through the server-&gt;client path (and should thus be almost the same). So maybe you calculate the RTT as an average of the two?</p>
+
+<p>The problem here that the delay is not in the network but between the NIC and the application (iperf in this case) at one of the ends. So yes, I should probably extend my answer as "if you look at the SYN to SYN/ACK distance in the capture, the netem must run at server side; if you measure the SYN/ACK to ACK value, the netem must run at client side".</p>
+
+<pre><code>           silicon               copper
+ client                netem                server
+    |--------SYN--------&gt;|                    |
+    :                    :                    :
+    |                    |                    |
+    |                    |--------SYN--------&gt;|
+    |                    |&lt;-----SYN/ACK-------|
+    :                    :                    :
+    |&lt;-----SYN/ACK-------|                    |
+    |--------ACK--------&gt;|                    |
+    :                    :                    :
+    |                    |--------ACK--------&gt;|
+</code></pre></div>
+            <div class="comment-info" id="comment-57307-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Nov '16, 03:55)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="57309"></a>
+        <div class="comment" id="comment-57309">
+            <div id="post-57309-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy">@sindy</a> I need to be able to determine RTT via the handshake no matter where the capture device is placed, because for best capture quality I cannot capture on either client or server as the results are always biased. SYN to SYN/ACK and SYN/ACK to ACK are not good enough unless you're on or very close to client or server. How I do this I documented here: </p>
+
+<p><a href="https://blog.packet-foo.com/2014/07/determining-tcp-initial-round-trip-time/">https://blog.packet-foo.com/2014/07/determining-tcp-initial-round-trip-time/</a></p></div>
+            <div class="comment-info" id="comment-57309-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Nov '16, 04:10)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="57311"></a>
+        <div class="comment not_top_scorer" id="comment-57311">
+            <div id="post-57311-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, <a href="/users/145/jasper">@Jasper</a>, your article covers the generic case (very nicely as always).</p>
+
+<p>I was trying to share the perspective of the OP who captures either at client or at server machine, except that the path causing the delay is not between the two machines as usually but inside one of the machines. Also, the iperf always measures the RTT from the point of view of either the server or the client, not from the middle of the path.</p></div>
+            <div class="comment-info" id="comment-57311-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Nov '16, 04:24)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="57312"></a>
+        <div class="comment not_top_scorer" id="comment-57312">
+            <div id="post-57312-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks <a href="/users/19586/sindy">@sindy</a>, and you're right, this question is more about a different aspect of RTT.</p></div>
+            <div class="comment-info" id="comment-57312-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Nov '16, 04:30)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-57279" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57279-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/57275/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='TVihpdC3XmMJE20ZMUdkzOaj97fmIbcm' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/57275/rtt-for-tcp-with-netem?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/57275/rtt-for-tcp-with-netem?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tcp/"
+            class="tag-link-tcp"
+            title="see questions tagged'tcp'using tags"
+            rel="tag">tcp</a> <span class="tag-number">&#215;752</span><br/>
+        
+        <a href="/tags/capture/"
+            class="tag-link-capture"
+            title="see questions tagged'capture'using tags"
+            rel="tag">capture</a> <span class="tag-number">&#215;549</span><br/>
+        
+        <a href="/tags/rtt/"
+            class="tag-link-rtt"
+            title="see questions tagged'rtt'using tags"
+            rel="tag">rtt</a> <span class="tag-number">&#215;28</span><br/>
+        
+        <a href="/tags/iperf/"
+            class="tag-link-iperf"
+            title="see questions tagged'iperf'using tags"
+            rel="tag">iperf</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 10, 2016, 12:45 p.m.">10 Nov '16, 12:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,900 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 11, 2016, 4:30 a.m.">11 Nov '16, 04:30</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/15057/how-to-capture-tcp-3-way-handshake">How to capture tcp 3 way handshake</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19653/large-number-of-tcp-rst">Large number of TCP RST</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8942/wireshark-capture-question">Wireshark capture question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13856/tcp-acked-lost-segment-problem">TCP ACKed lost segment problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34231/no-root-privileges-packet-size-limited-during-capture">No root privileges: Packet size limited during capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38641/doesnt-seem-to-be-able-to-capture-the-packets">Doesn&#39;t seem to be able to capture the packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36353/iscsi-read-capacity-16-allocation-length">iscsi Read Capacity 16 allocation length</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30315/tcp-lab-question-12">TCP Lab question 12?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/342/anyone-have-a-capture-of-modbus-over-tcp-i-can-have">Anyone have a capture of modbus over TCP I can have?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12179/capture-filter-tcp-stream-as-txt-file">Capture filter. TCP stream as txt file</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,983 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Splitting pcap files in wireshark - Wireshark Q&amp;A</title>
+        <meta name="description" content="After review a 2GB pcap file in wireshark, is there anyway can split file in half. I tried r running editcap from root; but got message &quot;Less data was read than was expected&quot; using the latest version of Wireshark." />
+        <meta name="keywords" content="files,pcap,splitting,ask.wireshark.org,in" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/36580/splitting-pcap-files-in-wireshark" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/36580/splitting-pcap-files-in-wireshark?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='3AYZx7BBXQQjWsHiWNPbqW3fozVAQdsM' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/36580/splitting-pcap-files-in-wireshark">Splitting pcap files in wireshark</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-36580-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36580/up/" rel="nofollow"> </a>
+<div id="post-36580-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-36580-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36580/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/36580/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>After review a 2GB pcap file in wireshark, is there anyway can split file in half.
+I tried r running editcap from root; but got message "Less data was read than was expected"
+using the latest version of Wireshark.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/files/" class="post-tag tag-link-files"
+                                        title="see questions tagged 'files'" rel="tag">files</a>
+                                
+                                    <a href="/tags/pcap/" class="post-tag tag-link-pcap"
+                                        title="see questions tagged 'pcap'" rel="tag">pcap</a>
+                                
+                                    <a href="/tags/splitting/" class="post-tag tag-link-splitting"
+                                        title="see questions tagged 'splitting'" rel="tag">splitting</a>
+                                
+                                    <a href="/tags/ask.wireshark.org/" class="post-tag tag-link-ask.wireshark.org"
+                                        title="see questions tagged 'ask.wireshark.org'" rel="tag">ask.wireshark.org</a>
+                                
+                                    <a href="/tags/in/" class="post-tag tag-link-in"
+                                        title="see questions tagged 'in'" rel="tag">in</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Sep '14, 22:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e4e65789b62967213583302c83e93a63?s=32&amp;d=identicon&amp;r=g" alt="Z2869's gravatar image" />
+    <p><a href="/users/10055/z2869">Z2869</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Z2869 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-36580">
+    
+</div>
+<div id="comment-tools-36580" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36580-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/36580/splitting-pcap-files-in-wireshark?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/36580/splitting-pcap-files-in-wireshark?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/36580/splitting-pcap-files-in-wireshark?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/36580/splitting-pcap-files-in-wireshark?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="36586"></a>
+                    <div id="answer-container-36586" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-36586-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36586/up/" rel="nofollow"> </a>
+<div id="post-36586-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-36586-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36586/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>"editcap -c 100000 in.pcap out.pcap" usually works fine for me - what kind of parameters did you use?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/36586/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Sep '14, 01:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-36586">
+    
+        <a name="36603"></a>
+        <div class="comment" id="comment-36603">
+            <div id="post-36603-score" class="comment-score"></div>
+            <div class="comment-text"><p>Jasper, I tried what you suggested but only got one record, not sure what I doing wrong. Do you have a good contact number if you wouldn't mind sharing. vr Jamie</p></div>
+            <div class="comment-info" id="comment-36603-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '14, 09:58)</span>
+                <a class="comment-user userinfo" href="/users/10055/z2869">Z2869</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-36586" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36586-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="36596"></a>
+                    <div id="answer-container-36596" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-36596-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36596/up/" rel="nofollow"> </a>
+<div id="post-36596-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-36596-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36596/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As Jasper said, editcap should work.</p>
+<p>But you could also do it from the GUI.  For example if you have a 100-packet capture you want to split in half:</p>
+<ol>
+<li>Use a display filter of "frame.number &lt; 50"</li>
+<li>File-&gt;Export Specified Packets</li>
+<li>Only export the displayed packets</li>
+<li>Repeat 1-3 with a filter of "frame.number &gt;= 50"</li>
+</ol>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/36596/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Sep '14, 06:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e0564001bb7deb960d5d9d9c1e0ba074?s=32&amp;d=identicon&amp;r=g" alt="JeffMorriss's gravatar image" />
+    <p><a href="/users/655/jeffmorriss">JeffMorriss ♦</a><br/>
+    <span class="score" title="6219 reputation points"><span class="">6.2k</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="72 badges"><span class="bronze">&#9679;</span><span class="badgecount">72</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JeffMorriss has 103 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-36596">
+    
+        <a name="36600"></a>
+        <div class="comment" id="comment-36600">
+            <div id="post-36600-score" class="comment-score"></div>
+            <div class="comment-text"><p>Jasper and Jeff, Kudos. I did just that same and got the message ""Less data was read than was expected", I tried reloaded same capture and got same "error message"
+Jeff I will give your idea as try. I am so thank for both of your replies. I will let you folks know how it goes. vr Jamie</p></div>
+            <div class="comment-info" id="comment-36600-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '14, 07:52)</span>
+                <a class="comment-user userinfo" href="/users/10055/z2869">Z2869</a>
+                
+            </div>
+        </div>
+    
+        <a name="36614"></a>
+        <div class="comment" id="comment-36614">
+            <div id="post-36614-score" class="comment-score"></div>
+            <div class="comment-text"><p>I got it to work but had to do alot of playing with &gt; and = values etc. 
+I wsa able to find or write a script to split files, have well over 4TB to do. :-(</p></div>
+            <div class="comment-info" id="comment-36614-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '14, 12:14)</span>
+                <a class="comment-user userinfo" href="/users/10055/z2869">Z2869</a>
+                
+            </div>
+        </div>
+    
+        <a name="36616"></a>
+        <div class="comment" id="comment-36616">
+            <div id="post-36616-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hmm if you have that much data you really should be using editcap.  I'd suggest opening a <a href="https://bugs.wireshark.org">bug report</a> about editcap (including a sample capture, of course) and/or trying out the <a href="https://www.wireshark.org/download/automated/">latest buildbot version</a> of Wireshark to see if the problem is already fixed.</p>
+
+<p>That being said, it's also possible that it could be done with tshark but I couldn't tell you if you need the "-R" or "-Y" argument (there's some funniness with tshark and frame numbers depending on how you're doing your filtering--and I don't remember the conclusion of those discussions).</p></div>
+            <div class="comment-info" id="comment-36616-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '14, 12:41)</span>
+                <a class="comment-user userinfo" href="/users/655/jeffmorriss">JeffMorriss ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-36596" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36596-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="36620"></a>
+                    <div id="answer-container-36620" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-36620-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36620/up/" rel="nofollow"> </a>
+<div id="post-36620-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-36620-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36620/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Kudos Jeff will follow up after to do as you suggest as well check latest build v. Thanks for taking time to follow up with me. v/r Jamie</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/36620/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Sep '14, 19:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e4e65789b62967213583302c83e93a63?s=32&amp;d=identicon&amp;r=g" alt="Z2869's gravatar image" />
+    <p><a href="/users/10055/z2869">Z2869</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Z2869 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-36620">
+    
+</div>
+<div id="comment-tools-36620" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36620-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/36580/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='3AYZx7BBXQQjWsHiWNPbqW3fozVAQdsM' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/36580/splitting-pcap-files-in-wireshark?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/36580/splitting-pcap-files-in-wireshark?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/pcap/"
+            class="tag-link-pcap"
+            title="see questions tagged'pcap'using tags"
+            rel="tag">pcap</a> <span class="tag-number">&#215;238</span><br/>
+        
+        <a href="/tags/files/"
+            class="tag-link-files"
+            title="see questions tagged'files'using tags"
+            rel="tag">files</a> <span class="tag-number">&#215;26</span><br/>
+        
+        <a href="/tags/ask.wireshark.org/"
+            class="tag-link-ask.wireshark.org"
+            title="see questions tagged'ask.wireshark.org'using tags"
+            rel="tag">ask.wireshark.org</a> <span class="tag-number">&#215;24</span><br/>
+        
+        <a href="/tags/in/"
+            class="tag-link-in"
+            title="see questions tagged'in'using tags"
+            rel="tag">in</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/splitting/"
+            class="tag-link-splitting"
+            title="see questions tagged'splitting'using tags"
+            rel="tag">splitting</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 24, 2014, 10:43 p.m.">24 Sep '14, 22:43</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>45,082 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 25, 2014, 7:24 p.m.">25 Sep '14, 19:24</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/14810/tshark-http-multiple-files">Tshark HTTP multiple files</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43223/extract-files-from-pcap-file-programatically">Extract files from pcap file programatically</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10024/how-to-clear-the-possibly-delay-sack-in-sctp-associations-of-type-m2pa">[closed] How to clear the possibly delay SACK in SCTP associations of type M2PA?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4147/analyzing-traffic-to-troubleshoot-an-issue">Analyzing Traffic to troubleshoot an issue</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48127/error-on-generating-build-files">error on generating build files</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43504/help-with-wireshark">HELP WITH WIRESHARK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1599/save-output-of-sessions-to-continuous-logs">Save output of sessions to continuous logs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7504/3gpp-pcap-over-sua-ss7-sccp-user-adaptation-layer">3GPP PCAP over SUA (SS7 SCCP-User Adaptation Layer)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10227/enquiry-on-wireshark-pcap-file">Enquiry on Wireshark pcap file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16420/searchingfiltering-comments-on-packets-in-pcap-ng-file">Searching/Filtering Comments on packets in Pcap ng file</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

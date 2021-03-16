@@ -1,0 +1,1058 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Complete pcap.h with IPv6 support? - Wireshark Q&amp;A</title>
+        <meta name="description" content="For manually parsing .pcap files, I have found header files. But, they don&#39;t seem to have the IPv6 structures. I actually did find a place that had the definition of the IPv6 header. But, I&#39;m not sure if that is all I need. I&#39;m not sure if, when using IPv6, the TCP and UDP headers are the same as IP..." />
+        <meta name="keywords" content="pcap.h,ipv6" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/29971/complete-pcaph-with-ipv6-support" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/29971/complete-pcaph-with-ipv6-support?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='eT616LLB7cxylnua8wCGJb7p6vhFqKAX' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/29971/complete-pcaph-with-ipv6-support">Complete pcap.h with IPv6 support?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-29971-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29971/up/" rel="nofollow"> </a>
+<div id="post-29971-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-29971-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29971/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/29971/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>For manually parsing .pcap files, I have found header files.  But, they don't seem to have the IPv6 structures.  I actually did find a place that had the definition of the IPv6 header.  But, I'm not sure if that is all I need.  I'm not sure if, when using IPv6, the TCP and UDP headers are the same as IPv4.  It didn't look like it, but, it is conceivable that I was in error.  So, I'd like some confirmation.</p>
+<p>Also, Wireshark has the ability to save files in some pcap variations.  For example, there is the variation that supports nanosecond times.  Not sure that I need that, but, it might be interesting to have the docs for that as well.</p>
+<p>Thanks.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/pcap.h/" class="post-tag tag-link-pcap.h"
+                                        title="see questions tagged 'pcap.h'" rel="tag">pcap.h</a>
+                                
+                                    <a href="/tags/ipv6/" class="post-tag tag-link-ipv6"
+                                        title="see questions tagged 'ipv6'" rel="tag">ipv6</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Feb '14, 09:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7467bcb877e612a693246d997583f212?s=32&amp;d=identicon&amp;r=g" alt="Justin%20Crapola's gravatar image" />
+    <p><a href="/users/6719/justin-crapola">Justin Crapola</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Justin Crapola has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-29971">
+    
+</div>
+<div id="comment-tools-29971" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29971-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/29971/complete-pcaph-with-ipv6-support?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/29971/complete-pcaph-with-ipv6-support?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/29971/complete-pcaph-with-ipv6-support?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/29971/complete-pcaph-with-ipv6-support?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="29972"></a>
+                    <div id="answer-container-29972" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-29972-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/29972/up/" rel="nofollow"> </a>
+<div id="post-29972-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-29972-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/29972/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think you're mixing PCAP file format structures with frame format structures. A pcap file has a file header, and multiple frame headers, one for each frame. The frame data itself is just a bunch of bytes. To parse those bytes you need the dissectors which have nothing to do with the file format.</p>
+<p>The (old) pcap format ist documented here: <a href="http://wiki.wireshark.org/Development/LibpcapFileFormat">http://wiki.wireshark.org/Development/LibpcapFileFormat</a></p>
+<p>The newer and much more powerful pcap-ng format is found here: <a href="https://www.winpcap.org/ntar/draft/PCAP-DumpFileFormat.html">https://www.winpcap.org/ntar/draft/PCAP-DumpFileFormat.html</a></p>
+<p>Regarding nanoseconds: if you do not have or want to support specialized high speed capture hardware you can forget about nanoseconds, because a PC/MAC/normal computer cannot capture timestamps that precise.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/29972/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Feb '14, 09:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/29972/">
+                edited
+                <strong>18 Feb '14, 09:30</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-29972">
+    
+        <a name="29976"></a>
+        <div class="comment" id="comment-29976">
+            <div id="post-29976-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi, thanks for the response.  I will endeavor to explain better.  First off, I have a working tool that I use for decoding a specific protocol.  It is actually DNP, which, Wireshark does have DNP decoding.  But my tool does a lot more, including stitching together DNP messages if they are fragmented across multiple IP packets.</p>
+
+<p>So far, so good.  When I first wrote my tool, I looked at .pcapng and .pcap.  I decided to go with the old .pcap files.  At least for the time being. I could possibly support .pcapng someday.  But, I decided to start with just .pcap files.</p>
+
+<p>So, my tool can, if using IPv4 TCP, open a .pcap file, step though the headers, find DNP packets, parse them.  DNP is at least usually TCP, but, it is sometimes done with UDP.  But, I was only initially interested in IP4 TCP.</p>
+
+<p>Well, I was recently given a DNP project using IPv6 UDP.  So, I wanted to update my tool to support UPD and IPv6.</p>
+
+<p>As it so happens, my tool is written in Delphi.  (Pascal)  So, I found definitions of the headers in C, and converted them to Pascal.</p>
+
+<p>In any case, the page you linked to for the .pcap file format ( <a href="http://wiki.wireshark.org/Development/LibpcapFileFormat)">http://wiki.wireshark.org/Development/LibpcapFileFormat)</a> does <em>NOT</em> have IPv6 information.  It doesn't have the header definitions.</p>
+
+<p>I did happen to find somewhere the definition of the IPv6 header, and added it to my Pascal source.  But, when I look inside the UPD packet itself, I don't find what I'm expecting, I don't find DNP packets. Thus, it seems that maybe in IPv6, it uses different headers for UDP and/or TCP when using IPv6 instead of IPv4. And so I'm not stepping into the packet at the right place.  Or, possibly, I have a bug and I'm not looking where I think I am.  This is possible.</p>
+
+<p>But, I figured that there should be somewhere a header file that has all the structures defined, and so I could double check my structures verses the structures I created.</p>
+
+<p>I was going to post in this comment my Pascal structures, just for reference, but, I'm running out of characters allowed. So, I will post that in a separate comment.</p></div>
+            <div class="comment-info" id="comment-29976-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '14, 11:38)</span>
+                <a class="comment-user userinfo" href="/users/6719/justin-crapola">Justin Crapola</a>
+                
+            </div>
+        </div>
+    
+        <a name="29979"></a>
+        <div class="comment" id="comment-29979">
+            <div id="post-29979-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well, I tried to post my Pascal structures, but, the wordwrap worked weird and it came out unreadable. I can try again if someone is interested....</p></div>
+            <div class="comment-info" id="comment-29979-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '14, 11:47)</span>
+                <a class="comment-user userinfo" href="/users/6719/justin-crapola">Justin Crapola</a>
+                
+            </div>
+        </div>
+    
+        <a name="29980"></a>
+        <div class="comment" id="comment-29980">
+            <div id="post-29980-score" class="comment-score"></div>
+            <div class="comment-text"><p>The format of DNS packets is the same over IPv6 as it is over IPv4. With IPv6 you need to take care of extension headers, which can be inserted between the IP header and its payload (but they're pretty rare).</p>
+
+<p>Nice to see someone else is using Delphi to decode network packets :)</p></div>
+            <div class="comment-info" id="comment-29980-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '14, 11:48)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="29983"></a>
+        <div class="comment" id="comment-29983">
+            <div id="post-29983-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>In any case, the page you linked to for the .pcap file format (<a href="http://wiki.wireshark.org/Development/LibpcapFileFormat)">http://wiki.wireshark.org/Development/LibpcapFileFormat)</a> does NOT have IPv6 information.</p>
+</blockquote>
+
+<p>It also doesn't have IPv4 information, because there <em>is</em> no IPv4 or IPv6 information in the pcap file format.  There's time stamp information, packet length information, and raw packet data; the raw packet might, or might not, be an IP packet.</p></div>
+            <div class="comment-info" id="comment-29983-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '14, 14:44)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="29984"></a>
+        <div class="comment" id="comment-29984">
+            <div id="post-29984-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Thus, it seems that maybe in IPv6, it uses different headers for UDP and/or TCP when using IPv6 instead of IPv4.</p>
+</blockquote>
+
+<p>The same headers are used for UDP and TCP atop both IPv4 and IPv6.  They're not in the same place relative to the beginning of the IP header in IPv4 and IPv6, but that's because the IPv4 and IPv6 headers are different, not because the {UDP,TCP}-atop-IP headers are different for IPv4 and IPv6.</p></div>
+            <div class="comment-info" id="comment-29984-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '14, 14:47)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="29985"></a>
+        <div class="comment not_top_scorer" id="comment-29985">
+            <div id="post-29985-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Well, I tried to post my Pascal structures, but, the wordwrap worked weird</p>
+</blockquote>
+
+<p>If you're posting code, indent every line of the code with 4 extra spaces.  Ask.wireshark.org uses <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> syntax.</p></div>
+            <div class="comment-info" id="comment-29985-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '14, 14:50)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="29986"></a>
+        <div class="comment not_top_scorer" id="comment-29986">
+            <div id="post-29986-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Wireshark does have DNP decoding. But my tool does a lot more, including stitching together DNP messages if they are fragmented across multiple IP packets.</p>
+</blockquote>
+
+<p>For DNP-over-UDP, Wireshark can be told to reassemble fragmented IP packets, so it can also stitch together the IP fragments of a DNP-over-UDP message fragmented at the IP layer.</p>
+
+<p>For DNP-over-TCP, Wireshark can be told to reassemble the TCP segments of a DNP message that crosses TCP segment boundaries, so it can also stitch together the TCP segments of a DNP-over-TCP message fragmented at the TCP layer (or at the IP layer, but IP fragmentation is rare for TCP).</p></div>
+            <div class="comment-info" id="comment-29986-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Feb '14, 14:53)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="29995"></a>
+        <div class="comment not_top_scorer" id="comment-29995">
+            <div id="post-29995-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'd be very interested in looking at a DNP3 capture that isn't correctly re-assembled in Wireshark.  Please create a bug in the Wireshark <a href="https://bugs.wireshark.org/bugzilla/">Bugzilla</a> and attach the capture to it.</p>
+
+<p>In addition to that, if there's a part of the protocol that aren't yet covered and you would like Wireshark to do so, please create an entry for that in Bugzilla and mark it as an enhancement, also attaching a capture that illustrates the issue.</p></div>
+            <div class="comment-info" id="comment-29995-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Feb '14, 01:42)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30051"></a>
+        <div class="comment not_top_scorer" id="comment-30051">
+            <div id="post-30051-score" class="comment-score"></div>
+            <div class="comment-text"><p>Guy Harris:</p>
+
+<p>As far as the .pcap file docs not including IP4 or IP6 information, well, since IP4 and IP6 packets can be in .pcap files, I basically expected those to be documented in the .pcap file documentation.  So, if that isn't where I need to find the documentation for the various headers, then, please, point me the way.</p>
+
+<p>I am by no means a TCP/IP guru.  I know the concepts of the 7 layer model.  A number of years ago, I read a book on TCP/IP where it discusses how TCP/IP and UDP, and the user protocols (FTP, HTTP, etc.) map to the 7-layer model.  But, I by no means remember it all.  I've managed to parse the .pcap files I had seen, when dealing with IP4 DNP packets, but, that does not really mean I know what I'm doing... LOL.</p>
+
+<p>I did not know that Wireshark can be told to reassemble packets.  I'm by no means an expert Wireshark user.  Thanks for that information. You say that IP fragmentation is rare for TCP.  Well, it is common for some of the devices I talk with -- terminal servers.  They are transporting DNP to serial devices.  The device isn't DNP aware, and just sends how many bytes it wants to.  Thus the DNP packet gets spread over 2 or more packets, however the terminal server feels like it.  Thus, at least as I was using Wireshark, it would just show what seemed to be two (or more) garbage DNP packet instead of one good one. So, how would I tell Wireshark, in that instance, to reassemble the DNP packets?</p>
+
+<p>grahamb:</p>
+
+<p>See my response to Guy as to how I am even getting packets not properly reassembled.  I wouldn't have considered this a bug.  As far as enhancements to Wireshark's DNP parsing, well, lets just say that I'm more familiar with and comfortable with my own tool.  I've seen other people prefer to use Wireshark's parsing because they are more used to it.  I developed my own for situations where I can't use Wireshark, such as a RS-232 capture.  In any case, my tool does things that I wouldn't expect Wireshark to do.  Like, I can request it to extract, for instance, object 30 (analog input) index 0, and it will search though the file and find all occurrences of that specific data being sent and display it in a spreadsheet.</p></div>
+            <div class="comment-info" id="comment-30051-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Feb '14, 12:39)</span>
+                <a class="comment-user userinfo" href="/users/6719/justin-crapola">Justin Crapola</a>
+                
+            </div>
+        </div>
+    
+        <a name="30053"></a>
+        <div class="comment not_top_scorer" id="comment-30053">
+            <div id="post-30053-score" class="comment-score"></div>
+            <div class="comment-text"><p>PCAP is a file format for storing packet data. It is not a packet data dissection format. The information you are looking for is found here: <a href="http://tools.ietf.org/rfc/index">http://tools.ietf.org/rfc/index</a></p>
+
+<p>Basically all relevant protocols are documented in RFCs, unless proprietary. That's where I read about how to dissect them, but you could also take a look at how Wireshark does it by looking at the source code here: <a href="https://www.wireshark.org/docs/wsdg_html_chunked/ChSrcObtain.html">https://www.wireshark.org/docs/wsdg_html_chunked/ChSrcObtain.html</a></p></div>
+            <div class="comment-info" id="comment-30053-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Feb '14, 13:01)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30054"></a>
+        <div class="comment not_top_scorer" id="comment-30054">
+            <div id="post-30054-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>As far as the .pcap file docs not including IP4 or IP6 information, well, since IP4 and IP6 packets can be in .pcap files, I basically expected those to be documented in the .pcap file documentation.</p>
+</blockquote>
+
+<p>Nope, no more than the pcap file documentation documents Ethernet, 802.11, ATM, PPP, etc., etc., etc..  A pcap or pcap-ng file contains raw octets for the packet; the file specifies only the format of the first-layer headers (with the link-layer header type field in the pcap header and the pcap-ng Interface Definition Block), and <a href="http://www.tcpdump.org/linktypes.html">the tcpdump.org link-layer header types page</a> documents the values, mainly using <em>links</em> to the documentation for those header types (for example, it links to <a href="http://standards.ieee.org/about/get/802/802.3.html">the IEEE Get page for 802.3</a>, rather than explicitly documenting Ethernet itself).</p>
+
+<p>Those headers generally either have fields specifying the next protocol layer or have the next protocol layer hardcoded; those fields are documented elsewhere.</p>
+
+<blockquote>
+<p>So, if that isn't where I need to find the documentation for the various headers, then, please, point me the way.</p>
+</blockquote>
+
+<p>IPv4 - see <a href="http://tools.ietf.org/html/rfc793">RFC 793</a>.  IPv6 - see <a href="http://tools.ietf.org/html/rfc2460">RFC 2460</a>.</p></div>
+            <div class="comment-info" id="comment-30054-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Feb '14, 13:23)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30055"></a>
+        <div class="comment not_top_scorer" id="comment-30055">
+            <div id="post-30055-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>You say that IP fragmentation is rare for TCP. Well, it is common for some of the devices I talk with -- terminal servers. They are transporting DNP to serial devices. The device isn't DNP aware, and just sends how many bytes it wants to. Thus the DNP packet gets spread over 2 or more packets, however the terminal server feels like it.</p>
+</blockquote>
+
+<p>That doesn't require IP fragmentation.  If a 4000-byte DNP packet is sent over TCP on an Ethernet network, that could be sent as 3 un-fragmented IP packets:</p>
+
+<ul>
+<li>a 1514-byte Ethernet packet, with a 14-byte Ethernet header, 20-byte (minimum length, so no options) IPv4 header, 20-byte (minimum length, so no options) TCP header, and the first 1460 bytes of the DNP packet;</li>
+<li>a 1514-byte Ethernet packet, with a 14-byte Ethernet header, 20-byte (minimum length, so no options) IPv4 header, 20-byte (minimum length, so no options) TCP header, and the next 1460 bytes of the DNP packet;</li>
+<li>a 1134-byte Ethernet packet, with a 14-byte Ethernet header, 20-byte (minimum length, so no options) IPv4 header, 20-byte (minimum length, so no options) TCP header, and the last 1080 bytes of the DNP packet.</li>
+</ul>
+
+<p>If one of those Ethernet packets failed to reach the receiver, it would not be acknowledged by the receiver's TCP implementation, and the sender's TCP implementation would eventually attempt to send it again (and, if "selective acknowledgment" isn't used) the packets after it - but the packets <em>before</em> it wouldn't need to be resent.  If, however, the sender tried to send the DNP packet in one TCP segment, and relied on IP to do the fragmentation, if one fragment didn't arrive, the <em>entire</em> segment, all three fragments, would have to be retransmitted.</p></div>
+            <div class="comment-info" id="comment-30055-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Feb '14, 13:38)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30057"></a>
+        <div class="comment not_top_scorer" id="comment-30057">
+            <div id="post-30057-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>So, how would I tell Wireshark, in that instance, to reassemble the DNP packets?</p>
+</blockquote>
+
+<p>If they're fragmented at the TCP layer, you need to make sure the "Reassemble DNP3 messages spanning multiple TCP segments" preference for DNP is on (Edit -&gt; Preferences, open up Protocols, and select DNP 3.0) and make sure the "Allow subdissector to reassemble TCP streams" preference for TCP is on (same instructions, but select TCP).  You might also have to make sure the "Validate the TCP checksum if possible" is <em>off</em>, if reassembly still doesn't occur, because that might be due to TCP checksum or segmentation/desegmentation offloading resulting in the dissector finding a checksum error and refusing to reassemble.</p>
+
+<p>If they're fragmented at the IP layer (likely with UDP, unlikely with TCP), you need to make sure the "Reassemble fragmented IPv4 datagrams" preference for IPv4 is on (same instructions, but select IPv4) and the "Reassemble fragmented IPv6 datagrams" preference for IPv6 is on (same instructions, but select IPv6).</p></div>
+            <div class="comment-info" id="comment-30057-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Feb '14, 13:52)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="34638"></a>
+        <div class="comment not_top_scorer" id="comment-34638">
+            <div id="post-34638-score" class="comment-score"></div>
+            <div class="comment-text"><p>(I'm the OP, using a different account)</p>
+
+<p>This particular project got put on the back burner, so, I haven't been back. Thanks for the information on the preferences.</p>
+
+<p>And, to the person that send the RFC docs, thanks.  That will help. I was hoping to find if somebody had a C++ header file with those headers defined, something that I could easily take and run with.  (As I said, I'm actually using Delphi, but, I can take a C++ header file and make it Delphi easily enough.) I had found with Google searching something that looked like it had the IPv6 header in it, but, it doesn't quite match the RFC document.  So, I guess I got my hands on an errant header file which probably explains part of my problem.</p>
+
+<p>If someone knows where I might can find a good C++ header file with all the headers defined, that would help, but, if I have to just go by the RFC and make my own, that will do. Thanks.</p></div>
+            <div class="comment-info" id="comment-34638-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jul '14, 17:20)</span>
+                <a class="comment-user userinfo" href="/users/7728/paul-doland">Paul Doland</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-29972" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 14
+        </span>
+        <a href="#" class="show-all-comments-link">show 9 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-29972-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/29971/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='eT616LLB7cxylnua8wCGJb7p6vhFqKAX' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29971/complete-pcaph-with-ipv6-support?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/29971/complete-pcaph-with-ipv6-support?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ipv6/"
+            class="tag-link-ipv6"
+            title="see questions tagged'ipv6'using tags"
+            rel="tag">ipv6</a> <span class="tag-number">&#215;51</span><br/>
+        
+        <a href="/tags/pcap.h/"
+            class="tag-link-pcap.h"
+            title="see questions tagged'pcap.h'using tags"
+            rel="tag">pcap.h</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 18, 2014, 9 a.m.">18 Feb '14, 09:00</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,504 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 15, 2014, 1:47 a.m.">15 Jul '14, 01:47</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/12/how-do-you-filter-different-types-of-icmpv6-messages">How do you filter different types of ICMPv6 messages?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14908/freenet6-wireshark-trace">Freenet6 Wireshark Trace</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37660/wireshark-converting-ipv4-to-ipv6">Wireshark converting IPv4 to IPv6</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60860/how-to-view-raw-proto-41-packets-as-ipv4-packets">How to view raw proto 41 packets as IPv4 packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1543/ipv6-address-range-filter">IPv6 address range filter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19988/malformed-packet-for-icmpv6-redirect-message">Malformed Packet for ICMPv6 Redirect Message</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38680/need-router-advertisement-packet-with-route-information-options">Need Router advertisement packet with Route information options</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64127/ipv6-subnets-file">IPV6 Subnets file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1646/ipv6-hosts-name-resolution">ipv6 hosts name resolution</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20827/6lowpanipv6-rfc4944-data-on-802154-frames">6lowpan/IPv6 RFC4944 data on 802.15.4 frames</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

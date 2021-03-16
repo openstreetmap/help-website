@@ -1,0 +1,1802 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Makefile.nmake gives cl not found error - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi  I have installed the necessary setups for wireshark, I have my vcvarsall.bat and vcvars32.bat running. When I run nmake -f Makefile.nmake verify_tools, it shows Checking for required applications:  link: /usr/bin/link  nmake: nmake  bash: /usr/bin/bash  bison: /usr/bin/bison  flex: /usr/bin/flex..." />
+        <meta name="keywords" content="makefile.nmake,nmake,wireshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/33204/makefilenmake-gives-cl-not-found-error" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/33204/makefilenmake-gives-cl-not-found-error?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='dZfxVvWI7EfuAsnn89CQu7NlX1PUQM6d' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/33204/makefilenmake-gives-cl-not-found-error">Makefile.nmake gives cl not found error</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-33204-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33204/up/" rel="nofollow"> </a>
+<div id="post-33204-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-33204-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33204/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/33204/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi 
+I have installed the necessary setups for wireshark,
+I have my vcvarsall.bat and vcvars32.bat running.
+When I run nmake -f Makefile.nmake verify_tools, it shows</p>
+<pre><code>Checking for required applications:
+        link: /usr/bin/link
+        nmake: nmake
+        bash: /usr/bin/bash
+        bison: /usr/bin/bison
+        flex: /usr/bin/flex
+        env: /usr/bin/env
+        grep: /usr/bin/grep
+        /usr/bin/find: /usr/bin/find
+        perl: /usr/bin/perl
+        C:\Python27\python.exe: /cygdrive/c/Python27/python.exe
+        sed: /usr/bin/sed
+        unzip: /usr/bin/unzip
+        wget: /usr/bin/wget
+
+Can't find:  cl
+
+ERROR: These application(s) are either not installed or simply can't be found in
+ the current PATH: /cygdrive/c/Python27:/cygdrive/c/Windows/System32 : C:/cygwin
+/bin: C:/python27: C:/Python27/Scripts: %PATH%:%PAL:AppDir%/Git:%PAL:DataDir%:%T
+EMP%: C:/Program Files (x86)/Microsoft Visual Studio 10.0/Common7/IDE:  C:/Progr
+am Files (x86)/Microsoft Visual Studio 10.0/VC/bin: C:/Program Files (x86)/Micro
+soft Visual Studio 10.0/Common7/Tools: :/usr/bin:/cygdrive/c/Wireshark-win32-lib
+s/gtk3/bin:/cygdrive/c/bin:/cygdrive/c/Wireshark-win32-libs/zlib125.
+
+For additional help, please visit:
+    <a href="http://www.wireshark.org/docs/wsdg_html_chunked/ChSetupWin32.html">http://www.wireshark.org/docs/wsdg_html_chunked/ChSetupWin32.html</a>
+
+NMAKE : fatal error U1077: 'c:\cygwin\bin\bash.EXE' : return code '0x1'
+Stop.
+</code></pre>
+<p>I am able to run cl.exe in the bin folder. 
+My environment variables are : </p>
+<pre><code>C:\Windows\System32; 
+C:\cygwin\bin; 
+C:\python27\; 
+C:\Python27\Scripts; 
+%PATH%;%PAL:AppDir%\Git;%PAL:DataDir%;%TEMP%; 
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE;  
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin; 
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE;
+</code></pre>
+<p>Please help me where I am stuck.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/makefile.nmake/" class="post-tag tag-link-makefile.nmake"
+                                        title="see questions tagged 'makefile.nmake'" rel="tag">makefile.nmake</a>
+                                
+                                    <a href="/tags/nmake/" class="post-tag tag-link-nmake"
+                                        title="see questions tagged 'nmake'" rel="tag">nmake</a>
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 May '14, 09:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a9a254ac482208f766093c0f9c144364?s=32&amp;d=identicon&amp;r=g" alt="aman's gravatar image" />
+    <p><a href="/users/7388/aman">aman</a><br/>
+    <span class="score" title="36 reputation points">36</span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="20 badges"><span class="bronze">&#9679;</span><span class="badgecount">20</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="aman has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/33204/">
+                edited
+                <strong>30 May '14, 09:37</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+            <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+            <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-33204">
+    
+</div>
+<div id="comment-tools-33204" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33204-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/33204/makefilenmake-gives-cl-not-found-error?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/33204/makefilenmake-gives-cl-not-found-error?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/33204/makefilenmake-gives-cl-not-found-error?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/33204/makefilenmake-gives-cl-not-found-error?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="33205"></a>
+                    <div id="answer-container-33205" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33205-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33205/up/" rel="nofollow"> </a>
+<div id="post-33205-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-33205-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33205/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You haven't initialised your command prompt properly as per the setup guide <a href="http://www.wireshark.org/docs/wsdg_html_chunked/ChSetupWin32.html#ChSetupPrepareCommandCom">2.2.6 Prepare cmd.exe</a>.</p>
+<p>You quote your environment there, I think you mean your path.  Note that you don't need to add Cygwin or Visual Studio to the path manually, the vc batch file and the Makefile will do the rest.</p>
+<p>Clean up your path, setup cmd.exe properly and try again.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33205/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 May '14, 09:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+    <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+    <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grahamb has 274 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33205">
+    
+        <a name="33206"></a>
+        <div class="comment not_top_scorer" id="comment-33206">
+            <div id="post-33206-score" class="comment-score"></div>
+            <div class="comment-text"><p>How do I go about point 4 in the guide  2.2.6 Prepare cmd.exe. 
+Where do I use/replace that code?</p></div>
+            <div class="comment-info" id="comment-33206-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 10:02)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33207"></a>
+        <div class="comment not_top_scorer" id="comment-33207">
+            <div id="post-33207-score" class="comment-score"></div>
+            <div class="comment-text"><p>You are changing directory into the top-level of your Wireshark sources.</p></div>
+            <div class="comment-info" id="comment-33207-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 10:05)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33208"></a>
+        <div class="comment not_top_scorer" id="comment-33208">
+            <div id="post-33208-score" class="comment-score"></div>
+            <div class="comment-text"><p>I get that but what do I do with this code given in step 4?</p>
+
+<p>@echo off</p>
+
+<p>if "%1" == "" goto x86
+if /i %1 == x86       goto x86
+if /i %1 == x64      goto x64
+goto usage</p>
+
+<p>:usage</p></div>
+            <div class="comment-info" id="comment-33208-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 10:17)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33209"></a>
+        <div class="comment not_top_scorer" id="comment-33209">
+            <div id="post-33209-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's just an example batch file to automate setting things up for you.  You don't have to use it, the preceding steps should be enough.</p>
+
+<p>To use that script, save it as a .bat file and call it after opening cmd.exe and skip steps 2 &amp; 3 as they are done by the batch file.</p></div>
+            <div class="comment-info" id="comment-33209-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 10:24)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33210"></a>
+        <div class="comment not_top_scorer" id="comment-33210">
+            <div id="post-33210-score" class="comment-score"></div>
+            <div class="comment-text"><p>I cleaned the Path and again prepared the cmd.exe as given. I get this</p>
+
+<p><code>
+C:\Development\wireshark&gt;nmake -f Makefile.nmake</code></p>
+
+<p><code>
+</code></p><p><code>Microsoft (R) Program Maintenance Utility Version 10.00.30319.01
+Copyright (C) Microsoft Corporation.  All rights reserved.</code></p><code>
+<p>Usage:
+        /cygdrive/c/Development/wireshark/tools/win-setup.sh --appverify &lt;appna e=""&gt; [&lt;appname&gt;] ...
+  /cygdrive/c/Development/wireshark/tools/win-setup.sh --libverify &lt;destination &lt;subdirectory=""&gt; &lt;package&gt;
+        /cygdrive/c/Development/wireshark/tools/win-setup.sh --download  &lt;desti ation=""&gt; &lt;subdirectory&gt; &lt;package&gt;
+        /cygdrive/c/Development/wireshark/tools/win-setup.sh --settag  &lt;destina ion=""&gt;
+        /cygdrive/c/Development/wireshark/tools/win-setup.sh --checktag  &lt;desti ation=""&gt;</p>
+<p>? Wireshark Libraries not up-to-date ?
+? Do you need to run nmake -f Makefile.nmake setup ?</p>
+<p>NMAKE : fatal error U1077: 'exit' : return code '0x1'
+Stop.</p>
+<p><code></code></p><code>
+<p>What shall I do to solve this?3</p></code></code><p></p></div>
+            <div class="comment-info" id="comment-33210-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 10:25)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33211"></a>
+        <div class="comment not_top_scorer" id="comment-33211">
+            <div id="post-33211-score" class="comment-score"></div>
+            <div class="comment-text"><p>and on verify_tools, again the same first error. Cant find cl</p></div>
+            <div class="comment-info" id="comment-33211-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 10:27)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33212"></a>
+        <div class="comment not_top_scorer" id="comment-33212">
+            <div id="post-33212-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, from the very same command prompt you have been using, type <code>echo %PATH% &gt; C:\Development\path.txt</code>, and then post the contents of path.txt as a comment here</p></div>
+            <div class="comment-info" id="comment-33212-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 10:34)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33213"></a>
+        <div class="comment not_top_scorer" id="comment-33213">
+            <div id="post-33213-score" class="comment-score"></div>
+            <div class="comment-text"><p>C:\Windows\System32 ;</p></div>
+            <div class="comment-info" id="comment-33213-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 10:40)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33214"></a>
+        <div class="comment not_top_scorer" id="comment-33214">
+            <div id="post-33214-score" class="comment-score"></div>
+            <div class="comment-text"><p>If that's your path, then you haven't called vcvars or SetEnv, as they will add more to your path.</p>
+
+<p>You <strong>MUST</strong> follow the steps in the Guide exactly.</p></div>
+            <div class="comment-info" id="comment-33214-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 10:47)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33215"></a>
+        <div class="comment not_top_scorer" id="comment-33215">
+            <div id="post-33215-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is what I get while calling it.
+C:\Development\wireshark&gt;"C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC
+\bin\vcvars32.bat
+Setting environment for using Microsoft Visual Studio 2010 x86 tools.
+ERROR: Cannot determine the location of the VS Common Tools folder.</p>
+
+<p>Would you suggest uninstalling and then re installing the setups again?</p></div>
+            <div class="comment-info" id="comment-33215-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 10:50)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33216"></a>
+        <div class="comment not_top_scorer" id="comment-33216">
+            <div id="post-33216-score" class="comment-score"></div>
+            <div class="comment-text"><p>That looks your Visual Studio installation is bust.  That error comes about if Registry entries for VS aren't present.</p></div>
+            <div class="comment-info" id="comment-33216-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 10:54)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33217"></a>
+        <div class="comment not_top_scorer" id="comment-33217">
+            <div id="post-33217-score" class="comment-score"></div>
+            <div class="comment-text"><p>So what would you recommend me to do for this?</p></div>
+            <div class="comment-info" id="comment-33217-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 10:55)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33218"></a>
+        <div class="comment not_top_scorer" id="comment-33218">
+            <div id="post-33218-score" class="comment-score"></div>
+            <div class="comment-text"><p>Uninstall and reinstall Visual Studio.</p></div>
+            <div class="comment-info" id="comment-33218-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 10:57)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33219"></a>
+        <div class="comment not_top_scorer" id="comment-33219">
+            <div id="post-33219-score" class="comment-score"></div>
+            <div class="comment-text"><p>I reinstalled it, and again the same error. 
+VS common tools folder.</p></div>
+            <div class="comment-info" id="comment-33219-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 11:30)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33220"></a>
+        <div class="comment not_top_scorer" id="comment-33220">
+            <div id="post-33220-score" class="comment-score"></div>
+            <div class="comment-text"><p>and also gives this :</p>
+
+<p>C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin&gt;nmake -f Makefile.nmake Verify_tools</p>
+
+<p>Microsoft (R) Program Maintenance Utility Version 10.00.30319.01
+Copyright (C) Microsoft Corporation.  All rights reserved.</p>
+
+<p>/usr/bin/bash: tools/win64-setup.sh: No such file or directory
+/usr/bin/bash: tools/win64-setup.sh: No such file or directory
+NMAKE : fatal error U1077: 'c:\cygwin\bin\bash.EXE' : return code '0x7f'
+Stop.</p></div>
+            <div class="comment-info" id="comment-33220-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 11:34)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33224"></a>
+        <div class="comment not_top_scorer" id="comment-33224">
+            <div id="post-33224-score" class="comment-score"></div>
+            <div class="comment-text"><p>There is no point going any further until vcvars32.bat runs correctly.  That batch file looks for the following registry entries (for VS2010):</p>
+
+<p>HKLM:\SOFTWARE\Microsoft\VisualStudio\SxS\VS7
+HKCU:\SOFTWARE\Microsoft\VisualStudio\SxS\VS7
+HKLM:\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\SxS\VS7
+HKCU:\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\SxS\VS7</p>
+
+<p>for a value named 10.0.  The value of that is the installed path to Visual Studio.  If vcvars32.bat doesn't work, then I doubt that you'll ever be able to build Wireshark.</p>
+
+<p>Something is seriously messed up with your VS installation, I don't know why your reinstall didn't fix it.</p></div>
+            <div class="comment-info" id="comment-33224-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '14, 13:44)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33271"></a>
+        <div class="comment not_top_scorer" id="comment-33271">
+            <div id="post-33271-score" class="comment-score"></div>
+            <div class="comment-text"><p>When I download: C compiler service pack: "Microsoft Visual Studio 2010 Service Pack 1." it installs properly but when I install the STEP-4 thing, it gives error that SPInstaller failed to install.</p>
+
+<p>Can you diagnose where the problem is?</p></div>
+            <div class="comment-info" id="comment-33271-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 05:46)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33277"></a>
+        <div class="comment not_top_scorer" id="comment-33277">
+            <div id="post-33277-score" class="comment-score"></div>
+            <div class="comment-text"><p>Unfortunately no, it appears to be an issue with your local machine. You'll have to scout around MS forums discussing the installation of VS2010 service packs.</p></div>
+            <div class="comment-info" id="comment-33277-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 06:54)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33278"></a>
+        <div class="comment not_top_scorer" id="comment-33278">
+            <div id="post-33278-score" class="comment-score"></div>
+            <div class="comment-text"><p>I reinstalled it but didnt work out.. whereas I have the common tools folder and its still giving the error
+Setting environment for using Microsoft Visual Studio 2010 x86 tools.
+ERROR: Cannot determine the location of the VS Common Tools folder.</p>
+
+<p>What shall I do to solve this?</p></div>
+            <div class="comment-info" id="comment-33278-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 06:54)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33279"></a>
+        <div class="comment not_top_scorer" id="comment-33279">
+            <div id="post-33279-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin&gt;nmake -f Makefile.nmake Verify_tools</p>
+</blockquote>
+
+<p>looks wierd to me, do you have the wireshark sources under</p>
+
+<blockquote>
+<p>C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin&gt; ?</p>
+</blockquote>
+
+<p>If not run the command from the folder where the sources are.</p></div>
+            <div class="comment-info" id="comment-33279-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 07:06)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33299"></a>
+        <div class="comment not_top_scorer" id="comment-33299">
+            <div id="post-33299-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb">@grahamb</a> Thanks for your help, I solves the VS issue..
+Now getting an error:
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin&gt;nmake -f Makefile.nma ke Verify_tools</p>
+
+<p>Microsoft (R) Program Maintenance Utility Version 10.00.30319.01 Copyright (C) Microsoft Corporation. All rights reserved.</p>
+
+<p>NMAKE : fatal error U1052: file 'Makefile.nmake' not found Stop.</p></div>
+            <div class="comment-info" id="comment-33299-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 12:36)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33300"></a>
+        <div class="comment not_top_scorer" id="comment-33300">
+            <div id="post-33300-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/42/anders">@anders</a> I have my sources under c:/development/wireshark as told in the installation guide.</p></div>
+            <div class="comment-info" id="comment-33300-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 12:37)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33311"></a>
+        <div class="comment not_top_scorer" id="comment-33311">
+            <div id="post-33311-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>NMAKE : fatal error U1052: <strong>file 'Makefile.nmake'</strong> not found Stop</p>
+</blockquote>
+
+<p>See my answer to your other question:</p>
+
+<blockquote>
+<p><a href="http://ask.wireshark.org/questions/33297/makefilenmake-error">http://ask.wireshark.org/questions/33297/makefilenmake-error</a></p>
+</blockquote></div>
+            <div class="comment-info" id="comment-33311-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 12:50)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33321"></a>
+        <div class="comment" id="comment-33321">
+            <div id="post-33321-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="/users/7388/aman">@aman</a>,</p>
+
+<p>Whatever is wrong with your VS2010 installation seems to be beyond your and our combined help.</p>
+
+<p>I was going to suggest trying VS2012 Express, but it seems that MS have removed that from the downloads list.  You can try VS2013 Express, but I'm not aware of too many folks using that at present to build Wireshark.</p>
+
+<p>You must use the Express version for Windows Desktop, and you will have to copy win32.mak as per the comments by <a href="/users/22/bill-meier">@Bill Meier</a> in <a href="http://ask.wireshark.org/questions/14343/setting-development-project-under-visual-studio-2012">this</a> question</p>
+
+<p>When using the later versions of VS (2012 and 2013) adjust the paths to vcvars32 accordingly, and you don't need the SDK (apart from getting win32.mak).</p></div>
+            <div class="comment-info" id="comment-33321-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 14:19)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33326"></a>
+        <div class="comment" id="comment-33326">
+            <div id="post-33326-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I've just built an x86 version of Wireshark with VS2013 (Pro), but Express should be good as well.</p>
+
+<p>There are a couple of changes required from the Developers Guide:</p>
+
+<ol>
+<li>You must download a version of QT for use with VS2013 from the <a href="http://qt-project.org/downloads">QT downloads page</a>.</li>
+<li>You must copy win32.mak into <code>C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include</code>, I copied from the Win 7.1 SDK.</li>
+<li>Ignore the "Preparing Cmd.exe" section, instead open a VS2013 Command Prompt from the start menu; <code>Visual Studio 2013 | Visual Studio Tools | VS2013 x86 Native Tools Command Prompt</code>, and then set the following additional environment variables (adjusting paths to suit your installation):</li>
+</ol>
+
+<p><code>
+set CYGWIN=nodosfilewarning
+set WIRESHARK_BASE_DIR=E:\Wireshark
+set WIRESHARK_TARGET_PLATFORM=win32
+set QT5_BASE_DIR=C:\Qt\Qt5.3.0\5.3\msvc2013
+</code></p>
+
+<p>Note that qtshark doesn't run correctly due to missing DLL's, VS2013 support requires improvement in this area.</p></div>
+            <div class="comment-info" id="comment-33326-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 15:23)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33345"></a>
+        <div class="comment not_top_scorer" id="comment-33345">
+            <div id="post-33345-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks <a href="/users/1225/grahamb">@grahamb</a> for your help. It is really helpful.
+I did the installation of VS2013 and followed the steps you mentions. but I am getting another error:</p>
+
+<p>C:\Development\wireshark&gt;nmake -f Makefile.nmake Verify_tools</p>
+
+<p>Microsoft (R) Program Maintenance Utility Version 12.00.21005.1
+Copyright (C) Microsoft Corporation.  All rights reserved.</p>
+
+<p>ERROR: The contents of 'C:\development\Wireshark\Wireshark-win32-libs\current_tag.txt' is (unknown).
+It should be 2014-05-16.</p>
+
+<p>Checking for required applications:</p>
+
+<p>ERROR: Can't find 'which'.  Unable to proceed.</p>
+
+<p>NMAKE : fatal error U1077: 'c:\cygwin64\bin\bash.EXE' : return code '0x1'
+Stop.</p></div>
+            <div class="comment-info" id="comment-33345-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jun '14, 07:54)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33347"></a>
+        <div class="comment not_top_scorer" id="comment-33347">
+            <div id="post-33347-score" class="comment-score"></div>
+            <div class="comment-text"><p>That looks like your Cygwin installation is missing <code>which.exe</code>.  Use the Cygwin updater to install the "which" package in the "Base" category.</p></div>
+            <div class="comment-info" id="comment-33347-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jun '14, 08:06)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33348"></a>
+        <div class="comment not_top_scorer" id="comment-33348">
+            <div id="post-33348-score" class="comment-score"></div>
+            <div class="comment-text"><p>Updated. now i get:</p>
+
+<p><code>
+Microsoft (R) Program Maintenance Utility Version 12.00.21005.1
+Copyright (C) Microsoft Corporation.  All rights reserved.</code></p>
+
+<p><code>
+</code></p><p><code>ERROR: The contents of 'C:\Wireshark-win64-libs\current_tag.txt' is (unknown).
+It should be 2014-05-16.</code></p><code>
+<p>Can't find Qt. This will become a problem at some point.</p>
+<p>Checking for required applications:
+        cl: /cygdrive/c/Program Files (x86)/Microsoft Visual Studio 12.0/VC/BIN/cl
+        link: /cygdrive/c/Program Files (x86)/Microsoft Visual Studio 12.0/VC/BIN/link
+        nmake: /cygdrive/c/Program Files (x86)/Microsoft Visual Studio 12.0/VC/BIN/nmake
+        bash: /usr/bin/bash
+        env: /usr/bin/env
+        grep: /usr/bin/grep
+        /usr/bin/find: /usr/bin/find
+        peflags: /usr/bin/peflags
+        C:\Python27\python.exe: /cygdrive/c/Python27/python.exe
+        sed: /usr/bin/sed</p>
+<p>Can't find:  bison flex perl unzip wget</p>
+<p>ERROR: These application(s) are either not installed or simply can't be found in the current PATH: /cygdrive/c/Python27:/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 12.0/Common7/IDE/CommonExtensions/Microsoft/TestWindow:/cygdrive/c/Program Files (x86)/Microsoft SDKs/F#/3.1/Framework/v4.0:/cygdrive/c/Program Files (x86)/MSBuild/12.0/bin:/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 12.0/Common7/IDE:/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 12.0/VC/BIN:/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 12.0/Common7/Tools:/cygdrive/c/Windows/Microsoft.NET/Framework/v4.0.30319:/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 12.0/VC/VCPackages:/cygdrive/c/Program Files (x86)/HTML Help Workshop:/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 12.0/Team Tools/Performance Tools:/cygdrive/c/Program Files (x86)/Windows Kits/8.1/bin/x86:/cygdrive/c/Program Files (x86)/Microsoft SDKs/Windows/v8.1A/bin/NETFX 4.5.1 Tools:/cygdrive/c/Python27:/cygdrive/c/Windows/System32:/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 10.0/VC/bin:/cygdrive/c/Development/wireshark:/cygdrive/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit:/cygdrive/c/Program Files/Microsoft SQL Server/110/Tools/Binn:/usr/bin:/cygdrive/c/Wireshark-win64-libs/gtk2/bin:/cygdrive/c/bin:/cygdrive/c/Wireshark-win64-libs/zlib125.</p>
+<p>For additional help, please visit:
+    <a href="http://www.wireshark.org/docs/wsdg_html_chunked/ChSetupWin32.html">http://www.wireshark.org/docs/wsdg_html_chunked/ChSetupWin32.html</a></p>
+<p>NMAKE : fatal error U1077: 'c:\cygwin64\bin\bash.EXE' : return code '0x1'
+Stop.</p>
+</code><p><code>C:\Development\wireshark&gt;
+</code></p><p></p></div>
+            <div class="comment-info" id="comment-33348-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jun '14, 08:28)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33351"></a>
+        <div class="comment" id="comment-33351">
+            <div id="post-33351-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>Can't find: bison flex perl unzip wget</p>
+</blockquote>
+
+<p>That looks like your Cygwin installation is missing them...I think they are listed in the guide...</p></div>
+            <div class="comment-info" id="comment-33351-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jun '14, 09:09)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33352"></a>
+        <div class="comment" id="comment-33352">
+            <div id="post-33352-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You are missing the Cygwin packages bison, flex, perl, unzip, wget.</p>
+
+<p>When running step <a href="https://www.wireshark.org/docs/wsdg_html_chunked/ChSetupWin32.html#ChSetupCygwin">2.2.2 Install Cygwin</a> you must have deselected some packages.  Run the Cygwin installer again and install the missing packages.</p>
+
+<p>Ignore the message about QT (unless you want to build the QT version, which isn't yet ready for general use) and the message about the current tag because you haven't yet got to step "2.2.8. Install Libraries"</p></div>
+            <div class="comment-info" id="comment-33352-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jun '14, 09:15)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33378"></a>
+        <div class="comment not_top_scorer" id="comment-33378">
+            <div id="post-33378-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thankd alot <a href="/users/1225/grahamb">@grahamb</a> for you valuable help and time.. It really helped me and I solved the errors.. Thanks a ton..</p></div>
+            <div class="comment-info" id="comment-33378-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '14, 07:11)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33380"></a>
+        <div class="comment not_top_scorer" id="comment-33380">
+            <div id="post-33380-score" class="comment-score"></div>
+            <div class="comment-text"><p>I get this while nmake -f Makefile.nmake setup:</p>
+
+<p>--2014-06-04 10:21:32--  (try:14)  <a href="http://anonsvn.wireshark.org/wireshark-win32-">http://anonsvn.wireshark.org/wireshark-win32-</a>
+libs/tags/2014-05-16/packages//lua-5.2.3_Win64_dll10_lib.zip
+Connecting to proxy.com (proxy.com)|8.20.189.133|:8080... failed: No error.
+Retrying.</p></div>
+            <div class="comment-info" id="comment-33380-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '14, 07:22)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33382"></a>
+        <div class="comment not_top_scorer" id="comment-33382">
+            <div id="post-33382-score" class="comment-score"></div>
+            <div class="comment-text"><p>Read what the guide has to say about beeing behind a proxy. Possibly you have "proxy.com (proxy.com)|8.20.189.133|:8080" set somwhere?</p>
+
+<p>set HTTP_PROXY=your-proxy-uri</p></div>
+            <div class="comment-info" id="comment-33382-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '14, 07:47)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33383"></a>
+        <div class="comment not_top_scorer" id="comment-33383">
+            <div id="post-33383-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am afraid I dont know my proxy uri.. how do I find that?</p></div>
+            <div class="comment-info" id="comment-33383-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '14, 07:54)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33386"></a>
+        <div class="comment not_top_scorer" id="comment-33386">
+            <div id="post-33386-score" class="comment-score"></div>
+            <div class="comment-text"><p>if I dont use set HTTP_PROXY I still get error.
+Not sure what to use as value in set HTTP_PROXY= ?</p></div>
+            <div class="comment-info" id="comment-33386-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '14, 08:06)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33388"></a>
+        <div class="comment" id="comment-33388">
+            <div id="post-33388-score" class="comment-score">1</div>
+            <div class="comment-text"><p>As we don't know your environment - direct connection to the internet or in an office environment behind a proxy we can't help you there. Check you browser settings. Alternatively you can download the packages manually and put them in the download directory. The address can be found in win-setup.sh in the tools dir. The default dir is in tha makefile.nmake or config.nmake files.</p></div>
+            <div class="comment-info" id="comment-33388-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '14, 08:19)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33389"></a>
+        <div class="comment not_top_scorer" id="comment-33389">
+            <div id="post-33389-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have a direct connection. how shall I proceed with it.
+As an alternate if I manually download the packages. what is the next step. Please elaborate as I am not a technically sound guy. Thanks for your patience</p></div>
+            <div class="comment-info" id="comment-33389-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '14, 08:31)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33390"></a>
+        <div class="comment not_top_scorer" id="comment-33390">
+            <div id="post-33390-score" class="comment-score"></div>
+            <div class="comment-text"><p>shall I download it manualy, unzip and paste into the C:\wireshark-win64-libs folder?</p></div>
+            <div class="comment-info" id="comment-33390-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '14, 08:38)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33391"></a>
+        <div class="comment not_top_scorer" id="comment-33391">
+            <div id="post-33391-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just download manually then run the setup target and it will unpack the files.</p>
+
+<p>I have no idea where the script picksup your proxy setting of "proxy.com (proxy.com)|8.20.189.133|:8080" </p>
+
+<p>does it show up somewhere if yo do printenv? google might know ;-)</p></div>
+            <div class="comment-info" id="comment-33391-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '14, 08:52)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33392"></a>
+        <div class="comment not_top_scorer" id="comment-33392">
+            <div id="post-33392-score" class="comment-score"></div>
+            <div class="comment-text"><p><strong><em>*** kfw-3-2-2-i386-ws-vc6.zip </em></strong>***
+HTTP proxy (<a href="http://proxy.com:8081/)">http://proxy.com:8081/)</a> has been specified and will be used.
+Downloading kfw-3-2-2-i386-ws-vc6.zip into '/cygdrive/c/Wireshark-win64-libs', i
+nstalling into .
+File 'kfw-3-2-2-i386-ws-vc6.zip' already there; not retrieving.</p>
+
+<p>Extracting '/cygdrive/c/Wireshark-win64-libs/kfw-3-2-2-i386-ws-vc6.zip' into '/c
+ygdrive/c/Wireshark-win64-libs/.'
+[/cygdrive/c/Wireshark-win64-libs/kfw-3-2-2-i386-ws-vc6.zip]
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of /cygdrive/c/Wireshark-win64-libs
+/kfw-3-2-2-i386-ws-vc6.zip or
+        /cygdrive/c/Wireshark-win64-libs/kfw-3-2-2-i386-ws-vc6.zip.zip, and cann
+ot find /cygdrive/c/Wireshark-win64-libs/kfw-3-2-2-i386-ws-vc6.zip.ZIP, period.</p>
+
+<p>ERROR: Couldn't unpack '/cygdrive/c/Wireshark-win64-libs/kfw-3-2-2-i386-ws-vc6.z
+ip'</p>
+
+<p>NMAKE : fatal error U1077: 'c:\cygwin64\bin\bash.EXE' : return code '0x1'
+Stop.</p>
+
+<p>This is what it says, not able to unpack..:(</p></div>
+            <div class="comment-info" id="comment-33392-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '14, 08:59)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33393"></a>
+        <div class="comment not_top_scorer" id="comment-33393">
+            <div id="post-33393-score" class="comment-score"></div>
+            <div class="comment-text"><p>Either a bad download has corrupted the zip or you have a bad unzip.exe is on your path somewhere.  Please post the output of <code>nmake -f Makefile.nmake verify_tools</code>?</p>
+
+<p>Can you also manually test the integrity of the archive, e.g. using another zip program?</p></div>
+            <div class="comment-info" id="comment-33393-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '14, 09:12)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33394"></a>
+        <div class="comment not_top_scorer" id="comment-33394">
+            <div id="post-33394-score" class="comment-score"></div>
+            <div class="comment-text"><p>C:\Development\wireshark&gt;nmake -f Makefile.nmake verify_tools</p>
+
+<p>Microsoft (R) Program Maintenance Utility Version 12.00.21005.1
+Copyright (C) Microsoft Corporation.  All rights reserved.</p>
+
+<p>ERROR: The contents of 'C:\Wireshark-win64-libs\current_tag.txt' is (unknown).
+It should be 2014-05-16.</p>
+
+<p>Can't find Qt. This will become a problem at some point.
+Checking for required applications:
+        cl: /cygdrive/c/Program Files (x86)/Microsoft Visual Studio 12.0/VC/BIN/
+cl
+        link: /cygdrive/c/Program Files (x86)/Microsoft Visual Studio 12.0/VC/BI
+N/link
+        nmake: /cygdrive/c/Program Files (x86)/Microsoft Visual Studio 12.0/VC/B
+IN/nmake
+        bash: /usr/bin/bash
+        bison: /usr/bin/bison
+        flex: /usr/bin/flex
+        env: /usr/bin/env
+        grep: /usr/bin/grep
+        /usr/bin/find: /usr/bin/find
+        peflags: /usr/bin/peflags
+        perl: /usr/bin/perl
+        C:\Python27\python.exe: /cygdrive/c/Python27/python.exe
+        sed: /usr/bin/sed
+        unzip: /usr/bin/unzip
+        wget: /usr/bin/wget</p>
+
+<p>This is what I get. I would prefer to use and extract the packages using cmd rather than doing manually.</p></div>
+            <div class="comment-info" id="comment-33394-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '14, 09:52)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+        <a name="33395"></a>
+        <div class="comment not_top_scorer" id="comment-33395">
+            <div id="post-33395-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb">@grahamb</a>: I solved that think and not its extracting but I get this error
+<strong><em>*** lua-5.2.3_Win64_dll10_lib.zip </em></strong>***
+No HTTP proxy specified (http_proxy and HTTP_PROXY are empty).
+Downloading lua-5.2.3_Win64_dll10_lib.zip into '/cygdrive/c/development/Wireshar
+k/Wireshark-win32-libs', installing into lua5.2.3
+--2014-06-04 13:17:16--  <a href="http://anonsvn.wireshark.org/wireshark-win32-libs/tags/">http://anonsvn.wireshark.org/wireshark-win32-libs/tags/</a>
+2014-05-16/packages//lua-5.2.3_Win64_dll10_lib.zip
+Resolving anonsvn.wireshark.org (anonsvn.wireshark.org)... 174.137.42.70
+Connecting to anonsvn.wireshark.org (anonsvn.wireshark.org)|174.137.42.70|:80...
+ connected.
+HTTP request sent, awaiting response... 404 Not Found
+2014-06-04 13:17:16 ERROR 404: Not Found.</p>
+
+<p>ERROR: Can't download <a href="http://anonsvn.wireshark.org/wireshark-win32-libs/tags/201">http://anonsvn.wireshark.org/wireshark-win32-libs/tags/201</a>
+4-05-16/packages//lua-5.2.3_Win64_dll10_lib.zip</p>
+
+<p>NMAKE : fatal error U1077: 'c:\cygwin64\bin\bash.EXE' : return code '0x1'
+Stop.</p>
+
+<p>whereas lua-5.2.3_Win64_dll10_lib.zip package is not there on the server link mentioned there.. shall I skip this or download it drom other link.?</p></div>
+            <div class="comment-info" id="comment-33395-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Jun '14, 10:19)</span>
+                <a class="comment-user userinfo" href="/users/7388/aman">aman</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-33205" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 43
+        </span>
+        <a href="#" class="show-all-comments-link">show 38 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33205-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/33204/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='dZfxVvWI7EfuAsnn89CQu7NlX1PUQM6d' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33204/makefilenmake-gives-cl-not-found-error?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33204/makefilenmake-gives-cl-not-found-error?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+        <a href="/tags/nmake/"
+            class="tag-link-nmake"
+            title="see questions tagged'nmake'using tags"
+            rel="tag">nmake</a> <span class="tag-number">&#215;13</span><br/>
+        
+        <a href="/tags/makefile.nmake/"
+            class="tag-link-makefile.nmake"
+            title="see questions tagged'makefile.nmake'using tags"
+            rel="tag">makefile.nmake</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 30, 2014, 9:10 a.m.">30 May '14, 09:10</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,963 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 4, 2014, 10:19 a.m.">04 Jun '14, 10:19</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/33297/makefilenmake-error">[closed] Makefile.nmake error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39223/fatal-error-u1077-cannot-find-the-path-specified">Fatal Error U1077 Cannot Find the Path Specified</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49264/getting-build-error-nmake-fatal-error-u1077-toolsrdpspy-return-code-0x1">Getting build error: &quot;NMAKE: fatal error U1077: &#39;..\tools\rdps.py&#39;: return code &#39;0x1&#39;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38371/nmake-all-errors-invalid-numeric-argument-missing-source-filename">Nmake All Errors - Invalid Numeric Argument / Missing Source Filename.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27/are-this-questions-for-users-or-developers">Are this questions for Users or Developers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1230/after-updating-mac-ports-wireshark-is-dead">after updating mac ports wireshark is dead!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2091/wireshark-built-in-dissector-needs-to-be-changed-to-a-plugin">Wireshark built in dissector needs to be changed to a plugin??</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2360/difference-between-cap-and-pcap-formats">difference between cap and pcap formats??</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2859/port-mirroring-with-wireshark">port mirroring with wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3722/nbns-queries-slowing-wireshark-capture-filter-input">NBNS queries slowing Wireshark capture filter input</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

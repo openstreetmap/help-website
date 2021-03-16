@@ -1,0 +1,1070 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to make MATE extract generated treeitem field value - Wireshark Q&amp;A</title>
+        <meta name="description" content="In my heuristic dissector for a private network protocol, I have the following generated treeitem added for 3-way handshaking purposes: -- field definition fclas.a2_srcrid = ProtoField.uint16(&quot;cmx_clud_as.srcrid&quot;,&quot;Src. Ref. ID (Calculated)&quot;,base.HEX)  -- field value assignment subtree:add(fclas.a2_s..." />
+        <meta name="keywords" content="generated,mate,treeitem" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/63326/how-to-make-mate-extract-generated-treeitem-field-value" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/63326/how-to-make-mate-extract-generated-treeitem-field-value?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='kLgLUQYMa00QDhsUMFTgwh7ADxlUfKYJ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/63326/how-to-make-mate-extract-generated-treeitem-field-value">How to make MATE extract generated treeitem field value</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-63326-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63326/up/" rel="nofollow"> </a>
+<div id="post-63326-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-63326-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63326/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/63326/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>In my heuristic dissector for a private network protocol, I have the following generated treeitem added for 3-way handshaking purposes:</p>
+<pre><code>-- field definition
+fclas.a2_srcrid = ProtoField.uint16("cmx_clud_as.srcrid","Src. Ref. ID (Calculated)",base.HEX)
+
+-- field value assignment
+subtree:add(fclas.a2_srcrid,clas_srid):set_generated()
+</code></pre>
+<p>The field and value can be seen in the Wireshark packet details window, surrounded by [], and can be used as display filter, but cannot be extracted by MATE for a pdu:</p>
+<pre><code>-- // MATE pdu extract for generated field value
+Extract sref From cmx_clud_as.srcrid;
+</code></pre>
+<p>Please kindly advise if this is expected, and if there is a workaround -- to extract generated protocol treeitem field value.</p>
+<p>Many thanks in advance.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/generated/" class="post-tag tag-link-generated"
+                                        title="see questions tagged 'generated'" rel="tag">generated</a>
+                                
+                                    <a href="/tags/mate/" class="post-tag tag-link-mate"
+                                        title="see questions tagged 'mate'" rel="tag">mate</a>
+                                
+                                    <a href="/tags/treeitem/" class="post-tag tag-link-treeitem"
+                                        title="see questions tagged 'treeitem'" rel="tag">treeitem</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Aug '17, 01:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7e50c86ac4ee2038257acc83ccb1ce21?s=32&amp;d=identicon&amp;r=g" alt="juandering's gravatar image" />
+    <p><a href="/users/21456/juandering">juandering</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="juandering has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/63326/">
+                edited
+                <strong>02 Aug '17, 01:22</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+            <p><a href="/users/19586/sindy">sindy</a><br/>
+            <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-63326">
+    
+        <a name="63332"></a>
+        <div class="comment" id="comment-63332">
+            <div id="post-63332-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just spitballing here: What happens if you leave out the set_generated() call?</p></div>
+            <div class="comment-info" id="comment-63332-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Aug '17, 02:58)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="63334"></a>
+        <div class="comment" id="comment-63334">
+            <div id="post-63334-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Jaap.</p>
+
+<p>If I leave out the set_generated() call, the result is the same.</p>
+
+<p>Seems MATE extracts field values only if they come with the packet. Generated field values (not from TvbRange) are discarded, or not seen?</p></div>
+            <div class="comment-info" id="comment-63334-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Aug '17, 03:20)</span>
+                <a class="comment-user userinfo" href="/users/21456/juandering">juandering</a>
+                
+            </div>
+        </div>
+    
+        <a name="63336"></a>
+        <div class="comment" id="comment-63336">
+            <div id="post-63336-score" class="comment-score"></div>
+            <div class="comment-text"><p>If I can make this work with generated field from hash table, then a 3-way handshake like below is peanuts to track for MATE.</p>
+
+<p>First PDU: </p>
+
+<p>SrcMAC to DstMAC \ clud_as_cr with src_ref_id (0x0001)</p>
+
+<p>2nd PDU: </p>
+
+<p>Switched DstMAC to SrcMAC \ clud_as_ack1 with dst_ref_id (0x0001) and src_ref_id (0x3456)</p>
+
+<p>3rd PDU: </p>
+
+<p>SrcMAC to DstMAC \ clud_as_ack2 with dst_ref_id (0x3456) and generated src_ref_id (0x0001)</p>
+
+<p>MATE Gop can have key of SrcMAC, DstMAC, src_ref_id. And this will work even if there are overlaps of the 3-way handshakes.</p></div>
+            <div class="comment-info" id="comment-63336-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Aug '17, 03:50)</span>
+                <a class="comment-user userinfo" href="/users/21456/juandering">juandering</a>
+                
+            </div>
+        </div>
+    
+        <a name="63343"></a>
+        <div class="comment" id="comment-63343">
+            <div id="post-63343-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=12182">It is known</a> that MATE has issues even with some "native" dissectors. As it searches for fields only within specified protocol layers, it wouldn't surprise me if it would ignore generated fields which cannot be physically found in the packet data.</p>
+
+<p>Don't hesitate to paste the debug output here once you get it.</p></div>
+            <div class="comment-info" id="comment-63343-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Aug '17, 08:54)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="63396"></a>
+        <div class="comment" id="comment-63396">
+            <div id="post-63396-score" class="comment-score"></div>
+            <div class="comment-text"><p>You were right Sindy, my generated field cannot be discovered / extracted by MATE since it is not really physically included in the packet. In my case, it is just a reference ID from an earlier packet, passed via hash table.</p>
+
+<p>In my 3-way handshake, the original transaction between data source and the destination is many many packets past.</p>
+
+<p>Currently, every time the data sender sends data, it sends a source ref ID. The data receiver acknowledges with Ack1, containing the sender's source ref ID, and the receiver's destination ref ID. The data sender sends Ack2 with the data receiver's destination ref ID.</p>
+
+<p>3-way handshakes can sometimes overlap, and sometimes the sender-destination can also reverse in the "overlap". So, the only way to track a conversation I see, is to tie the two directed (source and destination) ref IDs with the sender-destination combination.</p>
+
+<p>Unluckily, MATE will not extract the generated source ref ID for Ack2.</p>
+
+<p>Perhaps somebody around has a workaround to share please?</p>
+
+<p>Thanks.</p></div>
+            <div class="comment-info" id="comment-63396-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '17, 04:26)</span>
+                <a class="comment-user userinfo" href="/users/21456/juandering">juandering</a>
+                
+            </div>
+        </div>
+    
+        <a name="63397"></a>
+        <div class="comment not_top_scorer" id="comment-63397">
+            <div id="post-63397-score" class="comment-score"></div>
+            <div class="comment-text"><p>The pdu debug output for the 3 packets - data send with src ref ID, Ack1 with dst and src ref IDs, Ack2 with dst ref ID:</p>
+
+<p>The "found field 0-0" is the result of referencing the Ack2 src ref ID generated field; no TvB range address.</p>
+
+<pre><code>mate_analyze_frame: trying to extract: clud_as_pdu
+mate_analyze_frame: found matching proto, extracting: clud_as_pdu
+new_pdu: type=clud_as_pdu framenum=1
+...
+get_pdu_fields: found field 70-72
+get_pdu_fields: got sref=0x00006423
+...
+mate_analyze_frame: trying to extract: clud_as_pdu
+mate_analyze_frame: found matching proto, extracting: clud_as_pdu
+new_pdu: type=clud_as_pdu framenum=2
+...
+get_pdu_fields: found field 71-73
+get_pdu_fields: got sref=0x00006423
+get_pdu_fields: found field 69-71
+get_pdu_fields: got dref=0x0000170f
+...
+mate_analyze_frame: trying to extract: clud_as_pdu
+mate_analyze_frame: found matching proto, extracting: clud_as_pdu
+new_pdu: type=clud_as_pdu framenum=3
+...
+get_pdu_fields: found field 0-0
+get_pdu_fields: found field 69-71
+get_pdu_fields: got dref=0x0000170f
+</code></pre></div>
+            <div class="comment-info" id="comment-63397-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '17, 04:29)</span>
+                <a class="comment-user userinfo" href="/users/21456/juandering">juandering</a>
+                
+            </div>
+        </div>
+    
+        <a name="63398"></a>
+        <div class="comment not_top_scorer" id="comment-63398">
+            <div id="post-63398-score" class="comment-score"></div>
+            <div class="comment-text"><p>Leaving MATE aside, I'm a bit lost in your explanation, are the refIDs unique per transaction or only unique per source? I do understand that they differ between source and destination and that they are not common between Req and ACK2 of the same trasaction.</p>
+
+<p>Second, MATE was intended as a generic tool allowing to match together packets from <strong>different</strong> protocols. You are creating your own dissector for a single protocol, so it is far simpler to track the transactions in its code. Take the TCP dissector for loose inspiration, it generates fields called Stream index (<code>tcp.stream</code>). You can assign arbitrary numbers to your transactions and store them in an associative array indexed by frame number. If, for a given frame number, the transaction number is already assigned, leave it unchanged. If it is not (which indicates the first dissection pass) and you process a request, you assign the next free one and store this newly assigned transaction number to another associative array indexed by the source refID. If handling ACK1, you also check whether a transaction number has already been assigned for that frame number (if not, it indicates the first dissection pass), and if not, you use source refID to find it in the second array; if you don't find it there, you assign the next free one because it means that the request is missing in the capture. In both cases, you then store the transaction number to a third array, indexed by destination refID. And for ACK2 you act similarly, except that you only search for transaction number in the third associative array.</p>
+
+<p>The second and third arrays may have to be indexed by combination of refID and source L3 address if refID alone is not "unique enough".</p>
+
+<p>There is a Question dealing with similar topic somewhere here but I cannot remember any keyword to identify it.</p></div>
+            <div class="comment-info" id="comment-63398-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '17, 05:01)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="63410"></a>
+        <div class="comment not_top_scorer" id="comment-63410">
+            <div id="post-63410-score" class="comment-score"></div>
+            <div class="comment-text"><p>The ref IDs are unique per source.</p>
+
+<p>My newbie heuristic dissector in Lua, dissects a few other protocols in the company's suite of network protocols for different applications.</p>
+
+<p>I have not gone yet into conversation or stream tracking yet -- and don't know if Lua is enough, or if we need to go C++. </p>
+
+<p>With Lua, I was hoping to make use of MATE for grouping the related pdus, plus using MATEs timing capabilities for handshake timing validations.</p>
+
+<p>Just now I was trying your suggested associative arrays to track frame numbers already processed, and using L3 Src and Dst MAC as conversation stream keys for the second and third tables to pass the required ref IDs. I think with Lua only, my logic below does not work properly:</p>
+
+<p>if (frames_done[pinfo.number] == nil) then</p>
+
+<p>-- process this stream
+    ref1_table[L3SrcMAC .. L3DstMAC] = ref1_id
+    stream_num = stream_num + 1
+    frames_done[pinfo.number] = stream_num
+end</p>
+
+<p>If I remove the if testing, the stream_num keeps jumping when I click on a packet in the packet display.</p>
+
+<p>I think this is similar to pinfo.visited issue that from the forum entries I have seen before, does not work with Lua dissectors -- needing C++ to work.</p>
+
+<p>Please bear with my newbieness on this matter; plus lack of C++ resources.</p>
+
+<p>Thanks.</p></div>
+            <div class="comment-info" id="comment-63410-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '17, 15:34)</span>
+                <a class="comment-user userinfo" href="/users/21456/juandering">juandering</a>
+                
+            </div>
+        </div>
+    
+        <a name="63415"></a>
+        <div class="comment not_top_scorer" id="comment-63415">
+            <div id="post-63415-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>With Lua, I was hoping to <br>
+1) make use of MATE for grouping the related pdus, plus <br>
+2) using MATEs timing capabilities for handshake timing validations.</p>
+</blockquote>
+
+<p>1) is confirmed to be impossible with current implementation of MATE, which is the answer to your original Question</p>
+
+<p>2) seems to me to be the same case as the transaction number is a generated field as well, so you can't use it to build a GoP. So you'll have to introduce generated fields like <code>ack1_delay</code>, <code>ack2_delay</code> to deal with the timing in the dissector itself as well.</p>
+
+<p>Having said that, I think that given the purpose and rules of this site, it is time that you ask a new Question about your issue which won't mention MATE, Answer the current one with the conclusion we've come to, and accept that Answer.</p>
+
+<blockquote>
+<p>I think this is similar to pinfo.visited issue that from the forum entries I have seen before, does not work with Lua dissectors</p>
+</blockquote>
+
+<p>Well, I think the opposite. Your <code>frames_done</code> table is, among other purposes, a replacement of <code>pinfo.visited</code> which you create and maintain yourself, so any eventual bug rendering <code>pinfo.visited</code> unusable in Lua doesn't affect it. I would rather suspect something like declaration of the table in a wrong place, causing it to be re-created with each new call of <code>yourproto.dissector</code>.</p>
+
+<blockquote>
+<p>Please bear with my ... lack of C++ resources.</p>
+</blockquote>
+
+<p>I'm in the same boat. An iteration of Lua development is so quick as compared to that of C++ one that I never considered rolling out the full development environment seriously. You've just confused me into thinking that you use C by calling an associative array a hash table.</p></div>
+            <div class="comment-info" id="comment-63415-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '17, 23:29)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="63417"></a>
+        <div class="comment not_top_scorer" id="comment-63417">
+            <div id="post-63417-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sindy, I am having difficulties posting the answer. Keep getting red prompt text "* This field is required." when I click "Anwer Your Own Question".</p>
+
+<p>Something about my comments seem to be spam? Or too many attempts in posting a comment / answer?</p></div>
+            <div class="comment-info" id="comment-63417-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Aug '17, 03:58)</span>
+                <a class="comment-user userinfo" href="/users/21456/juandering">juandering</a>
+                
+            </div>
+        </div>
+    
+        <a name="63419"></a>
+        <div class="comment not_top_scorer" id="comment-63419">
+            <div id="post-63419-score" class="comment-score"></div>
+            <div class="comment-text"><p>No idea. The site engine started behaving funny recently, and as it is not maintained any more, it is unlikely to bet better. At least it permitted me to convert your Comment into an Answer and slightly edit it (it is not important whether the field is generated by Lua or C++ dissector), now it is your job to Accept it to highlight the Question as usefully answered in the question list for others.</p></div>
+            <div class="comment-info" id="comment-63419-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Aug '17, 04:10)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-63326" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 11
+        </span>
+        <a href="#" class="show-all-comments-link">show 6 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63326-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/63326/how-to-make-mate-extract-generated-treeitem-field-value?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/63326/how-to-make-mate-extract-generated-treeitem-field-value?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/63326/how-to-make-mate-extract-generated-treeitem-field-value?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/63326/how-to-make-mate-extract-generated-treeitem-field-value?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="63418"></a>
+                    <div id="answer-container-63418" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-63418-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63418/up/" rel="nofollow"> </a>
+<div id="post-63418-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-63418-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63418/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="juandering has selected this answer as the correct answer"
+        href="/accept_answer/63418/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Extracting generated protocol fields (those which are not physically present in frame data) is impossible with the current implementation of MATE which checks that the fields extracted are located within the payload of the indicated transport.</p>
+<p>Thanks to matey <a href="https://ask.wireshark.org/users/19586/sindy"><a href="https://ask.wireshark.org/users/19586/sindy">@sindy</a></a> for the kind guidance in checking this issue. I will now try using associative tables in my dissector to track conversation handshakes.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/63418/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Aug '17, 03:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7e50c86ac4ee2038257acc83ccb1ce21?s=32&amp;d=identicon&amp;r=g" alt="juandering's gravatar image" />
+    <p><a href="/users/21456/juandering">juandering</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="juandering has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/63418/">
+                edited
+                <strong>05 Aug '17, 04:12</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+            <p><a href="/users/19586/sindy">sindy</a><br/>
+            <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-63418">
+    
+</div>
+<div id="comment-tools-63418" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63418-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/63326/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='kLgLUQYMa00QDhsUMFTgwh7ADxlUfKYJ' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/63326/how-to-make-mate-extract-generated-treeitem-field-value?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/63326/how-to-make-mate-extract-generated-treeitem-field-value?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mate/"
+            class="tag-link-mate"
+            title="see questions tagged'mate'using tags"
+            rel="tag">mate</a> <span class="tag-number">&#215;27</span><br/>
+        
+        <a href="/tags/generated/"
+            class="tag-link-generated"
+            title="see questions tagged'generated'using tags"
+            rel="tag">generated</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/treeitem/"
+            class="tag-link-treeitem"
+            title="see questions tagged'treeitem'using tags"
+            rel="tag">treeitem</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 2, 2017, 1:17 a.m.">02 Aug '17, 01:17</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>806 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 5, 2017, 4:12 a.m.">05 Aug '17, 04:12</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/931/mate-failed-to-configure-when-starting-with-webmate-enabled">&#39;mate failed to configure&#39; when starting with web.mate enabled</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51023/matching-gop-to-another-gop-to-another-gop">Matching GoP to another GoP to another GoP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4013/extract-mac-address-using-mate">extract mac address using mate</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51349/wireshark-mate-configuration-issues-and-advise">Wireshark MATE configuration issues and advise</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5243/exclude-a-request-and-its-corresponding-answer">Exclude a request and its corresponding answer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51843/wireshark-mate-sip-2nd-or-3rd-pdu-filter">wireshark mate sip 2nd or 3rd pdu filter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9045/unable-to-parse-rtps2-attributes-through-mate-or-through-display-filter">Unable to parse RTPS2 attributes through MATE or through display filter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52431/arithmetic-support-in-mate">Arithmetic Support in MATE?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16235/mate-display-filter-for-sip-calls">MATE display filter for SIP calls</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54370/how-to-filter-map-request-by-msisdn-and-its-response">How to filter MAP request by msisdn and its response</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

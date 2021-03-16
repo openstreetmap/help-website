@@ -1,0 +1,988 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to filter MAP request by msisdn and its response - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, Currently I am sending AnyTimeInterrogation to the HLR over a MAP link. I would like to monitor specific queries being made for certain users. So I need to filter by msisdn. It gets complicated because the answer to the ATI does not contain the msisdn field. The only way to link the query to the..." />
+        <meta name="keywords" content="tcap,map,mate,hlr" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/54370/how-to-filter-map-request-by-msisdn-and-its-response" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/54370/how-to-filter-map-request-by-msisdn-and-its-response?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='UQaXf9uXI1jW6reTsKdlHJ9pPvzIeDvm' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/54370/how-to-filter-map-request-by-msisdn-and-its-response">How to filter MAP request by msisdn and its response</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-54370-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54370/up/" rel="nofollow"> </a>
+<div id="post-54370-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54370-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54370/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/54370/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>Currently I am sending AnyTimeInterrogation to the HLR over a MAP link.
+I would like to monitor specific queries being made for certain users.
+So I need to filter by msisdn.</p>
+<p>It gets complicated because the answer to the ATI does not contain the msisdn field.
+The only way to link the query to the answer is by the dtid field in TCAP layer</p>
+<p>Any pointers as to how i can do this filter?</p>
+<p>A pcap is downloadable from here</p>
+<p><a href="https://drive.google.com/file/d/0B9-7ejADsontcmVSLThyOE5YUzg/view?usp=sharing">https://drive.google.com/file/d/0B9-7ejADsontcmVSLThyOE5YUzg/view?usp=sharing</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tcap/" class="post-tag tag-link-tcap"
+                                        title="see questions tagged 'tcap'" rel="tag">tcap</a>
+                                
+                                    <a href="/tags/map/" class="post-tag tag-link-map"
+                                        title="see questions tagged 'map'" rel="tag">map</a>
+                                
+                                    <a href="/tags/mate/" class="post-tag tag-link-mate"
+                                        title="see questions tagged 'mate'" rel="tag">mate</a>
+                                
+                                    <a href="/tags/hlr/" class="post-tag tag-link-hlr"
+                                        title="see questions tagged 'hlr'" rel="tag">hlr</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>27 Jul '16, 08:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3fa128cb9679b0f80992ec7945c2aa76?s=32&amp;d=identicon&amp;r=g" alt="mquevedob's gravatar image" />
+    <p><a href="/users/24923/mquevedob">mquevedob</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mquevedob has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54370/">
+                edited
+                <strong>27 Jul '16, 14:26</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" alt="cmaynard's gravatar image" />
+            <p><a href="/users/402/cmaynard">cmaynard ♦♦</a><br/>
+            <span class="score" title="9361 reputation points"><span class="">9.4k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">&#9679;</span><span class="badgecount">142</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-54370">
+    
+</div>
+<div id="comment-tools-54370" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54370-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/54370/how-to-filter-map-request-by-msisdn-and-its-response?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/54370/how-to-filter-map-request-by-msisdn-and-its-response?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/54370/how-to-filter-map-request-by-msisdn-and-its-response?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/54370/how-to-filter-map-request-by-msisdn-and-its-response?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="54372"></a>
+                    <div id="answer-container-54372" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54372-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54372/up/" rel="nofollow"> </a>
+<div id="post-54372-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-54372-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54372/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><strong>&lt; EDIT &gt;</strong><br>
+As <a href="/users/655/jeffmorriss">@JeffMorriss</a>' has pointed out in <a href="https://ask.wireshark.org/questions/55614/in-a-pcap-file-opened-in-wireshark-how-do-you-know-which-response-packet-belongs-to-a-particular-request-packet/55688">his Answer to another Question</a> (many thanks), the TCAP dissector has this as an embedded functionality which, however, is not activated by default. If you activate it, you can filter or find the <code>invoke</code> packet (using a display filter condition like <code>e164.msisdn == "595972123456"</code>), and use a link in the <code>[Stat]</code> part of TCAP dissection to jump to the response (if it is present in the capture).</p>
+<p>Using MATE as described in the original Answer kept below, you can directly filter or find the <code>returnResultLast</code> response up to the msisdn (using a display filter condition <code>tcap_dialog.msisdn == "595972123456"</code>) regardless whether the TCAP ¨dissector's embedded cross-reference functionality is activated or not (because the MATE configuration duplicates it), as MATE adds to packet dissection metafields whose sources are fields of related other packets.</p>
+<p>Either way, it must be possible to recognize that the SCCP calling address of the <code>invoke</code> is the same as the SCCP called address of the <code>returnResultLast</code> - if some Global Title Translation changes the SCCP called address of the response (e.g. from E.164 number alone to point code alone), the tcap transaction id alone is not sufficient to match the <code>invoke</code> with the <code>returnResultLast</code>.<br>
+<strong>&lt; /EDIT &gt;</strong></p>
+<p>If you need to filter PDUs by fields which are not directly present in them and the existing dissector does not provide any meta-fields for this purpose, <a href="https://wiki.wireshark.org/Mate/Manual">MATE</a> is your only way out.</p>
+<p>Using MATE, you may group PDUs together by contents of some fields (in your case, the <code>tcap.dtid</code> field), and export values from some other fields (in your case, the <code>gsm_map.msisdn</code>) from the individual PDUs into meta-fields of the group. To avoid confusion, the group meta-fields bear their own names different from those of the source fields in the PDUs. All PDUs which became members of some group can be display-filtered also on the group meta-fields even if the original fields are not directly present in them.</p>
+<p>If you need a pushstart, publish a trace with at least two independent requests and responses.</p>
+<p>Currently, there are some issues with MATE in tshark, but they may not affect you.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54372/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Jul '16, 09:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54372/">
+                edited
+                <strong>20 Sep '16, 22:35</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54372">
+    
+        <a name="54373"></a>
+        <div class="comment" id="comment-54373">
+            <div id="post-54373-score" class="comment-score"></div>
+            <div class="comment-text"><p>thanks for the answer!
+Would you give me some pointers as to how i would have to configure mate in order to filter the outgoing package by msisdn and the incoming packet to match the oid field of the outgoing package?</p></div>
+            <div class="comment-info" id="comment-54373-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jul '16, 09:41)</span>
+                <a class="comment-user userinfo" href="/users/24923/mquevedob">mquevedob</a>
+                
+            </div>
+        </div>
+    
+        <a name="54374"></a>
+        <div class="comment" id="comment-54374">
+            <div id="post-54374-score" class="comment-score"></div>
+            <div class="comment-text"><p>There are no pointers other than <a href="https://wiki.wireshark.org/Mate/Manual">the manual already pointed to</a>.</p>
+
+<p>Or, if it has discouraged you, you can accept my proposal from the answer:</p>
+
+<blockquote>
+<p>If you need a pushstart, publish a trace with at least two independent requests and responses.</p>
+</blockquote>
+
+<p>Because I won't spend time creating a <strong>useless</strong> MATE configuration; to put together a useful one, I need the pcap file to debug it.</p></div>
+            <div class="comment-info" id="comment-54374-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jul '16, 09:52)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54377"></a>
+        <div class="comment" id="comment-54377">
+            <div id="post-54377-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have shared a link (on the original post) where you can download the pcap file.
+Please let me know. And thanks for your support !</p></div>
+            <div class="comment-info" id="comment-54377-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jul '16, 10:02)</span>
+                <a class="comment-user userinfo" href="/users/24923/mquevedob">mquevedob</a>
+                
+            </div>
+        </div>
+    
+        <a name="54381"></a>
+        <div class="comment" id="comment-54381">
+            <div id="post-54381-score" class="comment-score"></div>
+            <div class="comment-text"><p>Here we go:</p>
+
+<pre><code>Pdu map_pdu Proto gsm_map Transport tcap/sccp {
+    Extract trans_id From tcap.otid;
+    Extract trans_id From tcap.dtid;
+    Extract msisdn From gsm_map.msisdn ;
+};
+
+Gop tcap_dialog On map_pdu Match (trans_id) {
+    Start(msisdn);
+    Extra(msisdn);
+};
+
+Done;
+</code></pre>
+
+<p>It is really minimalistic - I am not 100% sure what else on top of TCAP transaction ID has to be checked so that the PDUs could be safely considered a matching request and answer. If you would capture somewhere closer to the HLR and multiple GMSCs would query the same HLR, I guess nothing prevents them from incidentally using the same transaction ID, so the GT of the GMSC should also be part of the Gop key. But integrating that requires more effort because while <code>tcap.otid</code> is only present in the <code>invoke</code> and <code>tcap.dtid</code> is only present in the <code>returnResultLast</code>, the calling and called GT is present in both but with swapped roles, which has to be sorted out using <code>Transform</code>. And you cannot use both GTs without filtering because the GT of the HLR as called in the <code>invoke</code> differs from the GT of the VLR as calling in the <code>returnResultLast</code>, so the (gt,gt) AVPL of the <code>invoke</code> and <code>returnResultLast</code> would differ, preventing the PDUs from matching the same GoP key. Plus this analysis completely ignores cases where one of the SCCP (calling, called) would e.g. not contain the GT but just the point code.</p>
+
+<p>This MATE configuration (<code>Edit-&gt;Preferences-&gt;Protocols-&gt;Mate-&gt;Configuration Filename</code>, followed by <code>OK</code> and starting a new instance of Wireshark), allows you to use a display filter <code>mate.tcap_dialog.msisdn == "91:95:95:17:41:01:10"</code> to filter an invoke/returnResultLast pair by msisdn. Unfortunately, the format is like this and cannot be changed as this is how the gsm_map dissector provides it.</p></div>
+            <div class="comment-info" id="comment-54381-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jul '16, 14:24)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54383"></a>
+        <div class="comment" id="comment-54383">
+            <div id="post-54383-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Wow, as it turned out to be impossible to achieve the goal of <code>Extract</code>ing both SCCP called and SCCP calling into two AVPs of the same name but, depending on presence of other fields allowing to discriminate between <code>invoke</code> and <code>returnResultLast</code>, keeping as part of the Gop key only that one of the two which represented the GMSC using <code>Transform</code>, I've discovered another feature of MATE not explicitly mentioned in the documentation.</p>
+
+<p>Apparently it is possible to define several MATE Pdus of the same type but with different description, and get all of them created in parallel from the very same source PDU. So together with the possibility to <code>Accept</code> a Pdu depending on an AVPL match, it is possible to <code>Extract</code> a <code>(gmsc_gt, trans_id)</code> AVPL from <code>(sccp.calling.digits, tcap.otid)</code> in one case and from <code>(sccp.called.digits, tcap.dtid)</code> in another, and <code>Accept</code> only the one whose AVPL contains the <code>trans_id</code>. So effectively, for the <code>invoke</code> where only the <code>tcap.otid</code> is present, the value of the <code>gmsc_gt</code> AVP is taken from the <code>sccp.calling.digits</code>, while for the <code>returnResultLast</code>, it is taken from the <code>sccp.called.digits</code> because in that message, only the <code>tcap.dtid</code> is present.</p>
+
+<p>So the result is as follows:</p>
+
+<pre><code>Pdu map_msg Proto gsm_map Transport tcap/sccp {
+    Extract trans_id From tcap.otid;
+    Extract gmsc_gt From sccp.calling.digits;
+    Extract msisdn From gsm_map.msisdn;
+    Criteria Accept Strict (trans_id);
+};
+
+Pdu map_msg Proto gsm_map Transport tcap/sccp {
+    Extract trans_id From tcap.dtid;
+    Extract gmsc_gt From sccp.called.digits;
+    Criteria Accept Strict (trans_id);
+};
+
+Gop tcap_dialog On map_msg Match (trans_id,gmsc_gt) {
+    Start(msisdn);
+    Extra(msisdn);
+};
+
+Done;
+</code></pre>
+
+<p>I guess I'll have to update the Wiki accordingly soon.</p></div>
+            <div class="comment-info" id="comment-54383-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jul '16, 15:52)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54372" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54372-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="54371"></a>
+                    <div id="answer-container-54371" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54371-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54371/up/" rel="nofollow"> </a>
+<div id="post-54371-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-54371-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54371/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This sounds like a job for <a href="https://wiki.wireshark.org/Mate">MATE</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54371/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Jul '16, 08:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" alt="cmaynard's gravatar image" />
+    <p><a href="/users/402/cmaynard">cmaynard ♦♦</a><br/>
+    <span class="score" title="9361 reputation points"><span class="">9.4k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">&#9679;</span><span class="badgecount">142</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cmaynard has 108 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54371">
+    
+</div>
+<div id="comment-tools-54371" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54371-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/54370/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='UQaXf9uXI1jW6reTsKdlHJ9pPvzIeDvm' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54370/how-to-filter-map-request-by-msisdn-and-its-response?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54370/how-to-filter-map-request-by-msisdn-and-its-response?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mate/"
+            class="tag-link-mate"
+            title="see questions tagged'mate'using tags"
+            rel="tag">mate</a> <span class="tag-number">&#215;27</span><br/>
+        
+        <a href="/tags/tcap/"
+            class="tag-link-tcap"
+            title="see questions tagged'tcap'using tags"
+            rel="tag">tcap</a> <span class="tag-number">&#215;13</span><br/>
+        
+        <a href="/tags/map/"
+            class="tag-link-map"
+            title="see questions tagged'map'using tags"
+            rel="tag">map</a> <span class="tag-number">&#215;12</span><br/>
+        
+        <a href="/tags/hlr/"
+            class="tag-link-hlr"
+            title="see questions tagged'hlr'using tags"
+            rel="tag">hlr</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 27, 2016, 8:47 a.m.">27 Jul '16, 08:47</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,054 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 21, 2016, 12:52 a.m.">21 Sep '16, 00:52</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/14824/how-to-filter-out-tcap-location-update-messages">how to filter out tcap location update messages</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17661/tcap-decoding-bug">TCAP Decoding Bug</a>
+        </p>
+        
+        <p>
+            <a href="/questions/931/mate-failed-to-configure-when-starting-with-webmate-enabled">&#39;mate failed to configure&#39; when starting with web.mate enabled</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51023/matching-gop-to-another-gop-to-another-gop">Matching GoP to another GoP to another GoP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26780/map-invoke-inside-a-tc_cont-not-recognised-as-such">MAP invoke inside a TC_cont not recognised as such</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4013/extract-mac-address-using-mate">extract mac address using mate</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51349/wireshark-mate-configuration-issues-and-advise">Wireshark MATE configuration issues and advise</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31457/ss7-tcap-reassembly">SS7 TCAP Reassembly</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5243/exclude-a-request-and-its-corresponding-answer">Exclude a request and its corresponding answer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51843/wireshark-mate-sip-2nd-or-3rd-pdu-filter">wireshark mate sip 2nd or 3rd pdu filter</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

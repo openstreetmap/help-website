@@ -1,0 +1,921 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Why did this connection reset while downloading a file over HTTP? - Wireshark Q&amp;A</title>
+        <meta name="description" content="I host a couple of sites dealing with many file uploads/downloads. Every now and then I see failures in my log files, for reasons I only wish I knew. My visitors are mostly anonymous to me, but today I managed to capture one failed download with tcpdump and I&#39;m asking for help understanding it bette..." />
+        <meta name="keywords" content="rst,download,http" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/28580/why-did-this-connection-reset-while-downloading-a-file-over-http" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/28580/why-did-this-connection-reset-while-downloading-a-file-over-http?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ikVzYn30IdMVfy7xiH0AJgd7O2wAy2Ch' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/28580/why-did-this-connection-reset-while-downloading-a-file-over-http">Why did this connection reset while downloading a file over HTTP?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-28580-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28580/up/" rel="nofollow"> </a>
+<div id="post-28580-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-28580-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28580/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/28580/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I host a couple of sites dealing with many file uploads/downloads. Every now and then I see failures in my log files, for reasons I only wish I knew. My visitors are mostly anonymous to me, but today I managed to capture one failed download with tcpdump and I'm asking for help understanding it better.</p>
+<p>The client (67.189.6.55) was a modern version of Firefox, downloads list showed the files as "Failed".</p>
+<p>The capture is available at <a href="http://www.cloudshark.org/captures/238c31c13426">http://www.cloudshark.org/captures/238c31c13426</a></p>
+<p>What conclusions can be drawn from how the attached stream ends?</p>
+<pre><code>No.     Time        Source         Destination   Protocol Length Info
+  1 0.000000    67.189.6.55    148.251.25.18 TCP  66     62330 &gt; http [SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=4 SACK_PERM=1
+  2 0.000062    148.251.25.18  67.189.6.55   TCP  66     http &gt; 62330 [SYN, ACK] Seq=0 Ack=1 Win=14600 Len=0 MSS=1460 SACK_PERM=1 WS=128
+  3 0.234566    67.189.6.55    148.251.25.18 TCP  60     62330 &gt; http [ACK] Seq=1 Ack=1 Win=65700 Len=0
+  4 0.251202    67.189.6.55    148.251.25.18 HTTP 612    GET /download?o=abee26401673422e8cc6b066aed9c1ba HTTP/1.1 
+  5 0.251266    148.251.25.18  67.189.6.55   TCP  54     http &gt; 62330 [ACK] Seq=1 Ack=559 Win=15744 Len=0
+  6 0.302918    148.251.25.18  67.189.6.55   TCP  1514   [TCP segment of a reassembled PDU]
+ --8&lt;--
+ 16 0.499921    67.189.6.55    148.251.25.18 TCP  60     62330 &gt; http [ACK] Seq=559 Ack=11681 Win=64240 Len=0
+ 17 0.500034    148.251.25.18  67.189.6.55   TCP  1510   [TCP segment of a reassembled PDU]
+ --8&lt;--
+ 24 0.505703    67.189.6.55    148.251.25.18 TCP  60     62330 &gt; http [ACK] Seq=559 Ack=14601 Win=61320 Len=0
+ 25 0.506461    148.251.25.18  67.189.6.55   TCP  1514   [TCP segment of a reassembled PDU]
+ --8&lt;--
+ 30 0.511704    67.189.6.55    148.251.25.18 TCP  60     [TCP Window Update] 62330 &gt; http [ACK] Seq=559 Ack=14601 Win=65700 Len=0
+ 31 0.523490    67.189.6.55    148.251.25.18 TCP  60     62330 &gt; http [RST, ACK] Seq=559 Ack=14601 Win=0 Len=0
+</code></pre>
+<p>In my Tomcat logs this manifests itself as</p>
+<pre><code>Caused by: java.net.SocketException: Connection reset
+    at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:118)
+    at java.net.SocketOutputStream.write(SocketOutputStream.java:159)
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rst/" class="post-tag tag-link-rst"
+                                        title="see questions tagged 'rst'" rel="tag">rst</a>
+                                
+                                    <a href="/tags/download/" class="post-tag tag-link-download"
+                                        title="see questions tagged 'download'" rel="tag">download</a>
+                                
+                                    <a href="/tags/http/" class="post-tag tag-link-http"
+                                        title="see questions tagged 'http'" rel="tag">http</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>04 Jan '14, 18:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a5d0d78390a8712a0b8b6a8141a0184d?s=32&amp;d=identicon&amp;r=g" alt="llehtinen's gravatar image" />
+    <p><a href="/users/6426/llehtinen">llehtinen</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="llehtinen has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/28580/">
+                edited
+                <strong>04 Jan '14, 18:59</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-28580">
+    
+</div>
+<div id="comment-tools-28580" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28580-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/28580/why-did-this-connection-reset-while-downloading-a-file-over-http?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/28580/why-did-this-connection-reset-while-downloading-a-file-over-http?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/28580/why-did-this-connection-reset-while-downloading-a-file-over-http?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/28580/why-did-this-connection-reset-while-downloading-a-file-over-http?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="28596"></a>
+                    <div id="answer-container-28596" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-28596-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28596/up/" rel="nofollow"> </a>
+<div id="post-28596-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-28596-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28596/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This looks like a client problem. For some reason it sends ACK packets only a couple of times, mostly packet 16 for packets up to packet 13, and then it gets strange - because in packet 24 it acknowledges packet 15, and does the same ACK again in packet 30. After that in packet 31 a Reset is sent. Clearly the client seems to be confused :-)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/28596/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Jan '14, 03:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-28596">
+    
+        <a name="28609"></a>
+        <div class="comment" id="comment-28609">
+            <div id="post-28609-score" class="comment-score"></div>
+            <div class="comment-text"><p>Jasper, I noticed #15 with psh bit set, it should mean like "hey, 67. guy, please took off all of those bytes, give me an Ack, and i will give you next chunks of data". But #16 only acks #13 rather than 15, under such condition, is 148. allowed to send additional bytes? Is it a standard behavior? Maybe I mis-undertood the psh bit here.</p>
+
+<p>Could you help me to understand psh bit more precisely?</p></div>
+            <div class="comment-info" id="comment-28609-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '14, 18:07)</span>
+                <a class="comment-user userinfo" href="/users/3634/stevezhou">SteveZhou</a>
+                
+            </div>
+        </div>
+    
+        <a name="28610"></a>
+        <div class="comment" id="comment-28610">
+            <div id="post-28610-score" class="comment-score"></div>
+            <div class="comment-text"><p>I referred to rfc1122 page 83, which states that the discussion in rfc-793 erroneously implies that a received PSH flag must be passed to the app layer. Passing a received PSH flag to the app layer is now OPTIONAL.</p></div>
+            <div class="comment-info" id="comment-28610-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '14, 18:42)</span>
+                <a class="comment-user userinfo" href="/users/3634/stevezhou">SteveZhou</a>
+                
+            </div>
+        </div>
+    
+        <a name="28611"></a>
+        <div class="comment" id="comment-28611">
+            <div id="post-28611-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The PSH bit is a notification to process the segment immediately when sending and receiving it, which means that no "waiting for more segments" mechanism is allowed (well, let's say "waiting/buffering SHOULD not happen"). It does not mean that there may not be more data sent afterwards, it only means "process this right away". </p>
+
+<p>A PSH bit also means that the data should be passed towards the application layer on the receiving side immediately (as you quoted), but it may not mean that the TCP stack has to acknowledge it right away. RFCs are one thing, reality is often something else :-)</p></div>
+            <div class="comment-info" id="comment-28611-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jan '14, 00:02)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-28596" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28596-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="28581"></a>
+                    <div id="answer-container-28581" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-28581-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28581/up/" rel="nofollow"> </a>
+<div id="post-28581-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-28581-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28581/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>(Not sure if I was correct, just for your reference. Looking forward experts' input later)</p>
+<p>Your web server was doing its job well on file transfer until the client reset the TCP connection. Nothing wrong on tcp side as I can see, it must be a purely application level issue. Live application debugging would be needed to figure out the reason of TCP reset.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/28581/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Jan '14, 00:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2d1a8885858c8435654658b25f489bd9?s=32&amp;d=identicon&amp;r=g" alt="SteveZhou's gravatar image" />
+    <p><a href="/users/3634/stevezhou">SteveZhou</a><br/>
+    <span class="score" title="191 reputation points">191</span><span title="27 badges"><span class="badge1">&#9679;</span><span class="badgecount">27</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="34 badges"><span class="bronze">&#9679;</span><span class="badgecount">34</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SteveZhou has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/28581/">
+                edited
+                <strong>05 Jan '14, 03:29</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-28581">
+    
+        <a name="28603"></a>
+        <div class="comment" id="comment-28603">
+            <div id="post-28603-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have to overturn my previous conclusion. This is definitely a server side problem! Apparently, this client is just one of the example to the issue log found on your server, isn't it? It cannot be every client was having problem.</p>
+
+<p>I reviewed the trace again and found that #17's tcp length = 1456 which is bigger than the negotiated value 1460 during handshaking. And after that, #24 and #30 only acked #15 as Jasper mentioned. There must be some problem after receiving the weird length packet on the client, and this caused the client send out an reset to end the connection.</p>
+
+<p>You should take a look at the web server to figure out why it would send out weird length tcp segment. Maybe a NIC card driver issue.</p></div>
+            <div class="comment-info" id="comment-28603-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '14, 08:23)</span>
+                <a class="comment-user userinfo" href="/users/3634/stevezhou">SteveZhou</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-28581" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28581-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/28580/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ikVzYn30IdMVfy7xiH0AJgd7O2wAy2Ch' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/28580/why-did-this-connection-reset-while-downloading-a-file-over-http?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/28580/why-did-this-connection-reset-while-downloading-a-file-over-http?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/http/"
+            class="tag-link-http"
+            title="see questions tagged'http'using tags"
+            rel="tag">http</a> <span class="tag-number">&#215;293</span><br/>
+        
+        <a href="/tags/rst/"
+            class="tag-link-rst"
+            title="see questions tagged'rst'using tags"
+            rel="tag">rst</a> <span class="tag-number">&#215;81</span><br/>
+        
+        <a href="/tags/download/"
+            class="tag-link-download"
+            title="see questions tagged'download'using tags"
+            rel="tag">download</a> <span class="tag-number">&#215;36</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 4, 2014, 6:45 p.m.">04 Jan '14, 18:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,016 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 7, 2014, 12:02 a.m.">07 Jan '14, 00:02</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13461/server-unable-to-access-websites-http-or-https-from-a-windows-server">Server unable to access websites (HTTP or HTTPS) from a windows server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38366/slow-download">Slow download</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3277/http-post-command-not-received-and-mss-value-changed-in-transit">HTTP POST command not received and MSS value changed in transit</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39202/what-can-cause-a-client-to-rst-a-connection-from-a-web-server">What can cause a Client to RST a connection from a Web Server?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53652/how-to-identify-the-end-of-a-file-transfer-from-server-side">How to identify the end of a file transfer from server side?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31412/getting-tcp-rstack-and-appliction-does-not-handle-this-well">Getting TCP RST,ACK and appliction does not handle this well</a>
+        </p>
+        
+        <p>
+            <a href="/questions/348/credit-card-transactions-experience-multiple-declines-why">Credit card transactions experience multiple declines. Why?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23885/rst-after-syn-ack">RST after SYN-ACK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35835/iis-85-windows-2012-r2-rst-ack-problem-question">IIS 8.5 Windows 2012 R2 - RST ACK problem question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55362/remote-desktop-not-connecting">Remote Desktop not connecting</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1017 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Capture filter equivalent of a given display filter for 802.11 frames encapsulated into TZSP - Wireshark Q&amp;A</title>
+        <meta name="description" content="I want to write a capture filter for this display filter &quot;tzsp &amp;amp;&amp;amp; wlan.ra==&amp;lt;some mac=&quot;&quot; address=&quot;&quot;&amp;gt;&quot; in tshark. I can write &quot;udp port 37008&quot; in place for tzsp but I cannot find anywhere about how to write capture filter for wlan.ra==&amp;lt;some mac=&quot;&quot; address=&quot;&quot;&amp;gt; . EDIT: I am using a m..." />
+        <meta name="keywords" content="tshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/55287/capture-filter-equivalent-of-a-given-display-filter-for-80211-frames-encapsulated-into-tzsp" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/55287/capture-filter-equivalent-of-a-given-display-filter-for-80211-frames-encapsulated-into-tzsp?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='QRJ33iQw69mEemIvw6GhYAxKNoQzZIM7' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/55287/capture-filter-equivalent-of-a-given-display-filter-for-80211-frames-encapsulated-into-tzsp">Capture filter equivalent of a given display filter for 802.11 frames encapsulated into TZSP</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-55287-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55287/up/" rel="nofollow"> </a>
+<div id="post-55287-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55287-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55287/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/55287/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I want to write a capture filter for this display filter "tzsp &amp;&amp; wlan.ra==&lt;some mac="" address=""&gt;" in tshark. I can write "udp port 37008" in place for tzsp but I cannot find anywhere about how to write capture filter for wlan.ra==&lt;some mac="" address=""&gt; .</p>
+<p><strong>EDIT:</strong> I am using a mikrotik routerboard to stream the sniffed 802.11 frames to my laptop over an IP network using TZSP encapsulation.</p>
+<p>Please help, Thanks in advance.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tshark/" class="post-tag tag-link-tshark"
+                                        title="see questions tagged 'tshark'" rel="tag">tshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Sep '16, 05:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/557d426153aa6950b4ae3541a97ab03d?s=32&amp;d=identicon&amp;r=g" alt="tatsugot's gravatar image" />
+    <p><a href="/users/24956/tatsugot">tatsugot</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tatsugot has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/55287/">
+                edited
+                <strong>06 Sep '16, 05:28</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+            <p><a href="/users/19586/sindy">sindy</a><br/>
+            <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-55287">
+    
+</div>
+<div id="comment-tools-55287" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55287-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/55287/capture-filter-equivalent-of-a-given-display-filter-for-80211-frames-encapsulated-into-tzsp?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/55287/capture-filter-equivalent-of-a-given-display-filter-for-80211-frames-encapsulated-into-tzsp?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/55287/capture-filter-equivalent-of-a-given-display-filter-for-80211-frames-encapsulated-into-tzsp?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/55287/capture-filter-equivalent-of-a-given-display-filter-for-80211-frames-encapsulated-into-tzsp?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="55344"></a>
+                    <div id="answer-container-55344" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55344-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55344/up/" rel="nofollow"> </a>
+<div id="post-55344-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-55344-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55344/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="tatsugot has selected this answer as the correct answer"
+        href="/accept_answer/55344/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Tzsp means that Mikrotik encapsulates the captured 802.11 frames into UDP, so the fact that the interface on which you capture indicates link type as Ethernet is OK. But this also means that the libpcap's capture filter processes the captured frames as Ethernet ones. Unfortunately, you cannot tell libpcap to ignore first N octets of an Ethernet frame and interpret the rest as 802.11.</p>
+<p>So you would have to use a complex capture filter expression like <code>port tzsp and udp[X:4] = 0xaabbccdd and udp[X+4:2] = 0xeeff</code>, where <code>aa:bb:cc:dd:ee:ff</code> is the recipient mac address you are interested in and X is the offset of <code>ra</code> from the beginning of the UDP portion of the <code>tzsp</code> packet.</p>
+<p>I am afraid that the absolute position of the <code>ra</code> in the 802.11 frame depends on frame type, so the X above may not be constant and so you would have to use an even more complex filter, looking at the frame type first and choosing the proper X value accordingly, like</p>
+<p><code>(udp[T:1] &amp; 0xf = type1 and udp[X1:4] = 0xaabbccdd and udp[X1+4:2]=0xeeff) or (udp[T:1] &amp; 0xf = type2 and udp[X2:4] = 0xaabbccdd and udp[X2+4:2]=0xeeff)
+or (udp[T:1] &amp; 0xf = type3 and udp[X3:4] = 0xaabbccdd and udp[X3+4:2]=0xeeff)</code></p>
+<p>The display filter works another way, it doesn't care at which place in the protocol hierarchy inside a frame the protocol field in question is placed. So in your particular case, where the IP layer may occur twice in a frame, a display filter <code>ip.addr == a.b.c.d</code> would match both if e.g. the Mikrotik's own IP address would be <code>a.b.c.d</code> or if an IP address inside an 802.11 frame encapsulated into tzsp would be <code>a.b.c.d</code>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55344/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Sep '16, 04:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/55344/">
+                edited
+                <strong>06 Sep '16, 05:17</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55344">
+    
+        <a name="55345"></a>
+        <div class="comment" id="comment-55345">
+            <div id="post-55345-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy"></a><a href="/users/19586/sindy">@sindy</a> udp[X1:4] = 0xaabbccdd and udp[X1+4:2]=0xeeff why have you broken it in two parts</p></div>
+            <div class="comment-info" id="comment-55345-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '16, 05:13)</span>
+                <a class="comment-user userinfo" href="/users/24956/tatsugot">tatsugot</a>
+                
+            </div>
+        </div>
+    
+        <a name="55346"></a>
+        <div class="comment" id="comment-55346">
+            <div id="post-55346-score" class="comment-score">1</div>
+            <div class="comment-text"><p>because the capture filter can work with maximum 32 bits (4 bytes) at a time, so a 6-octet MAC address needs to be handled this way. As stated at the <a href="http://www.tcpdump.org/manpages/pcap-filter.7.html">pcap-filter man page</a>, "<em>Size</em> is optional and indicates the number of bytes in the field of interest; it can be either one, two, or four, and defaults to one."</p></div>
+            <div class="comment-info" id="comment-55346-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '16, 05:20)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55344" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55344-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55297"></a>
+                    <div id="answer-container-55297" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55297-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55297/up/" rel="nofollow"> </a>
+<div id="post-55297-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55297-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55297/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>According to the <a href="http://www.tcpdump.org/manpages/pcap-filter.7.html">pcap-filter</a> manual page you should be looking at <code>wlan ra ehost</code></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55297/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Sep '16, 07:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2337f0406681e5c72ea0e6f1f0d6c0b0?s=32&amp;d=identicon&amp;r=g" alt="Jaap's gravatar image" />
+    <p><a href="/users/4/jaap">Jaap ♦</a><br/>
+    <span class="score" title="11680 reputation points"><span class="">11.7k</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="101 badges"><span class="bronze">&#9679;</span><span class="badgecount">101</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jaap has 155 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55297">
+    
+        <a name="55329"></a>
+        <div class="comment" id="comment-55329">
+            <div id="post-55329-score" class="comment-score"></div>
+            <div class="comment-text"><p>thanks for answering sir. I had tried it earlier like---</p>
+
+<p>Input:
+ tshark -i eno1 -f "udp port 37008 &amp;&amp; wlan ra  01:40:96:00:00:03" </p>
+
+<p>and I am getting this </p>
+
+<p>Output:
+tshark: Invalid capture filter "udp port 37008 &amp;&amp; wlan ra  01:40:96:00:00:03" for interface 'wlo1'.</p>
+
+<p>That string isn't a valid capture filter ('ra' is only supported on 802.11 with 802.11 headers).
+See the User's Guide for a description of the capture filter syntax.</p>
+
+<p>What should I do?</p></div>
+            <div class="comment-info" id="comment-55329-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Sep '16, 05:27)</span>
+                <a class="comment-user userinfo" href="/users/24956/tatsugot">tatsugot</a>
+                
+            </div>
+        </div>
+    
+        <a name="55330"></a>
+        <div class="comment" id="comment-55330">
+            <div id="post-55330-score" class="comment-score"></div>
+            <div class="comment-text"><p>what does <code>tshark -i eno1 -L</code> say?</p></div>
+            <div class="comment-info" id="comment-55330-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Sep '16, 06:37)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="55338"></a>
+        <div class="comment" id="comment-55338">
+            <div id="post-55338-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy">@sindy</a> it returns 
+Data link types of interface eno1 (use option -y to set):
+  EN10MB (Ethernet)
+  DOCSIS (DOCSIS)</p></div>
+            <div class="comment-info" id="comment-55338-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Sep '16, 23:01)</span>
+                <a class="comment-user userinfo" href="/users/24956/tatsugot">tatsugot</a>
+                
+            </div>
+        </div>
+    
+        <a name="55340"></a>
+        <div class="comment" id="comment-55340">
+            <div id="post-55340-score" class="comment-score"></div>
+            <div class="comment-text"><p>And despite that, if you capture on that interface without any filter, you get 802.11 frames with radiotap header etc.?</p></div>
+            <div class="comment-info" id="comment-55340-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '16, 01:54)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="55341"></a>
+        <div class="comment" id="comment-55341">
+            <div id="post-55341-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy">@sindy</a> In wireshark if I put the display filter as tzsp &amp;&amp; wlan.ra == 01:40:96:00:00:03
+I can see the packets I need to see.</p></div>
+            <div class="comment-info" id="comment-55341-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '16, 02:44)</span>
+                <a class="comment-user userinfo" href="/users/24956/tatsugot">tatsugot</a>
+                
+            </div>
+        </div>
+    
+        <a name="55342"></a>
+        <div class="comment not_top_scorer" id="comment-55342">
+            <div id="post-55342-score" class="comment-score"></div>
+            <div class="comment-text"><p>That sounds strange, so:</p>
+
+<ul>
+<li>
+<p>how do you switch eno1 to monitoring mode when capturing using Wireshark? Using some utility before or from the Wireshark GUI (sorry, I have only Windows version of Wireshark)?</p>
+</li>
+<li>
+<p>have you switched eno1 to monitoring mode before issuing <code>tshark -i eno1 -L</code>?</p>
+</li>
+<li>
+<p>what happens if you try to use the capture filter suggested by <a href="/users/4/jaap">@Jaap</a> from the GUI Wireshark?</p>
+</li>
+</ul></div>
+            <div class="comment-info" id="comment-55342-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '16, 02:53)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="55343"></a>
+        <div class="comment not_top_scorer" id="comment-55343">
+            <div id="post-55343-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy">@sindy</a> I am using a mikrotik routerboard to stream the sniffer stream to my laptop. Then I am using tshark to capture traffic and store it in pcap files. The traffic is streamed via ethernet so I am using eno1. </p>
+
+<p>If I use the filter Jaap suggested it gives me this </p>
+
+<p>tshark: Invalid capture filter "udp port 37008 &amp;&amp; wlan ra 01:40:96:00:00:03" for interface 'wlo1'.</p>
+
+<p>That string isn't a valid capture filter ('ra' is only supported on 802.11 with 802.11 headers). See the User's Guide for a description of the capture filter syntax.</p></div>
+            <div class="comment-info" id="comment-55343-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '16, 04:25)</span>
+                <a class="comment-user userinfo" href="/users/24956/tatsugot">tatsugot</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55297" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55297-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/55287/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='QRJ33iQw69mEemIvw6GhYAxKNoQzZIM7' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55287/capture-filter-equivalent-of-a-given-display-filter-for-80211-frames-encapsulated-into-tzsp?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55287/capture-filter-equivalent-of-a-given-display-filter-for-80211-frames-encapsulated-into-tzsp?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tshark/"
+            class="tag-link-tshark"
+            title="see questions tagged'tshark'using tags"
+            rel="tag">tshark</a> <span class="tag-number">&#215;832</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 2, 2016, 5:42 a.m.">02 Sep '16, 05:42</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,062 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 6, 2016, 5:28 a.m.">06 Sep '16, 05:28</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/62/static-tshark-builds-for-linux-andor-solaris-sparcx64">static tshark builds for linux and/or solaris sparc/x64</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1670/tshark-hex-dump">tshark hex dump</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3479/could-the-file-name-parameter-in-tshark-be-chinese-characters">could the file name parameter in tshark be chinese characters?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5132/write-gzip-encoded-http-as-inflated-in-pcap-file">Write Gzip Encoded HTTP as Inflated in PCAP File</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6488/use-tshark-to-analyze-source-and-destination-ips-from-dumpfile">Use tshark to analyze source and destination IPs from dumpfile?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8324/difference-tshark-wireshark-when-load-a-pcap">Difference TShark / Wireshark when load a pcap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9303/how-to-retrieve-packet-information-using-wireshark-commands">how to retrieve packet information using wireshark commands</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10173/covert-the-pcap-file-to-a-csv-file-using-tshark">Covert the .pcap file to a .csv file using tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10605/tshark-commands-e-and-t">tshark commands -e and -T</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12348/how-to-calculate-the-total-network-traffic-pass-though-a-gigabit-nic-with-high-precision">How to calculate the total network traffic pass though a Gigabit NIC with high precision?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

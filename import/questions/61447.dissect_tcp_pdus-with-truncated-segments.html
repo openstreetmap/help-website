@@ -1,0 +1,799 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>dissect_tcp_pdus with truncated segments - Wireshark Q&amp;A</title>
+        <meta name="description" content="I created a lua script to dissect DoIP messages. The header is pretty simple: A version byte, a byte with the bitwise invert of the version, the payload type as two bytes and the payload length as 4 bytes.   function get_doip_length(tvb, pinfo, offset)  -- Callback function to decide how long a PDU ..." />
+        <meta name="keywords" content="tcp_dissect_pdus,lua,dissector,truncated" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/61447/dissect_tcp_pdus-with-truncated-segments" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/61447/dissect_tcp_pdus-with-truncated-segments?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='zGikkvqCRzQZKAxMli5CqdGvHADEb0fn' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/61447/dissect_tcp_pdus-with-truncated-segments">dissect_tcp_pdus with truncated segments</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-61447-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61447/up/" rel="nofollow"> </a>
+<div id="post-61447-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-61447-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61447/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/61447/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I created a lua script to dissect DoIP messages. The header is pretty simple: A version byte, a byte with the bitwise invert of the version, the payload type as two bytes and the payload length as 4 bytes.</p>
+
+
+<pre><code>function get_doip_length(tvb, pinfo, offset)
+    -- Callback function to decide how long a PDU is, so that
+    -- Wireshark can reassemble it for us
+    local version = tvb(offset, 1):uint()
+    local inverse_version = tvb(offset+1, 1):uint()
+
+    if version == 0x02 and inverse_version == 0xFD then
+        local payload_length = tvb(offset+4, 4):uint()
+        return payload_length + 8 -- Payload length + header size
+    else
+        return 8 -- Unknown protocol, assume only header is to be reassembled
+        -- According to <a href="https://www.wireshark.org/lists/wireshark-dev/201610/msg00057.html">https://www.wireshark.org/lists/wireshark-dev/201610/msg00057.html</a>
+    end
+end
+
+function doip.dissector(tvb, pinfo, tree)
+    dissect_tcp_pdus(tvb, tree, 8, get_doip_length, dissect_doip_pdu)
+end
+</code></pre>
+<p>This works well when the trace is complete. I have payloads of about 16K, which is 12 TCP frames. The 11 first TCP frames are marked <code>[TCP segment of a reassembled PDU]</code> and the last one contains the proper protocol name and all the data.</p>
+<p>However, I sometimes trace also on a small device using <code>tcpdump -s128</code>, because the throughtput is too low <em>(over UART...)</em> and it's better for me to not have the full payload but not drop packets.</p>
+<p>In this case, the dissector doesn't work as expected. The first frame of the PDU is marked as the reassembly, and the length is indeed 16K. But all the 11 remaining frames are not taken into account. Rather, <code>dissect_tcp_pdus</code> tries to match them to a new PDU. I would expect that <code>dissect_tcp_pdus</code> could at least reassemble all the segments, even if the data is not captured (Tvb has indeed a <code>:len()</code> and a <code>:reported_len()</code> functions).</p>
+<p>Is there someting I do wrong?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tcp_dissect_pdus/" class="post-tag tag-link-tcp_dissect_pdus"
+                                        title="see questions tagged 'tcp_dissect_pdus'" rel="tag">tcp_dissect_pdus</a>
+                                
+                                    <a href="/tags/lua/" class="post-tag tag-link-lua"
+                                        title="see questions tagged 'lua'" rel="tag">lua</a>
+                                
+                                    <a href="/tags/dissector/" class="post-tag tag-link-dissector"
+                                        title="see questions tagged 'dissector'" rel="tag">dissector</a>
+                                
+                                    <a href="/tags/truncated/" class="post-tag tag-link-truncated"
+                                        title="see questions tagged 'truncated'" rel="tag">truncated</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>16 May '17, 15:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d1a425c7654aa63519f4f45710e2f54c?s=32&amp;d=identicon&amp;r=g" alt="Cilyan's gravatar image" />
+    <p><a href="/users/31919/cilyan">Cilyan</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Cilyan has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-61447">
+    
+</div>
+<div id="comment-tools-61447" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61447-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/61447/dissect_tcp_pdus-with-truncated-segments?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/61447/dissect_tcp_pdus-with-truncated-segments?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/61447/dissect_tcp_pdus-with-truncated-segments?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/61447/dissect_tcp_pdus-with-truncated-segments?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="61449"></a>
+                    <div id="answer-container-61449" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61449-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61449/up/" rel="nofollow"> </a>
+<div id="post-61449-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-61449-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61449/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Cilyan has selected this answer as the correct answer"
+        href="/accept_answer/61449/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>Is there someting I do wrong?</p>
+</blockquote>
+<p>Yes.</p>
+<p>What you're doing wrong is assuming that <code>tcp_dissect_pdus()</code>, which is what the Lua <code>dissect_tcp_pdus</code> function uses, works with packets cut short with a snapshot length.  It doesn't.</p>
+<p>Wireshark reassembly does <em>not</em> reassemble partially-captured fragments, so, no, <code>dissect_tcp_pdus</code> can't, and won't, reassemble all the segments even if the data is not captured.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61449/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 May '17, 17:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61449/">
+                edited
+                <strong>16 May '17, 17:32</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61449">
+    
+        <a name="61454"></a>
+        <div class="comment" id="comment-61454">
+            <div id="post-61454-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, thanks. That's a bit sad, isn't it? :)</p></div>
+            <div class="comment-info" id="comment-61454-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 May '17, 00:33)</span>
+                <a class="comment-user userinfo" href="/users/31919/cilyan">Cilyan</a>
+                
+            </div>
+        </div>
+    
+        <a name="61473"></a>
+        <div class="comment" id="comment-61473">
+            <div id="post-61473-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes.  There are limits on how much reassembly etc. can be done in that case.  With TCP, you have packets for protocols running atop TCP beginning at arbitrary points in the packet, with either length fields or some other delimiting mechanism.  If, for example, you slice off the last part of a TCP segment that contains the beginning of a packet, and that's continued in the next TCP segment, it'd be impossible for the dissector to recognize the stuff in the next TCP segment as being a continuation of that packet, and to know when the next packet after that begins, unless it can search heuristically for the beginning of a packet.</p>
+
+<p>There's <em>some</em> more stuff Wireshark could do, but the general problem of handling packets on a TCP stream if packet slicing is done is insoluble.</p></div>
+            <div class="comment-info" id="comment-61473-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 May '17, 22:03)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61449" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61449-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/61447/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='zGikkvqCRzQZKAxMli5CqdGvHADEb0fn' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61447/dissect_tcp_pdus-with-truncated-segments?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61447/dissect_tcp_pdus-with-truncated-segments?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/dissector/"
+            class="tag-link-dissector"
+            title="see questions tagged'dissector'using tags"
+            rel="tag">dissector</a> <span class="tag-number">&#215;637</span><br/>
+        
+        <a href="/tags/lua/"
+            class="tag-link-lua"
+            title="see questions tagged'lua'using tags"
+            rel="tag">lua</a> <span class="tag-number">&#215;431</span><br/>
+        
+        <a href="/tags/truncated/"
+            class="tag-link-truncated"
+            title="see questions tagged'truncated'using tags"
+            rel="tag">truncated</a> <span class="tag-number">&#215;13</span><br/>
+        
+        <a href="/tags/tcp_dissect_pdus/"
+            class="tag-link-tcp_dissect_pdus"
+            title="see questions tagged'tcp_dissect_pdus'using tags"
+            rel="tag">tcp_dissect_pdus</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 16, 2017, 3:53 p.m.">16 May '17, 15:53</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,551 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 17, 2017, 10:03 p.m.">17 May '17, 22:03</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/54620/is-there-a-way-to-give-dynamic-names-to-protocol-attributes">Is there a way to give dynamic names to protocol attributes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8629/rtp-header-extension-in-lua">RTP Header extension in Lua</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23519/ipv6-dissecting-throws-lua-ft-not-yet-supported-error-why">IPv6 Dissecting throws Lua FT not yet supported error! Why?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32288/can-over-ethernet-lua-dissector">CAN-over-Ethernet LUA dissector</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34944/custom-lua-dissector-not-called-when-llc-dsap-0x44">custom lua dissector not called when llc dsap 0x44</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37986/protocol-analyzer-for-validating-custom-network-protocol">Protocol analyzer for validating custom network protocol</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39991/constructing-protocol-tree-in-a-lua-dissector-only-when-needed">Constructing protocol tree in a Lua dissector only when needed?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45287/get-value-of-the-field-in-every-protocol-in-frame">Get value of the field in every protocol in frame</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54672/is-there-any-way-to-optimize-lua-dissectors">Is there any way to optimize lua dissectors</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59326/custom-dissector-for-llc-payload-in-lua">Custom dissector for LLC Payload in Lua</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

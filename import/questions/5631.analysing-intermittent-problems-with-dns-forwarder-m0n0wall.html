@@ -1,0 +1,1041 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>analysing intermittent problems with DNS forwarder m0n0wall - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, i&#39;ve setup a &#39;private subnet&#39; in my home network. I have a &#39;server&#39; which has two nic&#39;s eth0 is connected to the ADSL modem/router and eth1 is connected to a switch connecting all pc&#39;s on the subnet. The server runs vmware server and runs 3 VM&#39;s:  - ubuntu bridged to eth0  - ubuntu bridged to et..." />
+        <meta name="keywords" content="firewall" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/5631/analysing-intermittent-problems-with-dns-forwarder-m0n0wall" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/5631/analysing-intermittent-problems-with-dns-forwarder-m0n0wall?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='sgAO5C0cpdXWHIFbe9xYt7sgTgMJdeVD' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/5631/analysing-intermittent-problems-with-dns-forwarder-m0n0wall">analysing intermittent problems with DNS forwarder m0n0wall</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-5631-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5631/up/" rel="nofollow"> </a>
+<div id="post-5631-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-5631-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5631/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/5631/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,
+i've setup a 'private subnet' in my home network. I have a 'server' which has two nic's eth0 is connected to the ADSL modem/router and eth1 is connected to a switch connecting all pc's on the subnet.</p>
+<p>The server runs vmware server and runs 3 VM's:
+ - ubuntu bridged to eth0
+ - ubuntu bridged to eth1
+ - m0n0wall which acts as the firewall/gateway/dhcp server for the subnet. the "WAN" interface is bridged to eth0 and the "LAN" interface to eth1</p>
+<p>At this stage only the dhcp server is enabled and dns forwarding so that machines on the subnet can access  the internet.</p>
+<p>The setup works DNS names are resolved and 'most' websites work fine. ping to various hosts returns the same values via the m0n0wall as directly through the modem/router gateway.</p>
+<p>However, some sites take ages to load, or don't load at all. But not always. www.bbc.co.uk is one example. </p>
+<p>I'm using wireshark to get to the bottom of the problem but so far i've only found that the times the request fails the server (bbc) sends an window-update as a response to the packet with the GET request. After that the client retransmits two more times and the server finally responds with 'bad tcp'.</p>
+<p>What i'm trying to find out is whether i've got a config problem in the m0n0wall or whether its more fundamental e.g packets getting mangled etc. </p>
+<p>any pointers would be appreciated.</p>
+<p>cheers,
+Michael</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/firewall/" class="post-tag tag-link-firewall"
+                                        title="see questions tagged 'firewall'" rel="tag">firewall</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Aug '11, 14:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c3cd54a3622322dbeef48d98008bbe06?s=32&amp;d=identicon&amp;r=g" alt="mmalaprop's gravatar image" />
+    <p><a href="/users/1443/mmalaprop">mmalaprop</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mmalaprop has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-5631">
+    
+</div>
+<div id="comment-tools-5631" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5631-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/5631/analysing-intermittent-problems-with-dns-forwarder-m0n0wall?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/5631/analysing-intermittent-problems-with-dns-forwarder-m0n0wall?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/5631/analysing-intermittent-problems-with-dns-forwarder-m0n0wall?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/5631/analysing-intermittent-problems-with-dns-forwarder-m0n0wall?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="5643"></a>
+                    <div id="answer-container-5643" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5643-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5643/up/" rel="nofollow"> </a>
+<div id="post-5643-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-5643-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5643/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="mmalaprop has selected this answer as the correct answer"
+        href="/accept_answer/5643/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If some sites work directly, but not over the m0n0wall firewall, then I would make traces on both sides of the m0n0wall and compare them. Look at the TCP options for things like:</p>
+<ul>
+<li>Window scale adjustments (or deletion)</li>
+<li>SACK option deletion</li>
+<li>Incorrect SACK translations</li>
+</ul>
+<p>What exactly do you mean with "the server responds with 'bad tcp'"? Is that an HTTP message? Or is it wireshark reporting a packet as bad tcp?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5643/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Aug '11, 00:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5643">
+    
+        <a name="5649"></a>
+        <div class="comment" id="comment-5649">
+            <div id="post-5649-score" class="comment-score"></div>
+            <div class="comment-text"><p>thanks for your response.</p>
+
+<p>"bad tcp" was what wireshark called the packet. the way i saw it was the server sent a window-update and that was marked by wireshark as a bad tcp and coloured red. also, the two subsequent retrnasmitts were marked red (bad tcp). the final packet was an RST - reset. i guess that was the end of the communication.</p>
+
+<p>the successfull transmitts also had some retransmits and window-update just a lot less.</p></div>
+            <div class="comment-info" id="comment-5649-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '11, 08:11)</span>
+                <a class="comment-user userinfo" href="/users/1443/mmalaprop">mmalaprop</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5643" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5643-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="5655"></a>
+                    <div id="answer-container-5655" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5655-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5655/up/" rel="nofollow"> </a>
+<div id="post-5655-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-5655-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5655/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I used tcpdump to monitor both physical interfaces. and imported  the results into wireshark. There i used "follow tcp stream".</p>
+<p>On the eth0 side there are more packets being sent, i was kind of expecting them to be one-to-one. I looked at the packets (not all ) and  they don't seem to be corrupted or have their options reset.</p>
+<p>eth1:</p>
+<pre><code>No.     Time        Source                Destination           Protocol Length Info
+      7 6.001700    192.168.2.2           212.58.244.66         TCP      78     dyna-lm &gt; http [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=2 TSval=0 TSecr=0 SACK_PERM=1
+      8 6.048679    212.58.244.66         192.168.2.2           TCP      66     http &gt; dyna-lm [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 SACK_PERM=1 WS=128
+      9 6.048698    212.58.244.66         192.168.2.2           TCP      66     http &gt; dyna-lm [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 SACK_PERM=1 WS=128
+     10 6.049136    192.168.2.2           212.58.244.66         TCP      60     dyna-lm &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=0
+     11 6.049460    192.168.2.2           212.58.244.66         TCP      1514   [TCP segment of a reassembled PDU]
+     12 6.049483    192.168.2.2           212.58.244.66         HTTP     70     GET / HTTP/1.1 
+     13 6.095471    212.58.244.66         192.168.2.2           TCP      66     [TCP Window Update] http &gt; dyna-lm [ACK] Seq=1 Ack=1 Win=5888 Len=0 SLE=1461 SRE=1477
+     14 6.095490    212.58.244.66         192.168.2.2           TCP      66     [TCP Dup ACK 13#1] http &gt; dyna-lm [ACK] Seq=1 Ack=1 Win=5888 Len=0 SLE=1461 SRE=1477
+     15 8.952247    192.168.2.2           212.58.244.66         TCP      1514   [TCP Retransmission] dyna-lm &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=1460
+     16 14.987273   192.168.2.2           212.58.244.66         TCP      1514   [TCP Retransmission] dyna-lm &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=1460
+     17 17.573181   212.58.244.66         192.168.2.2           TCP      66     http &gt; dyna-lm [FIN, ACK] Seq=1 Ack=1 Win=5888 Len=0 SLE=1461 SRE=1477
+     18 17.573203   212.58.244.66         192.168.2.2           TCP      66     http &gt; dyna-lm [FIN, ACK] Seq=1 Ack=1 Win=5888 Len=0 SLE=1461 SRE=1477
+     19 17.573729   192.168.2.2           212.58.244.66         TCP      60     dyna-lm &gt; http [ACK] Seq=1461 Ack=2 Win=128000 Len=0
+     20 17.573833   192.168.2.2           212.58.244.66         TCP      70     [TCP Retransmission] [TCP segment of a reassembled PDU]
+     21 17.619934   212.58.244.66         192.168.2.2           TCP      60     http &gt; dyna-lm [RST] Seq=2 Win=0 Len=0
+     22 17.619952   212.58.244.66         192.168.2.2           TCP      60     http &gt; dyna-lm [RST] Seq=2 Win=0 Len=0
+</code></pre>
+<p>eth0:</p>
+<pre><code>No.     Time        Source                Destination           Protocol Length Info
+     19 2.887053    192.168.1.95          212.58.244.66         TCP      78     11277 &gt; http [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=2 TSval=0 TSecr=0 SACK_PERM=1
+     20 2.887073    192.168.1.95          212.58.244.66         TCP      78     11277 &gt; http [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=2 TSval=0 TSecr=0 SACK_PERM=1
+     21 2.933395    212.58.244.66         192.168.1.95          TCP      66     http &gt; 11277 [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 SACK_PERM=1 WS=128
+     22 2.934360    192.168.1.95          212.58.244.66         TCP      60     11277 &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=0
+     23 2.934376    192.168.1.95          212.58.244.66         TCP      60     [TCP Dup ACK 22#1] 11277 &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=0
+     24 2.934717    192.168.1.95          212.58.244.66         TCP      1514   [TCP segment of a reassembled PDU]
+     25 2.934731    192.168.1.95          212.58.244.66         TCP      1514   [TCP Retransmission] 11277 &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=1460
+     26 2.934798    192.168.1.95          212.58.244.66         HTTP     70     GET / HTTP/1.1 
+     27 2.934805    192.168.1.95          212.58.244.66         TCP      70     [TCP Retransmission] [TCP segment of a reassembled PDU]
+     28 2.935617    192.168.1.1           192.168.1.95          ICMP     590    Destination unreachable (Fragmentation needed)
+     29 2.980166    212.58.244.66         192.168.1.95          TCP      66     [TCP Window Update] http &gt; 11277 [ACK] Seq=1 Ack=1 Win=5888 Len=0 SLE=1461 SRE=1477
+     48 5.837664    192.168.1.95          212.58.244.66         TCP      1514   [TCP Retransmission] 11277 &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=1460
+     49 5.837685    192.168.1.95          212.58.244.66         TCP      1514   [TCP Retransmission] 11277 &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=1460
+     50 5.838493    192.168.1.1           192.168.1.95          ICMP     590    Destination unreachable (Fragmentation needed)
+     87 11.872608   192.168.1.95          212.58.244.66         TCP      1514   [TCP Retransmission] 11277 &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=1460
+     88 11.872630   192.168.1.95          212.58.244.66         TCP      1514   [TCP Retransmission] 11277 &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=1460
+     89 11.873432   192.168.1.1           192.168.1.95          ICMP     590    Destination unreachable (Fragmentation needed)
+    108 14.457945   212.58.244.66         192.168.1.95          TCP      66     http &gt; 11277 [FIN, ACK] Seq=1 Ack=1 Win=5888 Len=0 SLE=1461 SRE=1477
+    109 14.459048   192.168.1.95          212.58.244.66         TCP      60     11277 &gt; http [ACK] Seq=1461 Ack=2 Win=128000 Len=0
+    110 14.459062   192.168.1.95          212.58.244.66         TCP      60     11277 &gt; http [ACK] Seq=1461 Ack=2 Win=128000 Len=0
+    111 14.459128   192.168.1.95          212.58.244.66         TCP      70     [TCP Retransmission] [TCP segment of a reassembled PDU]
+    112 14.459139   192.168.1.95          212.58.244.66         TCP      70     [TCP Out-Of-Order] [TCP segment of a reassembled PDU]
+    113 14.504728   212.58.244.66         192.168.1.95          TCP      60     http &gt; 11277 [RST] Seq=2 Win=0 Len=0
+</code></pre>
+<p>thanks,
+michael</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5655/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Aug '11, 12:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c3cd54a3622322dbeef48d98008bbe06?s=32&amp;d=identicon&amp;r=g" alt="mmalaprop's gravatar image" />
+    <p><a href="/users/1443/mmalaprop">mmalaprop</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mmalaprop has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5655">
+    
+        <a name="5657"></a>
+        <div class="comment" id="comment-5657">
+            <div id="post-5657-score" class="comment-score">3</div>
+            <div class="comment-text"><p>Ah... these traces explain things. Your ADSL modem/router (192.168.1.1) it telling your client (192.168.1.95 after nat, 192.168.2.2 before nat) that it needs to fragment the IP datagram to forward it (see frames 28, 50, 89). However the m0n0wall does not seem to forward these ICMP packets. So your client does not learn that it needs to send smaller packets.</p>
+
+<p>You can solve this by looking at the ICMP packet in frame 28 and extract the MTU of the next hop. You can then change the MTU size on both sides of the m0n0wall FW accordingly.</p></div>
+            <div class="comment-info" id="comment-5657-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '11, 12:29)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="5658"></a>
+        <div class="comment" id="comment-5658">
+            <div id="post-5658-score" class="comment-score"></div>
+            <div class="comment-text"><p>That did it! thanks.
+Just so this is clear in my head...
+the client (192.168.1.95) sent a packet (frame 24 say, 1514 bytes). this had the DF flag set and the router dropped that packet and sent a 'this is to big for me to forward - please fragment'. </p>
+
+<p>what i don't quite understand:</p>
+
+<ol>
+<li>why wasn't the monowall passing the ICMP packet back as its only 590bytes. . . i only changed the mtu on the client winXP side to match the router...</li>
+<li>why was a 1514 size packet generated the default on windows is 1500</li>
+</ol></div>
+            <div class="comment-info" id="comment-5658-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '11, 15:51)</span>
+                <a class="comment-user userinfo" href="/users/1443/mmalaprop">mmalaprop</a>
+                
+            </div>
+        </div>
+    
+        <a name="5669"></a>
+        <div class="comment" id="comment-5669">
+            <div id="post-5669-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Actually, to be precies, the meaning of the ICMP paket is:</p>
+
+<p>"You want me to forward a IP packet without fragmenting, however, it is too big for the link towards the next hop. I can only send IP datagrams of size XXX, so I dropped the packet"</p>
+
+<p>Then it's up to the sending host to determine what to do. In TCP, the sending host will just start to use smaller segments so that they will fit.</p></div>
+            <div class="comment-info" id="comment-5669-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '11, 23:23)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="5670"></a>
+        <div class="comment" id="comment-5670">
+            <div id="post-5670-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I would have expected the m0n0wall to forward the ICMP messages, so you might want to report this as a bug (or feature request, depending how you look at it).</p>
+
+<p>A 1500 byte MTU means that a 1500 byte datagram can be transported over the link, which on ethernet means there will be a 6 byte destination, a 6 byte source and a 2 byte ethertype prepended and a 4 byte FCS appended to the datagram. In total 1518 (although you usually see 1514 in Wireshark because the FCS is already stripped before Wireshark gets to see the packet).</p></div>
+            <div class="comment-info" id="comment-5670-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '11, 23:25)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="5679"></a>
+        <div class="comment" id="comment-5679">
+            <div id="post-5679-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think m0n0wall drops all incoming communications, including ICMP (which is sort of belonging to the TCP session but has no entry in its firewall state table since it's a new communication flow). I would advise to configure m0n0wall to drop all ICMP packets except "fragmentation needed" (if that's possible).</p></div>
+            <div class="comment-info" id="comment-5679-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Aug '11, 05:59)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="5680"></a>
+        <div class="comment not_top_scorer" id="comment-5680">
+            <div id="post-5680-score" class="comment-score"></div>
+            <div class="comment-text"><p>@Jasper, just letting the "ICMP fragmentation needed" packets through is not enough, these packets need to be properly natted (at the IP layer as well as at the IP layer inside the ICMP payload).</p>
+
+<p>m0n0wall needs to bind these ICMP packets to the outgoing TCP flow to be able to do so. I have seen this being a problem with loadbalancers in the past as well.</p></div>
+            <div class="comment-info" id="comment-5680-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Aug '11, 06:28)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="5701"></a>
+        <div class="comment not_top_scorer" id="comment-5701">
+            <div id="post-5701-score" class="comment-score"></div>
+            <div class="comment-text"><p>the m0n0wall comes with a setting 'block private networks' on its WAN interface. i did disable that earlier and assumed it would include ICMP packet. it didn't. i allowed ICMP traffic to pass through but still the 'fragmentation needed' packets didn't pass. i'll see if the m0n0wall folks know anything more.</p></div>
+            <div class="comment-info" id="comment-5701-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Aug '11, 14:49)</span>
+                <a class="comment-user userinfo" href="/users/1443/mmalaprop">mmalaprop</a>
+                
+            </div>
+        </div>
+    
+        <a name="5702"></a>
+        <div class="comment not_top_scorer" id="comment-5702">
+            <div id="post-5702-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just one more thing on this issue:-) the IP 192.168.1.95 is that of the m0n0wall, which must NAT that to 192.168.2.2 (the client is in the subnet). But that makes sense right? the m0n0wall is acting as a gateway from the .1.0 network to the .2.0 network.</p></div>
+            <div class="comment-info" id="comment-5702-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '11, 11:54)</span>
+                <a class="comment-user userinfo" href="/users/1443/mmalaprop">mmalaprop</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5655" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5655-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/5631/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='sgAO5C0cpdXWHIFbe9xYt7sgTgMJdeVD' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5631/analysing-intermittent-problems-with-dns-forwarder-m0n0wall?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5631/analysing-intermittent-problems-with-dns-forwarder-m0n0wall?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/firewall/"
+            class="tag-link-firewall"
+            title="see questions tagged'firewall'using tags"
+            rel="tag">firewall</a> <span class="tag-number">&#215;23</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 10, 2011, 2:13 p.m.">10 Aug '11, 14:13</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,630 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 14, 2011, 11:54 a.m.">14 Aug '11, 11:54</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3277/http-post-command-not-received-and-mss-value-changed-in-transit">HTTP POST command not received and MSS value changed in transit</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51711/not-able-to-see-firewall-acl-rules-option-in-tools-menu-in-wireshark-202">[closed] Not able to see &quot;firewall ACL Rules&quot; option in tools menu in wireshark 2.0.2 ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3538/firewall-implementation">FireWall Implementation.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52319/help-with-blocking-filmora">Help With Blocking Filmora</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4997/remote-packet-capture-through-a-firewall">Remote packet capture through a firewall</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52841/where-have-you-gone-firewall-acl-rules">[closed] Where have you gone, Firewall ACL Rules?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6711/udp-multicast-windows-7-firewall-labview">UDP multicast, Windows 7 firewall, Labview</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51701/firewall-acl-rules-missing-from-tools-menu">Firewall ACL Rules missing from Tools menu</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10792/wireshark-hijacked">Wireshark hijacked?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57735/how-to-capture-and-decodedecrypt-packets-sent-between-other-laptop-and-firewall">How to capture and decode/decrypt packets sent between other laptop and firewall ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

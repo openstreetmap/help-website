@@ -1,0 +1,1013 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Changing the link-layer type of input frames - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, I am writing a dissector plugin for Wireshark, which decapsulates an Ethernet frame with an additional tag between src address and type/length field (like 802.1q). I understood about the wtap_encap dissector table. By default (as far as I know) Wireshark reads the link-layer type from the interf..." />
+        <meta name="keywords" content="text2pcap,dlt_user" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/22758/changing-the-link-layer-type-of-input-frames" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/22758/changing-the-link-layer-type-of-input-frames?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='FrrDscaLNilBA9beQT2UwqLkojmCO5F0' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/22758/changing-the-link-layer-type-of-input-frames">Changing the link-layer type of input frames</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-22758-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22758/up/" rel="nofollow"> </a>
+<div id="post-22758-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-22758-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22758/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/22758/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I am writing a dissector plugin for Wireshark, which decapsulates an Ethernet frame with an additional tag between src address and type/length field (like 802.1q). I understood about the wtap_encap dissector table. By default (as far as I know) Wireshark reads the link-layer type from the interface (which is usually 1 =&gt; Ethernet) and that's the first dissector that it uses. My target is to change the link-layer input type of wireshark to 147 (DLT_USER0) so that my dissector can be the entry point of the process of decapsulation. How can I do that ? 
+I tried to make a crazy pipe  <br>
+</p>
+<p><i> tcpdump -l -nvvvXXes0 | od -Ax -tx1 -v - | text2pcap -l 147 - - | wireshark -k -i - </i></p>
+<p>The goal of the upper command is to capture (live) packets with tcpdump then use od to hexdump them in the appropriate format for text2pcap which then changes the link-layer type to 147 and pipes that to wireshark. The problem is that text2pcap, for some reason, merges the packets and outputs them to wireshark as 64000 byte packets. </p>
+<p>Is there any other way of making a live wireshark capture while changing the link-layer type to 147 ?    <br>
+And what's the problem of text2pcap ? Maybe I'm not using the appropriate options to tcpdump and it doesn't like the input format ...</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/text2pcap/" class="post-tag tag-link-text2pcap"
+                                        title="see questions tagged 'text2pcap'" rel="tag">text2pcap</a>
+                                
+                                    <a href="/tags/dlt_user/" class="post-tag tag-link-dlt_user"
+                                        title="see questions tagged 'dlt_user'" rel="tag">dlt_user</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Jul '13, 06:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/af14bf0d1eefdb1659cb46b96be7f639?s=32&amp;d=identicon&amp;r=g" alt="dvlahovski's gravatar image" />
+    <p><a href="/users/5258/dvlahovski">dvlahovski</a><br/>
+    <span class="score" title="5 reputation points">5</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dvlahovski has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-22758">
+    
+</div>
+<div id="comment-tools-22758" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22758-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/22758/changing-the-link-layer-type-of-input-frames?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/22758/changing-the-link-layer-type-of-input-frames?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/22758/changing-the-link-layer-type-of-input-frames?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/22758/changing-the-link-layer-type-of-input-frames?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="22794"></a>
+                    <div id="answer-container-22794" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-22794-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22794/up/" rel="nofollow"> </a>
+<div id="post-22794-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-22794-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22794/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="dvlahovski has selected this answer as the correct answer"
+        href="/accept_answer/22794/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are several problems with your command chain.</p>
+<p>1.) tcpdump output to od</p>
+<p>This is what tcpdump writes on my system, if I run it with your parameters (tcpdump -l -nvvvXXes0).</p>
+<pre>01:14:07.649043 00:0c:29:f6:9e:14 &gt; 00:50:56:e0:14:49, ethertype IPv4 (0x0800), length 95: (tos 0x0, ttl 64, id 9872, offset 0, flags [DF], proto TCP (6), length 81)
+    192.168.158.128.50199 &gt; 1.2.3.4.443: Flags [P.], cksum 0x6667 (correct), seq 1547098647:1547098688, ack 492193187, win 64197, length 41
+    0x0000:  0050 56e0 1449 000c 29f6 9e14 0800 4500  .PV..I..).....E.
+    0x0010:  0051 2690 4000 4006 53e8 c0a8 9e80 5043  .Q&amp;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e9c7a9c7">[email&#160;protected]</a>@.S.....PC
+    0x0020:  10c3 c417 01bb 5c36 da17 1d56 45a3 5018  ......\6...VE.P.
+    0x0030:  fac5 6667 0000 1703 0100 24a0 d25c bdcb  ..fg......$..\..
+    0x0040:  9f8e 7ffd 2892 68a8 9fee d381 8d85 ee0e  ....(.h.........
+    0x0050:  2f42 8e1a 4942 d8c7 e65b 07f0 0be2 e9    /B..IB...[.....
+</pre>
+
+<p>Converting that output with od to hex and then piping it to text2pcap does not work, as you will
+pipe the hex representation of the ASCII output of tcpdump to text2pcap. This will give totally random results.</p>
+<p>2.) Output of tcpdump </p>
+<p>The output of tcpdump is (unfortunately) <strong>not</strong> in a format that text2pcap understands
+(see man page of text2pcap) </p>
+<pre>Text2pcap understands a hexdump of the form generated by od -Ax -tx1 -v. <b>In other words, each byte is individually displayed and surrounded with a space. Each line begins with an offset describing the position in the file. The offset is a hex number (can also be octal or decimal - see -o), of more than two hex digits</b>. Here is a sample dump that text2pcap can recognize:
+</pre>
+
+<p>Output of tcpdump:</p>
+<pre><b>01:14:07.649043</b> 00:0c:29:f6:9e:14 &gt; 00:50:56:e0:14:49, ethertype IPv4 (0x0800), length 95: (tos 0x0, ttl 64, id 9872, offset 0, flags [DF], proto TCP (6), length 81)
+    192.168.158.128.50199 &gt; 1.2.3.4.443: Flags [P.], cksum 0x6667 (correct), seq 1547098647:1547098688, ack 492193187, win 64197, length 41
+    <b>0x0000:  0050 56e0 1449 000c 29f6 9e14 0800 4500</b>  .PV..I..).....E.
+    <b>0x0010:  0051 2690 4000 4006 53e8 c0a8 9e80 5043</b>  .Q&amp;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f9d7b9d7">[email&#160;protected]</a>@.S.....PC
+</pre>
+
+<p>This is what text2pcap needs:</p>
+<pre>01:14:07.649043
+0000  00 50 56 e0 14 49 00 0c 29 f6 9e 14 08 00 45 00
+0010  00 51 26 90 40 00 40 06 53 e8 c0 a8 9e 80 50 43
+</pre>
+
+<p>So, you need to reformat the tcpdump output. Here is a small perl script that will reformat the text.</p>
+<pre><code>#!/usr/bin/perl
+
+$| = 1;
+
+my $regexp_time = '(\d\d:\d\d:\d\d\.\d+ )';
+my $regexp_hex = '(0x\d+:\s+)([0-9a-f ]+)+  ';
+
+while (&lt;STDIN&gt;) {
+
+   my $input = $_;
+
+   if ($input =~ /^$regexp_time/) {
+      print "$1\n";
+   }
+
+   if ($input =~ /$regexp_hex/) {
+      my $counter = $1;
+      my $line = $2;
+
+      $line =~ s/ //g;
+      $counter =~ s/(0x|:)//g;
+
+      print $counter . join(' ', ( $line =~ m/../g )) . "\n";
+   }
+}
+</code></pre>
+<p>Then run your command like this:</p>
+<blockquote>
+<p>tcpdump -l -nvvvXXes0 | perl convert.pl | text2pcap -l 147 - - | wireshark -k -i - </p>
+</blockquote>
+<p>Please report back, if it works. I was not able to test it yet.</p>
+<p><strong>UPDATE</strong>:</p>
+<p>Basically it (the script) works, but without a dissector for the link-layer type 147, the data makes no sense to wireshark.</p>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/22794/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Jul '13, 03:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/22794/">
+                edited
+                <strong>11 Jul '13, 01:02</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-22794">
+    
+        <a name="23106"></a>
+        <div class="comment" id="comment-23106">
+            <div id="post-23106-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi, <br> Thank you very much for the help ! <br> The script really perfectly does the job. But for the first N packets. I mean that, when I run the command chain, the first time, I got 17 proper packets  (with total length of ~2100 bytes) and then it started to print only 16 byte packets. After that, I ran it a second time and then got 64 proper packets (with total size of ~4400 bytes) and then started to output only 16 byte packets again. And it happens every time - from a given point on(undefined, I think, because the byte offset after it happens is different every time) it prints only 16 byte packets. When I changed the link-layer type to 1, to see what's happening, I saw that it was dissecting the proper packets without a problem. The 16 byte packets ethertype was recognized, but they were (obviously) stated as malformed. Do you have any idea why does this problem occur ?</p>
+
+<p>Best regards and many thanks, <br>
+D. Vlahovski</p></div>
+            <div class="comment-info" id="comment-23106-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '13, 06:54)</span>
+                <a class="comment-user userinfo" href="/users/5258/dvlahovski">dvlahovski</a>
+                
+            </div>
+        </div>
+    
+        <a name="23140"></a>
+        <div class="comment" id="comment-23140">
+            <div id="post-23140-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I had the same issue with text2pcap 1.6.9 (Ubuntu). After I upgraded to 1.10.0 the problem was gone.</p></div>
+            <div class="comment-info" id="comment-23140-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 01:47)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-22794" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22794-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="22791"></a>
+                    <div id="answer-container-22791" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-22791-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/22791/up/" rel="nofollow"> </a>
+<div id="post-22791-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-22791-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/22791/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I think the problem is that your hex stream after the od command is just one continuous block of hex data, so text2pcap probably cuts it into the larges slices it can. Have you tried the -m parameter of text2pcak that limits the maximum packet size? I haven't tested if it help, but you might want to check it out. Unfortunately that will probably result in packets of the same size, and not what they originally where, so I guess it will not help that much either.</p>
+<p>You could also try to get better results by capturing with dumpcap or tshark to get the frame delimiter right, but once again I haven't tried that myself. All in all you're trying some sort of Frankenstein capture maneuver and I'm not sure if it can work at all :-)</p>
+<p>Maybe changing the link-layer type in the file after capture is complete may be an option?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/22791/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Jul '13, 02:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-22791">
+    
+</div>
+<div id="comment-tools-22791" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-22791-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="23108"></a>
+                    <div id="answer-container-23108" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23108-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23108/up/" rel="nofollow"> </a>
+<div id="post-23108-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-23108-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23108/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>My target is to change the link-layer input type of wireshark to 147 (DLT_USER0) so that my dissector can be the entry point of the process of decapsulation. How can I do that ?</p>
+</blockquote>
+<p>Try</p>
+<pre><code>editcap -T user0 -F libpcap {input file} {output file}
+</code></pre>
+<p>to read a pcap file {input file} and write out the exact same packet data to a pcap file {output file}, but with a different link-layer header type in the file header.</p>
+<p>That <em>might</em> also work for pcap-ng files (if you're reading a pcap-ng file, you can leave out the <code>-F libpcap</code>).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23108/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Jul '13, 12:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23108">
+    
+</div>
+<div id="comment-tools-23108" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23108-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/22758/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='FrrDscaLNilBA9beQT2UwqLkojmCO5F0' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/22758/changing-the-link-layer-type-of-input-frames?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/22758/changing-the-link-layer-type-of-input-frames?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/text2pcap/"
+            class="tag-link-text2pcap"
+            title="see questions tagged'text2pcap'using tags"
+            rel="tag">text2pcap</a> <span class="tag-number">&#215;19</span><br/>
+        
+        <a href="/tags/dlt_user/"
+            class="tag-link-dlt_user"
+            title="see questions tagged'dlt_user'using tags"
+            rel="tag">dlt_user</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 9, 2013, 6:50 a.m.">09 Jul '13, 06:50</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,673 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 19, 2013, 1:47 a.m.">19 Jul '13, 01:47</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/20680/one-file-multiple-dlt-user-packets-is-it-possible">One file. Multiple DLT USER packets. Is it possible?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1392/prism-ultralite-trace-to-wireshark">prism ultralite trace to wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59581/text2pcap-is-not-converting-diameter-trace">text2pcap is not converting diameter trace</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7297/mistakenly-exported-to-text-file">Mistakenly exported to text file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/63591/tool-for-converting-tcpdump-text-output-to-pcap-or-extract-data-from-it">Tool for converting TcpDump text output to pcap or extract data from it.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10000/how-to-get-the-txt-file-back-to-wireshark">How to get the .txt file back to wireshark?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3083/set-dlt_user-in-dissector-registration">Set DLT_USER in dissector registration</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11878/protocol-text-file-to-pcap">protocol text file to pcap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28308/is-there-a-more-complete-example-about-how-to-add-a-new-capture-type-to-libpcap">Is there a more complete example about how to add a new capture type to libpcap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12302/text2pcap-issue">text2pcap issue</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TCP Retransmission - Server sends wrong SeqNo? - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi I had to analyze network packets because of an application that crashed quite a lot. So I stumbled upon TCP retransmissions, and did a simple setup to start &#39;troubleshooting&#39;. I connected two Laptops running SystemRescueLinux two the same switch (Gigabit Switch, Cat6 cables) and opened an SSH con..." />
+        <meta name="keywords" content="tcp,tcp-retransmit" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/47542/tcp-retransmission-server-sends-wrong-seqno" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/47542/tcp-retransmission-server-sends-wrong-seqno?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='UsCb0J1TzZWJePmf3Mx7DDUuVtqT167n' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/47542/tcp-retransmission-server-sends-wrong-seqno">TCP Retransmission - Server sends wrong SeqNo?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-47542-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47542/up/" rel="nofollow"> </a>
+<div id="post-47542-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-47542-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47542/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/47542/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi</p>
+<p>I had to analyze network packets because of an application that crashed quite a lot. So I stumbled upon TCP retransmissions, and did a simple setup to start 'troubleshooting'.
+I connected two Laptops running SystemRescueLinux two the same switch (Gigabit Switch, Cat6 cables) and opened an SSH connection from one machine to the other, running 'tcpdump -i &lt;netif&gt; -s65535 -w file.pcap' on both client and server.</p>
+<p>I was analyzing the packets just before the TCP retransmission happens in both the PCAPs, and if I did not make any mistake, the server sends an invalid Sequencenumber causing the retransmission...</p>
+<p>ClientIP: 10.41.1.87
+ServerIP: 10.41.1.88</p>
+<p>Client side looks like:
+<img alt="alt text" src="http://ianfe.dyndns.org/Client.png"></p>
+<p>Server side looks like:
+<img alt="alt text" src="http://ianfe.dyndns.org/Server.png"></p>
+<p>Client-Side starting with packet no 1890:<br>
+2018416+5792 --&gt; 2024208 --&gt; Correct!<br>
+2024208+7240 --&gt; 2031448 --&gt; Correct!<br>
+2031448+4836 --&gt; 2036284 --&gt; WTF? Got 2035792?<br>
+<br>
+Server-Side starting with packet no 1878:<br>
+1989456+24616 --&gt; 2014072 --&gt; Correct!<br>
+2014072+22212 --&gt; 2036284 --&gt; Seems to match what I calculated on client side, but not what the server actually sent?<br></p>
+<p>So,...I'm at a loss here. Is this the network driver? The NIC? The...I don't know? Did I miss something? I suppose it's definitely not the switch in between, at least that's what I'm trying to find out,...but what is it then?</p>
+<p>Kind regards</p>
+<p>EDIT</p>
+<p>Ok, as requested, here's the PCAP of the TCP stream:<br>
+Server: <a href="http://ianfe.dyndns.org/server_tcp.pcap">Server PCAP</a><br>
+Client: <a href="http://ianfe.dyndns.org/client_tcp.pcap">Client PCAP</a><br></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tcp/" class="post-tag tag-link-tcp"
+                                        title="see questions tagged 'tcp'" rel="tag">tcp</a>
+                                
+                                    <a href="/tags/tcp-retransmit/" class="post-tag tag-link-tcp-retransmit"
+                                        title="see questions tagged 'tcp-retransmit'" rel="tag">tcp-retransmit</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Nov '15, 04:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/001a62488d7db5d6571ad5771ae03d52?s=32&amp;d=identicon&amp;r=g" alt="esc4rg0t's gravatar image" />
+    <p><a href="/users/20954/esc4rg0t">esc4rg0t</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="esc4rg0t has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/47542/">
+                edited
+                <strong>13 Nov '15, 00:02</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-47542">
+    
+        <a name="47543"></a>
+        <div class="comment" id="comment-47543">
+            <div id="post-47543-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi,<br>
+as the captures are encrypted and coming from a lab test, would you mind placing them somewhere to the cloud and posting links to them here to allow more comfortable analysis?<br>
+BR, Pavel</p></div>
+            <div class="comment-info" id="comment-47543-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Nov '15, 08:02)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="47546"></a>
+        <div class="comment" id="comment-47546">
+            <div id="post-47546-score" class="comment-score"></div>
+            <div class="comment-text"><p>Or, if paranoid, run them through a sanitization task with TraceWrangler, and tell it to cut payloads after layer 4 :)</p></div>
+            <div class="comment-info" id="comment-47546-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Nov '15, 09:11)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47542" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47542-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/47542/tcp-retransmission-server-sends-wrong-seqno?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/47542/tcp-retransmission-server-sends-wrong-seqno?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/47542/tcp-retransmission-server-sends-wrong-seqno?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/47542/tcp-retransmission-server-sends-wrong-seqno?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="47573"></a>
+                    <div id="answer-container-47573" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47573-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47573/up/" rel="nofollow"> </a>
+<div id="post-47573-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-47573-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47573/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I don't think the packet size or offloading is the cause, at least not the direct one.</p>
+<p>The packet with <code>ip.id == 0x8a75</code> has 24682 octets including all headers (24616 tcp payload) when sent by server, but only 4410 (4344) when received by client, and another 3 directly following packets (with different ip ids) carry the rest of its tcp payload, but all four of them are acknowledged by a single ACK seen in the captures from both ends.</p>
+<p>The same situation repeats for the immediately following "jumbo packet" with <code>ip.id == 0x8a86</code>, except that this time the client does not send any ACK, and so the retransmission takes place in about 10 ms.</p>
+<p><strong>But</strong> there is a significant difference between these two "jumbo packets": the second one, which causes the retransmission, carries the PSH (push) flag in it, which is logically only available in the last packet of the series.</p>
+<p>So I would vote for some issue in buffer handling (or the ssh client maybe?): when the receiving side (client) gets the Push command, it should send the buffer contents to the application immediately, and in some cases something goes wrong and it takes too long so the stack cannot send the backward packet with ACK on time.</p>
+<p>A similar situation can be seen with frames 1651, 1652 at client side and 1742, 1743  at server side, and at least one more time (use display filter <code>tcp.analysis.retransmission</code>). Or, in yet another words, in these captures, no packet without the PSH flag needed to be retransmitted.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47573/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Nov '15, 06:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47573">
+    
+        <a name="47716"></a>
+        <div class="comment" id="comment-47716">
+            <div id="post-47716-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can u tell how to send last packet without push flag ???</p>
+
+<p>what is the best solution ????</p></div>
+            <div class="comment-info" id="comment-47716-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Nov '15, 06:49)</span>
+                <a class="comment-user userinfo" href="/users/16136/srinu_bel">srinu_bel</a>
+                
+            </div>
+        </div>
+    
+        <a name="47717"></a>
+        <div class="comment" id="comment-47717">
+            <div id="post-47717-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not the right place to ask, I'd ask that at <a href="http://stackoverflow.com/questions">Stackoverflow programmers' Q&amp;A</a>, because it is an application and/or driver related question, not wireshark or network traffic <em>analysis</em> one.</p></div>
+            <div class="comment-info" id="comment-47717-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Nov '15, 06:55)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="47720"></a>
+        <div class="comment" id="comment-47720">
+            <div id="post-47720-score" class="comment-score"></div>
+            <div class="comment-text"><p>e-mail id please ???</p></div>
+            <div class="comment-info" id="comment-47720-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Nov '15, 07:06)</span>
+                <a class="comment-user userinfo" href="/users/16136/srinu_bel">srinu_bel</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47573" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47573-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="47561"></a>
+                    <div id="answer-container-47561" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47561-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47561/up/" rel="nofollow"> </a>
+<div id="post-47561-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-47561-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47561/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Can u limit packet size to 1448 Bytes in place of 24616 / 22212</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47561/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Nov '15, 02:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ce1843f92a1c18db26bc79b3afa9bd50?s=32&amp;d=identicon&amp;r=g" alt="srinu_bel's gravatar image" />
+    <p><a href="/users/16136/srinu_bel">srinu_bel</a><br/>
+    <span class="score" title="20 reputation points">20</span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="20 badges"><span class="bronze">&#9679;</span><span class="badgecount">20</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="srinu_bel has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47561">
+    
+        <a name="47562"></a>
+        <div class="comment" id="comment-47562">
+            <div id="post-47562-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ahm...what exactly do you mean by that? Do I have to make a new trace, or...? As I put the pcap files for download now (see first post)...</p></div>
+            <div class="comment-info" id="comment-47562-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Nov '15, 02:32)</span>
+                <a class="comment-user userinfo" href="/users/20954/esc4rg0t">esc4rg0t</a>
+                
+            </div>
+        </div>
+    
+        <a name="47563"></a>
+        <div class="comment" id="comment-47563">
+            <div id="post-47563-score" class="comment-score"></div>
+            <div class="comment-text"><p>Application server is sending very big TCP segments, Is it possible to limit the size of TCP segment to 1448 insted of  24616 / 22212 ???</p></div>
+            <div class="comment-info" id="comment-47563-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Nov '15, 02:36)</span>
+                <a class="comment-user userinfo" href="/users/16136/srinu_bel">srinu_bel</a>
+                
+            </div>
+        </div>
+    
+        <a name="47564"></a>
+        <div class="comment" id="comment-47564">
+            <div id="post-47564-score" class="comment-score"></div>
+            <div class="comment-text"><p>Application server is sending very big TCP segments, Is it possible to limit the size of TCP segment to 1448 insted of 24616 / 22212 ??? </p>
+
+<p>from your application and then take fresh capture</p></div>
+            <div class="comment-info" id="comment-47564-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Nov '15, 02:39)</span>
+                <a class="comment-user userinfo" href="/users/16136/srinu_bel">srinu_bel</a>
+                
+            </div>
+        </div>
+    
+        <a name="47565"></a>
+        <div class="comment" id="comment-47565">
+            <div id="post-47565-score" class="comment-score"></div>
+            <div class="comment-text"><p>I will have to check that, as I just default booted into a Linux live image (SysRescueCD)...</p></div>
+            <div class="comment-info" id="comment-47565-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Nov '15, 02:44)</span>
+                <a class="comment-user userinfo" href="/users/20954/esc4rg0t">esc4rg0t</a>
+                
+            </div>
+        </div>
+    
+        <a name="47566"></a>
+        <div class="comment" id="comment-47566">
+            <div id="post-47566-score" class="comment-score"></div>
+            <div class="comment-text"><p>Don't know if it is a good idea to disable TCP offloading at that moment. Seems to that it is main part of the question maybe with SACK or DSACK. More precise answer could be achieved with sharing us a capture. Like Pavel and Jasper have mentioned earlier.</p></div>
+            <div class="comment-info" id="comment-47566-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Nov '15, 02:53)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="47567"></a>
+        <div class="comment not_top_scorer" id="comment-47567">
+            <div id="post-47567-score" class="comment-score"></div>
+            <div class="comment-text"><p>Please see original post, I already shared the captures.
+Or here again:
+<a href="http://ianfe.dyndns.org/server_tcp.pcap">http://ianfe.dyndns.org/server_tcp.pcap</a>
+<a href="http://ianfe.dyndns.org/client_tcp.pcap">http://ianfe.dyndns.org/client_tcp.pcap</a></p>
+
+<p>Right, I guess that offloading is active, so the NIC segments everything. I could use a tap, but would need to buy one first ;-)</p></div>
+            <div class="comment-info" id="comment-47567-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Nov '15, 02:55)</span>
+                <a class="comment-user userinfo" href="/users/20954/esc4rg0t">esc4rg0t</a>
+                
+            </div>
+        </div>
+    
+        <a name="47570"></a>
+        <div class="comment not_top_scorer" id="comment-47570">
+            <div id="post-47570-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you want to use the tap only to confirm that the server's NIC segments the packets autonomously, maybe it would be enough to disable tcp offloading only at the receiving machine?<br>
+That way, you should see the packets as they look on wire, i.e. as the sending side's NIC has modified them. In the same step you could get an info which direction causes the issue if switching tcp offloading on one end would miraculously heal the retransmissions.</p></div>
+            <div class="comment-info" id="comment-47570-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Nov '15, 03:41)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="47571"></a>
+        <div class="comment not_top_scorer" id="comment-47571">
+            <div id="post-47571-score" class="comment-score"></div>
+            <div class="comment-text"><p>yes, maybe I will do another dump today with tcp segmentation disabled...if I find the time :-/ But maybe somebody already got an idea with the current dump. I just thought it through again and again,...NIC DOES tcp offloading, cool. So one of these "split" packages could be lost...but then I would no calculate the exact same and perfectly right! sequence number on client and server side dump, would I? Which differs from what the server sent along as a sequence number...</p></div>
+            <div class="comment-info" id="comment-47571-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Nov '15, 03:48)</span>
+                <a class="comment-user userinfo" href="/users/20954/esc4rg0t">esc4rg0t</a>
+                
+            </div>
+        </div>
+    
+        <a name="47572"></a>
+        <div class="comment not_top_scorer" id="comment-47572">
+            <div id="post-47572-score" class="comment-score"></div>
+            <div class="comment-text"><p>Okey, I disabled the offloading on both client AND server, no retransmissions anymore. Whatever that means...</p></div>
+            <div class="comment-info" id="comment-47572-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Nov '15, 05:56)</span>
+                <a class="comment-user userinfo" href="/users/20954/esc4rg0t">esc4rg0t</a>
+                
+            </div>
+        </div>
+    
+        <a name="47574"></a>
+        <div class="comment not_top_scorer" id="comment-47574">
+            <div id="post-47574-score" class="comment-score"></div>
+            <div class="comment-text"><p>So if that's the case (what you described above), I would not have to worry about my network intfrastructure, and TCP retransmissions from time to time seem to be quite normal,...because of things like what's happening here.</p></div>
+            <div class="comment-info" id="comment-47574-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Nov '15, 06:13)</span>
+                <a class="comment-user userinfo" href="/users/20954/esc4rg0t">esc4rg0t</a>
+                
+            </div>
+        </div>
+    
+        <a name="47577"></a>
+        <div class="comment not_top_scorer" id="comment-47577">
+            <div id="post-47577-score" class="comment-score"></div>
+            <div class="comment-text"><p>yes, stop worrying about your network and start worrying about the task scheduler of your OS :-D</p>
+
+<p>But for me it is more interesting that the tcp offloading affects the behaviour... maybe it does so indirectly and the application (ssh client in this case) has problems to handle large buffers, not expecting to get 10 pages of text in a single update?</p>
+
+<p>Also, this effect, if it exists, might explain your initial issue:</p>
+
+<blockquote>
+<p>I had to analyze network packets because of an application that crashed quite a lot.</p>
+</blockquote>
+
+<p>Or you've already found some other reason of that issue and the analysis of retransmissions was just a spin-off project?</p></div>
+            <div class="comment-info" id="comment-47577-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Nov '15, 07:35)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="47595"></a>
+        <div class="comment not_top_scorer" id="comment-47595">
+            <div id="post-47595-score" class="comment-score"></div>
+            <div class="comment-text"><p>1) Yes U r right 100% sindy.... 
+2) To overcome the problem of buffers.... i am tying to send smaller PDUs.. Which reduces the burden on tcp stack... </p>
+
+<p>Regards</p></div>
+            <div class="comment-info" id="comment-47595-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Nov '15, 18:29)</span>
+                <a class="comment-user userinfo" href="/users/16136/srinu_bel">srinu_bel</a>
+                
+            </div>
+        </div>
+    
+        <a name="47615"></a>
+        <div class="comment not_top_scorer" id="comment-47615">
+            <div id="post-47615-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sindy: Well, I came to the conclusion that the application that crashes seems to be crap, yes...
+But apart from that, I will put more effort into analyzing this behaviour, try other software, other Linux builds and so on.</p>
+
+<p>Right now I got an indication that it might be SSH, as I have similar behaviour when connecting to a pfSense box over SSH from the same client...</p></div>
+            <div class="comment-info" id="comment-47615-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Nov '15, 02:02)</span>
+                <a class="comment-user userinfo" href="/users/20954/esc4rg0t">esc4rg0t</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47561" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 13
+        </span>
+        <a href="#" class="show-all-comments-link">show 8 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47561-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/47542/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='UsCb0J1TzZWJePmf3Mx7DDUuVtqT167n' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47542/tcp-retransmission-server-sends-wrong-seqno?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47542/tcp-retransmission-server-sends-wrong-seqno?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tcp/"
+            class="tag-link-tcp"
+            title="see questions tagged'tcp'using tags"
+            rel="tag">tcp</a> <span class="tag-number">&#215;752</span><br/>
+        
+        <a href="/tags/tcp-retransmit/"
+            class="tag-link-tcp-retransmit"
+            title="see questions tagged'tcp-retransmit'using tags"
+            rel="tag">tcp-retransmit</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 12, 2015, 4:37 a.m.">12 Nov '15, 04:37</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,025 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 18, 2015, 7:06 a.m.">18 Nov '15, 07:06</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/48072/tcp-retransmissions-simple-telnet-to-webserver-timeout">TCP Retransmissions - Simple Telnet to Webserver - Timeout</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60273/how-to-filter-out-tcp-retransmissions">How to filter out TCP retransmissions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59113/tcp-re-transmit-troubleshooting-help-required">TCP Re-transmit Troubleshooting - Help Required</a>
+        </p>
+        
+        <p>
+            <a href="/questions/230/displaying-all-tcp-connections-with-syn-packets">Displaying all TCP connections with SYN packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1698/tcp-out-of-order-what-does-it-means">&quot;TCP out of order &quot; what does it means ?!!!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3235/adding-custom-tcp-options">Adding custom TCP options</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4932/not-honoring-own-mss">Not honoring own MSS?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7043/is-there-any-way-to-find-the-tcp-stream-number-based-on-packet-number">Is there any way to find the tcp stream number based on packet number?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7972/acked-lost-segments-false-positive">ACKed lost segments - false positive?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9281/lua-dissector-failing-occasionally-returns-nil-values-instead-of-tcp-endpoints-for-valid-packets">Lua dissector failing: occasionally returns nil values instead of TCP endpoints for valid packets</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

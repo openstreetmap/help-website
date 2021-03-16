@@ -1,0 +1,1075 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>SSL decrypting when Browser in play ?? - Wireshark Q&amp;A</title>
+        <meta name="description" content="I am trying to decrypt a complete SSL session using wireshark (and then will use tshark). I have the server private key and can see wireshark decrypting return traffic from server to client. However, the client sourced traffic is not decrypted (I can&#39;t see the decrypted GET). I am using the Internet..." />
+        <meta name="keywords" content="ssl,browser" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/10045/ssl-decrypting-when-browser-in-play" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/10045/ssl-decrypting-when-browser-in-play?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='iTpYFV9MHDMGrbZBO9s7JfdYLEpXhKDf' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/10045/ssl-decrypting-when-browser-in-play">SSL decrypting when Browser in play ??</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-10045-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/10045/up/" rel="nofollow"> </a>
+<div id="post-10045-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-10045-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/10045/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/10045/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am trying to decrypt a complete SSL session using wireshark (and then will use tshark).
+I have the server private key and can see wireshark decrypting return traffic from server to
+client. However, the client sourced traffic is not decrypted (I can't see the decrypted GET).
+I am using the Internet Explorer browser on a Win7 system. Wireshark is running on the Win7 system.</p>
+<p>Now for a few questions:</p>
+<p>1) do I need to have the IE browser private key loaded into wireshark ??</p>
+<p>2) if so, where do I find the private key used by the browser ?? must I somehow extract it ??</p>
+<p>Any/all advice would be appreciated. (yes, I've read the various tag entries regarding ssl but
+haven't seen anything that fully addresses my question. If I missed the golden nugget, please provide
+a pointer)</p>
+<p>thanks,
+wk</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ssl/" class="post-tag tag-link-ssl"
+                                        title="see questions tagged 'ssl'" rel="tag">ssl</a>
+                                
+                                    <a href="/tags/browser/" class="post-tag tag-link-browser"
+                                        title="see questions tagged 'browser'" rel="tag">browser</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Apr '12, 12:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2b12f1f0687101a1dd8f75db884aed8e?s=32&amp;d=identicon&amp;r=g" alt="wakelt's gravatar image" />
+    <p><a href="/users/2254/wakelt">wakelt</a><br/>
+    <span class="score" title="13 reputation points">13</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="13 badges"><span class="bronze">&#9679;</span><span class="badgecount">13</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="wakelt has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-10045">
+    
+</div>
+<div id="comment-tools-10045" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-10045-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/10045/ssl-decrypting-when-browser-in-play?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/10045/ssl-decrypting-when-browser-in-play?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/10045/ssl-decrypting-when-browser-in-play?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/10045/ssl-decrypting-when-browser-in-play?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="10047"></a>
+                    <div id="answer-container-10047" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-10047-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/10047/up/" rel="nofollow"> </a>
+<div id="post-10047-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-10047-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/10047/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>No, you don't need anything from the client, there must be some other reason that it won't decrypt the client messages...</p>
+<p>Do you see a "Finished" handshake message from the client? If so, then decryption did start correctly for the client side (otherwise there would be an "Encrypted Handshake" message instead).</p>
+<p>If it is a server in a test environment, could you post the capture file on <a href="http://www.cloudshark.org">www.cloudshark.org</a> and post the link here accompanied by the server key?</p>
+<p>If that's not possible, can you attach the SSL debug log to your question?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/10047/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Apr '12, 13:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-10047">
+    
+        <a name="10084"></a>
+        <div class="comment" id="comment-10084">
+            <div id="post-10084-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for sharing this valuable information.</p></div>
+            <div class="comment-info" id="comment-10084-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '12, 22:57)</span>
+                <a class="comment-user userinfo" href="/users/2509/mano">Mano</a>
+                
+            </div>
+        </div>
+    
+        <a name="10085"></a>
+        <div class="comment" id="comment-10085">
+            <div id="post-10085-score" class="comment-score"></div>
+            <div class="comment-text"><p>You're welcome!</p>
+
+<p>(I converted your "answer" to a "comment", which is how this site works best, please see the FAQ)</p></div>
+            <div class="comment-info" id="comment-10085-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '12, 23:30)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="10128"></a>
+        <div class="comment" id="comment-10128">
+            <div id="post-10128-score" class="comment-score"></div>
+            <div class="comment-text"><p>Answers to questions from Syn-Bit...</p>
+
+<p>1) yes there is a client FINISH. The finish is contained in the same packet as the Client Key Exchange and Change Cipher messages.</p>
+
+<p>2) It seems that the SSL dissector may be trying to convert to regular HTTP, but its claiming a malformed packet thus I don't see the GET. I'm not sure what it doesn't like about the packet ?? If I run the same page w/o SSL, wireshark doesn't complain about malformation. The log entry
+for the malformed (packet #30) is below. It is the first packet from client to server after the client FINISH (client is ie browser).</p>
+
+<pre><code>dissect_ssl enter frame #30 (first time)
+  conversation = 03E32978, ssl_session = 03E32CE0
+  record: offset = 0, reported_length_remaining = 666
+dissect_ssl3_record: content_type 23
+decrypt_ssl3_record: app_data len 32, ssl state 0x3F
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+ssl_decrypt_record ciphertext len 32
+Ciphertext[32]:
+51 46 f2 c0 98 0f f8 d5 30 e2 27 63 c0 1b e9 fa 
+1d b4 a3 93 77 34 b1 d7 06 1c 15 a0 00 63 4e 9b 
+Plaintext[32]:
+47 36 54 ed ff ea d9 0f df 11 b0 50 50 05 3e e4 
+9b 6b 8f 5d f8 0a 0a 0a 0a 0a 0a 0a 0a 0a 0a 0a 
+ssl_decrypt_record found padding 10 final len 21
+checking mac (len 1, version 301, ct 23 seq 1)
+tls_check_mac mac type:SHA1 md 2
+Mac[20]:
+36 54 ed ff ea d9 0f df 11 b0 50 50 05 3e e4 9b 
+6b 8f 5d f8 
+ssl_decrypt_record: mac ok
+ssl_add_data_info: new data inserted data_len = 1, seq = 0, nxtseq = 1
+association_find: TCP port 60129 found 00000000
+association_find: TCP port 443 found 03793460
+dissect_ssl3_record decrypted len 1
+decrypted app data fragment: G
+dissect_ssl3_record found association 03793460
+</code></pre>
+
+<p>I couldn't figure out how to attach the complete log file. I'd love to know what the
+dissector is having issues with ?? The site seems to work fine. The good news is that
+the issue is very reproduceable.</p>
+
+<p>Thanks so much for any help you can provide.</p>
+
+<p>-walter</p></div>
+            <div class="comment-info" id="comment-10128-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '12, 07:40)</span>
+                <a class="comment-user userinfo" href="/users/2254/wakelt">wakelt</a>
+                
+            </div>
+        </div>
+    
+        <a name="10129"></a>
+        <div class="comment" id="comment-10129">
+            <div id="post-10129-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, decryption works, but indeed the HTTP request is garbled. What you can do is to use "data" in your SSL-keys list instead of "http" to disable http processing by Wireshark.</p>
+
+<p>You can also do "Follow SSL stream" to get a few on the decrypted data.</p></div>
+            <div class="comment-info" id="comment-10129-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '12, 08:12)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="10133"></a>
+        <div class="comment" id="comment-10133">
+            <div id="post-10133-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Syn-Bit...I am looking at the "data" within the packet as you suggest. I see the
+following oddity:</p>
+
+<ul>
+<li>
+<p>immediately after the client FINISH, the client sends the encrypted GET out (so far so good)</p>
+</li>
+<li>
+<p>wireshark is decoding 2 data field in the same packet:</p>
+</li>
+</ul>
+
+<p>Data (1 byte)   <br>
+     Data: 47
+     [Length: 1]
+   Data (743 bytes)
+     Data: 45675xxxxxxxxxxxxxxxxxx...lots of bytes
+     [Length: 743]</p>
+
+<p>It so happens that 0x47 is ascii letter G (the first letter of GET). The second
+  data field has the remainder of the request.</p>
+
+<p>Why is the SSL dissector seeing two data fields ?? Something feels odd about this. What
+separates one data field from the next ??
+Is there some type of index that is off ?? As mentioned earlier, the server
+has no issue interpreting the encrypted command and respond with proper data.</p>
+
+<p>thanks,
+Walter </p></div>
+            <div class="comment-info" id="comment-10133-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '12, 10:29)</span>
+                <a class="comment-user userinfo" href="/users/2254/wakelt">wakelt</a>
+                
+            </div>
+        </div>
+    
+        <a name="10139"></a>
+        <div class="comment not_top_scorer" id="comment-10139">
+            <div id="post-10139-score" class="comment-score"></div>
+            <div class="comment-text"><p>snippet of the packet byte output where wireshark claims malformation. Again, not sure why the dissector splits up the G ET into two separate data decryptions ???? (if that is indeed what it is doing)</p>
+
+<p>=====================================================================================
+02e0  28 e9 56 ed 40 01 69 aa 68 6d 72 df 88 29 a2 99   (<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0d235b234d23642365607f2323">[email&#160;protected]</a>)..
+02f0  fe ee 84 b5 fd 8c af 29 b3 dd 64 f0 4c e6 d1 d6   .......)..d.L...
+0300  d3 4f ac 95 fb 48 e8 62 f0 a9 2d e7 5b 36 1c 68   .O...H.b..-.[6.h
+0310  04 bb 6b 25 2d 34 cb cb 35 df c7 ca 41 18 45 d6   ..k%-4..5...A.E.
+0320  fe 07 c0 36 e2 96 35 fa 28 ab 12 c5 15 da 80 09   ...6..5.(.......</p>
+
+<p>Decrypted SSL data (1 bytes):</p>
+
+<p>0000  47                                                G</p>
+
+<p>Decrypted SSL data (697 bytes):</p>
+
+<p>0000  45 54 20 2f 63 73 73 2f 6d 61 69 6e 2e 63 73 73   ET /css/main.css
+0010  20 48 54 54 50 2f 31 2e 31 0d 0a 41 63 63 65 70    HTTP/1.1..Accep
+0020  74 3a 20 2a 2f 2a 0d 0a 52 65 66 65 72 65 72 3a   t: <em>/</em>..Referer:
+0030  20 68 74 74 70 73 3a 2f 2f 6f 72 69 67 69 6e 2d    <a href="https://origin">https://origin</a>-</p></div>
+            <div class="comment-info" id="comment-10139-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '12, 12:15)</span>
+                <a class="comment-user userinfo" href="/users/2254/wakelt">wakelt</a>
+                
+            </div>
+        </div>
+    
+        <a name="10140"></a>
+        <div class="comment not_top_scorer" id="comment-10140">
+            <div id="post-10140-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/2254/wakelt">@wakelt</a> I changed your "answers" to comments. See the <a href="http://ask.wireshark.org/faq/" title="FAQ">FAQ</a> about how this Q&amp;A site works. To add such long pieces of updated information to your <em>questions</em> in the future, you should edit the original question.</p></div>
+            <div class="comment-info" id="comment-10140-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '12, 13:34)</span>
+                <a class="comment-user userinfo" href="/users/730/multipleinterfaces">multipleinte...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-10047" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-10047-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="10086"></a>
+                    <div id="answer-container-10086" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-10086-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/10086/up/" rel="nofollow"> </a>
+<div id="post-10086-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-10086-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/10086/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Step one – set up an SSL-protected server to use as a testbed</p>
+<p>To illustrate the process, we’re going to use OpenSSL to generate a certificate and act as a web server running HTTP over SSL (aka HTTPS) – it’s quite straightforward.</p>
+<p>To begin with, we need to get ourselves a self-signed certificate that our HTTPS server can use. We can do this with a single command:</p>
+<p>openssl req -x509 -nodes -newkey rsa:1024 -keyout testkey.pem -out testcert.pem</p>
+<p>OpenSSL will ask you for some input to populate your certificate with; once you’ve answered all the questions, the output of this command is two files, testkey.pem (containing a 1024 bit RSA private key) and testcert.pem (containing a self signed certificate). PEM (Privacy Enhanced Mail) format files are plaintext, and consist of a BASE64 encoded body with header and footer lines. You can look at the contents of your key and certificate files in more detail like this:</p>
+<p>openssl rsa -in testkey.pem -text -noout (output here)
+openssl x509 -in testcert.pem -text -noout (output here; more info here)</p>
+<p>We need to perform one tiny tweak to the format of the private key file (Wireshark will use this later on, and it won’t work properly until we’ve done this):</p>
+<p>openssl rsa -in testkey.pem -out testkey.pem</p>
+<p>Now we’re ready to fire up our HTTPS server:</p>
+<p>openssl s_server -key testkey.pem -cert testcert.pem -WWW -cipher RC4-SHA -accept 443</p>
+<p>The -key and -cert parameters to the s_server command reference the files we’ve just created, and the -WWW parameter (this one is case sensitive) causes OpenSSL to act like a simple web server capable of retrieving files in the current directory (I created a simple test file called myfile.html for the purposes of the test).</p>
+<p>The -cipher parameter tells the server to use a particular cipher suite – I’m using RC4-SHA because that’s what’s used when you go to <a href="https://www.google.com">https://www.google.com</a>. The RC4-SHA cipher suite will use RSA keys for authentication and key exchange, 128-bit RC4 for encryption, and SHA1 for hashing.</p>
+<p>Having got our server up and running, we can point a browser at <a href="https://myserver/myfile.html">https://myserver/myfile.html</a> and retrieve our test file via SSL (you can ignore any warnings about the validity of the certificate). If you’ve got this working, we can move on to…</p>
+<p>Step two – capture some traffic with Wireshark</p>
+<p>Fire up Wireshark on the server machine, ideally with a capture filter like “tcp port 443″ so that we don’t capture any unnecessary traffic. Once we’re capturing, point your browser (running on a different machine) at <a href="https://myserver/myfile.html">https://myserver/myfile.html</a> and stop the capture once it’s complete.</p>
+<p>Right-click on any of the captured frames and select “Follow TCP stream” – a window will pop up that’s largely full of SSL-protected gobbledegook:</p>
+<p>Step three – configuring Wireshark for decryption</p>
+<p>Close the TCP Stream window and select Preferences from Wireshark’s Edit menu. Expand the “Protocols” node in the tree on the left and scroll down to SSL (in newer versions of Wireshark, you can open the node and type SSL and it will take you there).</p>
+<p>Once SSL is selected, there’s an option on the right to enter an “RSA keys list”. Enter something like this:</p>
+<p>10.16.8.5,443,http,c:\openssl-win32\bin\testkey.pem</p>
+<p>You’ll need to edit the server IP address and path to testkey.pem as appropriate. If this has worked, we’ll notice two things:</p>
+<pre><code>* Wireshark’s SSL dissector can look into otherwise encrypted SSL packets and dissect the protocol inside:
+* We can right-click on any of the captured frames that are listed as SSL or TLS and select “Follow SSL stream”:
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/10086/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Apr '12, 23:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a344d652cf70aee497362b696383e1a5?s=32&amp;d=identicon&amp;r=g" alt="Crispina's gravatar image" />
+    <p><a href="/users/2510/crispina">Crispina</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Crispina has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-10086">
+    
+        <a name="10091"></a>
+        <div class="comment" id="comment-10091">
+            <div id="post-10091-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the replies above. I've been out of the office since Tuesday afternoon. I'll be back in tomorrow.</p>
+
+<p><a href="/users/5/syn-bit"></a><a href="/users/5/syn-bit">@SYN-bit</a>, it is a public site so I can provide the private key. I will provide the log file. I could provide a capture as well if it would help.</p>
+
+<p><a href="/users/2510/crispina"></a><a href="/users/2510/crispina">@Crispina</a>, I have followed ALL these steps (I believe) and can see the server side decrypted. I don't see the client side decrypted. The question is why ???</p>
+
+<p>I look forward to your continued support.</p>
+
+<p>thanks,
+walter</p></div>
+            <div class="comment-info" id="comment-10091-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Apr '12, 09:35)</span>
+                <a class="comment-user userinfo" href="/users/2254/wakelt">wakelt</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-10086" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-10086-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/10045/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='iTpYFV9MHDMGrbZBO9s7JfdYLEpXhKDf' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/10045/ssl-decrypting-when-browser-in-play?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/10045/ssl-decrypting-when-browser-in-play?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ssl/"
+            class="tag-link-ssl"
+            title="see questions tagged'ssl'using tags"
+            rel="tag">ssl</a> <span class="tag-number">&#215;319</span><br/>
+        
+        <a href="/tags/browser/"
+            class="tag-link-browser"
+            title="see questions tagged'browser'using tags"
+            rel="tag">browser</a> <span class="tag-number">&#215;14</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 10, 2012, 12:37 p.m.">10 Apr '12, 12:37</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,868 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 13, 2012, 1:34 p.m.">13 Apr '12, 13:34</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13874/ssl-decrypt-works-depending-on-the-used-browser">SSL Decrypt works depending on the used browser</a>
+        </p>
+        
+        <p>
+            <a href="/questions/337/where-did-the-google-ssl-video-go">Where did the Google SSL video go?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4303/decrypt-ssl-traffic-destined-for-squid-proxy-server">Decrypt SSL Traffic destined for Squid Proxy Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6368/ssl-capture">SSL capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8004/ssl-decryption-only-works-in-promiscuous-mode">SSL decryption only works in promiscuous mode?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10189/ssl-decryption-anomolies">SSL Decryption Anomolies</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13573/capture-bridge-ssl-packet">capture bridge SSL packet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16163/soap-messages-not-decrypted">Soap Messages Not Decrypted</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20855/is-it-possible-to-decrypt-an-ssl-session-post-capture">Is it possible to decrypt an SSL Session post capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23563/http-gzip-decompression-failed-not-out-of-order">HTTP gzip decompression failed (NOT out-of-order)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

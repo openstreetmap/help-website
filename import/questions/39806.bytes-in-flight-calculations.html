@@ -1,0 +1,974 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Bytes in Flight calculations - Wireshark Q&amp;A</title>
+        <meta name="description" content="How does Wireshark calculate Bytes in Flight (BIF)? Do the BIF also consider the SACK left-edge and right-edge values? I have an 19MB file that I would like to share, but do not see a way to attach the file to this post. Here is a general formula that I am using to determine BIF assuming with SACK: ..." />
+        <meta name="keywords" content="tcp,tcp-bytes-in-flight" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/39806/bytes-in-flight-calculations" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/39806/bytes-in-flight-calculations?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='wvLTgeBN1O6AoEu2q0YCuw9FUHvc7kSX' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/39806/bytes-in-flight-calculations">Bytes in Flight calculations</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-39806-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/39806/up/" rel="nofollow"> </a>
+<div id="post-39806-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-39806-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/39806/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/39806/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>How does Wireshark calculate Bytes in Flight (BIF)?  Do the BIF also consider the SACK left-edge and right-edge values?
+I have an 19MB file that I would like to share, but do not see a way to attach the file to this post.  Here is a general formula that I am using to determine BIF assuming with SACK:</p>
+<ol>
+<li>(Sequence # of sender) + (TCP Length of sender) - (SACK right edge of receiver) = Value #1</li>
+<li>(SACK left edge of receiver) - (Last TCP ACK # from receiver) = Value #2</li>
+</ol>
+<p>BIF = (Value #1) + (Value #2)</p>
+<p>Are the above equations correct?  Please correct any of the above equations as needed.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tcp/" class="post-tag tag-link-tcp"
+                                        title="see questions tagged 'tcp'" rel="tag">tcp</a>
+                                
+                                    <a href="/tags/tcp-bytes-in-flight/" class="post-tag tag-link-tcp-bytes-in-flight"
+                                        title="see questions tagged 'tcp-bytes-in-flight'" rel="tag">tcp-bytes-in-flight</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Feb '15, 13:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d9cf592a79eafbc3b2a8b3f38cf38362?s=32&amp;d=identicon&amp;r=g" alt="Amato_C's gravatar image" />
+    <p><a href="/users/3386/amato_c">Amato_C</a><br/>
+    <span class="score" title="1098 reputation points"><span class="">1.1k</span></span><span title="14 badges"><span class="badge1">&#9679;</span><span class="badgecount">14</span></span><span title="20 badges"><span class="silver">&#9679;</span><span class="badgecount">20</span></span><span title="32 badges"><span class="bronze">&#9679;</span><span class="badgecount">32</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Amato_C has 15 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-39806">
+    
+        <a name="39807"></a>
+        <div class="comment" id="comment-39807">
+            <div id="post-39807-score" class="comment-score"></div>
+            <div class="comment-text"><p>Put it on <a href="http://www.cloudshark.org">http://www.cloudshark.org</a>, and sanitize it with TraceWrangler first if necessary.</p></div>
+            <div class="comment-info" id="comment-39807-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Feb '15, 13:16)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-39806" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-39806-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/39806/bytes-in-flight-calculations?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/39806/bytes-in-flight-calculations?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/39806/bytes-in-flight-calculations?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/39806/bytes-in-flight-calculations?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="59815"></a>
+                    <div id="answer-container-59815" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-59815-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/59815/up/" rel="nofollow"> </a>
+<div id="post-59815-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-59815-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/59815/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Amato_C has selected this answer as the correct answer"
+        href="/accept_answer/59815/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>At the point you mention, there are 9 packets missing, forming a data gap between #264 and #270. It would appear that these really were missing from the flow, because SACKs #283-#293 report that missing data. #308-#316 are the TCP retransmissions that fill that gap.</p>
+<p>According to the bug report, this is why Wireshark doesn't count them in the BIF calculation.</p>
+<p>There are also 5 packets missing between #274 and #275. However, these are selectively acknowledged, very soon after, by those same SACKs mentioned above.</p>
+<p>This capture is a treasure trove of interesting behaviour.</p>
+<p>There are also many examples of:</p>
+<ul>
+<li>
+<p>Packets retransmitted at the radio level, where we see the original in the trace (eg, #303 and #317 ; #352-#360 are repeats of #308-#316).</p>
+</li>
+<li>
+<p>This happens for ACKs too (eg, #2225-#2233, then #2236-#2244).</p>
+</li>
+<li>
+<p>Packets retransmitted at the radio level, where we DON'T see the original in the trace (eg, #332-#336).</p>
+</li>
+<li>
+<p>Packets unnecessarily retransmitted at the TCP/IP level, where we see the original in the trace and they are ACKed. These also trigger Duplicate SACKs (eg, #352-#360 are retransmissions of #308-#316, #395 is a D-SACK for #360).</p>
+</li>
+<li>
+<p>Packets seen in the trace but not seen at the TCP/IP level by the receiver (eg, #343 is selectively not-ACKed but the radio retransmission, #396, does get ACKed. Likewise for #346/#397 and #347/#398).</p>
+</li>
+<li>
+<p>Transmit Window "inflation", where the sender outputs more "packets in flight" in response to many SACKs.</p>
+</li>
+</ul>
+<p>I guess that your capturing WiFi device is closer to the access point than your real receiver (since we see packets that the receiver doesn't - at both the radio and TCP/IP level).  Your capture device also drops some real packets that the receiver does see.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/59815/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Mar '17, 23:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/35a0c1d0cf15b9d54d73bf54ae28abcd?s=32&amp;d=identicon&amp;r=g" alt="Philst's gravatar image" />
+    <p><a href="/users/26122/philst">Philst</a><br/>
+    <span class="score" title="431 reputation points">431</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="16 badges"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Philst has 6 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/59815/">
+                edited
+                <strong>05 Mar '17, 18:05</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-59815">
+    
+        <a name="59875"></a>
+        <div class="comment" id="comment-59875">
+            <div id="post-59875-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/26122/philst">@Philst</a> = thank you for the detailed analysis.  By showing the flow analysis in NetData, it has become evident the complexity of the capture goes beyond a miscalculation in Bytes-in-Flight.</p></div>
+            <div class="comment-info" id="comment-59875-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '17, 19:05)</span>
+                <a class="comment-user userinfo" href="/users/3386/amato_c">Amato_C</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-59815" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-59815-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="39821"></a>
+                    <div id="answer-container-39821" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-39821-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/39821/up/" rel="nofollow"> </a>
+<div id="post-39821-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-39821-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/39821/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As I understand the code, Wireshark sums up the TCP length of all un<strong>ACK</strong>ed frames by walking throuh a list of those un<strong>ACK</strong>ed frames (ual).</p>
+<p>File: packet-tcp.c</p>
+<pre>    /* how many bytes of data are there in flight after this frame
+     * was sent
+     */
+    ual=tcpd-&gt;fwd-&gt;segments;
+    if (tcp_track_bytes_in_flight &amp;&amp; seglen!=0 &amp;&amp; ual &amp;&amp; tcpd-&gt;fwd-&gt;valid_bif) {
+        guint32 first_seq, last_seq, in_flight;
+
+        first_seq = ual-&gt;seq - tcpd-&gt;fwd-&gt;base_seq;
+        last_seq = ual-&gt;nextseq - tcpd-&gt;fwd-&gt;base_seq;
+        while (ual) {
+            if ((ual-&gt;nextseq-tcpd-&gt;fwd-&gt;base_seq)&gt;last_seq) {
+                last_seq = ual-&gt;nextseq-tcpd-&gt;fwd-&gt;base_seq;
+            }
+            if ((ual-&gt;seq-tcpd-&gt;fwd-&gt;base_seq)&lt;first_seq) {="" first_seq="ual-"&gt;seq-tcpd-&gt;fwd-&gt;base_seq;
+            }
+            ual = ual-&gt;next;
+        }
+        in_flight = last_seq-first_seq;
+
+        if (in_flight&gt;0 &amp;&amp; in_flight&lt;2000000000) {
+            if(!tcpd-&gt;ta) {
+                tcp_analyze_get_acked_struct(pinfo-&gt;fd-&gt;num, seq, ack, TRUE, tcpd);
+            }
+            tcpd-&gt;ta-&gt;bytes_in_flight = in_flight;
+        }
+    }
+
+</pre>
+
+<p>SLE and SRE are not considered. You can see it pretty good in a SACK sample capture with packet loss.</p>
+<blockquote>
+<p><a href="http://packetlife.net/captures/TCP_SACK.cap">http://packetlife.net/captures/TCP_SACK.cap</a></p>
+</blockquote>
+<p>Add a column for bytes in flight to see it (Frames #30 - #39).</p>
+<p>Regards <br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/39821/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Feb '15, 15:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-39821">
+    
+        <a name="39834"></a>
+        <div class="comment" id="comment-39834">
+            <div id="post-39834-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Kurt,
+  Thank you for the code and example.  It is clear now that SACK is not used to determine the Bytes-in-Flight (BIF) calculation.  However, I am still seeing a problem with the BIF calculation with my Wireshark trace.<br>
+  First, let's look at the capture file you provided: "TCP_SACK.cap".  Looking at packets #36-#38, the BIF calculation is:  (Sequence # of sender) + (TCP Length of sender) - (ACK of receiver) = 23169 + 1222 - 17377 = 7014
+This is the exact number reported as BIF by Wireshark on packet #38.</p>
+
+<p>Now I will perform the same analysis using the file at:
+<a href="https://drive.google.com/file/d/0B3IDBN3nIwLzeVViaXhUVkFjVGc/view?usp=sharing">https://drive.google.com/file/d/0B3IDBN3nIwLzeVViaXhUVkFjVGc/view?usp=sharing</a></p>
+
+<p>Please download and view the file: "Stitcher-Only-TCP-Traffic-Stream3.pcap"
+Let's look at packets #293-#294: (Sequence # of sender) + (TCP Length of sender) - (ACK of receiver) = 211914 + 1448 - 174266 = 39096
+However, packet #294 is reporting BIF = 26064
+That is a difference of 39096 - 26064 = 13032 bytes or (13032/1448) = 9 packets</p>
+
+<p>Why such the large discrepancy?</p></div>
+            <div class="comment-info" id="comment-39834-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Feb '15, 08:06)</span>
+                <a class="comment-user userinfo" href="/users/3386/amato_c">Amato_C</a>
+                
+            </div>
+        </div>
+    
+        <a name="39891"></a>
+        <div class="comment" id="comment-39891">
+            <div id="post-39891-score" class="comment-score"></div>
+            <div class="comment-text"><p>Wireshark reporting incorrect bytes-in-flight values is a known issue.  Please reference <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=7703">Bug ID #7703</a>.</p></div>
+            <div class="comment-info" id="comment-39891-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Feb '15, 07:08)</span>
+                <a class="comment-user userinfo" href="/users/3386/amato_c">Amato_C</a>
+                
+            </div>
+        </div>
+    
+        <a name="39895"></a>
+        <div class="comment" id="comment-39895">
+            <div id="post-39895-score" class="comment-score"></div>
+            <div class="comment-text"><p>yep, looks like there is 'room for improvement' ;-)</p></div>
+            <div class="comment-info" id="comment-39895-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Feb '15, 12:48)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-39821" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-39821-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/39806/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='wvLTgeBN1O6AoEu2q0YCuw9FUHvc7kSX' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/39806/bytes-in-flight-calculations?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/39806/bytes-in-flight-calculations?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tcp/"
+            class="tag-link-tcp"
+            title="see questions tagged'tcp'using tags"
+            rel="tag">tcp</a> <span class="tag-number">&#215;752</span><br/>
+        
+        <a href="/tags/tcp-bytes-in-flight/"
+            class="tag-link-tcp-bytes-in-flight"
+            title="see questions tagged'tcp-bytes-in-flight'using tags"
+            rel="tag">tcp-bytes-in-flight</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 11, 2015, 1:15 p.m.">11 Feb '15, 13:15</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,332 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 6, 2017, 7:05 p.m.">06 Mar '17, 19:05</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/62607/interesting-tcp-segment-ack-pattern">Interesting TCP segment-ACK pattern</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58286/bytes-in-flight-exceeds-window-size">Bytes in Flight exceeds window size</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51969/bytes-in-flight-confusion">Bytes in Flight confusion</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61048/bytes_in_flight-and-tcp-cwnd-relationship">Bytes_in_flight and TCP cwnd relationship</a>
+        </p>
+        
+        <p>
+            <a href="/questions/230/displaying-all-tcp-connections-with-syn-packets">Displaying all TCP connections with SYN packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1698/tcp-out-of-order-what-does-it-means">&quot;TCP out of order &quot; what does it means ?!!!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3235/adding-custom-tcp-options">Adding custom TCP options</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4932/not-honoring-own-mss">Not honoring own MSS?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7043/is-there-any-way-to-find-the-tcp-stream-number-based-on-packet-number">Is there any way to find the tcp stream number based on packet number?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7972/acked-lost-segments-false-positive">ACKed lost segments - false positive?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

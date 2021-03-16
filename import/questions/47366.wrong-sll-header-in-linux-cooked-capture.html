@@ -1,0 +1,1290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>wrong sll header in linux cooked capture - Wireshark Q&amp;A</title>
+        <meta name="description" content="Got a capture with a wrong sll header and wireshark fails to find the IP header. Any ideas on how to bypass this problem and be able to read the trace anyway? Here are 2 packets from the trace:  https://www.cloudshark.org/captures/3559585c0d15 Thanks and regards Matthias  " />
+        <meta name="keywords" content="sll,header,linux,cooked" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/47366/wrong-sll-header-in-linux-cooked-capture" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/47366/wrong-sll-header-in-linux-cooked-capture?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='UfHi6yG0w9Qd7HXop8xmRqs5zkiaGQnM' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/47366/wrong-sll-header-in-linux-cooked-capture">wrong sll header in linux cooked capture</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-47366-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47366/up/" rel="nofollow"> </a>
+<div id="post-47366-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-47366-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47366/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/47366/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Got  a capture with a wrong sll header and wireshark fails to find the IP header.
+Any ideas on how to bypass this problem and be able to read the trace anyway?<br>
+Here are 2 packets from the trace: 
+<a href="https://www.cloudshark.org/captures/3559585c0d15">https://www.cloudshark.org/captures/3559585c0d15</a></p>
+<p>Thanks and regards Matthias 
+<img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/Selection_055.png"></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/sll/" class="post-tag tag-link-sll"
+                                        title="see questions tagged 'sll'" rel="tag">sll</a>
+                                
+                                    <a href="/tags/header/" class="post-tag tag-link-header"
+                                        title="see questions tagged 'header'" rel="tag">header</a>
+                                
+                                    <a href="/tags/linux/" class="post-tag tag-link-linux"
+                                        title="see questions tagged 'linux'" rel="tag">linux</a>
+                                
+                                    <a href="/tags/cooked/" class="post-tag tag-link-cooked"
+                                        title="see questions tagged 'cooked'" rel="tag">cooked</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Nov '15, 01:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5500bd1decb766660522dfb347eedc49?s=32&amp;d=identicon&amp;r=g" alt="mrEEde's gravatar image" />
+    <p><a href="/users/4668/mreede">mrEEde</a><br/>
+    <span class="score" title="3892 reputation points"><span class="">3.9k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="70 badges"><span class="bronze">&#9679;</span><span class="badgecount">70</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mrEEde has 48 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/47366/">
+                edited
+                <strong>08 Nov '15, 04:18</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-47366">
+    
+        <a name="47368"></a>
+        <div class="comment" id="comment-47368">
+            <div id="post-47368-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hm, that download location requires a login... you might want to put it up at <a href="http://www.cloudshark.org">http://www.cloudshark.org</a> or any other location where anyone can access it without credentials.</p></div>
+            <div class="comment-info" id="comment-47368-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 03:31)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47370"></a>
+        <div class="comment" id="comment-47370">
+            <div id="post-47370-score" class="comment-score"></div>
+            <div class="comment-text"><p>How was that trace captured?  That link-layer header does <em>not</em> match <a href="http://www.tcpdump.org/linktypes/LINKTYPE_LINUX_SLL.html">the tcpdump.org description of a Linux cooked capture header</a> - according to that description, the link-layer address starts at the 6th byte of the header and runs for 8 bytes, possibly with padding, and the address length field has the value 6, so the MAC address is e8:e7:32:d0:51:19, with two padding bytes of 0x81 and 0x00 following it, and with the protocol type immediately following that.</p>
+
+<p>That header appears to have <em>12</em> bytes of link-layer address or, at least, 12 bytes of <em>something</em> between the link-layer address length and protocol type fields.</p></div>
+            <div class="comment-info" id="comment-47370-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 03:57)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47372"></a>
+        <div class="comment" id="comment-47372">
+            <div id="post-47372-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have no idea how this trace was taken - it's from an appliance with RedHat Linux ...</p></div>
+            <div class="comment-info" id="comment-47372-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 04:20)</span>
+                <a class="comment-user userinfo" href="/users/4668/mreede">mrEEde</a>
+                
+            </div>
+        </div>
+    
+        <a name="47375"></a>
+        <div class="comment" id="comment-47375">
+            <div id="post-47375-score" class="comment-score"></div>
+            <div class="comment-text"><p>Perhaps the appliance vendor "improved" libpcap; report this to them as a bug.</p></div>
+            <div class="comment-info" id="comment-47375-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 04:30)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47376"></a>
+        <div class="comment not_top_scorer" id="comment-47376">
+            <div id="post-47376-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hm, looks like they may have fumbled a VLAN tag into the SLL header, at least 0x8100 (Ethertype for 802.1Q) and two more bytes seem familiar...</p></div>
+            <div class="comment-info" id="comment-47376-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 04:39)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47377"></a>
+        <div class="comment not_top_scorer" id="comment-47377">
+            <div id="post-47377-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, it's the default location to insert a VLAN header..... in an Ethernet frame. Unfortunately they used the same code to do that for an SLL frame. If they would have inserted it two octets further in the frame all would be fine.</p></div>
+            <div class="comment-info" id="comment-47377-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 05:16)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47378"></a>
+        <div class="comment not_top_scorer" id="comment-47378">
+            <div id="post-47378-score" class="comment-score"></div>
+            <div class="comment-text"><p>Try importing this frame which has this change applied
+</p>
+
+<pre>0000  00 00 00 01 00 06 e8 e7 32 d0 51 19 00 00 81 00  ........2.Q.....
+0010  09 e0 08 00 45 00 00 34 a0 ef 00 00 38 06 ca 87  ....E..4....8...
+0020  0a 16 00 12 0a 1a 03 0c 1f 05 cf b4 0d 6c 5e d3  .............l^.
+0030  e1 a3 89 6c 80 10 be e6 5d 1d 00 00 01 01 08 0a  ...l....].......
+0040  56 45 bf 5d 08 cd 5e f2                          VE.]..^.
+</pre>
+
+<p></p></div>
+            <div class="comment-info" id="comment-47378-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 05:20)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47406"></a>
+        <div class="comment not_top_scorer" id="comment-47406">
+            <div id="post-47406-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Yes, it's the default location to insert a VLAN header..... in an Ethernet frame. Unfortunately they used the same code to do that for an SLL frame.</p>
+</blockquote>
+
+<p>Not as of libpcap 1.4.0 it doesn't.  <a href="https://github.com/the-tcpdump-group/libpcap/issues/164">That bug</a> <em>was</em> in releases up to 1.3.0, but <a href="http://www.wireshark.org/~darkjames/libpcap/fix-vlan-tagging.patch">Jakub Zawadzki submitted a patch for that</a> and <a href="https://github.com/the-tcpdump-group/libpcap/commit/3f53c50e7d78efe0a74289fb406d749f740577c0">a fix was checked in 2012-08-18</a>.</p>
+
+<p>What version of Red Hat was the appliance running - and, if you can determine it, what version of libpcap was it running?</p></div>
+            <div class="comment-info" id="comment-47406-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 12:48)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47407"></a>
+        <div class="comment not_top_scorer" id="comment-47407">
+            <div id="post-47407-score" class="comment-score"></div>
+            <div class="comment-text"><p>uname -a 
+Linux  2.6.32-504.23.4.el6.x86_64 #1    (RHEL6)</p>
+
+<p>SMP Fri May 29 10:16:43 EDT 2015 x86_64 x86_64 x86_64 GNU/Linux</p>
+
+<p>libcap-2.16-5.5.el6.x86_64</p></div>
+            <div class="comment-info" id="comment-47407-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 13:05)</span>
+                <a class="comment-user userinfo" href="/users/4668/mreede">mrEEde</a>
+                
+            </div>
+        </div>
+    
+        <a name="47411"></a>
+        <div class="comment" id="comment-47411">
+            <div id="post-47411-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>libcap-2.16-5.5.el6.x86_64</p>
+</blockquote>
+
+<p>libpcap, not libcap - they're different libraries.  Some Web searches suggest that RHEL 6 might have libpcap 1.4.0, but perhaps the presumed RHEL 6 on the machine (inferred from the kernel information) has an older version, if RHEL 6 started with an older version and later updated to 1.4.x.</p></div>
+            <div class="comment-info" id="comment-47411-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 13:43)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47412"></a>
+        <div class="comment not_top_scorer" id="comment-47412">
+            <div id="post-47412-score" class="comment-score"></div>
+            <div class="comment-text"><p>sorry, </p>
+
+<p>libpcap-1.0.0-6.20091201git117cb5.el6.x86_64</p></div>
+            <div class="comment-info" id="comment-47412-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 13:48)</span>
+                <a class="comment-user userinfo" href="/users/4668/mreede">mrEEde</a>
+                
+            </div>
+        </div>
+    
+        <a name="47413"></a>
+        <div class="comment not_top_scorer" id="comment-47413">
+            <div id="post-47413-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yeah, that's too old (1.0.0, and 2009-12-01 is almost 4 years before I checked Jakub's change in).  You might want to tell the appliance vendor that they might want to update the RHEL 6 packages.</p></div>
+            <div class="comment-info" id="comment-47413-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 13:53)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47366" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 12
+        </span>
+        <a href="#" class="show-all-comments-link">show 7 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47366-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/47366/wrong-sll-header-in-linux-cooked-capture?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/47366/wrong-sll-header-in-linux-cooked-capture?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/47366/wrong-sll-header-in-linux-cooked-capture?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/47366/wrong-sll-header-in-linux-cooked-capture?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="47371"></a>
+                    <div id="answer-container-47371" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47371-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47371/up/" rel="nofollow"> </a>
+<div id="post-47371-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-47371-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47371/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="mrEEde has selected this answer as the correct answer"
+        href="/accept_answer/47371/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You could use editcap to remove 4 bytes, starting at an offset of 6, from each packet:</p>
+<pre><code>editcap −C  6:4 linux_cooked.pcapng linux_cooked_fixed.pcapng
+</code></pre>
+<p>or 4 bytes from some other offset if that's what's required to give it the right MAC address - as long as the 0x00 0x00 before the 0x08 0x00 aren't part of the MAC address (if they are, you'd have to have a program remove <em>6</em> bytes and add 2 padding bytes before the 0x08 0x00).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47371/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Nov '15, 04:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47371">
+    
+        <a name="47373"></a>
+        <div class="comment" id="comment-47373">
+            <div id="post-47373-score" class="comment-score"></div>
+            <div class="comment-text"><p>editcap −C  6:4 linux_cooked.pcapng linux_cooked_fixed.pcapng</p>
+
+<p>editcap: Can't open −C: No such file or directory
+ :-(</p></div>
+            <div class="comment-info" id="comment-47373-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 04:24)</span>
+                <a class="comment-user userinfo" href="/users/4668/mreede">mrEEde</a>
+                
+            </div>
+        </div>
+    
+        <a name="47374"></a>
+        <div class="comment" id="comment-47374">
+            <div id="post-47374-score" class="comment-score"></div>
+            <div class="comment-text"><p>You'll need a newer version of Wireshark, then.  The ability to chop data starting at a given offset was introduced in this change:</p>
+
+<pre><code>commit 54adc0d2ffe70561ffbe8b38a4bc36e33ef9ae0d
+Author: Chris Maynard &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2d6e455f445e59425d45485f03604c54434c5f496d6a79686e65036e6260">[email&#160;protected]</a>&gt;
+Date:   Sun Sep 8 20:29:26 2013 +0000
+
+    Allow an optional offset to be specified when chopping bytes from packets.
+</code></pre>
+
+<p>so it'd have to be a release that included that change.</p></div>
+            <div class="comment-info" id="comment-47374-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 04:29)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47404"></a>
+        <div class="comment" id="comment-47404">
+            <div id="post-47404-score" class="comment-score"></div>
+            <div class="comment-text"><p>Got it working in using Win7  - my wireshark is at 1.12.1 RHEL</p>
+
+<p>Editcap (Wireshark) 2.0.0rc2 (v2.0.0rc2-0-g74e5b56 from master-2.0)</p>
+
+<p>editcap -C 6:4 cooked.pcapng cooked.fixed.pcapng</p>
+
+<p>Thanks !</p></div>
+            <div class="comment-info" id="comment-47404-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 11:57)</span>
+                <a class="comment-user userinfo" href="/users/4668/mreede">mrEEde</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47371" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47371-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="47393"></a>
+                    <div id="answer-container-47393" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47393-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47393/up/" rel="nofollow"> </a>
+<div id="post-47393-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-47393-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47393/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The latest <a href="https://www.tracewrangler.com">TraceWrangler</a> build is now able to convert those malformed cooked captures to Pseudo-Ethernet while keeping the VLAN information alive (pulling it from the SLL header and inserting it into the packet after the newly contructed Pseudo-Ethernet header).</p>
+<p>Find it here: <a href="https://www.tracewrangler.com/download/automated/">https://www.tracewrangler.com/download/automated/</a></p>
+<p>To convert the frames, add the pcap/pcapng file to the file list, and add an "Edit" task. On the "Layers -&gt; Edit" pane, check "Replace Linux Cooked Header with Ethernet". Then run the task.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47393/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Nov '15, 09:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47393">
+    
+        <a name="47394"></a>
+        <div class="comment" id="comment-47394">
+            <div id="post-47394-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>The latest <a href="https://www.tracewrangler.com/">TraceWrangler</a> build is now able</p>
+</blockquote>
+
+<p>...if you're running an OS that can run Windows binaries (Windows itself, or a UN*X on which <a href="http://www.winehq.com">Wine</a> can run it).</p></div>
+            <div class="comment-info" id="comment-47394-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 09:44)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47395"></a>
+        <div class="comment" id="comment-47395">
+            <div id="post-47395-score" class="comment-score"></div>
+            <div class="comment-text"><p>yep, correct :-)</p></div>
+            <div class="comment-info" id="comment-47395-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 10:08)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47405"></a>
+        <div class="comment" id="comment-47405">
+            <div id="post-47405-score" class="comment-score"></div>
+            <div class="comment-text"><p>Installed the latest TraceWrangler and followed your instructions and the task ran sucessfully (as it seems) ...
+Log:</p>
+
+<p>Completed scanning file "cooked.pcapng" for frame details in 11 seconds</p>
+
+<p>Completed scanning file "cooked.pcapng" for PCAPng structure details in 11 seconds</p>
+
+<p>Completed processing file "cooked.pcapng" with 0 errors</p>
+
+<p>The file didn't change though and I couldn't find a File-&gt; Save ... </p>
+
+<p>Never used tracewrangler before (Linux user - sorry) ... </p>
+
+<p>Thanks anyway</p></div>
+            <div class="comment-info" id="comment-47405-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 12:03)</span>
+                <a class="comment-user userinfo" href="/users/4668/mreede">mrEEde</a>
+                
+            </div>
+        </div>
+    
+        <a name="47408"></a>
+        <div class="comment" id="comment-47408">
+            <div id="post-47408-score" class="comment-score"></div>
+            <div class="comment-text"><p>The scanning is just something TW does automatically to gain knowledge about what's in a capture whenever you add a pcap/pcapng file to the file list. </p>
+
+<p>Tracewrangler never modifies files, it always saves the modifications to a new file (which should appear after the edit task was run).</p></div>
+            <div class="comment-info" id="comment-47408-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 13:08)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47409"></a>
+        <div class="comment" id="comment-47409">
+            <div id="post-47409-score" class="comment-score"></div>
+            <div class="comment-text"><p>Aha - now I see: A new file was - silently - created !<br>
+</p>
+
+<p>cooked_edited.pcapng </p>
+
+<p>Perfect, how I wish TW would be available in Linux also ...<br>
+</p>
+
+<p>Thanks !</p></div>
+            <div class="comment-info" id="comment-47409-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 13:17)</span>
+                <a class="comment-user userinfo" href="/users/4668/mreede">mrEEde</a>
+                
+            </div>
+        </div>
+    
+        <a name="47410"></a>
+        <div class="comment not_top_scorer" id="comment-47410">
+            <div id="post-47410-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yeah I know... I'd love to have a Linux version, but Delphi can't do that unfortunately. But TW runs on Wine, so it can be used on Linux.</p></div>
+            <div class="comment-info" id="comment-47410-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '15, 13:38)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47393" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47393-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/47366/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='UfHi6yG0w9Qd7HXop8xmRqs5zkiaGQnM' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47366/wrong-sll-header-in-linux-cooked-capture?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47366/wrong-sll-header-in-linux-cooked-capture?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/linux/"
+            class="tag-link-linux"
+            title="see questions tagged'linux'using tags"
+            rel="tag">linux</a> <span class="tag-number">&#215;154</span><br/>
+        
+        <a href="/tags/header/"
+            class="tag-link-header"
+            title="see questions tagged'header'using tags"
+            rel="tag">header</a> <span class="tag-number">&#215;40</span><br/>
+        
+        <a href="/tags/sll/"
+            class="tag-link-sll"
+            title="see questions tagged'sll'using tags"
+            rel="tag">sll</a> <span class="tag-number">&#215;7</span><br/>
+        
+        <a href="/tags/cooked/"
+            class="tag-link-cooked"
+            title="see questions tagged'cooked'using tags"
+            rel="tag">cooked</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 8, 2015, 1:50 a.m.">08 Nov '15, 01:50</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,280 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 8, 2015, 1:53 p.m.">08 Nov '15, 13:53</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/24613/what-does-sll-stand-for-as-in-the-context-of-linux-cooked-headers">What does SLL stand for (as in the context of Linux &quot;cooked&quot; headers)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27472/ethaddr-filter">eth.addr filter ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/170/wireshark-only-showing-one-way-communication-over-vpn-tunnel">Wireshark only showing one way communication over VPN tunnel</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10784/can-download-wireshark-for-ubuntu-linux">Can Download Wireshark for Ubuntu Linux?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18435/how-do-i-set-up-wireshark-for-linux">How do I set up Wireshark for Linux?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29024/compiled-wireshark-does-not-color-the-packets-by-default">Compiled wireshark does not color the packets by default</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35615/expert-information-field">Expert information field</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43707/how-to-get-individual-vlan-information-of-same-frame-from-a-wireshark-8021q-packet">How to get individual vlan information of same frame from a Wireshark 802.1q packet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48101/how-do-i-make-a-wireshark-built-from-source-not-require-root-on-linux">How do I make a Wireshark built from source not require root on Linux?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54789/what-exist-between-usbmon-and-the-usb-hardware">What exist between usbmon and the usb hardware?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

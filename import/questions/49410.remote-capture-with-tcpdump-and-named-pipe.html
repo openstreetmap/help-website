@@ -1,0 +1,1478 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>remote capture with tcpdump and named pipe - Wireshark Q&amp;A</title>
+        <meta name="description" content="I set a remote capture to a host using tcpdump and a named pipe like so ssh -t root@host &quot;tcpdump -s 0 -n -w - -U -i eth0 not port 22&quot; &amp;gt; /tmp/remotecapture.fifo wireshark -k -i /tmp/remotecapture.fifo and tried some variations that resulted in · no packets being read by Wireshark · Frame 1 too lo..." />
+        <meta name="keywords" content="remote,tcpdump" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/49410/remote-capture-with-tcpdump-and-named-pipe" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/49410/remote-capture-with-tcpdump-and-named-pipe?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hVnZ7Kt1DJjjINmTw5IVSp1nZHnWoum6' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/49410/remote-capture-with-tcpdump-and-named-pipe">remote capture with tcpdump and named pipe</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-49410-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49410/up/" rel="nofollow"> </a>
+<div id="post-49410-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-49410-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49410/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/49410/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I set a remote capture to a host using <code>tcpdump</code> and a <code>named pipe</code> like so</p>
+<p><code>ssh -t <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="12607d7d66527a7d6166">[email&#160;protected]</a> "tcpdump -s 0 -n -w - -U -i eth0 not port 22" &gt; /tmp/remotecapture.fifo</code><br>
+<code>wireshark -k -i /tmp/remotecapture.fifo</code></p>
+<p>and tried some variations that resulted in</p>
+<p>·  no packets being read by Wireshark<br>
+· <code>Frame 1 too long (1936288800 bytes)</code><br>
+· <code>No packets captured!
+ As no data was captured, closing the temporary capture file!</code><br>
+· wrong libpcap format errors</p>
+<p>Redirecting to a simple file does work but not in a format Wireshark can read later.</p>
+<p>When Wireshark threw an error regarding libpcap format, I also tried clipping the first line that's passed before the raw packets, to no avail though.</p>
+<p><code>tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 65535 bytes</code></p>
+<p><strong>EDIT TL;DR</strong><br>
+check Guy Harris' answer below and my comment on 14 Feb<br>
+· root account<br>
+<code>ssh <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a0d2cfcfd4e0c8cfd3d4">[email&#160;protected]</a> "tcpdump -s 0 -n -w - -U -i eth0 not port 22 2&gt;/dev/null" &gt; /tmp/remotecapture</code><br>
+· non-root account<br>
+<code>ssh <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="016f6e6f736e6e7541696e7275">[email&#160;protected]</a> "echo thePassword | sudo -S tcpdump -s 0 -n -w - -U -i eth0 not port 22 2&gt;/dev/null" &gt; /tmp/remotecapture</code></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/remote/" class="post-tag tag-link-remote"
+                                        title="see questions tagged 'remote'" rel="tag">remote</a>
+                                
+                                    <a href="/tags/tcpdump/" class="post-tag tag-link-tcpdump"
+                                        title="see questions tagged 'tcpdump'" rel="tag">tcpdump</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Jan '16, 12:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/24e4a6e495369e0c1ba6a2466a8a720b?s=32&amp;d=identicon&amp;r=g" alt="wsk's gravatar image" />
+    <p><a href="/users/1808/wsk">wsk</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="wsk has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/49410/">
+                edited
+                <strong>14 Feb '16, 06:28</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-49410">
+    
+</div>
+<div id="comment-tools-49410" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49410-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/49410/remote-capture-with-tcpdump-and-named-pipe?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/49410/remote-capture-with-tcpdump-and-named-pipe?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/49410/remote-capture-with-tcpdump-and-named-pipe?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/49410/remote-capture-with-tcpdump-and-named-pipe?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="49412"></a>
+                    <div id="answer-container-49412" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-49412-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49412/up/" rel="nofollow"> </a>
+<div id="post-49412-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-49412-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49412/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You are probably writing to a regular file /tmp/remotecapture.fifo. So, did you create a named pipe with?</p>
+<blockquote>
+<p>rm /tmp/remotecapture.fifo<br>
+mkfifo /tmp/remotecapture.fifo</p>
+</blockquote>
+<p>If no, please do so before you write to it with tcpdump, plus: let Wirshark read from the fifo first.</p>
+<blockquote>
+<p>rm /tmp/remotecapture.fifo<br>
+mkfifo /tmp/remotecapture.fifo <br>
+wireshark -kni /tmp/remotecapture.fifo&amp; <br>
+ssh -t <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="04766b6b70446c6b7770">[email&#160;protected]</a> "tcpdump -s 0 -n -w - -U -i eth0 not port 22" &gt; /tmp/remotecapture.fifo</p>
+</blockquote>
+<p>BTW: make sure, that the SSH command does not write STDOUT messages into the fifo, as Wireshark would not be able to read that!</p>
+<p>See also:</p>
+<blockquote>
+<p><a href="https://ask.wireshark.org/questions/23609/remote-capture-via-ssh-and-pipe">https://ask.wireshark.org/questions/23609/remote-capture-via-ssh-and-pipe</a>  <br>
+<a href="https://ask.wireshark.org/questions/26523/wireshark-named-pipes-disconnect">https://ask.wireshark.org/questions/26523/wireshark-named-pipes-disconnect</a> <br>
+<a href="https://ask.wireshark.org/questions/13059/capturing-from-multiple-pipes">https://ask.wireshark.org/questions/13059/capturing-from-multiple-pipes</a> <br>
+</p>
+</blockquote>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/49412/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Jan '16, 13:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-49412">
+    
+        <a name="49510"></a>
+        <div class="comment" id="comment-49510">
+            <div id="post-49510-score" class="comment-score"></div>
+            <div class="comment-text"><p>I made sure it was a <code>named pipe</code>, but nonetheless followed the steps you described and still have similar results.</p>
+
+<pre><code>$ wireshark -kni /tmp/remotecapture &amp;
+$ ssh -t <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b5c7dadac1f5848c879b84838d9b8480819b848186">[email&#160;protected]</a> "tcpdump -s 0 -n -w - -U -i eth0 not port 22" &gt; /tmp/remotecapture
+</code></pre>
+
+<p>and get the following messages</p>
+
+<pre><code>No packets captured!
+As no data was captured, closing the temporary capture file!
+</code></pre>
+
+<p>click on ok, next</p>
+
+<pre><code>Frame 1 too long (1936288800 bytes)
+</code></pre>
+
+<p>If I check this locally, I see the following output</p>
+
+<pre><code>$ cat /tmp/remotecapture 
+?ò???tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 65535 bytes
+х?V?1**PV?˰
+           )??%`
+</code></pre>
+
+<p>I don't know what else <code>ssh</code> could be passing along.</p></div>
+            <div class="comment-info" id="comment-49510-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jan '16, 12:46)</span>
+                <a class="comment-user userinfo" href="/users/1808/wsk">wsk</a>
+                
+            </div>
+        </div>
+    
+        <a name="49524"></a>
+        <div class="comment" id="comment-49524">
+            <div id="post-49524-score" class="comment-score"></div>
+            <div class="comment-text"><p>Did you actually try this with <code>tcpdump</code>? Btw, I used OpenSSH_5.9p1 and OpenSSH_6.6.1p1.</p></div>
+            <div class="comment-info" id="comment-49524-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Jan '16, 15:51)</span>
+                <a class="comment-user userinfo" href="/users/1808/wsk">wsk</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-49412" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49412-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="49525"></a>
+                    <div id="answer-container-49525" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-49525-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49525/up/" rel="nofollow"> </a>
+<div id="post-49525-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-49525-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49525/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>ssh sucks.</p>
+<p>Truly, ssh sucks.  If you run a command on a remote machine that writes to the standard output and error, both the standard output <em>and</em> the standard error of the command get sent to the local ssh command's standard output!</p>
+<p>This means that tcpdump's "hi, I'm capturing" message, which it sends to the standard error, gets sent to ssh's standard output, which means it gets written into the middle of your capture file.</p>
+<p>So try discarding the extra "hi, I'm capturing" message:</p>
+<pre><code>ssh -t <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="50223f3f2410383f2324">[email&#160;protected]</a> "tcpdump -s 0 -n -w - -U -i eth0 not port 22 2&gt;/dev/null" &gt; /tmp/remotecapture.fifo
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/49525/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Jan '16, 16:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-49525">
+    
+        <a name="49532"></a>
+        <div class="comment" id="comment-49532">
+            <div id="post-49532-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for pointing that out. I did try clipping the first line, but redirecting to null on the remote host is the right way. That said, I only see a couple of <code>arp</code> and <code>icmp</code> packets, although there's an active <code>ping</code> process to the interface being dumped. Next I see a spurious frame that seems to be two hex digits off, <code>08:0:c:29:80:e0</code> instead of <code>0:c:29:80:e0:25</code>, and not long after that a message like <code>Frame 4 too long (6422539 bytes)</code>. If I leave <code>not port 22</code> out, it fails almost immediately with a similar size error. If I don't redirect to <code>named pipe</code> I see the <code>raw</code> output  in <code>stdout</code>, as expected.</p></div>
+            <div class="comment-info" id="comment-49532-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jan '16, 02:57)</span>
+                <a class="comment-user userinfo" href="/users/1808/wsk">wsk</a>
+                
+            </div>
+        </div>
+    
+        <a name="49640"></a>
+        <div class="comment" id="comment-49640">
+            <div id="post-49640-score" class="comment-score"></div>
+            <div class="comment-text"><p>Did you actually try this with <code>tcpdump</code>?</p></div>
+            <div class="comment-info" id="comment-49640-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jan '16, 18:19)</span>
+                <a class="comment-user userinfo" href="/users/1808/wsk">wsk</a>
+                
+            </div>
+        </div>
+    
+        <a name="49641"></a>
+        <div class="comment" id="comment-49641">
+            <div id="post-49641-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Did you actually try this with tcpdump?</p>
+</blockquote>
+
+<p>Yes.</p></div>
+            <div class="comment-info" id="comment-49641-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jan '16, 18:36)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="49710"></a>
+        <div class="comment" id="comment-49710">
+            <div id="post-49710-score" class="comment-score"></div>
+            <div class="comment-text"><p>It still doesn't work for me. In case it's something to factor in, I ssh from a host running OS X to a guest vm running Ubuntu, and between Ubuntu vm guests. Any ideas on how could I further troubleshoot this?</p></div>
+            <div class="comment-info" id="comment-49710-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Feb '16, 01:57)</span>
+                <a class="comment-user userinfo" href="/users/1808/wsk">wsk</a>
+                
+            </div>
+        </div>
+    
+        <a name="49711"></a>
+        <div class="comment" id="comment-49711">
+            <div id="post-49711-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have just tried the following:</p>
+
+<pre><code>ssh <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6e1c01011a2e02010d0f0206011d1a">[email&#160;protected]</a> "tcpdump -i eth0 -w - 2&gt; /dev/null" &gt; /tmp/test.cap
+</code></pre>
+
+<p>After logging in, waiting for some traffic to be captured, and then pressing ^C, I've open the test.cap file in Wireshark, and its only complaint was that the file was cut short in the middle of a packet. Can you try the same (and, just for the case that it was not clear, leave a space between the <code>-</code> and the <code>2</code>) to check whether the source of your issue is the ssh or the named fifo?</p></div>
+            <div class="comment-info" id="comment-49711-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Feb '16, 02:29)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="49712"></a>
+        <div class="comment not_top_scorer" id="comment-49712">
+            <div id="post-49712-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Any ideas on how could I further troubleshoot this?</p>
+</blockquote>
+
+<p>Try running the command <code>ssh -t <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="25574a4a51654d4a5651">[email&#160;protected]</a> ": 2&gt;/dev/null" &gt;/tmp/hello</code> and then see what's in the file <code>/tmp/hello</code>.</p></div>
+            <div class="comment-info" id="comment-49712-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Feb '16, 02:35)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="50035"></a>
+        <div class="comment not_top_scorer" id="comment-50035">
+            <div id="post-50035-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy"></a><a href="/users/19586/sindy">@sindy</a>, I get the same message, it's still not clear to me where's the problem though.</p>
+
+<p><a href="/users/79/guy-harris"></a><a href="/users/79/guy-harris">@Guy Harris</a>, with that command the session is immediately closed, <code>/tmp/hello</code> is <code>0B</code>.</p>
+
+<p>The <code>fifo</code> is written to, but this seems to happen not as expected (see post from 27 Jan, 02:57 above).</p>
+
+<p>Any ideas?</p></div>
+            <div class="comment-info" id="comment-50035-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Feb '16, 18:41)</span>
+                <a class="comment-user userinfo" href="/users/1808/wsk">wsk</a>
+                
+            </div>
+        </div>
+    
+        <a name="50037"></a>
+        <div class="comment not_top_scorer" id="comment-50037">
+            <div id="post-50037-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p><a href="/users/19586/sindy"></a><a href="/users/19586/sindy">@sindy</a>, I get the same message, it's still not clear to me where's the problem though.</p>
+</blockquote>
+
+<p>I.e., you get the same "Frame 1 too long" error if you follow <a href="/users/19586/sindy"></a><a href="/users/19586/sindy">@sindy</a>'s instructions and then try to open <code>/tmp/test.cap</code> in Wireshark?</p>
+
+<p>If you do</p>
+
+<pre><code>ssh <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b0c2dfdfc4f0dcdfd3d1dcd8dfc3c4">[email&#160;protected]</a> "tcpdump -i eth0 -w /dev/null 2&gt; /dev/null" &gt; /tmp/test.cap
+</code></pre>
+
+<p>what are the contents of <code>/tmp/test.cap</code>?</p></div>
+            <div class="comment-info" id="comment-50037-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Feb '16, 18:52)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="50114"></a>
+        <div class="comment not_top_scorer" id="comment-50114">
+            <div id="post-50114-score" class="comment-score"></div>
+            <div class="comment-text"><p>I tested this on Ubuntu Server 14.04.3 LTS.</p>
+
+<p><a href="/users/19586/sindy">@sindy</a>, if I run the following command</p>
+
+<pre><code>ssh <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="295b46465d6945464a484541465a5d">[email&#160;protected]</a> "tcpdump -i eth0 -w - 2&gt; /dev/null" &gt; /tmp/test.cap
+</code></pre>
+
+<p>I can open <code>test.cap</code> with Wireshark and get this message</p>
+
+<pre><code>The capture file appears to have been cut short in the middle of a packet.
+</code></pre>
+
+<p><a href="/users/79/guy-harris">@Guy Harris</a>, if I run</p>
+
+<pre><code>ssh <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bac8d5d5cefad6d5d9dbd6d2d5c9ce">[email&#160;protected]</a> "tcpdump -i eth0 -w /dev/null 2&gt; /dev/null" &gt; /tmp/test.cap
+</code></pre>
+
+<p><code>test.cap</code>'s size remains <code>0B</code>.</p></div>
+            <div class="comment-info" id="comment-50114-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Feb '16, 15:06)</span>
+                <a class="comment-user userinfo" href="/users/1808/wsk">wsk</a>
+                
+            </div>
+        </div>
+    
+        <a name="50121"></a>
+        <div class="comment not_top_scorer" id="comment-50121">
+            <div id="post-50121-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK. Both tests seem to indicate that there must have been some typo in your original attempts, because:</p>
+
+<p><code>2&gt; /dev/null</code> prevents tcpdump's stderr from being grabbed by the ssh session at the server and thus intermixed with the contents of the capture file at the client (as <a href="/users/79/guy-harris"></a><a href="/users/79/guy-harris">@Guy Harris</a> wrote, ssh mixes stdout and stderr together at server end so you cannot split them back at client end)</p>
+
+<p><code>-w /dev/null 2&gt; /dev/null</code> indicate that stderr should go to trash and the binary pcap data should also be written to trash instead of stdout (while <code>-w -</code> means to use stdout for the binary pcap data). So if tcpdump would be printing something to stdout, it would be the only output remaining, but the resulting file size is 0 bytes.</p>
+
+<p><strong>But</strong> there is still some space left for doubt.</p>
+
+<p><code>The capture file appears to have been cut short in the middle of a packet</code> is a consequence of the fact that you've stopped the ssh and tcpdump together by pressing ^C, so both processes were killed abruptly, not gracefully. You need to be extremely lucky that only part of the last packet would not be written to the output file in this case.</p>
+
+<p>So please repeat both tests above with additional parameter of tcpdump, <code>-c 50</code>. This will make tcpdump stop the capture after first 50 packets.</p>
+
+<p>If the result of "my" test is a file of 50 packets about which Wireshark does not complain, and the result of <a href="/users/79/guy-harris"></a><a href="/users/79/guy-harris">@Guy Harris</a>' test is still a 0 B file, you know for sure that both tcpdump and ssh are OK if you use tcpdump with <code>-w -</code> and <code>2&gt;/dev/null</code>.</p>
+
+<p>Finally, try again with the named pipe, first also with the <code>-c 50</code>. I never tested with a named pipe on linux, only on Windows, where the capturing process waits for the receiver to connect to the pipe, then starts writing to it, and when the receiver disconnects again (which is a consequence of pressing "stop" in Wireshark), the capturing process terminates. Here, with ssh between the two, it may behave differently.</p></div>
+            <div class="comment-info" id="comment-50121-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Feb '16, 22:31)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="50182"></a>
+        <div class="comment not_top_scorer" id="comment-50182">
+            <div id="post-50182-score" class="comment-score"></div>
+            <div class="comment-text"><p>If I run</p>
+
+<pre><code>ssh <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="13617c7c67537f7c70727f7b7c6067">[email&#160;protected]</a> "tcpdump -c 50 -i eth0 -w - 2&gt; /dev/null" &gt; /tmp/test.cap
+</code></pre>
+
+<p>the resulting file can be opened in Wireshark without the 'packet cut short' warning.</p>
+
+<p>If I run</p>
+
+<pre><code>ssh <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="63110c0c17230f0c00020f0b0c1017">[email&#160;protected]</a> "tcpdump -c 50 -i eth0 -w /dev/null 2&gt; /dev/null" &gt; /tmp/test.cap
+</code></pre>
+
+<p>the resulting file has size 0B.</p>
+
+<p>If I leave out option <code>-t</code> it works</p>
+
+<pre><code>wireshark -k -i /tmp/remotecapture &amp;
+ssh <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7c0e1313083c14130f08">[email&#160;protected]</a> "tcpdump -s 0 -n -w - -U -i eth0 not port 22 2&gt;/dev/null" &gt; /tmp/remotecapture
+</code></pre>
+
+<p>And with a non-root account use this</p>
+
+<pre><code>ssh <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="97f9f8f9e5f8f8e3d7fff8e4e3">[email&#160;protected]</a> "echo thePassword | sudo -S tcpdump -s 0 -n -w - -U -i eth0 not port 22 2&gt;/dev/null" &gt; /tmp/remotecapture
+</code></pre>
+
+<p>I couldn't find a better alternative for the latter, please let me know your suggestions.</p>
+
+<p>Instead of option <code>-U</code> you can prefix <code>tcpdump</code> with <code>stdbuf -o 0</code>.</p>
+
+<p>For the sake of readability I added a tl;dr to my question.</p></div>
+            <div class="comment-info" id="comment-50182-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Feb '16, 06:23)</span>
+                <a class="comment-user userinfo" href="/users/1808/wsk">wsk</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-49525" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 11
+        </span>
+        <a href="#" class="show-all-comments-link">show 6 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49525-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="49719"></a>
+                    <div id="answer-container-49719" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-49719-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49719/up/" rel="nofollow"> </a>
+<div id="post-49719-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-49719-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49719/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is also the 2.1.x extcap plugin sshdump that runs tcpdump or dumpcap remotely at the end of an ssh tunnel, although that only seems to work on linux at the moment.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/49719/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Feb '16, 05:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+    <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+    <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grahamb has 274 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-49719">
+    
+        <a name="50036"></a>
+        <div class="comment" id="comment-50036">
+            <div id="post-50036-score" class="comment-score"></div>
+            <div class="comment-text"><p>More detailed info about this plugin, or extcap in general for that matter, seems hard to come by. Will this ever be available for other systems?</p></div>
+            <div class="comment-info" id="comment-50036-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Feb '16, 18:48)</span>
+                <a class="comment-user userinfo" href="/users/1808/wsk">wsk</a>
+                
+            </div>
+        </div>
+    
+        <a name="50103"></a>
+        <div class="comment" id="comment-50103">
+            <div id="post-50103-score" class="comment-score"></div>
+            <div class="comment-text"><p>Unfortunately user visible documentation for extcap is still lacking, despite requests.  There is <a href="https://code.wireshark.org/review/gitweb?p=wireshark.git;a=blob;f=doc/README.extcap;h=6a4f33f44df0e1d5ebf55523f0f29b0cefb297c4;hb=HEAD">README.extcap</a> in the sources\docs directory.</p>
+
+<p>Basically extcap allows plugin processes external to Wireshark to provide "capture" interfaces.  The sshdump plugin makes an ssh connection to the remote machine, runs tcpdump\dumpcap and provides the returned packets to Wireshark.  To make it run on OSX would require some work on the OSX build machine to add libssh (presuming there is a version of the library that runs on OSX), and the Windows version will compile but I can't persuade it to actually capture successfully, see <a href="https://code.wireshark.org/review/#/c/12117/">change 12117</a>.</p></div>
+            <div class="comment-info" id="comment-50103-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Feb '16, 07:43)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="50115"></a>
+        <div class="comment" id="comment-50115">
+            <div id="post-50115-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the reference. <code>libssh</code> can be easily installed via MacPorts. I'm actually looking for a solution with a generally installed command like <code>tcpdump</code>.</p></div>
+            <div class="comment-info" id="comment-50115-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Feb '16, 15:15)</span>
+                <a class="comment-user userinfo" href="/users/1808/wsk">wsk</a>
+                
+            </div>
+        </div>
+    
+        <a name="50126"></a>
+        <div class="comment" id="comment-50126">
+            <div id="post-50126-score" class="comment-score"></div>
+            <div class="comment-text"><p><code>libssh</code> is need to build Wireshark (and sshdump), not on the remote machine.  The remote machine only needs tcpdump or dumpcap to use sshdump.</p></div>
+            <div class="comment-info" id="comment-50126-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Feb '16, 02:24)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-49719" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49719-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="51722"></a>
+                    <div id="answer-container-51722" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-51722-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51722/up/" rel="nofollow"> </a>
+<div id="post-51722-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-51722-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51722/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Seeing as this is actually fairly recent... For what it's worth, I'll leave here my preferred one-liner solution for live remote capture on non-standard ssh ports using Windows' version of wireshark and standard tcpdump on whatever flavor of Linux the remote machine has. It doesn't use the questionable plink (whose main disadvantage is that its flags don't map over to the far more widespread ssh's...), but instead relies on cygwin/standard ssh command. It doesn't strictly require you to use a key to authorize, but if you don't, it stops being a one-liner. </p>
+<p>Also, it isn't hugely efficient in that some of the packets get lost to whatever perils there exist in ssh tunnels. Yet it allows you to benefit from the convenience of Windows Wireshark while utilizing the power of Linux's tcpdump. </p>
+<p>I experimented with opening remote/local tunnels seeking to capture and display all the packets that came, even if they would be displayed with a delay, and so far this so the most accurate representation. Still, not ALL the packets show up on the capture, compared to a local file tcpdump dump. For various reasons of convenience, I can't / don't want to use named pipes unless they can be incorporated into a one-liner. The quest continues.</p>
+<p>(Unconvinced about gzip|gunzip, but so far my tests show that fewer packets get lost this way, at the cost of speed and latency of course. Looking into stdbuf at the moment.)</p>
+<p>Anyway, using cygwin with standard packages and either replacing or defining anything in caps, you'd run:</p>
+<p><strong><code>ssh <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c694838b89928399939583948694838b899283">[email&#160;protected]</a>_HOST -p REMOTE_PORT -i "LOCAL_CYGWIN_PATH_TO_PRIVATE_KEY" -o CheckHostIP=no -o StrictHostKeyChecking=no "tcpdump -ni REMOTE_INTERFACE -s 0 -w - not port 22 and not port REMOTE_PORT" | "LOCAL_CYGWIN_PATH_TO_WIRESHARKEXE" -k -i -</code></strong></p>
+<p>If you use the standard port 22, it gets simpler:</p>
+<p><strong><code>ssh <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="055740484a51405a50564057455740484a5140">[email&#160;protected]</a>_HOST -i "LOCAL_CYGWIN_PATH_TO_PRIVATE_KEY" -o CheckHostIP=no -o StrictHostKeyChecking=no "tcpdump -ni REMOTE_INTERFACE -s 0 -w - not port 22" | "LOCAL_CYGWIN_PATH_TO_WIRESHARKEXE" -k -i -</code></strong></p>
+<p>If you encounter a problem with some packets getting lost, inexplicably, I've found that <code>gzip" | gunzip</code> helps prevent some of it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/51722/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Apr '16, 02:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/51db6b4630760142d4116dad2e6b4b79?s=32&amp;d=identicon&amp;r=g" alt="katzurki's gravatar image" />
+    <p><a href="/users/23907/katzurki">katzurki</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="katzurki has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/51722/">
+                edited
+                <strong>17 Apr '16, 06:32</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-51722">
+    
+        <a name="53700"></a>
+        <div class="comment" id="comment-53700">
+            <div id="post-53700-score" class="comment-score"></div>
+            <div class="comment-text"><p>Are you really missing packets, or is just the delayed line buffering?</p></div>
+            <div class="comment-info" id="comment-53700-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jun '16, 11:15)</span>
+                <a class="comment-user userinfo" href="/users/1808/wsk">wsk</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-51722" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51722-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/49410/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hVnZ7Kt1DJjjINmTw5IVSp1nZHnWoum6' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49410/remote-capture-with-tcpdump-and-named-pipe?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49410/remote-capture-with-tcpdump-and-named-pipe?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tcpdump/"
+            class="tag-link-tcpdump"
+            title="see questions tagged'tcpdump'using tags"
+            rel="tag">tcpdump</a> <span class="tag-number">&#215;97</span><br/>
+        
+        <a href="/tags/remote/"
+            class="tag-link-remote"
+            title="see questions tagged'remote'using tags"
+            rel="tag">remote</a> <span class="tag-number">&#215;59</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 20, 2016, 12:25 p.m.">20 Jan '16, 12:25</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>23,943 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 28, 2016, 11:15 a.m.">28 Jun '16, 11:15</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13414/is-it-possible-to-prepare-a-filter-for-tcpdump-command-in-linux-servers">Is it possible to prepare a filter for TCPDUMP command in Linux Servers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58696/ssh-remote-capture-tcpdump">SSH Remote Capture TCPdump</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46/cannot-capture-packets-from-remote-system">Cannot capture packets from remote system.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13352/remote-packet-capture-linux-to-linux">[closed] Remote Packet Capture : Linux to Linux</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25088/using-wireshark-over-vpn">Using WireShark over VPN</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50804/is-wire-shark-capable-of-seeing-others-peoples-traffic">is wire shark capable of seeing others peoples traffic</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13855/tool-for-saving-files-html-php-etc-from-capture">tool for saving files (html, php etc.) from capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21391/what-is-this-mean-ieee802_11_radio-is-not-one-of-the-dlts-supported-by-this-device">What is this mean? IEEE802_11_RADIO is not one of the DLTs supported by this device</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32918/percentage-of-tcp-traffic-to-total-traffic">Percentage of TCP traffic to Total Traffic</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39621/understanding-tcprst-from-ad-configured-as-directory-url-servers-in-rsa-auth-mgr">Understanding TCP/RST from AD - configured as Directory URL servers in RSA Auth Mgr</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

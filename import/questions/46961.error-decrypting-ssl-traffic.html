@@ -1,0 +1,1001 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Error decrypting SSL traffic - Wireshark Q&amp;A</title>
+        <meta name="description" content="I have searched the forum and found only one other question with the same error, which was not answered. I am trying to decrypt an SSL connection. It doesn&#39;t use DH, so I understand it should be possible to decrypt. The following log shows the error. Specifically, it appears to be ssl_generate_pre_m..." />
+        <meta name="keywords" content="ssl,decryption,error" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/46961/error-decrypting-ssl-traffic" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/46961/error-decrypting-ssl-traffic?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='mkTL01XA1Eh16h6omINyN3OiQUghd5P6' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/46961/error-decrypting-ssl-traffic">Error decrypting SSL traffic</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-46961-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46961/up/" rel="nofollow"> </a>
+<div id="post-46961-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-46961-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46961/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/46961/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have searched the forum and found only one other question with the same error, which was not answered. I am trying to decrypt an SSL connection. It doesn't use DH, so I understand it should be possible to decrypt. The following log shows the error.</p>
+<p>Specifically, it appears to be<br>
+<code>ssl_generate_pre_master_secret: not enough data to generate key (required state 17)</code></p>
+<hr>
+<pre><code>Wireshark SSL debug log
+
+ssl_association_remove removing TCP 443 - http handle 0x10e060a10
+Private key imported: KeyID 7a:68:98:9b:11:ee:eb:07:ac:b8:05:8d:fe:d6:d6:57:...
+ssl_load_key: swapping p and q parameters and recomputing u
+ssl_init IPv4 addr '172.16.9.8' (172.16.9.8) port '443' filename '/Users/obeattie/Desktop/key.key' password(only for p12 file) ''
+ssl_init private key file /Users/obeattie/Desktop/key.key successfully loaded.
+association_add TCP port 443 protocol http handle 0x10e060a10
+
+dissect_ssl enter frame #3 (first time)
+ssl_session_init: initializing ptr 0x10bfa6440 size 712
+association_find: TCP port 57514 found 0x0
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x10bfa6440
+  record: offset = 0, reported_length_remaining = 129
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 124, ssl state 0x00
+association_find: TCP port 57514 found 0x0
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 120 bytes, remaining 129 
+packet_from_server: is from server - FALSE
+ssl_find_private_key server 172.16.9.8:443
+ssl_find_private_key: testing 1 keys
+dissect_ssl3_hnd_hello_common found CLIENT RANDOM -&gt; state 0x01
+
+dissect_ssl enter frame #6 (first time)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x10bfa6440
+  record: offset = 0, reported_length_remaining = 326
+dissect_ssl3_record found version 0x0301(TLS 1.0) -&gt; state 0x11
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 262, ssl state 0x11
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 16 offset 5 length 258 bytes, remaining 267 
+ssl_generate_pre_master_secret: found SSL_HND_CLIENT_KEY_EXCHG, state 11
+ssl_generate_pre_master_secret: not enough data to generate key (required state 17)
+dissect_ssl3_handshake can't generate pre master secret
+  record: offset = 267, reported_length_remaining = 59
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - FALSE
+ssl_change_cipher CLIENT
+  record: offset = 273, reported_length_remaining = 53
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 48, ssl state 0x11
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 82 offset 278 length 11871576 bytes, remaining 326
+
+dissect_ssl enter frame #7 (first time)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x10bfa6440
+  record: offset = 0, reported_length_remaining = 245
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 240, ssl state 0x11
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 57514 found 0x0
+association_find: TCP port 443 found 0x1104b0d20
+
+dissect_ssl enter frame #8 (first time)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x10bfa6440
+  record: offset = 0, reported_length_remaining = 1380
+  need_desegmentation: offset = 0, reported_length_remaining = 1380
+
+dissect_ssl enter frame #9 (first time)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x10bfa6440
+  record: offset = 0, reported_length_remaining = 1557
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1552, ssl state 0x11
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 57514 found 0x0
+association_find: TCP port 443 found 0x1104b0d20
+
+dissect_ssl enter frame #3 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x0
+  record: offset = 0, reported_length_remaining = 129
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 120 bytes, remaining 129
+
+dissect_ssl enter frame #6 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x0
+  record: offset = 0, reported_length_remaining = 326
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 16 offset 5 length 258 bytes, remaining 267 
+  record: offset = 267, reported_length_remaining = 59
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 273, reported_length_remaining = 53
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 82 offset 278 length 11871576 bytes, remaining 326
+
+dissect_ssl enter frame #7 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x0
+  record: offset = 0, reported_length_remaining = 245
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 57514 found 0x0
+association_find: TCP port 443 found 0x1104b0d20
+
+dissect_ssl enter frame #9 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x0
+  record: offset = 0, reported_length_remaining = 1557
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 57514 found 0x0
+association_find: TCP port 443 found 0x1104b0d20
+
+dissect_ssl enter frame #3 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x0
+  record: offset = 0, reported_length_remaining = 129
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 120 bytes, remaining 129
+
+dissect_ssl enter frame #3 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x0
+  record: offset = 0, reported_length_remaining = 129
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 120 bytes, remaining 129
+
+dissect_ssl enter frame #3 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x0
+  record: offset = 0, reported_length_remaining = 129
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 120 bytes, remaining 129
+
+dissect_ssl enter frame #3 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x0
+  record: offset = 0, reported_length_remaining = 129
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 120 bytes, remaining 129
+
+dissect_ssl enter frame #6 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x0
+  record: offset = 0, reported_length_remaining = 326
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 16 offset 5 length 258 bytes, remaining 267 
+  record: offset = 267, reported_length_remaining = 59
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 273, reported_length_remaining = 53
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 82 offset 278 length 11871576 bytes, remaining 326
+
+dissect_ssl enter frame #7 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x0
+  record: offset = 0, reported_length_remaining = 245
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 57514 found 0x0
+association_find: TCP port 443 found 0x1104b0d20
+
+dissect_ssl enter frame #9 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x0
+  record: offset = 0, reported_length_remaining = 1557
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 57514 found 0x0
+association_find: TCP port 443 found 0x1104b0d20
+
+dissect_ssl enter frame #3 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x0
+  record: offset = 0, reported_length_remaining = 129
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 120 bytes, remaining 129
+
+dissect_ssl enter frame #3 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x0
+  record: offset = 0, reported_length_remaining = 129
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 120 bytes, remaining 129
+
+dissect_ssl enter frame #6 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0x10ee01058, ssl_session = 0x0
+  record: offset = 0, reported_length_remaining = 326
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 16 offset 5 length 258 bytes, remaining 267 
+  record: offset = 267, reported_length_remaining = 59
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 273, reported_length_remaining = 53
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 82 offset 278 length 11871576 bytes, remaining 326
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ssl/" class="post-tag tag-link-ssl"
+                                        title="see questions tagged 'ssl'" rel="tag">ssl</a>
+                                
+                                    <a href="/tags/decryption/" class="post-tag tag-link-decryption"
+                                        title="see questions tagged 'decryption'" rel="tag">decryption</a>
+                                
+                                    <a href="/tags/error/" class="post-tag tag-link-error"
+                                        title="see questions tagged 'error'" rel="tag">error</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>26 Oct '15, 15:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/acab65d674375c233a783d1aad163528?s=32&amp;d=identicon&amp;r=g" alt="obeattie's gravatar image" />
+    <p><a href="/users/20538/obeattie">obeattie</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="obeattie has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-46961">
+    
+        <a name="46962"></a>
+        <div class="comment" id="comment-46962">
+            <div id="post-46962-score" class="comment-score"></div>
+            <div class="comment-text"><p>there seems to be something wrong with the ssl debug file. Take a look at the frame numbers. They are jumping back and forth !? </p>
+
+<p>Can you please do the following:</p>
+
+<ul>
+<li>close Wireshark</li>
+<li>empty the ssl debug file</li>
+<li>open Wireshark</li>
+<li>load the pcap file</li>
+<li>close Wireshark</li>
+<li>upload the full ssl debug file somewhere</li>
+</ul></div>
+            <div class="comment-info" id="comment-46962-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '15, 15:10)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47053"></a>
+        <div class="comment" id="comment-47053">
+            <div id="post-47053-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/20538/obeattie">@obeattie</a> In addition, please add the version of Wireshark that you are using.</p></div>
+            <div class="comment-info" id="comment-47053-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '15, 02:59)</span>
+                <a class="comment-user userinfo" href="/users/5644/lekensteyn">Lekensteyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="47059"></a>
+        <div class="comment" id="comment-47059">
+            <div id="post-47059-score" class="comment-score"></div>
+            <div class="comment-text"><p>Offtopic, <a href="/users/5644/lekensteyn">@Lekensteyn</a>, could the ssl debug log have the version added to the first entry?</p></div>
+            <div class="comment-info" id="comment-47059-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '15, 05:09)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47064"></a>
+        <div class="comment" id="comment-47064">
+            <div id="post-47064-score" class="comment-score"></div>
+            <div class="comment-text"><p>Offtopic #2 :-)), <a href="/users/5644/lekensteyn">@Lekensteyn</a>, could please add some code to the SSL dissector to detect ciphers with Diffie Hellman and add a warning/info message to the ssl debug log?</p></div>
+            <div class="comment-info" id="comment-47064-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '15, 07:14)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47065"></a>
+        <div class="comment" id="comment-47065">
+            <div id="post-47065-score" class="comment-score"></div>
+            <div class="comment-text"><p>Offtopic #3 :-)), <a href="/users/5644/lekensteyn">@Lekensteyn</a>, and some code to detect SSL session resume or TLS tickets with missing key exchange plus an info/warning in the ssl debug log?</p></div>
+            <div class="comment-info" id="comment-47065-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '15, 07:16)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47066"></a>
+        <div class="comment not_top_scorer" id="comment-47066">
+            <div id="post-47066-score" class="comment-score"></div>
+            <div class="comment-text"><p>Offtopic replies: I was thinking about adding the string representation of the cipher suites and WS version, but adding hints is probably a good idea! Patch is in being baked.</p></div>
+            <div class="comment-info" id="comment-47066-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '15, 07:16)</span>
+                <a class="comment-user userinfo" href="/users/5644/lekensteyn">Lekensteyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="47069"></a>
+        <div class="comment not_top_scorer" id="comment-47069">
+            <div id="post-47069-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/2593/kurt-knochner"></a><a href="/users/2593/kurt-knochner">@Kurt Knochner</a> You do not seem to have a Gerrit account, is that correct? The patch for versions is at <a href="https://code.wireshark.org/review/11403,">https://code.wireshark.org/review/11403,</a> I will look into adding expert info for session resumption.</p></div>
+            <div class="comment-info" id="comment-47069-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '15, 08:23)</span>
+                <a class="comment-user userinfo" href="/users/5644/lekensteyn">Lekensteyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="47091"></a>
+        <div class="comment not_top_scorer" id="comment-47091">
+            <div id="post-47091-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/5644/lekensteyn"></a><a href="/users/5644/lekensteyn">@Lekensteyn</a>: No, I don't have a Gerrit account yet as I don't have the feeling I have something useful to cotribute to the code ;-)</p>
+
+<blockquote>
+<p>The patch for versions is at <a href="https://code.wireshark.org/review/11403,">https://code.wireshark.org/review/11403,</a> </p>
+</blockquote>
+
+<p>I'll have a look, but I'm sure you know much better than me what you are doing ;-)</p>
+
+<blockquote>
+<p>I will look into adding expert info for session resumption.</p>
+</blockquote>
+
+<p>Thanks!</p></div>
+            <div class="comment-info" id="comment-47091-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '15, 08:22)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="47316"></a>
+        <div class="comment not_top_scorer" id="comment-47316">
+            <div id="post-47316-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/2593/kurt-knochner"></a><a href="/users/2593/kurt-knochner">@Kurt Knochner</a> I have added the session resumption hint in <a href="https://code.wireshark.org/review/11583.">https://code.wireshark.org/review/11583.</a> I have doubt on adding another warning for DH suites though, the user can easily learn this by looking at the handshake. And if an expert info field is added to the ClientKeyExchange packet, then it will not be visible in other packets (like Application data). Adding it to every Application Data message introduces some noise. So in the end I think it is better to educate the user on dissecting packets. Thoughts?</p></div>
+            <div class="comment-info" id="comment-47316-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Nov '15, 14:25)</span>
+                <a class="comment-user userinfo" href="/users/5644/lekensteyn">Lekensteyn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-46961" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46961-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/46961/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='mkTL01XA1Eh16h6omINyN3OiQUghd5P6' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46961/error-decrypting-ssl-traffic?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46961/error-decrypting-ssl-traffic?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ssl/"
+            class="tag-link-ssl"
+            title="see questions tagged'ssl'using tags"
+            rel="tag">ssl</a> <span class="tag-number">&#215;319</span><br/>
+        
+        <a href="/tags/error/"
+            class="tag-link-error"
+            title="see questions tagged'error'using tags"
+            rel="tag">error</a> <span class="tag-number">&#215;193</span><br/>
+        
+        <a href="/tags/decryption/"
+            class="tag-link-decryption"
+            title="see questions tagged'decryption'using tags"
+            rel="tag">decryption</a> <span class="tag-number">&#215;165</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 26, 2015, 3:01 p.m.">26 Oct '15, 15:01</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,803 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 5, 2015, 2:25 p.m.">05 Nov '15, 14:25</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/14805/ssl-decryption-error">SSL Decryption Error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37419/decrypt-error-after-handshake-protocol-certificate">Decrypt error after Handshake protocol: certificate</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28145/cant-decrypt-ssl-in-capture-from-windump">Can&#39;t decrypt ssl in capture from windump</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36524/unable-to-decrypt-ssl-traffic-in-wireshark">unable to decrypt ssl traffic in wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48112/how-to-decrypt-ssl-on-os-x">How to decrypt SSL on OS X</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37569/tshark-the-file-capturecap-appears-to-have-been-cut-short-in-the-middle-of-a-packet">tshark: The file &quot;capture.cap&quot; appears to have been cut short in the middle of a packet.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6426/ssl-decryption-problems">SSL Decryption Problems</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8373/dtls-decryption-not-working-on-wireshark-165-even-for-sample-capture">DTLS decryption not working on Wireshark 1.6.5, even for sample capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45733/same-server-certificate-used-by-two-iis-one-of-them-can-not-be-decrypted">Same server certificate used by two IIS, one of them can not be decrypted.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62441/decrypt-secure-web-socket-traffic-not-working">Decrypt Secure Web Socket traffic not working</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,953 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Custom dissector - Handling of zero length in proto_tree_add_item - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, I have a question regarding the usage of proto_tree_add_item() in a custom dissector. I encountered a scenario wherein the length parameter to the proto_tree_add_item() function was zero resulting in a malformed packet error (Trying to fetch an unsigned integer with length 0). My question is, sh..." />
+        <meta name="keywords" content="dissector,custom" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/57081/custom-dissector-handling-of-zero-length-in-proto_tree_add_item" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/57081/custom-dissector-handling-of-zero-length-in-proto_tree_add_item?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='HXzWDe7FQSgir4rcgVBWXH48ASgt3cj9' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/57081/custom-dissector-handling-of-zero-length-in-proto_tree_add_item">Custom dissector - Handling of zero length in proto_tree_add_item</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-57081-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57081/up/" rel="nofollow"> </a>
+<div id="post-57081-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-57081-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57081/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/57081/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I have a question regarding the usage of <code>proto_tree_add_item()</code> in a custom dissector. I encountered a scenario wherein the length parameter to the <code>proto_tree_add_item()</code> function was zero resulting in a malformed packet error (Trying to fetch an unsigned integer with length 0).</p>
+<p>My question is, should the custom dissector always handle such scenarios (length 0 or -1) before calling the <code>proto_tree_add_item()</code> function? Or is there some other way to handle such cases?</p>
+<p>Any help is greatly appreciated! Thanks!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/dissector/" class="post-tag tag-link-dissector"
+                                        title="see questions tagged 'dissector'" rel="tag">dissector</a>
+                                
+                                    <a href="/tags/custom/" class="post-tag tag-link-custom"
+                                        title="see questions tagged 'custom'" rel="tag">custom</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Nov '16, 10:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/70baba446202981a08e25a49438b4161?s=32&amp;d=identicon&amp;r=g" alt="sherlock_000's gravatar image" />
+    <p><a href="/users/25363/sherlock_000">sherlock_000</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sherlock_000 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/57081/">
+                edited
+                <strong>07 Nov '16, 10:47</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-57081">
+    
+        <a name="57084"></a>
+        <div class="comment" id="comment-57084">
+            <div id="post-57084-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't get why the size of a source field which is assumed to represent an uint should ever be 0. Either the field in question is optional for the protocol, so it should not be added to the tree at all if it is not present in the tvb, or it is mandatory and thus expected at that point of the tvb, and in such case, the packet is really malformed if the tvb ends right before the expected occurrence of the field. Another possibility is that the field is optional and has no value, so its type is not uint.</p>
+
+<p>Can you elaborate?</p></div>
+            <div class="comment-info" id="comment-57084-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Nov '16, 11:01)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="57087"></a>
+        <div class="comment" id="comment-57087">
+            <div id="post-57087-score" class="comment-score"></div>
+            <div class="comment-text"><p>Or the field is variable-length and doesn't use the binary encoding that <code>proto_tree_add_item()</code> expects all FT_UINTn values to have, where there are, for octet-aligned values, somewhere between 1 and 8 octets of value.  What <em>is</em> the encoding of the field in question?</p></div>
+            <div class="comment-info" id="comment-57087-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Nov '16, 13:01)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="57123"></a>
+        <div class="comment" id="comment-57123">
+            <div id="post-57123-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Sindy and Guy Harris for your comments. As you mentioned, it might be better if I explain my situation with an example.</p>
+
+<p>I have a UINT16 field (Little Endian encoding) which might be part of the protocol I am dissecting if the previous byte was set. The following is the logic I am trying to achieve</p>
+
+<p>1) Check whether the previous byte was set</p>
+
+<p>2) If so, check the number of remaining bytes in the tvb buffer</p>
+
+<p>3) If the number of remaining bytes is less than 2 (as the field is UINT16), I would like to add the field to the tree with the remaining bytes and also add an Expert info to this field indicating that there is an issue with this.</p>
+
+<p>The problem that I mentioned in my initial post occurs during step 3 when I try to add the field using <code>proto_tree_add_item()</code> with remaining bytes(in this case 0, because the tvb buffer did not have any bytes remaining). I was expecting the field to be created the same way as it works for a FT_BYTES field with length 0, but unfortunately malformed packet error occurs for the FT_UINT16 field.</p>
+
+<p>So to go back to my initial question, should the dissector take care that at least 1 byte is available before calling <code>proto_tree_add_item</code> for a FT_UINTn field?</p></div>
+            <div class="comment-info" id="comment-57123-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '16, 00:44)</span>
+                <a class="comment-user userinfo" href="/users/25363/sherlock_000">sherlock_000</a>
+                
+            </div>
+        </div>
+    
+        <a name="57124"></a>
+        <div class="comment" id="comment-57124">
+            <div id="post-57124-score" class="comment-score"></div>
+            <div class="comment-text"><p>What are the protocols over which this protocol runs?</p>
+
+<p>In particular, does it run over a byte-stream protocol such as TCP or TLS-over-TCP, or does it run over a protocol that exposes packet boundaries to protocols running atop it?</p></div>
+            <div class="comment-info" id="comment-57124-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '16, 00:50)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="57125"></a>
+        <div class="comment" id="comment-57125">
+            <div id="post-57125-score" class="comment-score"></div>
+            <div class="comment-text"><p>It runs over either TCP or UDP</p></div>
+            <div class="comment-info" id="comment-57125-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '16, 00:50)</span>
+                <a class="comment-user userinfo" href="/users/25363/sherlock_000">sherlock_000</a>
+                
+            </div>
+        </div>
+    
+        <a name="57128"></a>
+        <div class="comment not_top_scorer" id="comment-57128">
+            <div id="post-57128-score" class="comment-score"></div>
+            <div class="comment-text"><p>If it runs over UDP, does a single packet for the protocol correspond to a single UDP packet, so that you don't have multiple packets for the protocol in a single UDP packet and you don't have multiple UDP packets being reassembled into a single packet for the protocol?</p>
+
+<p>If it runs over TCP, there has to be <em>some</em> mechanism to indicate where the packet boundaries are in the byte stream; does each packet begin with a length field that indicates how long the packet is, or is some other mechanism used?</p></div>
+            <div class="comment-info" id="comment-57128-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '16, 00:55)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="57134"></a>
+        <div class="comment not_top_scorer" id="comment-57134">
+            <div id="post-57134-score" class="comment-score"></div>
+            <div class="comment-text"><p>A single TCP/UDP payload might contain more than one packet of the custom protocol. As of now, there is no reassembly of multiple TCP/UDP packets necessary, but it might be helpful for me to know how to handle such cases too.</p>
+
+<p>To your question regarding the length of the protocol packet, yes, there is a header within each protocol packet that has the length information of that particular packet. There could be cases(rare) wherein the length field might be wrong. Will that cause a problem?</p></div>
+            <div class="comment-info" id="comment-57134-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '16, 01:06)</span>
+                <a class="comment-user userinfo" href="/users/25363/sherlock_000">sherlock_000</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-57081" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57081-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/57081/custom-dissector-handling-of-zero-length-in-proto_tree_add_item?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/57081/custom-dissector-handling-of-zero-length-in-proto_tree_add_item?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/57081/custom-dissector-handling-of-zero-length-in-proto_tree_add_item?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/57081/custom-dissector-handling-of-zero-length-in-proto_tree_add_item?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="57136"></a>
+                    <div id="answer-container-57136" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-57136-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57136/up/" rel="nofollow"> </a>
+<div id="post-57136-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-57136-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57136/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>OK, so if the flag byte has a non-zero value, but there are fewer than 2 bytes left in the packet after it, that probably means that the protocol's packet is <em>not</em> entirely contained within the TCP segment (or UDP packet?), so that you will be able to correctly dissect the 2-byte integer field only if you do reassembly.</p>
+<p>I.e., yes, there <strong><em>IS</em></strong> reassembly of multiple TCP packets necessary to solve your problem, and, if packets for the custom protocol can be split between UDP packets, there is also reassembly of multiple UDP packets necessary to solve your problem.</p>
+<p>For TCP, use <code>tcp_dissect_pdus()</code>; see section 2.7.1 of <a href="https://code.wireshark.org/review/gitweb?p=wireshark.git;a=blob;f=doc/README.dissector;h=3c6ba01adb0219e5a24fb8c9442c60c360b50c57;hb=HEAD">the README.dissector file</a>.</p>
+<p>For UDP, if there are never packets for the custom protocol that are split between UDP packets - i.e., a single UDP packet can contain more than one packet for the custom protocol, but no packet for the custom protocol is ever split between UDP packets - you can just have a loop that processes the UDP payload a packet at a time.  If there <em>are</em> packets for the custom protocol that are split between UDP packets, then you'll have to write your own reassembly code.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/57136/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Nov '16, 01:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-57136">
+    
+        <a name="57143"></a>
+        <div class="comment" id="comment-57143">
+            <div id="post-57143-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the answer. I am currently having a loop similar to what you mentioned to handle multiple packets within a single TCP/UDP payload. </p>
+
+<p>The reason I didn't use <code>tcp_dissect_pdus()</code> is because there might be packets where the message length might be incorrect. What will happen if the packet length extracted from the header is invalid(for e.g. higher than the actual reported length, or smaller than the length expected for the current protocol packet)? How will <code>tcp_dissect_pdus()</code> react in such a case?</p>
+
+<p>You had also mentioned that if there are fewer than 2 bytes left in the overall UDP packet, there could be a possibility of reassembly. But I am also interested in a situation when the protocol was not implemented properly in a device and hence that optional field of 2 bytes was not sent. I was thinking I could add the field using <code>proto_tree_add_item</code> and then include the expert info to that field. Is it never possible for a dissector to add a FT_UINTn field with 0 bytes?</p></div>
+            <div class="comment-info" id="comment-57143-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '16, 01:48)</span>
+                <a class="comment-user userinfo" href="/users/25363/sherlock_000">sherlock_000</a>
+                
+            </div>
+        </div>
+    
+        <a name="57144"></a>
+        <div class="comment" id="comment-57144">
+            <div id="post-57144-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>What will happen if the packet length extracted from the header is invalid(for e.g. higher than the actual reported length, or smaller than the length expected for the current protocol packet)?</p>
+</blockquote>
+
+<p>Then your protocol won't actually <em>work</em>, and if Wireshark mis-dissects it, that's a <em>feature</em> not a bug!  It will show what the receiving machine will <em>think</em> the packet will look like.</p>
+
+<blockquote>
+<p>You had also mentioned that if there are fewer than 2 bytes left in the overall UDP packet, there could be a possibility of reassembly.</p>
+</blockquote>
+
+<p>No, I said that if the flag byte means "there is a 2-byte integer following the flag byte", but there aren't 2 bytes remaining after that in the TCP segment or UDP datagram, then the packet for your protocol is malformed.</p>
+
+<blockquote>
+<p>But I am also interested in a situation when the protocol was not implemented properly in a device and hence that optional field of 2 bytes was not sent.</p>
+</blockquote>
+
+<p>Then, for TCP, Wireshark will try to grab the next 2 bytes from the data stream and add it to the packet, and dissect that.  If that doesn't look right, that's an excellent indication that the sending machine is buggy and needs to be fixed, because the receiving machine will <em>also</em> try to grab the next to bytes from the data stream and treat it as part of the packet.</p>
+
+<blockquote>
+<p>Is it never possible for a dissector to add a FT_UINTn field with 0 bytes?</p>
+</blockquote>
+
+<p>No, because that would not make any sense at all.  An FT_UINT16 field with 1 byte is rarely used - if the field is always supposed to be 1 byte long, that'd be an FT_UINT8 field, and if it's 1 byte in some packets and 2 bytes in other packets, it's convenient to use FT_UINT16 (although the main difference between FT_UINT8 and FT_UINT16 is whether, when displayed in hex or octal, it shows 8 or 16 bits worth of hex or octal digits - for decimal, we don't provide leading zeroes, so that doesn't make a difference).</p>
+
+<p>But at least there <em>is</em> a value if there's only 1 byte.  With 0 bytes, there are no bytes to <em>provide</em> a value, so there is no possible way in which an FT_UINTn field with 0 bytes could be sanely implemented.</p>
+
+<p>And, if you really don't want to do reassembly, because the senders of these packets are developed by not-very-competent programmers and they screw up the packet length <em>that</em> much, then, if there aren't 2 bytes present, you should just put up an expert info saying "either this packet crosses TCP segment boundaries or the person who developed the code that sent it needs adult supervision".</p></div>
+            <div class="comment-info" id="comment-57144-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '16, 02:15)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="57146"></a>
+        <div class="comment" id="comment-57146">
+            <div id="post-57146-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks a lot for your detailed explanation. </p>
+
+<p>When I asked the question, I was under the impression that a field with FT_BYTES or FT_UINTn should behave in a same way when the length parameter is 0. Because I remember seeing a FT_BYTES field displaying <code>&lt;MISSING&gt;</code> when the length parameter for <code>proto_tree_add_item()</code> was 0. So I was expecting the same behavior for a FT_UINTn field too.</p></div>
+            <div class="comment-info" id="comment-57146-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '16, 03:05)</span>
+                <a class="comment-user userinfo" href="/users/25363/sherlock_000">sherlock_000</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-57136" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57136-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/57081/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='HXzWDe7FQSgir4rcgVBWXH48ASgt3cj9' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/57081/custom-dissector-handling-of-zero-length-in-proto_tree_add_item?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/57081/custom-dissector-handling-of-zero-length-in-proto_tree_add_item?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/dissector/"
+            class="tag-link-dissector"
+            title="see questions tagged'dissector'using tags"
+            rel="tag">dissector</a> <span class="tag-number">&#215;637</span><br/>
+        
+        <a href="/tags/custom/"
+            class="tag-link-custom"
+            title="see questions tagged'custom'using tags"
+            rel="tag">custom</a> <span class="tag-number">&#215;33</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 7, 2016, 10:18 a.m.">07 Nov '16, 10:18</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,315 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 8, 2016, 3:05 a.m.">08 Nov '16, 03:05</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/47261/error-building-plugin">error building plugin</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22797/error-control-in-custom-dissector">Error Control in custom dissector</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59365/converting-se_alloc-to-wmem">Converting se_alloc() to wmem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14393/how-does-tcp-track-sequence-numbers">How does TCP track sequence numbers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20052/how-to-add-custom-protocol-dissector-for-layer-1-ethernet-protcol">how to add custom protocol dissector for layer 1 (ethernet) protcol</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22264/custom-wireshark-dissector-for-ethernet">Custom Wireshark dissector for Ethernet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59151/how-to-reassemble-custom-protocols-with-lua">How to reassemble custom protocols with Lua?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59945/ubuntu-1604-plugin-compilation-issue">Ubuntu 16.04 plugin compilation issue</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23479/custom-dissector-how-to-format-data">Custom dissector - How to format data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55284/dissect-custom-data-with-encrypted-part">dissect custom data with encrypted part</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1078 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Only Capturing SYN packets, no SYN-ACKs or ACKs - Wireshark Q&amp;A</title>
+        <meta name="description" content="Been having an issue on my network for a few days and can&#39;t quite seem to figure out the issue here. In a nutshell, from my cable modem I have an outer router, switch and an inner router. All hosts connect to the inner router and all traffic flows out through the outer router. The 5-port switch is t..." />
+        <meta name="keywords" content="ack,syn,packet" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/9752/only-capturing-syn-packets-no-syn-acks-or-acks" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/9752/only-capturing-syn-packets-no-syn-acks-or-acks?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ewiNGOZKdVRhNcl5RkKWX42SBBlJCjjO' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/9752/only-capturing-syn-packets-no-syn-acks-or-acks">Only Capturing SYN packets, no SYN-ACKs or ACKs</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-9752-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9752/up/" rel="nofollow"> </a>
+<div id="post-9752-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-9752-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9752/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/9752/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Been having an issue on my network for a few days and can't quite seem to figure out the issue here.  In a nutshell, from my cable modem I have an outer router, switch and an inner router.  All hosts connect to the inner router and all traffic flows out through the outer router.  The 5-port switch is technically a hardwired TAP, (everything ingressing/degressing) on port 1 (plugged to the outer router) is mirrored on port 5 (where I have an IDS). 
+Running Wireshark on the IDS and pulling up websites I can see 3-way handshakes, ARP, IGMP, etc traffic all day long.  I can also see traffic from hosts (connected to the inner router) outbound.  The only thing I don't see is most of the return traffic from the other hosts on the network.  For instance, host connects to a website, on the IDS using Wireshark I see the typical SYN packet but no return SYN-ACK/ACK.  The host connects fine and I can surf all day long.  If I ping my outer router from the same host I see the outbound ICMP traffic, but no return ICMP traffic from the IDS.<br>
+2 main things that are not jiving here is that I have SNORT running on the IDS rig and it is alerting off of inbound and outbound traffic with no issues.  Also, I run Microsoft's Network Monitor 3.4 and it picks up all the traffic I don't see in Wireshark - meaning I can see the 3-way handshake when connecting to websites with other hosts. 
+If I run TShark and WinDump - I am also NOT able to capture all of the packets. 
+I find it hard to believe that I have three programs that are not able to capture all packets on the wire but the Microsoft's app does?  Love the tool but I would prefer Wireshark.  Perhaps I am having an issue with my NIC not compatible with the other programs.  I am running a Realtek RTL 8168;</p>
+<p>Help me Obi-Wan Kenobi .... you're my only hope!    <br>
+</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ack/" class="post-tag tag-link-ack"
+                                        title="see questions tagged 'ack'" rel="tag">ack</a>
+                                
+                                    <a href="/tags/syn/" class="post-tag tag-link-syn"
+                                        title="see questions tagged 'syn'" rel="tag">syn</a>
+                                
+                                    <a href="/tags/packet/" class="post-tag tag-link-packet"
+                                        title="see questions tagged 'packet'" rel="tag">packet</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Mar '12, 19:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8d0e91732a69c04694b3e883d9ab6002?s=32&amp;d=identicon&amp;r=g" alt="DigitalSyn's gravatar image" />
+    <p><a href="/users/2417/digitalsyn">DigitalSyn</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DigitalSyn has one accepted answer">33&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-9752">
+    
+</div>
+<div id="comment-tools-9752" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9752-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/9752/only-capturing-syn-packets-no-syn-acks-or-acks?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/9752/only-capturing-syn-packets-no-syn-acks-or-acks?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/9752/only-capturing-syn-packets-no-syn-acks-or-acks?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/9752/only-capturing-syn-packets-no-syn-acks-or-acks?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="14632"></a>
+                    <div id="answer-container-14632" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-14632-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/14632/up/" rel="nofollow"> </a>
+<div id="post-14632-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-14632-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/14632/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="DigitalSyn has selected this answer as the correct answer"
+        href="/accept_answer/14632/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Can I answer my own question?</p>
+<p>Anyways for everyone\anyone interested in the solution that I came up.  Apparently the issue lies within Win 7 X64 and in the deep abyss of how it handles its NIC card drivers and associated applications (at least on all of my hosts as every one of them is running Win 7 x64).  I did not get to the actual root of the problem (I could have loaded a customized driver and I did not try another version of Microsoft); I went ahead and scrapped the OS and loaded Ubuntu 12.04 and everything is coming up gloriously.</p>
+<p>All I have to do now is return $300 worth of networking equipment I thought was the culprit.<br>
+</p>
+<p>Thanks everyone for taking the time to read.   <br>
+</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/14632/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Oct '12, 16:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8d0e91732a69c04694b3e883d9ab6002?s=32&amp;d=identicon&amp;r=g" alt="DigitalSyn's gravatar image" />
+    <p><a href="/users/2417/digitalsyn">DigitalSyn</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DigitalSyn has one accepted answer">33&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-14632">
+    
+        <a name="14635"></a>
+        <div class="comment" id="comment-14635">
+            <div id="post-14635-score" class="comment-score"></div>
+            <div class="comment-text"><p>What you didn't report is which version of Wireshark you were using, and whether it was 32 or 64 bit.  As noted elsewhere on a similar question, I and many colleagues capture on Win7 x64 using the 32 bit version of Wireshark (1.6.x, 1.8.x and dev trunk) without any issues.</p></div>
+            <div class="comment-info" id="comment-14635-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Oct '12, 23:49)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="14642"></a>
+        <div class="comment" id="comment-14642">
+            <div id="post-14642-score" class="comment-score"></div>
+            <div class="comment-text"><p>That is good to know grahamb, I was running Wireshark x64 (1.8.2) on my hosts at the time.</p></div>
+            <div class="comment-info" id="comment-14642-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Oct '12, 12:00)</span>
+                <a class="comment-user userinfo" href="/users/2417/digitalsyn">DigitalSyn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-14632" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-14632-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="9771"></a>
+                    <div id="answer-container-9771" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-9771-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9771/up/" rel="nofollow"> </a>
+<div id="post-9771-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-9771-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9771/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Might there be some interfering software installed on the IDS box? VPN client, Personal FW, AV software, etc? Please have a look at the <a href="http://wiki.wireshark.org/CaptureSetup/InterferingSoftware">wireshark wiki</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/9771/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Mar '12, 12:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-9771">
+    
+        <a name="9818"></a>
+        <div class="comment" id="comment-9818">
+            <div id="post-9818-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks SYN-bit for the post.  I thought the same thing as well but I am running nothing out of the ordinary on the IDS box.  It's a very basic load; also I have Ubuntu installed on the IDS box and when I run Wireshark it is not able to pick up any return traffic either.  <br>
+</p></div>
+            <div class="comment-info" id="comment-9818-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '12, 06:24)</span>
+                <a class="comment-user userinfo" href="/users/2417/digitalsyn">DigitalSyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="9823"></a>
+        <div class="comment" id="comment-9823">
+            <div id="post-9823-score" class="comment-score"></div>
+            <div class="comment-text"><p>Were you running MS Netmon on the same box in a different partition? Or on another box on the same switchport?</p>
+
+<p>I assume you are running the captures without any capture filters?</p></div>
+            <div class="comment-info" id="comment-9823-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '12, 12:37)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="9842"></a>
+        <div class="comment" id="comment-9842">
+            <div id="post-9842-score" class="comment-score"></div>
+            <div class="comment-text"><p>Running MS NETMON on the same rig but different partition - I think I see where you are going with this.  Perhaps swap in a different rig - I haven't tried that yet and will see what the results are.<br>
+</p>
+
+<p>And Yes I am running Wireshark without any capture filters and after a fresh clean install.<br>
+</p>
+
+<p>Thank you and will update shortly.</p></div>
+            <div class="comment-info" id="comment-9842-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Mar '12, 09:21)</span>
+                <a class="comment-user userinfo" href="/users/2417/digitalsyn">DigitalSyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="10018"></a>
+        <div class="comment" id="comment-10018">
+            <div id="post-10018-score" class="comment-score"></div>
+            <div class="comment-text"><p>My apologies for the long delay - was out on a family vacation and never finished my troubleshooting.</p>
+
+<p>Recently, I disconnected my IDS rig and plugged the network cable into a new system. Running Wireshark again on that new system I am unable to see return SYN-ACKs or the ACKs; just the SYNs from internal to external. Checking ICMP traffic I am still only able to see outgoing traffic, nothing coming back even though the host is receiving those packets.</p></div>
+            <div class="comment-info" id="comment-10018-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Apr '12, 15:46)</span>
+                <a class="comment-user userinfo" href="/users/2417/digitalsyn">DigitalSyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="10019"></a>
+        <div class="comment" id="comment-10019">
+            <div id="post-10019-score" class="comment-score"></div>
+            <div class="comment-text"><p>My only option is to start playing around with the TAP, maybe something is not working correctly. It just bothers me that MS NETMON is able to see all the traffic, including the SYN-ACKs and ACKs but no other program. With MS NETMON working as it should, logic tells me that the TAP is working as it should too.</p>
+
+<p>Where is that "EASY" button ....</p></div>
+            <div class="comment-info" id="comment-10019-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Apr '12, 15:46)</span>
+                <a class="comment-user userinfo" href="/users/2417/digitalsyn">DigitalSyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="10020"></a>
+        <div class="comment not_top_scorer" id="comment-10020">
+            <div id="post-10020-score" class="comment-score"></div>
+            <div class="comment-text"><p>Could you capture for a short while with Netmon and also with Wireshark (pinging the same system) and post them to <a href="http://www.cloudshark.org">http://www.cloudshark.org</a>? You can then paste the two URL's in a comment.</p></div>
+            <div class="comment-info" id="comment-10020-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Apr '12, 16:55)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="10077"></a>
+        <div class="comment not_top_scorer" id="comment-10077">
+            <div id="post-10077-score" class="comment-score"></div>
+            <div class="comment-text"><p>SYN-bit, my sincere apologies again.  I didn't see the 'Show All" comment button below my comments until tonight.  Thanks for sticking with me on this ..... SYN-adventure.  Here are the links - first one is from Wireshark and the second is from MS NETMON.  Both turned on about 3 secs apart around the same time.  The focus is on host 192.168.77.8; after a clean load of Win7 on the host I simply opened Firefox to google; afterwards I ran CMD and pinged <a href="http://www.cdrom.com">www.cdrom.com</a>; see the difference in the two?<br>
+</p>
+
+<p><a href="http://www.cloudshark.org/captures/00d23de0e59d">http://www.cloudshark.org/captures/00d23de0e59d</a></p>
+
+<p><a href="http://www.cloudshark.org/captures/18fd2441a03d">http://www.cloudshark.org/captures/18fd2441a03d</a></p></div>
+            <div class="comment-info" id="comment-10077-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '12, 19:50)</span>
+                <a class="comment-user userinfo" href="/users/2417/digitalsyn">DigitalSyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="10078"></a>
+        <div class="comment not_top_scorer" id="comment-10078">
+            <div id="post-10078-score" class="comment-score"></div>
+            <div class="comment-text"><p>Captures were done on the IDS rig looking at my network; as a recap here is my network setup.</p>
+
+<p>CableModem --&gt; Router1 --&gt; Switch --&gt; Router 2</p>
+
+<p>Host: 192.168.778 is hanging off of Router 2</p>
+
+<p>IDS: 192.168.77.3 is hanging off the switch which is a Dualcomm DCGS-2005L.  Router 1 is plugged into port 1 of the switch, port 2 goes to Router 2 and the IDS is off of port 5.  Port 1 is mirrored to port 5.</p></div>
+            <div class="comment-info" id="comment-10078-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '12, 19:55)</span>
+                <a class="comment-user userinfo" href="/users/2417/digitalsyn">DigitalSyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="10219"></a>
+        <div class="comment not_top_scorer" id="comment-10219">
+            <div id="post-10219-score" class="comment-score"></div>
+            <div class="comment-text"><p>Still no luck with my issue.  I went ahead and replaced all of the network cables (just out of curisoity) and started to test other devices in lieu of my Dualcomm switch.  I recently inserted a TAP in place of the Switch and again could only see outbound traffic, nothing inbound.  I moved away from sitting in between the two routers and started sniffing between the cable modem and router 1 with the same results.  I even brought in a third system using Wireshark and I still have the issue.  I'm wondering if maybe my Outside Router is stripping off some of traffic information somehow?</p></div>
+            <div class="comment-info" id="comment-10219-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Apr '12, 10:15)</span>
+                <a class="comment-user userinfo" href="/users/2417/digitalsyn">DigitalSyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="10220"></a>
+        <div class="comment not_top_scorer" id="comment-10220">
+            <div id="post-10220-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have recently put in for a manageable switch and a new Router and will see how this changes things up.</p></div>
+            <div class="comment-info" id="comment-10220-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Apr '12, 10:19)</span>
+                <a class="comment-user userinfo" href="/users/2417/digitalsyn">DigitalSyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="14556"></a>
+        <div class="comment not_top_scorer" id="comment-14556">
+            <div id="post-14556-score" class="comment-score"></div>
+            <div class="comment-text"><p>Bringing sexy back -</p>
+
+<p>After all of these months I am still having the same issue.  I have completely scrapped my entire network with new devices, ran Wireshark on multiple hosts and I still can't seem to find the issue.  I have replaced the tap twice and I still see the same issue.  I went basic and ran 3 hosts on my old tap and new tap with no routers involved and using static IPs.  The monitoring host using Wireshark could only pick up half of the traffic while Microsoft NETMON picked up all of the traffic on all three hosts. </p>
+
+<p>What am I doing wrong here?</p></div>
+            <div class="comment-info" id="comment-14556-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Sep '12, 14:34)</span>
+                <a class="comment-user userinfo" href="/users/2417/digitalsyn">DigitalSyn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-9771" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 11
+        </span>
+        <a href="#" class="show-all-comments-link">show 6 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9771-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/9752/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ewiNGOZKdVRhNcl5RkKWX42SBBlJCjjO' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9752/only-capturing-syn-packets-no-syn-acks-or-acks?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9752/only-capturing-syn-packets-no-syn-acks-or-acks?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/packet/"
+            class="tag-link-packet"
+            title="see questions tagged'packet'using tags"
+            rel="tag">packet</a> <span class="tag-number">&#215;248</span><br/>
+        
+        <a href="/tags/ack/"
+            class="tag-link-ack"
+            title="see questions tagged'ack'using tags"
+            rel="tag">ack</a> <span class="tag-number">&#215;139</span><br/>
+        
+        <a href="/tags/syn/"
+            class="tag-link-syn"
+            title="see questions tagged'syn'using tags"
+            rel="tag">syn</a> <span class="tag-number">&#215;55</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 25, 2012, 7:15 p.m.">25 Mar '12, 19:15</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,958 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 2, 2012, noon">02 Oct '12, 12:00</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/15556/open-closed-ports">Open closed ports</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52718/ack-but-no-syn">ACK but no SYN</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18817/syn-is-answered-by-a-strange-ack-rst-is-ignored-windows">SYN is answered by a strange ACK, RST is ignored. Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19235/syn-synack-ack">SYN - SYN/ACK - ACK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37630/wireshark-syn-ack-fin-get">wireshark syn ack fin get</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55471/syn-no-synacktrying-to-figure-out-whats-wrong-with-the-client-server-tcp-communication">[SYN-&gt;no SYN,ACK]Trying to figure out what&#39;s wrong with the client-server TCP communication.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59957/filter-for-dropped-unexpected-syn-packets">Filter for dropped unexpected syn packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23885/rst-after-syn-ack">RST after SYN-ACK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39624/syn-ack-seq1-ack1-is-it-possiblenomal-3hand-shake">[SYN ACK] seq=1 ack=1 / Is it Possible??(Nomal 3hand shake)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21019/psh-fin-ack-packet-along-with-data">PSH FIN ACK PACKET along with data</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

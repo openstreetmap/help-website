@@ -1,0 +1,1252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TLS &quot;half&quot; decryption problem - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi everyone. I&#39;m decrypting MMS traffic with TLS between a client and a server, giving Wireshark the server private key, and everthing works fine, I can see the plain MMS messages. In some cases the TLS handshake has some trouble with TCP retransmissions, reassembled PDU etc. In these cases can happ..." />
+        <meta name="keywords" content="tls,ssl,decryption" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/43815/tls-half-decryption-problem" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/43815/tls-half-decryption-problem?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='4xVbcG5I7BkqWTiSRyM3uytNC8lIH40u' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/43815/tls-half-decryption-problem">TLS &quot;half&quot; decryption problem</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-43815-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43815/up/" rel="nofollow"> </a>
+<div id="post-43815-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-43815-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43815/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/43815/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi everyone.</p>
+<p>I'm decrypting MMS traffic with TLS between a client and a server, giving Wireshark the server private key, and everthing works fine, I can see the plain MMS messages.</p>
+<p>In some cases the TLS handshake has some trouble with TCP retransmissions, reassembled PDU etc. In these cases can happen that wireshark is able only to decrypt half of the communication, the traffic from server to client.</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/screen1.png"></p>
+<p>As you can see in the image the MMS traffic from the client is decrypted "Application Data".</p>
+<p>My questions are:
+Does exist some wireshark setting to resolve this problem?
+If wireshark can calculate the master key (server side) and use it to decrypt the server traffic, shouldn't be able to decrypt also the client one with the same key?</p>
+<p><strong>UPDATE 1</strong></p>
+<p>I don't know, but maybe it's useful to show more info about frame 82 and 87:</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/frame_83.png"> 
+<img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/frame_87.png"></p>
+<p>Frame 87 is the TLS Finished message from Client to Server, and it's decrypted, but the next TLS messages from Client to Server, in frame 94, are encrypted! </p>
+<p><strong>UPDATE 2</strong></p>
+<p>Maybe the problem in in the trace capture phase: for info, I get the pcap traces using default parameters with Wireshark 1.12.3 on Windows 7 (Client Side) and with tcpdump on Centos 6 (server side).
+Both capture sides show the same problem I'm trying to solve. </p>
+<p><strong>UPDATE 3</strong></p>
+<p>I provide another tarce with the same issue + the ssl debug log. I want to point out that the Change Cipher Spec message from the client is received but not present in the ssl debug log (frame 57)</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/screen_2_lzgv3aL.png"></p>
+<pre><code>dissect_ssl enter frame #51 (first time)
+ssl_session_init: initializing ptr 0000000008A50780 size 712
+association_find: TCP port 54799 found 0000000000000000
+packet_from_server: is from server - FALSE
+  conversation = 0000000005A815F8, ssl_session = 0000000008A50780
+  record: offset = 0, reported_length_remaining = 335
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 330, ssl state 0x00
+association_find: TCP port 54799 found 0000000000000000
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 326 bytes, remaining 335 
+packet_from_server: is from server - FALSE
+ssl_find_private_key server IPSERVER:3782
+ssl_find_private_key: testing 4 keys
+dissect_ssl3_hnd_hello_common found CLIENT RANDOM -&gt; state 0x01
+
+dissect_ssl enter frame #53 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005A815F8, ssl_session = 0000000008A50780
+  record: offset = 0, reported_length_remaining = 1424
+dissect_ssl3_record found version 0x0303(TLS 1.2) -&gt; state 0x11
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 86, ssl state 0x11
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 82 bytes, remaining 91 
+dissect_ssl3_hnd_hello_common found SERVER RANDOM -&gt; state 0x13
+dissect_ssl3_hnd_srv_hello found CIPHER 0x009D -&gt; state 0x17
+dissect_ssl3_hnd_srv_hello trying to generate keys
+ssl_generate_keyring_material not enough data to generate key (0x17 required 0x37 or 0x57)
+dissect_ssl3_hnd_srv_hello can't generate keyring material
+  record: offset = 91, reported_length_remaining = 1333
+  need_desegmentation: offset = 91, reported_length_remaining = 1333
+
+dissect_ssl enter frame #54 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005A815F8, ssl_session = 0000000008A50780
+  record: offset = 0, reported_length_remaining = 2149
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 2144, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 11 offset 5 length 2140 bytes, remaining 2149
+
+dissect_ssl enter frame #54 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005A815F8, ssl_session = 0000000008A50780
+  record: offset = 0, reported_length_remaining = 51
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 46, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 13 offset 5 length 38 bytes, remaining 51 
+dissect_ssl3_handshake iteration 0 type 14 offset 47 length 0 bytes, remaining 51
+
+dissect_ssl enter frame #57 (first time)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005A815F8, ssl_session = 0000000008A50780
+  record: offset = 0, reported_length_remaining = 259
+
+dissect_ssl enter frame #59 (first time)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005A815F8, ssl_session = 0000000008A50780
+  record: offset = 0, reported_length_remaining = 1424
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 1091, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 11 offset 5 length 1087 bytes, remaining 1096 
+  record: offset = 1096, reported_length_remaining = 328
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 262, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 16 offset 1101 length 258 bytes, remaining 1363 
+ssl_generate_pre_master_secret: found SSL_HND_CLIENT_KEY_EXCHG, state 17
+pre master encrypted[256]:
+...
+ssl_decrypt_pre_master_secret:RSA_private_decrypt
+decrypted_unstrip_pre_master[255]:
+...
+pcry_private_decrypt: stripping 207 bytes, decr_len 255
+pre master secret[48]:
+...
+ssl_generate_keyring_material:PRF(pre_master_secret)
+pre master secret[48]:
+...
+client random[32]:
+...
+server random[32]:
+...
+tls12_prf: tls_hash(hash_alg SHA384 secret_len 48 seed_len 77 )
+tls_hash: hash secret[48]:
+...
+tls_hash: hash seed[77]:
+...
+hash out[48]:
+...
+PRF out[48]:
+...
+master secret[48]:
+...
+ssl_generate_keyring_material sess key generation
+tls12_prf: tls_hash(hash_alg SHA384 secret_len 48 seed_len 77 )
+tls_hash: hash secret[48]:
+...
+tls_hash: hash seed[77]:
+...
+hash out[168]:
+...
+PRF out[168]:
+...
+key expansion[168]:
+...
+Client Write key[32]:
+...
+Server Write key[32]:
+...
+Client Write IV[4]:
+...
+Server Write IV[4]:
+...
+ssl_generate_keyring_material ssl_create_decoder(client)
+ssl_create_decoder CIPHER: AES256
+decoder initialized (digest len 48)
+ssl_generate_keyring_material ssl_create_decoder(server)
+ssl_create_decoder CIPHER: AES256
+decoder initialized (digest len 48)
+ssl_generate_keyring_material: client seq 0, server seq 0
+ssl_save_session stored session id[32]:
+...
+ssl_save_session stored master secret[48]:
+...
+dissect_ssl3_handshake session keys successfully generated
+  record: offset = 1363, reported_length_remaining = 61
+  need_desegmentation: offset = 1363, reported_length_remaining = 61
+
+dissect_ssl enter frame #61 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005A815F8, ssl_session = 0000000008A50780
+  record: offset = 0, reported_length_remaining = 51
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - TRUE
+ssl_change_cipher SERVER
+  record: offset = 6, reported_length_remaining = 45
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 40, ssl state 0x3F
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+ssl_decrypt_record ciphertext len 40
+Ciphertext[40]:
+...
+Plaintext[32]:
+...
+dissect_ssl3_handshake iteration 1 type 20 offset 0 length 12 bytes, remaining 16
+
+dissect_ssl enter frame #62 (first time)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005A815F8, ssl_session = 0000000008A50780
+  record: offset = 0, reported_length_remaining = 51
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 46, ssl state 0x3F
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 54799 found 0000000000000000
+association_find: TCP port 3782 found 0000000004FCE830
+
+dissect_ssl enter frame #63 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005A815F8, ssl_session = 0000000008A50780
+  record: offset = 0, reported_length_remaining = 51
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 46, ssl state 0x3F
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+ssl_decrypt_record ciphertext len 46
+Ciphertext[46]:
+...
+Plaintext[38]:
+...
+ssl_add_data_info: new data inserted data_len = 22, seq = 0, nxtseq = 22
+association_find: TCP port 3782 found 0000000004FCE830
+dissect_ssl3_record decrypted len 22
+decrypted app data fragment[22]:
+...
+dissect_ssl3_record found association 0000000004FCE830
+
+dissect_ssl enter frame #64 (first time)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005A815F8, ssl_session = 0000000008A50780
+  record: offset = 0, reported_length_remaining = 239
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 234, ssl state 0x3F
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 54799 found 0000000000000000
+association_find: TCP port 3782 found 0000000004FCE830
+
+dissect_ssl enter frame #65 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005A815F8, ssl_session = 0000000008A50780
+  record: offset = 0, reported_length_remaining = 176
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 171, ssl state 0x3F
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+ssl_decrypt_record ciphertext len 171
+Ciphertext[171]:
+...
+ssl_decrypt_record: allocating 203 bytes for decrypt data (old len 72)
+Plaintext[163]:
+...
+ssl_add_data_info: new data inserted data_len = 147, seq = 22, nxtseq = 169
+association_find: TCP port 3782 found 0000000004FCE830
+dissect_ssl3_record decrypted len 147
+decrypted app data fragment[147]:
+...
+dissect_ssl3_record found association 0000000004FCE830
+
+dissect_ssl enter frame #66 (first time)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005A815F8, ssl_session = 0000000008A50780
+  record: offset = 0, reported_length_remaining = 65
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 60, ssl state 0x3F
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 54799 found 0000000000000000
+association_find: TCP port 3782 found 0000000004FCE830
+
+dissect_ssl enter frame #67 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005A815F8, ssl_session = 0000000008A50780
+  record: offset = 0, reported_length_remaining = 115
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 110, ssl state 0x3F
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+ssl_decrypt_record ciphertext len 110
+Ciphertext[110]:
+...
+Plaintext[102]:
+...
+ssl_add_data_info: new data inserted data_len = 86, seq = 169, nxtseq = 255
+association_find: TCP port 3782 found 0000000004FCE830
+dissect_ssl3_record decrypted len 86
+decrypted app data fragment[86]:
+...
+dissect_ssl3_record found association 0000000004FCE830
+</code></pre>
+<p>Thanks</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tls/" class="post-tag tag-link-tls"
+                                        title="see questions tagged 'tls'" rel="tag">tls</a>
+                                
+                                    <a href="/tags/ssl/" class="post-tag tag-link-ssl"
+                                        title="see questions tagged 'ssl'" rel="tag">ssl</a>
+                                
+                                    <a href="/tags/decryption/" class="post-tag tag-link-decryption"
+                                        title="see questions tagged 'decryption'" rel="tag">decryption</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Jul '15, 07:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/eca830854093757dbe9847c9d44241b5?s=32&amp;d=identicon&amp;r=g" alt="theo66's gravatar image" />
+    <p><a href="/users/18170/theo66">theo66</a><br/>
+    <span class="score" title="91 reputation points">91</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="theo66 has one accepted answer">50&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/43815/">
+                edited
+                <strong>16 Jul '15, 01:50</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-43815">
+    
+        <a name="43821"></a>
+        <div class="comment" id="comment-43821">
+            <div id="post-43821-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do you have the TCP Protocol preference setting "Do not call subdissectors for error packets" checked?</p></div>
+            <div class="comment-info" id="comment-43821-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jul '15, 08:46)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43839"></a>
+        <div class="comment" id="comment-43839">
+            <div id="post-43839-score" class="comment-score"></div>
+            <div class="comment-text"><p>No I don't. By checking that setting all the trace remains encrypted.</p></div>
+            <div class="comment-info" id="comment-43839-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jul '15, 01:10)</span>
+                <a class="comment-user userinfo" href="/users/18170/theo66">theo66</a>
+                
+            </div>
+        </div>
+    
+        <a name="43904"></a>
+        <div class="comment" id="comment-43904">
+            <div id="post-43904-score" class="comment-score"></div>
+            <div class="comment-text"><p>Out-of-order packets confused the SSL dissectors in the past, perhaps that is the case here. Could you generate a SSL debug log? You can enable this via Preferences -&gt; Protocols -&gt; SSL.</p></div>
+            <div class="comment-info" id="comment-43904-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jul '15, 14:26)</span>
+                <a class="comment-user userinfo" href="/users/5644/lekensteyn">Lekensteyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="43934"></a>
+        <div class="comment" id="comment-43934">
+            <div id="post-43934-score" class="comment-score"></div>
+            <div class="comment-text"><p>I get the debug log from another trace with the same issue. I show yout these 2 packet as example: the first from the client, the second from the server.
+<code>
+dissect_ssl enter frame #66 (first time)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005A815F8, ssl_session = 0000000008A50780
+  record: offset = 0, reported_length_remaining = 65
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 60, ssl state 0x3F
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 54799 found 0000000000000000
+association_find: TCP port 3782 found 0000000004FCE830</code></p>
+
+<p><code>
+</code></p><p><code>dissect_ssl enter frame #67 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005A815F8, ssl_session = 0000000008A50780
+  record: offset = 0, reported_length_remaining = 115
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 110, ssl state 0x3F
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+ssl_decrypt_record ciphertext len 110
+Ciphertext[110]:
+...
+Plaintext[102]:
+...
+ssl_add_data_info: new data inserted data_len = 86, seq = 169, nxtseq = 255
+association_find: TCP port 3782 found 0000000004FCE830
+dissect_ssl3_record decrypted len 86
+decrypted app data fragment[86]:
+...
+dissect_ssl3_record found association 0000000004FCE830
+</code></p>
+<p>It seems that the client encoder is missing. As soon as possible I find a way to attach all the debug log.</p><p></p></div>
+            <div class="comment-info" id="comment-43934-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jul '15, 06:51)</span>
+                <a class="comment-user userinfo" href="/users/18170/theo66">theo66</a>
+                
+            </div>
+        </div>
+    
+        <a name="44011"></a>
+        <div class="comment" id="comment-44011">
+            <div id="post-44011-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/18170/theo66">@theo66</a> Can you show more of the log? Specifically, I am looking for the part where the SSL state changes to 0x3F. Are unusual messages following that transition? Are the <code>tcp.stream</code> fields ("Stream number" under the TCP layer) the same for both streams? They should be the same, if not, then it could explain your issue.</p></div>
+            <div class="comment-info" id="comment-44011-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '15, 07:53)</span>
+                <a class="comment-user userinfo" href="/users/5644/lekensteyn">Lekensteyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="44096"></a>
+        <div class="comment not_top_scorer" id="comment-44096">
+            <div id="post-44096-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/5644/lekensteyn">@Lekensteyn</a> I checked, tcp.stream is the same for both streams. I've updated the question with the ssl log.</p></div>
+            <div class="comment-info" id="comment-44096-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jul '15, 07:53)</span>
+                <a class="comment-user userinfo" href="/users/18170/theo66">theo66</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-43815" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43815-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/43815/tls-half-decryption-problem?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/43815/tls-half-decryption-problem?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/43815/tls-half-decryption-problem?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/43815/tls-half-decryption-problem?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="44132"></a>
+                    <div id="answer-container-44132" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-44132-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/44132/up/" rel="nofollow"> </a>
+<div id="post-44132-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-44132-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/44132/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It looks like a bug in the SSL dissector of Wireshark.</p>
+<p>In the debug log you provided (and also visible on the screenshot), there is no trace of a ChangeCipherSpec handshake message. This message is required, see the message flow in <a href="https://tools.ietf.org/html/rfc5246.html#page-36">RFC 5246</a>.</p>
+<p>In your debug log, there is <code>ssl_change_cipher SERVER</code>, but no <code>ssl_change_cipher CLIENT</code> and thus the client decoder is never initialized. Frames 87 and 94 in the screenshot are incorrectly dissected (CertificateVerify and Finished are the expected dissections).</p>
+<p>Are you using large client certificates? Based on your screenshot (and counting the SSL records size and comparing it with the TCP segment length), it looks like you encountered a known issue with SSL record fragmentation (<a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=3303">bug 3303</a>).</p>
+<p>Another known issue is related to out-of-order packets (<a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=9461">bug 9461</a>, <a href="https://ask.wireshark.org/questions/34945/decrypt-out-of-order-ssl-trace).">https://ask.wireshark.org/questions/34945/decrypt-out-of-order-ssl-trace).</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/44132/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Jul '15, 05:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/285b1f0f4caadc088a38c40aea22feba?s=32&amp;d=identicon&amp;r=g" alt="Lekensteyn's gravatar image" />
+    <p><a href="/users/5644/lekensteyn">Lekensteyn</a><br/>
+    <span class="score" title="2213 reputation points"><span class="">2.2k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="24 badges"><span class="bronze">&#9679;</span><span class="badgecount">24</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Lekensteyn has 32 accepted answers">30&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/44132/">
+                edited
+                <strong>16 Jul '15, 02:46</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-44132">
+    
+        <a name="44165"></a>
+        <div class="comment" id="comment-44165">
+            <div id="post-44165-score" class="comment-score"></div>
+            <div class="comment-text"><p>First of all, thank you for your support. 
+The client certificate, like the server one, is approximately 1500 byte. I'm using 2048 bits RSA private keys.</p></div>
+            <div class="comment-info" id="comment-44165-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jul '15, 01:05)</span>
+                <a class="comment-user userinfo" href="/users/18170/theo66">theo66</a>
+                
+            </div>
+        </div>
+    
+        <a name="44191"></a>
+        <div class="comment" id="comment-44191">
+            <div id="post-44191-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/18170/theo66">@theo66</a> Can you try to create a public capture file that reproduces this issue? If it is difficult to reproduce, can you share the packets from the TCP stream (at least packet 86 and 87)? (if you would like to keep it private, see my profile for contact details).</p></div>
+            <div class="comment-info" id="comment-44191-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jul '15, 14:20)</span>
+                <a class="comment-user userinfo" href="/users/5644/lekensteyn">Lekensteyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="44195"></a>
+        <div class="comment" id="comment-44195">
+            <div id="post-44195-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/5644/lekensteyn">@Lekensteyn</a> I updated the question adding the screenshot of the trace which produces to the attached ssl debug log. I point out that the change cipher spec message from the client is received but ignored by the ssl dissector (frame 57).
+I have some difficulties to reproduce the issue now, if you need details about single frames/segments from the second trace (the one which I just added the screenshot) please tell me, but unfortunately I cannot share material containing certificate info and keys.</p></div>
+            <div class="comment-info" id="comment-44195-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jul '15, 01:57)</span>
+                <a class="comment-user userinfo" href="/users/18170/theo66">theo66</a>
+                
+            </div>
+        </div>
+    
+        <a name="44198"></a>
+        <div class="comment" id="comment-44198">
+            <div id="post-44198-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/18170/theo66">@theo66</a> Updated the answer with some possible problems (handshake record fragmentation, out-of-order packets). If you do not mind recompiling, you can try the "quick 'n' dirty hack" at <a href="https://code.wireshark.org/review/5104">https://code.wireshark.org/review/5104</a> to workaround the first issue. For the second out-of-order issue, I can try to write a tool that reorders TCP packets.</p></div>
+            <div class="comment-info" id="comment-44198-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jul '15, 02:49)</span>
+                <a class="comment-user userinfo" href="/users/5644/lekensteyn">Lekensteyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="44200"></a>
+        <div class="comment" id="comment-44200">
+            <div id="post-44200-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/5644/lekensteyn"></a><a href="/users/5644/lekensteyn">@Lekensteyn</a> At a first glance it seems I have the same issue reported in the link you provide: <a href="https://ask.wireshark.org/questions/34945/decrypt-out-of-order-ssl-trace)">https://ask.wireshark.org/questions/34945/decrypt-out-of-order-ssl-trace)</a></p></div>
+            <div class="comment-info" id="comment-44200-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jul '15, 03:23)</span>
+                <a class="comment-user userinfo" href="/users/18170/theo66">theo66</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-44132" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-44132-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/43815/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='4xVbcG5I7BkqWTiSRyM3uytNC8lIH40u' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/43815/tls-half-decryption-problem?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/43815/tls-half-decryption-problem?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ssl/"
+            class="tag-link-ssl"
+            title="see questions tagged'ssl'using tags"
+            rel="tag">ssl</a> <span class="tag-number">&#215;319</span><br/>
+        
+        <a href="/tags/decryption/"
+            class="tag-link-decryption"
+            title="see questions tagged'decryption'using tags"
+            rel="tag">decryption</a> <span class="tag-number">&#215;165</span><br/>
+        
+        <a href="/tags/tls/"
+            class="tag-link-tls"
+            title="see questions tagged'tls'using tags"
+            rel="tag">tls</a> <span class="tag-number">&#215;75</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 2, 2015, 7:02 a.m.">02 Jul '15, 07:02</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,804 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 16, 2015, 3:24 a.m.">16 Jul '15, 03:24</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/50305/how-does-wireshark-decrypt-ssltls-with-only-clientrandom">How does Wireshark decrypt SSL/TLS with only ClientRandom</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50584/not-decrypting-all-http2-traffic-in-session">Not Decrypting all HTTP/2 traffic in session.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32292/ssltls-decrypt-doesnt-work-if-capture-started-mid-session">SSL/TLS decrypt doesn&#39;t work if capture started mid-session</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21215/rtp-over-tls-connection-cant-be-decrypted-in-wireshark">RTP over TLS connection can&#39;t be decrypted in wireshark?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28823/decryption-with-ssltls-pre-master">Decryption with SSL/TLS pre-master</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56368/pcapng-support-for-storing-information-for-decoding-ssltls">PCAPNG support for storing information for decoding SSL/TLS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53087/ssl-tls-decryption">SSL \ TLS Decryption</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56910/remote-decryption-tls-in-wireshark">Remote decryption TLS in wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15995/ssl-dissector-tlsv1-versus-ssl">SSL Dissector - TLSv1 versus SSL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50271/ssl-packet-colorization">SSL Packet Colorization</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

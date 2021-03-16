@@ -1,0 +1,855 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How can I capture HTTP on WLAN with AirPCap? - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello all, I am using WireShark 1.12.0 and an AirPCap from Riverbed to analyze communication between a Wi-Fi device (it&#39;s an RN-171-EK, so I&#39;ll call it an RN-171 from here on out) and a server. I am not a network admin, so I am looking for some remedial assistance (read: I don&#39;t know what I&#39;m doing)..." />
+        <meta name="keywords" content="1.12.0,airpcap,http,wifi" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/36158/how-can-i-capture-http-on-wlan-with-airpcap" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/36158/how-can-i-capture-http-on-wlan-with-airpcap?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='zAv1tgRxnN8fPLv3iDPrQ0qUYeFGWECY' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/36158/how-can-i-capture-http-on-wlan-with-airpcap">How can I capture HTTP on WLAN with AirPCap?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-36158-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36158/up/" rel="nofollow"> </a>
+<div id="post-36158-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-36158-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36158/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/36158/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello all,</p>
+<p>I am using WireShark 1.12.0 and an AirPCap from Riverbed to analyze communication between a Wi-Fi device (it's an RN-171-EK, so I'll call it an RN-171 from here on out) and a server.  I am not a network admin, so I am looking for some remedial assistance (read: I don't know what I'm doing).</p>
+<p>I can capture some traffic between my RN-171 and my wireless router because I can see the MAC addresses of each in the source and destination fields.  These packets are all categorized as "802.11" in the protocol field and the info in all of the packets are either QoS Data or Probe Request.</p>
+<p>What I was expecting (hoping, really) to see was IP addresses in the source and destination fields and "HTTP" in the protocol field, with the actual calls to the web service and the response from the server in the Info field.</p>
+<p>The RN-171 reports which channel it is using when it associates with my wireless network, so I adjust the channel I am monitoring appropriately.  I have tried toggling the promiscuous mode and the "capture packets in pcap-ng format" settings, but I find I am blindly making changes because I don't know how to configure the WireShark/AirPCap combo appropriately to see the actual HTTP traffic.</p>
+<p>Can anyone help me with how to configure the settings to see HTTP traffic?</p>
+<p>Thank you,</p>
+<p>-Ted</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/1.12.0/" class="post-tag tag-link-1.12.0"
+                                        title="see questions tagged '1.12.0'" rel="tag">1.12.0</a>
+                                
+                                    <a href="/tags/airpcap/" class="post-tag tag-link-airpcap"
+                                        title="see questions tagged 'airpcap'" rel="tag">airpcap</a>
+                                
+                                    <a href="/tags/http/" class="post-tag tag-link-http"
+                                        title="see questions tagged 'http'" rel="tag">http</a>
+                                
+                                    <a href="/tags/wifi/" class="post-tag tag-link-wifi"
+                                        title="see questions tagged 'wifi'" rel="tag">wifi</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Sep '14, 05:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e3d1246c6effdb644f67dab8a2c9c08a?s=32&amp;d=identicon&amp;r=g" alt="Fiasco's gravatar image" />
+    <p><a href="/users/9532/fiasco">Fiasco</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Fiasco has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-36158">
+    
+        <a name="36164"></a>
+        <div class="comment" id="comment-36164">
+            <div id="post-36164-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Is the WLAN encrypted? If it is, you won't see anything useful like HTTP before decrypting it with the Decryption key.</p></div>
+            <div class="comment-info" id="comment-36164-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '14, 06:23)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="36165"></a>
+        <div class="comment" id="comment-36165">
+            <div id="post-36165-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you Jasper.<br>
+</p>
+
+<p>The WLAN is indeed encrypted.  I entered the SSID and Passphrase via the Decryption Keys Management window.  I have double-checked the SSID and Passphrase and they are correct.  And now triple-checked, just to make sure.  I also have "Wireshark" selected as the decryption mode.<br>
+</p>
+
+<p>I should have mentioned this in the original post.  I'm sure I've not mentioned much more, but I don't know what is important to take note of.  Does it matter the version of winpcap (4.1.3) installed alongside the AirPCap software (also 4.1.3)?</p></div>
+            <div class="comment-info" id="comment-36165-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '14, 06:41)</span>
+                <a class="comment-user userinfo" href="/users/9532/fiasco">Fiasco</a>
+                
+            </div>
+        </div>
+    
+        <a name="36167"></a>
+        <div class="comment" id="comment-36167">
+            <div id="post-36167-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, I have to admit my WLAN analysis skills are quite limited - if everything works fine you should see decrypted traffic. If you don't there may be something wrong, but I'm no expert in troubleshooting WLAN traffic. Maybe someone else can help out here.</p>
+
+<p>I think winpcap and AirPCap versions are fine.</p></div>
+            <div class="comment-info" id="comment-36167-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '14, 06:51)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="36168"></a>
+        <div class="comment" id="comment-36168">
+            <div id="post-36168-score" class="comment-score"></div>
+            <div class="comment-text"><p>Okay, thanks for trying Jasper.</p></div>
+            <div class="comment-info" id="comment-36168-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '14, 06:53)</span>
+                <a class="comment-user userinfo" href="/users/9532/fiasco">Fiasco</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-36158" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36158-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/36158/how-can-i-capture-http-on-wlan-with-airpcap?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/36158/how-can-i-capture-http-on-wlan-with-airpcap?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/36158/how-can-i-capture-http-on-wlan-with-airpcap?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/36158/how-can-i-capture-http-on-wlan-with-airpcap?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="36175"></a>
+                    <div id="answer-container-36175" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-36175-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36175/up/" rel="nofollow"> </a>
+<div id="post-36175-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-36175-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36175/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Fiasco has selected this answer as the correct answer"
+        href="/accept_answer/36175/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In encrypted (AES/TKIP) scenarios you have have the handshake from your wireless client with the accesspoint inside the capture, because it contains random values which will be unique for the encryption key generation from the PSK.</p>
+<p>Did you start your capture before connecting to the wireless network? Otherwise there is no way of decrypting the traffic. You can check by searching for EAPOL packets within the trace file hinting for the key exchange.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/36175/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Sep '14, 08:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/36b41326bff63eb5ad73a0436914e05c?s=32&amp;d=identicon&amp;r=g" alt="Landi's gravatar image" />
+    <p><a href="/users/146/landi">Landi</a><br/>
+    <span class="score" title="2269 reputation points"><span class="">2.3k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="14 badges"><span class="silver">&#9679;</span><span class="badgecount">14</span></span><span title="42 badges"><span class="bronze">&#9679;</span><span class="badgecount">42</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Landi has 28 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-36175">
+    
+        <a name="36178"></a>
+        <div class="comment" id="comment-36178">
+            <div id="post-36178-score" class="comment-score"></div>
+            <div class="comment-text"><p>Brilliant, Landi.  That appears to have been my problem.  I "thumbs up"ed your answer, but I don't see how to mark it as the solution.</p>
+
+<p>Now that I've taken your advice, I think I remember reading that somewhere early on, but it slipped through the cracks with all the new information I was taking in at the time.</p>
+
+<p>Thank you for setting me straight.</p>
+
+<p>-Ted</p></div>
+            <div class="comment-info" id="comment-36178-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '14, 10:58)</span>
+                <a class="comment-user userinfo" href="/users/9532/fiasco">Fiasco</a>
+                
+            </div>
+        </div>
+    
+        <a name="36180"></a>
+        <div class="comment" id="comment-36180">
+            <div id="post-36180-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I "thumbs up"ed your answer, but I don't see how to mark it as the solution.</p>
+</blockquote>
+
+<p>That's because it <em>wasn't</em> an answer, it was just a comment.  I've converted it to an answer (and moved your comment on it to be a comment on the answer), so you can now mark it as the solution.</p></div>
+            <div class="comment-info" id="comment-36180-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Sep '14, 11:30)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-36175" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36175-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/36158/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='zAv1tgRxnN8fPLv3iDPrQ0qUYeFGWECY' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/36158/how-can-i-capture-http-on-wlan-with-airpcap?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/36158/how-can-i-capture-http-on-wlan-with-airpcap?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/http/"
+            class="tag-link-http"
+            title="see questions tagged'http'using tags"
+            rel="tag">http</a> <span class="tag-number">&#215;293</span><br/>
+        
+        <a href="/tags/wifi/"
+            class="tag-link-wifi"
+            title="see questions tagged'wifi'using tags"
+            rel="tag">wifi</a> <span class="tag-number">&#215;134</span><br/>
+        
+        <a href="/tags/airpcap/"
+            class="tag-link-airpcap"
+            title="see questions tagged'airpcap'using tags"
+            rel="tag">airpcap</a> <span class="tag-number">&#215;36</span><br/>
+        
+        <a href="/tags/1.12.0/"
+            class="tag-link-1.12.0"
+            title="see questions tagged'1.12.0'using tags"
+            rel="tag">1.12.0</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 10, 2014, 5:51 a.m.">10 Sep '14, 05:51</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,101 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 4, 2015, 11:05 a.m.">04 Jun '15, 11:05</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/33354/cannot-see-traffic-between-tablet-and-speakers">Cannot see traffic between tablet and speakers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49177/can-i-see-all-traffic-on-wifi">Can i see all traffic on WIFi?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54318/extract-http-post-packets-using-tshark">Extract HTTP POST packets using tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42081/airpcapnx-packet-capture-80211n-at-24ghz">AirPcapNX packet capture 802.11n at 2.4Ghz</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42890/cant-capture-data-packets-using-airpcap">Can&#39;t capture data packets using Airpcap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42889/why-am-i-not-getting-data-packets-when-capturing-with-airpcap">Why am I not getting data packets when capturing with AirPcap?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48044/eapol-handshake-and-then">EAPOL handshake, and then?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6845/no-more-capturing-packets-from-wi-fi">No more capturing packets from Wi-Fi</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16273/how-to-capture-wi-fi-traffic-from-another-machine">How to capture Wi-Fi traffic from another machine</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62388/capturing-wifi-http-traffic-of-my-own-network">Capturing wifi http traffic of my own network</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

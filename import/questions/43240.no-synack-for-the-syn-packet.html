@@ -1,0 +1,1398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>No SYN/ACK for the SYN packet - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi Friends, This is my first post and will try to make it as informative as I can. The issue is related to remote desktop connection on one of the windows 2008 R2 server. Some users are facing issue while connecting to remote desktop session of a server in VLAN A. For the same server remote desktop ..." />
+        <meta name="keywords" content="rdp,wireshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/43240/no-synack-for-the-syn-packet" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/43240/no-synack-for-the-syn-packet?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='lRJmgCmh53AJetNdIIvi8XimfE41m9OE' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/43240/no-synack-for-the-syn-packet">No SYN/ACK for the SYN packet</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-43240-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43240/up/" rel="nofollow"> </a>
+<div id="post-43240-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-43240-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43240/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/43240/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi Friends,</p>
+<p>This is my first post and will try to make it as informative as I can. The issue is related to remote desktop connection on one of the windows 2008 R2 server. Some users are facing issue while connecting to remote desktop session of a server in VLAN A. For the same server remote desktop for other users are working fine. While troubleshooting Network team was able to see traffic flowing through the firewall and reaching to the server but never responded back. I did setup wireshark packet capture on the server side to analyse the traffic. I do see packets reaching to the server but are not being responded back. There is packet retransmission happening from client side due to no ACK. Can any one suggest what could be wrong here?</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/1_Ires8Oy.jpg"></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rdp/" class="post-tag tag-link-rdp"
+                                        title="see questions tagged 'rdp'" rel="tag">rdp</a>
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Jun '15, 04:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/83e95ff1ecf36ca47241a9c4160d118e?s=32&amp;d=identicon&amp;r=g" alt="vjay's gravatar image" />
+    <p><a href="/users/17790/vjay">vjay</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="vjay has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-43240">
+    
+</div>
+<div id="comment-tools-43240" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43240-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/43240/no-synack-for-the-syn-packet?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/43240/no-synack-for-the-syn-packet?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/43240/no-synack-for-the-syn-packet?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/43240/no-synack-for-the-syn-packet?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="43242"></a>
+                    <div id="answer-container-43242" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-43242-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43242/up/" rel="nofollow"> </a>
+<div id="post-43242-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-43242-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43242/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="vjay has selected this answer as the correct answer"
+        href="/accept_answer/43242/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I see three possible reasons:</p>
+<ul>
+<li>you don't see the server response (SYN-ACK( due to a known "problem" of your capture setup (see here: <a href="https://ask.wireshark.org/tags/outgoing/)">https://ask.wireshark.org/tags/outgoing/)</a></li>
+<li>there is a SYN-ACK, but the server is dual homed (multiple interfaces in the same subnet) and it sends the response out a different interface.</li>
+<li>there is no SYN-ACK, which means the RDP server did not answer the SYN. That's something you can only diagnose with the help of microsoft.</li>
+</ul>
+<p>Personally I believe it's option #2, although this is just a wild guess: I've seen that happen from time to time, because people give their servers several interfaces for "redundancy" reasons and then they simply assign an IP address from the same subnet (Windows does not prevent that)! This usually works on a local network without security devices (firewall, loadbalancers, etc.), but it can cause problems if those devices are in place. </p>
+<p>In your case, the firewall might well block the SYN-ACK, if it's coming from a different MAC address than the SYN was sent to (windows sends the SYN-ACK out the other interface). This depends on the firewall type and on the firewall configuration.</p>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/43242/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Jun '15, 04:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-43242">
+    
+        <a name="43244"></a>
+        <div class="comment" id="comment-43244">
+            <div id="post-43244-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Kurt for your time. You are spot on. We do have two interfaces on that server over different VLAN but I couldn't capture syn/ack on other interface. I applied same filter as first interface which receives SYN packets. Is there anyway I can capture those SYN/ACK packets on second interface?</p></div>
+            <div class="comment-info" id="comment-43244-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 05:18)</span>
+                <a class="comment-user userinfo" href="/users/17790/vjay">vjay</a>
+                
+            </div>
+        </div>
+    
+        <a name="43246"></a>
+        <div class="comment" id="comment-43246">
+            <div id="post-43246-score" class="comment-score"></div>
+            <div class="comment-text"><p>Set Wireshark to capture from all relevant interfaces.  Simply check all the interfaces you wish to capture from in the Capture Options dialog.</p></div>
+            <div class="comment-info" id="comment-43246-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 05:27)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43248"></a>
+        <div class="comment" id="comment-43248">
+            <div id="post-43248-score" class="comment-score"></div>
+            <div class="comment-text"><p>to rule out problem #1 you should capture on a switch mirror/monitor/span  port, which mirrors the traffic of both server interfaces.</p></div>
+            <div class="comment-info" id="comment-43248-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 06:19)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43253"></a>
+        <div class="comment" id="comment-43253">
+            <div id="post-43253-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well, I am getting all the hand shakes and frames for other communication only for this particular communication I am seeing this behaviour. RDP connections are working for internal traffic but the issue is for external traffic where we are only getting SYN packets in capture. For internal traffic we are getting ACK packets from same interface. Do you think problem#1 and problem#3 can still be an issue?</p></div>
+            <div class="comment-info" id="comment-43253-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 06:50)</span>
+                <a class="comment-user userinfo" href="/users/17790/vjay">vjay</a>
+                
+            </div>
+        </div>
+    
+        <a name="43255"></a>
+        <div class="comment" id="comment-43255">
+            <div id="post-43255-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>but the issue is for external traffic where we are only getting SYN packets in capture. </p>
+</blockquote>
+
+<p>O.K. can you please provide a capture file for the case where it does not work? I want to check if there is something wrong in the frame with the SYN flag.</p>
+
+<blockquote>
+<p>Do you think problem#1 and problem#3 can still be an issue?</p>
+</blockquote>
+
+<p>Maybe. Can you asure that the frames in <strong>both cases</strong> (internal and 'external') are taking the same path/route?</p></div>
+            <div class="comment-info" id="comment-43255-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 07:04)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43256"></a>
+        <div class="comment not_top_scorer" id="comment-43256">
+            <div id="post-43256-score" class="comment-score"></div>
+            <div class="comment-text"><p>Pardon me for ignorance, How can i upload a file here?</p></div>
+            <div class="comment-info" id="comment-43256-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 07:29)</span>
+                <a class="comment-user userinfo" href="/users/17790/vjay">vjay</a>
+                
+            </div>
+        </div>
+    
+        <a name="43258"></a>
+        <div class="comment not_top_scorer" id="comment-43258">
+            <div id="post-43258-score" class="comment-score"></div>
+            <div class="comment-text"><p>You can't. Please upload it to dropbox, google drive or cloudshark.org and then post the link here.</p></div>
+            <div class="comment-info" id="comment-43258-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 07:39)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43259"></a>
+        <div class="comment not_top_scorer" id="comment-43259">
+            <div id="post-43259-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Kurt. </p>
+
+<p>External Traffic :
+<a href="https://www.cloudshark.org/captures/7e47bcb89d32">https://www.cloudshark.org/captures/7e47bcb89d32</a></p>
+
+<p>Internal Traffic :
+<a href="https://www.cloudshark.org/captures/9d169624703d">https://www.cloudshark.org/captures/9d169624703d</a></p></div>
+            <div class="comment-info" id="comment-43259-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 07:47)</span>
+                <a class="comment-user userinfo" href="/users/17790/vjay">vjay</a>
+                
+            </div>
+        </div>
+    
+        <a name="43260"></a>
+        <div class="comment not_top_scorer" id="comment-43260">
+            <div id="post-43260-score" class="comment-score"></div>
+            <div class="comment-text"><p>The SYN frame looks good, but as you can see there is also no answer to the ping requests.</p>
+
+<p>So, this leads me to further assumptions</p>
+
+<ul>
+<li>Do you have the windows firewall enabled on that windows system or any other seecurity software (Endpoint security) that might block those frames?</li>
+<li>Do you have a default route pointing back to the firewall or at least a route for the remote network? </li>
+</ul>
+
+<p>Can you please post the output of the following command on the Windows server?</p>
+
+<blockquote>
+<p>route print</p>
+</blockquote></div>
+            <div class="comment-info" id="comment-43260-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 07:59)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43261"></a>
+        <div class="comment not_top_scorer" id="comment-43261">
+            <div id="post-43261-score" class="comment-score"></div>
+            <div class="comment-text"><p>Pasting it in two parts.</p>
+
+<pre>C:\Users&gt;route print
+===========================================================================
+Interface List
+ 12...00 0c 29 0c 88 7b ......Intel(R) PRO/1000 MT Network Connection #2
+ 11...00 0c 29 0c 88 71 ......Intel(R) PRO/1000 MT Network Connection
+  1...........................Software Loopback Interface 1
+ 13...00 00 00 00 00 00 00 e0 Microsoft ISATAP Adapter
+ 14...00 00 00 00 00 00 00 e0 Microsoft ISATAP Adapter #2
+ 15...00 00 00 00 00 00 00 e0 Teredo Tunneling Pseudo-Interface
+===========================================================================
+
+IPv4 Route Table
+===========================================================================
+Active Routes:
+Network Destination        Netmask          Gateway       Interface  Metric
+          0.0.0.0          0.0.0.0      172.16.87.5    172.16.87.123    266
+      62.116.24.9  255.255.255.255      172.16.84.1    172.16.84.121     11
+       80.90.2.33  255.255.255.255      172.16.84.1    172.16.84.121     11
+     88.81.157.71  255.255.255.255      172.16.84.1    172.16.84.121     11
+    91.220.189.12  255.255.255.255      172.16.84.1    172.16.84.121     11
+        127.0.0.0        255.0.0.0         On-link         127.0.0.1    306
+        127.0.0.1  255.255.255.255         On-link         127.0.0.1    306
+  127.255.255.255  255.255.255.255         On-link         127.0.0.1    306
+        172.0.0.0        255.0.0.0      172.16.84.1    172.16.84.121     11
+      172.16.84.0    255.255.255.0         On-link     172.16.84.121    266
+    172.16.84.121  255.255.255.255         On-link     172.16.84.121    266
+    172.16.84.255  255.255.255.255         On-link     172.16.84.121    266
+      172.16.87.0    255.255.255.0         On-link     172.16.87.123    266
+    172.16.87.123  255.255.255.255         On-link     172.16.87.123    266
+    172.16.87.255  255.255.255.255         On-link     172.16.87.123    266
+        224.0.0.0        240.0.0.0         On-link         127.0.0.1    306
+        224.0.0.0        240.0.0.0         On-link     172.16.87.123    266
+        224.0.0.0        240.0.0.0         On-link     172.16.84.121    266
+  255.255.255.255  255.255.255.255         On-link         127.0.0.1    306
+  255.255.255.255  255.255.255.255         On-link     172.16.87.123    266
+  255.255.255.255  255.255.255.255         On-link     172.16.84.121    266
+===========================================================================
+</pre></div>
+            <div class="comment-info" id="comment-43261-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 08:12)</span>
+                <a class="comment-user userinfo" href="/users/17790/vjay">vjay</a>
+                
+            </div>
+        </div>
+    
+        <a name="43262"></a>
+        <div class="comment not_top_scorer" id="comment-43262">
+            <div id="post-43262-score" class="comment-score"></div>
+            <div class="comment-text"><pre>Persistent Routes:
+  Network Address          Netmask  Gateway Address  Metric
+        172.0.0.0        255.0.0.0      172.16.84.1       1
+     88.81.157.71  255.255.255.255      172.16.84.1       1
+       80.90.2.33  255.255.255.255      172.16.84.1       1
+      62.116.24.9  255.255.255.255      172.16.84.1       1
+    91.220.189.12  255.255.255.255      172.16.84.1       1
+          0.0.0.0          0.0.0.0      172.16.87.5  Default
+===========================================================================
+
+IPv6 Route Table
+===========================================================================
+Active Routes:
+ If Metric Network Destination      Gateway
+  1    306 ::1/128                  On-link
+  1    306 ff00::/8                 On-link
+===========================================================================
+Persistent Routes:
+  None
+
+</pre></div>
+            <div class="comment-info" id="comment-43262-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 08:13)</span>
+                <a class="comment-user userinfo" href="/users/17790/vjay">vjay</a>
+                
+            </div>
+        </div>
+    
+        <a name="43263"></a>
+        <div class="comment not_top_scorer" id="comment-43263">
+            <div id="post-43263-score" class="comment-score"></div>
+            <div class="comment-text"><p>Opps. Let me see any other way I can upload.</p></div>
+            <div class="comment-info" id="comment-43263-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 08:20)</span>
+                <a class="comment-user userinfo" href="/users/17790/vjay">vjay</a>
+                
+            </div>
+        </div>
+    
+        <a name="43264"></a>
+        <div class="comment not_top_scorer" id="comment-43264">
+            <div id="post-43264-score" class="comment-score"></div>
+            <div class="comment-text"><p>You have two gateways. One for 172.0.0.0/8 and one default route.</p>
+
+<pre>          0.0.0.0          0.0.0.0      172.16.87.5    172.16.87.123    266
+        172.0.0.0        255.0.0.0      172.16.84.1    172.16.84.121     11
+</pre>
+
+<p>Now, what's the IP address of the firewall and what's the "other" gateway then? </p>
+
+<p>The reply packets for the "external client" (10.6.4.125) should be coming in through gateway 172.16.87.5, as that's the way back for your them (default GW). If that's not the case, you have some form of asymmetric routing, which is a bad idea with statefull firewalls. But then you should at least be able to see the answer of your server on its other interface!</p></div>
+            <div class="comment-info" id="comment-43264-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 08:24)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43267"></a>
+        <div class="comment not_top_scorer" id="comment-43267">
+            <div id="post-43267-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do you mean to say the other interface 172.16.87.123 will send reply to 10.6.4.125? My filter was for both interfaces and via filtering 10.6.4.125 I could get only the response which I uploaded.</p></div>
+            <div class="comment-info" id="comment-43267-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 08:47)</span>
+                <a class="comment-user userinfo" href="/users/17790/vjay">vjay</a>
+                
+            </div>
+        </div>
+    
+        <a name="43269"></a>
+        <div class="comment not_top_scorer" id="comment-43269">
+            <div id="post-43269-score" class="comment-score"></div>
+            <div class="comment-text"><p>I can't tell you, because I don't know where the traffic came in. Can you please post the output of the following command on the server?</p>
+
+<blockquote>
+<p>dumpcap -D -M</p>
+</blockquote></div>
+            <div class="comment-info" id="comment-43269-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 08:53)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43271"></a>
+        <div class="comment not_top_scorer" id="comment-43271">
+            <div id="post-43271-score" class="comment-score"></div>
+            <div class="comment-text"><ol>
+<li>\Device\NPF_{01FCA39F-F324-4E69-8846-98BC42FD040A}   Intel(R) PRO/1000 MT Net
+work Connection Web Front       0       172.16.87.123   network</li>
+<li>\Device\NPF_{8BEF7088-B506-40A4-A1A2-D6D46A4BF9CE}   Intel(R) PRO/1000 MT Net
+work Connection Web Backend     0       172.16.84.121   network</li>
+</ol>
+
+<p>In network capture for both interfaces I only see traffic coming for 3389 from 10.6.4.125 IP but don't see any traffic going out from 3389 port to that IP Address.</p></div>
+            <div class="comment-info" id="comment-43271-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 09:04)</span>
+                <a class="comment-user userinfo" href="/users/17790/vjay">vjay</a>
+                
+            </div>
+        </div>
+    
+        <a name="43282"></a>
+        <div class="comment not_top_scorer" id="comment-43282">
+            <div id="post-43282-score" class="comment-score"></div>
+            <div class="comment-text"><p>as I suspected, the traffic in your capture file was captured on the interface with IP address 172.16.84.121, (see Statistics -&gt; Summary. You'll find the ID of the interface there). Now, the default route will send out the answer through the other interface to gateway 172.16.87.5. This will result in a firewall seeing only parts of the traffic, or it will see the same session on different interfaces. In both cases a stateful firewall will deny to process the session. </p>
+
+<p>Why you don't see the SYN-ACK in Wireshark, I can't tell you. Maybe there is something wrong with your capture setup. You should see the SYN-ACK and the ping response on the other interface (172.16.87.123). </p>
+
+<p>There are two obvious solutions:</p>
+
+<ul>
+<li>Add a route for 10.x.x.x/8 (or whatever subnet you need) to 172.16.84.1</li>
+<li>Perform SNAT on the Firewall, and translate the address 10.6.4.125 to an address in the range of 172.x.x.x/8. Please ask your firewall admins, they should know what to do.</li>
+</ul>
+
+<p>BTW: There is still a chance, that a filter on the Windows system blocks your frames, like the windows firewall or any other form of security software. Did you check that?</p></div>
+            <div class="comment-info" id="comment-43282-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Jun '15, 13:52)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43306"></a>
+        <div class="comment not_top_scorer" id="comment-43306">
+            <div id="post-43306-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, local firewall has been turned off and there is no antivirus software running on the server.</p>
+
+<p>Unfortunately, Network Admin is stuck on the point that firewall is passing traffic but server is not responding, I will need some proof to get him make change on gateway or firewall. Is there a way I can capture response from other interface to 10.6.4.125? I do have whole capture without any filter available for both the interfaces but I don't see any response for 10.6.4.125.</p></div>
+            <div class="comment-info" id="comment-43306-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '15, 00:12)</span>
+                <a class="comment-user userinfo" href="/users/17790/vjay">vjay</a>
+                
+            </div>
+        </div>
+    
+        <a name="43310"></a>
+        <div class="comment not_top_scorer" id="comment-43310">
+            <div id="post-43310-score" class="comment-score"></div>
+            <div class="comment-text"><p>To make sure you are <strong>really</strong> capturing on both ports, please start Wireshark with the following command:</p>
+
+<blockquote>
+<p>wireshark -ni 1 -ni 2 -k -f "host 10.6.4.125"</p>
+</blockquote>
+
+<p>Then start the ping and connect to the RDP server. Wait 10-20 seconds. Then look at the data. You should see the ping response now and the SYN-ACK.</p>
+
+<p>If you <strong>don't</strong> see the answer packets, there is indeed a problem on your server and then you need to double check that nothing <strong>on the server</strong> blocks the frames (AV, IPS, Endpoint security, etc.).</p></div>
+            <div class="comment-info" id="comment-43310-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '15, 01:11)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43313"></a>
+        <div class="comment not_top_scorer" id="comment-43313">
+            <div id="post-43313-score" class="comment-score"></div>
+            <div class="comment-text"><p>Still getting same results. On Windows server also firewall has been turned off.</p>
+
+<pre><code>C:\Program Files\Wireshark&gt;netsh advfirewall show currentprofile
+
+Domain Profile Settings:
+----------------------------------------------------------------------
+State                                 OFF
+Firewall Policy                       BlockInbound,AllowOutbound
+LocalFirewallRules                    N/A (GPO-store only)
+LocalConSecRules                      N/A (GPO-store only)
+InboundUserNotification               Disable
+RemoteManagement                      Disable
+UnicastResponseToMulticast            Enable
+
+Logging:
+LogAllowedConnections                 Disable
+LogDroppedConnections                 Disable
+FileName                              %systemroot%\system32\LogFiles\Firewall\pf
+irewall.log
+MaxFileSize                           4096
+
+Public Profile Settings:
+----------------------------------------------------------------------
+State                                 OFF
+Firewall Policy                       BlockInbound,AllowOutbound
+LocalFirewallRules                    N/A (GPO-store only)
+LocalConSecRules                      N/A (GPO-store only)
+InboundUserNotification               Disable
+RemoteManagement                      Disable
+UnicastResponseToMulticast            Enable
+
+Logging:
+LogAllowedConnections                 Disable
+LogDroppedConnections                 Disable
+FileName                              %systemroot%\system32\LogFiles\Firewall\pf
+irewall.log
+MaxFileSize                           4096
+
+Ok.
+C:\Program Files\Wireshark&gt;
+</code></pre>
+
+<p>Don't know what could be the issue.</p></div>
+            <div class="comment-info" id="comment-43313-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '15, 02:03)</span>
+                <a class="comment-user userinfo" href="/users/17790/vjay">vjay</a>
+                
+            </div>
+        </div>
+    
+        <a name="43314"></a>
+        <div class="comment not_top_scorer" id="comment-43314">
+            <div id="post-43314-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Still getting same results. On Windows server also firewall has been turned off. <br>
+Don't know what could be the issue. </p>
+</blockquote>
+
+<p>I don't know it either, but if you still don't see the reply packets in the capture file (with the command I posted above), then I conclude that:</p>
+
+<ul>
+<li>something on the Windows system blocks the incoming frames. I can't help you with that. Please ask your local Windows hero!</li>
+<li><strong>OR the server does not get an ARP reply for the Default Gateway</strong>. Do you see ARP requests in the capture file? What is the output of the following command?</li>
+</ul>
+
+<blockquote>
+<p>arp -a | find "172.16.87.5"</p>
+</blockquote></div>
+            <div class="comment-info" id="comment-43314-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '15, 02:14)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43315"></a>
+        <div class="comment not_top_scorer" id="comment-43315">
+            <div id="post-43315-score" class="comment-score"></div>
+            <div class="comment-text"><p>C:\Program Files\Wireshark&gt;arp -a | find "172.16.87.5"
+  172.16.87.5           00-23-e9-6e-09-87     dynamic</p>
+
+<p>How can I check ARP requests in capture file?</p></div>
+            <div class="comment-info" id="comment-43315-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '15, 02:28)</span>
+                <a class="comment-user userinfo" href="/users/17790/vjay">vjay</a>
+                
+            </div>
+        </div>
+    
+        <a name="43316"></a>
+        <div class="comment not_top_scorer" id="comment-43316">
+            <div id="post-43316-score" class="comment-score"></div>
+            <div class="comment-text"><p>Use a display filter of "arp".</p></div>
+            <div class="comment-info" id="comment-43316-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '15, 02:45)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43317"></a>
+        <div class="comment not_top_scorer" id="comment-43317">
+            <div id="post-43317-score" class="comment-score"></div>
+            <div class="comment-text"><p>You don't have to look for ARP requests, as the server knows the MAC address of the gateway!</p>
+
+<p>So, my conclusion is: <strong>something</strong> on the server blocks the incoming requests from 10.6.4.125. You say, that there is no security software enabled, so I can't tell you what it might be. Please ask your local windows hero/guru to have a look at it.</p></div>
+            <div class="comment-info" id="comment-43317-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '15, 02:46)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43318"></a>
+        <div class="comment not_top_scorer" id="comment-43318">
+            <div id="post-43318-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Kurt for your extensive support. Really appreciated. I will check with Windows team.</p></div>
+            <div class="comment-info" id="comment-43318-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '15, 03:04)</span>
+                <a class="comment-user userinfo" href="/users/17790/vjay">vjay</a>
+                
+            </div>
+        </div>
+    
+        <a name="43319"></a>
+        <div class="comment not_top_scorer" id="comment-43319">
+            <div id="post-43319-score" class="comment-score"></div>
+            <div class="comment-text"><p>You're welcome!</p>
+
+<p>Hint: If a supplied answer resolves your question can you please "accept" it by clicking the checkmark icon next to it. This highlights good answers for the benefit of subsequent users with the same or similar questions. For extra points you can up vote the answer (thumb up).</p></div>
+            <div class="comment-info" id="comment-43319-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '15, 03:08)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43498"></a>
+        <div class="comment not_top_scorer" id="comment-43498">
+            <div id="post-43498-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/2593/kurt-knochner">@Kurt Knochner</a>, I have added persistent route for the destination and it is working fine now. I thought to put an update so it may help someone in future.</p></div>
+            <div class="comment-info" id="comment-43498-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Jun '15, 04:42)</span>
+                <a class="comment-user userinfo" href="/users/17790/vjay">vjay</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-43242" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 27
+        </span>
+        <a href="#" class="show-all-comments-link">show 22 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43242-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/43240/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='lRJmgCmh53AJetNdIIvi8XimfE41m9OE' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/43240/no-synack-for-the-syn-packet?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/43240/no-synack-for-the-syn-packet?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+        <a href="/tags/rdp/"
+            class="tag-link-rdp"
+            title="see questions tagged'rdp'using tags"
+            rel="tag">rdp</a> <span class="tag-number">&#215;22</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 17, 2015, 4:39 a.m.">17 Jun '15, 04:39</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>11,887 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 24, 2015, 4:42 a.m.">24 Jun '15, 04:42</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/35220/wireshark-via-remote-desktop-protocol">Wireshark via Remote Desktop Protocol</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2144/publishing-and-deploying-wireshark-to-users-within-a-rdp-citrix-environment">Publishing and Deploying Wireshark to users Within a RDP / Citrix Environment</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23243/how-do-you-capture-serial-com-communications">How do you capture Serial (COM) communications?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23854/computer-sending-emails-via-phishing-program">Computer sending emails via phishing program.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24457/what-does-referer-field-not-being-present-mean">What does referer field not being present mean?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25533/wirehark-doesnt-start-on-osx">Wirehark doesn&#39;t start on OSX</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26534/how-to-determine-server-with-very-high-bandwidth-consumption-in-vlan-network">How to determine server with very high bandwidth consumption in VLAN network.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27284/how-to-retrieve-file-from-ftp">how to retrieve file from FTP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27943/decode-as-my-protocol">Decode as my protocol</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28516/unknown-udp-traffic-from-unknown-process-on-port-60129">Unknown UDP traffic from unknown process on port 60129</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

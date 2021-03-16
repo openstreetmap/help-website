@@ -1,0 +1,1047 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Adding VLAN Tag on Wireshark capture - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi all, I have basic Wireshark capture (HTTP, CAP format) I would like to put VLAN Tag label on this capture, I mean I want to have the original capture with encapsulate of VLAN ID. For this purpose I having Cisco SW Layer 2 and Layer 3 if needed and two PCs , I am using “bittwist” software to injec..." />
+        <meta name="keywords" content="adding,vlan,bittwist,tagging,wireshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/10868/adding-vlan-tag-on-wireshark-capture" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/10868/adding-vlan-tag-on-wireshark-capture?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='cu3HvzVuLsNkRRkyK0bHkowTMJaGJ3zr' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/10868/adding-vlan-tag-on-wireshark-capture">Adding VLAN Tag on Wireshark capture</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-10868-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/10868/up/" rel="nofollow"> </a>
+<div id="post-10868-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-10868-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/10868/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/10868/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all,
+I have basic Wireshark capture (HTTP, CAP format) I would like to put VLAN Tag label on this capture, I mean I want to have the original capture with encapsulate of VLAN ID.
+For this purpose I having Cisco SW Layer 2 and Layer 3 if needed and two PCs , I am using “bittwist” software to inject the XXX.CAP capture to the SW. 
+I also tried to do span port (Monitoring port) at Layer 2 SW but I didn’t success to see VLAN tag at the destination port (I add the column of dot1q at the Wireshark Software)<br>
+</p>
+<p>Anyone can figure how to do it ?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/adding/" class="post-tag tag-link-adding"
+                                        title="see questions tagged 'adding'" rel="tag">adding</a>
+                                
+                                    <a href="/tags/vlan/" class="post-tag tag-link-vlan"
+                                        title="see questions tagged 'vlan'" rel="tag">vlan</a>
+                                
+                                    <a href="/tags/bittwist/" class="post-tag tag-link-bittwist"
+                                        title="see questions tagged 'bittwist'" rel="tag">bittwist</a>
+                                
+                                    <a href="/tags/tagging/" class="post-tag tag-link-tagging"
+                                        title="see questions tagged 'tagging'" rel="tag">tagging</a>
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 May '12, 00:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0cd56c61152785b5e3b6153e49dc62ee?s=32&amp;d=identicon&amp;r=g" alt="Ariel%20Goldenberg's gravatar image" />
+    <p><a href="/users/2667/ariel-goldenberg">Ariel Golden...</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Ariel Goldenberg has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-10868">
+    
+</div>
+<div id="comment-tools-10868" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-10868-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/10868/adding-vlan-tag-on-wireshark-capture?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/10868/adding-vlan-tag-on-wireshark-capture?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/10868/adding-vlan-tag-on-wireshark-capture?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/10868/adding-vlan-tag-on-wireshark-capture?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="10869"></a>
+                    <div id="answer-container-10869" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-10869-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/10869/up/" rel="nofollow"> </a>
+<div id="post-10869-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-10869-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/10869/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'm assuming that your CAP file (that you're injecting using bittwist) has in fact VLAN tags. If you're setting up a span port you need to tell the switch to keep the VLAN information intact, because Cisco switches remove the VLAN tag when spanning. You should set up your monitor session with the "encapsulation dot1q" parameter when defining it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/10869/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 May '12, 00:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-10869">
+    
+        <a name="10872"></a>
+        <div class="comment" id="comment-10872">
+            <div id="post-10872-score" class="comment-score"></div>
+            <div class="comment-text"><p>Wow thanks for your quick response, 
+I don’t know if the CAP file was in VLAN tag, 
+I did exactly what you suggest with the span port (LACP).
+Look at the configuration file , I’m using Cisco SW  2940 Ver. 12.1(22).</p>
+
+<p><a href="http://www.fileflyer.com/view/vc7RpBW">http://www.fileflyer.com/view/vc7RpBW</a></p></div>
+            <div class="comment-info" id="comment-10872-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 May '12, 00:57)</span>
+                <a class="comment-user userinfo" href="/users/2667/ariel-goldenberg">Ariel Golden...</a>
+                
+            </div>
+        </div>
+    
+        <a name="10874"></a>
+        <div class="comment" id="comment-10874">
+            <div id="post-10874-score" class="comment-score"></div>
+            <div class="comment-text"><p>Looks like I would need a code to unlock the file... strange service to host a file. Maybe you can just post your monitor command sequence - that could speed things up.</p>
+
+<p>Anyway, the CAP file you're injecting using bittwist should contain VLAN tags, which you can easily verify by looking at the file in Wireshark - if it has VLAN tags, it will show them :-) Then, after you made sure the file has VLAN tags you can do the injection, and your monitor port should show the packets with tags if your SPAN session is configured correctly.</p></div>
+            <div class="comment-info" id="comment-10874-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 May '12, 01:09)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="10890"></a>
+        <div class="comment" id="comment-10890">
+            <div id="post-10890-score" class="comment-score"></div>
+            <div class="comment-text"><p>The file witout VLAN Tag (Only regular HTTP),</p>
+
+<p>monitor session 1 source interface Fa0/1
+monitor session 1 destination interface Fa0/8 encapsulation dot1q ingress vlan 100</p>
+
+<p>Here another link for this file 
+<a href="http://www.2shared.com/document/eNpVe4-a/Configuration.html">http://www.2shared.com/document/eNpVe4-a/Configuration.html</a></p>
+
+<p>Thanks</p></div>
+            <div class="comment-info" id="comment-10890-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 May '12, 02:29)</span>
+                <a class="comment-user userinfo" href="/users/2667/ariel-goldenberg">Ariel Golden...</a>
+                
+            </div>
+        </div>
+    
+        <a name="10891"></a>
+        <div class="comment" id="comment-10891">
+            <div id="post-10891-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The monitor session configuration looks okay - if you want to add VLAN tags by injecting it on a trunk and then capture the tagged packets the monitor session should just do that. Of course your NIC that you capture with must be able to accept VLAN tagged frames (and not drop them, as some do).</p>
+
+<p>But if you just want add VLAN tags to your file you could do that with tcprewrite, for example:</p>
+
+<p><strong>tcprewrite --enet-vlan=add --enet-vlan-tag=40 --enet-vlan-cfi=1 --enet-vlan-pri=4 --infile=input.pcap --outfile=output.pcap </strong></p>
+
+<p>See <a href="http://tcpreplay.synfin.net/wiki/tcprewrite">http://tcpreplay.synfin.net/wiki/tcprewrite</a></p></div>
+            <div class="comment-info" id="comment-10891-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 May '12, 02:38)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="10892"></a>
+        <div class="comment" id="comment-10892">
+            <div id="post-10892-score" class="comment-score"></div>
+            <div class="comment-text"><p>Let me try with tcpwrite ...</p></div>
+            <div class="comment-info" id="comment-10892-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 May '12, 02:46)</span>
+                <a class="comment-user userinfo" href="/users/2667/ariel-goldenberg">Ariel Golden...</a>
+                
+            </div>
+        </div>
+    
+        <a name="10893"></a>
+        <div class="comment not_top_scorer" id="comment-10893">
+            <div id="post-10893-score" class="comment-score"></div>
+            <div class="comment-text"><p>can you send me the download link ....
+Should I need to use Linux or there is Windows Compatible version?</p></div>
+            <div class="comment-info" id="comment-10893-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 May '12, 02:52)</span>
+                <a class="comment-user userinfo" href="/users/2667/ariel-goldenberg">Ariel Golden...</a>
+                
+            </div>
+        </div>
+    
+        <a name="10894"></a>
+        <div class="comment not_top_scorer" id="comment-10894">
+            <div id="post-10894-score" class="comment-score"></div>
+            <div class="comment-text"><p>Downloads are at <a href="http://tcpreplay.synfin.net/wiki/Download">http://tcpreplay.synfin.net/wiki/Download</a> - but I think they're all source code only, so you'd have to compile it first. There probably are binaries in the various Linux distribution package management systems, but I haven't checked lately. On Debian/Ubuntu you could do an "apt-cache search tcprewrite" which should tell you if there is a package.</p>
+
+<p>I always used the linux version myself, so I can't tell you if the Windows version is any good.</p></div>
+            <div class="comment-info" id="comment-10894-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 May '12, 03:05)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="10896"></a>
+        <div class="comment not_top_scorer" id="comment-10896">
+            <div id="post-10896-score" class="comment-score"></div>
+            <div class="comment-text"><p>There is no Windows release of tcpreplay ?</p></div>
+            <div class="comment-info" id="comment-10896-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 May '12, 04:49)</span>
+                <a class="comment-user userinfo" href="/users/2667/ariel-goldenberg">Ariel Golden...</a>
+                
+            </div>
+        </div>
+    
+        <a name="10898"></a>
+        <div class="comment not_top_scorer" id="comment-10898">
+            <div id="post-10898-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well, there is a source you could compile, but then again that is not something we're used to do on Windows... so unless you can compile it or find someone to do that for you there is binary release afaik.</p></div>
+            <div class="comment-info" id="comment-10898-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 May '12, 07:44)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="10964"></a>
+        <div class="comment not_top_scorer" id="comment-10964">
+            <div id="post-10964-score" class="comment-score"></div>
+            <div class="comment-text"><p>I couldn’t success to install it on Linux, I don’t have experience with LINUX , Can I have this application “tcp replay” “tcpwrite” to WINDOWS platform ?</p></div>
+            <div class="comment-info" id="comment-10964-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '12, 04:50)</span>
+                <a class="comment-user userinfo" href="/users/2667/ariel-goldenberg">Ariel Golden...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-10869" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-10869-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="10908"></a>
+                    <div id="answer-container-10908" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-10908-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/10908/up/" rel="nofollow"> </a>
+<div id="post-10908-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-10908-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/10908/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Have you checked whether your NIC strips the vlan tags before Wireshark gets hold of the packets? Have a look at <a href="http://wiki.wireshark.org/CaptureSetup/VLAN">http://wiki.wireshark.org/CaptureSetup/VLAN</a> for instructions for configuring several NICs to <em>not</em> strip the vlan tags.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/10908/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 May '12, 16:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-10908">
+    
+        <a name="10963"></a>
+        <div class="comment" id="comment-10963">
+            <div id="post-10963-score" class="comment-score"></div>
+            <div class="comment-text"><p>I want to be clear , I'm having Capture (Without VLAN TAG).
+I want to have this Capture with VLAN tagging (VLAN 100 for example) </p>
+
+<p>The scenario I having is: I play this capture from my PC with bittwist to Cisco SW (port1) and configure monitor port from port 1 to destination port 8 , 
+I connect at port 8 PC with Wireshark and I want to recorder this Capture with VLAN Tag.</p></div>
+            <div class="comment-info" id="comment-10963-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '12, 04:48)</span>
+                <a class="comment-user userinfo" href="/users/2667/ariel-goldenberg">Ariel Golden...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-10908" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-10908-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/10868/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='cu3HvzVuLsNkRRkyK0bHkowTMJaGJ3zr' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/10868/adding-vlan-tag-on-wireshark-capture?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/10868/adding-vlan-tag-on-wireshark-capture?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+        <a href="/tags/vlan/"
+            class="tag-link-vlan"
+            title="see questions tagged'vlan'using tags"
+            rel="tag">vlan</a> <span class="tag-number">&#215;66</span><br/>
+        
+        <a href="/tags/tagging/"
+            class="tag-link-tagging"
+            title="see questions tagged'tagging'using tags"
+            rel="tag">tagging</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/bittwist/"
+            class="tag-link-bittwist"
+            title="see questions tagged'bittwist'using tags"
+            rel="tag">bittwist</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/adding/"
+            class="tag-link-adding"
+            title="see questions tagged'adding'using tags"
+            rel="tag">adding</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 10, 2012, 12:06 a.m.">10 May '12, 00:06</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>36,354 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 13, 2012, 4:50 a.m.">13 May '12, 04:50</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/10060/vlan-tagging-with-different-versions-of-wireshark">VLAN Tagging with different versions of Wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54389/unknown-interface-caught-on-wireshark">unknown interface caught on wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15532/how-can-i-get-a-list-of-all-the-vlan-ids-in-a-capture">How can I get a list of all the VLAN IDs in a capture?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45752/no-icmp-response-when-routing-vlan-traffic-down-another-vlan-interface">[closed] No ICMP response when routing vlan traffic down another vlan interface</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15524/vlan-tagging-intel-82579lm-and-wireshark-183">VLAN Tagging Intel 82579LM and Wireshark 1.8.3</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38809/vlan-tagging-on-atheros-network-card">Vlan tagging on Atheros network card</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26534/how-to-determine-server-with-very-high-bandwidth-consumption-in-vlan-network">How to determine server with very high bandwidth consumption in VLAN network.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27/are-this-questions-for-users-or-developers">Are this questions for Users or Developers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1230/after-updating-mac-ports-wireshark-is-dead">after updating mac ports wireshark is dead!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2091/wireshark-built-in-dissector-needs-to-be-changed-to-a-plugin">Wireshark built in dissector needs to be changed to a plugin??</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

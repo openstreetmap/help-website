@@ -1,0 +1,970 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How do I prove that a downstream entity is the cause of TCP connection instability? - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi Everyone I am a wirshark n00b and in desperate need of help. We have a SMPP client on some our server and it is connecting to an SMSC. They chat backwards and forwards using SMPP which is just a protocol over TCP. Everything was working great until 1 August 2012 (very strange date for things to s..." />
+        <meta name="keywords" content="disconnect,tcp" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/13486/how-do-i-prove-that-a-downstream-entity-is-the-cause-of-tcp-connection-instability" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/13486/how-do-i-prove-that-a-downstream-entity-is-the-cause-of-tcp-connection-instability?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='gglhsC0mwdwGTAq18ko1sLtgckSLeuPA' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/13486/how-do-i-prove-that-a-downstream-entity-is-the-cause-of-tcp-connection-instability">How do I prove that a downstream entity is the cause of TCP connection instability?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-13486-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13486/up/" rel="nofollow"> </a>
+<div id="post-13486-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-13486-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13486/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/13486/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi Everyone</p>
+<p>I am a wirshark n00b and in desperate need of help. We have a SMPP client on some our server and it is connecting to an SMSC. They chat backwards and forwards using SMPP which is just a protocol over TCP. Everything was working great until 1 August 2012 (very strange date for things to suddenly go pear shape). </p>
+<p>One of the SMSCs that we connect to suddenly started exihibiting the worst connection stability. All the other SMSCs that we connect to have been perfect. We can maintain the connection for hours on end. This one SMSC drops the connection every couple of seconds. </p>
+<p>We have run many many traces looking at the SMPP protocol and I am pretty sure that there is nothing wrong that we are doing according to the SMPP spec (that and every other SMSC is stable). So I was reading wireshark forums etc and came across looking at the connection RST. When I run a wireshark trace against their IP address and run "Expert Infos" the log is full of them. Their IP is mostly the source. Occassionally we are the source but that is due to the fact that they have not answered keep alive packets. I also see a lot of TCP DUP ack (which I believe is a good indicator of packet loss). The connection also appears to be very unstable when we put them under load. During low traffic it seems to be fine except for our receivers that reset the binds every now and then due to the SMSC not acknowledging SMPP keep alive packets.</p>
+<p>Is there anybody here that can confirm my suspicions and look at this trace and tell me what they think.</p>
+<p><a href="http://dl.dropbox.com/u/5811253/VC_00001_20120809093402.rar">Here is the trace</a></p>
+<p>Sorry, just to add, from previous questions that I have read the contributors always mention that it would be nice to get the developers input. We are the developers of the SMPP software. We can answer all those questions. Any questions you have we will be able to answer. For example the cause of the TCP resets from us is that the keep alive packets are not answered within 30 seconds so we assume a dead connection and restart.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/disconnect/" class="post-tag tag-link-disconnect"
+                                        title="see questions tagged 'disconnect'" rel="tag">disconnect</a>
+                                
+                                    <a href="/tags/tcp/" class="post-tag tag-link-tcp"
+                                        title="see questions tagged 'tcp'" rel="tag">tcp</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Aug '12, 00:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b7760b5831b2deaeaee8daa8aa62a39e?s=32&amp;d=identicon&amp;r=g" alt="uriDium's gravatar image" />
+    <p><a href="/users/3225/uridium">uriDium</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="uriDium has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/13486/">
+                edited
+                <strong>09 Aug '12, 01:11</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-13486">
+    
+</div>
+<div id="comment-tools-13486" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13486-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/13486/how-do-i-prove-that-a-downstream-entity-is-the-cause-of-tcp-connection-instability?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/13486/how-do-i-prove-that-a-downstream-entity-is-the-cause-of-tcp-connection-instability?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/13486/how-do-i-prove-that-a-downstream-entity-is-the-cause-of-tcp-connection-instability?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/13486/how-do-i-prove-that-a-downstream-entity-is-the-cause-of-tcp-connection-instability?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="13489"></a>
+                    <div id="answer-container-13489" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-13489-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13489/up/" rel="nofollow"> </a>
+<div id="post-13489-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-13489-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13489/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="uriDium has selected this answer as the correct answer"
+        href="/accept_answer/13489/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are a lot of these messages </p>
+<ul>
+<li>TCP Previous segment not captured</li>
+<li>DUP ACK</li>
+</ul>
+<p>Take a look at 'tcp.stream == 10' (first stream with 3-way handshake). Then take a look at 'tcp.stream == 11'. Apparently the SYN packet did not arrive and had to be retransmitted. </p>
+<p>I guess you have "some/to much" packet loss somewhere on the way. The TCP Resets are just the final act in that play. I suggest to capture in front of both systems and then compare the capture files to verify that. Below is a "picture" with the suggested capture points (CP).</p>
+<blockquote>
+<p><code>192.168.250.10 -[CP]---- transfer network ----[CP]- 196.11.146.34</code><br>
+</p>
+</blockquote>
+<p>If the packet loss takes place on your systems (I don't think so, as several systems are affected), you can only debug your implementation.</p>
+<p>If the packet loss takes place on the transfer network, you need to know all routers on that way (traceroute) and then work along that chain to find the place where the packets are lost. </p>
+<p>If the routers are not within your control, you can run a TCP performance test to verify the quality of the connection (<a href="http://code.google.com/p/xjperf/">xjperf</a>)</p>
+<p>BTW: Did you upgrade any router/firewall/vpn firmware on the magic date 1. August?</p>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/13489/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Aug '12, 01:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/13489/">
+                edited
+                <strong>09 Aug '12, 01:48</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-13489">
+    
+        <a name="13492"></a>
+        <div class="comment" id="comment-13492">
+            <div id="post-13492-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Kurt. It is so strange. This pretty much started at exactly 09:00Am 1 August. We have called in our hosting infastructure and they deny changing anything. I am inclined to believe them otherwise we "should" (maybe) see this with all our other SMSCs (most terminating in the same country). We have run a tracert and are trying to get both sides into a conference call.</p></div>
+            <div class="comment-info" id="comment-13492-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '12, 02:28)</span>
+                <a class="comment-user userinfo" href="/users/3225/uridium">uriDium</a>
+                
+            </div>
+        </div>
+    
+        <a name="13493"></a>
+        <div class="comment" id="comment-13493">
+            <div id="post-13493-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/2593/kurt">@Kurt</a>. So we ran similar wireshark traces to SMSCs in the same country, during the same period and traffic volumes. 0 TCP RST, 0 DUP ACK. So I am pretty sure that it must something downstream from us. We are just seriously struggling to get parties on both to cooperate. They just keep pointing fingers.</p></div>
+            <div class="comment-info" id="comment-13493-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '12, 02:31)</span>
+                <a class="comment-user userinfo" href="/users/3225/uridium">uriDium</a>
+                
+            </div>
+        </div>
+    
+        <a name="13494"></a>
+        <div class="comment" id="comment-13494">
+            <div id="post-13494-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>They just keep pointing fingers.</p>
+</blockquote>
+
+<p>Ah, the good old game :-) Capture at both sides and as soon as you have an idea where the packets get lost, you can start pointing fingers (IF it's not your systems causing the trouble) ;-))</p></div>
+            <div class="comment-info" id="comment-13494-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '12, 02:35)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="13496"></a>
+        <div class="comment" id="comment-13496">
+            <div id="post-13496-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/2593/kurt">@Kurt</a> thanks for all the help. Just a little more please :) If we get them to do the same capture on their side, what are we looking for? Where do we go from here? If their traces also show a ton of drops and DUP acks does that mean it is something in between them and us? Or if it looks clean then it is something further downstream and in their infrastructure? Like a faulty switch or router?</p></div>
+            <div class="comment-info" id="comment-13496-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '12, 02:38)</span>
+                <a class="comment-user userinfo" href="/users/3225/uridium">uriDium</a>
+                
+            </div>
+        </div>
+    
+        <a name="13499"></a>
+        <div class="comment" id="comment-13499">
+            <div id="post-13499-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>If we get them to do the same capture on their side, what are we looking for? </p>
+</blockquote>
+
+<p>Where the packet loss takes place. </p>
+
+<p>If they DO see all packets you see, then there is no packet loss on the network. Then the problem is within your application.</p>
+
+<p>If they do NOT see all packets you see, then there packet loss on the network. In that case you need to work your way along the network path to figure out where the packet loss takes place. That's the most tedious part, especially if the parties don't want to cooperate.</p>
+
+<blockquote>
+<p>Where do we go from here? If their traces also show a ton of drops and DUP acks does that mean it is something in between them and us? </p>
+</blockquote>
+
+<p>Yes.</p>
+
+<blockquote>
+<p>Or if it looks clean then it is something further downstream and in their infrastructure? Like a faulty switch or router?</p>
+</blockquote>
+
+<p>Maybe.</p>
+
+<p>I suggest to capture directly in front of the communicating machines and then work your way up, device by device. Hard work, but there is no better way to do it.</p></div>
+            <div class="comment-info" id="comment-13499-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '12, 02:46)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="13500"></a>
+        <div class="comment not_top_scorer" id="comment-13500">
+            <div id="post-13500-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/2593/kurt">@Kurt</a> Sorry I lied. We need a little more help: I recall the SMSC accusing the wireshark of containing a lot of "Header checksum: 0x0000 [incorrect, should be 0x7b67 (may be caused by "IP checksum offload"?)]" warnings. We read however that may be caused by the NIC not having completed the checksum calculations yet. Some other forums had question relating to packet loss and dropped connections suggested that they disable checksum offloading on the NICs. These seemed to help some guys. What do you recommend?</p></div>
+            <div class="comment-info" id="comment-13500-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '12, 02:48)</span>
+                <a class="comment-user userinfo" href="/users/3225/uridium">uriDium</a>
+                
+            </div>
+        </div>
+    
+        <a name="13501"></a>
+        <div class="comment not_top_scorer" id="comment-13501">
+            <div id="post-13501-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I recall the SMSC accusing the wireshark of containing a lot of "Header checksum:</p>
+</blockquote>
+
+<p>That's just a strategy to keep away work and problems ;-)</p>
+
+<p>Well, offloading "could" be causing problems too, however I don't think so in your case, that's why I did not mention it. Anyway, give it a try. Look for the advanced properties of your NIC driver. </p>
+
+<p>However, I suggest to capture first in front of the system and not on the system. This will eliminate the wrong checksums and proof that offloading does not cause the problem. See <a href="http://wiki.wireshark.org/CaptureSetup/">Capture Setup</a></p></div>
+            <div class="comment-info" id="comment-13501-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '12, 02:56)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="13503"></a>
+        <div class="comment not_top_scorer" id="comment-13503">
+            <div id="post-13503-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>If they DO see all packets you see, then there is no packet loss on the network. Then the problem is within your application.</p>
+</blockquote>
+
+<p>Let me clarify that a bit. By "the problem is within your application" I mean, the receiving application (or OS) on 196.11.146.34 (or the NATed device behind that IP) does not handle the packets in a propper way. So, if that is <strong>your</strong> system then it is your problem. If that is <strong>their</strong> system/application, it is their problem.</p></div>
+            <div class="comment-info" id="comment-13503-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '12, 03:26)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="13510"></a>
+        <div class="comment not_top_scorer" id="comment-13510">
+            <div id="post-13510-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yip, that IP is theirs. We just got off a 2 hour conference call. We sit pinging that IP with packet loss. They are now calling in their routing and switching team. Thanks for all the help.</p></div>
+            <div class="comment-info" id="comment-13510-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '12, 04:35)</span>
+                <a class="comment-user userinfo" href="/users/3225/uridium">uriDium</a>
+                
+            </div>
+        </div>
+    
+        <a name="13511"></a>
+        <div class="comment not_top_scorer" id="comment-13511">
+            <div id="post-13511-score" class="comment-score"></div>
+            <div class="comment-text"><p>good luck.</p></div>
+            <div class="comment-info" id="comment-13511-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '12, 04:39)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-13489" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13489-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/13486/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='gglhsC0mwdwGTAq18ko1sLtgckSLeuPA' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/13486/how-do-i-prove-that-a-downstream-entity-is-the-cause-of-tcp-connection-instability?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/13486/how-do-i-prove-that-a-downstream-entity-is-the-cause-of-tcp-connection-instability?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tcp/"
+            class="tag-link-tcp"
+            title="see questions tagged'tcp'using tags"
+            rel="tag">tcp</a> <span class="tag-number">&#215;752</span><br/>
+        
+        <a href="/tags/disconnect/"
+            class="tag-link-disconnect"
+            title="see questions tagged'disconnect'using tags"
+            rel="tag">disconnect</a> <span class="tag-number">&#215;15</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 9, 2012, 12:52 a.m.">09 Aug '12, 00:52</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,189 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 9, 2012, 4:39 a.m.">09 Aug '12, 04:39</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/59888/analysis-of-tcp-termination-process">Analysis of TCP Termination process</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57053/network-print-aborts-windows-server-tcp-dup-ack-tcp-rst">Network Print aborts (Windows Server) TCP DUP ACK - TCP RST</a>
+        </p>
+        
+        <p>
+            <a href="/questions/230/displaying-all-tcp-connections-with-syn-packets">Displaying all TCP connections with SYN packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1698/tcp-out-of-order-what-does-it-means">&quot;TCP out of order &quot; what does it means ?!!!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3235/adding-custom-tcp-options">Adding custom TCP options</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4932/not-honoring-own-mss">Not honoring own MSS?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7043/is-there-any-way-to-find-the-tcp-stream-number-based-on-packet-number">Is there any way to find the tcp stream number based on packet number?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7972/acked-lost-segments-false-positive">ACKed lost segments - false positive?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9281/lua-dissector-failing-occasionally-returns-nil-values-instead-of-tcp-endpoints-for-valid-packets">Lua dissector failing: occasionally returns nil values instead of TCP endpoints for valid packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11146/tcp-previous-segment-lost-really-rare-case">TCP PREVIOUS SEGMENT LOST #REALLY RARE CASE#</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

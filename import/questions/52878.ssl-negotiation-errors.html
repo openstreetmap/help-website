@@ -1,0 +1,945 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>SSL negotiation errors - Wireshark Q&amp;A</title>
+        <meta name="description" content="We are having issues when trying to connect via SSL using TLS 1.0 with PayPal. We have logs from good connections and bad (different IPs). When good, we are seeing TCP messages referencing synchromesh &amp;gt; https and https &amp;lt; synchromesh. When we fail, we see an-tcp &amp;gt; https and https &amp;lt; an-tcp..." />
+        <meta name="keywords" content="ssl,cypher,certificate,handshake-failure" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/52878/ssl-negotiation-errors" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/52878/ssl-negotiation-errors?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='pkVmyKfnWku1Yek0GBSyfP2UtT2VVKr7' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/52878/ssl-negotiation-errors">SSL negotiation errors</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-52878-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52878/up/" rel="nofollow"> </a>
+<div id="post-52878-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52878-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52878/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/52878/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>We are having issues when trying to connect via SSL using TLS 1.0 with PayPal. We have logs from good connections and bad (different IPs).  When good, we are seeing TCP messages referencing synchromesh &gt; https and https &lt; synchromesh.  When we fail, we see an-tcp &gt; https and https &lt; an-tcp, certificate requests, and then application data being sent across the line.</p>
+<p>PayPal insists that all of their servers are configured exactly the same and the problem is on our end.  We have 1 and only 1 server that connects successfully to 9 or their 10 servers in their DNS pool, so we think the issue is on the NEW server they just stood up.</p>
+<p>How can we tell whether this is a certificate issue, a cypher issue, etc?  We are not WireShark experts.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ssl/" class="post-tag tag-link-ssl"
+                                        title="see questions tagged 'ssl'" rel="tag">ssl</a>
+                                
+                                    <a href="/tags/cypher/" class="post-tag tag-link-cypher"
+                                        title="see questions tagged 'cypher'" rel="tag">cypher</a>
+                                
+                                    <a href="/tags/certificate/" class="post-tag tag-link-certificate"
+                                        title="see questions tagged 'certificate'" rel="tag">certificate</a>
+                                
+                                    <a href="/tags/handshake-failure/" class="post-tag tag-link-handshake-failure"
+                                        title="see questions tagged 'handshake-failure'" rel="tag">handshake-failure</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 May '16, 14:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6a51648a7bbdbf41e1ac44bf380e5ee5?s=32&amp;d=identicon&amp;r=g" alt="mimeyers's gravatar image" />
+    <p><a href="/users/24252/mimeyers">mimeyers</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mimeyers has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-52878">
+    
+        <a name="52901"></a>
+        <div class="comment" id="comment-52901">
+            <div id="post-52901-score" class="comment-score"></div>
+            <div class="comment-text"><p>You'll have to delve into the TLS negotiations and compare the captures.</p>
+
+<p>Can you share these captures in a publicly accessible spot, e.g. <a href="http://cloudshark.org">CloudShark</a>?</p></div>
+            <div class="comment-info" id="comment-52901-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '16, 02:57)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52906"></a>
+        <div class="comment" id="comment-52906">
+            <div id="post-52906-score" class="comment-score"></div>
+            <div class="comment-text"><p>Are there options we can set in Wireshark that will provide more information?  As I said, we know little about the program.</p>
+
+<p>I have uploaded the PCAP file for the failure to CloudShark with tags mmeyers, tls, failure.</p></div>
+            <div class="comment-info" id="comment-52906-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '16, 05:28)</span>
+                <a class="comment-user userinfo" href="/users/24252/mimeyers">mimeyers</a>
+                
+            </div>
+        </div>
+    
+        <a name="52908"></a>
+        <div class="comment" id="comment-52908">
+            <div id="post-52908-score" class="comment-score"></div>
+            <div class="comment-text"><p>The PCAP file from the same server that succeeded has also been uploaded with tags, mmeyers, tls, success</p></div>
+            <div class="comment-info" id="comment-52908-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '16, 05:44)</span>
+                <a class="comment-user userinfo" href="/users/24252/mimeyers">mimeyers</a>
+                
+            </div>
+        </div>
+    
+        <a name="52914"></a>
+        <div class="comment" id="comment-52914">
+            <div id="post-52914-score" class="comment-score"></div>
+            <div class="comment-text"><p>Wireshark allow you to set an SSL debug file through the SSL protocol dissector preferences. When loading the capture file this file will then be written with output from the SSL library, but is very technical, so you'll basically need the source code to understand what's in there.</p></div>
+            <div class="comment-info" id="comment-52914-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '16, 07:38)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52916"></a>
+        <div class="comment" id="comment-52916">
+            <div id="post-52916-score" class="comment-score"></div>
+            <div class="comment-text"><p>Although posting the debug log here can help with diagnosis.  Can you post an actual link to the captures on Cloudshark?  I couldn't find a way to search for them.</p></div>
+            <div class="comment-info" id="comment-52916-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '16, 08:05)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52923"></a>
+        <div class="comment not_top_scorer" id="comment-52923">
+            <div id="post-52923-score" class="comment-score"></div>
+            <div class="comment-text"><p>Graham, the files are stored under my account, so not sure if you could access them.
+<a href="https://www.cloudshark.org/captures?_message=BAh7BjoLbm90aWNlSSIaV2VsY29tZSB0byBDbG91ZFNoYXJrBjoGRVQ%3D%0A">https://www.cloudshark.org/captures?_message=BAh7BjoLbm90aWNlSSIaV2VsY29tZSB0byBDbG91ZFNoYXJrBjoGRVQ%3D%0A</a></p>
+
+<p>The files are 187K and 35K, so would be easily emailed if necessary.</p></div>
+            <div class="comment-info" id="comment-52923-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '16, 09:27)</span>
+                <a class="comment-user userinfo" href="/users/24252/mimeyers">mimeyers</a>
+                
+            </div>
+        </div>
+    
+        <a name="52924"></a>
+        <div class="comment not_top_scorer" id="comment-52924">
+            <div id="post-52924-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/24252/mimeyers">@mimeyers</a>,</p>
+
+<p>Your "answers" have been converted to comments as that's how this site works. Please read the FAQ for more information.</p>
+
+<p>In Cloudshark, click the (i) button next to each capture and on the resulting dialog select the sharing tab which will display the direct access URL.  Edit your question and add those URL's.</p></div>
+            <div class="comment-info" id="comment-52924-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '16, 09:49)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52925"></a>
+        <div class="comment not_top_scorer" id="comment-52925">
+            <div id="post-52925-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://www.cloudshark.org/captures/a08dfefb8b4b">https://www.cloudshark.org/captures/a08dfefb8b4b</a>
+<a href="https://www.cloudshark.org/captures/90016fc31d59">https://www.cloudshark.org/captures/90016fc31d59</a></p></div>
+            <div class="comment-info" id="comment-52925-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '16, 09:57)</span>
+                <a class="comment-user userinfo" href="/users/24252/mimeyers">mimeyers</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52878" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52878-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/52878/ssl-negotiation-errors?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/52878/ssl-negotiation-errors?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/52878/ssl-negotiation-errors?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/52878/ssl-negotiation-errors?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="52931"></a>
+                    <div id="answer-container-52931" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52931-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52931/up/" rel="nofollow"> </a>
+<div id="post-52931-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52931-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52931/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In the capture "Exported TLS failure", there a 4 connection attempts.  The first is closed by the client when the PayPal server requests the client certificate.  The second completes the TLS handshake but after some encrypted data is exchanged the PayPal server closes the connection.  The third and fourth attempts are replicates of the first and second respectively.</p>
+<p>Conclusion; your client is misbehaving in closing the connection after the server sends the client certificate request, and on the 2 instances where encrypted data is exchanged, the PayPal server has either finished the transaction or doesn't like the data from the client.</p>
+<p>In the capture "Exported TLS success" there is the same behaviour, only more TLS connection attempts.</p>
+<p>In all cases where encrypted data transferred, your client sent ~400 bytes and the server responded with ~1k bytes.</p>
+<p>You'll probably need to look at your application logs as we're unable to look into the encrypted data.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52931/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 May '16, 10:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+    <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+    <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grahamb has 274 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52931">
+    
+        <a name="52932"></a>
+        <div class="comment" id="comment-52932">
+            <div id="post-52932-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is there a way to add our key to Wireshark to be able see the encrypted data?  Both the failure and success were done from the same machine executing the exact same code.  The only difference is the PayPal server. They have multiple (10) servers responding to requests to api.paypal.com.  Our code has worked flawlessly for the past 5 years.  Two weeks ago they added the 10th server to their group and the failures only occur when the new server answers our call. That is why we think it is either protocol or cipher related.</p></div>
+            <div class="comment-info" id="comment-52932-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '16, 10:58)</span>
+                <a class="comment-user userinfo" href="/users/24252/mimeyers">mimeyers</a>
+                
+            </div>
+        </div>
+    
+        <a name="52948"></a>
+        <div class="comment" id="comment-52948">
+            <div id="post-52948-score" class="comment-score"></div>
+            <div class="comment-text"><p>Generally you need the server's private key, which PayPal are unlikely to want to provide.</p>
+
+<p>TLS using non-DH key exchanges, which your connection seems to be, can also be decrypted using the pre-master secret, but you have to arrange for your client to provide that.</p>
+
+<p>See the Wiki page on <a href="https://wiki.wireshark.org/SSL">SSL</a> for more info.</p>
+
+<p>You might also be able to use a web  proxy such as <a href="http://www.telerik.com/fiddler">Fiddler</a> to perform a MITM and extract the encrypted data that way.</p></div>
+            <div class="comment-info" id="comment-52948-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 May '16, 02:33)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="53000"></a>
+        <div class="comment" id="comment-53000">
+            <div id="post-53000-score" class="comment-score"></div>
+            <div class="comment-text"><p>A further note is that the PayPal server isn't sending an SSL Alert to indicate it's closing the connection.</p>
+
+<p>A useful guide to the anatomy of an SSL connection can be found <a href="http://blog.fourthbit.com/2014/12/23/traffic-analysis-of-an-ssl-slash-tls-session">here</a>, although that doesn't show the Client Certificate tranfers that happen in your sessions as the PayPal server is using them to authenticate your client.</p></div>
+            <div class="comment-info" id="comment-53000-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 May '16, 07:00)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52931" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52931-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/52878/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='pkVmyKfnWku1Yek0GBSyfP2UtT2VVKr7' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52878/ssl-negotiation-errors?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52878/ssl-negotiation-errors?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ssl/"
+            class="tag-link-ssl"
+            title="see questions tagged'ssl'using tags"
+            rel="tag">ssl</a> <span class="tag-number">&#215;319</span><br/>
+        
+        <a href="/tags/certificate/"
+            class="tag-link-certificate"
+            title="see questions tagged'certificate'using tags"
+            rel="tag">certificate</a> <span class="tag-number">&#215;18</span><br/>
+        
+        <a href="/tags/handshake-failure/"
+            class="tag-link-handshake-failure"
+            title="see questions tagged'handshake-failure'using tags"
+            rel="tag">handshake-failure</a> <span class="tag-number">&#215;3</span><br/>
+        
+        <a href="/tags/cypher/"
+            class="tag-link-cypher"
+            title="see questions tagged'cypher'using tags"
+            rel="tag">cypher</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 24, 2016, 2:25 p.m.">24 May '16, 14:25</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,614 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 27, 2016, 7:02 a.m.">27 May '16, 07:02</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/36524/unable-to-decrypt-ssl-traffic-in-wireshark">unable to decrypt ssl traffic in wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4337/how-to-identify-ssl-certificate-file-name">How to identify SSL Certificate file name</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23929/certificate-request-size-change">Certificate Request Size Change</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24489/ssl-handshake-certificate-hidden">SSL Handshake Certificate hidden</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62528/server-certificate-packet-format">Server Certificate packet format</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44527/extracting-ssl-certificate-with-tshark">Extracting SSL Certificate with tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40180/asn1-certificate-code-in-ssl">Asn.1 certificate code in SSL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34969/ssl-bad-certificate">SSL Bad certificate</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30085/ssl-decryption-requiring-2-ssl-certs-and-sequence-matters">SSL decryption requiring 2 SSL certs, and sequence matters?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15729/how-to-decrypt-ssl-using-digicert-root-certificate-within-https-post-traffic-from-java-app">How to decrypt SSL using DigiCert Root Certificate within HTTPS POST traffic from Java App?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

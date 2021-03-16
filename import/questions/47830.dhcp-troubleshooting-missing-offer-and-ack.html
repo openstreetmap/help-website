@@ -1,0 +1,906 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>DHCP Troubleshooting - missing Offer and ACK - Wireshark Q&amp;A</title>
+        <meta name="description" content="I&#39;ve been having intermittent issues on my home network over the past few weeks whereby IP addresses aren&#39;t being handed out to devices via DHCP. As a result I&#39;ve been trying to troubleshoot the issue today using Wireshark by filtering for bootp packets. I&#39;m using wireshark on a MacBook Pro (late 20..." />
+        <meta name="keywords" content="dhcp" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/47830/dhcp-troubleshooting-missing-offer-and-ack" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/47830/dhcp-troubleshooting-missing-offer-and-ack?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ljvJvHix01iuvBSP6bF5EvAVFiHAuTgl' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/47830/dhcp-troubleshooting-missing-offer-and-ack">DHCP Troubleshooting - missing Offer and ACK</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-47830-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47830/up/" rel="nofollow"> </a>
+<div id="post-47830-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-47830-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47830/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/47830/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I've been having intermittent issues on my home network over the past few weeks whereby IP addresses aren't being handed out to devices via DHCP. As a result I've been trying to troubleshoot the issue today using Wireshark by filtering for bootp packets.</p>
+<p>I'm using wireshark on a MacBook Pro (late 2013) with a wired network connection, and have enabled promiscuous mode on the interface.</p>
+<p>The problem is that I'm not seeing the full DHCP handshake in the packet capture. I see DHCP Discover and DHCP Request, but not the Offer or ACK when monitoring other devices requesting IPs on the network (such as an Apple iPhone for example).</p>
+<p>The main issue is I'm seeing a load of NAK responses from my DHCP router, probably related to a DHCP conflict somewhere. I can see the Discover request, and somewhere an Offer is being made because I see the returning Request with an IP, but I just can't see that Offer packet in Wireshark.</p>
+<p>Could it be that my MacBook isn't fully capable of monitoring all traffic? I guess that the Offer packet is being sent directly back to the device in question and isn't being broadcast out to all devices. However, can I or should I be able to see those packets in promiscuous mode? Is it just not possible to see packets between two remote devices using my MacBook?</p>
+<p>If that is the case, how can I monitor packets between two remote devices? </p>
+<p>Thanks in advance!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/dhcp/" class="post-tag tag-link-dhcp"
+                                        title="see questions tagged 'dhcp'" rel="tag">dhcp</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Nov '15, 06:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a7589d9eff49c49acf22c6fed46cd76d?s=32&amp;d=identicon&amp;r=g" alt="jarrah's gravatar image" />
+    <p><a href="/users/21190/jarrah">jarrah</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jarrah has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-47830">
+    
+</div>
+<div id="comment-tools-47830" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47830-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/47830/dhcp-troubleshooting-missing-offer-and-ack?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/47830/dhcp-troubleshooting-missing-offer-and-ack?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/47830/dhcp-troubleshooting-missing-offer-and-ack?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/47830/dhcp-troubleshooting-missing-offer-and-ack?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="47831"></a>
+                    <div id="answer-container-47831" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-47831-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/47831/up/" rel="nofollow"> </a>
+<div id="post-47831-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-47831-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/47831/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="jarrah has selected this answer as the correct answer"
+        href="/accept_answer/47831/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>I guess that the Offer packet is being sent directly back to the device in question and isn't being broadcast out to all devices.</p>
+</blockquote>
+<p>Right.</p>
+<blockquote>
+<p>can I or should I be able to see those packets in promiscuous mode?</p>
+</blockquote>
+<p>No, because promiscuous mode just means that the interface will let packets whose destination address is not its own get far enough to be seen by Wireshark, if they "physically" arrive to it. But the DHCP ACK for another device does not ever get to your Mac's Ethernet interface.</p>
+<blockquote>
+<p>If that is the case, how can I monitor packets between two remote devices?</p>
+</blockquote>
+<p>It depends on the type of interface.</p>
+<ul>
+<li>
+<p>if it is WiFi (which is likely the case for an iPhone), the media is "air", so shared by all, and if your wireless card is truly capable to capture wireless traffic in promiscuous mode, you may see it.</p>
+</li>
+<li>
+<p>if it is wired (cable Ethernet), you would need either a hub (a rare device those days, and a slow one too), a tap (a specialized device for capturing) or a switch capable of mirroring traffic between ports. In these cases, setting promiscuous mode on the interface allows you to capture the "3rd party" traffic. If connected to a hub, your Ethernet interface can be used for bi-directional traffic; if connected to a tap or monitoring port of a switch, it can only be used for monitoring.</p>
+</li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/47831/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Nov '15, 06:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/47831/">
+                edited
+                <strong>21 Nov '15, 06:56</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-47831">
+    
+        <a name="47832"></a>
+        <div class="comment" id="comment-47832">
+            <div id="post-47832-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>if it is WiFi (which is likely the case for an iPhone), the media is "air", so shared by all, and if your wireless card is truly capable to capture wireless traffic in promiscuous mode, you may see it.</p>
+</blockquote>
+
+<p>Ahh ok thanks, I'll try monitoring packets via wifi on my MacBook then to see if that helps. </p>
+
+<p>Also thank you for the useful explanation, much appreciated!</p></div>
+            <div class="comment-info" id="comment-47832-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Nov '15, 07:07)</span>
+                <a class="comment-user userinfo" href="/users/21190/jarrah">jarrah</a>
+                
+            </div>
+        </div>
+    
+        <a name="47833"></a>
+        <div class="comment" id="comment-47833">
+            <div id="post-47833-score" class="comment-score"></div>
+            <div class="comment-text"><p>hmm, looks like my wifi interface doesn't capture all packets as it also can't see the Offer and ACK packets. </p>
+
+<p>Looks like I need to see if there's any cheap switches for home use with port mirroring...</p></div>
+            <div class="comment-info" id="comment-47833-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Nov '15, 07:12)</span>
+                <a class="comment-user userinfo" href="/users/21190/jarrah">jarrah</a>
+                
+            </div>
+        </div>
+    
+        <a name="47834"></a>
+        <div class="comment" id="comment-47834">
+            <div id="post-47834-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think you should check the settings described <a href="https://wiki.wireshark.org/CaptureSetup/WLAN#Turning_on_monitor_mode">here</a>. Having no Mac, I cannot test myself. In brief, look for "monitor mode" checkbox in the Capture Options settings.</p></div>
+            <div class="comment-info" id="comment-47834-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Nov '15, 07:33)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="47835"></a>
+        <div class="comment" id="comment-47835">
+            <div id="post-47835-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for the tip, I was able to see that Monitor Mode was disabled on my wifi adaptor. Unfortunately though, enabling it resulted in the same error as described here: <a href="https://ask.wireshark.org/questions/47125/cant-turn-on-monitor-mode-on-macbook-pro-with-wireshark-1999">https://ask.wireshark.org/questions/47125/cant-turn-on-monitor-mode-on-macbook-pro-with-wireshark-1999</a> 
+I'm using v2.0.0, but before I troubleshoot further I'll try a reboot and will open a new thread if it still occurs.</p></div>
+            <div class="comment-info" id="comment-47835-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Nov '15, 07:55)</span>
+                <a class="comment-user userinfo" href="/users/21190/jarrah">jarrah</a>
+                
+            </div>
+        </div>
+    
+        <a name="47836"></a>
+        <div class="comment" id="comment-47836">
+            <div id="post-47836-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well, a reboot let me at least start capturing with Monitor Mode enabled, but it doesn't seem to capture data in the same way. For example there's no IPs in Source and Destination, just MAC addresses. Also it doesn't capture any bootp packets, so I'm probably not using it right.</p>
+
+<p>No worries though, I'll look into it, and failing that I've ordered a cheap 8-port managed switch with port mirroring to do the job: <a href="http://www.amazon.co.uk/gp/product/B00K4DS5KU">http://www.amazon.co.uk/gp/product/B00K4DS5KU</a> </p>
+
+<p>Thanks for your help!!</p></div>
+            <div class="comment-info" id="comment-47836-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Nov '15, 08:06)</span>
+                <a class="comment-user userinfo" href="/users/21190/jarrah">jarrah</a>
+                
+            </div>
+        </div>
+    
+        <a name="47837"></a>
+        <div class="comment not_top_scorer" id="comment-47837">
+            <div id="post-47837-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just bear in mind that the switch can only help you debug the DHCP behaviour if you have another DHCP client device which has an Ethernet port. A switch (or hub, or tap) can only monitor traffic which passes through its ports, which is not the case of the DHCP Offer etc. sent to devices connected over WiFi, because even if the WiFi and Ethernet interfaces of your home router have a common IP address, internally the traffic is switched between them, i.e. unicast packets are only sent to the direct path to the destination, not to all physical interfaces.</p>
+
+<p>But the WiFi monitoring showing nothing but MAC frames is weird, haven't you incidentally limited capture size of the frames? Can you start capture in monitoring mode and then switch off and on your iPhone to be sure that the initial DHCP Discovery etc. takes place, and then post the capture and give a link here? At least the subject of the question would become more relevant to the contents ;-)</p></div>
+            <div class="comment-info" id="comment-47837-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Nov '15, 08:18)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="47838"></a>
+        <div class="comment not_top_scorer" id="comment-47838">
+            <div id="post-47838-score" class="comment-score"></div>
+            <div class="comment-text"><p>Heh, one important point is wireless encryption :-) No wonder you cannot see IP addresses if you've kept your WPA on.</p>
+
+<p>Or read <a href="https://wiki.wireshark.org/HowToDecrypt802.11">this</a> and don't post anything.</p></div>
+            <div class="comment-info" id="comment-47838-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Nov '15, 08:26)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="47851"></a>
+        <div class="comment not_top_scorer" id="comment-47851">
+            <div id="post-47851-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Heh, one important point is wireless encryption :-) No wonder you cannot see IP addresses if you've kept your WPA on.</p>
+</blockquote>
+
+<p>ahh good point!</p>
+
+<p>Yeah I'll use the switch to monitor my wired devices as they're suffering the DHCP problem as well. I'll get to the bottom of this issue one way or another. :)</p>
+
+<p>Thanks for all your help!</p></div>
+            <div class="comment-info" id="comment-47851-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Nov '15, 11:30)</span>
+                <a class="comment-user userinfo" href="/users/21190/jarrah">jarrah</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-47831" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-47831-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/47830/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ljvJvHix01iuvBSP6bF5EvAVFiHAuTgl' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47830/dhcp-troubleshooting-missing-offer-and-ack?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/47830/dhcp-troubleshooting-missing-offer-and-ack?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/dhcp/"
+            class="tag-link-dhcp"
+            title="see questions tagged'dhcp'using tags"
+            rel="tag">dhcp</a> <span class="tag-number">&#215;44</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 21, 2015, 6:33 a.m.">21 Nov '15, 06:33</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,029 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 22, 2015, 11:30 a.m.">22 Nov '15, 11:30</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1832/windows-xp-and-bootp">Windows XP and bootp?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24935/pc-wont-take-ip-given-by-dhcpack-tried-multiple-routers-dhcp-servers">PC wont take IP given by DHCPACK, tried multiple routers (dhcp servers)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43024/can-we-pin-the-tail-on-charter-dsl-using-wireshark">Can we pin the tail on Charter DSL using Wireshark?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4245/i-find-out-the-valid-packet-that-the-wireshark-not-support">I find out the valid packet that the wireshark not support.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26639/decode-as-dhcp">Decode As (DHCP)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45599/weird-android-dhcp">Weird Android DHCP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6260/multiple-mac-addresses-port-security-dchp">Multiple MAC Addresses - Port Security - DCHP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26828/whats-the-capture-filter-for-a-dhcp-option">What&#39;s the capture filter for a DHCP option?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45744/how-to-display-delta-times-for-one-dhcp-transaction-id-and-graph-many">How to display delta times for one DHCP transaction ID and graph many?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6826/dhcp-request-packets">DHCP request packets</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

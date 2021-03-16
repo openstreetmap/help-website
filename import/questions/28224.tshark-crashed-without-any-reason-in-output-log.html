@@ -1,0 +1,877 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>tshark crashed without any reason in output log - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi all, I&#39;m using tshark to capture data. Normally, my tshark can run in 12 days but yesterday, it suddenly crashed after 2 days of running. On the screen displayed, I didn&#39;t see any error. Here is my command: nohup tshark -i 5 -P -w /tmp/Log.pcap -b filesize:655350|split -b 655350000 - /tmp/log/log..." />
+        <meta name="keywords" content="promiscuous-mode,crash,tshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/28224/tshark-crashed-without-any-reason-in-output-log" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/28224/tshark-crashed-without-any-reason-in-output-log?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='BXDOYSnQdwhnfofItmAH60URaPM4Tz30' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/28224/tshark-crashed-without-any-reason-in-output-log">tshark crashed without any reason in output log</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-28224-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28224/up/" rel="nofollow"> </a>
+<div id="post-28224-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-28224-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28224/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/28224/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all, I'm using tshark to capture data. Normally, my tshark can run in 12 days but yesterday, it suddenly crashed after 2 days of running. On the screen displayed, I didn't see any error. Here is my command:</p>
+<pre><code>nohup tshark -i 5 -P -w /tmp/Log.pcap -b filesize:655350|split -b 655350000 - /tmp/log/log- &amp;
+</code></pre>
+<p>About the cronjob, I use 2 cronjob to delete old files:</p>
+<pre><code>58 23 * * * rm -rf /tmp/*.bak
+59 23 * * * find /tmp/log/* -mtime +0 -exec rm -rf {} \
+</code></pre>
+<p>I'm pretty sure that is is not out of memory or disk space because if so, it was written in the log. No core dump or segmentation fault. My output log is:</p>
+<blockquote>
+<p>640.012974         4240 -&gt; 4593         Camel-v2 298 SACK invoke initialDP</p>
+<p>640.013116         4241 -&gt; 4590         Camel 750 SACK invoke initialDP invoke eventReportBCSM invoke applyChargingReport invoke applyChargingReport invoke even</p>
+</blockquote>
+<p>So, nothing wrong <strong>except</strong> the message in the /var/log</p>
+<blockquote>
+<p>Dec 16 09:16:29 primary kernel: device
+em3 entered promiscuous mode</p>
+<p>Dec 16 09:20:49 primary kernel: device
+em3 left promiscuous mode</p>
+<p>Dec 16 09:31:59 primary kernel: device
+em3 entered promiscuous mode</p>
+<p>Dec 16 09:32:03 primary kernel: device
+em3 left promiscuous mode</p>
+<p>Dec 16 17:09:34 primary kernel: device
+em3 entered promiscuous mode</p>
+<p>Dec 16 17:10:15 primary kernel: device
+em3 left promiscuous mode</p>
+<p>Dec 16 17:11:29 primary kernel: device
+em3 entered promiscuous mode</p>
+<p>Dec 16 17:12:24 primary kernel: device
+em3 left promiscuous mode</p>
+<p>Dec 16 17:13:33 primary kernel: device
+em3 entered promiscuous mode</p>
+<p>Dec 16 17:13:35 primary kernel: device
+em3 left promiscuous mode</p>
+<p>Dec 16 17:14:39 primary kernel: device
+em3 entered promiscuous mode</p>
+<p>Dec 16 17:14:40 primary kernel: device
+em3 left promiscuous mode</p>
+<p>Dec 16 17:15:30 primary kernel: device
+em3 entered promiscuous mode</p>
+<p><strong>Dec 17 19:03:12 primary kernel: device
+em3 left promiscuous mode</strong></p>
+<p>Dec 18 09:03:56 primary kernel: device
+lo entered promiscuous mode</p>
+<p>Dec 18 09:12:41 primary kernel: device
+em3 entered promiscuous mode</p>
+</blockquote>
+<p><strong>Dec 17 19:03:12</strong> it crashed and never entered back to this mode until I run tshark again on <strong>Dec 18 09:12:41</strong>. This is exact time my tshark crashed and em3 is my card where I capture data from. I don't know what it means and how to solve this problem. Please help me if you have any idea about this. Thank you so much.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/promiscuous-mode/" class="post-tag tag-link-promiscuous-mode"
+                                        title="see questions tagged 'promiscuous-mode'" rel="tag">promiscuous-mode</a>
+                                
+                                    <a href="/tags/crash/" class="post-tag tag-link-crash"
+                                        title="see questions tagged 'crash'" rel="tag">crash</a>
+                                
+                                    <a href="/tags/tshark/" class="post-tag tag-link-tshark"
+                                        title="see questions tagged 'tshark'" rel="tag">tshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Dec '13, 18:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/824a7342f59ff90e6040505b38626416?s=32&amp;d=identicon&amp;r=g" alt="hoangsonk49's gravatar image" />
+    <p><a href="/users/5593/hoangsonk49">hoangsonk49</a><br/>
+    <span class="score" title="81 reputation points">81</span><span title="28 badges"><span class="badge1">&#9679;</span><span class="badgecount">28</span></span><span title="29 badges"><span class="silver">&#9679;</span><span class="badgecount">29</span></span><span title="33 badges"><span class="bronze">&#9679;</span><span class="badgecount">33</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="hoangsonk49 has 2 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/28224/">
+                edited
+                <strong>17 Dec '13, 19:00</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-28224">
+    
+</div>
+<div id="comment-tools-28224" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28224-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/28224/tshark-crashed-without-any-reason-in-output-log?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/28224/tshark-crashed-without-any-reason-in-output-log?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/28224/tshark-crashed-without-any-reason-in-output-log?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/28224/tshark-crashed-without-any-reason-in-output-log?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="28243"></a>
+                    <div id="answer-container-28243" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-28243-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28243/up/" rel="nofollow"> </a>
+<div id="post-28243-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-28243-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28243/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>As you've been informed many times, tshark (and Wireshark) are liable to run out of memory when run continuously.  Until you can come with a convincing explanation as to why this isn't the case with your current issue, most folks are going to assume it's yet another out of memory report.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/28243/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Dec '13, 02:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+    <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+    <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grahamb has 274 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-28243">
+    
+        <a name="28246"></a>
+        <div class="comment" id="comment-28246">
+            <div id="post-28246-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Grahamb, I'm pretty sure that is not the problem of memory because of 2 reasons:</p>
+
+<ol>
+<li>During 3 months, i was running and monitoring tshark very carefully. With the same system, same command, no one else use this server, I realize that tshark is able to run continuously in at lease 12 days. I was checking the statement everyday during 3 months (both of Memory and Disk space) and it has never stopped before 12 days. On the day before it stopped, the memory was still 12%.</li>
+<li>If it is the problem of memory, as your warning, it would be informed in the log file before stopping itself, displayed in output of nohup command but as can be seen, no error mentioned in the log except /var/log/message. I also did check the reboot log but nothing wrong, no one rebooted the server, the electricity was fine.</li>
+</ol>
+
+<p>Of course, these reasons are not perfectly to be sure that it is not a problem of memory but as my experience, it quite convinces me. Please feel free to contribute your comment or any idea. ThanksHi Grahamb, I'm pretty sure that is not the problem of memory because of 2 reasons:</p></div>
+            <div class="comment-info" id="comment-28246-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '13, 03:22)</span>
+                <a class="comment-user userinfo" href="/users/5593/hoangsonk49">hoangsonk49</a>
+                
+            </div>
+        </div>
+    
+        <a name="28254"></a>
+        <div class="comment" id="comment-28254">
+            <div id="post-28254-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p><strong>output of nohup</strong> command but <strong>as can be seen</strong>, <strong>no error</strong> mentioned in the log </p>
+</blockquote>
+
+<p>You did <strong>not</strong> post the output of nohup.out, so we can <strong>not</strong> see that there are no errors!</p></div>
+            <div class="comment-info" id="comment-28254-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '13, 04:54)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="28255"></a>
+        <div class="comment" id="comment-28255">
+            <div id="post-28255-score" class="comment-score"></div>
+            <div class="comment-text"><p>The length of time that tshark can run is related to the traffic captured, not the elapsed run time.  Are you 100% certain that during this run the traffic being captured did not change from your previous runs?</p>
+
+<p>The traffic may also have triggered a dissector bug, did you retain the capture file from when it crashed, and if so can it be read by tshark?</p></div>
+            <div class="comment-info" id="comment-28255-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '13, 06:18)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="28278"></a>
+        <div class="comment" id="comment-28278">
+            <div id="post-28278-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>You did not post the output of
+nohup.out, so we can not see that
+there are no errors!</p>
+</blockquote>
+
+<p>I did post. It is output log and I did check but there is no error or core dump or segmentation fault in the whole file. Because it is too large, so I show only some last lines before it stopped:</p>
+
+<blockquote>
+<p>640.012974 4240 -&gt; 4593 Camel-v2 298 SACK invoke initialDP</p>
+<p>640.013116 4241 -&gt; 4590 Camel 750 SACK invoke initialDP invoke eventReportBCSM invoke applyChargingReport invoke applyChargingReport invoke even</p>
+</blockquote>
+
+<p>These are last lines in the output log of nohup command</p>
+
+<blockquote>
+<p>Are you 100% certain that during this run the traffic being captured did not change from your previous runs</p>
+</blockquote>
+
+<p>I fully understand that the running of tshark is related to the traffic, so I checked with some engineers from the Telecom Operator, they confirmed that at that time, there was no error with the network. Also, he showed me the statistic of traffic on that day but it was normal, similar to other days. </p>
+
+<blockquote>
+<p>The traffic may also have triggered a dissector bug, did you retain the capture file from when it crashed, and if so can it be read by tshark</p>
+</blockquote>
+
+<p>After it stopped, I collected all the related logs and also the .pcap. I use Wireshark on my PC to read .pcap file, compare some last information in .pcap with output of nohup, with my log written by code but found nothing. All information is identical.</p>
+
+<p>I ask this question because I think maybe the message <strong>"device em3 left promiscuous mode"</strong> (/var/log/message) could be the clue to find out the reason, and you might have experience with this message but after searching and reading some articles, I understand that this message is just a result, not a reason or clue. So I have nothing else to analyze to find the root cause. I will check the code and print more information to the log.</p></div>
+            <div class="comment-info" id="comment-28278-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '13, 17:37)</span>
+                <a class="comment-user userinfo" href="/users/5593/hoangsonk49">hoangsonk49</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-28243" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28243-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/28224/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='BXDOYSnQdwhnfofItmAH60URaPM4Tz30' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/28224/tshark-crashed-without-any-reason-in-output-log?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/28224/tshark-crashed-without-any-reason-in-output-log?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tshark/"
+            class="tag-link-tshark"
+            title="see questions tagged'tshark'using tags"
+            rel="tag">tshark</a> <span class="tag-number">&#215;832</span><br/>
+        
+        <a href="/tags/crash/"
+            class="tag-link-crash"
+            title="see questions tagged'crash'using tags"
+            rel="tag">crash</a> <span class="tag-number">&#215;84</span><br/>
+        
+        <a href="/tags/promiscuous-mode/"
+            class="tag-link-promiscuous-mode"
+            title="see questions tagged'promiscuous-mode'using tags"
+            rel="tag">promiscuous-mode</a> <span class="tag-number">&#215;13</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 17, 2013, 6 p.m.">17 Dec '13, 18:00</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,934 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 18, 2013, 5:42 p.m.">18 Dec '13, 17:42</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/53501/tshark-stops-working-at-random-times">Tshark stops working at random times</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47671/lua-script-segmentation-fault-11-in-200rc3-on-os-x">Lua script - Segmentation fault 11 in 2.0.0rc3 on OS X</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41974/is-there-a-way-to-add-a-comment-to-packets-in-command-line">Is there a way to add a comment to packets in command line?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43408/tshark-packet-comments">Tshark Packet Comments</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44430/how-to-dump-sip-traces-according-to-ip-in-separate-files">How to dump sip traces according to ip in separate files?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45430/capture-performance-centos-6-vs-centos-7">Capture performance CentOS 6 vs CentOS 7</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46214/add-sipvoip-calls-to-stats-output-on-tshark">Add sip,voip-calls to stats output on tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47705/extract-packet-arrival-time-and-capture-length-of-bytes-at-that-instant">Extract Packet arrival time and capture length of bytes at that instant</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48911/how-to-configure-the-output-of-tshark-psml-file">How to configure the output of Tshark .psml file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50146/how-to-include-frame-time-in-tshark-when-o-is-used">how to include frame time in tshark when -O is used</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

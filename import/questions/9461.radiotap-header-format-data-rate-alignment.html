@@ -1,0 +1,815 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>radiotap header format data rate alignment - Wireshark Q&amp;A</title>
+        <meta name="description" content="  hi, I have attached a trace from wireshark. Can someone tell me from where the wireshark is decoding the rate to be 26 MBps. Clicking on the rate points to an invalid location. I am unable to find the reason behind why this is happening. Why is Also, Shouldnt data rate be a 2-byte value? The reaso..." />
+        <meta name="keywords" content="rate,radiotap" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/9461/radiotap-header-format-data-rate-alignment" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/9461/radiotap-header-format-data-rate-alignment?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='PNr3Qcw7Zup6BXSMqlxHk1BCvtob4gtb' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/9461/radiotap-header-format-data-rate-alignment">radiotap header format data rate alignment</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-9461-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9461/up/" rel="nofollow"> </a>
+<div id="post-9461-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-9461-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9461/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/9461/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/ws2.png"></p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/ws_alix.png"></p>
+<p>hi,
+I have attached a trace from wireshark. Can someone tell me from where the wireshark is decoding the rate to be 26 MBps. Clicking on the rate points to an invalid location. I am unable to find the reason behind why this is happening. Why is Also, Shouldnt data rate be a 2-byte value? The reason why I am asking is wireshark generally shows rate as (2*rate because unit is in 500KBps) in the bit representation(as seen in the second image). So any rate above 128 Mbps is going to exceed one byte. From the below images, it is visible that the radio tap header format is different for the two packets. Data in the images are obtained from doing tcpdump on monitor interfaces on two machines (one from a remote machine, another from the same machine as the client on the same physical device). The driver used in this case is ath5k. When is this the case? I am pretty confused regarding this and any help will be greatly appreciated. </p>
+<p>Thank you
+srini</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rate/" class="post-tag tag-link-rate"
+                                        title="see questions tagged 'rate'" rel="tag">rate</a>
+                                
+                                    <a href="/tags/radiotap/" class="post-tag tag-link-radiotap"
+                                        title="see questions tagged 'radiotap'" rel="tag">radiotap</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Mar '12, 13:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2618453e9194929f291128d350b2a4ec?s=32&amp;d=identicon&amp;r=g" alt="srini_wisc's gravatar image" />
+    <p><a href="/users/2329/srini_wisc">srini_wisc</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="srini_wisc has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/9461/">
+                edited
+                <strong>09 Mar '12, 14:31</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-9461">
+    
+        <a name="9569"></a>
+        <div class="comment" id="comment-9569">
+            <div id="post-9569-score" class="comment-score"></div>
+            <div class="comment-text"><p>Does anybody have any comments on this? If the MCS information is showing the data rate, Can someone tell me how it is different from the data rate measured from the client? iwconfig shows a different data rate compare to the data rate in MCS. what does QoS data mean in the sense, does it have the actual data?</p></div>
+            <div class="comment-info" id="comment-9569-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '12, 17:53)</span>
+                <a class="comment-user userinfo" href="/users/2329/srini_wisc">srini_wisc</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-9461" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9461-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/9461/radiotap-header-format-data-rate-alignment?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/9461/radiotap-header-format-data-rate-alignment?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/9461/radiotap-header-format-data-rate-alignment?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/9461/radiotap-header-format-data-rate-alignment?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="9596"></a>
+                    <div id="answer-container-9596" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-9596-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9596/up/" rel="nofollow"> </a>
+<div id="post-9596-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-9596-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9596/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Well, you've asked several questions here.</p>
+<blockquote>
+<p>Can someone tell me from where the wireshark is decoding the rate to be 26 MBps. Clicking on the rate points to an invalid location.</p>
+</blockquote>
+<p>What do you mean by "an invalid location"?  The screenshot shows an offset of 0x1A = 26; it also says the radiotap header length is 29, so that's within the radiotap header.</p>
+<p>For 802.11n, the rate is likely to come from the <a href="http://www.radiotap.org/defined-fields/MCS">MCS field</a>; it's calculated based on the MCS index, channel width, and guard interval length in that field.</p>
+<blockquote>
+<p>Shouldnt data rate be a 2-byte value? The reason why I am asking is wireshark generally shows rate as (2*rate because unit is in 500KBps) in the bit representation(as seen in the second image). So any rate above 128 Mbps is going to exceed one byte</p>
+</blockquote>
+<p>Again, for 802.11n, the data rate is <em>NOT</em> represented by a <a href="http://www.radiotap.org/defined-fields/Rate">Rate field</a>, it's calculated from the values in the MCS field.  The MCS field is 3 bytes long; the rate should probably be shown as a calculated value and, when clicked on, select all 3 bytes.</p>
+<blockquote>
+<p>From the below images, it is visible that the radio tap header format is different for the two packets. </p>
+</blockquote>
+<p>Yes.  The first capture is 802.11n; the second capture is probably not 802.11n (it says 802.11a).</p>
+<blockquote>
+<p>If the MCS information is showing the data rate, Can someone tell me how it is different from the data rate measured from the client?</p>
+</blockquote>
+<p>What do you mean by "measured"?  "Measured" as in "counting the number of bits of data received within a specified amount of time and dividing the bits by the number of time"?</p>
+<blockquote>
+<p>iwconfig shows a different data rate compare to the data rate in MCS.</p>
+</blockquote>
+<p>What is iwconfig showing?</p>
+<blockquote>
+<p>what does QoS data mean in the sense, does it have the actual data?</p>
+</blockquote>
+<p>"QoS data" means that the frame is a QoS Data frame, i.e. a Data frame with a QoS header.  See sections 7.1.3.1.2 "Type and Subtype fields", 7.1.3.5 "QoS Control field", and 7.2.2 "Data frames" of IEEE Std 802.11-2007.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/9596/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>16 Mar '12, 23:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-9596">
+    
+        <a name="9607"></a>
+        <div class="comment" id="comment-9607">
+            <div id="post-9607-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've checked into the trunk a change to show the Data Rate as a calculated field, and make it cover all 3 bytes of the MCS field, if it's calculated from items in that field, and will schedule it for the 1.6 branch.</p></div>
+            <div class="comment-info" id="comment-9607-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Mar '12, 14:47)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="9616"></a>
+        <div class="comment" id="comment-9616">
+            <div id="post-9616-score" class="comment-score"></div>
+            <div class="comment-text"><p>hi,
+Thanks for the clarification. I can understand a lot of things now from your reply. 
+By mentioning measured "I meant the data rate value from iwconfig".
+iwconfig at the client shows 130 MbpS where as the one read from my monitor interface is 39 MbpS. Is iwconfig meant to work with 802.11n traffic?</p></div>
+            <div class="comment-info" id="comment-9616-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Mar '12, 12:44)</span>
+                <a class="comment-user userinfo" href="/users/2329/srini_wisc">srini_wisc</a>
+                
+            </div>
+        </div>
+    
+        <a name="9620"></a>
+        <div class="comment" id="comment-9620">
+            <div id="post-9620-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Looking at the iwconfig source as downloaded from <a href="http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html">here</a>, it prints, somewhere, "Bit Rate" followed by a bit rate, fetched with the <code>SIOCGIWRATE</code> ioctl.  I would have to spend a lot of time looking at the Linux kernel source to see where the bit rate comes from in the ath5k driver; if you have any questions about the value returned by iwconfig, I suggest you ask somebody in the Linux wireless networking community, as I have no time to search for an answer for them.</p></div>
+            <div class="comment-info" id="comment-9620-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Mar '12, 20:21)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-9596" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9596-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/9461/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='PNr3Qcw7Zup6BXSMqlxHk1BCvtob4gtb' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9461/radiotap-header-format-data-rate-alignment?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9461/radiotap-header-format-data-rate-alignment?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/radiotap/"
+            class="tag-link-radiotap"
+            title="see questions tagged'radiotap'using tags"
+            rel="tag">radiotap</a> <span class="tag-number">&#215;19</span><br/>
+        
+        <a href="/tags/rate/"
+            class="tag-link-rate"
+            title="see questions tagged'rate'using tags"
+            rel="tag">rate</a> <span class="tag-number">&#215;11</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 9, 2012, 1:14 p.m.">09 Mar '12, 13:14</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,706 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 19, 2012, 8:21 p.m.">19 Mar '12, 20:21</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3275/rate-limit-causes-excess-retransmissions-and-duplicate-acks">Rate limit causes excess retransmissions and duplicate acks</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12032/wireshark-reporting-different-parameters-in-different-machines">Wireshark reporting different parameters in different machines</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5651/can-you-get-a-00mbs-80211-transmission-rate">Can you get a 0.0Mb/s 802.11 transmission rate?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20357/creating-custom-column-from-multiple-fields">Creating custom column from multiple fields?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5846/transfer-rate-improves-with-wireshark">Transfer rate improves with Wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23645/radiotapmactime-field-with-atheros-chipset">radiotap.mactime field with Atheros chipset</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14151/can-i-get-the-exact-peakmaximum-rate-value-from-io-graphs">Can I get the exact peak/maximum rate value from IO Graphs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32124/strip-radiotap-headers-from-capture-files">Strip radiotap headers from capture files?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28859/graphing-an-effective-forwarding-rate">Graphing an effective forwarding rate</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39170/how-to-capture-80211-ac-packets">How to capture 802.11 ac packets?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

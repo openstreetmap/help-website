@@ -1,0 +1,1149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to Capture Aggregated Packets (A-MPDU / A-MSDU) using Wireshark - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello, I&#39;m new in using Wireshark, and I wonder if you guys could help me. I want to capture and check the aggregated packet (A-MPDU or A-MSDU). I want to see its behavior when there is a dropped frame during transfer. I have: Router: TP-LINK WR1043ND (802.11n, 2.4GHz) WiFi Adapter: NetGear WNDA3100..." />
+        <meta name="keywords" content="ampdu,802.11n" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/53848/how-to-capture-aggregated-packets-a-mpdu-a-msdu-using-wireshark" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/53848/how-to-capture-aggregated-packets-a-mpdu-a-msdu-using-wireshark?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='r8BCGgLXEPQ76kCca2MLOZSJgEkf4t2K' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/53848/how-to-capture-aggregated-packets-a-mpdu-a-msdu-using-wireshark">How to Capture Aggregated Packets (A-MPDU / A-MSDU) using Wireshark</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-53848-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53848/up/" rel="nofollow"> </a>
+<div id="post-53848-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53848-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53848/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/53848/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, I'm new in using Wireshark, and I wonder if you guys could help me.</p>
+<p>I want to capture and check the aggregated packet (A-MPDU or A-MSDU). I want to see its behavior when there is a dropped frame during transfer.</p>
+<p>I have:</p>
+<p>Router: TP-LINK WR1043ND (802.11n, 2.4GHz)</p>
+<p>WiFi Adapter: NetGear WNDA3100 (802.11n, 2.4/5GHz)</p>
+<ol>
+<li>How can I capture aggregated packets? </li>
+<li>Can I just download a file from a website (from the PC running the Wireshark) and run the capturing in Wireshark?</li>
+</ol>
+<p>Your help is much appreciated.
+Thanks.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ampdu/" class="post-tag tag-link-ampdu"
+                                        title="see questions tagged 'ampdu'" rel="tag">ampdu</a>
+                                
+                                    <a href="/tags/802.11n/" class="post-tag tag-link-802.11n"
+                                        title="see questions tagged '802.11n'" rel="tag">802.11n</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Jul '16, 22:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ec47f14bc90cbce4c89a445adfd2b7a8?s=32&amp;d=identicon&amp;r=g" alt="ajebulon's gravatar image" />
+    <p><a href="/users/24719/ajebulon">ajebulon</a><br/>
+    <span class="score" title="5 reputation points">5</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ajebulon has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-53848">
+    
+</div>
+<div id="comment-tools-53848" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53848-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/53848/how-to-capture-aggregated-packets-a-mpdu-a-msdu-using-wireshark?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/53848/how-to-capture-aggregated-packets-a-mpdu-a-msdu-using-wireshark?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/53848/how-to-capture-aggregated-packets-a-mpdu-a-msdu-using-wireshark?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/53848/how-to-capture-aggregated-packets-a-mpdu-a-msdu-using-wireshark?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="54079"></a>
+                    <div id="answer-container-54079" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54079-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54079/up/" rel="nofollow"> </a>
+<div id="post-54079-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-54079-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54079/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I reviewed the trace and notice there are no beacons.  Anyway, I could get some info out of the probe responses for the AP capabilities in your area, but not for the client.  The trace is heavily filtered so no probe requests are observed.</p>
+<p>You are in monitor and promiscuous mode, so could you share the following output so I can figure out why I can't get mine to do promisc mode:</p>
+<ol>
+<li>lsusb</li>
+<li>ethtool -i &lt;wireless interface="" name=""&gt;</li>
+<li>uname -a</li>
+</ol>
+<p>I think you are capturing A-MPDU packets, see this sequence of frames from the AP to the client:</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/Screen_Shot_2016-07-15_at_8.43.35_PM_w7uawOb.png"></p>
+<p>Notice the A-MPDU reference number is the same, and the sequence starts with a RTS, then ends with a block ACK.  In addition, there is a signal strength measurement in the header of only the last data frame.</p>
+<p>I did not see any any A-MSDU frames in your trace.  From 802.11-2012, the QoS element in the 802.11 header has a field which indicates if this frame is an A-MSDU or just an MSDU:</p>
+<blockquote>
+<p>8.2.4.5.9 A-MSDU Present subfield The A-MSDU Present subfield is 1 bit in
+length and indicates the presence of
+an A-MSDU. The A-MSDU Present subfield
+is set to 1 to indicate that the Frame
+Body field contains an entire A-MSDU
+as defined in 8.3.2.2. The A-MSDU
+Present subfield is set to 0 to
+indicate that the Frame Body field
+contains an MSDU or fragment thereof
+as defined in 8.3.2.1.</p>
+</blockquote>
+<p>The filter I use on your trace is then</p>
+<pre><code>wlan.qos.amsdupresent == 1
+</code></pre>
+<p>and indeed, there are none here but at least we can see how to identify them.  This field is here, for example:</p>
+<pre><code>Frame 2: 1486 bytes on wire (11888 bits), 1486 bytes captured (11888 bits) on interface 0
+Radiotap Header v0, Length 32
+802.11 radio information
+IEEE 802.11 QoS Data, Flags: .p....F.C
+    Type/Subtype: QoS Data (0x0028)
+    Frame Control Field: 0x8842
+    .000 0000 0010 0100 = Duration: 36 microseconds
+    Receiver address: Netgear_e7:49:e5 (00:1e:2a:e7:49:e5)
+    Destination address: Netgear_e7:49:e5 (00:1e:2a:e7:49:e5)
+    Transmitter address: EfmNetwo_fb:7f:08 (00:26:66:fb:7f:08)
+    Source address: EfmNetwo_fb:7f:09 (00:26:66:fb:7f:09)
+    BSS Id: EfmNetwo_fb:7f:08 (00:26:66:fb:7f:08)
+    STA address: Netgear_e7:49:e5 (00:1e:2a:e7:49:e5)
+    .... .... .... 0000 = Fragment number: 0
+    1001 0010 0011 .... = Sequence number: 2339
+    Frame check sequence: 0xe6c5bc10 [correct]
+    Qos Control: 0x0000
+        .... .... .... 0000 = TID: 0
+        [.... .... .... .000 = Priority: Best Effort (Best Effort) (0)]
+        .... .... ...0 .... = EOSP: Service period
+        .... .... .00. .... = Ack Policy: Normal Ack (0x0000)
+        .... .... 0... .... = Payload Type: MSDU                        &lt;---- amsdupresent
+        0000 0000 .... .... = QAP PS Buffer State: 0x0000
+    CCMP parameters
+Data (1416 bytes)
+    Data: 61b3110b310325b7fc36bdbdf74b7602fae73599ebb6a787...
+    [Length: 1416]
+</code></pre>
+<p>Note in my example this device is in power save mode; in particular, using U-APSD.  I suspect this may have some impact, if at the very least to force packets to be queued at the AP so more likely to be aggregated.<br>
+</p>
+<p>I could not see the A-MPDU settings in the HT IE from the client due to the filter on the trace.  However, the APs were visible from the probe responses.  I note that they are the same manufacturer, but they have different A-MPDU settings.  This may be correct according to your configuration, but at the very least, very your configs to make sure they are what you want.</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/Screen_Shot_2016-07-15_at_8.46.48_PM_zpt0YVu.png"><br>
+</p>
+<p>I also note you are in 40MHz bandwidth with 2.4GHz.  Allowed, but very unusual.  Many devices won't support it, like Apple and Cisco.  Your data rates are high, which is good.</p>
+<p>I am not sure if your approach is just to see what is happening or you suspect a problem and are troubleshooting.  Though it would be nice to be able to trigger behavior, if your system does not use A-MSDU techniques, they are not likely the cause of the problem.<br>
+</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54079/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Jul '16, 12:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0a47ef51dd9c9996d194a4983295f5a4?s=32&amp;d=identicon&amp;r=g" alt="Bob%20Jones's gravatar image" />
+    <p><a href="/users/112/bob-jones">Bob Jones</a><br/>
+    <span class="score" title="1014 reputation points"><span class="">1.0k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Bob Jones has 19 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54079/">
+                edited
+                <strong>16 Jul '16, 01:11</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54079">
+    
+</div>
+<div id="comment-tools-54079" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54079-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="53853"></a>
+                    <div id="answer-container-53853" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-53853-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53853/up/" rel="nofollow"> </a>
+<div id="post-53853-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53853-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53853/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You need to have a wireless capture system capable of monitor mode and promiscuous mode.  Looking at your WiFi adapter, I see three versions, with three different chipsets:</p>
+<ol>
+<li><a href="https://wikidevi.com/wiki/Netgear_WNDA3100v3">https://wikidevi.com/wiki/Netgear_WNDA3100v3</a></li>
+<li><a href="https://wikidevi.com/wiki/Netgear_WNDA3100v2">https://wikidevi.com/wiki/Netgear_WNDA3100v2</a></li>
+<li><a href="https://wikidevi.com/wiki/Netgear_WNDA3100v1">https://wikidevi.com/wiki/Netgear_WNDA3100v1</a></li>
+</ol>
+<p>Which one do you have?  These span the range from Mediatek - Atheros - Broadcom.  They likely all have different characteristics.  I have one of these but not with me; I recall mine does monitor mode but not promiscuous mode.  You need both modes, and the actual support can change with the system you are running (i.e. Windows Vs. Linux, what kernel, etc).</p>
+<p>You will likely be on a Linux platform to do this, but that is an assumption.  Windows is non-starter for me on this but you might be able to get the NPCAP driver to work with one of these.  NPCAP just causes all my machines to BSOD, so I can't use it.</p>
+<p>I can capture A-MSDU frames with just ping, so likely your download method will work too if everything is connected with 802.11n and WMM is enabled.  Note that it may be more likely to get aggregated frames if some type of power save is in use; this way, we can ensure that frames are sitting in a buffer for some time so they AP has plenty of opportunity to aggregate them.</p>
+<p>You will then just have to try it and see - be sure you are capturing unicast frames, then look for aggregated ones.  There is some chance the AP won't do them, or the client you use for testing won't.  In this case, keep trying with different APs and clients.</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/2016-07-06_06_20_35-Clipboard.jpg"></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/53853/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Jul '16, 03:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0a47ef51dd9c9996d194a4983295f5a4?s=32&amp;d=identicon&amp;r=g" alt="Bob%20Jones's gravatar image" />
+    <p><a href="/users/112/bob-jones">Bob Jones</a><br/>
+    <span class="score" title="1014 reputation points"><span class="">1.0k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Bob Jones has 19 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-53853">
+    
+        <a name="53858"></a>
+        <div class="comment" id="comment-53858">
+            <div id="post-53858-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Jones,</p>
+
+<p>Thanks for the answer. Mine is WNDA3100v1 (Atheros). How do I know a WiFi adapter supports both monitor mode and promiscuous mode? I already enable the promiscuous mode in all interface (Capture -&gt; Options -&gt; Enable promiscuous mode in all interfaces). Is that it?</p>
+
+<p>Do I need special router to do the aggregation? Or all routers with 802.11n support should be fine?</p>
+
+<p>I am using Windows 10 at the moment. Do you think I should try using Linux? What version do you recommend? I have Ubuntu Desktop 16.04.</p>
+
+<p>As I see in your screenshot, there is Radiotap header. Mine is showing Ethernet Header. Why is it different? Do you use any add-ons on your Wireshark?</p>
+
+<p>Anyway, I tried again, still using Windows 10, and using built-in WiFi card from my laptop (Lenovo G40-80, Atheros AR956x), when I try to ping google.com (I changed the size to 3000 bytes)</p>
+
+<p>Frame 143: 82 bytes on wire (656 bits), 82 bytes captured (656 bits) on interface 0</p>
+
+<p>Ethernet II, Src: LiteonTe_xx:xx:xx (xx:xx:xx:xx:xx:xx), Dst: Tp-LinkT_xx:xx:xx (xx:xx:xx:xx:xx:xx)</p>
+
+<p>Internet Protocol Version 4, Src: 192.168.0.102, Dst: 59.18.35.30</p>
+
+<p>Internet Control Message Protocol</p>
+
+<p><strong>and inside the 3rd row:</strong></p>
+
+<p>[3 IPv4 Fragments (3008 bytes): #141(1480), #142(1480), #143(48)]</p>
+
+<p>[Frame: 141, payload: 0-1479 (1480 bytes)]</p>
+
+<p>[Frame: 142, payload: 1480-2959 (1480 bytes)]</p>
+
+<p>[Frame: 143, payload: 2960-3007 (48 bytes)]</p>
+
+<p>[Fragment count: 3]</p>
+
+<p>[Reassembled IPv4 length: 3008]</p>
+
+<p>[Reassembled IPv4 data: 0800cfb0000100216162636465666768696a6b6c6d6e6f70...]</p></div>
+            <div class="comment-info" id="comment-53858-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jul '16, 07:56)</span>
+                <a class="comment-user userinfo" href="/users/24719/ajebulon">ajebulon</a>
+                
+            </div>
+        </div>
+    
+        <a name="53863"></a>
+        <div class="comment" id="comment-53863">
+            <div id="post-53863-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Ethernet headers are typically provided by drivers set to other than monitor mode, Radiotap headers are provided by drivers set to monitor mode.</p>
+
+<p>At Windows 10, you need to use <a href="https://github.com/nmap/npcap/releases">npcap</a> to be able to use monitor mode of a wireless adapter (and in this case, promiscuous mode should be set automatically with monitor mode). It should be fine with an Atheros chipset but you won't know until you try. And in contrary to what I have stated above, in this particular case, the header will always be a radiotap one, even in non-monitor mode (unless Yang Luo has changed something recently).</p></div>
+            <div class="comment-info" id="comment-53863-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jul '16, 13:16)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="53864"></a>
+        <div class="comment" id="comment-53864">
+            <div id="post-53864-score" class="comment-score">1</div>
+            <div class="comment-text"><p>After re-reading your OP - if you want to capture at the receiving client's Wi-Fi adaptor, using monitoring mode is out of question at Windows 10 because by running monitoring mode you lose association to the AP (which is not the case at Mac). However, since npcap provides the radiotap header even in promiscuous mode, it might also provide the aggregated frames rather than the spliced ones.</p>
+
+<p>It would be best to first use one of your WiFi adaptors to run the actual communication and using the other one to capture in monitoring mode, to see whether the aggregated frames exist in the air, and then to try the same with capture in promiscuous mode on the adaptor running the actual communication to see whether the promiscuous mode with npcap shows them raw or not.</p></div>
+            <div class="comment-info" id="comment-53864-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jul '16, 13:33)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="53866"></a>
+        <div class="comment" id="comment-53866">
+            <div id="post-53866-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>Thanks for the answer. Mine is WNDA3100v1 (Atheros). How do I know a WiFi adapter supports both monitor mode and promiscuous mode? I already enable the promiscuous mode in all interface (Capture -&gt; Options -&gt; Enable promiscuous mode in all interfaces). Is that it?</p>
+</blockquote>
+
+<p>No, you also need to enable monitor mode - which, on Windows, is, as sindy has noted, only possible with Windows Vista and later with recent versions of NPcap (it advertises support for Windows 7 and later, but it might also work on Vista).</p>
+
+<p>It would probably work better on Linux, although, currently, you probably can't enabled it using the Wireshark GUI; see <a href="https://wiki.wireshark.org/CaptureSetup/WLAN">the CaptureSetup/WLAN page</a> on the Wireshark Wiki for details on enabling monitor mode on various operating systems.</p></div>
+            <div class="comment-info" id="comment-53866-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jul '16, 13:48)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="53877"></a>
+        <div class="comment not_top_scorer" id="comment-53877">
+            <div id="post-53877-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Sindy,</p>
+
+<p>Thanks for the explanation. I already tried to uninstall the winpcap and use npcap instead. However, the header is still using Ethernet header, instead of being always Radiotap header like you mentioned before. Btw, what is the best way to generate aggregated packet?
+Thanks.</p>
+
+<p>Hi Guy Harris,</p>
+
+<p>I already tried using Ubuntu 16.04 LTS, and I've been able to use the monitoring mode. I am going to try to capture the aggregated packets.
+Thanks.</p></div>
+            <div class="comment-info" id="comment-53877-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jul '16, 23:14)</span>
+                <a class="comment-user userinfo" href="/users/24719/ajebulon">ajebulon</a>
+                
+            </div>
+        </div>
+    
+        <a name="53878"></a>
+        <div class="comment not_top_scorer" id="comment-53878">
+            <div id="post-53878-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Thanks for the explanation. I already tried to uninstall the winpcap and use npcap instead. However, the header is still using Ethernet header, instead of being always Radiotap header like you mentioned before.</p>
+</blockquote>
+
+<p>Unless you capture in monitor mode - which I think currently requires a tool that comes with NPcap; the checkbox might not work yet - you will get Ethernet headers.</p></div>
+            <div class="comment-info" id="comment-53878-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jul '16, 00:30)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="53893"></a>
+        <div class="comment" id="comment-53893">
+            <div id="post-53893-score" class="comment-score">1</div>
+            <div class="comment-text"><p>NPcap is a Work in (rapid) Progress and I haven't kept pace for a couple of weeks. The last time I gave it a try:</p>
+
+<ul>
+<li>
+<p>you had to install it in a special way (or maybe use a special installation package, I don't remember exactly) so that the monitoring mode on wireless cards would be supported, and if you did install that way, you got Radiotap headers even without monitoring mode (for wireless cards only). This was causing some confusion e.g. because the "protected" bit was indicating that the frame data are encrypted but they were actually already decrypted by the adaptor, so you had to tell Wireshark to ignore the protection bit and dissect the payload.</p>
+</li>
+<li>
+<p>a companion command line tool, which was installed too, was necessary to switch the monitor mode on - as <a href="/users/79/guy-harris">@Guy Harris</a> notes, the integration between Wireshark and NPcap in this point is also work in progress.</p>
+</li>
+</ul></div>
+            <div class="comment-info" id="comment-53893-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jul '16, 03:31)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="53996"></a>
+        <div class="comment not_top_scorer" id="comment-53996">
+            <div id="post-53996-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi guys,</p>
+
+<p>I've already been able to capture some packets in monitoring mode, using Ubuntu and follow the Wireshark capture setup. However, I couldn't find any information about aggregated packet, like the one showed in the screenshot from Bob Jones. There is no IEEE 802.11 Aggregate MSDU information.</p>
+
+<p>I generated traffic by downloading file from Google Drive. Was there anything that I did wrong? Or is my router and WiFi adapters not compatible for capturing aggregated packet?</p>
+
+<p>Thanks.</p></div>
+            <div class="comment-info" id="comment-53996-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jul '16, 19:05)</span>
+                <a class="comment-user userinfo" href="/users/24719/ajebulon">ajebulon</a>
+                
+            </div>
+        </div>
+    
+        <a name="53997"></a>
+        <div class="comment not_top_scorer" id="comment-53997">
+            <div id="post-53997-score" class="comment-score"></div>
+            <div class="comment-text"><p>Post a trace so we can stop guessing.</p>
+
+<p>I have that version of device and it will do monitor mode but not promiscuous mode on kali rolling with a 4.5 kernel.  A trace will verify if you have this issue.  If so, you need different capture hardware.</p></div>
+            <div class="comment-info" id="comment-53997-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jul '16, 22:16)</span>
+                <a class="comment-user userinfo" href="/users/112/bob-jones">Bob Jones</a>
+                
+            </div>
+        </div>
+    
+        <a name="54019"></a>
+        <div class="comment not_top_scorer" id="comment-54019">
+            <div id="post-54019-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello again Bob Jones,</p>
+
+<p>I already uploaded my trace file. It is <a href="https://www.cloudshark.org/captures/a6ec58093194">here</a>. </p>
+
+<p>I ran Wireshark on my Ubuntu PC, which generated traffic by downloading a file from the Internet.</p>
+
+<p>WiFi Adapter: NetGear WNDA3100v1</p>
+
+<p>Router: ipTIME N608</p>
+
+<p>Capture Filter: not broadcast and not multicast</p>
+
+<p>Thank you.</p></div>
+            <div class="comment-info" id="comment-54019-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jul '16, 00:54)</span>
+                <a class="comment-user userinfo" href="/users/24719/ajebulon">ajebulon</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-53853" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53853-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/53848/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='r8BCGgLXEPQ76kCca2MLOZSJgEkf4t2K' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53848/how-to-capture-aggregated-packets-a-mpdu-a-msdu-using-wireshark?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53848/how-to-capture-aggregated-packets-a-mpdu-a-msdu-using-wireshark?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/802.11n/"
+            class="tag-link-802.11n"
+            title="see questions tagged'802.11n'using tags"
+            rel="tag">802.11n</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/ampdu/"
+            class="tag-link-ampdu"
+            title="see questions tagged'ampdu'using tags"
+            rel="tag">ampdu</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 5, 2016, 10:55 p.m.">05 Jul '16, 22:55</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>9,289 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 16, 2016, 1:11 a.m.">16 Jul '16, 01:11</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1175/how-do-i-analysis-80211n-by-wiresharkplease">how do i analysis 802.11n by wireshark,please!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60354/mpdu-wrong-data-rate">MPDU wrong data rate</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3492/rallink-80211n-wireless-lan-card">Rallink 802.11n wireless LAN card</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8587/why-cant-i-capture-80211n-data-packets">Why can&#39;t I capture 802.11n data packets?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9504/80211n-slow-file-transfer-speeds">802.11n slow file transfer speeds</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10949/regarding-analysing-11n-packets-on-wireshark">Regarding analysing 11n packets on wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24323/taking-80211n-captures-with-linux-and-usb-wireless-probes">Taking 802.11n captures with Linux and USB wireless probes</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33994/why-there-are-3-rssi-values-in-the-radiotap-header-for-a-dual-antenna-wireless-card">why there are 3 RSSI values in the radiotap header for a dual-antenna wireless card</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37473/capture-80211n-greenfield-and-short-gi-and-ldpc">Capture 802.11n Greenfield and Short GI and LDPC</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39170/how-to-capture-80211-ac-packets">How to capture 802.11 ac packets?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1052 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Server Certificate packet format - Wireshark Q&amp;A</title>
+        <meta name="description" content="I can&#39;t find a writeup on the format of the Server Certificate - i.e. what all the bytes are and the different variations. I have a couple of TLS/SSL books and papers, but they don&#39;t have anything on the actual format of the packet. Can someone point me in that direction? I&#39;m trying to figure out wh..." />
+        <meta name="keywords" content="ssl,certificate" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/62528/server-certificate-packet-format" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/62528/server-certificate-packet-format?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='fPecNx8KD3Apiu6q65qRbQpJHsID61hI' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/62528/server-certificate-packet-format">Server Certificate packet format</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-62528-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/62528/up/" rel="nofollow"> </a>
+<div id="post-62528-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-62528-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/62528/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/62528/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I can't find a writeup on the format of the Server Certificate - i.e. what all the bytes are and the different variations.  I have a couple of TLS/SSL books and papers, but they don't have anything on the actual format of the packet.  Can someone point me in that direction?  I'm trying to figure out where the public key is embedded and what all the other bytes mean.</p>
+<p>Thanks.</p>
+<p>Sutton</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ssl/" class="post-tag tag-link-ssl"
+                                        title="see questions tagged 'ssl'" rel="tag">ssl</a>
+                                
+                                    <a href="/tags/certificate/" class="post-tag tag-link-certificate"
+                                        title="see questions tagged 'certificate'" rel="tag">certificate</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Jul '17, 08:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9f303f38b9221d23f72e6d2e5a651184?s=32&amp;d=identicon&amp;r=g" alt="dodge55's gravatar image" />
+    <p><a href="/users/26941/dodge55">dodge55</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dodge55 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-62528">
+    
+</div>
+<div id="comment-tools-62528" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-62528-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/62528/server-certificate-packet-format?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/62528/server-certificate-packet-format?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/62528/server-certificate-packet-format?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/62528/server-certificate-packet-format?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="62534"></a>
+                    <div id="answer-container-62534" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-62534-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/62534/up/" rel="nofollow"> </a>
+<div id="post-62534-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-62534-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/62534/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The Certificate message is defined in <a href="https://tools.ietf.org/html/rfc5246#section-7.4.2">RFC 5246, Section. 7.4.2</a>:</p>
+<pre><code>  opaque ASN.1Cert&lt;1..2^24-1&gt;;
+  struct {
+      ASN.1Cert certificate_list&lt;0..2^24-1&gt;;
+  } Certificate;
+</code></pre>
+<p>In TLS, this notation for <code>certificate_list</code> means that there is a vector with a length prefix (three bytes since the maximum value is 2<sup>24</sup>-1) followed by zero or more <code>ASN.1Cert</code> types. These are also vectors with a three byte length prefix followed by an ASN.1-encoded X.509 certificate.</p>
+<p>In Wireshark, you can select the Certificate field, expand it subfields and study the bytes view at the bottom of the screen. See for example this screenshot where the Certificate is selected with a sample file (linked at the bottom of this post):</p>
+<p><a href="https://osqa-ask.wireshark.org/upfiles/screenshot_gDuZdcT.png"><img alt="Screenshot of Wireshark with Certificate message selected" src="https://osqa-ask.wireshark.org/upfiles/screenshot_gDuZdcT.png"></a></p>
+<p>Alternatively, you can export the selected ASN.1 bytes for inspection with alternative tools. Right-click on the selected Certificate field and use the <em>Export Packet Bytes</em> (Ctrl-H) option. Save the file as <code>file.der</code> (for example). Then you can study its contents using the <code>openssl</code> tool:</p>
+<pre><code>$ openssl x509 -inform DER -in cert.der -noout -text
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            f5:11:56:e9:b6:1e:35:c9
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN = localhost
+        Validity
+            Not Before: Feb  7 11:30:11 2015 GMT
+            Not After : Mar  9 11:30:11 2015 GMT
+        Subject: CN = localhost
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:9b:a9:75:12:18:1c:46:06:dc:8d:11:b8:f7:f4:
+                    ...
+                    d2:56:fe:22:59:c8:51:68:a1
+                Exponent: 65537 (0x10001)
+        ...
+</code></pre>
+<p>An alternative tool that displays the mechanical interpretation, completely with offsets, lengths and the contents:</p>
+<pre><code>$ openssl asn1parse -in cert.der -inform DER -i -dump
+    0:d=0  hl=4 l= 502 cons: SEQUENCE          
+    4:d=1  hl=4 l= 351 cons:  SEQUENCE          
+    8:d=2  hl=2 l=   3 cons:   cont [ 0 ]        
+   10:d=3  hl=2 l=   1 prim:    INTEGER           :02
+   13:d=2  hl=2 l=   9 prim:   INTEGER           :F51156E9B61E35C9
+   24:d=2  hl=2 l=  13 cons:   SEQUENCE          
+   26:d=3  hl=2 l=   9 prim:    OBJECT            :sha256WithRSAEncryption
+   37:d=3  hl=2 l=   0 prim:    NULL              
+   ...
+  115:d=2  hl=3 l= 159 cons:   SEQUENCE          
+  118:d=3  hl=2 l=  13 cons:    SEQUENCE          
+  120:d=4  hl=2 l=   9 prim:     OBJECT            :rsaEncryption
+  131:d=4  hl=2 l=   0 prim:     NULL              
+  133:d=3  hl=3 l= 141 prim:    BIT STRING        
+      0000 - 00 30 81 89 02 81 81 00-9b a9 75 12 18 1c 46 06   .0........u...F.
+      0010 - dc 8d 11 b8 f7 f4 21 99-0b 1b 96 6b 42 f1 4b 48   ......!....kB.KH
+      ...
+      0080 - 56 fe 22 59 c8 51 68 a1-02 03 01 00 01            V."Y.Qh......
+    ...
+</code></pre>
+<p>Documentation for these two tools can be found here:</p>
+<ul>
+<li><a href="https://www.openssl.org/docs/manmaster/man1/x509.html">x509(1)</a></li>
+<li><a href="https://www.openssl.org/docs/manmaster/man1/asn1parse.html">asn1parse(1)</a></li>
+</ul>
+<p>The capture I used above is taken from the <a href="https://wiki.wireshark.org/SampleCaptures#SSL_with_decryption_keys">SampleCaptures wiki</a>, http2-16-ssl.pcapng.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/62534/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Jul '17, 09:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/285b1f0f4caadc088a38c40aea22feba?s=32&amp;d=identicon&amp;r=g" alt="Lekensteyn's gravatar image" />
+    <p><a href="/users/5644/lekensteyn">Lekensteyn</a><br/>
+    <span class="score" title="2213 reputation points"><span class="">2.2k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="24 badges"><span class="bronze">&#9679;</span><span class="badgecount">24</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Lekensteyn has 32 accepted answers">30&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-62534">
+    
+        <a name="62543"></a>
+        <div class="comment" id="comment-62543">
+            <div id="post-62543-score" class="comment-score"></div>
+            <div class="comment-text"><p>Many thanks for that. In looking at the RFC and my Wireshark output, there are several byte sequences in the Certificate that are not referenced in either the RFC or the Wireshark output. For example, between the version and the serial number, there are 2 undocumented bytes. And, the first 12 bytes of the certificate before the version number don't seem to be documented. At least WS skips over those. Any idea what those are?</p>
+
+<p>Sutton</p></div>
+            <div class="comment-info" id="comment-62543-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 11:45)</span>
+                <a class="comment-user userinfo" href="/users/26941/dodge55">dodge55</a>
+                
+            </div>
+        </div>
+    
+        <a name="62544"></a>
+        <div class="comment" id="comment-62544">
+            <div id="post-62544-score" class="comment-score"></div>
+            <div class="comment-text"><p>ASN.1 BER (Basic Encoding Rules) use TLV (type-length-value) encoding of fields, so in particular the two bytes you mention, "between" the version and the serial number, say the following:</p>
+
+<p><code>02</code> - integer</p>
+
+<p><code>09</code> - consisting of 9 octets</p>
+
+<p>The information that the meaning of this 9-byte integer is a serial number is implicit, as the serial number is the second item of the certificate as defined in X.509:</p>
+
+<pre><code>Certificate ::= SIGNED SEQUENCE{
+    version [0]Version DEFAULT 1988,
+    serialNumber SerialNumber,
+    signature Algorithmidentifier
+    issuer Name
+    validity Validity,
+    subject Name,
+    subjectPublicKeyInfo SubjectPublicKeyInfo}
+
+Version ::= INTEGER { 1988(0)}
+SerialNumber ::= INTEGER
+Validity ::=
+SEQUENCE{
+notBefore UTCTime,
+notAfter UTCTime}
+
+...
+</code></pre>
+
+<p>Both the sender and the recipient know what to expect at what place as they both "know" the ASN.1 description.</p>
+
+<p>Similarly, the <code>02:01</code> "before" the version say that the version is a single-octet integer, and the <code>30:82:01:5f:a0:03</code> together say that what follows is a structure called <code>signedCertificate</code>.</p>
+
+<p>Most Wireshark dissectors prefer readability to detailed explanation of the structure, so this information is not added to the dissection tree.</p></div>
+            <div class="comment-info" id="comment-62544-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 12:06)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="62545"></a>
+        <div class="comment" id="comment-62545">
+            <div id="post-62545-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks.  In many of the other packet descriptions (RFC and books), TLV bytes are explicitly mentioned.  So, I thought it may be that, but I wasn't totally sure.  Being somewhat new to SSL, I like to be sure.  Thanks for responding.</p></div>
+            <div class="comment-info" id="comment-62545-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 12:58)</span>
+                <a class="comment-user userinfo" href="/users/26941/dodge55">dodge55</a>
+                
+            </div>
+        </div>
+    
+        <a name="62546"></a>
+        <div class="comment" id="comment-62546">
+            <div id="post-62546-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually, ASN.1 BER are more complex than just TLV, as more than a single byte may be used to encode the type and more than a single byte may be used to encode the length, or the length may not be specified at all. Second, ASN.1 has its own standard including the BER, X.690, where all this is detailed; X.509 refers to X.690 many times, often adding constraints where X.690 is not strict enough. With ITU recommendations, you rarely find everything you need in a single one, and the reference chains may be really long.</p></div>
+            <div class="comment-info" id="comment-62546-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 13:09)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="62548"></a>
+        <div class="comment" id="comment-62548">
+            <div id="post-62548-score" class="comment-score"></div>
+            <div class="comment-text"><p>Disclaimer have not looked at the actual trace. The wiredhark ber decoder has a preference to show internal ber decoding if you are really interested in the gory details.</p></div>
+            <div class="comment-info" id="comment-62548-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 14:40)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="62605"></a>
+        <div class="comment not_top_scorer" id="comment-62605">
+            <div id="post-62605-score" class="comment-score"></div>
+            <div class="comment-text"><p>I see the TLV occurrences in the packet.  However, still not sure how the 30:82:01:5f:a0:03 is decoded to a structure 'signedCertificate'.  Maybe you can elaborate.  My packet has 2 such 30:82:... sections.</p>
+
+<p>"Similarly, the 02:01 "before" the version say that the version is a single-octet integer, and the 30:82:01:5f:a0:03 together say that what follows is a structure called signedCertificate."</p></div>
+            <div class="comment-info" id="comment-62605-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jul '17, 07:46)</span>
+                <a class="comment-user userinfo" href="/users/26941/dodge55">dodge55</a>
+                
+            </div>
+        </div>
+    
+        <a name="62606"></a>
+        <div class="comment not_top_scorer" id="comment-62606">
+            <div id="post-62606-score" class="comment-score"></div>
+            <div class="comment-text"><p>Follow the suggestion of <a href="https://ask.wireshark.org/users/42/anders">@Anders</a>: go <code>Edit-&gt;Preferences-&gt;Protocols-&gt;BER</code> and click the topmost option - <code>Show internal BER encapsulation tokens</code>.</p>
+
+<p>That way, Wireshark will show you the meaning of the individual bytes.</p></div>
+            <div class="comment-info" id="comment-62606-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jul '17, 07:50)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-62534" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-62534-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="62531"></a>
+                    <div id="answer-container-62531" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-62531-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/62531/up/" rel="nofollow"> </a>
+<div id="post-62531-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-62531-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/62531/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The certificate used is an X.509 certificate, see <a href="https://tools.ietf.org/html/rfc5280">RFC 5280</a> (updated by <a href="https://tools.ietf.org/html/rfc6818">RFC 6818</a>).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/62531/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Jul '17, 09:03</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+    <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+    <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grahamb has 274 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-62531">
+    
+        <a name="62532"></a>
+        <div class="comment" id="comment-62532">
+            <div id="post-62532-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks.  Big help.  Not sure why I never found that and my books and papers don't reference that RFC in the certificate section.</p></div>
+            <div class="comment-info" id="comment-62532-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 09:13)</span>
+                <a class="comment-user userinfo" href="/users/26941/dodge55">dodge55</a>
+                
+            </div>
+        </div>
+    
+        <a name="62533"></a>
+        <div class="comment" id="comment-62533">
+            <div id="post-62533-score" class="comment-score"></div>
+            <div class="comment-text"><p>If an answer has solved your issue, please accept the answer for the benefit of other users by clicking the checkmark icon next to the answer. Please read the FAQ for more information.</p></div>
+            <div class="comment-info" id="comment-62533-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jul '17, 09:14)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-62531" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-62531-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/62528/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='fPecNx8KD3Apiu6q65qRbQpJHsID61hI' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/62528/server-certificate-packet-format?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/62528/server-certificate-packet-format?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ssl/"
+            class="tag-link-ssl"
+            title="see questions tagged'ssl'using tags"
+            rel="tag">ssl</a> <span class="tag-number">&#215;319</span><br/>
+        
+        <a href="/tags/certificate/"
+            class="tag-link-certificate"
+            title="see questions tagged'certificate'using tags"
+            rel="tag">certificate</a> <span class="tag-number">&#215;18</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 5, 2017, 8:34 a.m.">05 Jul '17, 08:34</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,165 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 7, 2017, 7:50 a.m.">07 Jul '17, 07:50</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/36524/unable-to-decrypt-ssl-traffic-in-wireshark">unable to decrypt ssl traffic in wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4337/how-to-identify-ssl-certificate-file-name">How to identify SSL Certificate file name</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23929/certificate-request-size-change">Certificate Request Size Change</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24489/ssl-handshake-certificate-hidden">SSL Handshake Certificate hidden</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52878/ssl-negotiation-errors">SSL negotiation errors</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44527/extracting-ssl-certificate-with-tshark">Extracting SSL Certificate with tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40180/asn1-certificate-code-in-ssl">Asn.1 certificate code in SSL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34969/ssl-bad-certificate">SSL Bad certificate</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30085/ssl-decryption-requiring-2-ssl-certs-and-sequence-matters">SSL decryption requiring 2 SSL certs, and sequence matters?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15729/how-to-decrypt-ssl-using-digicert-root-certificate-within-https-post-traffic-from-java-app">How to decrypt SSL using DigiCert Root Certificate within HTTPS POST traffic from Java App?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

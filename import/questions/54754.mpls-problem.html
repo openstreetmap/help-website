@@ -1,0 +1,963 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>MPLS Problem - Wireshark Q&amp;A</title>
+        <meta name="description" content="Sorry if this is a bit long. I have been losing sleep over it for 5 weeks now... I left on vacation for 2 days and over the weekend there was a power outage. None of the servers, routers, etc went down to my knowledge due to the UPS. We have two sites, Ferndale (main 192.168.142.x) and Warren(192.16..." />
+        <meta name="keywords" content="ack,mpls,packets" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/54754/mpls-problem" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/54754/mpls-problem?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='fOqxRBQd7iiHDR1zykbsbpjkicOHbLNT' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/54754/mpls-problem">MPLS Problem</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-54754-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54754/up/" rel="nofollow"> </a>
+<div id="post-54754-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54754-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54754/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/54754/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Sorry if this is a bit long.  I have been losing sleep over it for 5 weeks now...
+I left on vacation for 2 days and over the weekend there was a power outage.  None of the servers, routers, etc went down to my knowledge due to the UPS.  We have two sites, Ferndale (main 192.168.142.x) and Warren(192.168.143.x)connected by a MPLS running at 20Meg.  The firewall is housed at the ISP's location with an internal of 192.168.10.2.  At the ferndale site sits the main Windows servers along with an iSeries (AS/400) running our ERP and the main mitel phone controller with the PRI.  The warren location has another phone controller that links to the one in ferndale through the MPLS and uses VOIP.  So Warren is basically a satellite with the users using 5250 emulation to talk to the iSeries (telnet).  Starting the Monday I returned, the users began to be kicked out of their telnet and the phone system would drop communication between each other causing anyone on a call to lose it.  Sometime this happens a few times in several hours, other times very frequently causing major problems with our shipping in warren.  I started with various traces and ping tools and noticed packet loss.  I contacted the ISP, they ran their ping test with 100 packets, said all was good on their end.  We had replaced the switches a month earlier, so I began pulling them.  6 weeks later, the problem is no better.  I ripped out the all of the switches and put the old ones back, replaced the cables, tested everything I could think of.  During testing (straight into their router, I noticed I could only get 50% upload speed in Ferndale from FTP and couldn't run any of the speedtests sights at either location.  Ferndale and Warren do NOT touch the firewall when speaking to each other.  That is only for internet access. I called the ISP, they sent a tech who plugged into the router using their own network IP, going out their own internet gateway. They could run speedtest.net, it came back fine, so again, not their issue...its our firewall.
+The problem with that is 1) any XP/2003Server machine could run speedtest.net (yes, we tried many other speed sites without success).  2) OCCASIONALLY speedtest.net and megapath would complete on the other machines, but it was rare.  It ALWAYS failed during the second half of the upload.  3) I configured my machine (Win10) to turn off auto-tuning in TCP and I can now run it most of the time.  4) The firewall should NO rejections for any of the machines running the tests.  A firewall wouldn't do this if it was the cause.<br>
+</p>
+<p>I have been running wireshark and its full of Dup Acks and retransmits.  I have even sent them to the ISP.  In <a href="https://www.dropbox.com/sh/8ujc1k86dektf2q/AAC1uir8CFKdixVOK88iKnysa?dl=0">https://www.dropbox.com/sh/8ujc1k86dektf2q/AAC1uir8CFKdixVOK88iKnysa?dl=0</a> you can find 3 packet captures, all run at the same time.  One is for Ferndale, another Warren, and the third is the firewall.  I am concerned with 3 machines, 192.168.142.7 (the AS/400), and 192.168.142.210 and 192.168.143.216 which are the phone controllers talking to each other.<br>
+</p>
+<p>In you look at the Firewall capture, line 2116 and the Ferndale (line 46304), this is my machine .75 doing a speedtest.  It doesn't appear the packets are all making it through the MPLS.  The captures were done mirroring the ISP router ports and the entry into the firewall (Checkpoint).<br>
+</p>
+<p>Can SOMEONE tell me what is going on.  I have run out of equipment to replace and there have been no changes to the phones or iSeries in months....</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ack/" class="post-tag tag-link-ack"
+                                        title="see questions tagged 'ack'" rel="tag">ack</a>
+                                
+                                    <a href="/tags/mpls/" class="post-tag tag-link-mpls"
+                                        title="see questions tagged 'mpls'" rel="tag">mpls</a>
+                                
+                                    <a href="/tags/packets/" class="post-tag tag-link-packets"
+                                        title="see questions tagged 'packets'" rel="tag">packets</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Aug '16, 10:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/446a9d8d60486fd55e0e090866379540?s=32&amp;d=identicon&amp;r=g" alt="jwiener's gravatar image" />
+    <p><a href="/users/25043/jwiener">jwiener</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jwiener has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54754/">
+                edited
+                <strong>11 Aug '16, 11:25</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-54754">
+    
+        <a name="54760"></a>
+        <div class="comment" id="comment-54760">
+            <div id="post-54760-score" class="comment-score"></div>
+            <div class="comment-text"><p>If I get you right, the MPLS connection is provided by the ISP so you cannot measure at the outer side of the MPLS routers. If so, instead of using speedtest.net for generation of traffic, I would use <a href="https://iperf.fr/">iperf</a> during the calm part of the day (if any) so that little or no real traffic would interfere, running each of the two roles (traffic generator/traffic receiver) on another site and then swapping them. This way you would be able to identify whether just one of the directions is affected or both, and you would be sure the firewall is not involved (well, unless the routing between 192.168.143.0/24 and 192.168.142.0/24 is performed at the same hardware like the firewall functionality, but the capture from the firewall suggests otherwise).</p>
+
+<p>If everything is allright with the MPLS interconnection, you should see a sustainable rate close to 20 Mbit/s for minutes in either direction (minus the real traffic of course). If you can see less, this is your proof to show to the ISP.</p>
+
+<p>BTW, the capture from the firewall is puzzling me as the packets for both 192.168.142.0/24 and 192.168.143.0/24 are sent to one MAC address same for both subnets, while the packets from both 192.168.142.0/24 and 192.168.143.0/24 are coming from another MAC address, again the same one for both. Initially I wanted to be sure that there are no packets with one of the subnets as source and the other one as destination, which is true, but this MAC address difference suggests that there are two routers between those subnets and the firewall, one taking all the ingress traffic and the other one taking all the egress traffic. Maybe the connection between them is the bottleneck, as normally one of them is supposed to bear both directions and the other one to stay ready, and the interconnection between them wasn't intended to carry all traffic?</p></div>
+            <div class="comment-info" id="comment-54760-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '16, 14:14)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54768"></a>
+        <div class="comment" id="comment-54768">
+            <div id="post-54768-score" class="comment-score"></div>
+            <div class="comment-text"><p>I will take a look at iperf today.  I am more concerned with proving to them that there is something causing the re-transmits and dup-acks.  Latency just spikes.  There are several routers in the picture, but regretfully I can only see the internal side of 2 of them. I am fairly certain packets are being sent, but not making it to the other side.  But since I can't see the external side of the ISP router, I can't prove it.
+<img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/DIAGRAM.jpg"></p>
+
+<p>Hopefully its readable.  Its tough to draw a star diagram in </p></div>
+            <div class="comment-info" id="comment-54768-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Aug '16, 05:24)</span>
+                <a class="comment-user userinfo" href="/users/25043/jwiener">jwiener</a>
+                
+            </div>
+        </div>
+    
+        <a name="54769"></a>
+        <div class="comment" id="comment-54769">
+            <div id="post-54769-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I am more concerned with proving to them that there is something causing the re-transmits and dup-acks.</p>
+</blockquote>
+
+<p>That "something" is packet loss.</p>
+
+<p>BTW, a bandwidth limitation is basically also a packet loss, except that it is an intentional (and expected) one, and you don't bump into it if your bandwidth demand is lower than the available bandwidth.</p>
+
+<p>So proving them that the service they deliver provides a lower bandwidth than the contracted one should be enough for them to realize that something is wrong with their network. But if they demonstrate that the network is fine by ping, I am afraid they may be unable (or not willing) to understand that.</p>
+
+<p>Some house rules of this site:</p>
+
+<ul>
+<li>
+<p>an Answer must answer the original Question. Your post clearly hasn't, so I've made it a Comment to the Question.</p>
+</li>
+<li>
+<p>pictures in comments kill the page layout. Please provide the ASCII-art as your next comment, I'll format it the way the site understands it and replace the picture above with a text version of the same.</p>
+</li>
+</ul></div>
+            <div class="comment-info" id="comment-54769-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Aug '16, 05:38)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54774"></a>
+        <div class="comment" id="comment-54774">
+            <div id="post-54774-score" class="comment-score"></div>
+            <div class="comment-text"><p>Where / How have you taken the traces?
+For example I would take a trace as close as possible to the WAN point in Ferndale.</p></div>
+            <div class="comment-info" id="comment-54774-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Aug '16, 08:35)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="54775"></a>
+        <div class="comment" id="comment-54775">
+            <div id="post-54775-score" class="comment-score"></div>
+            <div class="comment-text"><p>The line is 20MB on both side.  And I am capturing the lan side of the firewall and the internal sides of ISP router ports by mirroring the port to my port.</p></div>
+            <div class="comment-info" id="comment-54775-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Aug '16, 08:43)</span>
+                <a class="comment-user userinfo" href="/users/25043/jwiener">jwiener</a>
+                
+            </div>
+        </div>
+    
+        <a name="54783"></a>
+        <div class="comment not_top_scorer" id="comment-54783">
+            <div id="post-54783-score" class="comment-score"></div>
+            <div class="comment-text"><p>In the trace from the FW  I can see a lot of "ACKed ubseen segment" from Ferndale site. So the packets arrived in Ferndale endpoint but not in the FW trace. Could there be a different path?
+Or maybe I missed something.</p></div>
+            <div class="comment-info" id="comment-54783-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Aug '16, 12:35)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="54784"></a>
+        <div class="comment not_top_scorer" id="comment-54784">
+            <div id="post-54784-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/16160/christian_r">@Christian_R</a>, it seems to me to be just an issue of the port mirroring at the switch - if you apply a display filter like <code>tcp.stream == 128 and (tcp.ack == 6532 or tcp.nxtseq == 6532)</code>, you'll see that the "ACKed unseen segment" packet has the same timestamp (to 1 μs) like the segment it ACKs but has been captured first.</p></div>
+            <div class="comment-info" id="comment-54784-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Aug '16, 13:57)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54799"></a>
+        <div class="comment not_top_scorer" id="comment-54799">
+            <div id="post-54799-score" class="comment-score"></div>
+            <div class="comment-text"><p>How are the duplex settings matching up.</p>
+
+<p>Sounds like you may have a duplex mismatch. If you have full-duplex on one side and half-duplex on the other side, you will see a lot of dropped packets.</p></div>
+            <div class="comment-info" id="comment-54799-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '16, 06:57)</span>
+                <a class="comment-user userinfo" href="/users/24149/wbenton">wbenton</a>
+                
+            </div>
+        </div>
+    
+        <a name="54802"></a>
+        <div class="comment not_top_scorer" id="comment-54802">
+            <div id="post-54802-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/24149/wbenton"></a><a href="/users/24149/wbenton">@wbenton</a> yes that should be checked, I think it too.</p>
+
+<p><a href="/users/25043/jwiener"></a><a href="/users/25043/jwiener">@jwiener</a> Do you see any uncommon packet drops at the switch interfaces?</p></div>
+            <div class="comment-info" id="comment-54802-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '16, 10:56)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="54803"></a>
+        <div class="comment not_top_scorer" id="comment-54803">
+            <div id="post-54803-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy">@sindy</a> yes that seems to be the answer to my finding... But why it is so significant in the FW trace?</p></div>
+            <div class="comment-info" id="comment-54803-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '16, 11:59)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="54804"></a>
+        <div class="comment not_top_scorer" id="comment-54804">
+            <div id="post-54804-score" class="comment-score"></div>
+            <div class="comment-text"><p>heh, I haven't read your post carefully enough and thought you were talking about the Ferndale trace only... my explanation above is valid for Ferndale, but you are right that in the FW trace there are cases where some ACKed data are really missing in the capture. So here a duplex mismatch, low speed on the monitoring port as compared to the captured data, or capture loss could be an explanation if the trace has been taken using port mirroring on a hardware switch. But the unusual MAC addresses like <code>00:00:00:00:00:10</code> and <code>06:00:00:00:00:10</code> seen in the capture, as well as occurrence of four mutually similar addresses,<br>
+<code>69:31:6c:61:6e:00
+4f:62:77:61:6e:00
+4f:62:6c:61:6e:00
+69:31:77:61:6e:00</code>
+suggest that the capture has been taken in some virtualized environment.</p></div>
+            <div class="comment-info" id="comment-54804-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '16, 13:11)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54805"></a>
+        <div class="comment not_top_scorer" id="comment-54805">
+            <div id="post-54805-score" class="comment-score"></div>
+            <div class="comment-text"><p>I would look for duplex mismatch somewhere along the line.</p>
+
+<p>If one side is half duplex while the other is full duplex, you will see numerous packet collisions/drops and thus retransmits will occur as well.</p>
+
+<p>Look at per port collisions for all ports on both switches and routers to see if you can find the culprit.</p>
+
+<p>FWIW</p></div>
+            <div class="comment-info" id="comment-54805-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '16, 20:41)</span>
+                <a class="comment-user userinfo" href="/users/24149/wbenton">wbenton</a>
+                
+            </div>
+        </div>
+    
+        <a name="54837"></a>
+        <div class="comment not_top_scorer" id="comment-54837">
+            <div id="post-54837-score" class="comment-score"></div>
+            <div class="comment-text"><p>I agree, but for some reason the ISP is refusing to change the duplex.  Right now it is set to auto on both sides.  I have asked for it to be hardcoded to 100 half.  I see no errors or collisions on the switches at either site.</p></div>
+            <div class="comment-info" id="comment-54837-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 09:52)</span>
+                <a class="comment-user userinfo" href="/users/25043/jwiener">jwiener</a>
+                
+            </div>
+        </div>
+    
+        <a name="54839"></a>
+        <div class="comment not_top_scorer" id="comment-54839">
+            <div id="post-54839-score" class="comment-score"></div>
+            <div class="comment-text"><p>Why do you want to set it at 100 half???
+Have you checked every switch or only the border switches?</p></div>
+            <div class="comment-info" id="comment-54839-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 10:33)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="54840"></a>
+        <div class="comment not_top_scorer" id="comment-54840">
+            <div id="post-54840-score" class="comment-score"></div>
+            <div class="comment-text"><p>Why 100 half in particular? Anyway, the speed and duplex negotiation may be a nightmare between different vendors' equipment, but if you have auto/auto and the ports of your switches connected to the ISP's routers report neither errors nor collisions, these settings at the edge between you and the ISP are not the cause of the packet drops. This does not mean that it cannot be the reason somewhere inside their network as you've mentioned a power outage. The speed&amp;duplex negotiation may have failed somewhere, resulting in full duplex mode on one end of the wire and half duplex on the other. But from outside, nothing more can be discovered than just packets being dropped or not.</p>
+
+<p>Can you say something about the firewall site and how exactly the capture is done there? Because the MAC addresses are weird, and even more important, the absence in the capture of frames which must have been transmitted because they have been acknowledged is weird. Maybe there is some kind of port aggregation and some packets (precisely, frames) take another path than the one you capture?</p>
+
+<p>But still, as you say that you have issues between Ferndale and Warren alone where the firewall isn't in the path, this should not be the main path of investigation. Have you got anywhere with the iperf? The point is that when you use speedtest.net as a traffic generator, the firewall becomes involved, so it is hard to prove the ISP guys that the firewall is not the cause of the trouble.</p></div>
+            <div class="comment-info" id="comment-54840-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 10:36)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54841"></a>
+        <div class="comment not_top_scorer" id="comment-54841">
+            <div id="post-54841-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy">@sindy</a> I agree.</p></div>
+            <div class="comment-info" id="comment-54841-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Aug '16, 10:40)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54754" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 16
+        </span>
+        <a href="#" class="show-all-comments-link">show 11 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54754-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/54754/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='fOqxRBQd7iiHDR1zykbsbpjkicOHbLNT' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54754/mpls-problem?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54754/mpls-problem?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/packets/"
+            class="tag-link-packets"
+            title="see questions tagged'packets'using tags"
+            rel="tag">packets</a> <span class="tag-number">&#215;205</span><br/>
+        
+        <a href="/tags/ack/"
+            class="tag-link-ack"
+            title="see questions tagged'ack'using tags"
+            rel="tag">ack</a> <span class="tag-number">&#215;139</span><br/>
+        
+        <a href="/tags/mpls/"
+            class="tag-link-mpls"
+            title="see questions tagged'mpls'using tags"
+            rel="tag">mpls</a> <span class="tag-number">&#215;25</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 11, 2016, 10:50 a.m.">11 Aug '16, 10:50</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,635 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 15, 2016, 10:40 a.m.">15 Aug '16, 10:40</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/43476/weird-tcp-packets-not-data-not-ack">weird tcp packets not data not ack !</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16059/how-to-know-the-sender-of-the-ack">How to know the sender of the ACK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/84/does-the-packet-make-it-to-the-other-end">Does the packet make it to the other end?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2960/drop-packets">Drop packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7248/a-question-related-to-another-question">A question related to another question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11651/cdp-packets-missing">cdp packets missing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16848/how-to-view-sentreceived-packets-for-the-application-layer">How to view sent/received packets for the application layer?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22218/snooping-tcp-packets-for-fixed-ip-systems">Snooping TCP packets for fixed IP systems</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27367/capturing-tcp-packets-from-another-computer">Capturing TCP Packets from another computer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35183/trace-xbox">Trace xbox</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,704 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>mysql.user capture - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi guys, I&#39;m testing tshark 1.10.14 on Centos 7.2.1511 and tshark 1.0.15 on Centos 5.11. I&#39;d like to save for a range of 10 minutes or more mysql.user, ip.src and mysql.query. I arrived to test these commands:  tshark -i any -n -Y &quot;mysql.command==3&quot; -T fields -e ip.src -e mysql.query &quot;dst port 3306 ..." />
+        <meta name="keywords" content="capture-options,command-line,mysql" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/56621/mysqluser-capture" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/56621/mysqluser-capture?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='0Wa7E9RX0jIEKqqLLD0u63BOUBBGoDlU' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/56621/mysqluser-capture">mysql.user capture</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-56621-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56621/up/" rel="nofollow"> </a>
+<div id="post-56621-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-56621-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56621/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/56621/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi guys,</p>
+<p>I'm testing tshark 1.10.14 on Centos 7.2.1511 and tshark 1.0.15 on Centos 5.11.
+I'd like to save for a range of 10 minutes or more mysql.user, ip.src and mysql.query.</p>
+<p>I arrived to test these commands:</p>
+<ul>
+<li>tshark -i any -n -Y "mysql.command==3" -T fields -e ip.src -e mysql.query "dst port 3306 and (host x.x.x.x or host y.y.y.y)" # tshark 1.10.14</li>
+<li>tshark -i any -n -f "dst port 3306 and tcp[(((tcp[12:1]&amp;0xf0)&gt;&gt;2)+4):1]=0x03 and (host x.x.x.x or host y.y.y.y)" -T fields -e ip.src -e mysql.query # tshark 1.0.15</li>
+</ul>
+<p><strong>ADDITION</strong></p>
+<p>I'm able to capture mysql.user with these comands:</p>
+<ol>
+<li>tshark -i any -n -Y "mysql.user" -T fields -e mysql.user "dst port 3306 and (host x.x.x.x or host y.y.y.y)"</li>
+<li>tshark -i any -n -d tcp.port==3306,mysql -T fields -e mysql.user -e ip.src -e mysql.query "dst port 3306 and (host x.x.x.x or host y.y.y.y)"</li>
+</ol>
+<p>The second configuration capture different records: records with only mysql.user and ip.src and records with ip.src and mysql.query. <a href="/users/4/jaap"><a href="/users/4/jaap">@Jaap</a></a> and <a href="/users/19586/sindy"><a href="/users/19586/sindy">@sindy</a></a> confirmed only with an ad hoc script I can create a unique line with all three fields.</p>
+<p>Is improvable the second configuration?</p>
+<p>Thanks.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/capture-options/" class="post-tag tag-link-capture-options"
+                                        title="see questions tagged 'capture-options'" rel="tag">capture-options</a>
+                                
+                                    <a href="/tags/command-line/" class="post-tag tag-link-command-line"
+                                        title="see questions tagged 'command-line'" rel="tag">command-line</a>
+                                
+                                    <a href="/tags/mysql/" class="post-tag tag-link-mysql"
+                                        title="see questions tagged 'mysql'" rel="tag">mysql</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Oct '16, 09:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0154cb933fdbb0b41331dcf0df6d688d?s=32&amp;d=identicon&amp;r=g" alt="bilardi's gravatar image" />
+    <p><a href="/users/26011/bilardi">bilardi</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="bilardi has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/56621/">
+                edited
+                <strong>26 Oct '16, 01:34</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-56621">
+    
+        <a name="56636"></a>
+        <div class="comment" id="comment-56636">
+            <div id="post-56636-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Do you have an (unfiltered) capture taken here, where the user field is filled in? Then you should be able to reverse engineer what you'll need to change.</p></div>
+            <div class="comment-info" id="comment-56636-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '16, 02:55)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56642"></a>
+        <div class="comment" id="comment-56642">
+            <div id="post-56642-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/4/jaap"></a><a href="/users/4/jaap">@Jaap</a>, I added the paragraph ADDITION. I'd like to be sure that I can only use the second configuration to elaborate the output with an ad hoc script to create records with the format mysql.user\tip.src\tmysql.query, or does it exist a tshark configuration to incorporate the action of this ad hoc script?</p></div>
+            <div class="comment-info" id="comment-56642-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '16, 05:23)</span>
+                <a class="comment-user userinfo" href="/users/26011/bilardi">bilardi</a>
+                
+            </div>
+        </div>
+    
+        <a name="56648"></a>
+        <div class="comment" id="comment-56648">
+            <div id="post-56648-score" class="comment-score">1</div>
+            <div class="comment-text"><p>are you sure that <code>mysql.user</code> and <code>mysql.query</code> exist in the same PDU? The thing is that the dissectors print fields of individual packets or reassembled PDUs, not from established sessions. So if a field is not present in a given packet (or a reassembled PDU), it is not printed for that packet/PDU even if the packet/PDU belongs to a session whose other packets do contain that field.</p>
+
+<p>If a PDU is split into several packets, field of that PDU are printed for the last packet of the PDU.</p></div>
+            <div class="comment-info" id="comment-56648-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '16, 08:55)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="56649"></a>
+        <div class="comment" id="comment-56649">
+            <div id="post-56649-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you <a href="/users/19586/sindy">@sindy</a>: you confirmed me that only with an ad hoc script I can create one line mysql.user\tip.src\tmysql.query because the output data gives me two different lines: mysql.user\tip.src and \tip.src\tmysql.query.</p></div>
+            <div class="comment-info" id="comment-56649-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '16, 09:35)</span>
+                <a class="comment-user userinfo" href="/users/26011/bilardi">bilardi</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56621" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56621-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/56621/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='0Wa7E9RX0jIEKqqLLD0u63BOUBBGoDlU' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56621/mysqluser-capture?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56621/mysqluser-capture?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/command-line/"
+            class="tag-link-command-line"
+            title="see questions tagged'command-line'using tags"
+            rel="tag">command-line</a> <span class="tag-number">&#215;37</span><br/>
+        
+        <a href="/tags/mysql/"
+            class="tag-link-mysql"
+            title="see questions tagged'mysql'using tags"
+            rel="tag">mysql</a> <span class="tag-number">&#215;12</span><br/>
+        
+        <a href="/tags/capture-options/"
+            class="tag-link-capture-options"
+            title="see questions tagged'capture-options'using tags"
+            rel="tag">capture-options</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 24, 2016, 9:38 a.m.">24 Oct '16, 09:38</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,370 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 26, 2016, 1:34 a.m.">26 Oct '16, 01:34</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1327/mysql-and-encryption">Mysql and encryption</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9486/command-line-option">Command line option</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36137/conversion-of-pcap-to-text-file">conversion of pcap to text file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12221/how-to-chose-a-capture-filter-in-version-180-as-previous-in-the-capture-options-menu-of-version-16">How to chose a capture-filter in version 1.8.0 as previous in the capture-options menu of version 1.6</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1397/mysql-password">Mysql Password</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9761/exporting-reassembled-tcp-segments-with-tshark">exporting reassembled TCP segments with tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38071/how-to-extract-ip-addresses-from-cap-file-to-text-file">How to extract IP addresses from .cap file to text file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14745/long-term-capture">Long term capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2414/capturing-snmp-traces-to-mysql-database-or-csv-file-at-runtime">Capturing SNMP Traces to MYSQL Database or CSV file at RunTime</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10095/how-to-clear-the-guiwindow_title-option-from-the-command-line">How to clear the gui.window_title option from the command-line?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1003 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TCP urgent pointer value not displayed - Wireshark Q&amp;A</title>
+        <meta name="description" content="If the URG flag is set to zero, then the urgent pointer field is disabled. In that case, why is the value of the urgent pointer field not displayed in Wireshark?" />
+        <meta name="keywords" content="field,packet-display,pointer,tcp,urgent" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/23753/tcp-urgent-pointer-value-not-displayed" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/23753/tcp-urgent-pointer-value-not-displayed?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='B6NMMw5iJjsMknTHafYvu1dn8BAJVuds' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/23753/tcp-urgent-pointer-value-not-displayed">TCP urgent pointer value not displayed</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-23753-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23753/up/" rel="nofollow"> </a>
+<div id="post-23753-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-23753-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23753/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/23753/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>If the URG flag is set to zero, then the urgent pointer field <a href="http://www.wireshark.org/lists/ethereal-dev/200307/msg00291.html">is disabled</a>. In that case, why is the value of the urgent pointer field not displayed in Wireshark?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/field/" class="post-tag tag-link-field"
+                                        title="see questions tagged 'field'" rel="tag">field</a>
+                                
+                                    <a href="/tags/packet-display/" class="post-tag tag-link-packet-display"
+                                        title="see questions tagged 'packet-display'" rel="tag">packet-display</a>
+                                
+                                    <a href="/tags/pointer/" class="post-tag tag-link-pointer"
+                                        title="see questions tagged 'pointer'" rel="tag">pointer</a>
+                                
+                                    <a href="/tags/tcp/" class="post-tag tag-link-tcp"
+                                        title="see questions tagged 'tcp'" rel="tag">tcp</a>
+                                
+                                    <a href="/tags/urgent/" class="post-tag tag-link-urgent"
+                                        title="see questions tagged 'urgent'" rel="tag">urgent</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Aug '13, 14:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0c7332e9fdd92b1e99d905c07ab4bdc2?s=32&amp;d=identicon&amp;r=g" alt="HiB's gravatar image" />
+    <p><a href="/users/4325/hib">HiB</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="HiB has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/23753/">
+                edited
+                <strong>13 Aug '13, 14:37</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" alt="cmaynard's gravatar image" />
+            <p><a href="/users/402/cmaynard">cmaynard ♦♦</a><br/>
+            <span class="score" title="9361 reputation points"><span class="">9.4k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">&#9679;</span><span class="badgecount">142</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-23753">
+    
+</div>
+<div id="comment-tools-23753" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23753-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/23753/tcp-urgent-pointer-value-not-displayed?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/23753/tcp-urgent-pointer-value-not-displayed?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/23753/tcp-urgent-pointer-value-not-displayed?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/23753/tcp-urgent-pointer-value-not-displayed?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="23754"></a>
+                    <div id="answer-container-23754" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23754-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23754/up/" rel="nofollow"> </a>
+<div id="post-23754-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-23754-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23754/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The urgent pointer field is only meaningful if the URG flag is set; otherwise the two bytes are essentially meaningless.</p>
+<p>If Wireshark were to display those 2 bytes as if there were an actual urgent pointer even though the URG flag was not set, then potentially packets that should not match a particular display filter would be incorrectly displayed.  For example, suppose you are interested in all packets containing an urgent pointer set to some specific value, say 0x1234, then you might use the following display filter to isolate them:</p>
+<pre><code>tcp.urgent_pointer == 0x1234
+</code></pre>
+<p>If there happened to be TCP packets with the URG flag cleared yet the bytes where the urgent pointer would be represented happened to contain those same values, then the packet would incorrectly match the filter.</p>
+<p>Interestingly, Wireshark currently does display the tcp.urgent_pointer field, even if the URG Flag isn't set, if the value of the tcp.urgent_pointer is non-zero.  An expert info warning is even reported in such cases indicating, <em>"Broken TCP.  The urgent pointer field is nonzero while the URG flag is not set"</em>.  Apparently this was done with the understanding that this field should be zero when the URG flag isn't set, but as Guy Harris noted in <a href="http://www.wireshark.org/lists/ethereal-dev/200307/msg00297.html">the earlier discussion</a>, there actually doesn't appear to be any requirement for the urgent pointer field to be zero when the URG flag is not set.</p>
+<p>We might consider removing that expert info warning, or at least changing it from a warning to a note with different wording, in particular removing the <em>"Broken TCP"</em> portion of the message.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23754/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Aug '13, 15:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" alt="cmaynard's gravatar image" />
+    <p><a href="/users/402/cmaynard">cmaynard ♦♦</a><br/>
+    <span class="score" title="9361 reputation points"><span class="">9.4k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">&#9679;</span><span class="badgecount">142</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cmaynard has 108 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/23754/">
+                edited
+                <strong>13 Aug '13, 15:12</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23754">
+    
+        <a name="23755"></a>
+        <div class="comment" id="comment-23755">
+            <div id="post-23755-score" class="comment-score"></div>
+            <div class="comment-text"><p>why would a packet incorrectly match if it has an urgent_pointer 0x1234 and URG flag is zero? for me not displaying urgent pointer value in this case is a bug - since 0x0000 is part of the packet, as 0x1234 would be - so in both case wireshark should display it with a note as you suggested.</p></div>
+            <div class="comment-info" id="comment-23755-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Aug '13, 15:39)</span>
+                <a class="comment-user userinfo" href="/users/4325/hib">HiB</a>
+                
+            </div>
+        </div>
+    
+        <a name="23773"></a>
+        <div class="comment" id="comment-23773">
+            <div id="post-23773-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The field is only an urgent pointer if the URG flag is set.  If the URG flag isn't set, it's just arbitrary data that happens to reside in the location where the urgent pointer would be if the URG flag was set.  To treat those 2 bytes as an urgent pointer when the URG flag is not set would be wrong.</p>
+
+<p>But if you're interested in searching for a particular value of those 2 bytes (again, using 0x1234 as an example) regardless of whether the URG flag is set or not, you can use a display filter such as follows:</p>
+
+<pre><code>tcp[18:2] == 12:34
+</code></pre></div>
+            <div class="comment-info" id="comment-23773-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '13, 08:24)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23774"></a>
+        <div class="comment" id="comment-23774">
+            <div id="post-23774-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I agree with rewording the expert info warning to a note, but if a field is present in a packet, I'd like Wireshark to display it, whether the contents are meaningful or not. Same for the ACK field in the first packet of the three-way handshake. Wireshark does not display it because the ACK bit is not set, but it is still present in the packet. As you click on fields in the Packet Details pane, you can see Wireshark skip over a block of bytes in the Packet Bytes pane.</p>
+
+<p>Perhaps a good solution would be for Wireshark to always display the Urgent Pointer field, but with "(Urgent flag not set)" shown next to it when appropriate, and to always display the Ack field, but with "(ACK flag not set)" shown when appropriate.</p></div>
+            <div class="comment-info" id="comment-23774-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '13, 09:16)</span>
+                <a class="comment-user userinfo" href="/users/527/jim-aragon">Jim Aragon</a>
+                
+            </div>
+        </div>
+    
+        <a name="23775"></a>
+        <div class="comment" id="comment-23775">
+            <div id="post-23775-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Maybe playing with semantics, but to me there is a difference between a field and some bytes in the packet.</p>
+
+<p>A field should only be present and dissected if it is deemed present by the dissector as in this case by the flag.</p>
+
+<p>The bytes may still be in the packet and can be seen in the packet bytes, but according to the protocol description the field is to be disregarded.</p></div>
+            <div class="comment-info" id="comment-23775-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '13, 09:45)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23776"></a>
+        <div class="comment not_top_scorer" id="comment-23776">
+            <div id="post-23776-score" class="comment-score"></div>
+            <div class="comment-text"><p>Regarding the urgent pointer field, to reiterate again from <a href="http://tools.ietf.org/html/rfc793">RFC793</a>: <em>This field is only [to] be interpreted in segments with the URG control bit set.</em></p></div>
+            <div class="comment-info" id="comment-23776-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '13, 10:20)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23779"></a>
+        <div class="comment not_top_scorer" id="comment-23779">
+            <div id="post-23779-score" class="comment-score"></div>
+            <div class="comment-text"><p>FYI ... I removed the expert info messages relating to both the urgent pointer and acknowledgment number fields in <a href="http://anonsvn.wireshark.org/viewvc?revision=51356&amp;view=revision">r51356</a>.  IMO, the ack field should not be added either when the ACK bit isn't set.  I haven't made that change though ... at least not yet.</p></div>
+            <div class="comment-info" id="comment-23779-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '13, 11:39)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23786"></a>
+        <div class="comment not_top_scorer" id="comment-23786">
+            <div id="post-23786-score" class="comment-score"></div>
+            <div class="comment-text"><p>so now tcp.urgent_pointer filter is valid only if URG bit is set? I havent seen such case earlier when a filter depended on something. then please create another filter name like tcp.urgent_pointer_octets which would work in every case - like the filter tcp[18:2] you suggested. by the way I am working with pdml files - in pdml there are a lot of hidden fields - in this case urgent_pointer field could be a hidden one - without it, there is no any info about those 2 octets - so the packet cannot be reproduced correctly even if these octets have no meanings. what do you think? and thanks for the commit!</p></div>
+            <div class="comment-info" id="comment-23786-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Aug '13, 15:26)</span>
+                <a class="comment-user userinfo" href="/users/4325/hib">HiB</a>
+                
+            </div>
+        </div>
+    
+        <a name="23825"></a>
+        <div class="comment not_top_scorer" id="comment-23825">
+            <div id="post-23825-score" class="comment-score"></div>
+            <div class="comment-text"><p><em>"so now tcp.urgent_pointer filter is valid only if URG bit is set?"</em></p>
+
+<p>Well, the filter is always valid, but the current behavior is that only those packets where the URG bit is set will match the filter.  This is currently inconsistent behavior with other fields, for example the Acknowledgment Number field as I alluded to in the commit message.  I believe another change should be made for consistency.  More on that below ...</p>
+
+<p><em>"I haven't seen such case earlier when a filter depended on something."</em></p>
+
+<p>I'm sure there are other examples within the thousands of Wireshark dissectors.</p>
+
+<p><em>then please create another filter name like tcp.urgent_pointer_octets which would work in every case - like the filter tcp[18:2] you suggested. by the way I am working with pdml files - in pdml there are a lot of hidden fields - in this case urgent_pointer field could be a hidden one - without it, there is no any info about those 2 octets - so the packet cannot be reproduced correctly even if these octets have no meanings. what do you think?</em></p>
+
+<p>Wireshark does not assign fields to every byte within a packet, so you will never be able to reliably reproduce a packet from purely pdml.  You can only do it from the raw bytes themselves.</p>
+
+<p>I'm not in favor of adding a tcp.urgent_pointer_octets field.  But as I mentioned above, I do recognize an inconsistency so I think something should change.  My thoughts:</p>
+
+<ol>
+<li>Either the acknowledgment number field is only added if the ACK bit is set, or</li>
+<li>We always add the two fields (acknowledgment number and urgent pointer).</li>
+</ol>
+
+<p>The 1st option means both the acknowledgment number and urgent pointer fields will only be present/match filters in TCP packets where the ACK or URG bit is set, respectively.  The implication is that a user would not be able to see as easily the values contained within the space reserved for those fields in packets where the respective bit isn't set.  Does this matter though?</p>
+
+<p>The 2nd option means that both fields will always be present and it will be the responsibility of the user interested in either of those 2 fields to be aware that those values only really mean something if the respective bit is set, somewhat analogous to a "container" that's present, but whose contents is only valid if another field says it is.</p></div>
+            <div class="comment-info" id="comment-23825-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Aug '13, 10:45)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23831"></a>
+        <div class="comment not_top_scorer" id="comment-23831">
+            <div id="post-23831-score" class="comment-score"></div>
+            <div class="comment-text"><p>Number 1 (the acknowledgment number field is only added if the ACK bit is set) is current behavior.</p>
+
+<p>In my comment above, I was in favor of #2. As I think about this more, I'm not sure that's the best approach, and I'm beginning to favor #1. I think I'll sit firmly on the fence and leave this to whatever consensus emerges.</p></div>
+            <div class="comment-info" id="comment-23831-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Aug '13, 13:25)</span>
+                <a class="comment-user userinfo" href="/users/527/jim-aragon">Jim Aragon</a>
+                
+            </div>
+        </div>
+    
+        <a name="23832"></a>
+        <div class="comment not_top_scorer" id="comment-23832">
+            <div id="post-23832-score" class="comment-score"></div>
+            <div class="comment-text"><p><em>"Number 1 (the acknowledgment number field is only added if the ACK bit is set) is current behavior."</em></p>
+
+<p>I stand corrected.  I merely removed the expert info warnings for non-zero acknowledgment numbers or urgent pointers when their respective ACK or URG bit wasn't set.  I thought I had made another change too, but I only made it in my head apparently.</p>
+
+<p>So #2 is the current behavior then, as can be seen if you apply the following display filters:</p>
+
+<pre><code>(tcp.ack) &amp;&amp; (tcp.flags.ack == 0)
+(tcp.urgent_pointer) &amp;&amp; (tcp.flags.urg == 0)
+</code></pre>
+
+<p>What #1 proposes is to only add the tcp.ack field if the tcp.flags.ack field is 1 and similarly for the urgent pointer filed.  I'm inclined to leave things as they are now, especically since that seems to be the desire from OP anyway, and it's probably what everyone is used to.</p>
+
+<p>I think at least some of the confusion comes from the fact that the behavior must have changed since the post that OP references in the original question.  So what version of Wireshark is OP running where the urgent pointer isn't displayed when the URG bit isn't set?</p></div>
+            <div class="comment-info" id="comment-23832-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Aug '13, 14:13)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23833"></a>
+        <div class="comment" id="comment-23833">
+            <div id="post-23833-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Oh good god.  Yes, I <strong>DID</strong> make the change so that the urgent pointer is always displayed just like the ack field is always displayed, irrespective of the flags.  So the behavior is as described in #2 and it is currently consistent between them.  Whether that's the <em>expected</em> behavior or not is another matter, but I'm still inclined to leave things as they are now.  If some other developer disagrees, I don't have a problem with the change.</p></div>
+            <div class="comment-info" id="comment-23833-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Aug '13, 14:26)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23754" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 11
+        </span>
+        <a href="#" class="show-all-comments-link">show 6 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23754-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/23753/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='B6NMMw5iJjsMknTHafYvu1dn8BAJVuds' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23753/tcp-urgent-pointer-value-not-displayed?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23753/tcp-urgent-pointer-value-not-displayed?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tcp/"
+            class="tag-link-tcp"
+            title="see questions tagged'tcp'using tags"
+            rel="tag">tcp</a> <span class="tag-number">&#215;752</span><br/>
+        
+        <a href="/tags/field/"
+            class="tag-link-field"
+            title="see questions tagged'field'using tags"
+            rel="tag">field</a> <span class="tag-number">&#215;34</span><br/>
+        
+        <a href="/tags/packet-display/"
+            class="tag-link-packet-display"
+            title="see questions tagged'packet-display'using tags"
+            rel="tag">packet-display</a> <span class="tag-number">&#215;15</span><br/>
+        
+        <a href="/tags/urgent/"
+            class="tag-link-urgent"
+            title="see questions tagged'urgent'using tags"
+            rel="tag">urgent</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/pointer/"
+            class="tag-link-pointer"
+            title="see questions tagged'pointer'using tags"
+            rel="tag">pointer</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 13, 2013, 2:19 p.m.">13 Aug '13, 14:19</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,454 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 16, 2013, 2:26 p.m.">16 Aug '13, 14:26</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/40289/how-to-display-the-full-tcp-payload-from-a-pcap-using-tshark">How to display the full TCP payload from a pcap using tshark?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26768/why-wireshark-display-filter-does-not-show-http-packets">Why Wireshark display filter does not show http packets?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42/usefull-color-rules">Usefull Color Rules?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/344/conditional-tcp-reassembly-based-on-dscp-bits">Conditional TCP reassembly based on DSCP bits</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2145/how-do-tcp-sequence-and-acknowledgement-numbers-work">How do TCP sequence and acknowledgement numbers work</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3323/printing-tcp-payload-using-tshark-t-fields">Printing tcp payload using tshark -T fields?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5382/custom-dissector-and-info-column">Custom dissector and info column</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7068/what-are-the-causes-of-slow-response-between-two-host">What are the causes of slow response between two host?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8120/tcp-initial-congestion-window-slow-start">TCP initial congestion window (slow-start)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6872/zero-window-and-rst">Zero window and RST</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

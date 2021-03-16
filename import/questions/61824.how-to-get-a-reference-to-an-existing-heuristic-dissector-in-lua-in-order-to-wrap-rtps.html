@@ -1,0 +1,914 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to get a reference to an existing heuristic dissector in LUA (in order to wrap RTPS) ? - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello, We are trying to create a chained dissector in LUA (as described in Wireshark wiki page) but we are not able to get a reference to existing heuristic dissector ! :( For &quot;normal&quot; (= non-heuristic) dissector, it works fine. In our case, we try to wrap RTPS (Real-Time Publish-Subscribe) protocol..." />
+        <meta name="keywords" content="chained-dissector,lua,rtps" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/61824/how-to-get-a-reference-to-an-existing-heuristic-dissector-in-lua-in-order-to-wrap-rtps" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/61824/how-to-get-a-reference-to-an-existing-heuristic-dissector-in-lua-in-order-to-wrap-rtps?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='6yKRSp4bEfnypMlNNw0bWxZ9JWCKLpJi' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/61824/how-to-get-a-reference-to-an-existing-heuristic-dissector-in-lua-in-order-to-wrap-rtps">How to get a reference to an existing heuristic dissector in LUA (in order to wrap RTPS) ?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-61824-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61824/up/" rel="nofollow"> </a>
+<div id="post-61824-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-61824-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61824/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/61824/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>We are trying to create a chained dissector in LUA (as described in Wireshark wiki page) but we are not able to get a reference to existing heuristic dissector ! :(
+For "normal" (= non-heuristic) dissector, it works fine.
+In our case, we try to wrap RTPS (Real-Time Publish-Subscribe) protocol.</p>
+<p>We looked at source code (in epan/dissectors/packet-rtps.c) and we think we are using expected name.
+Unfortunately, with Wireshark v2.2.7, we are not able to get UDP heuristic dissector table, nor RTPS dissector.
+It seems that DissectorTable.get() is only used for "normal" dissector (it triggers an error for heuristic "udp" but not for normal "udp.port").
+And Dissector.get("rtps") fails too: no such dissector.
+But Dissector.get("rtitcp") works fine.
+We can notice that RTPS is not contained in Dissector.list().</p>
+<p>Q1) what are we missing ?</p>
+<p>Q2) is it a bug in Wireshark ?</p>
+<p>Thanks for your help,
+Contrib</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/chained-dissector/" class="post-tag tag-link-chained-dissector"
+                                        title="see questions tagged 'chained-dissector'" rel="tag">chained-dissector</a>
+                                
+                                    <a href="/tags/lua/" class="post-tag tag-link-lua"
+                                        title="see questions tagged 'lua'" rel="tag">lua</a>
+                                
+                                    <a href="/tags/rtps/" class="post-tag tag-link-rtps"
+                                        title="see questions tagged 'rtps'" rel="tag">rtps</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Jun '17, 07:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ccf0e5d065ba0cf447fb96b746fce7d2?s=32&amp;d=identicon&amp;r=g" alt="Lua%20Hobbyist's gravatar image" />
+    <p><a href="/users/34024/lua-hobbyist">Lua Hobbyist</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Lua Hobbyist has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-61824">
+    
+</div>
+<div id="comment-tools-61824" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61824-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/61824/how-to-get-a-reference-to-an-existing-heuristic-dissector-in-lua-in-order-to-wrap-rtps?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/61824/how-to-get-a-reference-to-an-existing-heuristic-dissector-in-lua-in-order-to-wrap-rtps?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/61824/how-to-get-a-reference-to-an-existing-heuristic-dissector-in-lua-in-order-to-wrap-rtps?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/61824/how-to-get-a-reference-to-an-existing-heuristic-dissector-in-lua-in-order-to-wrap-rtps?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="61825"></a>
+                    <div id="answer-container-61825" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61825-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61825/up/" rel="nofollow"> </a>
+<div id="post-61825-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-61825-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61825/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The Wireshark Lua <a href="https://wiki.wireshark.org/Lua/Examples">Examples</a> wiki page provides a <a href="https://wiki.wireshark.org/Lua/Examples?action=AttachFile&amp;do=get&amp;target=dissector.lua">dissector.lua</a> file written by Hadriel Kaplan that illustrates how to register a heuristic Lua dissector with UDP, namely:</p>
+<pre><code>Line 587: dns:register_heuristic("udp",heur_dissect_dns)
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61825/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Jun '17, 07:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" alt="cmaynard's gravatar image" />
+    <p><a href="/users/402/cmaynard">cmaynard ♦♦</a><br/>
+    <span class="score" title="9361 reputation points"><span class="">9.4k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">&#9679;</span><span class="badgecount">142</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cmaynard has 108 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61825">
+    
+        <a name="61847"></a>
+        <div class="comment" id="comment-61847">
+            <div id="post-61847-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://ask.wireshark.org/users/402/cmaynard">@cmaynard</a>
+Thanks, but we already found this example.</p>
+
+<p>You may have been confused by the title (and my "poor" english, sorry ^_^):
+here, <em>"reference"</em> stands for <strong>LUA (runtime) object</strong>, not for documentation pointer.</p>
+
+<p>But as described in my previous post, we need to wrap (aka create a "chained dissector" for) an existing protocol (here: <strong>RTPS</strong>).
+In order to do so, we need to:</p>
+
+<ol>
+<li>get original dissector (=&gt; rtps)</li>
+<li>create a new dissector (=&gt; rtpswrap)</li>
+<li>in wrapper body, call original dissector and then add our custom stuff</li>
+<li>register this "new" wrapper</li>
+</ol>
+
+<p>Unfortunately, our problem is the first step: based on LUA API, it seems there are 2 ways to get original dissector:</p>
+
+<ul>
+<li><strong>1st way:</strong> get a dissector table (thanks to: <code>DissectorTable.get()</code>) then get existing dissector thanks to <code>dtbl:get_dissector()</code></li>
+<li><strong>2nd way:</strong> call directly <code>Dissector.get()</code></li>
+</ul>
+
+<p>It turns out that in our case, with RTPS protocol, <strong>both ways return an error</strong> ! :(</p>
+
+<p>We checked that in Wireshark GUI menu: <code>View</code> -&gt; <code>Internals</code> -&gt; <code>Dissector Tables</code>,
+RTPS protocol is contained in <strong>UDP</strong>'s <code>Heuristic Table</code> (<strong>and nowhere else</strong>).
+Consequently, following 1st way, we would need to be able to get UDP heuristic dissector table in LUA script, but <code>DissectorTable.get("udp")</code> triggers an error. It seems that this function should only be used for "normal" dissector, one registered to a fix port for example (<strong>so not heuristic</strong>). We also checked that <code>"udp"</code> is present in <code>DissectorTable.heuristic_list()</code> but it should only be used with <code>Proto:register_heuristic()</code> and so we can not access to original RTPS dissector.</p>
+
+<p>Following 2nd way, we tried to call <code>Dissector.get("rtps")</code> but here again, an error is triggered: <code>no such dissector</code>. We noticed that <code>"rtps"</code> is not present in <code>Dissector.list()</code> and it seems weird.</p>
+
+<p>Then, we looked at source code:
+<a href="https://github.com/wireshark/wireshark/blob/wireshark-2.2.7/epan/dissectors/packet-rtps.c#L11544">wireshark-2.2.7/epan/dissectors/packet-rtps.c#L11544</a>
+and we noticed another protocol implemented alongside RTPS: <code>"rtitcp"</code>.
+It turns out that <code>"rtitcp"</code> is present in <code>Dissector.list()</code> and call to <code>Dissector.get("rtitcp")</code> works fine (no error contrary to <code>"rtps"</code>).</p>
+
+<p>Consequently, it seems that <code>"rtps"</code> protocol implementation missed something compare to <code>"rtitcp"</code>. In order to be able to access to original dissector in LUA, we may need to register it to a fix (dummy) port ? or add a new function in LUA API in order to get a heuristic dissector ?</p>
+
+<p>Or maybe there is a 3rd way to get existing dissector ?</p></div>
+            <div class="comment-info" id="comment-61847-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jun '17, 14:16)</span>
+                <a class="comment-user userinfo" href="/users/34024/lua-hobbyist">Lua Hobbyist</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61825" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61825-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="61937"></a>
+                    <div id="answer-container-61937" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61937-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61937/up/" rel="nofollow"> </a>
+<div id="post-61937-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-61937-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61937/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Replying to my own questions: it seems there are limitations in current Wireshark LUA API</p>
+<ol>
+<li>no way to get a dissector that has <strong>only</strong> been registered as "heuristic" (EXAMPLE: RTPS)</li>
+<li>no way to replace an existing heuristic dissector in a dissector table by a wrapper implemented in LUA. There is a way to <strong><em>add</em></strong> a heuristic dissector, but what if original dissector is called first ? wrapper will never be called... <strong>So we would need to be able to overwrite objects in heuristic dissector table or to change order in this list.</strong></li>
+</ol>
+<p>Concerning RTPS, a workaround to first previous limitation is below: <strong><em>(/!\ need to patch source code + recompile)</em></strong></p>
+<p><strong>wireshark-2.2.7_RTPS_registration_for_LUA_access.patch</strong></p>
+<hr>
+<pre><code>--- wireshark-2.2.7_OLD/epan/dissectors/packet-rtps.c
++++ wireshark-2.2.7_NEW/epan/dissectors/packet-rtps.c
+@@ -11534,10 +11534,15 @@
+               &amp;enable_topic_info);
+register_init_routine(rtps_init);
+
+rtps_type_name_table = register_dissector_table("rtps.type_name", "RTPS Type Name",
+       proto_rtps, FT_STRING, BASE_NONE);
++
++  /* In order to get this dissector in LUA (aka "chained-dissector") */
++  register_dissector("rtps_udp", dissect_rtps_udp, proto_rtps);
++  register_dissector("rtps_tcp", dissect_rtps_tcp, proto_rtps);
++  register_dissector("rtps_rtitcp", dissect_rtps_rtitcp, proto_rtps);
+ }
+
+
+ void proto_reg_handoff_rtps(void) {
+   heur_dissector_add("rtitcp", dissect_rtps_rtitcp, "RTPS over RTITCP", "rtps_rtitcp", proto_rtps, HEURISTIC_ENABLE);
+</code></pre>
+<hr>
+<p>Thanks to previous patch, we are able to get access to original RTPS dissector in LUA script thanks to <code>Dissector.get("rtps_udp")</code>.</p>
+<p>There is still the second limitation: this time, a workaround is to use UDP dissector table and register the new wrapper to a specific UDP port.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61937/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Jun '17, 14:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ccf0e5d065ba0cf447fb96b746fce7d2?s=32&amp;d=identicon&amp;r=g" alt="Lua%20Hobbyist's gravatar image" />
+    <p><a href="/users/34024/lua-hobbyist">Lua Hobbyist</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Lua Hobbyist has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61937">
+    
+        <a name="62034"></a>
+        <div class="comment" id="comment-62034">
+            <div id="post-62034-score" class="comment-score"></div>
+            <div class="comment-text"><p>Previous patch has been submitted, see:
+<a href="https://code.wireshark.org/review/#/c/22137/">https://code.wireshark.org/review/#/c/22137/</a></p></div>
+            <div class="comment-info" id="comment-62034-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jun '17, 13:47)</span>
+                <a class="comment-user userinfo" href="/users/34024/lua-hobbyist">Lua Hobbyist</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-61937" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61937-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/61824/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='6yKRSp4bEfnypMlNNw0bWxZ9JWCKLpJi' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61824/how-to-get-a-reference-to-an-existing-heuristic-dissector-in-lua-in-order-to-wrap-rtps?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61824/how-to-get-a-reference-to-an-existing-heuristic-dissector-in-lua-in-order-to-wrap-rtps?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/lua/"
+            class="tag-link-lua"
+            title="see questions tagged'lua'using tags"
+            rel="tag">lua</a> <span class="tag-number">&#215;431</span><br/>
+        
+        <a href="/tags/chained-dissector/"
+            class="tag-link-chained-dissector"
+            title="see questions tagged'chained-dissector'using tags"
+            rel="tag">chained-dissector</a> <span class="tag-number">&#215;10</span><br/>
+        
+        <a href="/tags/rtps/"
+            class="tag-link-rtps"
+            title="see questions tagged'rtps'using tags"
+            rel="tag">rtps</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 7, 2017, 7:11 a.m.">07 Jun '17, 07:11</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,673 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 14, 2017, 2:45 p.m.">14 Jun '17, 14:45</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/56917/luac-dissector-types">Lua/C++ Dissector Types</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53016/chained-dissector-not-working">Chained dissector not working</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59326/custom-dissector-for-llc-payload-in-lua">Custom dissector for LLC Payload in Lua</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51114/custom-dissector-to-dissect-a-specific-field-in-lua">Custom dissector to dissect a specific field in LUA</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45581/ssl-lua-chained-dissector">SSL LUA chained dissector</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58247/ssl-lua-dissector-how">SSL Lua dissector - how?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8081/calling-a-chained-dissector-on-a-well-known-port">Calling a chained dissector on a well-known port</a>
+        </p>
+        
+        <p>
+            <a href="/questions/570/crashing-issue-when-running-lua-dissector-after-upgrading-from-wireshark-100">Crashing issue when running Lua dissector after upgrading from wireshark 1.0.0</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4410/create-my-own-dissector">Create my own dissector</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5868/how-do-i-setup-wireshark-to-run-luas-clrpackage">How do I setup Wireshark to run Lua&#39;s CLRPackage</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,923 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TCP (and others) response times - Wireshark Q&amp;A</title>
+        <meta name="description" content="Can anyone provide some tips on determining response time to certain protocols? For instance, I can think of several protocols where I want to detect a network request then find how long it takes to get a response. The main one is ModbusTCP, where there is a request then a response some time later. ..." />
+        <meta name="keywords" content="response,service,time" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/241/tcp-and-others-response-times" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/241/tcp-and-others-response-times?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='G2t7OBmP23gq5xNDB3sMtDrnXZ5dNCSc' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/241/tcp-and-others-response-times">TCP (and others) response times</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-241-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/241/up/" rel="nofollow"> </a>
+<div id="post-241-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-241-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/241/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/241/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Can anyone provide some tips on determining response time to certain protocols?  For instance, I can think of several protocols where I want to detect a network request then find how long it takes to get a response.  The main one is ModbusTCP, where there is a request then a response some time later.  Another could be DNS response times, or ARP response times.  I know there is an option for service response times, but as luck would have it the ones I want are not there.</p>
+<p>My solution is to export the packet data and bring into Excel and manipulate there.  Very time consuming.  Any tips, tricks, or ideas would be helpful!</p>
+<p>Let me clarify my question a little more with an example.  I may have a trace with one tcp connection, but the request and response is continuous.  Each individual request and response has a response time, so I may have 100K packets, so 50K response times.  I want to end with a histogram of response time, based on arbitrary criteria - say this port, or this type of request, or this packet size.  Currently what I do is:</p>
+<ol>
+<li>Add columns to display: Modbus TransactionID, function code, and number of registers</li>
+<li>Filter out the TCP stream I need in the display filter</li>
+<li>Sort the data by TransactionID, and then view time starting at beginning of capture assuming that the packet number is a sub sort, as in there should be two packets (sometimes more) with the same transactionID, and I want the request first, response second, and this should be the case with the packet number.</li>
+</ol>
+<p>But then I export into Excel, and have to do some tests - I need two transactionIDs in a row that are the same; if so, then I can do a time delta between them and then for that function code and transactionID, I then have a response time.  I do this for all the data, ignoring the cases where I have no response, or multiple requests for a response, and I can then plot and get a histogram.</p>
+<p>Is there a way to get this in the IOgraph as part of Wireshark?  I will do without the histogram, but I can live without the histogram, but a realtime response graph on the IOgraph would be fantastic.  I can then just watch to see how the devices perform over time, and instantly see where we may have an issue to address.</p>
+<p>If I need to do some scripting, I can give it a try.  Can anyone point me to a suggested scripting language?  I took cursory look at Lua, so I assume that is what I should start with as it is integrated with Wireshark?  I suppose if I want to get really fancy - LUA script -&gt; GNUPlot then I can get my data and a graph at the same time?<br>
+</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/response/" class="post-tag tag-link-response"
+                                        title="see questions tagged 'response'" rel="tag">response</a>
+                                
+                                    <a href="/tags/service/" class="post-tag tag-link-service"
+                                        title="see questions tagged 'service'" rel="tag">service</a>
+                                
+                                    <a href="/tags/time/" class="post-tag tag-link-time"
+                                        title="see questions tagged 'time'" rel="tag">time</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Sep '10, 03:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0a47ef51dd9c9996d194a4983295f5a4?s=32&amp;d=identicon&amp;r=g" alt="Bob%20Jones's gravatar image" />
+    <p><a href="/users/112/bob-jones">Bob Jones</a><br/>
+    <span class="score" title="1014 reputation points"><span class="">1.0k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Bob Jones has 19 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/241/">
+                edited
+                <strong>21 Sep '10, 06:29</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-241">
+    
+        <a name="16447"></a>
+        <div class="comment" id="comment-16447">
+            <div id="post-16447-score" class="comment-score"></div>
+            <div class="comment-text"><p>hello
+I would like to ask how me messure the requestand responce time of SMB ?
+Please send me on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7d6dbdededac5d6d98184f7">[email&#160;protected]</a><a href="http://hotmail.com">hotmail.com</a>.</p></div>
+            <div class="comment-info" id="comment-16447-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '12, 19:47)</span>
+                <a class="comment-user userinfo" href="/users/3970/imran">imran</a>
+                
+            </div>
+        </div>
+    
+        <a name="16448"></a>
+        <div class="comment" id="comment-16448">
+            <div id="post-16448-score" class="comment-score"></div>
+            <div class="comment-text"><p>hello
+I would like to ask how we messure the Request and responce time of SMB?</p></div>
+            <div class="comment-info" id="comment-16448-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '12, 19:48)</span>
+                <a class="comment-user userinfo" href="/users/3970/imran">imran</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-241" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-241-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/241/tcp-and-others-response-times?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/241/tcp-and-others-response-times?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/241/tcp-and-others-response-times?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/241/tcp-and-others-response-times?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="242"></a>
+                    <div id="answer-container-242" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-242-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/242/up/" rel="nofollow"> </a>
+<div id="post-242-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-242-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/242/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Be sure you have a column setup for interpacket deltas (Edit-&gt;Prefs-&gt;Columns - add a column for "Delta Time Displayed").  This will show you the time delta between packets.  Now you have to filter out the conversations that you want to view response times for.  There are, of course, a few caveats.  For TCP conversations you'll need to watch for the original SYN packet (am I the only one that loves saying "Original SYN"??) then look at the delta between that packet and the returning SYN-ACK.  This delta, for the most part, will represent network flight time - How long it took to get from tier A to tier B.  NORMALLY the SYN/SYN-ACK process involves little to no system processing time and, so, is a fairly reliable gauge of end-to-end latency.  Things get more difficult if you want to monitor an entire conversation and understand the variable response times from either tierA or tierB. The TCP Flow Graph (Stats-&gt;Flow Graph) will break down the response times over time but they can be misleading depending on the volatility of the network.</p>
+<hr>
+<pre><code> For DNS response times you can filter out the conversation and just look at the deltas between the request going out and the response coming in.  There are a few different ways to handle this kind of thing en masse - either with Excel or the raw dump and a good scripting language.
+</code></pre>
+<hr>
+<p>Those are my $.02, others may have better input.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/242/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Sep '10, 06:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e493496d59bb4ce33c37cd6e7a26a4d?s=32&amp;d=identicon&amp;r=g" alt="GeonJay's gravatar image" />
+    <p><a href="/users/67/geonjay">GeonJay</a><br/>
+    <span class="score" title="470 reputation points">470</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 badges"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="GeonJay has 2 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-242">
+    
+        <a name="280"></a>
+        <div class="comment" id="comment-280">
+            <div id="post-280-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think that looking at the delta times between packets of the tcp handshake does provide a good indicator for network response time but may not shed any light on application response time. Additionally, if the trace was taken on the server then looking at time delta between syn and syn ack would be a misleading indicator of network response time. Rather, looking at the syn ack and ack delta would be more accurate due to where the trace was taken.</p></div>
+            <div class="comment-info" id="comment-280-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Sep '10, 18:19)</span>
+                <a class="comment-user userinfo" href="/users/130/9691ekim">9691ekiM</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-242" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-242-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="245"></a>
+                    <div id="answer-container-245" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-245-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/245/up/" rel="nofollow"> </a>
+<div id="post-245-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-245-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/245/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Wow...and I thought it was a simple response time question ;-)</p>
+<p>This is a pretty good writeup, taken from a Sharkfest presentation, see if it puts you on the right path.</p>
+<p><a href="http://www.cacetech.com/sharkfest.09/bu-9-tompkins-gearbit-wireshark_charts_&amp;_io_graphs-sharkfest09.pdf">Wireshark Charts &amp; IO Graphs</a></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/245/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Sep '10, 06:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9e493496d59bb4ce33c37cd6e7a26a4d?s=32&amp;d=identicon&amp;r=g" alt="GeonJay's gravatar image" />
+    <p><a href="/users/67/geonjay">GeonJay</a><br/>
+    <span class="score" title="470 reputation points">470</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="22 badges"><span class="bronze">&#9679;</span><span class="badgecount">22</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="GeonJay has 2 accepted answers">5&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-245">
+    
+        <a name="36407"></a>
+        <div class="comment" id="comment-36407">
+            <div id="post-36407-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Geon
+You mean to say, Delta Time displays the difference between request and response times?</p>
+
+<p>Regards.
+Sudin<br>
+</p></div>
+            <div class="comment-info" id="comment-36407-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Sep '14, 08:01)</span>
+                <a class="comment-user userinfo" href="/users/9811/sud">Sud</a>
+                
+            </div>
+        </div>
+    
+        <a name="36408"></a>
+        <div class="comment" id="comment-36408">
+            <div id="post-36408-score" class="comment-score"></div>
+            <div class="comment-text"><p>Delta Time displays the time difference between packets, regardless of whether they are requests or responses, but you could apply a display filter so that Wireshark is showing only the requests and responses that you're concerned with. Make sure you're using the delta time between displayed packets, not the delta time between captured packets.</p>
+
+<p>For some protocols, Wireshark will calculate the time between the request and response for you. Wireshark has the dns.time field, the http.time field, the smb.time field, and the smb2.time field. These time fields are found in the response packet, assuming that both the request and the response are in the trace. I do not see a time field for Modbus.</p></div>
+            <div class="comment-info" id="comment-36408-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Sep '14, 08:42)</span>
+                <a class="comment-user userinfo" href="/users/527/jim-aragon">Jim Aragon</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-245" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-245-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/241/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='G2t7OBmP23gq5xNDB3sMtDrnXZ5dNCSc' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/241/tcp-and-others-response-times?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/241/tcp-and-others-response-times?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/time/"
+            class="tag-link-time"
+            title="see questions tagged'time'using tags"
+            rel="tag">time</a> <span class="tag-number">&#215;75</span><br/>
+        
+        <a href="/tags/response/"
+            class="tag-link-response"
+            title="see questions tagged'response'using tags"
+            rel="tag">response</a> <span class="tag-number">&#215;40</span><br/>
+        
+        <a href="/tags/service/"
+            class="tag-link-service"
+            title="see questions tagged'service'using tags"
+            rel="tag">service</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 21, 2010, 3:52 a.m.">21 Sep '10, 03:52</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>43,510 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 17, 2014, 8:42 a.m.">17 Sep '14, 08:42</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/43886/how-can-i-set-the-service-response-time">How can I set the &#39;Service Response Time&#39;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47180/dns-service-response-time">DNS Service Response Time</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32168/statistics-service-response-time-diameter-works">Statistics--&gt;Service Response Time--&gt;Diameter works?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32232/calculate-response-time-for-every-call-in-diameter">calculate response time for every call in diameter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7107/response-time-testing-with-wireshark-by-using-transactions-is-it-possible">Response time testing with wireshark by using transaction&#39;s  --is it possible ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23592/client-latency">client latency</a>
+        </p>
+        
+        <p>
+            <a href="/questions/701/display-all-streams-with-a-matching-uri">Display all streams with a matching URI</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27081/wireshark-and-server-processing-time">wireshark and server processing time</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50367/ping-request-no-response-but-it-shows-response-in-details">Ping request no response? But it shows response in details</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2507/start-time-for-a-packet-capture">Start time for a packet capture</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

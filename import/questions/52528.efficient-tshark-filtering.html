@@ -1,0 +1,1315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Efficient tshark filtering - Wireshark Q&amp;A</title>
+        <meta name="description" content="Setup I have a week&#39;s worth of pcapng captures and I&#39;m trying to filter out specific data into reports  organized into tables. I&#39;m using a batch script calling tshark on the command line running to automatically go through the files one by one. Unfortunately, this process is going very slow. It&#39;s al..." />
+        <meta name="keywords" content="filter,efficiency,tshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/52528/efficient-tshark-filtering" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/52528/efficient-tshark-filtering?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='IS115EK6OuvlrUBTfR54pQKiKowjY3qa' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/52528/efficient-tshark-filtering">Efficient tshark filtering</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-52528-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52528/up/" rel="nofollow"> </a>
+<div id="post-52528-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52528-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52528/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/52528/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <h1>Setup</h1>
+<p>I have a week's worth of pcapng captures and I'm trying to filter out specific data into reports 
+organized into tables. I'm using a batch script calling tshark on the command line running to automatically go through the files one by one. Unfortunately, this process is going very slow. It's almost 1:1 time to process. That is, at the rate I'm currently going it will take my computer running 24/7 for a week to extract the week's worth of data. And that's only for this one report! I have other reports to do, and if they each take a whole week to collect the data, this will not work out.</p>
+<p>Part of the issue is I'm using a .lua script and I know that's slowing it down. Unfortunately, it's necessary as we're using a non-standard protocol. I won't ask about lua coding here, though.</p>
+<p>My question is, is there a way I can "smartly" set the filters so that tshark can filter out the packets I don't want to look at more quickly and speed up the process?</p>
+<p>For example, I know to use "short-circuit" logic operators, &amp;&amp; and || so once it gets a definite false on &amp;&amp; or definite true on || it won't look at the rest. </p>
+<p>What other things might help speed it up?</p>
+<p>Here's an example of the command I'm running:</p>
+<pre><code>"C:\Path\To\Wireshark\App\Wireshark\tshark.exe" -r "D:\PATH\TO\PCAP\FILE\0001.pcapng" -T fields -E separator=, -e frame.time_epoch -e myprotocol.field1 -e myprotocol.field2 -e myprotocol.field3  -R "( !(arp||icmp||icmpv6||dns||nbns||browser||dhcpv6||igmp||dhcpfo||bootp||http||ip.flags==0x01||ip.fragment.count&gt;=2)&amp;&amp;myprotocol.BYTE_COUNT&gt;0&amp;&amp;(ip.addr==192.168.1.1||ip.addr==192.168.1.2||ip.addr==192.168.2.1||ip.addr==192.168.2.2)  )"
+</code></pre>
+<p>myprotocol.field1, myprotocol.field2, myprotocol.field3 are fields defined in my .lua script</p>
+<h1>Some things I'm looking for:</h1>
+<p>If I put the -R filter first, does that change processing speed?</p>
+<p>If in my filter, instead of doing a [! (bunch of || staments)] I did  &amp;&amp; (bunch of ! statements) would that improve speed? [Actually I think I'll try this, I'm kind of stopping the short circuit from working this way I think]</p>
+<p>Is there any other reordering I could use that might improve speed?</p>
+<p>Are there any other methods or general tips that could improve speed?</p>
+<p>Thank You</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/filter/" class="post-tag tag-link-filter"
+                                        title="see questions tagged 'filter'" rel="tag">filter</a>
+                                
+                                    <a href="/tags/efficiency/" class="post-tag tag-link-efficiency"
+                                        title="see questions tagged 'efficiency'" rel="tag">efficiency</a>
+                                
+                                    <a href="/tags/tshark/" class="post-tag tag-link-tshark"
+                                        title="see questions tagged 'tshark'" rel="tag">tshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 May '16, 11:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7aa31b10303327434572773aabbc9b2b?s=32&amp;d=identicon&amp;r=g" alt="Trashman's gravatar image" />
+    <p><a href="/users/7277/trashman">Trashman</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Trashman has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52528/">
+                edited
+                <strong>13 May '16, 13:39</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+            <p><a href="/users/19586/sindy">sindy</a><br/>
+            <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-52528">
+    
+        <a name="52537"></a>
+        <div class="comment" id="comment-52537">
+            <div id="post-52537-score" class="comment-score"></div>
+            <div class="comment-text"><p>doing !XXX&amp;!XXX... etc made it slower, not faster! Oh, well, was worth a shot.</p></div>
+            <div class="comment-info" id="comment-52537-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '16, 13:21)</span>
+                <a class="comment-user userinfo" href="/users/7277/trashman">Trashman</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52528" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52528-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/52528/efficient-tshark-filtering?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/52528/efficient-tshark-filtering?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/52528/efficient-tshark-filtering?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/52528/efficient-tshark-filtering?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="52535"></a>
+                    <div id="answer-container-52535" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52535-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52535/up/" rel="nofollow"> </a>
+<div id="post-52535-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52535-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52535/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>What is the <code>D</code> drive?  If it's a mapped network drive, then that may very well be the reason for the bulk of the processing time - i.e, remote file access.  Have you tried copying the capture files locally to your <code>C</code> drive or running <code>tshark</code> on the device that hosts the capture files instead?</p>
+<p>You could try running <code>tshark</code> at a higher priority?  See: <a href="https://support.microsoft.com/en-us/kb/191771">https://support.microsoft.com/en-us/kb/191771</a>.</p>
+<p>You might also try to disable name resolution by specifying the <code>-n</code> option.  See: <a href="https://www.wireshark.org/docs/man-pages/tshark.html">https://www.wireshark.org/docs/man-pages/tshark.html</a>.</p>
+<p>What is the percent of traffic that matches the filter vs. the total traffic in each capture file?  If it's a much smaller subset, then perhaps swapping the filter order would help?  In other words, if you're not matching very many <code>myprotocol.BYTE_COUNT &gt; 0</code> packets, then maybe that should be the first condition, because if it's false, then it should short-circuit the rest of the checks, although I'm not entirely sure if short-circuiting actually occurs or not as I see no mention of this on the <a href="https://www.wireshark.org/docs/man-pages/wireshark-filter.html">wireshark-filter man page</a>.</p>
+<p>-R "(myprotocol.BYTE_COUNT &gt; 0 &amp;&amp; (ip.addr == 192.168.1.1 || ip.addr == 192.168.1.2 || ip.addr == 192.168.2.1 || ip.addr == 192.168.2.2) &amp;&amp; !(arp || icmp || icmpv6 || dns || nbns || browser || dhcpv6 || igmp || dhcpfo || bootp || http || ip.flags == 0x01 || ip.fragment.count &gt;= 2))"</p>
+<p>You could possibly replace <code>ip.addr == 192.168.1.1 || ip.addr == 192.168.1.2</code> with <code>ip.addr == 192.168.2.0/30</code> if you know that .0 or .3 are not present, and similarly for <code>ip.addr == 192.168.2.1 || ip.addr == 192.168.2.2</code>.</p>
+<p>Perhaps you could modify your Lua script to add a new field whenever it meets your filter criteria above so that you'd only have to specify a filter of <code>"myprotocol.packetofinterest"</code>, for example?</p>
+<p>Other suggestions on the Wireshark wiki's <a href="https://wiki.wireshark.org/Performance">Performance</a> page may or may not be helpful to you, but you might want to have a look in case.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52535/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 May '16, 13:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" alt="cmaynard's gravatar image" />
+    <p><a href="/users/402/cmaynard">cmaynard ♦♦</a><br/>
+    <span class="score" title="9361 reputation points"><span class="">9.4k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">&#9679;</span><span class="badgecount">142</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cmaynard has 108 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52535/">
+                edited
+                <strong>13 May '16, 13:06</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52535">
+    
+        <a name="52536"></a>
+        <div class="comment" id="comment-52536">
+            <div id="post-52536-score" class="comment-score"></div>
+            <div class="comment-text"><p>No, D is a local drive. Definitely would not want to do this job over the network.</p>
+
+<p>I can't find a way to consistently run tshark at high priority in batch. While it's running, I can click on it in task manager and up it's priority. But as soon as my batch job moves to the next file, the next tshark is invoked at normal and I can't sit here for that long tending to it. Also, I can't get the "start" command to work with all the parameters I'm passing, plus I'm using the STDOUT to read the data in to another program which I don't think I can do with the start command, anyway. Now, I've read STDOUT is slow and there's a suppression switch to use to make Tshark faster by not using it. But my only option other than STDOUT is to write to a file, and the files this would write out to are huge!!! The program reading them in is automatically compressing the data so it doesn't take up too much space on my drive (I have a 2 TB drive and it's 75% used up from this data).</p>
+
+<p>I've tried a few different combinations of re-arranging my filters. It actually seems like the one I started with is the fastest (slightly). arp is definitely my most common unwanted packet type, so it being first makes sense. I've tried not filtering, only filtering arp, not doing the ip filtering, and a few different orders. All changes so far have made it slower. Of course, there are many permutations of those options, so I can keep trying. Yeah, I'm not sure if it really short-circuits or not. Guess I was assuming since the &amp;&amp; and || short circuit in C++. But, the order does seem to affect the speed slightly, so maybe it does.</p>
+
+<p>As for the IPs I just gave those as examples. I have to cherry pick certain IPs that are not contiguous and I specifically only want the data from some of them and not the others for a given report.</p>
+
+<p>The Performance page looks like mostly GUI changes. Can't see much applicable to Tshark specifically, and none that apply to me.</p>
+
+<p>But thanks for looking into it. I'm sure some of these tips will be good on other projects.</p></div>
+            <div class="comment-info" id="comment-52536-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '16, 13:17)</span>
+                <a class="comment-user userinfo" href="/users/7277/trashman">Trashman</a>
+                
+            </div>
+        </div>
+    
+        <a name="52539"></a>
+        <div class="comment" id="comment-52539">
+            <div id="post-52539-score" class="comment-score"></div>
+            <div class="comment-text"><p>If nothing else, I'd highly recommend disabling name resolution.</p>
+
+<p>As for changing priority, in the past I've also used WMIC to do this.  If you're interested, you can have a look at the <code>dumpcap.bat</code> batch file I wrote and posted on the <a href="https://wiki.wireshark.org/Tools">Wireshark Tools wiki page</a>, as I used WMIC in it to change the <code>dumpcap</code> priority.</p></div>
+            <div class="comment-info" id="comment-52539-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '16, 13:30)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52541"></a>
+        <div class="comment" id="comment-52541">
+            <div id="post-52541-score" class="comment-score"></div>
+            <div class="comment-text"><p>Putting <code>-R</code> before other options doesn't make a difference as the order of options isn't important. But the fact that you can use <code>-R</code> without <code>-2</code> suggests that your Wireshark version isn't really fresh as current versions do not permit <code>-R</code> alone - for the single-pass mode, there is no difference between <code>-Y</code> and <code>-R</code> effect.</p></div>
+            <div class="comment-info" id="comment-52541-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '16, 13:49)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="52542"></a>
+        <div class="comment" id="comment-52542">
+            <div id="post-52542-score" class="comment-score"></div>
+            <div class="comment-text"><p>Name resolution is off.</p>
+
+<p>Downloaded your dumppcap.bat file and looking it over now. This is a big one, so may take me a while! Never used WMIC before so new to me.</p>
+
+<p>Right now I'm "solving" my problem by running 8 instances of my batch routine (each pointed at a different directory) in parallel in different windows. Doing this, it should be done over the weekend rather than a whole week. each instance is, of course, running slower than if I only had one running, but still saving massive amounts of time overall doing it this way. Hooray for multi core processors!</p></div>
+            <div class="comment-info" id="comment-52542-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '16, 13:52)</span>
+                <a class="comment-user userinfo" href="/users/7277/trashman">Trashman</a>
+                
+            </div>
+        </div>
+    
+        <a name="52552"></a>
+        <div class="comment" id="comment-52552">
+            <div id="post-52552-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy">@sindy</a>, </p>
+
+<p>Yes, I'm using an older version of Wireshark out of necessity. When we first made the "myprotocol" lua, newer versions didn't like it. We recently made changes that make it work in newer versions, but now my batch scripts don't work with the newer version, of course - for the very reason you pointed out about requiring the -2. Tried a simple switch to -Y and it didn't give me the results I wanted, so I'm looking into that, too. I will have to fix them eventually.</p></div>
+            <div class="comment-info" id="comment-52552-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '16, 14:57)</span>
+                <a class="comment-user userinfo" href="/users/7277/trashman">Trashman</a>
+                
+            </div>
+        </div>
+    
+        <a name="52553"></a>
+        <div class="comment not_top_scorer" id="comment-52553">
+            <div id="post-52553-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/402/cmaynard">@cmaynard</a>,
+Thank you for the WMIC tip. Kind of a clunky thing for me to do, but I ran a 9th batch script in parallel that prioritizes all my "tshark.exe" process to "High Priority" every 10 seconds. Since I'm running so many at a time, it's not making a huge difference (they're fighting each other for resources) but a few seconds is shaved on each pass so it should save some hours over the weekend. Since I want to get this report done this weekend, that's what I'll have to do for now. I'll try a more elegant solution for my next reports.</p></div>
+            <div class="comment-info" id="comment-52553-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '16, 14:59)</span>
+                <a class="comment-user userinfo" href="/users/7277/trashman">Trashman</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52535" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52535-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="52549"></a>
+                    <div id="answer-container-52549" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52549-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52549/up/" rel="nofollow"> </a>
+<div id="post-52549-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52549-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52549/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Another thought:</p>
+<ul>
+<li>The primary thing that's going to make it slow is dissecting each packet.</li>
+<li>Filtering is applied <em>after</em> dissection is done.</li>
+<li>Each filter item has to be compared with what was found in the tree.</li>
+<li>I don't remember if there's any short-cutting involved but I'm pretty sure it'll search through the tree until it finds the field you're looking for--so if there's no field named "dns" it'll have to search the whole tree to verify that.</li>
+</ul>
+<p>So, a suggestion: limit your filter to just:</p>
+<pre><code>myprotocol.BYTE_COUNT &gt; 0 &amp;&amp; (ip.addr==192.168.1.1||ip.addr==192.168.1.2||ip.addr==192.168.2.1||ip.addr==192.168.2.2))
+</code></pre>
+<p>(Assuming that <code>myprotocol</code> won't match arp, icmp, etc. packets.)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52549/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 May '16, 14:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e0564001bb7deb960d5d9d9c1e0ba074?s=32&amp;d=identicon&amp;r=g" alt="JeffMorriss's gravatar image" />
+    <p><a href="/users/655/jeffmorriss">JeffMorriss ♦</a><br/>
+    <span class="score" title="6219 reputation points"><span class="">6.2k</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="72 badges"><span class="bronze">&#9679;</span><span class="badgecount">72</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JeffMorriss has 103 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52549">
+    
+        <a name="52551"></a>
+        <div class="comment" id="comment-52551">
+            <div id="post-52551-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's interesting. When I do my next set of reports, I'll give this a try. </p>
+
+<p>I was thinking that arp and the other protocols I filtered out are "higher level" than "myprotocol" (which is wrapped inside ethernet/ip/udp/myprotocol). I guess I had an implicit assumption that it would filter out "higher" layers without having to try to dissect "lower" layers and was saving me some time. Also, since it needed lua to dissect "myprotocol" that I was somehow bypassing calling my script some by doing so. But now that I think about it, that's some pretty complex logic to try to do that. It would have to specifically rank all possible protocols and then check for them in some priority order. It would also have to preprocess the filter directive and resort them internally. I'm sure it doesn't do that. So, by necessity it has to dissect first.</p>
+
+<p>However, oddly, I did cut out large portions of my filter in some of my attempts and it seemed to make it slower, so I'm not sure this will work. That being said, the first thing I cut out of the filter was the myprotocol.BYTE_COUNT. Didn't try leaving that in and taking the rest out. Maybe that will work. The IPs do have to always be in the filter or I won't get the right data.</p></div>
+            <div class="comment-info" id="comment-52551-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 May '16, 14:52)</span>
+                <a class="comment-user userinfo" href="/users/7277/trashman">Trashman</a>
+                
+            </div>
+        </div>
+    
+        <a name="52617"></a>
+        <div class="comment" id="comment-52617">
+            <div id="post-52617-score" class="comment-score"></div>
+            <div class="comment-text"><p>A couple more (fairly obvious) optimizations:</p>
+
+<ul>
+<li>Strip your Lua dissector down to the bare bones: only do enough work to determine BYTE_COUNT.  Don't add anything to the tree except that one field.</li>
+<li>Even better: rewrite it in C (or at least that portion of it).  This will also allow you to upgrade to the latest Wireshark which is generally (IIRC) slightly faster.</li>
+</ul></div>
+            <div class="comment-info" id="comment-52617-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '16, 06:22)</span>
+                <a class="comment-user userinfo" href="/users/655/jeffmorriss">JeffMorriss ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52619"></a>
+        <div class="comment" id="comment-52619">
+            <div id="post-52619-score" class="comment-score"></div>
+            <div class="comment-text"><p>I can't strip it down to just BYTE_COUNT, I have to have the fields I'm looking for in my table columns specified by the -e option (e.g. myprotocol.field1, field2, field3). The other issue is that this is just one report, the other reports I have to run will be using different fields altogether - the lua script is actually pretty central to this operation. I'll have to work on my C skills to rewrite this in C.</p></div>
+            <div class="comment-info" id="comment-52619-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '16, 07:30)</span>
+                <a class="comment-user userinfo" href="/users/7277/trashman">Trashman</a>
+                
+            </div>
+        </div>
+    
+        <a name="52635"></a>
+        <div class="comment" id="comment-52635">
+            <div id="post-52635-score" class="comment-score"></div>
+            <div class="comment-text"><p>I wonder if it's more efficient to simply define the columns you want in Wireshark, optionally in a specific profile, and then just have <code>tshark</code> display the selected columns without having to then explicitly list them?  Alternatively, you could define columns on the command-line using <code>tshark's</code> <code>"gui.column.format"</code> option.  Whether either of these 2 methods is more efficient than using <code>-T fields -e field1 -e field2 ...</code> remains to be seen.</p>
+
+<p>Adding Wireshark columns and creating profiles is relatively easy and self-explanatory.  If you need help with the <code>"gui.column.format"</code> option, try running <code>tshark -G column-formats</code>.  For custom columns, use <code>-e %Cus:field[:occurrence[:resolved]]</code> ... where both <code>occurrence</code> and <code>resolved</code> are optional, but if <code>resolved</code> is present, then <code>occurrence</code> must be present as well.</p>
+
+<p>The <code>occurrence</code> is a numerical value specifying the the 1st, 2nd, ... nth occurrence of the field in the packet, with 0 indicating all occurrences and -1 indicating the last occurrence.  The <code>resolved</code> flag is either <code>R</code> or <code>U</code> for resolved or unresolved, respectively.</p></div>
+            <div class="comment-info" id="comment-52635-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '16, 11:45)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52549" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52549-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="52554"></a>
+                    <div id="answer-container-52554" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52554-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52554/up/" rel="nofollow"> </a>
+<div id="post-52554-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52554-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52554/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>TribeLab Workbench would help.  Although it uses tshark for filtering it runs multiple instances in parallel.  It will also do the whole thing unattended and merge the filtered files if you want.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52554/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 May '16, 15:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2e1b4057f2ff59fe059b23cc6571abaf?s=32&amp;d=identicon&amp;r=g" alt="PaulOfford's gravatar image" />
+    <p><a href="/users/7690/paulofford">PaulOfford</a><br/>
+    <span class="score" title="131 reputation points">131</span><span title="28 badges"><span class="badge1">&#9679;</span><span class="badgecount">28</span></span><span title="32 badges"><span class="silver">&#9679;</span><span class="badgecount">32</span></span><span title="37 badges"><span class="bronze">&#9679;</span><span class="badgecount">37</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="PaulOfford has 5 accepted answers">11&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52554">
+    
+        <a name="52618"></a>
+        <div class="comment" id="comment-52618">
+            <div id="post-52618-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm using a MATLAB script to do this same thing. I ran 8 instances in parallel unattended this weekend and combined the outputs to a single large table. Worked quite well. I got the results I needed from this one report. Just the tshark part was slower than I wanted and I have more reports to run. Everything else worked efficiently.</p></div>
+            <div class="comment-info" id="comment-52618-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '16, 07:30)</span>
+                <a class="comment-user userinfo" href="/users/7277/trashman">Trashman</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52554" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52554-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="52561"></a>
+                    <div id="answer-container-52561" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52561-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52561/up/" rel="nofollow"> </a>
+<div id="post-52561-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52561-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52561/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Have a look at the Wireshark primary sponsor Riverbed's <a href="http://www.riverbed.com/gb/products/steelcentral/network-performance-management/steelcentral-packet-analyzer.html">SteelCentral Packet Analyzer</a>, which used to be called Pilot.  Allows operations over multiple large capture files.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52561/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 May '16, 03:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+    <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+    <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grahamb has 274 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52561">
+    
+        <a name="52620"></a>
+        <div class="comment" id="comment-52620">
+            <div id="post-52620-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not sure how much this package costs, but I'll check it out. Thanks for the tip.</p></div>
+            <div class="comment-info" id="comment-52620-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '16, 07:31)</span>
+                <a class="comment-user userinfo" href="/users/7277/trashman">Trashman</a>
+                
+            </div>
+        </div>
+    
+        <a name="52638"></a>
+        <div class="comment" id="comment-52638">
+            <div id="post-52638-score" class="comment-score"></div>
+            <div class="comment-text"><p>You get a 30 day "free" trial in exchange for your email address.</p></div>
+            <div class="comment-info" id="comment-52638-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 May '16, 12:01)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52561" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52561-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/52528/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='IS115EK6OuvlrUBTfR54pQKiKowjY3qa' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52528/efficient-tshark-filtering?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52528/efficient-tshark-filtering?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tshark/"
+            class="tag-link-tshark"
+            title="see questions tagged'tshark'using tags"
+            rel="tag">tshark</a> <span class="tag-number">&#215;832</span><br/>
+        
+        <a href="/tags/filter/"
+            class="tag-link-filter"
+            title="see questions tagged'filter'using tags"
+            rel="tag">filter</a> <span class="tag-number">&#215;349</span><br/>
+        
+        <a href="/tags/efficiency/"
+            class="tag-link-efficiency"
+            title="see questions tagged'efficiency'using tags"
+            rel="tag">efficiency</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 13, 2016, 11:40 a.m.">13 May '16, 11:40</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,118 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 16, 2016, 12:01 p.m.">16 May '16, 12:01</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/14645/tshark-write-packets-matching-a-filter">tshark: write packets matching a filter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44121/tshark-statistics-z-output-with-ssl-filter-r-y">tshark statistics(-z) output with “ssl” filter(-R/-Y)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59277/limit-tailor-tshark-conversations-output">Limit / tailor tshark conversations output</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12645/giop-filter-tshark">GIOP filter - tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38848/commandline-capture-filter-for-only-get-requests-that-contain-exe-or-jar">Commandline Capture Filter for only GET Requests that contain &quot;.exe&quot; or &quot;.jar&quot;  ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47870/filtering-using-tshark-to-generate-an-output">Filtering Using TShark to generate an Output</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9278/tshark-filter-from-a-file">tshark filter from a file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36127/capture-all-incoming-traffic-and-only-incoming-traffic">Capture ALL incoming traffic and ONLY incoming traffic.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13023/filter-multiple-ips">Filter multiple IPs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48583/filtering-packet-duration-in-tshark">Filtering Packet Duration in Tshark.</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

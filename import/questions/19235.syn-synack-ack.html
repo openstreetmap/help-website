@@ -1,0 +1,836 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>SYN - SYN/ACK - ACK - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello, I&#39;m troubleshooting an issue where I need to figure out if the some SYN/ACK that I&#39;m seeing are in response to an specific SYN. I took to independent captures, in two different locations and simultaneously, I can see the SYN from my laptop, but I don&#39;t see any SYN/ACK anywhere in the same cap..." />
+        <meta name="keywords" content="ack,handshake,3way,syn" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/19235/syn-synack-ack" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/19235/syn-synack-ack?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Cg6akc4xPel87SJPLeUv4mmjn5Zot7je' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/19235/syn-synack-ack">SYN - SYN/ACK - ACK</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-19235-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/19235/up/" rel="nofollow"> </a>
+<div id="post-19235-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-19235-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/19235/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/19235/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, I'm troubleshooting an issue where I need to figure out if the some SYN/ACK that I'm seeing are in response to an specific SYN.</p>
+<p>I took to independent captures, in two different locations and simultaneously, I can see the SYN from my laptop, but I don't see any SYN/ACK anywhere in the same capture, when I check the other capture I notice that there are many SYN/ACK but I don't know how to match one of those SYN/ACK to the SYN that the computer sent.</p>
+<p>Can you please help me?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ack/" class="post-tag tag-link-ack"
+                                        title="see questions tagged 'ack'" rel="tag">ack</a>
+                                
+                                    <a href="/tags/handshake/" class="post-tag tag-link-handshake"
+                                        title="see questions tagged 'handshake'" rel="tag">handshake</a>
+                                
+                                    <a href="/tags/3way/" class="post-tag tag-link-3way"
+                                        title="see questions tagged '3way'" rel="tag">3way</a>
+                                
+                                    <a href="/tags/syn/" class="post-tag tag-link-syn"
+                                        title="see questions tagged 'syn'" rel="tag">syn</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Mar '13, 09:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3ec9add3f6ceb792756b1227b1266919?s=32&amp;d=identicon&amp;r=g" alt="wil1323's gravatar image" />
+    <p><a href="/users/4516/wil1323">wil1323</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="wil1323 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-19235">
+    
+</div>
+<div id="comment-tools-19235" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-19235-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/19235/syn-synack-ack?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/19235/syn-synack-ack?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/19235/syn-synack-ack?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/19235/syn-synack-ack?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="19239"></a>
+                    <div id="answer-container-19239" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-19239-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/19239/up/" rel="nofollow"> </a>
+<div id="post-19239-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-19239-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/19239/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="wil1323 has selected this answer as the correct answer"
+        href="/accept_answer/19239/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You need to disable the relative Sequence numbers for the TCP protocol first. You can do that in the preferences -&gt; Protocols sections, or by right clicking the TCP layer in any packet that has TCP inside. Matching packets on multiple locations usually works by finding the same two IPs talking on the same two ports with each other (a "Socket Pair"). Then, try to find the same TCP Sequence numbers of a packet in one trace in the other trace. Sequence numbers are usually unique inside one TCP conversation unless there is so much data transfered that it forces the sequence number to wrap around. </p>
+<p>If you can find the same packet containing the same socket pair and the same TCP sequence number, you've got it. If you can't find it anywhere, it's probaby not in the trace file. It might still have been on "the wire" but wasn't captured for performance or other reasons. You can usually tell if that is the case if you see the two nodes talking happily (meaning: without retransmissions and duplicate acks) with each other even though there seem to be missing packets.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/19239/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Mar '13, 10:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/19239/">
+                edited
+                <strong>06 Mar '13, 15:15</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-19239">
+    
+        <a name="19241"></a>
+        <div class="comment" id="comment-19241">
+            <div id="post-19241-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Jasper, Can we decode it with stream index?</p>
+
+<p>Let us say the syn is having stream index "n" and obviously the related syn-ack will have index "n" Correct me if i am wrong</p>
+
+<p>Thanks</p></div>
+            <div class="comment-info" id="comment-19241-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '13, 10:37)</span>
+                <a class="comment-user userinfo" href="/users/4450/krishnayeddula">krishnayeddula</a>
+                
+            </div>
+        </div>
+    
+        <a name="19242"></a>
+        <div class="comment" id="comment-19242">
+            <div id="post-19242-score" class="comment-score"></div>
+            <div class="comment-text"><p>Going by stream index only works if you only have one trace file. In that case you'll find all packets belonging to one conversation by filtering on its stream index.</p>
+
+<p>Stream index will not work if you compare traces, because the index always starts fresh for each trace, and you can't tell if the same conversation will have the same stream index. If it is, its a pretty rare coincidence, and I wouldn't rely on being that lucky. Better use a conversation filter that contains both IPs and both ports.</p></div>
+            <div class="comment-info" id="comment-19242-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '13, 10:40)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="19243"></a>
+        <div class="comment" id="comment-19243">
+            <div id="post-19243-score" class="comment-score"></div>
+            <div class="comment-text"><p>Got it thanks</p></div>
+            <div class="comment-info" id="comment-19243-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '13, 10:42)</span>
+                <a class="comment-user userinfo" href="/users/4450/krishnayeddula">krishnayeddula</a>
+                
+            </div>
+        </div>
+    
+        <a name="19245"></a>
+        <div class="comment" id="comment-19245">
+            <div id="post-19245-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello.</p>
+
+<p>One more question, by using the filter tcp.flags == 0x0012, I'm able to find all [ SYN,ACK ] packets in one capture, so now wireshark lists all SYN,ACK, but how can I do a look up in the other sniffer capture that I took, to find out what syn,ack corresponds to what syn.</p>
+
+<p>Thank you again.</p></div>
+            <div class="comment-info" id="comment-19245-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '13, 13:06)</span>
+                <a class="comment-user userinfo" href="/users/4516/wil1323">wil1323</a>
+                
+            </div>
+        </div>
+    
+        <a name="19246"></a>
+        <div class="comment" id="comment-19246">
+            <div id="post-19246-score" class="comment-score"></div>
+            <div class="comment-text"><p>You'll have to compare absolute TCP sequence numbers. You could add a custom column for the sequence number to have the numbers listed for each SYN/ACK. Easiest way to do is to select the sequence number in the decode pane of any TCP packet and then use the popup menu to "apply as column".</p>
+
+<p>If you have one SYN/ACK you want to track in the other file you could just filter or search for it, by using "tcp.seq==NUMBER", where "NUMBER" is the number you look for.</p></div>
+            <div class="comment-info" id="comment-19246-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Mar '13, 13:34)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-19239" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-19239-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/19235/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Cg6akc4xPel87SJPLeUv4mmjn5Zot7je' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/19235/syn-synack-ack?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/19235/syn-synack-ack?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ack/"
+            class="tag-link-ack"
+            title="see questions tagged'ack'using tags"
+            rel="tag">ack</a> <span class="tag-number">&#215;139</span><br/>
+        
+        <a href="/tags/syn/"
+            class="tag-link-syn"
+            title="see questions tagged'syn'using tags"
+            rel="tag">syn</a> <span class="tag-number">&#215;55</span><br/>
+        
+        <a href="/tags/handshake/"
+            class="tag-link-handshake"
+            title="see questions tagged'handshake'using tags"
+            rel="tag">handshake</a> <span class="tag-number">&#215;44</span><br/>
+        
+        <a href="/tags/3way/"
+            class="tag-link-3way"
+            title="see questions tagged'3way'using tags"
+            rel="tag">3way</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 6, 2013, 9:52 a.m.">06 Mar '13, 09:52</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>23,947 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 6, 2013, 3:15 p.m.">06 Mar '13, 15:15</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/18817/syn-is-answered-by-a-strange-ack-rst-is-ignored-windows">SYN is answered by a strange ACK, RST is ignored. Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23885/rst-after-syn-ack">RST after SYN-ACK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39624/syn-ack-seq1-ack1-is-it-possiblenomal-3hand-shake">[SYN ACK] seq=1 ack=1 / Is it Possible??(Nomal 3hand shake)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41736/no-ack-after-syn">No ACK after SYN</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6576/identify-syn-packets-without-synack">Identify SYN packets without SYN/ACK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41982/bad-ack-response-to-syn">bad ACK response to SYN</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26174/filter-for-detecting-the-third-packet-in-a-3-way-handshake">Filter for detecting the third packet in a 3-way handshake</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6871/server-sends-a-strange-ack-during-three-way-handshake">Server sends a strange ACK during three-way handshake</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27094/pc-dont-response-after-syn-ack-is-received">PC don&#39;t response after [SYN, ACK] is received</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48225/wrong-synack-seq-number">WRONG SYN,ACK SEQ Number</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

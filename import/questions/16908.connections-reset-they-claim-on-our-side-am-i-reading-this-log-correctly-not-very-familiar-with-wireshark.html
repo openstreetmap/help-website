@@ -1,0 +1,895 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Connections reset, they claim on our side.  Am I reading this log correctly?  Not very familiar with wireshark - Wireshark Q&amp;A</title>
+        <meta name="description" content="We We have a client who uses a web service to pull a report from us. About 5-10% of the time they do not get this report. We are not seeing the request come through on our side at all when this happens. They claim we are closing the connection prematurely. They sent us a wireshark capture and yes it..." />
+        <meta name="keywords" content="rst" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/16908/connections-reset-they-claim-on-our-side-am-i-reading-this-log-correctly-not-very-familiar-with-wireshark" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/16908/connections-reset-they-claim-on-our-side-am-i-reading-this-log-correctly-not-very-familiar-with-wireshark?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='NwUI6SBKsWos0ZwVznwoiwv8Qk0OQ2hm' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/16908/connections-reset-they-claim-on-our-side-am-i-reading-this-log-correctly-not-very-familiar-with-wireshark">Connections reset, they claim on our side.  Am I reading this log correctly?  Not very familiar with wireshark</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-16908-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16908/up/" rel="nofollow"> </a>
+<div id="post-16908-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-16908-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16908/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/16908/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>We We have a client who uses a web service to pull a report from us.  About 5-10% of the time they do not get this report.  We are not seeing the request come through on our side at all when this happens.  They claim we are closing the connection prematurely.  They sent us a wireshark capture and yes it looks like we are reseting the connection, but my question is what could be causing it to happen?  I asked them if we close the connections or leave them open waiting for the requestor to send a FIN.  The developers claim we just send them what is requested. It looks like every one of their requests (they are yy.yyy.yy.yyy) is being doubled.  Am I reading this correctly and could this cause confusion on our side forcing the reset?</p>
+<pre><code>No.     Time           Source                Destination           Protocol Length Info
+    281 303.923383000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      66     53295 &gt; https [SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1
+    282 303.923384000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      66     53295 &gt; https [SYN] Seq=0 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1
+    283 303.937155000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      66     https &gt; 53295 [SYN, ACK] Seq=0 Ack=1 Win=4380 Len=0 MSS=1460 SACK_PERM=1 WS=64
+    284 303.937156000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      66     https &gt; 53295 [SYN, ACK] Seq=0 Ack=1 Win=4380 Len=0 MSS=1460 SACK_PERM=1 WS=64
+    285 303.937315000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     53295 &gt; https [ACK] Seq=1 Ack=1 Win=65536 Len=0
+    286 303.937317000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     [TCP Dup ACK 285#1] 53295 &gt; https [ACK] Seq=1 Ack=1 Win=65536 Len=0
+    287 303.937725000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    216    Client Hello
+    288 303.937726000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    216    [TCP Retransmission] Client Hello
+    289 303.950975000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     https &gt; 53295 [ACK] Seq=1 Ack=163 Win=5504 Len=0
+    290 303.950977000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     [TCP Dup ACK 289#1] https &gt; 53295 [ACK] Seq=1 Ack=163 Win=5504 Len=0
+    291 303.952020000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    1514   Server Hello
+    292 303.952023000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    1514   [TCP Retransmission] Server Hello
+    293 303.952178000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      1514   [TCP segment of a reassembled PDU]
+    294 303.952185000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      1514   [TCP Retransmission] [TCP segment of a reassembled PDU]
+    295 303.952188000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     53295 &gt; https [ACK] Seq=163 Ack=2921 Win=64000 Len=0
+    296 303.952189000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     [TCP Dup ACK 295#1] 53295 &gt; https [ACK] Seq=163 Ack=2921 Win=64000 Len=0
+    297 303.952190000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    921    Ignored Unknown Record
+    298 303.952191000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    921    [TCP Retransmission] Ignored Unknown Record
+    299 303.953303000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    368    Client Key Exchange, Change Cipher Spec, Encrypted Handshake Message
+    300 303.953304000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    368    [TCP Retransmission] Client Key Exchange, Change Cipher Spec, Encrypted Handshake Message
+    301 303.984319000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    101    Change Cipher Spec, Encrypted Handshake Message
+    302 303.984331000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    101    [TCP Retransmission] Change Cipher Spec, Encrypted Handshake Message
+    303 303.984388000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     53295 &gt; https [ACK] Seq=477 Ack=3835 Win=65536 Len=0
+    304 303.984389000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     [TCP Dup ACK 303#1] 53295 &gt; https [ACK] Seq=477 Ack=3835 Win=65536 Len=0
+    305 303.985621000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    464    Application Data
+    306 303.985677000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    464    [TCP Retransmission] Application Data
+    307 304.032039000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    104    Application Data
+    308 304.032051000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    104    [TCP Retransmission] Application Data
+    309 304.032307000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    686    Application Data
+    310 304.032310000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    686    [TCP Retransmission] Application Data
+    311 304.083331000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     https &gt; 53295 [ACK] Seq=3885 Ack=1519 Win=8896 Len=0
+    312 304.083333000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     [TCP Dup ACK 311#1] https &gt; 53295 [ACK] Seq=3885 Ack=1519 Win=8896 Len=0
+    313 304.236770000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    1082   Application Data
+    314 304.236822000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    1082   [TCP Retransmission] Application Data
+    315 304.237640000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    465    Application Data
+    316 304.237643000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    465    [TCP Retransmission] Application Data
+    317 304.250988000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     https &gt; 53295 [ACK] Seq=4913 Ack=1930 Win=10176 Len=0
+    318 304.250989000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     [TCP Dup ACK 317#1] https &gt; 53295 [ACK] Seq=4913 Ack=1930 Win=10176 Len=0
+    319 304.252000000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    104    Application Data
+    320 304.252002000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    104    [TCP Retransmission] Application Data
+    321 304.252003000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     53295 &gt; https [ACK] Seq=1930 Ack=4963 Win=65536 Len=0
+    322 304.252040000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     [TCP Dup ACK 321#1] 53295 &gt; https [ACK] Seq=1930 Ack=4963 Win=65536 Len=0
+    323 304.252280000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    1332   Application Data
+    324 304.252284000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    1332   [TCP Retransmission] Application Data
+    325 304.303301000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     https &gt; 53295 [ACK] Seq=4963 Ack=3208 Win=12736 Len=0
+    326 304.303302000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     [TCP Dup ACK 325#1] https &gt; 53295 [ACK] Seq=4963 Ack=3208 Win=12736 Len=0
+    327 305.340999000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      1514   [TCP segment of a reassembled PDU]
+    328 305.341003000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      1514   [TCP Retransmission] https &gt; 53295 [ACK] Seq=4963 Ack=3208 Win=12736 Len=1460
+    329 305.341177000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      1514   [TCP segment of a reassembled PDU]
+    330 305.341180000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    578    Application Data
+    331 305.341188000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      1514   [TCP Out-Of-Order] [TCP segment of a reassembled PDU]
+    332 305.341190000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      578    [TCP Retransmission] [TCP segment of a reassembled PDU]
+    333 305.341192000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     53295 &gt; https [ACK] Seq=3208 Ack=7883 Win=64000 Len=0
+    334 305.341193000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     [TCP Dup ACK 333#1] 53295 &gt; https [ACK] Seq=3208 Ack=7883 Win=64000 Len=0
+    335 305.342236000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     53295 &gt; https [ACK] Seq=3208 Ack=8407 Win=65536 Len=0
+    336 305.342237000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     [TCP Dup ACK 335#1] 53295 &gt; https [ACK] Seq=3208 Ack=8407 Win=65536 Len=0
+    337 308.092541000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    464    Application Data
+    338 308.092543000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    464    [TCP Retransmission] Application Data
+    339 308.105882000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     https &gt; 53295 [ACK] Seq=8407 Ack=3618 Win=15296 Len=0
+    340 308.105885000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     [TCP Dup ACK 339#1] https &gt; 53295 [ACK] Seq=8407 Ack=3618 Win=15296 Len=0
+    341 308.107059000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    104    Application Data
+    342 308.107069000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    104    [TCP Retransmission] Application Data
+    343 308.107356000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    686    Application Data
+    344 308.107359000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    686    [TCP Retransmission] Application Data
+    345 308.158886000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     https &gt; 53295 [ACK] Seq=8457 Ack=4250 Win=17792 Len=0
+    346 308.158888000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     [TCP Dup ACK 345#1] https &gt; 53295 [ACK] Seq=8457 Ack=4250 Win=17792 Len=0
+    347 308.297669000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    1082   Application Data
+    348 308.297673000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    1082   [TCP Retransmission] Application Data
+    349 308.298460000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    465    Application Data
+    350 308.298463000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    465    [TCP Retransmission] Application Data
+    351 308.311815000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     https &gt; 53295 [ACK] Seq=9485 Ack=4661 Win=20352 Len=0
+    352 308.311825000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     [TCP Dup ACK 351#1] https &gt; 53295 [ACK] Seq=9485 Ack=4661 Win=20352 Len=0
+    353 308.312762000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    104    Application Data
+    354 308.312772000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    104    [TCP Retransmission] Application Data
+    355 308.313067000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    1332   Application Data
+    356 308.313071000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    1332   [TCP Retransmission] Application Data
+    357 308.362855000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     https &gt; 53295 [ACK] Seq=9535 Ack=5939 Win=22912 Len=0
+    358 308.362856000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     [TCP Dup ACK 357#1] https &gt; 53295 [ACK] Seq=9535 Ack=5939 Win=22912 Len=0
+    359 308.405276000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      1514   [TCP segment of a reassembled PDU]
+    360 308.405279000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      1514   [TCP Retransmission] https &gt; 53295 [ACK] Seq=9535 Ack=5939 Win=22912 Len=1460
+    361 308.405444000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      1514   [TCP segment of a reassembled PDU]
+    362 308.405447000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    578    Application Data
+    363 308.405456000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      1514   [TCP Out-Of-Order] [TCP segment of a reassembled PDU]
+    364 308.405458000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      578    [TCP Retransmission] [TCP segment of a reassembled PDU]
+    365 308.405461000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     53295 &gt; https [ACK] Seq=5939 Ack=12455 Win=64000 Len=0
+    366 308.405462000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     [TCP Dup ACK 365#1] 53295 &gt; https [ACK] Seq=5939 Ack=12455 Win=64000 Len=0
+    367 308.407103000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     53295 &gt; https [ACK] Seq=5939 Ack=12979 Win=65536 Len=0
+    368 308.407105000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     [TCP Dup ACK 367#1] 53295 &gt; https [ACK] Seq=5939 Ack=12979 Win=65536 Len=0
+    369 313.497652000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    464    Application Data
+    370 313.497654000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    464    [TCP Retransmission] Application Data
+    371 313.516452000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     https &gt; 53295 [ACK] Seq=12979 Ack=6349 Win=25472 Len=0
+    372 313.516454000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     [TCP Dup ACK 371#1] https &gt; 53295 [ACK] Seq=12979 Ack=6349 Win=25472 Len=0
+    373 313.516465000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    104    Application Data
+    374 313.516465000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    104    [TCP Retransmission] Application Data
+    375 313.516466000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    686    Application Data
+    376 313.516468000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    686    [TCP Retransmission] Application Data
+    377 313.562235000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     https &gt; 53295 [ACK] Seq=13029 Ack=6981 Win=28032 Len=0
+    378 313.562237000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     [TCP Dup ACK 377#1] https &gt; 53295 [ACK] Seq=13029 Ack=6981 Win=28032 Len=0
+    379 313.706930000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    1082   Application Data
+    380 313.706933000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    1082   [TCP Retransmission] Application Data
+    381 313.707655000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    465    Application Data
+    382 313.707658000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    465    [TCP Retransmission] Application Data
+    383 313.721060000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     https &gt; 53295 [ACK] Seq=14057 Ack=7392 Win=30592 Len=0
+    384 313.721062000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     [TCP Dup ACK 383#1] https &gt; 53295 [ACK] Seq=14057 Ack=7392 Win=30592 Len=0
+    385 313.722109000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    104    Application Data
+    386 313.722110000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    104    [TCP Retransmission] Application Data
+    387 313.722360000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    1512   Application Data
+    388 313.722363000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TLSv1    1512   [TCP Retransmission] Application Data
+    389 313.774209000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     https &gt; 53295 [ACK] Seq=14107 Ack=8850 Win=33536 Len=0
+    390 313.774211000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     [TCP Dup ACK 389#1] https &gt; 53295 [ACK] Seq=14107 Ack=8850 Win=33536 Len=0
+    391 314.648919000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      1514   [TCP segment of a reassembled PDU]
+    392 314.648976000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      1514   [TCP Retransmission] https &gt; 53295 [ACK] Seq=14107 Ack=8850 Win=33536 Len=1460
+    393 314.649027000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      1514   [TCP segment of a reassembled PDU]
+    394 314.649031000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      1514   [TCP Retransmission] [TCP segment of a reassembled PDU]
+    395 314.649188000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     53295 &gt; https [ACK] Seq=8850 Ack=17027 Win=64000 Len=0
+    396 314.649190000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     [TCP Dup ACK 395#1] 53295 &gt; https [ACK] Seq=8850 Ack=17027 Win=64000 Len=0
+    397 314.649194000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    1514   Ignored Unknown Record
+    398 314.649196000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    1514   [TCP Retransmission] Ignored Unknown Record
+    399 314.662987000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    1514   Ignored Unknown Record
+    400 314.662991000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    1514   [TCP Retransmission] Ignored Unknown Record
+    401 314.662996000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     53295 &gt; https [ACK] Seq=8850 Ack=19947 Win=65536 Len=0
+    402 314.662997000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     [TCP Dup ACK 401#1] 53295 &gt; https [ACK] Seq=8850 Ack=19947 Win=65536 Len=0
+    403 314.663148000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    1514   Ignored Unknown Record
+    404 314.663151000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    282    Ignored Unknown Record
+    405 314.663153000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    1514   [TCP Out-Of-Order] Ignored Unknown Record
+    406 314.663158000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TLSv1    282    [TCP Retransmission] Ignored Unknown Record
+    407 314.663159000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     53295 &gt; https [ACK] Seq=8850 Ack=21635 Win=65536 Len=0
+    408 314.663160000  yy.yyy.yy.yyy         xx.xx.xx.xxx          TCP      60     [TCP Dup ACK 407#1] 53295 &gt; https [ACK] Seq=8850 Ack=21635 Win=65536 Len=0
+    409 374.641772000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     https &gt; 53295 [RST, ACK] Seq=21635 Ack=8850 Win=33536 Len=0
+    410 374.641774000  xx.xx.xx.xxx          yy.yyy.yy.yyy         TCP      60     https &gt; 53295 [RST, ACK] Seq=21635 Ack=8850 Win=33536 Len=0
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rst/" class="post-tag tag-link-rst"
+                                        title="see questions tagged 'rst'" rel="tag">rst</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Dec '12, 11:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4c85e91176b3430e00bea2a82a821f91?s=32&amp;d=identicon&amp;r=g" alt="tjohnson333's gravatar image" />
+    <p><a href="/users/4076/tjohnson333">tjohnson333</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tjohnson333 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/16908/">
+                edited
+                <strong>14 Dec '12, 11:21</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-16908">
+    
+</div>
+<div id="comment-tools-16908" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16908-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/16908/connections-reset-they-claim-on-our-side-am-i-reading-this-log-correctly-not-very-familiar-with-wireshark?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/16908/connections-reset-they-claim-on-our-side-am-i-reading-this-log-correctly-not-very-familiar-with-wireshark?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/16908/connections-reset-they-claim-on-our-side-am-i-reading-this-log-correctly-not-very-familiar-with-wireshark?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/16908/connections-reset-they-claim-on-our-side-am-i-reading-this-log-correctly-not-very-familiar-with-wireshark?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="16909"></a>
+                    <div id="answer-container-16909" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16909-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16909/up/" rel="nofollow"> </a>
+<div id="post-16909-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-16909-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16909/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is a time gap of 60 seconds between frame 408 and 409 (the first reset from x.x.x.x). It looks like 'some' system closed the connection after a timeout. That could be x.x.x.x itself but it could be a firewall as well, killing an idle connection. As long as you don't have a capture on both sides, you can't tell who is sending the RESET, especially as the capture was taken on the side of y.y.y.y. </p>
+<p>These systems could have sent the RESET:</p>
+<ul>
+<li>x.x.x.x.</li>
+<li>The firewall in front of x.x.x.x</li>
+<li>The firewall in front of y.y.y.y</li>
+</ul>
+<p>I suggest to capture on both sides simultaneously and then compare the capture files. </p>
+<p>Do you see anything in your firewall and/or web server logs for the timestamp of frame 407-410?
+Do you see their requests at all in the web server logs?</p>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16909/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Dec '12, 11:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16909">
+    
+        <a name="16912"></a>
+        <div class="comment" id="comment-16912">
+            <div id="post-16912-score" class="comment-score"></div>
+            <div class="comment-text"><p>They open a connection and send requests for a number of reports at a time.  The issue is for 1 specific report.  The requests are always in specific order with the failing one always last.  It does not fail all the time, about 5-10%. They do not always request the same reports every time.</p>
+
+<p>We see one session open on the firewall for all requests and then any number of requests (usually 2-6) on the load balancer and Web server logs.  What we don't ever see is a request on the load balancer that does not make it to the web server. Every request to the LB makes it through to the web server.</p></div>
+            <div class="comment-info" id="comment-16912-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '12, 11:56)</span>
+                <a class="comment-user userinfo" href="/users/4076/tjohnson333">tjohnson333</a>
+                
+            </div>
+        </div>
+    
+        <a name="16913"></a>
+        <div class="comment" id="comment-16913">
+            <div id="post-16913-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do they send several requests in one TCP connection? </p>
+
+<p>In frame 403-404 your server is sending data. In frame 407 they are sending an ACK (408 is just a duplicate due to an error in their capture setup. The same is true for 405/406). </p>
+
+<p>Then you see the 60 seconds gap. There are some possible scenarios:</p>
+
+<ul>
+<li>there is more data to send, but your server does not send it. Result: Your fault.</li>
+<li>there is more data to send, your server sent it, but the data did not reach them (capture at their side!). Several reasons: Loadbalancer, Firewalls, etc.</li>
+<li>there is <strong>no more</strong> data to send and their client is doing nothing (should possibly send the next request). After 60 seconds your Loadbalancer closes the <strong>idle connection</strong>. Result: Their fault.</li>
+</ul>
+
+<p>Without a trace on both sides, it's impossible to say which scenario is the real/right one.</p></div>
+            <div class="comment-info" id="comment-16913-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '12, 12:11)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16909" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16909-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/16908/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='NwUI6SBKsWos0ZwVznwoiwv8Qk0OQ2hm' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/16908/connections-reset-they-claim-on-our-side-am-i-reading-this-log-correctly-not-very-familiar-with-wireshark?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/16908/connections-reset-they-claim-on-our-side-am-i-reading-this-log-correctly-not-very-familiar-with-wireshark?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rst/"
+            class="tag-link-rst"
+            title="see questions tagged'rst'using tags"
+            rel="tag">rst</a> <span class="tag-number">&#215;81</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 14, 2012, 11:20 a.m.">14 Dec '12, 11:20</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,377 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 14, 2012, 12:11 p.m.">14 Dec '12, 12:11</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/348/credit-card-transactions-experience-multiple-declines-why">Credit card transactions experience multiple declines. Why?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13461/server-unable-to-access-websites-http-or-https-from-a-windows-server">Server unable to access websites (HTTP or HTTPS) from a windows server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24339/can-anyone-explain-this-tcp-sequence-to-me">Can anyone explain this TCP sequence to me</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35835/iis-85-windows-2012-r2-rst-ack-problem-question">IIS 8.5 Windows 2012 R2 - RST ACK problem question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55362/remote-desktop-not-connecting">Remote Desktop not connecting</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1408/rst-tracing">RST - tracing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13826/rst-ack-after-sending-huge-portion-of-data">RST, ACK after sending huge portion of data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24961/filter-for-syn-psh-and-rst-flags">Filter for SYN, PSH and RST flags</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36727/web-app-server-communication-rst-help">Web &amp; App Server Communication [RST] - Help</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55758/mssql-keep-aliverst-troubleshooting">MSSQL Keep-alive/RST Troubleshooting</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

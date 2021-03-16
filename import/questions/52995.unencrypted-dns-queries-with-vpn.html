@@ -1,0 +1,1151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Unencrypted DNS queries with VPN - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, Recently I became a VPN user (Nord VPN). The service sees to be fine, but I wanted to verify it if it is secure. For that I just wanted to make sure/understand if all of my internet traffic goes through the tunnel. Of coures on the Nord vpn websites it says that I am perfectly secure now, but I ..." />
+        <meta name="keywords" content="vpn,dns" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/52995/unencrypted-dns-queries-with-vpn" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/52995/unencrypted-dns-queries-with-vpn?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='vpdweSl9d8Wpt3KAwMSBlTJe3xFDqcIb' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/52995/unencrypted-dns-queries-with-vpn">Unencrypted DNS queries with VPN</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-52995-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52995/up/" rel="nofollow"> </a>
+<div id="post-52995-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52995-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52995/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/52995/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>Recently I became a VPN user (Nord VPN). The service sees to be fine, but I wanted to verify it if it is secure.</p>
+<p>For that I just wanted to make sure/understand if all of my internet traffic goes through the tunnel. Of coures on the Nord vpn websites it says that I am perfectly secure now, but I wanted to verify that.</p>
+<p>For that purpose I decided to use Wire-Shark. After VPN installation I see that in my system there are now two Ethernet cards, one called TAP Windows adapter, which was added by VPN, and other native WiFi card. As I understand all traffic (through the route table) should be directed to TAP card, where it gets encrypted and then all data are send to Internet through my native WiFi card (already encrypted). To check that, I used Wire-shark, and monitored my Internet WiFi card. 98% of packets are of OpenVPN type -which is encrypted -good. But the rest is DNS queries (send to VPN DNS servers) which are in plain text, that I can read. In these it is written which websites I am trying to access.</p>
+<p>Please seen screenshot of the Wire-shark results: <a href="https://postimg.org/image/4xh0mfqez/">https://postimg.org/image/4xh0mfqez/</a></p>
+<p>I used a website of: <a href="https://ipleak.net/">https://ipleak.net/</a> to check if it is connected with DNS leakage, but NO IP leak is detected.</p>
+<p>So for me it seems that DNS queries are not encrypted, send to VPN DNS servers in plain text. If it is a case, then man in the middle or ISP can easily trace my activity and websites I am trying to access. Please let my know if that is true, or if not, how then does it work.</p>
+<p>I tried to get descriptive answer at VPN provider, but they only claimed that everything is fine/secure.</p>
+<p>Looking forward for you hints.</p>
+<p>Best regards John</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/vpn/" class="post-tag tag-link-vpn"
+                                        title="see questions tagged 'vpn'" rel="tag">vpn</a>
+                                
+                                    <a href="/tags/dns/" class="post-tag tag-link-dns"
+                                        title="see questions tagged 'dns'" rel="tag">dns</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>27 May '16, 06:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cd763a6f18056441b1c2a93e8be75cf1?s=32&amp;d=identicon&amp;r=g" alt="JohnKanaka's gravatar image" />
+    <p><a href="/users/24276/johnkanaka">JohnKanaka</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JohnKanaka has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52995/">
+                closed
+                <strong>27 May '16, 06:26</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+            <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+            <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-52995">
+    
+        <a name="52997"></a>
+        <div class="comment" id="comment-52997">
+            <div id="post-52997-score" class="comment-score"></div>
+            <div class="comment-text"><p>This has come up a few times before, <a href="https://ask.wireshark.org/questions/52557/log-question-openvpn-related">here</a> and <a href="https://ask.wireshark.org/questions/50471/can-my-internet-provider-see-what-website-i-visite">here</a> and probably others.</p></div>
+            <div class="comment-info" id="comment-52997-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 May '16, 06:26)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52999"></a>
+        <div class="comment" id="comment-52999">
+            <div id="post-52999-score" class="comment-score"></div>
+            <div class="comment-text"><p>The difference in this Question as compared to the other ones you've referred to is that here the OP states that the DNS server addresses have been suggested by the VPN provider.</p></div>
+            <div class="comment-info" id="comment-52999-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 May '16, 06:59)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="53002"></a>
+        <div class="comment" id="comment-53002">
+            <div id="post-53002-score" class="comment-score"></div>
+            <div class="comment-text"><p>I wonder why this topic got closed, since in the links you provided there is not specific answer for my question, which is somehow related to Wire-Shark super capabilities of reading encrypted data.
+Please see my comment below to Sindy answer, maybe you could help to answer.</p>
+
+<p>Best regards,
+John</p></div>
+            <div class="comment-info" id="comment-53002-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 May '16, 07:51)</span>
+                <a class="comment-user userinfo" href="/users/24276/johnkanaka">JohnKanaka</a>
+                
+            </div>
+        </div>
+    
+        <a name="53004"></a>
+        <div class="comment" id="comment-53004">
+            <div id="post-53004-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is absolutely nothing to do with any hypothetical Wireshark capabilities of automagically decrypting only DNS requests.  If Wireshark shows plain text DNS requests, then that is what's being transmitted via the network stack that it's capturing on.  Note that's not necessarily what goes on the wire, the only way to be sure of that is capture from an external device.</p>
+
+<p>In the end, this is most likely to be another OS\VPN routing\config issue same as the other questions, Wireshark may be able to show "what's happening", but not why and the best folks to get support for that will be your VPN providers.  If they're unable to support you, then maybe you need to look at another VPN provider.</p></div>
+            <div class="comment-info" id="comment-53004-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 May '16, 08:26)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="53006"></a>
+        <div class="comment" id="comment-53006">
+            <div id="post-53006-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your answer.</p>
+
+<p>But there is one point that is not clear, which I believe is very important to resolve my question: </p>
+
+<p>"If Wireshark shows plain text DNS requests, then that is what's being transmitted via the network stack that it's capturing on. Note that's not necessarily what goes on the wire."</p>
+
+<p>I thought that wire-shark actually captures what goes on the wire - air in my case :). So does it mean that although this card captures plain text (at network stack) it still will be encrypted?? (where?, when?, how?). I don't see the way, how those packets could be encrypted once again, since they already left TAN (virtual) card and are logged with at physical card.</p>
+
+<p>If you know the answer or give me some directions I would appreciate your help.</p>
+
+<p>Best regards
+John.</p></div>
+            <div class="comment-info" id="comment-53006-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 May '16, 09:32)</span>
+                <a class="comment-user userinfo" href="/users/24276/johnkanaka">JohnKanaka</a>
+                
+            </div>
+        </div>
+    
+        <a name="53007"></a>
+        <div class="comment not_top_scorer" id="comment-53007">
+            <div id="post-53007-score" class="comment-score"></div>
+            <div class="comment-text"><p>Wireshark uses a capture mechanism either provided by the host OS, or a separate installable driver (as in WinPcap on Windows) that is passed the data at some point as it moves through the OS networking stack.</p>
+
+<p>This effect can be easily seen in Wireshark captures on OS's that have IP checksum offloading where the NIC calculates the IP packet checksum so all transmitted packets appear to have an incorrect checksum.  This is why Wireshark has protocol preferences to turn off checksum validation.</p>
+
+<p>I've no idea about other OS's, but on Windows it's entirely possible for the capture to be made above the encrypting part of the stack.  However, I think that's unlikely in your case, I think what's happening is that the routing sends the DNS packets outside the VPN tunnel.</p>
+
+<p>The only way to be sure of capturing exactly what's transmitted is to <strong>not</strong> capture on the local machine.</p></div>
+            <div class="comment-info" id="comment-53007-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 May '16, 09:57)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="53013"></a>
+        <div class="comment not_top_scorer" id="comment-53013">
+            <div id="post-53013-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've reopen the question as it seems it is going to become more relevant than the other two if the explanation by Windows 10 creative use of routing table proves to be correct.</p></div>
+            <div class="comment-info" id="comment-53013-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 May '16, 15:17)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="53096"></a>
+        <div class="comment not_top_scorer" id="comment-53096">
+            <div id="post-53096-score" class="comment-score"></div>
+            <div class="comment-text"><p>If this is a windows machine, as soon as you are connected to the VPN, restart the DNS Client windows service, this maintains a route for DNS queries since some MS-KB or other. The possibility that it is just Windows 10 throwing DNS queries on all adapters is also there. Windows 10, what can you do.</p></div>
+            <div class="comment-info" id="comment-53096-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Jun '16, 04:22)</span>
+                <a class="comment-user userinfo" href="/users/10264/darrenwright">DarrenWright</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52995" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52995-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/52995/unencrypted-dns-queries-with-vpn?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/52995/unencrypted-dns-queries-with-vpn?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/52995/unencrypted-dns-queries-with-vpn?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/52995/unencrypted-dns-queries-with-vpn?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="52998"></a>
+                    <div id="answer-container-52998" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52998-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52998/up/" rel="nofollow"> </a>
+<div id="post-52998-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52998-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52998/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>As I understand all traffic (through the route table) should be directed to TAP card, where it gets encrypted and then all data are send to Internet through my native WiFi card (already encrypted).</p>
+</blockquote>
+<p>Your understanding is correct, this would be a secure setup. I cannot see any reason why the VPN client software should set the default route to the tunnel interface but create exceptional routes via the original gateway for the DNS servers. So once the VPN is up and running,</p>
+<ul>
+<li>
+<p>use Wireshark to identify the address of the VPN server itself,</p>
+</li>
+<li>
+<p>check the contents of your routing table.</p>
+</li>
+</ul>
+<p>If you find exceptional routes for individual addresses of the DNS servers, removing them should be enough to make the DNS queries be routed through the tunnel as well. But if there is an exceptional route for a whole subnet which covers both the VPN server and the DNS servers, removing such route would make the VPN stop working, as the encrypted packets have to be sent to the VPN server using the original gateway as provided by the WiFi AP. If this is the case, you would have to manually configure some DNS servers outside that subnet, i.e. not belonging to the VPN provider, to allow sending DNS queries through the VPN as well. These DNS servers may be your ISP's ones, as the queries to them would come from the outer address of the VPN server, so they wouldn't disclose it is you who is asking.</p>
+<p>I just wonder whether you are sure that it is safer to be spied on by the VPN provider than to be spied on by your ISP.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52998/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 May '16, 06:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52998">
+    
+        <a name="53001"></a>
+        <div class="comment" id="comment-53001">
+            <div id="post-53001-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for your interesting answer.</p>
+
+<p>I will check rooting table today.
+What do you mean by 
+"
+use Wireshark to identify the address of the VPN server itself,
+"</p>
+
+<p>I just wonder about wire-shark why does it make exceptions for DNS queries. Why can it see DNS queries in plain text instead of being encrypted.
+Below are the answers I got from VPN provider:</p>
+
+<p>Answer 1:
+"Do not worry the DNS queries are also encrypted, you can see them because you are checking them via Wireshark on the same Host you are using the VPN."</p>
+
+<p>Answer 2:
+" I am not sure why does the queries appear on the wire-shark, it may have something to do with the wire-shark software itself, it probably directly sees the local queries on the computer, thus they are seen. Though rest assured, the DNS queries going through our DNS servers are encrypted and thus you will be fully secured while using our DNS servers."</p>
+
+<p>I am just wondering if routing table routs everything through TAN encryption card, how the wire-shark is able to still read unencrypted queries, which at this point should be encrypted????</p>
+
+<p>I just wonder if it is not a case of Windows 10, that sends DNS queries using all possible network adapters, waiting for fastest respond:
+<a href="https://medium.com/@ValdikSS/beware-of-windows-10-dns-resolver-and-dns-leaks-5bc5bfb4e3f1#.r1nml3ont">https://medium.com/@ValdikSS/beware-of-windows-10-dns-resolver-and-dns-leaks-5bc5bfb4e3f1#.r1nml3ont</a></p>
+
+<p>In that case VPN is not secure any more...</p>
+
+<p>Looking for ideas...
+John</p></div>
+            <div class="comment-info" id="comment-53001-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 May '16, 07:47)</span>
+                <a class="comment-user userinfo" href="/users/24276/johnkanaka">JohnKanaka</a>
+                
+            </div>
+        </div>
+    
+        <a name="53011"></a>
+        <div class="comment" id="comment-53011">
+            <div id="post-53011-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>"Do not worry the DNS queries are also encrypted, you can see them because you are checking them via Wireshark on the same Host you are using the VPN."</p>
+</blockquote>
+
+<p>This could be the explanation if you capture simultaneously on both interfaces, i.e. the real (wireless) one and the virtual (TAP) one. By posting a screenshot instead of the pcap file, you've made it impossible to check, so you have to check yourself. But it is quite unlikely, as in such case you would see the other traffic types in the capture as well (i.e. each sent packet would first be seen without encryption at TAP and then encrypted at the WLAN interface).</p>
+
+<blockquote>
+<p>it may have something to do with the wire-shark software itself, it probably directly sees the local queries on the computer, thus they are seen. </p>
+</blockquote>
+
+<p>This is not the way how Wireshark works. It captures (using OS-specific libraries and binding points as <a href="/users/1225/grahamb">@grahamb</a> has pointed out) only traffic to/from network interfaces.</p>
+
+<blockquote>
+<p>I am just wondering if routing table routes everything through TAP encryption card, how the wire-shark is able to still read unencrypted queries, which at this point should be encrypted?</p>
+</blockquote>
+
+<p>See my comment to VPN provider's Answer 1 above - Wireshark would only be able to see packets sent via the TAP without encryption if it would be capturing on the TAP itself. Yes, Wireshark can decrypt encrypted traffic in some cases, but you have to supply it with the relevant key material.</p>
+
+<p>To be continued...</p></div>
+            <div class="comment-info" id="comment-53011-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 May '16, 15:14)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="53012"></a>
+        <div class="comment" id="comment-53012">
+            <div id="post-53012-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I just wonder if it is not a case of Windows 10, that sends DNS queries using all possible network adapters, waiting for fastest response</p>
+</blockquote>
+
+<p>"To send a packet towards a (remote!) destination using a particular interface" actually means to send the packet to a router accessible through that interface. Doing so normally requires that</p>
+
+<ul>
+<li>
+<p>either an IP address of a gateway in that interface's subnet has been indicated as a route to that destination in the routing table,</p>
+</li>
+<li>
+<p>or the interface itself has been indicated as a route to that destination in the routing table, and the OS has received an ICMP router advertisement packet through that interface.</p>
+</li>
+</ul>
+
+<p>However, we cannot exclude that ValdikSS is right and Windows 10 really use the contents of the routing table in a creative way, as nothing can prevent them from sending the DNS query (or any other packet) to all gateways they can find in the routing table, regardless for what destinations these gateways have been indicated as routes. It is easy to check - if the routing table does not show any exceptional route for the DNS server and the default route points to a gateway whose IP address is in the same subnet like the TAP's IP address, then this becomes the most likely explanation. A remedy would be to disable access to the DNS servers using some firewall rules at your wireless AP, but not all APs can do that.</p>
+
+<p>The other part of the ValdikSS's article may be true in parallel - yes, the Windows may rewrite the default route (or even several routes, depending on the DHCP options they receive) each time they renew the DHCP lease. But if this would happen, you would see all traffic, not just the DNS queries, to start using that gateway right after the first DHCP renewal after VPN session establishment.</p></div>
+            <div class="comment-info" id="comment-53012-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 May '16, 15:15)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="53020"></a>
+        <div class="comment" id="comment-53020">
+            <div id="post-53020-score" class="comment-score"></div>
+            <div class="comment-text"><p>Isn't this simply a case of a split-tunnel implementation?  <a href="https://en.wikipedia.org/wiki/Split_tunneling">https://en.wikipedia.org/wiki/Split_tunneling</a>
+If the DNS queries are made outside the VPN, then they would not be encrypted.</p></div>
+            <div class="comment-info" id="comment-53020-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 May '16, 20:14)</span>
+                <a class="comment-user userinfo" href="/users/850/griff">griff</a>
+                
+            </div>
+        </div>
+    
+        <a name="53021"></a>
+        <div class="comment" id="comment-53021">
+            <div id="post-53021-score" class="comment-score"></div>
+            <div class="comment-text"><p>Even if it would be the case, the routing table should show that. And I cannot see a reason why the "public VPN" provider would intentionally route DNS requests outside the tunnel - and if they did, why would they not mention it in their answers to the OP.</p></div>
+            <div class="comment-info" id="comment-53021-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 May '16, 23:27)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52998" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52998-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="63708"></a>
+                    <div id="answer-container-63708" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-63708-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/63708/up/" rel="nofollow"> </a>
+<div id="post-63708-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-63708-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/63708/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If you're using openvpn client and you're on windows 8-10, you need to configure your client to ignore any DNS server but those pushed by your server. 
+It's because windows tries to play smart and send DNS queries to the fastest server.</p>
+<p>So if it appears that your gateway answers to those queries faster than your vpn server (must be always the case), everything queries will be sent to it without encryption.</p>
+<p><strong>You need to open you .opvn file and add at the end of it : "block-outside-dns" (without the quotes).</strong></p>
+<p>In the log of openvpn, you'll see the client picking up that line and stating that it will ignore any DNS server but those pushed by the vpn server you're trying to connect to. </p>
+<p>Also, in wireshark, you'll never be able to read anything again : encryption to it's fullest !</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/63708/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Oct '17, 06:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cdcc1915646da920292c75d076c532ed?s=32&amp;d=identicon&amp;r=g" alt="olleo's gravatar image" />
+    <p><a href="/users/42775/olleo">olleo</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="olleo has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-63708">
+    
+</div>
+<div id="comment-tools-63708" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-63708-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/52995/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='vpdweSl9d8Wpt3KAwMSBlTJe3xFDqcIb' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52995/unencrypted-dns-queries-with-vpn?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52995/unencrypted-dns-queries-with-vpn?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/dns/"
+            class="tag-link-dns"
+            title="see questions tagged'dns'using tags"
+            rel="tag">dns</a> <span class="tag-number">&#215;109</span><br/>
+        
+        <a href="/tags/vpn/"
+            class="tag-link-vpn"
+            title="see questions tagged'vpn'using tags"
+            rel="tag">vpn</a> <span class="tag-number">&#215;45</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 27, 2016, 6:14 a.m.">27 May '16, 06:14</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,477 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 6, 2017, 6:48 a.m.">06 Oct '17, 06:48</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/46093/vpn-and-wireshark">VPN and wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/78/can-i-limit-name-resolution-to-only-use-wiresharks-own-hosts-file">Can I limit name resolution to only use Wireshark&#39;s own hosts file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7514/dns-ipv6-queryreponse">DNS IPV6 query/reponse</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18394/help-with-filters-for-detecting-fast-flux-in-dns-queries">Help with Filters for Detecting Fast Flux in DNS Queries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31573/question-on-dns-query-type">Question on DNS Query Type</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41555/dns-two-nics">[closed] DNS / two NIC&#39;s</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47560/why-am-i-seeing-malformed-packets-on-my-captures">Why am I seeing malformed packets on my captures?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55754/whata-a-display-filter-that-matches-dns-queries-for-a-particular-host-name">What&#39;a a display filter that matches DNS queries for a particular host name?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4812/on-mac-osx-i-cant-capture-packets-sent-over-a-vpn">on Mac OSX, I can&#39;t capture packets sent over a VPN</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28730/i-have-a-virtual-machine-with-vpn-how-can-i-split-traffic-in-wireshark-between-my-host-and-vm">I have a virtual machine with VPN - how can i split traffic in wireshark between my host and VM?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

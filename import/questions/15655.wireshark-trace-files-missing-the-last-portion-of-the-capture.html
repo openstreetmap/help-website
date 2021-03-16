@@ -1,0 +1,930 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Wireshark trace files missing the last portion of the capture - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi all. Big fan, and user, of the &#39;shark, but haven&#39;t had a need to post in quite a while... I have run into a strange problem - perhaps someone has some ideas. Here it is... I&#39;m in the U.S., and I&#39;m working with colleagues in India, who are running wireshark on their workstations, and sending me th..." />
+        <meta name="keywords" content="missing_packets" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/15655/wireshark-trace-files-missing-the-last-portion-of-the-capture" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/15655/wireshark-trace-files-missing-the-last-portion-of-the-capture?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Ianl6Kqn35aIDsxkrGHOaIdjWdMPfVEv' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/15655/wireshark-trace-files-missing-the-last-portion-of-the-capture">Wireshark trace files missing the last portion of the capture</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-15655-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15655/up/" rel="nofollow"> </a>
+<div id="post-15655-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-15655-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15655/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/15655/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all.  Big fan, and user, of the 'shark, but haven't had a need to post in quite a while...</p>
+<p>I have run into a strange problem - perhaps someone has some ideas.  Here it is...</p>
+<p>I'm in the U.S., and I'm working with colleagues in India, who are running wireshark on their workstations, and sending me the files when they are done.  What I'm finding is the Wireshark files I receive are missing a significant portion of the capture, at the end of the file.  For example, after capturing for 20 minutes today, the file I receive has packets spanning the first 6 minutes.<br>
+</p>
+<p>The packets that ARE in the file all look fine - no missing packets, timestamps are chronologically ordered, delta times between packets are all subsecond and reasonably spaced, etc.  It appears to be a perfectly healthy trace file...  Except that the last packet's timestamp is 14 minutes before they stopped capturing.</p>
+<p>In a previous activity, we set up Wireshark to capture multiple files, creating a new one every 10 minutes.  (I even saw their Capture Options screen - it looked correct.)  When I received the resultant files, each of them was approximately 2 minutes long.</p>
+<p>And...  This is happening on more than one workstation.</p>
+<p>Obviously, I'm limited in what I can do to troubleshoot, due to remoteness.</p>
+<p>I'd love for someone to say, "I've seen this before", or something equally helpful.</p>
+<p>thx all,
+feenyman99</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/missing_packets/" class="post-tag tag-link-missing_packets"
+                                        title="see questions tagged 'missing_packets'" rel="tag">missing_packets</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Nov '12, 10:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ba0791e3a82c059268b46a45ae90989f?s=32&amp;d=identicon&amp;r=g" alt="feenyman99's gravatar image" />
+    <p><a href="/users/98/feenyman99">feenyman99</a><br/>
+    <span class="score" title="96 reputation points">96</span><span title="22 badges"><span class="badge1">&#9679;</span><span class="badgecount">22</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="26 badges"><span class="bronze">&#9679;</span><span class="badgecount">26</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="feenyman99 has one accepted answer">25&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-15655">
+    
+        <a name="15657"></a>
+        <div class="comment" id="comment-15657">
+            <div id="post-15657-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is there a maximum file size imposed in addition to a maximum capture time duration?  Maybe the max size is reached before the time duration has elapsed?</p></div>
+            <div class="comment-info" id="comment-15657-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Nov '12, 11:49)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15655" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15655-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/15655/wireshark-trace-files-missing-the-last-portion-of-the-capture?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/15655/wireshark-trace-files-missing-the-last-portion-of-the-capture?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/15655/wireshark-trace-files-missing-the-last-portion-of-the-capture?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/15655/wireshark-trace-files-missing-the-last-portion-of-the-capture?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="15656"></a>
+                    <div id="answer-container-15656" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15656-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15656/up/" rel="nofollow"> </a>
+<div id="post-15656-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-15656-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15656/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You say they "send" the file. </p>
+<p>Some questions: </p>
+<ul>
+<li>How exactly do they send the file? </li>
+<li>Is the file size of the transmitted capture file identical on both sides? </li>
+<li>Did you calculate a MD5/SHA1 checksum of the capture file on both sides? Are the checksums identical?</li>
+</ul>
+<p>Reason: The file might be truncated/modified while it is transferred to you. Example: If you use FTP and don't choose BINARY transfer mode, ASCII mode might be used, which <strong>might modify</strong> the capture file.</p>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15656/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Nov '12, 10:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15656">
+    
+        <a name="15658"></a>
+        <div class="comment" id="comment-15658">
+            <div id="post-15658-score" class="comment-score"></div>
+            <div class="comment-text"><p>Kurt - Thx for the quick response!</p>
+
+<p>Files have been transferred via 2 methods:  NetMeeting File Transfer  &amp;  Sharepoint.</p>
+
+<p>I have compared file sizes, and they are the same on both sides.  (I have not compared checksum's).</p>
+
+<p>It seems that, when we expect Wireshark to create a file with "n" minutes' worth of traffic, the resultant file has only the first "less than n/2" minutes.</p>
+
+<p>Yeah - I know...  Weird.  I've been using Wireshark/Ethereal for 10+ years, and haven't seen anything like this.</p>
+
+<p>I was just hoping I'd get real lucky, and someone in this forum would have seen this.</p>
+
+<p>Anybody else have ideas???</p>
+
+<p>Thx all!!!</p></div>
+            <div class="comment-info" id="comment-15658-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Nov '12, 12:10)</span>
+                <a class="comment-user userinfo" href="/users/98/feenyman99">feenyman99</a>
+                
+            </div>
+        </div>
+    
+        <a name="15659"></a>
+        <div class="comment" id="comment-15659">
+            <div id="post-15659-score" class="comment-score"></div>
+            <div class="comment-text"><ul>
+<li>What is your Wireshark version in India and US (wireshark -v)?</li>
+</ul>
+
+<blockquote>
+<p>(I have not compared checksum's).</p>
+</blockquote>
+
+<p>please check them, just to make sure they are indeed identical. </p>
+
+<p>Then I recommend to transfer the file in a ZIP container. If the ZIP container gets corrupted (truncated, modified, etc.), the ZIP tool will tell you. I use 7-Zip most of the time (<a href="http://7-zip.org">7-zip.org</a>).</p>
+
+<ul>
+<li>Is the output of the following command <strong>identical</strong> on both systems (india and US)? Are there frames missing at the end?</li>
+</ul>
+
+<blockquote>
+<p><code>tshark -r input.cap -T fields -e frame.number -e frame.time_relative -e frame.time_epoch</code></p>
+</blockquote></div>
+            <div class="comment-info" id="comment-15659-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Nov '12, 13:24)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="15664"></a>
+        <div class="comment" id="comment-15664">
+            <div id="post-15664-score" class="comment-score"></div>
+            <div class="comment-text"><p>Again...  Thx Kurt for responding.  I can execute those checks - I hope - when India folks wake up (it's 4:30am there now) and I can get some time from them.</p>
+
+<p>HOWEVER...  Is there any possibility that the <strong> capture buffer size is too small? </strong> Would that cause behavior like this??</p>
+
+<p>Thx again...</p></div>
+            <div class="comment-info" id="comment-15664-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Nov '12, 15:08)</span>
+                <a class="comment-user userinfo" href="/users/98/feenyman99">feenyman99</a>
+                
+            </div>
+        </div>
+    
+        <a name="15665"></a>
+        <div class="comment" id="comment-15665">
+            <div id="post-15665-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Is there any possibility that the capture buffer size is too small?</p>
+</blockquote>
+
+<p>I don't think so. </p>
+
+<p>What is your Wireshark version and OS?</p></div>
+            <div class="comment-info" id="comment-15665-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Nov '12, 15:12)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="15670"></a>
+        <div class="comment" id="comment-15670">
+            <div id="post-15670-score" class="comment-score"></div>
+            <div class="comment-text"><p>MY Wireshark, where the file is being READ, is version 1.5.6 (SVN Rev 40429 from /trunk-1.6), running on XP Pro Version 2002, Service Pack 3.</p>
+
+<p>THEIR Wireshark, where the file is being WRITTEN...  I must wait till I reconnoiter w/ the India folks to answer this.</p>
+
+<p>After I asked about a possible buffer size problem, I did some reading and I agree that this is very unlikely.  I gather that if the buffer were too small, I would see "missing" packets amongst the existing packets.  I see none of this.  Instead, the packets that are missing all belong after the last packet in the file.</p></div>
+            <div class="comment-info" id="comment-15670-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Nov '12, 16:31)</span>
+                <a class="comment-user userinfo" href="/users/98/feenyman99">feenyman99</a>
+                
+            </div>
+        </div>
+    
+        <a name="15681"></a>
+        <div class="comment not_top_scorer" id="comment-15681">
+            <div id="post-15681-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>MY Wireshark, where the file is being READ, is version 1.5.6</p>
+</blockquote>
+
+<p>O.K. can you please try the latest stable version 1.8.3?</p></div>
+            <div class="comment-info" id="comment-15681-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '12, 00:21)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="15709"></a>
+        <div class="comment not_top_scorer" id="comment-15709">
+            <div id="post-15709-score" class="comment-score"></div>
+            <div class="comment-text"><p>Kurt...  the files are being captured and written on Windows XP, Wireshark version 1.0.5.</p>
+
+<p>thx again for all ur help.</p>
+
+<p>feenyman99</p></div>
+            <div class="comment-info" id="comment-15709-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '12, 05:47)</span>
+                <a class="comment-user userinfo" href="/users/98/feenyman99">feenyman99</a>
+                
+            </div>
+        </div>
+    
+        <a name="15710"></a>
+        <div class="comment not_top_scorer" id="comment-15710">
+            <div id="post-15710-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>version 1.0.5.</p>
+</blockquote>
+
+<p>a pretty old version. If there is no good reason to use that old version, I really recommend to use the latest official release 1.8.3. With that version you should see none of these problems.</p>
+
+<blockquote>
+<p>thx again for all ur help.</p>
+</blockquote>
+
+<p>Does that mean your problem is solved? If so, how?</p></div>
+            <div class="comment-info" id="comment-15710-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '12, 05:54)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15656" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15656-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/15655/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Ianl6Kqn35aIDsxkrGHOaIdjWdMPfVEv' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15655/wireshark-trace-files-missing-the-last-portion-of-the-capture?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15655/wireshark-trace-files-missing-the-last-portion-of-the-capture?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/missing_packets/"
+            class="tag-link-missing_packets"
+            title="see questions tagged'missing_packets'using tags"
+            rel="tag">missing_packets</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 7, 2012, 10:25 a.m.">07 Nov '12, 10:25</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,869 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 8, 2012, 5:55 a.m.">08 Nov '12, 05:55</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/19491/how-do-i-create-filter-for-dropped-packets-and-display-results">How do I create filter for dropped packets and display results</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37068/broadcast-storm">broadcast storm ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38470/syn-packets-missing">SYN Packets Missing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41373/some-sip-requestresponse-messages-are-missing-for-calls-in-a-live-traffic-trace">Some SIP request/response messages are missing for calls in a live traffic trace</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45152/no-packets-being-displayed-on-wireshark-however-packets-are-being-transmitted">No packets being displayed on Wireshark however packets are being transmitted.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52353/capturing-outgoing-packets-with-npcap">Capturing outgoing packets with NPCAP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60936/how-to-capture-gvsp-package-from-a-camera">How to capture GVSP package from a camera</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

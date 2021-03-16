@@ -1,0 +1,1111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>ACK/RST loop - Wireshark Q&amp;A</title>
+        <meta name="description" content="I recently installed conky (system monitoring application) on my Linux Mint 17.3 PC, and I have since noticed some intermittent odd network behaviour. At random times during the day, I see a sustained spike in upload &amp;amp; download traffic on my eth0 interface (normal wired NIC). It lasts 10-30 minu..." />
+        <meta name="keywords" content="ack,rst" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/58546/ackrst-loop" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/58546/ackrst-loop?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='h7t1BRstbB6f1ieACU5SXaLFjIWwyLK2' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/58546/ackrst-loop">ACK/RST loop</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-58546-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58546/up/" rel="nofollow"> </a>
+<div id="post-58546-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-58546-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58546/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/58546/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I recently installed <a href="https://github.com/brndnmtthws/conky">conky</a> (system monitoring application) on my Linux Mint 17.3 PC, and I have since noticed some intermittent odd network behaviour.</p>
+<p>At random times during the day, I see a sustained spike in upload &amp; download traffic on my eth0 interface (normal wired NIC).  It lasts 10-30 minutes, then goes away on its own.</p>
+<p>Normally, the conky output for network traffic looks like this:</p>
+<p><a href="https://i.stack.imgur.com/n4FNd.jpg"><img alt="enter image description here" src="https://i.stack.imgur.com/n4FNd.jpg"></a></p>
+<p>10KB/s down; 11KB/s up. I'm listening to music on YouTube; so this seems pretty reasonable.</p>
+<p>BUT!  Sometimes, I happen to glance over &amp; see the traffic graph, and it looks like this:
+<a href="https://i.stack.imgur.com/JKOXU.jpg"><img alt="enter image description here" src="https://i.stack.imgur.com/JKOXU.jpg"></a></p>
+<p>The white "BAR" is the up/send side of my NIC max'ing out this chart.
+Yes, it's only 630 KB/s, but that seems pretty dang high, considering that I'm not initiating it.</p>
+<p>So, I'm naturally wondering "what is using all of that bandwidth?"</p>
+<p>I've dug in a bit, and (using a combination of nethogs, netstat, tcpdump, and Wireshark) I have identified that the culprit in all situations is a single connection to a remote host.</p>
+<p>The connection is either on :80 or :443; and is simply a sustained loop of ACK's (coming from their side) and RST's (coming from me).</p>
+<p>Normally, NetHogs looks a bit like this:
+<a href="https://i.stack.imgur.com/lVDbR.jpg"><img alt="enter image description here" src="https://i.stack.imgur.com/lVDbR.jpg"></a>
+Note the Process ID on the left (handy for identifying the source of the traffic)</p>
+<p>But when the 'Spike' is happening, the NetHogs output looks like this:
+<a href="https://i.stack.imgur.com/FgZMO.jpg"><img alt="enter image description here" src="https://i.stack.imgur.com/FgZMO.jpg"></a>
+Note the '?' in the PID.  Yes, I'm running NetHogs as root.  How can it not know??</p>
+<p>So, I dump the traffic with <code>tcpdump -w</code> and toss the .pcap into WireShark:
+<a href="https://i.stack.imgur.com/GcqPr.jpg"><img alt="enter image description here" src="https://i.stack.imgur.com/GcqPr.jpg"></a></p>
+<p>Here's the actual tcpdump output for the extra-geeky:</p>
+<pre><code>14:41:00.007873 IP 58.229.196.104.bc.googleusercontent.com.https &gt; reginald.34879: Flags [.], ack 1, win 58, length 0
+14:41:00.007876 IP reginald.34879 &gt; 58.229.196.104.bc.googleusercontent.com.https: Flags [R], seq 1127736183, win 0, length 0
+14:41:00.007877 IP 58.229.196.104.bc.googleusercontent.com.https &gt; reginald.34879: Flags [.], ack 1, win 58, length 0
+14:41:00.007880 IP reginald.34879 &gt; 58.229.196.104.bc.googleusercontent.com.https: Flags [R], seq 1127736183, win 0, length 0
+14:41:00.008130 IP 58.229.196.104.bc.googleusercontent.com.https &gt; reginald.34879: Flags [.], ack 1, win 58, length 0
+14:41:00.008137 IP reginald.34879 &gt; 58.229.196.104.bc.googleusercontent.com.https: Flags [R], seq 1127736183, win 0, length 0
+14:41:00.008139 IP 58.229.196.104.bc.googleusercontent.com.https &gt; reginald.34879: Flags [.], ack 1, win 58, length 0
+14:41:00.008142 IP reginald.34879 &gt; 58.229.196.104.bc.googleusercontent.com.https: Flags [R], seq 1127736183, win 0, length 0
+14:41:00.008406 IP 58.229.196.104.bc.googleusercontent.com.https &gt; reginald.34879: Flags [.], ack 1, win 58, length 0
+14:41:00.008417 IP reginald.34879 &gt; 58.229.196.104.bc.googleusercontent.com.https: Flags [R], seq 1127736183, win 0, length 0
+14:41:00.008420 IP 58.229.196.104.bc.googleusercontent.com.https &gt; reginald.34879: Flags [.], ack 1, win 58, length 0
+14:41:00.008423 IP reginald.34879 &gt; 58.229.196.104.bc.googleusercontent.com.https: Flags [R], seq 1127736183, win 0, length 0
+14:41:00.008425 IP 58.229.196.104.bc.googleusercontent.com.https &gt; reginald.34879: Flags [.], ack 1, win 58, length 0
+14:41:00.008428 IP reginald.34879 &gt; 58.229.196.104.bc.googleusercontent.com.https: Flags [R], seq 1127736183, win 0, length 0
+14:41:00.008673 IP 58.229.196.104.bc.googleusercontent.com.https &gt; reginald.34879: Flags [.], ack 1, win 58, length 0
+14:41:00.008680 IP reginald.34879 &gt; 58.229.196.104.bc.googleusercontent.com.https: Flags [R], seq 1127736183, win 0, length 0
+</code></pre>
+<p>Anyhow, my (limited) understanding of what's going on with the RST's &amp; ACK's is this:</p>
+<hr>
+<p>They say: "ACK", meaning "OK, I got what you said"</p>
+<p>I say:    "RST", meaning "Right, let's end this conversation"</p>
+<hr>
+<p>But even after I 'reset' the convo; they keep ACK'ing me!</p>
+<p>This goes on for several minutes; then the traffic just dies off after awhile.  (I haven't timed it; that might be interesting info too).</p>
+<p><a href="https://i.stack.imgur.com/v7PmC.jpg"><img alt="enter image description here" src="https://i.stack.imgur.com/v7PmC.jpg"></a></p>
+<p>A few other pieces of info:</p>
+<ol>
+<li>There's nothing that I do on my PC that precedes this.  I'm just
+    browsing the internet, etc.  Basically running only Chrome Browser.</li>
+<li>I don't have any 'servers' going (P2P, file services, etc) </li>
+<li>I don't have Spotify or anything that can act as a P2P server running</li>
+<li>I am on a very simple network.  Just my PC &amp; Android phone, behind a 50/10 Mbps Cable Modem link </li>
+<li>I don't suspect foul play, hacking, etc.  I'm not interesting.</li>
+</ol>
+<p>So, <strong>all of that</strong> to lead up to my questions:</p>
+<ol>
+<li>What is going on here?</li>
+<li>Why don't I see the process ID in NetHogs?  That sure would help identify the source of the traffic.</li>
+<li>One theory that I have is that this is a Chrome data transmission gone bad.  Chrome starts this TCP session, and then closes it off; but the other end keeps up the convo, for some reason.  Does that sound possible/reasonable?</li>
+<li>Is this preventable?</li>
+<li>Any ideas on how to kill it, when I notice it happening again?  I'm thinking tcpkill; and will update the post when this happens again.</li>
+<li>What other tools can I use to identify the source of the traffic?</li>
+</ol>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ack/" class="post-tag tag-link-ack"
+                                        title="see questions tagged 'ack'" rel="tag">ack</a>
+                                
+                                    <a href="/tags/rst/" class="post-tag tag-link-rst"
+                                        title="see questions tagged 'rst'" rel="tag">rst</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Jan '17, 13:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e94c6034e9c57aead12549c40b46470b?s=32&amp;d=identicon&amp;r=g" alt="jonwadsworth's gravatar image" />
+    <p><a href="/users/27215/jonwadsworth">jonwadsworth</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jonwadsworth has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-58546">
+    
+        <a name="58561"></a>
+        <div class="comment" id="comment-58561">
+            <div id="post-58561-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<blockquote>
+<p>Here's the actual tcpdump output for the extra-geeky:</p>
+</blockquote>
+</blockquote>
+
+<p>I'd still rather have look at actual pcap file in a publicly accessible location...</p>
+
+<p>First blush at the RST/ACK behavior without seeing the trace is the RSTs are either not getting to the destination, or they are considered invalid by the receiving destination.  I have some older products that have some TCP stack issues and a modern Linux host does not accept RSTs from these devices.  Conversely, perhaps an outbound firewall won't forward them because it lost the state (e.g. you probably see RELATED-ESTABLISHED and other such keywords when doing firewall config).</p>
+
+<blockquote>
+<blockquote>
+<p>?' in the PID. Yes, I'm running NetHogs as root. How can it not know??</p>
+</blockquote>
+</blockquote>
+
+<p>I don't know that tool but I usually use netstat -tnp.  Once sockets are in certain states that are not passing data (e.g. Time-Wait), I noticed no process is listed.  I wonder if you are seeing that here as well.</p>
+
+<p>Is lsof any better?</p></div>
+            <div class="comment-info" id="comment-58561-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '17, 05:10)</span>
+                <a class="comment-user userinfo" href="/users/112/bob-jones">Bob Jones</a>
+                
+            </div>
+        </div>
+    
+        <a name="58568"></a>
+        <div class="comment" id="comment-58568">
+            <div id="post-58568-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your comments Bob!  I have the .pcap file:
+<a href="https://github.com/jonwadsworth/pcap/blob/master/104.pcap">https://github.com/jonwadsworth/pcap/blob/master/104.pcap</a></p>
+
+<p>It's pretty big (12MB)....  Very interested to hear what you think.</p>
+
+<p>I will try your suggestions of netstat -tnp &amp; checking the firewall the next time this happens!</p></div>
+            <div class="comment-info" id="comment-58568-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '17, 11:27)</span>
+                <a class="comment-user userinfo" href="/users/27215/jonwadsworth">jonwadsworth</a>
+                
+            </div>
+        </div>
+    
+        <a name="58575"></a>
+        <div class="comment" id="comment-58575">
+            <div id="post-58575-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just being curious: is there a virtualization software running at the time this happens?</p></div>
+            <div class="comment-info" id="comment-58575-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jan '17, 03:27)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58643"></a>
+        <div class="comment" id="comment-58643">
+            <div id="post-58643-score" class="comment-score"></div>
+            <div class="comment-text"><p>No Virt software running... thanks for asking</p></div>
+            <div class="comment-info" id="comment-58643-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jan '17, 09:27)</span>
+                <a class="comment-user userinfo" href="/users/27215/jonwadsworth">jonwadsworth</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58546" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58546-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/58546/ackrst-loop?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/58546/ackrst-loop?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/58546/ackrst-loop?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/58546/ackrst-loop?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="58574"></a>
+                    <div id="answer-container-58574" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-58574-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58574/up/" rel="nofollow"> </a>
+<div id="post-58574-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-58574-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58574/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hello  jonwadsworth!</p>
+<p>This is one of the coolest RST loops that I have ever seen. Here is what's going on:</p>
+<p>Your Linux box is trying to reset a connection. You figured that out correctly. For some reason this packet doesn't make it to the destination address. Instead you get these retransmitted ACKs all the time.</p>
+<p>From a receivers point of view it is perfectly normal, if data arrives after a Reset has been send. That's usually data in transit that was transmitted by the remote system before it has received the RST. This happens usually within a few milliseconds (1 TCP roundtrip time to be precise).</p>
+<p>In your tracefile we see TCP packets <em>without data</em> arriving for more than 8 seconds. That's odd. Let's take a closer look.</p>
+<p>The ACK packets with source address 104.196.229.58 have a TTL of 64 and an IP ID of 0. Both are odd values. The TTL has an initial value of 255, 128 or 64 (depending on your operating system) and is reduced by one when a router forwards a packet. A TTL of 64 indicates that the very packet originates from a host on your local network. My guess is, that your firewall is sending this packet for what ever reason.</p>
+<p>Next the IP ID. This is something like a 16 bit serial number that is used to process fragmented IP packets. Depending on your OS the IP ID could be incremented by one for each packet in a TCP connection or each packet send by the host (independent of the TCP connection). Or it could be a just a random number. In your tracefile all ACK packets have the same IP ID of zero. This is another indicator, that the packets are not coming from the remote host. If 104.196.229.58 had send these packets as real retransmissions we would see different IP IDs.</p>
+<p>I assume, that your firewall is doing something strange. I am pretty sure that neither the RST packets nor the ACK packets are visible on the external interface of the firewall. 
+It would be greatly appreciated if you could tell us what manufacturer / software / configuration is responsible for this behaviour.</p>
+<p>Oh, by the way: Capturing directly on the firewall may or may not give you a correct representation of the traffic leaving the physical interface. The result depends on the order of operation on the firewall. The tracefile will be different, depending on the fact if the filter engine kicks in before or after Wireshark / tcpdump have access to the packet.</p>
+<p>Anyway, thank you for one of the most remarkable TCP behavior that I have seen in a while. Thumbs up.</p>
+<p>Good hunting!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/58574/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Jan '17, 02:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3b60e92020a427bb24332efc0b560943?s=32&amp;d=identicon&amp;r=g" alt="packethunter's gravatar image" />
+    <p><a href="/users/416/packethunter">packethunter</a><br/>
+    <span class="score" title="2137 reputation points"><span class="">2.1k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="48 badges"><span class="bronze">&#9679;</span><span class="badgecount">48</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="packethunter has 8 accepted answers">8&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-58574">
+    
+        <a name="58614"></a>
+        <div class="comment" id="comment-58614">
+            <div id="post-58614-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hey Packethunter!</p>
+
+<p>Wow, some great info there.</p>
+
+<p>Well, it's happening again today, so I have more data!  And, it looks like your suspicions are correct.</p>
+
+<p>First -- the Firewall is a Sonicwall TZ200 -- on their low-end of devices; but it has the latest firmware updates, etc.</p>
+
+<p>Here's the SonicWall's Packet Monitor output for the address in question, during a 'event':
+<img src="https://osqa-ask.wireshark.org/upfiles/Selection_138.jpg" width="600"></p>
+
+<p>I'm not sure if this site will display the entire width of that image, so in case you can't see -- the far right columns show that the packets with a "Source IP" of 50.234.5.128 (the ACK's) are actually being GENERATED by the SonicWall!  This is super crazy to me -- it's as if the SonicWall is forging/impersonating that device.  I suppose that it thinks that it has a good reason for this -- but seems crummy to me.</p>
+
+<p>Then, when my PC sends back the RST, the logs indicate that the SonicWall has DROPPED those packets.
+Presumably so that the actual server at 50.234.5.128 doesn't get these RST's and wonder WTF is going on.</p>
+
+<p>In case you'd like to have a look----
+I have added my PCAP from my local system:  <a href="https://github.com/jonwadsworth/pcap/blob/master/dump.pcap">https://github.com/jonwadsworth/pcap/blob/master/dump.pcap</a></p>
+
+<p>And the pcap from the SonicWall: <a href="https://github.com/jonwadsworth/pcap/blob/master/packet-c.pcap">https://github.com/jonwadsworth/pcap/blob/master/packet-c.pcap</a></p>
+
+<p>OK, so:</p>
+
+<p>1)  Any clue why a Firewall would GENERATE ACK's for a remote device?
+2)  Could something in my configuration be causing this?
+3)  Any idea how to prevent this from happening in the future?</p>
+
+<p>Thanks again for help in sleuthing this out!!</p></div>
+            <div class="comment-info" id="comment-58614-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '17, 12:27)</span>
+                <a class="comment-user userinfo" href="/users/27215/jonwadsworth">jonwadsworth</a>
+                
+            </div>
+        </div>
+    
+        <a name="58615"></a>
+        <div class="comment" id="comment-58615">
+            <div id="post-58615-score" class="comment-score"></div>
+            <div class="comment-text"><p>So it's happening again... it seems like the SonicWall is detecting this as an RST flood.</p>
+
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/Selection_139.jpg"></p>
+
+<p>I'm guessing that this is an overly aggressive TCP flood detection setting on the SonicWall.  Here are my TCP settings:</p>
+
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/Selection_140.jpg"></p>
+
+<p>Any ideas?</p>
+
+<p>Thanks!!</p></div>
+            <div class="comment-info" id="comment-58615-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '17, 13:32)</span>
+                <a class="comment-user userinfo" href="/users/27215/jonwadsworth">jonwadsworth</a>
+                
+            </div>
+        </div>
+    
+        <a name="58616"></a>
+        <div class="comment" id="comment-58616">
+            <div id="post-58616-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Is there any setting for ssl or tls content filtering or control?</p></div>
+            <div class="comment-info" id="comment-58616-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '17, 13:44)</span>
+                <a class="comment-user userinfo" href="/users/112/bob-jones">Bob Jones</a>
+                
+            </div>
+        </div>
+    
+        <a name="58644"></a>
+        <div class="comment" id="comment-58644">
+            <div id="post-58644-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have seen this behaviour with :80 as well as :443; so I'm inclined to think it's not SSL-specific -- but I'll check &amp; report back</p></div>
+            <div class="comment-info" id="comment-58644-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jan '17, 09:28)</span>
+                <a class="comment-user userinfo" href="/users/27215/jonwadsworth">jonwadsworth</a>
+                
+            </div>
+        </div>
+    
+        <a name="58645"></a>
+        <div class="comment" id="comment-58645">
+            <div id="post-58645-score" class="comment-score"></div>
+            <div class="comment-text"><p>There are 3 tracefiles attached to this question:
+- Client
+- FW
+- Server</p>
+
+<p>Am I right?</p></div>
+            <div class="comment-info" id="comment-58645-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jan '17, 11:27)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="58671"></a>
+        <div class="comment not_top_scorer" id="comment-58671">
+            <div id="post-58671-score" class="comment-score"></div>
+            <div class="comment-text"><p>Please try to disable the RFC 5961 enforcement</p>
+
+<p>RFC 5961 addresses a problem in TCP where an attacker might be able to break a session by guessing sequence and acknowledge numbers within a certain range. This RFC adds a few extra checks to make the attackers life harder.</p>
+
+<p>It is possible that the firewall is a bit overzealous with it's checks.</p>
+
+<p>Just a (very) wild guess: Your initial post mentions, that the problems started after the installation of a monitoring application. Is it possible, that a source port number was re-used? The RST/ACK loop could be explained, if the firewall uses stale data from an internal table to perform the RFC 5961 checks.</p>
+
+<p>Can you browse through your log files to check if (and when) this combination of source IP, source port, destination IP and destination port was used?</p>
+
+<p>On the other hand: The case can be closed, if disabling RFC 5961 enforcement both fixes the problem and leaves you happy</p>
+
+<p>Good hunting</p></div>
+            <div class="comment-info" id="comment-58671-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jan '17, 14:10)</span>
+                <a class="comment-user userinfo" href="/users/416/packethunter">packethunter</a>
+                
+            </div>
+        </div>
+    
+        <a name="58676"></a>
+        <div class="comment not_top_scorer" id="comment-58676">
+            <div id="post-58676-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's right, they are in my Github, linked above.</p></div>
+            <div class="comment-info" id="comment-58676-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jan '17, 14:22)</span>
+                <a class="comment-user userinfo" href="/users/27215/jonwadsworth">jonwadsworth</a>
+                
+            </div>
+        </div>
+    
+        <a name="58689"></a>
+        <div class="comment not_top_scorer" id="comment-58689">
+            <div id="post-58689-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hm, from timing in the sonicwall trace it seems the FW generates the ACKs.</p>
+
+<p>But if I remember right, can't open the traces at the moment, the TTL in every trace and and every packet is 64.
+That looks unexpected to me, as the traces have been captured at different point and the ip addresses suggest that there should be a routing instance in the path.</p></div>
+            <div class="comment-info" id="comment-58689-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '17, 01:09)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="58763"></a>
+        <div class="comment not_top_scorer" id="comment-58763">
+            <div id="post-58763-score" class="comment-score"></div>
+            <div class="comment-text"><p>In all the tracefiles provided on Github I can only see the RST/ACK loop.</p>
+
+<p>To verify or to refute my guess regarding the RFC 5961 implementation working with stale data we need a much longer tracefile. Not sure, if you can force this with your toolset:</p>
+
+<ul>
+<li>
+<p>Each TCP connection has a unique combination of source and destination IP, source and destination port, and SEQ and ACK numbers</p>
+</li>
+<li>
+<p>If I am right the monitoring application generates enough TCP sessions so that the combination of IP addresses and ports is no longer unique</p>
+</li>
+<li>
+<p>It might take days until this situation re-occurs. So, that's a good opportunity to work with large ring buffers.</p>
+</li>
+</ul>
+
+<p>If the problem disappears by disabling the RFC 5961 check this threat can be closed. Otherwise I suggest a support call to the firewall manufacturer, as it is clear that the firewall is generating the packets.</p>
+
+<p>Good luck</p></div>
+            <div class="comment-info" id="comment-58763-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '17, 05:18)</span>
+                <a class="comment-user userinfo" href="/users/416/packethunter">packethunter</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58574" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58574-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/58546/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='h7t1BRstbB6f1ieACU5SXaLFjIWwyLK2' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/58546/ackrst-loop?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/58546/ackrst-loop?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ack/"
+            class="tag-link-ack"
+            title="see questions tagged'ack'using tags"
+            rel="tag">ack</a> <span class="tag-number">&#215;139</span><br/>
+        
+        <a href="/tags/rst/"
+            class="tag-link-rst"
+            title="see questions tagged'rst'using tags"
+            rel="tag">rst</a> <span class="tag-number">&#215;81</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 5, 2017, 1:36 p.m.">05 Jan '17, 13:36</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,628 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 14, 2017, 5:18 a.m.">14 Jan '17, 05:18</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13461/server-unable-to-access-websites-http-or-https-from-a-windows-server">Server unable to access websites (HTTP or HTTPS) from a windows server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23885/rst-after-syn-ack">RST after SYN-ACK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35478/telnet-to-a-opened-port-get-rst-ack-responce">Telnet to a opened port, get [RST, ACK] responce</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55758/mssql-keep-aliverst-troubleshooting">MSSQL Keep-alive/RST Troubleshooting</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14212/router-replies-with-rst-after-fin-ack">Router replies with [RST] after [FIN, ACK]</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5533/rst-ack-immediately-after-sending-data">[RST, ACK] immediately after sending data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14257/why-the-client-resend-whole-message-to-server">why the client resend whole message to server?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25374/server-sending-rst-message">Server sending RST Message</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37992/ack-packets-are-getting-dropped-causing-a-ftp-session-reset">Ack packets are getting dropped, causing a FTP session reset</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38089/google-object-storage-rst-ack">Google Object Storage RST, ACK</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

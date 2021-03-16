@@ -1,0 +1,1071 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>wireshark mate sip 2nd or 3rd pdu filter - Wireshark Q&amp;A</title>
+        <meta name="description" content="I have a wireshark capture that contains a lot of sip subscribe and notify. I am using mate to do the filtering. Each gop will contain normally 4 PDUS (Subscribe-200OK, Notify-200OK). I can filter the first and last pdu of all Gops, but I would like to filter only the 2nd or 3rd pdu of all gops. Doe..." />
+        <meta name="keywords" content="mate" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/51843/wireshark-mate-sip-2nd-or-3rd-pdu-filter" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/51843/wireshark-mate-sip-2nd-or-3rd-pdu-filter?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='y5HiT2bNPCDNxOuYhpXg8xBF3EIhrELV' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/51843/wireshark-mate-sip-2nd-or-3rd-pdu-filter">wireshark mate sip 2nd or 3rd pdu filter</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-51843-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51843/up/" rel="nofollow"> </a>
+<div id="post-51843-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-51843-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51843/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/51843/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have a wireshark capture that contains a lot of sip subscribe and notify. I am using mate to do the filtering. Each gop will contain normally 4 PDUS (Subscribe-200OK, Notify-200OK). I can filter the first and last pdu of all Gops, but I would like to filter only the 2nd or 3rd pdu of all gops. Does anyone have an idea on how I can achieve this. Is it a filter that I don't know about or some more work in the mate script?. Here is the mate script.</p>
+<pre><code>Transform start_stop_cond {
+Match (method="SUBSCRIBE") (msg_type=start);
+Match (resp_code,req_method="NOTIFY") (msg_type=stop);
+};
+
+Pdu sip_pdu Proto sip Transport ip {
+
+Extract user From sip.from.user;
+Extract user From sip.to.user;
+Extract user From sip.ppi.user;
+Extract callid From sip.Call-ID;
+Extract method From sip.Method;
+Extract cseq From sip.CSeq.seq;
+Extract resp_code From sip.Status-Code;
+Extract req_method From sip.CSeq.method;
+Transform start_stop_cond;
+};
+
+Gop sip_gop On sip_pdu Match (callid) {
+
+Start(msg_type=start);
+Stop(msg_type=stop);
+};
+
+Done;
+</code></pre>
+<p>Thanks so much in advance.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/mate/" class="post-tag tag-link-mate"
+                                        title="see questions tagged 'mate'" rel="tag">mate</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Apr '16, 11:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6ebdd129ea651d15f7888bf94b08d791?s=32&amp;d=identicon&amp;r=g" alt="Carlos%20Lopez's gravatar image" />
+    <p><a href="/users/23957/carlos-lopez">Carlos Lopez</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Carlos Lopez has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/51843/">
+                edited
+                <strong>21 Apr '16, 13:56</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-51843">
+    
+        <a name="51850"></a>
+        <div class="comment" id="comment-51850">
+            <div id="post-51850-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't know any way to filter/refer to a PDU of a particular position within a GoP. Is your example just an example or you are really interested in the 200 to the SUBSCRIBE and/or the first and mandatory NOTIFY, or you've used that message exchange just as an example?</p></div>
+            <div class="comment-info" id="comment-51850-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Apr '16, 16:00)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="51883"></a>
+        <div class="comment" id="comment-51883">
+            <div id="post-51883-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Sindy. 
+In this case I just want to check if the Notify is seen before the 200OK for Subscribe. Any idea how to filter this?. for the whole capture? I imagined that by printing the 2nd pdu for all gops I might see the issue I am looking for. 
+Thanks.</p></div>
+            <div class="comment-info" id="comment-51883-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Apr '16, 12:40)</span>
+                <a class="comment-user userinfo" href="/users/23957/carlos-lopez">Carlos Lopez</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-51843" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51843-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/51843/wireshark-mate-sip-2nd-or-3rd-pdu-filter?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/51843/wireshark-mate-sip-2nd-or-3rd-pdu-filter?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/51843/wireshark-mate-sip-2nd-or-3rd-pdu-filter?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/51843/wireshark-mate-sip-2nd-or-3rd-pdu-filter?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="51885"></a>
+                    <div id="answer-container-51885" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-51885-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51885/up/" rel="nofollow"> </a>
+<div id="post-51885-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-51885-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51885/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Carlos Lopez has selected this answer as the correct answer"
+        href="/accept_answer/51885/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Okay, so we've moved from a generic requirement, which was almost impossible to fulfil, to a specific one. Much easier, I tell ya :-)</p>
+<p>My suggestion here is to forge a dedicated GoP AVP using a <code>Transform</code> in the GoP. The principle relies on the fact that the <code>Transform</code> is invoked each time when the GoP's AVPL is modified due to assignment of a new PDU to the GoP, and that the <code>Match</code> clauses within a <code>Transform</code> are only executed until the first success.</p>
+<p>So you'd use a "flag" AVP which would be added to the GoP's AVPL when either the 200(SUBSCRIBE) or the NOTIFY arrive while this flag AVP hasn't been created yet, and the value of this AVP would be either "200" or "NOTIFY" depending on which message has caused it to be added to the GoP's AVPL.</p>
+<p>There is another important thing, a <code>Transform</code> used in a GoP works with the AVPL of the GoP, <strong>not</strong> with the AVPLs of the newly arrived PDUs. So we have to add a single unique AVP per each PDU to the GoP's AVPL so that the GoP's <code>Transform</code> would do what we want. This effectively means that we need to forge a single AVP distinguishing the <code>200</code> response to <code>SUBSCRIBE</code> from the <code>200</code> response to <code>NOTIFY</code> at PDU level, and <code>Extra</code> it into the GoP.</p>
+<p>So the complete code would be something like:</p>
+<pre><code>Transform start_stop_cond {
+  Match (method="SUBSCRIBE") (msg_type=start);
+  Match (resp_code,req_method="NOTIFY") (msg_type=stop);
+};
+
+Transform xtract_rsp {
+  Match (resp_code, req_method="SUBSCRIBE") Insert (resp_to="SUBSCRIBE");
+  Match (resp_code, req_method="NOTIFY") Insert (resp_to="NOTIFY");
+};
+
+Pdu sip_pdu Proto sip Transport ip {
+  Extract user From sip.from.user;
+  Extract user From sip.to.user;
+  Extract user From sip.ppi.user;
+  Extract callid From sip.Call-ID;
+  Extract method From sip.Method;
+  Extract cseq From sip.CSeq.seq;
+  Extract resp_code From sip.Status-Code;
+  Extract req_method From sip.CSeq.method;
+  Transform start_stop_cond, xtract_rsp;
+};
+
+Transform mark_it {
+  Match (first_was);
+  // only this rule, which doesn't change the GoP's AVPL, is executed if the first_was AVP already exists for the GoP's AVPL, ensuring that it is added only once
+  Match (method="NOTIFY") Insert (first_was="NOTIFY");
+  Match (resp_to="SUBSCRIBE") Insert (first_was="RSP2SUBSCRIBE");
+};
+
+Gop sip_gop On sip_pdu Match (callid) {
+  Start(msg_type=start);
+  Stop(msg_type=stop);
+  Extra (method,resp_to);
+  Transform mark_it;
+};
+
+Done;
+</code></pre>
+<p><strong>EDIT:</strong>
+To respond the title of the question rather than the particular need, the approach actually <strong>could</strong> be generalized in terms that you could</p>
+<ul>
+<li>
+<p>organize a rudimentary PDU counter in a GoP (but the <code>increment</code> function needs to be implemented manually using a <code>Transform</code>, so the processing speed would be impacted and the number of PDUs per GoP would have to be reasonably low)</p>
+</li>
+<li>
+<p>save information about several PDUs of interest (e.g. the 2nd and the 3rd) for use in display filter, but as the AVPs can only be assigned constant values, not values of other AVPs, and each protocol field may only be <code>Extract</code>ed once per PDU, there is no way to e.g. store the cseq values of these messages</p>
+</li>
+<li>
+<p>delete the information from each new PDU after it has been used to modify the GoP's AVPL, using a "cleanup" <code>Transform</code>. This last step may also functionally replace the PDU's own <code>Transform</code> creating the "resp_to" AVP.</p>
+</li>
+</ul>
+<p>So an example of the result would look like this:</p>
+<pre><code>Transform start_stop_cond {
+  Match (method="SUBSCRIBE") (msg_type=start);
+  Match (resp_code,req_method="NOTIFY") (msg_type=stop);
+};
+
+Pdu sip_pdu Proto sip Transport ip {
+  Extract user From sip.from.user;
+  Extract user From sip.to.user;
+  Extract user From sip.ppi.user;
+  Extract callid From sip.Call-ID;
+  Extract method From sip.Method;
+  Extract cseq From sip.CSeq.seq;
+  Extract resp_code From sip.Status-Code;
+  Extract req_method From sip.CSeq.method;
+  Transform start_stop_cond;
+};
+
+Transform pdu_counter {
+   Match (last_pdu=9) Replace (last_pdu="max");
+   Match (last_pdu=8) Replace (last_pdu=9);
+   Match (last_pdu=7) Replace (last_pdu=8);
+   Match (last_pdu=6) Replace (last_pdu=7);
+   Match (last_pdu=5) Replace (last_pdu=6);
+   Match (last_pdu=4) Replace (last_pdu=5);
+   Match (last_pdu=3) Replace (last_pdu=4);
+   Match (last_pdu=2) Replace (last_pdu=3);
+   Match (last_pdu=1) Replace (last_pdu=2);
+   Match (last_pdu="max") ();
+   Match () Insert (last_pdu=1);
+};
+
+Transform record_2nd {
+  Match (last_pdu{1|3|4|5|6|7|8|9|"max"});
+//skip the rest unless we're dealing with PDU number 2
+  Match (method="NOTIFY") (pdu_2="NOTIFY");
+  Match (resp_code,req_method="SUBSCRIBE") (pdu_2="RSP2SUBSCRIBE");
+  Match () (pdu_2="OTHER");
+};
+
+Transform record_3rd {
+  Match (last_pdu{1|2|4|5|6|7|8|9|"max"});
+//skip the rest unless we're dealing with PDU number 3
+  Match (method="NOTIFY") (pdu_3="NOTIFY");
+  Match (resp_code,req_method="SUBSCRIBE") (pdu_3="RSP2SUBSCRIBE");
+  Match () (pdu_3="OTHER");
+};
+
+Transform drop_extra {
+  Match Loose (method, resp_code,req_method) Replace ();
+};
+
+Gop sip_gop On sip_pdu Match (callid) {
+  Start(msg_type=start);
+  Stop(msg_type=stop);
+  Extra (method,resp_code,req_method);
+  Transform pdu_counter,record_2nd,record_3rd,drop_extra;
+};
+
+Done;
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/51885/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Apr '16, 14:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/51885/">
+                edited
+                <strong>23 Apr '16, 02:40</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-51885">
+    
+        <a name="51890"></a>
+        <div class="comment" id="comment-51890">
+            <div id="post-51890-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Sindy.
+Thanks a lot for your help. The result on your first proposal, I thought I had a capture which contained the notify before the 200OK for subscribe, but I didn't. then I modified the capture I have as follows: ,(exported hex capture, reversed the order in two places of the 200OK for subscribe &lt;-&gt; notify and imported back to wireshark), then added the first proposal in mate but it always inserted in the attribute of all the Gops the following:</p>
+
+<pre><code>first_was: RSP2SUBSCRIBE
+</code></pre>
+
+<p>Then I tried your 2nd proposal and I can see in the packets I reversed, the following:<br>
+</p>
+
+<pre><code>pdu_3: RSP2SUBSCRIBE
+pdu_2: NOTIFY
+</code></pre>
+
+<p>On those I didn't reverse the order I saw this:  <br>
+</p>
+
+<pre><code>pdu_3: NOTIFY  
+pdu_2: RSP2SUBSCRIBE
+</code></pre>
+
+<p>Can you spot what the issue is with the first proposal?  <br>
+I wonder wouldn't it be a nice feature to have the pdu order/number within the gop under the number of PDUs something like: PDU: in frame: 6 (0.000001 : 0.000001).No=2, and so on.  <br>
+Thanks so much.</p></div>
+            <div class="comment-info" id="comment-51890-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Apr '16, 06:17)</span>
+                <a class="comment-user userinfo" href="/users/23957/carlos-lopez">Carlos Lopez</a>
+                
+            </div>
+        </div>
+    
+        <a name="51891"></a>
+        <div class="comment" id="comment-51891">
+            <div id="post-51891-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>wouldn't it be a nice feature</p>
+</blockquote>
+
+<p>if you want a Wireshark feature, you can always <a href="https://bugs.wireshark.org/bugzilla/enter_bug.cgi?product=Wireshark">file a bug</a> with severity "Enhancement". But be prepared that MATE is not widely popular so enhancements to it may have a very low priority.</p>
+
+<blockquote>
+<p>Can you spot what the issue is with the first proposal?</p>
+</blockquote>
+
+<p>Seemingly not without the capture, as I cannot see anything wrong in my MATE code even now. So please publish your modified capture (i.e. the one containing some NOTIFY before 200(SUBSCRIBE)) somewhere like Cloudshark (a preferred option on this site), Google Drive, Dropbox, ... and put a login-free link to it here.</p>
+
+<p>Nevertheless:</p>
+
+<ul>
+<li>
+<p>you can reach the same goal by simply removing everything related to <code>Transform record_3rd</code> from the second proposal and renaming <code>pdu_2</code> to something you like more</p>
+</li>
+<li>
+<p>by debugging the first proposal yourself, you'd obtain a better understanding how MATE works.</p>
+</li>
+</ul>
+
+<blockquote>
+<p>I thought I had a capture which contained the notify before the 200 OK for subscribe</p>
+</blockquote>
+
+<p>I'm wondering what is the goal of the whole exercise here. Normally, the order of <strong>sending</strong> of those two messages depends on the SIP stack processing the received SUBSCRIBE, so it should be the same for all SUBSCRIBE-initiated dialogs; the order of <strong>reception</strong> of the two messages may be swapped due to the nature of the meshed packet networks (even if no packets are lost), so the issuer of the SUBSCRIBE must be prepared for such situation and shouldn't expect the two messages to come in any particular order. The sole purpose of the first NOTIFY is to inform the subscriber about the state of the subscribed object as soon as possible, not to affect the state diagram of the dialog. </p></div>
+            <div class="comment-info" id="comment-51891-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Apr '16, 06:46)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="51892"></a>
+        <div class="comment" id="comment-51892">
+            <div id="post-51892-score" class="comment-score"></div>
+            <div class="comment-text"><p>The issue is that the application I am working on is throwing some errors and I suspect the reception of resp and req in different order was the culprit, for sure this is a bug, but I haven't been able to probe that, at least not until now, in any case I got your first proposal and remove the extra as last step and the result looks better now. Here it is.  Thanks so much for your help. I am very grateful.<br>
+</p>
+
+<pre><code>Transform start_stop_cond {
+  Match (method="SUBSCRIBE") (msg_type=start);
+  Match (resp_code,req_method="NOTIFY") (msg_type=stop);
+};
+
+Transform xtract_rsp {
+  Match (resp_code, req_method="SUBSCRIBE") Insert (resp_to="SUBSCRIBE");
+  Match (resp_code, req_method="NOTIFY") Insert (resp_to="NOTIFY");
+};
+
+Pdu sip_pdu Proto sip Transport ip {
+  Extract user From sip.from.user;
+  Extract user From sip.to.user;
+  Extract user From sip.ppi.user;
+  Extract callid From sip.Call-ID;
+  Extract method From sip.Method;
+  Extract cseq From sip.CSeq.seq;
+  Extract resp_code From sip.Status-Code;
+  Extract req_method From sip.CSeq.method;
+  Transform start_stop_cond, xtract_rsp;
+};
+
+Transform mark_it {
+  Match (first_was);
+  // only this rule, which doesn't change the GoP's AVPL, is executed if the first_was AVP already exists for the GoP's AVPL, ensuring that it is added only once
+  Match (method="NOTIFY") Insert (first_was="NOTIFY");
+  Match (resp_to="SUBSCRIBE") Insert (first_was="RSP2SUBSCRIBE");
+};
+
+Transform rem_extra {
+  Match Loose (method, resp_to) Replace ();
+};
+
+Gop sip_gop On sip_pdu Match (callid) {
+  Start(msg_type=start);
+  Stop(msg_type=stop);
+  Extra (method,resp_to);
+  Transform mark_it, rem_extra;`enter code here`
+};
+
+Done;
+</code></pre></div>
+            <div class="comment-info" id="comment-51892-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Apr '16, 07:39)</span>
+                <a class="comment-user userinfo" href="/users/23957/carlos-lopez">Carlos Lopez</a>
+                
+            </div>
+        </div>
+    
+        <a name="51893"></a>
+        <div class="comment" id="comment-51893">
+            <div id="post-51893-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>in any case I got your first proposal and remove the extra as last step and the result looks better now</p>
+</blockquote>
+
+<p>That's quite odd, as the first proposal contains another mechanism to ensure that the <code>first_was</code> is added only once (as that mechanism seemed to me easier to understand than the "Extra, Make use of, Remove" one, maybe I was wrong?).</p>
+
+<p>Normally, the "list of PDU types already encountered in the GoP" (methods and their responses) is growing with each PDU, but the <code>first_was</code> AVP should be added only once, which is <strong>either</strong> when the GoP's AVPL has been just extended with <code>method="NOTIFY"</code> <strong>or</strong> when it has been just extended with <code>resp_to="SUBSCRIBE"</code>. There is nothing in the code that could <strong>replace</strong> an existing <code>first_was</code>, so in the worst case, there should have been <strong>both</strong> <code>first_was="NOTIFY"</code> and <code>first_was="RSP2SUBSCRIBE</code> if NOTIFY has come first and the mechanism has failed.</p>
+
+<p>I went so far as to use one of the subscribe-notify captures in my archive and arrange the four packets in question both ways (using <code>Export Specified Packets</code>, <code>Time Shift</code>, and <code>Merge</code>), and it worked well - if the first packet following the SUBSCRIBE is the NOTIFY, I get <code>first_was: NOTIFY</code>, otherwise I get <code>first_was: RSP2SUBSCRIBE</code>. So I keep my proposal in the Answer as it was.</p></div>
+            <div class="comment-info" id="comment-51893-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Apr '16, 08:18)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-51885" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51885-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/51843/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='y5HiT2bNPCDNxOuYhpXg8xBF3EIhrELV' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/51843/wireshark-mate-sip-2nd-or-3rd-pdu-filter?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/51843/wireshark-mate-sip-2nd-or-3rd-pdu-filter?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mate/"
+            class="tag-link-mate"
+            title="see questions tagged'mate'using tags"
+            rel="tag">mate</a> <span class="tag-number">&#215;27</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 21, 2016, 11:37 a.m.">21 Apr '16, 11:37</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,178 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 23, 2016, 8:19 a.m.">23 Apr '16, 08:19</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/931/mate-failed-to-configure-when-starting-with-webmate-enabled">&#39;mate failed to configure&#39; when starting with web.mate enabled</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51023/matching-gop-to-another-gop-to-another-gop">Matching GoP to another GoP to another GoP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4013/extract-mac-address-using-mate">extract mac address using mate</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51349/wireshark-mate-configuration-issues-and-advise">Wireshark MATE configuration issues and advise</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5243/exclude-a-request-and-its-corresponding-answer">Exclude a request and its corresponding answer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52431/arithmetic-support-in-mate">Arithmetic Support in MATE?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9045/unable-to-parse-rtps2-attributes-through-mate-or-through-display-filter">Unable to parse RTPS2 attributes through MATE or through display filter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54370/how-to-filter-map-request-by-msisdn-and-its-response">How to filter MAP request by msisdn and its response</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16235/mate-display-filter-for-sip-calls">MATE display filter for SIP calls</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54631/wireshark-mate">Wireshark MATE</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

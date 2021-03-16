@@ -1,0 +1,1327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Sequence number differential greater than 2 billion causing issues? - Wireshark Q&amp;A</title>
+        <meta name="description" content="A week ago or so I started the below thread. I have since tweaked our code to assure random sequence numbers every time. The problem is if the sequence number used is greater than 2147483647 it does fail. As long as it is less than that it works repeatedly using the same port. The people who wrote t..." />
+        <meta name="keywords" content="rfc,ip,number,tcp,sequence" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/33286/sequence-number-differential-greater-than-2-billion-causing-issues" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/33286/sequence-number-differential-greater-than-2-billion-causing-issues?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='VXlPe4OCywzUZNPh53VpO5x5X6JHtEtZ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/33286/sequence-number-differential-greater-than-2-billion-causing-issues">Sequence number differential greater than 2 billion causing issues?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-33286-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33286/up/" rel="nofollow"> </a>
+<div id="post-33286-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-33286-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33286/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/33286/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>A week ago or so I started the below thread. I have since tweaked our code to assure random sequence numbers every time. The problem is if the sequence number used is greater than 2147483647 it does fail. As long as it is less than that it works repeatedly using the same port.</p>
+<p>The people who wrote the third party TCP-IP stack for our embedded device are requesting an RFC number to confirm that is part of the TCP specifications. I can't find one, and the best I could find is this link: <a href="http://www-01.ibm.com/support/docview.wss?uid=isg1IZ05180">http://www-01.ibm.com/support/docview.wss?uid=isg1IZ05180</a></p>
+<p>Is it part of the standards and if so, which RFC is it? Thanks in advance!</p>
+<p><a href="http://ask.wireshark.org/questions/32932/can-identical-initial-sequence-numbers-cause-issues">http://ask.wireshark.org/questions/32932/can-identical-initial-sequence-numbers-cause-issues</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rfc/" class="post-tag tag-link-rfc"
+                                        title="see questions tagged 'rfc'" rel="tag">rfc</a>
+                                
+                                    <a href="/tags/ip/" class="post-tag tag-link-ip"
+                                        title="see questions tagged 'ip'" rel="tag">ip</a>
+                                
+                                    <a href="/tags/number/" class="post-tag tag-link-number"
+                                        title="see questions tagged 'number'" rel="tag">number</a>
+                                
+                                    <a href="/tags/tcp/" class="post-tag tag-link-tcp"
+                                        title="see questions tagged 'tcp'" rel="tag">tcp</a>
+                                
+                                    <a href="/tags/sequence/" class="post-tag tag-link-sequence"
+                                        title="see questions tagged 'sequence'" rel="tag">sequence</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Jun '14, 08:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d10b4a16cda08123bdeafd8686342d41?s=32&amp;d=identicon&amp;r=g" alt="wes000000's gravatar image" />
+    <p><a href="/users/7231/wes000000">wes000000</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="wes000000 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-33286">
+    
+</div>
+<div id="comment-tools-33286" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33286-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/33286/sequence-number-differential-greater-than-2-billion-causing-issues?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/33286/sequence-number-differential-greater-than-2-billion-causing-issues?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/33286/sequence-number-differential-greater-than-2-billion-causing-issues?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/33286/sequence-number-differential-greater-than-2-billion-causing-issues?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="33287"></a>
+                    <div id="answer-container-33287" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33287-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33287/up/" rel="nofollow"> </a>
+<div id="post-33287-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-33287-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33287/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="wes000000 has selected this answer as the correct answer"
+        href="/accept_answer/33287/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>The <strong>people who wrote the third party TCP-IP stack</strong> for our embedded device <strong>are requesting an RFC number to confirm</strong> that is part of the TCP specifications.</p>
+</blockquote>
+<p>WHAT? Seriously? </p>
+<p><strong>How were they able to write a TCP stack</strong>, without knowing the RFCs????</p>
+<p>Well, here we go: RFC 793 defines TCP and section 3.3 defines the range of sequence numbers.</p>
+<blockquote>
+<p><a href="http://tools.ietf.org/html/rfc793#section-3.3">http://tools.ietf.org/html/rfc793#section-3.3</a></p>
+</blockquote>
+<p>Sequence numbers are in the range of 0 - 2^32 - 1, which is roughly 4 billion (unsigned 32 bit integer). So, I don't see any good reason why the sequence number should be only 2^16 (~ 2 billion), unless the embedded device does not offer 'native' 32 bit integers and those developers did not care to implement the RFC in the right way, so they limited the SEQ number to what the hardware is offering, in your case apparently 2^16 - 1 (~ 2 billion).</p>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33287/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Jun '14, 08:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/33287/">
+                edited
+                <strong>02 Jun '14, 08:43</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33287">
+    
+        <a name="33289"></a>
+        <div class="comment" id="comment-33289">
+            <div id="post-33289-score" class="comment-score"></div>
+            <div class="comment-text"><p>The device does support native 32 bit numbers and it does generate sequence numbers using the full available range.</p>
+
+<p>The issue we were seeing was that if the initial sequence numbers were greater then the last successful connection initial sequence number by more than ~2 billion then the connection would be ignored by the SMTP server we want to connect to.</p>
+
+<p>That is why I had posted previously and was curious when a user posted about 2 billion being the greatest difference. And then i found the IBM site which seems to confirm that... Not sure to be honest.</p>
+
+<p>And I think they know RFC (but I don't know as they are third party), they were just trying to find one to confirm the 2 billion rule, but maybe they can't and wont be able to cause there is no rule. Again I'm not an expert at networking stuff.</p></div>
+            <div class="comment-info" id="comment-33289-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 09:12)</span>
+                <a class="comment-user userinfo" href="/users/7231/wes000000">wes000000</a>
+                
+            </div>
+        </div>
+    
+        <a name="33291"></a>
+        <div class="comment" id="comment-33291">
+            <div id="post-33291-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>then the connection would be ignored by the SMTP server we want to connect to.</p>
+</blockquote>
+
+<p>O.K. maybe I misunderstood your question. Now it sounds more like a problem with the SMTP server. </p>
+
+<p>So, what is </p>
+
+<ul>
+<li>the OS and OS version of the SMTP server</li>
+<li>the SMTP server software</li>
+</ul>
+
+<p>Is there any security and/or software device between the client and the server, like a firewall, IDS, etc. Your capture files in the other questions shows all systems in the same subnet, but the capture could have been anonymized.</p>
+
+<blockquote>
+<p>As long as it is less than that it works repeatedly using the <strong>same port</strong>.</p>
+</blockquote>
+
+<p>You mean the same source port, right?</p>
+
+<p>So, here is what I know and what I don't know.</p>
+
+<p>I don't know the 2 billion delta "effect", hence my question about the OS and OS version.</p>
+
+<p>What I know is this:</p>
+
+<p><a href="http://www.rfc-base.org/txt/rfc-1122.txt">http://www.rfc-base.org/txt/rfc-1122.txt</a></p>
+
+<p>Cite:</p>
+
+<pre>4.2.2.13  Closing a Connection: RFC-793 Section 3.5
+
+When a connection is closed actively, <b>it MUST linger in
+TIME-WAIT state for a time 2xMSL</b> (Maximum Segment Lifetime).
+However, <b>it MAY accept a new SYN from the remote TCP to
+reopen the connection directly from TIME-WAIT state</b>, if it:
+
+(1)  <b>assigns its initial sequence number</b> for the new
+     connection <b>to be larger than the largest sequence
+     number it used on the previous connection</b> incarnation,
+     and
+
+(2)  returns to TIME-WAIT state if the SYN turns out to be
+     an old duplicate.
+</pre>
+
+<p>So, yes, the new ISN must be larger than any previous SEQ (obvious), but there is nothing about a magic 2 billion delta border you'll have to cross. </p>
+
+<p>I guess that's an implementation detail of the TCP stack of the SMTP servers OS (call it a bug or freedom of choice or whatever).</p>
+
+<p>Maybe there are other RFCs, that change this defined behavior. If so, I was unable to find them ;-)</p>
+
+<p>Regards <br>
+Kurt</p></div>
+            <div class="comment-info" id="comment-33291-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 11:15)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33292"></a>
+        <div class="comment" id="comment-33292">
+            <div id="post-33292-score" class="comment-score"></div>
+            <div class="comment-text"><p>For all the logs shown I had our embedded device plugged directly into my laptop which was running hMailServer as a test environment. Both laptop and device had static IP and same subnet so it was a direct connnection. And I did have firewall and antivirus off during testing. My laptop is running Windows 7 Premium 64-bit and our device is ARM based with the third party stack on it.</p>
+
+<p>Prior to simplifying setup, we were originally trying to connect to 'mail.lookoutportablesecurity.com' SMTP server which is hosted by HostMonster. I doubt two servers both have bugs though.</p>
+
+<p>When I said 'same port' I meant same source and destination port. It was sending from port 1024 to destination port 25 everytime. We actually sent two emails per device cycle and do it would send port 1024 then 1025, but after reset it would go back to 1024 and thats when the problems started.</p>
+
+<p>Maybe we are having an issue with it thinking it's an old duplicate... I will try and find some RFC describing what and old duplicate is. Then I can send that off to the tcp-ip stack people and hopefully they will know what to do with it!</p></div>
+            <div class="comment-info" id="comment-33292-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 11:27)</span>
+                <a class="comment-user userinfo" href="/users/7231/wes000000">wes000000</a>
+                
+            </div>
+        </div>
+    
+        <a name="33294"></a>
+        <div class="comment" id="comment-33294">
+            <div id="post-33294-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I doubt two servers both have bugs though.</p>
+</blockquote>
+
+<p>well... unless proven otherwise I tend to not believe anything ;-))</p>
+
+<p>O.K. Let's go back to your other question and to the root of the problem. But you are right. It's a first indicator that there could be something wrong ;-)</p>
+
+<p>I think I don't fully understand the capture files you posted. You posted a file called <strong>wirshark_before_reset.pcap</strong> and a file called <strong>wireshark_after_reset.pcap</strong>, however the absolute time stamp in the 'before' file (17:04:3x) is <strong>after</strong> the 'after' file (16:12:35) !?! So, what exactly are those files showing?</p>
+
+<p>Would it be possible to show the whole effect in a single capture file with a brief explanation and a reference to frame numbers, where you identified the problem, like: working, not working, working again?</p>
+
+<p>Otherwise it would take too much time to get into the details. You know it all, because you spent hours and days with the problem. For us this is totally new and it would be easier to discuss the problem if there was a common base that everybody understands ;-)</p></div>
+            <div class="comment-info" id="comment-33294-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 12:14)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33295"></a>
+        <div class="comment" id="comment-33295">
+            <div id="post-33295-score" class="comment-score"></div>
+            <div class="comment-text"><p>BTW: While you are testing/recording, could you please check if the connection on the SMTP server is still visible during the different phases of the test.</p>
+
+<blockquote>
+<p>netstat -na | find ":25"</p>
+</blockquote>
+
+<p>It would be interesting to see how long it is in ESTABLISHED and TIME_WAIT state.</p></div>
+            <div class="comment-info" id="comment-33295-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 12:16)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33323"></a>
+        <div class="comment not_top_scorer" id="comment-33323">
+            <div id="post-33323-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am working on putting together a new capture all in a single file right now. I will run netstat several times to get an idea of when and how long it stays in TIME_WAIT etc.</p>
+
+<p>The reason the first two files had different times was because I actually ran the 'before reset' file after I captured the 'after reset' file. It is kind of confusing with the names.</p>
+
+<p>Basically what is happening is I am physically removing and restoring power to embedded processor (resetting it) and restarting our code after every reset. Our code is written to use this library to send two emails. So per power on it attempts to send 2 emails. The trick is if you wait several minutes and reset device both emails send fine. If reset the device immediately after those two emails send, and keep resetting it after the 2 attempts complete each time only certain emails succeed. For a long time I had no pattern. Then someone posted about the 2 billion thing and I put together a spreadsheet and entered ISN numbers and the pattern matched the issues I was seeing.</p></div>
+            <div class="comment-info" id="comment-33323-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 14:33)</span>
+                <a class="comment-user userinfo" href="/users/7231/wes000000">wes000000</a>
+                
+            </div>
+        </div>
+    
+        <a name="33324"></a>
+        <div class="comment not_top_scorer" id="comment-33324">
+            <div id="post-33324-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://drive.google.com/file/d/0B-pYPAmyNVqbMUFNOVRXTk1vc3c/edit?usp=sharing">https://drive.google.com/file/d/0B-pYPAmyNVqbMUFNOVRXTk1vc3c/edit?usp=sharing</a></p>
+
+<p>Here is the unified capture file. I actually did three resets, so 6 email attempts. The first two went fine but after that is where things get weird. In certain cases the server just ignores the device and pretends it's not there. I ran netstat... and at first it said LISTENING, then it said TIME_WAIT and it stayed that way from after the first email until about 3 minutes after the last email.</p></div>
+            <div class="comment-info" id="comment-33324-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 14:44)</span>
+                <a class="comment-user userinfo" href="/users/7231/wes000000">wes000000</a>
+                
+            </div>
+        </div>
+    
+        <a name="33325"></a>
+        <div class="comment not_top_scorer" id="comment-33325">
+            <div id="post-33325-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you apply the following filter, you'll see, that the client clearly violates RFC 1122, hence the server is 'not allowed' to answer.</p>
+
+<p>There are two source ports, 1024 and 1025 and you'll have to look at them separately.</p>
+
+<p><strong>++ Source port: 1025 ++</strong></p>
+
+<blockquote>
+<p>tcp.port eq 1025 and (tcp.flags.syn eq 1 or tcp.flags.reset eq 1 or tcp.flags.fin eq 1)</p>
+</blockquote>
+
+<p>frame #42: SEQ = 3114737405. Connection works</p>
+
+<p>frame #88: SEQ = 2363438278. Server does not answer, as the SEQ is lower than the last SEQ of the previous connection. This is <strong>correct</strong> according to RFC1122. The client violates the RFC!.</p>
+
+<p>frame #89 - #93: The client retries until it gives up and sends a RESET. The RESET must be ignored by the server to stay in TIME_WAIT!</p>
+
+<p>frame #134: SEQ = 1182260416. Server does not answer, as the SEQ is <strong>still lower</strong> than the last SEQ of the previous connection. This is <strong>correct</strong> according to RFC1122. The client violates the RFC!.</p>
+
+<p>frame #135 - #139: The client retries until it gives up and sends a RESET. The RESET must be ignored by the server to stay in TIME_WAIT!</p>
+
+<p><strong>RESULT:</strong> Everything absolutely normal for port 1025. The client violates RFC 1122 and the server does not answer the new connection requests, which is <strong>correct</strong>.</p>
+
+<p><strong>++ Source port: 1024 ++</strong></p>
+
+<blockquote>
+<p>tcp.port eq 1024 and (tcp.flags.syn eq 1 or tcp.flags.reset eq 1 or tcp.flags.fin eq 1)</p>
+</blockquote>
+
+<p>basically the same as for port 1025, however, with an important and strange difference at the end.</p>
+
+<p>frame #3: SEQ = 2929729191. Connection works</p>
+
+<p>frame #82: SEQ = 2771582515. Server does not answer, as the SEQ is lower than the last SEQ of the previous connection. This is <strong>correct</strong> according to RFC1122. The client violates the RFC!</p>
+
+<p>frame #83 - #87: The client retries until it gives up and sends a RESET. The RESET must be ignored by the server to stay in TIME_WAIT!</p>
+
+<p><strong>NOW</strong> for the strange thing.</p>
+
+<p>frame #96: SEQ = 742881266. Connection works! This should <strong>not</strong> have worked, as the SEQ is much lower than the last one for the working connection (frame #3 - 2929729191). </p>
+
+<p>So the interesting question is: Have you seen the connection for port 1024 in TIME_WAIT while the last connection was established? If so, this is a clear violation of RFC 1122. If the connection was no longer in TIME_WAIT it would have been O.K. to answer the SYN.</p>
+
+<p>All the rest is totally normal and adheres to RFC 1122.</p>
+
+<p>Now my question: What is it that your are identifying as a problem? Only the last connection for port 1024 or the whole behavior of the server?</p></div>
+            <div class="comment-info" id="comment-33325-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 15:10)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33327"></a>
+        <div class="comment not_top_scorer" id="comment-33327">
+            <div id="post-33327-score" class="comment-score"></div>
+            <div class="comment-text"><p><strong>TOTAL RESULT:</strong> In your test case, the client clearly violates RFC 1122. The easiest way to fix the problem would be to not reuse the source ports while the device is running, until there is a 'natural' wrap around at 65k. If the device is not doing that, the TCP/IP stack needs to be fixed.</p>
+
+<p>As the developers asked for links, send them the link to RFC 1122 and to this discussion.</p>
+
+<p>BTW: <strong>Did you reboot the device</strong> or reset the TCP/IP stack during your tests?</p>
+
+<p>If so, then the port reuse is 'normal' and you are facing a problem that cannot be fixed easily. Reason: if you reboot the device (or reset the TCP/IP stack) the first TCP connection after the reboot will again start at source port 1024 and the OS will know nothing about the last SEQ for the same source port. So, all the OS can do is to choose a random ISN, which might be lower than the last SEQ, which is a violation of RFC 1122. </p>
+
+<p>So, if you rebooted or reset the device during the test, <strong>stop doing that</strong>, as there is no way to get your test going. It could cause the same problem on any OS, although it would be much harder to actually trigger the problem, as (for example) a windows/linux system might open some TCP connections right after it has booted, so the chances to use the same source port for a mail to a certain server are rather small. In contrary your embedded device might not open any TCP connection, until you send the test mail, so the chances to hit the same source port are rather high.</p></div>
+            <div class="comment-info" id="comment-33327-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jun '14, 15:35)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33334"></a>
+        <div class="comment not_top_scorer" id="comment-33334">
+            <div id="post-33334-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Basically what is happening is <strong>I am physically removing and restoring power to embedded processor (resetting it)</strong> and restarting our code after every reset. </p>
+</blockquote>
+
+<p>O.K. I have not seen your previous comment, but that perfectly explains what is happening, see my last comment. I suspected that you were booting/resetting the device.</p>
+
+<blockquote>
+<p>The trick is if you wait several minutes and reset device both 
+emails send fine. </p>
+</blockquote>
+
+<p>Yes, because the connection on the server will be removed from TIME_WAIT after several minutes.</p>
+
+<p>Unfortunately there is not much you can do yourself to fix this problem. There is no magical 2 billion delta/limit, it's just sh.. happening combined with bad luck ;-)) The client violated RFC 1122 and the server does not answer, which is <strong>correct</strong>. The client violates RFC 1122, due to the following circumstances:</p>
+
+<ul>
+<li>fast reboots during the test</li>
+<li>always starting at 1024 for source ports after a reboot (quite common for simple/old systems)</li>
+<li>connection still in TIME_WAIT on the mail server</li>
+<li>random ISN after restart below the last SEQ number of the existing connection. <strong>Sometimes</strong> it will work, when the SEQ number was low enough. Then the chance that the new random ISN is larger than the old SEQ, is pretty high. This was <strong>not</strong> the case in the capture file you posted last, but could have happened in your tests. That were the situations where you probably could not explain why it 'suddenly' worked. Now you can ;-))</li>
+</ul>
+
+<p>What could be done is this:</p>
+
+<ul>
+<li>don't reset the device too fast. Well, that's going to work during the test, but not in a production environment where you want to get e-mails whenever the device fails/boots. Explanation, see my comments above.</li>
+<li>Ask the vendor to use randomized source ports, instead of starting at 1024 and counting up</li>
+<li><strong>You</strong> could try to RESET the connection yourself after an e-mail was sent successfully. That would remove the connection from TIME_WAIT state much faster. Please ask the vendor if it is possible to send a RESET after you have closed the SMTP connection. Maybe they are willing to extend their SMTP library for you.</li>
+</ul></div>
+            <div class="comment-info" id="comment-33334-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jun '14, 00:33)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33343"></a>
+        <div class="comment not_top_scorer" id="comment-33343">
+            <div id="post-33343-score" class="comment-score"></div>
+            <div class="comment-text"><p>Your comments have been extremely helpful, thank you very much!</p></div>
+            <div class="comment-info" id="comment-33343-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jun '14, 06:41)</span>
+                <a class="comment-user userinfo" href="/users/7231/wes000000">wes000000</a>
+                
+            </div>
+        </div>
+    
+        <a name="33349"></a>
+        <div class="comment not_top_scorer" id="comment-33349">
+            <div id="post-33349-score" class="comment-score"></div>
+            <div class="comment-text"><p>you're welcome!</p></div>
+            <div class="comment-info" id="comment-33349-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jun '14, 08:28)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-33287" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 12
+        </span>
+        <a href="#" class="show-all-comments-link">show 7 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33287-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="39638"></a>
+                    <div id="answer-container-39638" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-39638-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/39638/up/" rel="nofollow"> </a>
+<div id="post-39638-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-39638-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/39638/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>First of all 2 bilion is 2^31 not 2^16 (which is 65ki)</p>
+<p>I can confirm this bug in 32bit Debian kernel 2.6.X and it probably affects many other linux distros.<br><br> When "talking" to a device that assign greater than 2147483647 tcp timestamp it drops every packet. It is not so easy to reproduce. We found this bug when one of our windows 2k3 systems touched ~2485 days of uptime. I guess in windows tcp timestamp is generated based on uptime.<br>It cannot be coincident:<br>2147483647/86400(seconds per day)/10(guessed constant) = 2485. <br><br>I checked and base timestamp in w2k3 is really incremented by 10 every 1 second, so the above equation is real.
+<br><br>I think it has something to do with linux handling integers. Let me use Linux TIMESTAMP as an example. It is 32 bit counter but the first bit means positive or negative value. So 2147483647 in binary would look like:<br>
+0111 1111 1111 1111 1111 1111 1111 1111<br>
+second next value generated by remote system would be:<br> 1000 0000 0000 0000 0000 0000 0000 0001<br>
+Unfortunately in linux this would mean -1 instead of 2147483649.
+So bassicaly system think that this segment is very very very (like 1970's) old.
+That is why packets are dropped by tcp stack even when they are visible in tcpdump. Then retransmissions occurs and eventually connection is dropped - timeout.<br>
+<br>
+So... your choice is: move to 64bit linux or to windows :) I can confirm that both 64bit debian and windows 2k3 or newer is handling this correctly.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/39638/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 Feb '15, 06:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fdc115d04d54199ba326f602b42d4c5b?s=32&amp;d=identicon&amp;r=g" alt="siemin81's gravatar image" />
+    <p><a href="/users/14076/siemin81">siemin81</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="siemin81 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-39638">
+    
+</div>
+<div id="comment-tools-39638" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-39638-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="33288"></a>
+                    <div id="answer-container-33288" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33288-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33288/up/" rel="nofollow"> </a>
+<div id="post-33288-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-33288-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33288/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I guess what you need is <a href="http://tools.ietf.org/html/rfc6528#page-3">RFC 6528</a>, concerning random initial sequence number generation. As far as I know the ISN can range all over the 32 bit range, which goes up to 4,294,967,295.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33288/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Jun '14, 08:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33288">
+    
+</div>
+<div id="comment-tools-33288" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33288-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/33286/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='VXlPe4OCywzUZNPh53VpO5x5X6JHtEtZ' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33286/sequence-number-differential-greater-than-2-billion-causing-issues?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33286/sequence-number-differential-greater-than-2-billion-causing-issues?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tcp/"
+            class="tag-link-tcp"
+            title="see questions tagged'tcp'using tags"
+            rel="tag">tcp</a> <span class="tag-number">&#215;752</span><br/>
+        
+        <a href="/tags/ip/"
+            class="tag-link-ip"
+            title="see questions tagged'ip'using tags"
+            rel="tag">ip</a> <span class="tag-number">&#215;178</span><br/>
+        
+        <a href="/tags/sequence/"
+            class="tag-link-sequence"
+            title="see questions tagged'sequence'using tags"
+            rel="tag">sequence</a> <span class="tag-number">&#215;39</span><br/>
+        
+        <a href="/tags/number/"
+            class="tag-link-number"
+            title="see questions tagged'number'using tags"
+            rel="tag">number</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/rfc/"
+            class="tag-link-rfc"
+            title="see questions tagged'rfc'using tags"
+            rel="tag">rfc</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 2, 2014, 8:31 a.m.">02 Jun '14, 08:31</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,109 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 4, 2015, 6:48 a.m.">04 Feb '15, 06:48</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/41653/tcp-and-fin-packet">TCP and FIN packet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9209/sequence-number-are-all-the-same125-throughout-the-capture-why">Sequence number are all the same(125) throughout the capture why?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38418/plotting-tcp-sequence-number-against-timestamp-option-value">Plotting TCP Sequence Number Against Timestamp Option Value?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7082/what-does-the-8-stand-for-in-tcpstream-eq-8">What does the 8 stand for in (tcp.stream eq 8)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53652/how-to-identify-the-end-of-a-file-transfer-from-server-side">How to identify the end of a file transfer from server side?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2145/how-do-tcp-sequence-and-acknowledgement-numbers-work">How do TCP sequence and acknowledgement numbers work</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19124/is-it-possible-to-find-how-data-are-encoded-on-a-lan-connection">Is it possible to find how data are encoded on a LAN connection?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30019/tcp-retransmissions-with-additional-payload-data">TCP retransmissions with additional payload data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19125/is-it-possible-to-find-out-how-data-are-encrypted-on-a-lan-connection">[closed] Is it possible to find out how data are encrypted on a LAN connection?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32323/tcp-how-many-re-transmissions-are-acceptable-embedded-device">TCP: How many re-transmissions are acceptable (embedded device)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

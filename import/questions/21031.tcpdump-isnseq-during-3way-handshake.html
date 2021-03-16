@@ -1,0 +1,768 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TCPDump ISN/SEQ during 3way handshake - Wireshark Q&amp;A</title>
+        <meta name="description" content="Im trying to compare some seq numbers from a wireshark output with the same capture being read in by tcpdump. Quick question, in terms of the numbers (i.e S 181839597:181839597) within the inital 3 way handshake, what do this relate to. Also is anyone able to explain the difference in relative and a..." />
+        <meta name="keywords" content="sequence" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/21031/tcpdump-isnseq-during-3way-handshake" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/21031/tcpdump-isnseq-during-3way-handshake?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='9K0aP7PuD6u0KbNK1vQP1b0ASsMFBo7n' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/21031/tcpdump-isnseq-during-3way-handshake">TCPDump ISN/SEQ during 3way handshake</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-21031-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/21031/up/" rel="nofollow"> </a>
+<div id="post-21031-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-21031-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/21031/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/21031/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Im trying to compare some seq numbers from a wireshark output with the same capture being read in by tcpdump.
+Quick question, in terms of the numbers (i.e S 181839597:181839597) within the inital 3 way handshake, what do this relate to.
+Also is anyone able to explain the difference in relative and absoulte seq numbers and how they are difference in wireshark compared to tcpdump, as the seq number I obtained from wireshark Im unable to find when issuing a tcpdump -r &lt;cap.file&gt;</p>
+<pre><code>[<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b0c2dfdfc4f0dddfdec4c9">[email&#160;protected]</a> tmp]# tcpdump -ni any port 8000
+tcpdump: WARNING: Promiscuous mode not supported on the "any" device
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on any, link-type LINUX_SLL (Linux cooked), capture size 96 bytes
+15:40:41.055988 IP 80.1.1.1.30119 &gt; 10.1.1.1.irdmi: S 181839597:181839597(0) win 8192 &lt;mss 1380,nop,wscale 8,nop,nop,sackOK,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,eol&gt;
+15:40:41.064798 IP 10.1.1.1.irdmi &gt; 80.1.1.1.30119: S 3969924799:3969924799(0) ack 181839598 win 5840 &lt;mss 1460,nop,nop,sackOK,nop,wscale 4&gt;
+15:40:41.066814 IP 80.1.1.1.30119 &gt; 10.1.1.1.irdmi: . ack 1 win 260
+</code></pre>
+<p>Update : Also the seq numbers then throughout the rest of the capture appear to be relative.</p>
+<pre><code>15:40:41.363895 IP 80.1.1.1.30123 &gt; 10.1.1.1.irdmi: S 2325112793:2325112793(0) win 8192 &lt;mss 1380,nop,wscale 8,nop,nop,sackOK,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,nop,eol&gt;
+15:40:41.363955 IP 10.1.1.1.irdmi &gt; 80.1.1.1.30123: S 592517166:592517166(0) ack 2325112794 win 5840 &lt;mss 1460,nop,nop,sackOK,nop,wscale 4&gt;
+15:40:41.375282 IP 80.1.1.1.30123 &gt; 10.1.1.1.irdmi: . ack 1 win 260
+15:40:41.375471 IP 80.1.1.1.30123 &gt; 10.1.1.1.irdmi: P 1:823(822) ack 1 win 260
+15:40:41.375485 IP 10.1.1.1.irdmi &gt; 80.1.1.1.30123: . ack 823 win 468
+15:40:41.440757 IP 10.1.1.1.irdmi &gt; 80.1.1.1.30123: P 1:18(17) ack 823 win 468
+15:40:41.441019 IP 10.1.1.1.irdmi &gt; 80.1.1.1.30123: . 18:1398(1380) ack 823 win 468
+15:40:41.441403 IP 10.1.1.1.irdmi &gt; 80.1.1.1.30123: . 1398:2778(1380) ack 823 win 468
+15:40:41.441411 IP 10.1.1.1.irdmi &gt; 80.1.1.1.30123: FP 2778:4124(1346) ack 823 win 468
+15:40:41.443848 IP 80.1.1.1.30123 &gt; 10.1.1.1.irdmi: . ack 1398 win 260
+15:40:41.445975 IP 80.1.1.1.30123 &gt; 10.1.1.1.irdmi: . ack 4125 win 260
+15:40:41.484158 IP 80.1.1.1.30123 &gt; 10.1.1.1.irdmi: F 823:823(0) ack 4125 win 260
+15:40:41.484195 IP 10.1.1.1.irdmi &gt; 80.1.1.1.30123: . ack 824 win 468
+</code></pre>
+<p>Thanks,</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/sequence/" class="post-tag tag-link-sequence"
+                                        title="see questions tagged 'sequence'" rel="tag">sequence</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 May '13, 07:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/22baebd906c29ccfcb5b2aeb350b22fa?s=32&amp;d=identicon&amp;r=g" alt="bart80's gravatar image" />
+    <p><a href="/users/3884/bart80">bart80</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="12 badges"><span class="badge1">&#9679;</span><span class="badgecount">12</span></span><span title="13 badges"><span class="silver">&#9679;</span><span class="badgecount">13</span></span><span title="16 badges"><span class="bronze">&#9679;</span><span class="badgecount">16</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="bart80 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/21031/">
+                edited
+                <strong>08 May '13, 08:00</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-21031">
+    
+        <a name="35914"></a>
+        <div class="comment" id="comment-35914">
+            <div id="post-35914-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi,</p>
+
+<p>I'm curious about the number of (Nop)'s in a row on this output can some one explain to me is this normal? I thought there should be no more than 4 in a row?</p></div>
+            <div class="comment-info" id="comment-35914-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Sep '14, 09:36)</span>
+                <a class="comment-user userinfo" href="/users/7664/ciag">Ciag</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-21031" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-21031-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/21031/tcpdump-isnseq-during-3way-handshake?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/21031/tcpdump-isnseq-during-3way-handshake?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/21031/tcpdump-isnseq-during-3way-handshake?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/21031/tcpdump-isnseq-during-3way-handshake?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="21032"></a>
+                    <div id="answer-container-21032" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-21032-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/21032/up/" rel="nofollow"> </a>
+<div id="post-21032-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-21032-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/21032/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In your output, 181839597 is the absolute sequence number (the actual value of the seq field in the TCP header).</p>
+<p>In wireshark, sequence numbers are by default relative (which means, the seq of the initial SYN packet is set to 0 and all other sequence numbers are calculated from there).</p>
+<p>To be able to compare the sequence numbers, you can make wireshark show the absolute sequence numbers by going to the TCP protocol preferences and disable "Relative Sequence Numbers"</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/21032/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 May '13, 07:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-21032">
+    
+        <a name="21035"></a>
+        <div class="comment" id="comment-21035">
+            <div id="post-21035-score" class="comment-score"></div>
+            <div class="comment-text"><p>Question updated....</p></div>
+            <div class="comment-info" id="comment-21035-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '13, 08:23)</span>
+                <a class="comment-user userinfo" href="/users/3884/bart80">bart80</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-21032" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-21032-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/21031/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='9K0aP7PuD6u0KbNK1vQP1b0ASsMFBo7n' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/21031/tcpdump-isnseq-during-3way-handshake?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/21031/tcpdump-isnseq-during-3way-handshake?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/sequence/"
+            class="tag-link-sequence"
+            title="see questions tagged'sequence'using tags"
+            rel="tag">sequence</a> <span class="tag-number">&#215;39</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 8, 2013, 7:46 a.m.">08 May '13, 07:46</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,889 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 1, 2014, 9:48 a.m.">01 Sep '14, 09:48</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/792/esp-sequence-check-for-lost-packets">ESP sequence check for lost packets ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23491/can-tshark-calculate-the-ethernet-frame-check-sequence">Can tshark calculate the ethernet Frame Check Sequence?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47016/ack-seq-number-and-number-of-retransmission">ACK seq number and number of retransmission</a>
+        </p>
+        
+        <p>
+            <a href="/questions/913/relative-sequence-number">Relative Sequence Number</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23945/identify-sequence-number-errors-in-udp-captures">Identify sequence number errors in UDP captures</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47666/capture-filter-expression-not-behaving-as-expected">Capture filter expression not behaving as expected</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2145/how-do-tcp-sequence-and-acknowledgement-numbers-work">How do TCP sequence and acknowledgement numbers work</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24594/displaying-gaps-or-drops-in-private-udp-sequence-numbers">Displaying gaps or drops in private UDP sequence numbers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49275/nat-breaks-relative-sequence-numbers">NAT breaks relative sequence numbers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2718/tcp-packet-gets-dropped">TCP packet gets dropped</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

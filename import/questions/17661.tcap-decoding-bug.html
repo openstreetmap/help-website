@@ -1,0 +1,926 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TCAP Decoding Bug - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi ! I can see that Wireshark has a problem decoding TCAP packet (showing only DATA and hex stream), if tcap packet is longer than 127 bytes. Usually TCAP is set of tag/len/data constructors, where tag and len are 1-byte, but they support extensions as well (len high bit is set to 1 and continuing o..." />
+        <meta name="keywords" content="tcap,map,ss7,cap" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/17661/tcap-decoding-bug" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/17661/tcap-decoding-bug?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Lgk9BVni4RS3BSFv1SYOYUh2jPPV7p04' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/17661/tcap-decoding-bug">TCAP Decoding Bug</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-17661-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17661/up/" rel="nofollow"> </a>
+<div id="post-17661-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-17661-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17661/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/17661/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi !</p>
+<p>I can see that Wireshark has a problem decoding TCAP packet (showing only DATA and hex stream),
+if tcap packet is longer than 127 bytes.
+Usually TCAP is set of tag/len/data constructors, where tag and len are 1-byte, but they
+support extensions as well (len high bit is set to 1 and continuing on a next bytes)</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tcap/" class="post-tag tag-link-tcap"
+                                        title="see questions tagged 'tcap'" rel="tag">tcap</a>
+                                
+                                    <a href="/tags/map/" class="post-tag tag-link-map"
+                                        title="see questions tagged 'map'" rel="tag">map</a>
+                                
+                                    <a href="/tags/ss7/" class="post-tag tag-link-ss7"
+                                        title="see questions tagged 'ss7'" rel="tag">ss7</a>
+                                
+                                    <a href="/tags/cap/" class="post-tag tag-link-cap"
+                                        title="see questions tagged 'cap'" rel="tag">cap</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Jan '13, 06:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/049954c19a42f88823709640897cb958?s=32&amp;d=identicon&amp;r=g" alt="ahmediukas's gravatar image" />
+    <p><a href="/users/4209/ahmediukas">ahmediukas</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ahmediukas has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/17661/">
+                edited
+                <strong>14 Jan '13, 14:12</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e0564001bb7deb960d5d9d9c1e0ba074?s=32&amp;d=identicon&amp;r=g" alt="JeffMorriss's gravatar image" />
+            <p><a href="/users/655/jeffmorriss">JeffMorriss ♦</a><br/>
+            <span class="score" title="6219 reputation points"><span class="">6.2k</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="72 badges"><span class="bronze">&#9679;</span><span class="badgecount">72</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-17661">
+    
+        <a name="17663"></a>
+        <div class="comment" id="comment-17663">
+            <div id="post-17663-score" class="comment-score"></div>
+            <div class="comment-text"><p>What version are you using?  Do you mean the <em>packet</em> is more than 127 octets long?</p>
+
+<p>I'm currently looking at a TCAP message that is (after being reassembled) 374 octets long.  A sample capture--which you could upload to e.g., <a href="http://cloudshark.org">http://cloudshark.org</a> --would help.</p></div>
+            <div class="comment-info" id="comment-17663-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '13, 06:46)</span>
+                <a class="comment-user userinfo" href="/users/655/jeffmorriss">JeffMorriss ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="17668"></a>
+        <div class="comment" id="comment-17668">
+            <div id="post-17668-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am using the latest version (just downloaded for this case).</p>
+
+<p>Here is the sample: 
+<a href="http://public.alesfree.com/sample.pcap">http://public.alesfree.com/sample.pcap</a></p>
+
+<p>and printscreen of what is decoded 
+<a href="http://public.alesfree.com/sample.jpg">http://public.alesfree.com/sample.jpg</a></p></div>
+            <div class="comment-info" id="comment-17668-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '13, 08:15)</span>
+                <a class="comment-user userinfo" href="/users/4209/ahmediukas">ahmediukas</a>
+                
+            </div>
+        </div>
+    
+        <a name="17669"></a>
+        <div class="comment" id="comment-17669">
+            <div id="post-17669-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think the problem is in begining
+6281a7</p>
+
+<p>Usually 0x81 would mean length (62 is tag), but since it uses high bit (128), other bits (1) tells how many length octets are following defining the length (which is a7 in this case)</p></div>
+            <div class="comment-info" id="comment-17669-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '13, 08:16)</span>
+                <a class="comment-user userinfo" href="/users/4209/ahmediukas">ahmediukas</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17661" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17661-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/17661/tcap-decoding-bug?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/17661/tcap-decoding-bug?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/17661/tcap-decoding-bug?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/17661/tcap-decoding-bug?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="17670"></a>
+                    <div id="answer-container-17670" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-17670-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17670/up/" rel="nofollow"> </a>
+<div id="post-17670-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-17670-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17670/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="JeffMorriss has selected this answer as the correct answer"
+        href="/accept_answer/17670/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Thanks for the sample capture.  Actually the problem is simpler: the Called and Calling SSNs are both 146 and the Camel dissector does not, for some reason, register for that SSN.</p>
+<p>Go to Edit-&gt;Preferences-&gt;Protocols-&gt;Camel and add 146 to the list of SSNs there.  With that change my Wireshark shows a Camel initialDP.</p>
+<p>(Does anyone know why Camel doesn't register for SSN 146--which is its registered SSN?)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/17670/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Jan '13, 08:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e0564001bb7deb960d5d9d9c1e0ba074?s=32&amp;d=identicon&amp;r=g" alt="JeffMorriss's gravatar image" />
+    <p><a href="/users/655/jeffmorriss">JeffMorriss ♦</a><br/>
+    <span class="score" title="6219 reputation points"><span class="">6.2k</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="72 badges"><span class="bronze">&#9679;</span><span class="badgecount">72</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JeffMorriss has 103 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-17670">
+    
+        <a name="17674"></a>
+        <div class="comment" id="comment-17674">
+            <div id="post-17674-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ah, i was only looking for fragmentation in sccp chunks, even didnt check the ssn's :) Thx for hint
+I also deleted 6-9 in camel as this is for gsm map ssn's</p></div>
+            <div class="comment-info" id="comment-17674-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '13, 13:28)</span>
+                <a class="comment-user userinfo" href="/users/4209/ahmediukas">ahmediukas</a>
+                
+            </div>
+        </div>
+    
+        <a name="17676"></a>
+        <div class="comment" id="comment-17676">
+            <div id="post-17676-score" class="comment-score">1</div>
+            <div class="comment-text"><p>(BTW I clicked the check box to indicate that my answer was Accepted so this question no longer shows up in the list of unanswered questions.)</p></div>
+            <div class="comment-info" id="comment-17676-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '13, 14:11)</span>
+                <a class="comment-user userinfo" href="/users/655/jeffmorriss">JeffMorriss ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="17704"></a>
+        <div class="comment" id="comment-17704">
+            <div id="post-17704-score" class="comment-score"></div>
+            <div class="comment-text"><p>I fixed the Camel dissector so that it registers for SSN 146 (instead of 6-9) in r47097.  That change will show up in the development builds and Wireshark 1.10.0.</p></div>
+            <div class="comment-info" id="comment-17704-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jan '13, 08:45)</span>
+                <a class="comment-user userinfo" href="/users/655/jeffmorriss">JeffMorriss ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="17798"></a>
+        <div class="comment" id="comment-17798">
+            <div id="post-17798-score" class="comment-score"></div>
+            <div class="comment-text"><p>Jeff, maybe is simillar issue, Wireshark does not show what primitive holds data 0a0101 before the last two MTP's filler nulls.
+When I click on it, it just tells SCCP packet, but i dont see where excactly (neither in TCAP). Here is example:
+<a href="http://cloudshark.org/captures/eab9fe741ab8">http://cloudshark.org/captures/eab9fe741ab8</a></p></div>
+            <div class="comment-info" id="comment-17798-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jan '13, 16:09)</span>
+                <a class="comment-user userinfo" href="/users/4209/ahmediukas">ahmediukas</a>
+                
+            </div>
+        </div>
+    
+        <a name="17821"></a>
+        <div class="comment" id="comment-17821">
+            <div id="post-17821-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Hmmm, it would appear to me that the sender has stuck another SCCP parameter on the end of the Unitdata.  UDTs have only 3 parameters (they don't support optional parameters) so I'd say the sender has a bug.  Well, even if it's not supposed to be a parameter the sender still has a bug.</p>
+
+<p>The parameter (if that's what it's supposed to be) would be a Release Cause (0x0a) of length 1 (the first 0x01) with a value of End User Congestion (the 2nd 0x01).</p>
+
+<p>(I suppose the SCCP dissector could do a better job of warning of such weirdness but...)</p></div>
+            <div class="comment-info" id="comment-17821-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jan '13, 11:50)</span>
+                <a class="comment-user userinfo" href="/users/655/jeffmorriss">JeffMorriss ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="24734"></a>
+        <div class="comment not_top_scorer" id="comment-24734">
+            <div id="post-24734-score" class="comment-score"></div>
+            <div class="comment-text"><p>thanks  JeffMorriss ♦</p></div>
+            <div class="comment-info" id="comment-24734-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Sep '13, 23:14)</span>
+                <a class="comment-user userinfo" href="/users/5671/sridhar-kumar-n">Sridhar Kumar N</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17670" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17670-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/17661/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Lgk9BVni4RS3BSFv1SYOYUh2jPPV7p04' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17661/tcap-decoding-bug?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17661/tcap-decoding-bug?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ss7/"
+            class="tag-link-ss7"
+            title="see questions tagged'ss7'using tags"
+            rel="tag">ss7</a> <span class="tag-number">&#215;21</span><br/>
+        
+        <a href="/tags/tcap/"
+            class="tag-link-tcap"
+            title="see questions tagged'tcap'using tags"
+            rel="tag">tcap</a> <span class="tag-number">&#215;13</span><br/>
+        
+        <a href="/tags/map/"
+            class="tag-link-map"
+            title="see questions tagged'map'using tags"
+            rel="tag">map</a> <span class="tag-number">&#215;12</span><br/>
+        
+        <a href="/tags/cap/"
+            class="tag-link-cap"
+            title="see questions tagged'cap'using tags"
+            rel="tag">cap</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 14, 2013, 6:05 a.m.">14 Jan '13, 06:05</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,351 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 15, 2013, 11:40 p.m.">15 Sep '13, 23:40</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/54370/how-to-filter-map-request-by-msisdn-and-its-response">How to filter MAP request by msisdn and its response</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14625/map-user-abort">MAP user abort</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5140/support-of-map-and-cap-protocol-in-wireshark">Support of MAP and CAP Protocol in Wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54126/split-multiple-pdus-in-a-frame-into-separate-frames">Split multiple PDU&#39;s in a frame into separate frames?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31457/ss7-tcap-reassembly">SS7 TCAP Reassembly</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14824/how-to-filter-out-tcap-location-update-messages">how to filter out tcap location update messages</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1921/does-wire-shark-decode-ss7-messages-obtained-from-a-protocol-analyser">Does wire shark decode SS7 messages obtained from a protocol analyser?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43543/how-to-iterating-though-a-bundled-ss7-sctp-packet-in-lua">How to iterating though a bundled SS7 SCTP packet in Lua</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33396/decoding-gr-533in">Decoding GR-533/IN</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3004/wireshark-filter">wireshark filter</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

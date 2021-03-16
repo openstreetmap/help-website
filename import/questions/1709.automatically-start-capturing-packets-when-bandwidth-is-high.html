@@ -1,0 +1,1079 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Automatically start capturing packets when bandwidth is high - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi there. I&#39;d like to leave WireShark running on all my machines, and have it automatically capture packets when total bandwidth usage is above a user defined value. For example, I have WireShark running on my machine 24/7, and when the connection being monitored starts to use 20Mbps or more, WireSh..." />
+        <meta name="keywords" content="high,capture,bandwidth,automatic" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/1709/automatically-start-capturing-packets-when-bandwidth-is-high" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/1709/automatically-start-capturing-packets-when-bandwidth-is-high?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Xvx9ZpeMAkOqPcVREx9ghAQfW21vF78u' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/1709/automatically-start-capturing-packets-when-bandwidth-is-high">Automatically start capturing packets when bandwidth is high</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-1709-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1709/up/" rel="nofollow"> </a>
+<div id="post-1709-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-1709-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1709/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/1709/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi there.</p>
+<p>I'd like to leave WireShark running on all my machines, and have it automatically capture packets when total bandwidth usage is above a user defined value.</p>
+<p>For example, I have WireShark running on my machine 24/7, and when the connection being monitored starts to use 20Mbps or more, WireShark will begin capturing the packets and dumping them into a file (Preferably timestamped).</p>
+<p>This would be great for me as if a machine was being attacked by a Denial of Service attack, I would be able to log onto the machine after the attack stops and have a clear log of all packets going through that interface during the attack.</p>
+<p>Please let me know if this is currently possible, or guide me in the right direction.</p>
+<p>Thanks</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/high/" class="post-tag tag-link-high"
+                                        title="see questions tagged 'high'" rel="tag">high</a>
+                                
+                                    <a href="/tags/capture/" class="post-tag tag-link-capture"
+                                        title="see questions tagged 'capture'" rel="tag">capture</a>
+                                
+                                    <a href="/tags/bandwidth/" class="post-tag tag-link-bandwidth"
+                                        title="see questions tagged 'bandwidth'" rel="tag">bandwidth</a>
+                                
+                                    <a href="/tags/automatic/" class="post-tag tag-link-automatic"
+                                        title="see questions tagged 'automatic'" rel="tag">automatic</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Jan '11, 15:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/82bb9c1f0f94225eb33282bcb74e5e8f?s=32&amp;d=identicon&amp;r=g" alt="Ninjadude101's gravatar image" />
+    <p><a href="/users/539/ninjadude101">Ninjadude101</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Ninjadude101 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-1709">
+    
+</div>
+<div id="comment-tools-1709" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1709-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/1709/automatically-start-capturing-packets-when-bandwidth-is-high?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/1709/automatically-start-capturing-packets-when-bandwidth-is-high?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/1709/automatically-start-capturing-packets-when-bandwidth-is-high?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/1709/automatically-start-capturing-packets-when-bandwidth-is-high?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="1710"></a>
+                    <div id="answer-container-1710" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1710-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1710/up/" rel="nofollow"> </a>
+<div id="post-1710-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-1710-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1710/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Why not just use a rotating ring buffer?  What you are asking is to capture traffic when it is high and would actually have the most impact on the machine and its storage.  I assume the reason for this question is that you are wanting to lessen the impact on the machine and its storage.  However, adding a service and collecting the packets will actually add to the potential of a DoS.<br>
+</p>
+<p>I do find this to be an interesting way to think outside the box. I think it could be done by writing a shell script or batch file to invoke dumpcap.  Then triggering the script by querying the interface with some WMI or SNMP probe and watch for the crossing of a threshhold.  I could certainly help with the dumpcap syntax, but the trigger is outside of my expertise.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1710/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Jan '11, 16:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e62501f00394530927e4b0c9e86bfb46?s=32&amp;d=identicon&amp;r=g" alt="Paul%20Stewart's gravatar image" />
+    <p><a href="/users/412/paul-stewart">Paul Stewart</a><br/>
+    <span class="score" title="301 reputation points">301</span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Paul Stewart has 3 accepted answers">6&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1710">
+    
+        <a name="1715"></a>
+        <div class="comment" id="comment-1715">
+            <div id="post-1715-score" class="comment-score"></div>
+            <div class="comment-text"><p>Paul, actually the reason behind my question is not to lessen the impact on the storage, but to provide an always-on solution for retrieving information behind DoS attacks.</p>
+
+<p>Unfortunately, due to the nature of my business, my servers see a few (D)DoS attacks each month, and I am not always able to get onto the machine to start WireShark (Which in most cases provides information useful for finding out who is responsible). This solution will simply mean that after a (D)DoS attack, all I'd need to do is log onto the server via remote desktop and open up the latest log file to see that information.</p>
+
+<p>Once I am done with the log file, it would be removed, so in fact this shouldn't have a massive impact on the storage as it will only be logging packets when the bandwidth is high.</p>
+
+<p>I hope I've made myself clearer.</p>
+
+<p>hansangb, Could you possibly go into more detail with the ring buffers, as I am relatively new to WireShark and lack the understanding of the terminology. I had a look at CACE Pilot, but it's quite expensive!</p>
+
+<p>Thanks all.</p></div>
+            <div class="comment-info" id="comment-1715-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '11, 05:16)</span>
+                <a class="comment-user userinfo" href="/users/539/ninjadude101">Ninjadude101</a>
+                
+            </div>
+        </div>
+    
+        <a name="1717"></a>
+        <div class="comment" id="comment-1717">
+            <div id="post-1717-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ninjadude, When you open the capture options (CTRL-K), 1) Specify the file name (under Capture Files section). 2) Check the "Use multiple files" 3) Determine if you want the rotation of files to happen based on time (next file every x min) or by capture file size (next file every x MB) 4) Check the "Ring buffer with x files" and figure out how many files you want to create before wrapping around. Make sure you have enough HD space.</p>
+
+<p>That's pretty much it.</p></div>
+            <div class="comment-info" id="comment-1717-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '11, 05:36)</span>
+                <a class="comment-user userinfo" href="/users/255/hansangb">hansangb</a>
+                
+            </div>
+        </div>
+    
+        <a name="1718"></a>
+        <div class="comment" id="comment-1718">
+            <div id="post-1718-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think there is some legitimacy to your reasoning. However, one concern is that you would miss the traffic prior to the trigger event. Obviously you know your business and constraints better than I do. If it were me, I'd consider capturing the traffic off box. In other words build an adequate size capture pc or server. Place it on a span or monitor port that has visibility to all of the servers. Then set up dumpcap to capture to a 'ring buffer' set of files. I'd make them a reasonable size (100MB or so). Then configure the number of files based on the maximum space you have on this dedicated machine. This approach will give you greater visibility. I'd give examples, but I'm posting from my phone. </p></div>
+            <div class="comment-info" id="comment-1718-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '11, 05:41)</span>
+                <a class="comment-user userinfo" href="/users/412/paul-stewart">Paul Stewart</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-1710" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1710-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="1711"></a>
+                    <div id="answer-container-1711" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1711-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1711/up/" rel="nofollow"> </a>
+<div id="post-1711-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-1711-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1711/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Ninjadude101
+Unfortunately, Wireshark lacks the trigger mechanism.  So you'll have to go with ring buffers (and capture just 96 bytes if all you want is the header info) or get Cace's Pilot which has trigger mechanisms (called Watches)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1711/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Jan '11, 18:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/63805f079ac429902641cad9d7cd69e8?s=32&amp;d=identicon&amp;r=g" alt="hansangb's gravatar image" />
+    <p><a href="/users/255/hansangb">hansangb</a><br/>
+    <span class="score" title="791 reputation points">791</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="hansangb has 7 accepted answers">12&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1711">
+    
+</div>
+<div id="comment-tools-1711" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1711-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="1716"></a>
+                    <div id="answer-container-1716" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-1716-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/1716/up/" rel="nofollow"> </a>
+<div id="post-1716-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-1716-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/1716/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Ninjadude,
+When you open the capture options (CTRL-K), 
+1) Specify the file name (under Capture Files section).
+2) Check the "Use multiple files"
+3) Determine if you want the rotation of files to happen based on time (next file every x min) or by capture file size (next file every x MB)
+4) Check the "Ring buffer with x files" and figure out how many files you want to create before wrapping around. Make sure you have enough HD space.</p>
+<p>That's pretty much it.<br>
+</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/1716/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Jan '11, 05:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/63805f079ac429902641cad9d7cd69e8?s=32&amp;d=identicon&amp;r=g" alt="hansangb's gravatar image" />
+    <p><a href="/users/255/hansangb">hansangb</a><br/>
+    <span class="score" title="791 reputation points">791</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="hansangb has 7 accepted answers">12&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-1716">
+    
+        <a name="10107"></a>
+        <div class="comment" id="comment-10107">
+            <div id="post-10107-score" class="comment-score"></div>
+            <div class="comment-text"><p>I followed your instructions above. Why are the files captured contain unreadble characters??? I was going to do the same problem for Ninjadude101, capturing the DoS attack events to a log.</p></div>
+            <div class="comment-info" id="comment-10107-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Apr '12, 01:18)</span>
+                <a class="comment-user userinfo" href="/users/2503/misteryuku">misteryuku</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-1716" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-1716-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="14945"></a>
+                    <div id="answer-container-14945" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-14945-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/14945/up/" rel="nofollow"> </a>
+<div id="post-14945-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-14945-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/14945/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>how to start capture automatically when i copy any remote file and it should stop as it file transfer complete??</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/14945/">permanent link</a></span>
+                                            
+<div class="community-wiki">
+        This answer is marked "community wiki".
+        
+    </div>
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Oct '12, 19:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/66d9f832d9f5762ba4c0ddec8c68cfd3?s=32&amp;d=identicon&amp;r=g" alt="Ali's gravatar image" />
+    <p><a href="/users/3608/ali">Ali</a><br/>
+    <span class="score" title="1 reputation points">1</span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Ali has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-14945">
+    
+</div>
+<div id="comment-tools-14945" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-14945-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/1709/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Xvx9ZpeMAkOqPcVREx9ghAQfW21vF78u' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1709/automatically-start-capturing-packets-when-bandwidth-is-high?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/1709/automatically-start-capturing-packets-when-bandwidth-is-high?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/capture/"
+            class="tag-link-capture"
+            title="see questions tagged'capture'using tags"
+            rel="tag">capture</a> <span class="tag-number">&#215;549</span><br/>
+        
+        <a href="/tags/bandwidth/"
+            class="tag-link-bandwidth"
+            title="see questions tagged'bandwidth'using tags"
+            rel="tag">bandwidth</a> <span class="tag-number">&#215;57</span><br/>
+        
+        <a href="/tags/high/"
+            class="tag-link-high"
+            title="see questions tagged'high'using tags"
+            rel="tag">high</a> <span class="tag-number">&#215;8</span><br/>
+        
+        <a href="/tags/automatic/"
+            class="tag-link-automatic"
+            title="see questions tagged'automatic'using tags"
+            rel="tag">automatic</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 11, 2011, 3:43 p.m.">11 Jan '11, 15:43</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,495 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 11, 2012, 7:07 p.m.">11 Oct '12, 19:07</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/61643/wireshark-stops-capturing-after-a-few-seconds">Wireshark stops capturing after a few seconds</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9405/identify-bandwidth-hog">Identify Bandwidth Hog</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55/can-you-change-the-capture-format-to-support-the-diagnostic-process">Can you change the capture format to support the diagnostic process?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1515/capture-the-first-64bytes-of-a-packet">Capture the first 64bytes of a packet?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2596/capture-cisco-trunk-interfaces">Capture cisco trunk interfaces</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3898/help-analyzing-for-ldapactive-directory-errors">Help Analyzing for LDAP/Active Directory Errors</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5712/how-to-find-bandwidth-hog-on-small-network">How to find bandwidth hog on small network?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6641/how-to-clean-pcap-of-youtube-video-stream-from-other-protocols">How to clean pcap of Youtube video stream from other protocols.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8134/i-want-someone-to-help">I want someone to help...</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8942/wireshark-capture-question">Wireshark capture question</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

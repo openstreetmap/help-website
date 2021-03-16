@@ -1,0 +1,1097 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Writeups on the effects of normalizing S-ACKs - Wireshark Q&amp;A</title>
+        <meta name="description" content="Are there any good write ups on the effects on performance/throughput on normalizing the S-ACK option out at a firewall or IPS? I was trouble shooting some slow SMB2 file copy issues and saw that the SYN had the flag at the sender but by the time it gets to the destination the S-ACK options has been..." />
+        <meta name="keywords" content="ips,s-ack,tcp-options,performance" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/30280/writeups-on-the-effects-of-normalizing-s-acks" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/30280/writeups-on-the-effects-of-normalizing-s-acks?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='WKOeKuDs65LC6xETFOvAQHmDpTU74EuJ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/30280/writeups-on-the-effects-of-normalizing-s-acks">Writeups on the effects of normalizing S-ACKs</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-30280-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30280/up/" rel="nofollow"> </a>
+<div id="post-30280-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-30280-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30280/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/30280/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Are there any good write ups on the effects on performance/throughput on normalizing the S-ACK option out at a firewall or IPS? I was trouble shooting some slow SMB2 file copy issues and saw that the SYN had the flag at the sender but by the time it gets to the destination the S-ACK options has been NOOP'd by a sourcefire IPS. I'd like to take something back to the security guys and try and convince them how stupid this is.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ips/" class="post-tag tag-link-ips"
+                                        title="see questions tagged 'ips'" rel="tag">ips</a>
+                                
+                                    <a href="/tags/s-ack/" class="post-tag tag-link-s-ack"
+                                        title="see questions tagged 's-ack'" rel="tag">s-ack</a>
+                                
+                                    <a href="/tags/tcp-options/" class="post-tag tag-link-tcp-options"
+                                        title="see questions tagged 'tcp-options'" rel="tag">tcp-options</a>
+                                
+                                    <a href="/tags/performance/" class="post-tag tag-link-performance"
+                                        title="see questions tagged 'performance'" rel="tag">performance</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Feb '14, 11:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5d07ae33b7a45a3b422b2be2b70a88fa?s=32&amp;d=identicon&amp;r=g" alt="RTJ10's gravatar image" />
+    <p><a href="/users/6798/rtj10">RTJ10</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="RTJ10 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-30280">
+    
+</div>
+<div id="comment-tools-30280" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30280-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/30280/writeups-on-the-effects-of-normalizing-s-acks?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/30280/writeups-on-the-effects-of-normalizing-s-acks?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/30280/writeups-on-the-effects-of-normalizing-s-acks?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/30280/writeups-on-the-effects-of-normalizing-s-acks?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="30281"></a>
+                    <div id="answer-container-30281" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-30281-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30281/up/" rel="nofollow"> </a>
+<div id="post-30281-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-30281-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30281/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="RTJ10 has selected this answer as the correct answer"
+        href="/accept_answer/30281/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There is no such write up that I am aware of, but I could write one in my blog at a later time. Facts are</p>
+<ol>
+<li>S-ACK is the best way to deal with packet loss. If you remove S-ACK from the options you'll revert to Fast Retransmissions or even RTO (worst case), which is not as efficient.</li>
+<li>S-ACK has no known relevance when it comes to network security, so stripping it does not improve security but decreases throughput when recovering from packet loss. So it does not make sense to remove it, unless you want to keep your TCP behavior consistent with ancient TCP stacks.</li>
+</ol>
+<p>If your security guys do not believe me have them contact me and I'll convince them :-)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/30281/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Feb '14, 11:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-30281">
+    
+        <a name="30282"></a>
+        <div class="comment" id="comment-30282">
+            <div id="post-30282-score" class="comment-score"></div>
+            <div class="comment-text"><p>I know I saw something by Laura Chappell about ASA's normalizing the S-ACK option out but I can't find the video on youtube, perhaps because she mentions it in passing and never did a presentation or writeup. :(</p></div>
+            <div class="comment-info" id="comment-30282-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '14, 11:57)</span>
+                <a class="comment-user userinfo" href="/users/6798/rtj10">RTJ10</a>
+                
+            </div>
+        </div>
+    
+        <a name="30283"></a>
+        <div class="comment" id="comment-30283">
+            <div id="post-30283-score" class="comment-score"></div>
+            <div class="comment-text"><p>She presented that one two years ago on Sharkfest I think. I don't have a youtube link either, but it still doesn't make any sense to remove S-ACK options from packets. I think it is a result of the security devices not recognizing the option at all and dropping it for that reason. The vendors should get their TCP normalization engines up to speed and let those options pass.</p></div>
+            <div class="comment-info" id="comment-30283-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '14, 12:00)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30284"></a>
+        <div class="comment" id="comment-30284">
+            <div id="post-30284-score" class="comment-score"></div>
+            <div class="comment-text"><p>No, they are doing it on purpose, here's a quote from my security guy:</p>
+
+<p>"After reviewing your captures can see what you're referring to.  Yes, we are normalizing TCP traffic across the Sourcefire sensors -- Unfortunately, turning Normalization off will severely impact inspection policies."</p></div>
+            <div class="comment-info" id="comment-30284-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '14, 12:22)</span>
+                <a class="comment-user userinfo" href="/users/6798/rtj10">RTJ10</a>
+                
+            </div>
+        </div>
+    
+        <a name="30286"></a>
+        <div class="comment" id="comment-30286">
+            <div id="post-30286-score" class="comment-score"></div>
+            <div class="comment-text"><p>tell them to open a support case. Sourcefire needs to fix their "Normalization", which seems to be on the level of the last century.</p></div>
+            <div class="comment-info" id="comment-30286-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '14, 12:33)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30294"></a>
+        <div class="comment" id="comment-30294">
+            <div id="post-30294-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well, I passed on your comments to the security folks, I don't think I am very well loved ATM. :)</p></div>
+            <div class="comment-info" id="comment-30294-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '14, 18:56)</span>
+                <a class="comment-user userinfo" href="/users/6798/rtj10">RTJ10</a>
+                
+            </div>
+        </div>
+    
+        <a name="30296"></a>
+        <div class="comment not_top_scorer" id="comment-30296">
+            <div id="post-30296-score" class="comment-score"></div>
+            <div class="comment-text"><p>I bet they need to remove the S-ACK option to be able to search through the stream properly for matching policies, without buffering too much.  After all, it's not a whole message but just segments, so they need to see the segments sequentially in order for match rules to work right.  I doubt they want to have a large TCP buffer per connection/stream in their IDS to reassemble, and if they don't buffer, then they can't reassemble the stream properly if S-ACK is used; and even if they did buffer, it might be too late by then because the offending/bad segments already went by and will be accepted by the side they're trying to protect.</p></div>
+            <div class="comment-info" id="comment-30296-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '14, 19:11)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="30298"></a>
+        <div class="comment not_top_scorer" id="comment-30298">
+            <div id="post-30298-score" class="comment-score"></div>
+            <div class="comment-text"><p>Wellll, not being an IPS/IDS guy...wouldn't that make sense on outside IPS/IDSs, but safe to turn off on inside devices so as to not negatively affect network performance in or across datacenters?</p></div>
+            <div class="comment-info" id="comment-30298-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '14, 19:23)</span>
+                <a class="comment-user userinfo" href="/users/6798/rtj10">RTJ10</a>
+                
+            </div>
+        </div>
+    
+        <a name="30299"></a>
+        <div class="comment not_top_scorer" id="comment-30299">
+            <div id="post-30299-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not sure I understand what you mean... if it's crossing an IPS/IDS, presumably you want the IDS/IPS to apply its policies - otherwise why have it involved to begin with?  If you're just talking about traffic between hosts on the private/internal side only, put their internal traffic on a separate network/vlan that the IDS/IPS ignores or isn't even in the path of. No?</p></div>
+            <div class="comment-info" id="comment-30299-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '14, 20:58)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="30309"></a>
+        <div class="comment not_top_scorer" id="comment-30309">
+            <div id="post-30309-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry <a href="/users/4318/hadriel">@Hadriel</a>, but S-ACK has no negative effect on buffering segments - on the contrary, it helps getting the complete payload reconstructed in case of packet loss as fast as possible for content inspection.</p></div>
+            <div class="comment-info" id="comment-30309-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '14, 12:39)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30310"></a>
+        <div class="comment not_top_scorer" id="comment-30310">
+            <div id="post-30310-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/145/jasper">@Jasper</a>: imagine you're an IDS/IPS receiving TCP segments that you need to reconstruct into a stream to run match policies against (regex or whatever). You currently have last processed TCP seq #3 and are waiting on #4. You see #5+6+7 come through.  Do you (a) buffer those and wait for #4 some time later, or (b) drop them and force the far-end to resend them all again in sequence?  If you choose (a), you're buffering for some time X. If you choose (b), you have to force S-ACK off, but you can avoid buffering quite a bit depending on the match policies logic. (but as I said, this is only a guess - I don't work for an IDS/IPS vendor)</p></div>
+            <div class="comment-info" id="comment-30310-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '14, 13:00)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="30313"></a>
+        <div class="comment not_top_scorer" id="comment-30313">
+            <div id="post-30313-score" class="comment-score"></div>
+            <div class="comment-text"><p>Really, "force the far end to resend them all in sequence?" That is not a good strategy (to say it in a nice way), because it will delay the transmission <strong>a lot</strong>, plus nobody can guarantee that the "in sequence" will work the second time - there may be more packet loss or just out-of-orders, and you'll never complete the full transaction. </p>
+
+<p>No, if an IDS/IPS is doing policy matching against TCP payloads it needs to gather (buffer) all segments until the payload is complete.</p></div>
+            <div class="comment-info" id="comment-30313-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '14, 13:57)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30318"></a>
+        <div class="comment not_top_scorer" id="comment-30318">
+            <div id="post-30318-score" class="comment-score"></div>
+            <div class="comment-text"><p>If it doesn't work the second (or third or whatever) time, your internet connection between host+server is so bad it doesn't matter much what happens.  But anyway I didn't say it was a great strategy - I just said I bet that's why they do it.  I could be wrong - maybe there's some other reason (aside from just not having implemented it yet type thing).</p></div>
+            <div class="comment-info" id="comment-30318-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '14, 02:26)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-30281" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 12
+        </span>
+        <a href="#" class="show-all-comments-link">show 7 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30281-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="30325"></a>
+                    <div id="answer-container-30325" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-30325-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30325/up/" rel="nofollow"> </a>
+<div id="post-30325-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-30325-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30325/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p><strong>S-ACK has no known relevance</strong> when it comes to network security, </p>
+</blockquote>
+<p>hm.. While trying <strong>not the sound</strong> like a smartass, I 'sometimes' fail to do so ;-)) So, here we go... </p>
+<p>Software is full of bugs, and a TCP/IP implementation suffers from the same problem. So, people could come up with all kind of sick ideas to misuse the SACK feature, by sending wrong (forged) SACKs or whatever. If there is a bug in the TCP/IP stack, it could lead to almost anything, from a DoS, to a crash, to whatever you can think of. </p>
+<p>Actually, that's exactly what happened some (long) time ago.</p>
+<blockquote>
+<p><a href="http://www.iss.net/security_center/reference/vuln/TCP_Invalid_SACK.htm">http://www.iss.net/security_center/reference/vuln/TCP_Invalid_SACK.htm</a> <br>
+<a href="http://www.iss.net/security_center/reference/vuln/TCP_Malformed_SACK_DoS.htm">http://www.iss.net/security_center/reference/vuln/TCP_Malformed_SACK_DoS.htm</a>  <br>
+</p>
+</blockquote>
+<p>Even Snort failed to handle SACKs in certain environments.</p>
+<blockquote>
+<p><a href="http://archive.cert.uni-stuttgart.de/vuln-dev/2005/09/msg00006.html">http://archive.cert.uni-stuttgart.de/vuln-dev/2005/09/msg00006.html</a></p>
+</blockquote>
+<p>So, if you look at it this way, <strong>SACK did have a known relevance</strong> (years ago) when it comes to network security. </p>
+<p>Nevertheless, the problems of the year 2005 are not a valid/good reason to strip the SACK options <strong>today</strong>. </p>
+<p>I also believe it's somehow related to the TCP reassembling/buffering problem within the IDS scanner engine. However, I don't know snort/Sourcefire well enough to know why they might do that. </p>
+<blockquote>
+<p>Yes, <strong>we are normalizing TCP traffic</strong> across the Sourcefire sensors </p>
+</blockquote>
+<p>There is a normalizer preprocessor available for snort (and Sourcefire, I guess).</p>
+<blockquote>
+<p><a href="http://manual.snort.org/node17.html#SECTION003217000000000000000">http://manual.snort.org/node17.html#SECTION003217000000000000000</a></p>
+</blockquote>
+<p>They say, it's helpful to enable it <strong>in inline mode</strong>, to minimize the chances of evasion.</p>
+<p>See also here: <a href="http://vrt-blog.snort.org/2010/11/inline-normalization-with-snort-290.html">http://vrt-blog.snort.org/2010/11/inline-normalization-with-snort-290.html</a></p>
+<p><a href="/users/6798/rtj10"><a href="/users/6798/rtj10">@RTJ10</a></a>: Maybe the same holds true for your Sourcefire configuration.</p>
+<p>Regards <br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/30325/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Mar '14, 08:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/30325/">
+                edited
+                <strong>02 Mar '14, 08:49</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-30325">
+    
+        <a name="32289"></a>
+        <div class="comment" id="comment-32289">
+            <div id="post-32289-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/2593/kurt-knochner">@Kurt Knochner</a> - Thank you very much for the comments and links!</p>
+
+<p><a href="/users/145/jasper">@Jasper</a> Thank you as well! I will need to track down a public email for Laura and see if she'd be willing to share the PPS or presentation.</p></div>
+            <div class="comment-info" id="comment-32289-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Apr '14, 06:42)</span>
+                <a class="comment-user userinfo" href="/users/6798/rtj10">RTJ10</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-30325" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30325-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/30280/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='WKOeKuDs65LC6xETFOvAQHmDpTU74EuJ' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/30280/writeups-on-the-effects-of-normalizing-s-acks?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/30280/writeups-on-the-effects-of-normalizing-s-acks?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/performance/"
+            class="tag-link-performance"
+            title="see questions tagged'performance'using tags"
+            rel="tag">performance</a> <span class="tag-number">&#215;55</span><br/>
+        
+        <a href="/tags/tcp-options/"
+            class="tag-link-tcp-options"
+            title="see questions tagged'tcp-options'using tags"
+            rel="tag">tcp-options</a> <span class="tag-number">&#215;8</span><br/>
+        
+        <a href="/tags/ips/"
+            class="tag-link-ips"
+            title="see questions tagged'ips'using tags"
+            rel="tag">ips</a> <span class="tag-number">&#215;3</span><br/>
+        
+        <a href="/tags/s-ack/"
+            class="tag-link-s-ack"
+            title="see questions tagged's-ack'using tags"
+            rel="tag">s-ack</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 28, 2014, 11:28 a.m.">28 Feb '14, 11:28</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,865 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 29, 2014, 6:42 a.m.">29 Apr '14, 06:42</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/346/wireshark-performance-freezing-when-stopping-capture-closing-file">Wireshark performance - freezing when stopping capture / closing file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18467/simulate-low-bandwidth-or-high-latency">simulate low-bandwidth or high-latency</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38443/wireshark-opening-vs-exporting-performance">Wireshark opening vs exporting performance</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52515/slow-application-response-times">Slow application response times</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2075/very-slow-gui-when-running-wireshark-remotely">Very slow GUI when running wireshark remotely</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19133/tshark-memory-consumption-and-temporary-file-usage">tshark memory consumption and temporary file usage</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39163/tshark-command-to-find-answer-field-in-dns-query-response-with-more-than-1-answer-rrs">tshark command to find answer field in dns query response with more than 1 answer RRs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53703/slow-performance-on-aveva-software">slow performance on aveva software</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2500/queries-regarding-http-protocol">queries regarding http protocol</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19135/improving-performance">Improving performance</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

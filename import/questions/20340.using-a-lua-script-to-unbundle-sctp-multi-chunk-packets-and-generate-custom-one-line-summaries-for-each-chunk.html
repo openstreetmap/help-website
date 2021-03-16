@@ -1,0 +1,824 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Using a Lua Script to Unbundle SCTP Multi-Chunk Packets and Generate Custom One-Line Summaries for Each Chunk - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello everyone. I&#39;ve got some question(s) regarding the usage of Lua to unbundle SCTP multi-chunk packets and create custom one-line summaries for each chunk. The Question(s) 1) Is it possible to use a Lua script to retrieve specific fields within the dissection tree? I&#39;m thinking of a Lua script be..." />
+        <meta name="keywords" content="unbundle,sctp,lua,chunk,summary" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/20340/using-a-lua-script-to-unbundle-sctp-multi-chunk-packets-and-generate-custom-one-line-summaries-for-each-chunk" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/20340/using-a-lua-script-to-unbundle-sctp-multi-chunk-packets-and-generate-custom-one-line-summaries-for-each-chunk?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='p4Hqb3kuWkmjfZq0NtADb2slD8cO8pkh' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/20340/using-a-lua-script-to-unbundle-sctp-multi-chunk-packets-and-generate-custom-one-line-summaries-for-each-chunk">Using a Lua Script to Unbundle SCTP Multi-Chunk Packets and Generate Custom One-Line Summaries for Each Chunk</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-20340-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20340/up/" rel="nofollow"> </a>
+<div id="post-20340-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-20340-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20340/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/20340/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello everyone.</p>
+<p>I've got some question(s) regarding the usage of Lua to unbundle SCTP multi-chunk packets and create custom one-line summaries for each chunk.</p>
+<p><strong>The Question(s)</strong></p>
+<p>1) Is it possible to use a Lua script to retrieve specific fields within the dissection tree?</p>
+<p>I'm thinking of a Lua script because I've seen that it is passed a reference to the dissection tree in some methods.</p>
+<p>2a) If no, what other solution do you suggest to navigate the dissection tree?</p>
+<p>2b) If yes, should I use a listener, a dissector, a post-dissector, or what else?</p>
+<p>For instance, I read on the Wireshark Lua documentation and elsewhere that the dissection tree may not be fully populated the first time a listener is notified.</p>
+<p>3) What are the Lua methods to navigate the tree, check the field names, and retrieve their values?</p>
+<p>I need to navigate the tree so that I can tell which SCTP chunk (i.e., subtree) a given field (e.g., tcap.tid) belongs to, and assign its value(s) in the one-line summary for that SCTP chunk.</p>
+<p>In the rest of the post, I describe the situation I'm in and which led me to ask these questions.</p>
+<p><strong>The environment</strong></p>
+<p>I'm analyzing SS7 traffic over IP such that the protocol stack for each packet usually looks like this (bottom up):</p>
+<pre><code>GSM SMS
+GSM MAP
+TCAP
+SCCP
+MTP3 UA
+SCTP
+IP
+Ethernet
+Frame
+</code></pre>
+<p>Of course, not all captured packets feature the whole protocol stack listed above. Some of them are just SCTP control packets, while others feature payloads for (some of) the protocols on top of SCTP as well.</p>
+<p>Most importantly, each packet usually features multiple SCTP chunks, so that there are multiple entries on top of SCTP (each one containing payload for some out of M3UA, SCCP, TCAP, GSM MAP, and GSM SMS) for most of the captured packets.</p>
+<p>I am working with Tshark 1.8.2 compiled with Lua 5.1. This is the standard Tshark package in Ubuntu 12.10.</p>
+<p><strong>The Objective</strong></p>
+<p>As part of a project, I need to dissect this SS7 traffic and save to a file a one-line summary for each M3UA, SCCP, TCAP, GSM MAP, and GSM SMS packet with the values of selected fields in their payloads.</p>
+<p>The one-line summaries should be tab-separated and contain entries for OPC and DPC, SSNs, TCAP TIDs, IMSIs, and a few other fields.</p>
+<p><strong>The Problem</strong></p>
+<p>Unfortunately, Wireshark/Tshark does not provide a one-line summary for each SCTP chunk in an SCTP multi-chunk packet.</p>
+<p>Consequently, the M3UA, SCCP, TCAP, GSM MAP, and GSM SMS fields of different SCTP chunks in a packet get all listed together when one accesses them using the -T fields and -e options.</p>
+<p>At first sight, this makes it impossible to match the values of these fields to the respective SCTP chunk.</p>
+<p><strong>A Partial Solution</strong></p>
+<p>I developed a partial solution to this problem by using some of the structure in the protocols to infer if a given chunk features a given field, and thus read it off the list of entries for that field returned by the Tshark-generated one-line summaries.</p>
+<p>However, this method can get me only so far as it fails if there isn't a (simple) structure in the protocol. For instance, it's impossible to infer which chunk the TCAP transaction IDs belong to, because a chunk can feature one or two transaction IDs, which are both output with the tcap.tid field. Therefore, if I see a packet with two SCTP chunks and three values in tcap.tid, it's impossible to tell which one of the two chunks had two TCAP IDs.</p>
+<p><strong>An Alternative Solution</strong></p>
+<p>Given the shortcomings of the partial solution described above, I went back to the drawing board and tried to find another solution.</p>
+<p>Then I noticed that there is a place where the SCTP chunks are unbundled: The Packet Details Pane. In the packet details, the field values are listed under their respective SCTP chunks. Therefore, by looking at the packet details I can tell which SCTP chunk the TCAP transaction IDs refer to.</p>
+<p>I then considered parsing the output generated by Tshark with options -T text and -V (the packet details) to retrieve the required fields for each SCTP chunk and output my own one-line summary for each SCTP chunk.</p>
+<p>However, this doesn't sound like good software engineering for several reasons:</p>
+<ol>
+<li>It's very time expensive for Tshark to output the packet details even if I use the -O protocols option to select which protocols (e.g., only M3UA, SCCP, TCAP, GSM MAP, and GSM SMS) to generate the details for; and</li>
+<li>The output packet details format could change anytime, thus breaking my parser.</li>
+</ol>
+<p>With these remarks in mind, I then started looking into Lua scripts, which prompted me to ask the questions above.</p>
+<p>Thank you in advance for your help.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/unbundle/" class="post-tag tag-link-unbundle"
+                                        title="see questions tagged 'unbundle'" rel="tag">unbundle</a>
+                                
+                                    <a href="/tags/sctp/" class="post-tag tag-link-sctp"
+                                        title="see questions tagged 'sctp'" rel="tag">sctp</a>
+                                
+                                    <a href="/tags/lua/" class="post-tag tag-link-lua"
+                                        title="see questions tagged 'lua'" rel="tag">lua</a>
+                                
+                                    <a href="/tags/chunk/" class="post-tag tag-link-chunk"
+                                        title="see questions tagged 'chunk'" rel="tag">chunk</a>
+                                
+                                    <a href="/tags/summary/" class="post-tag tag-link-summary"
+                                        title="see questions tagged 'summary'" rel="tag">summary</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Apr '13, 08:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b5d693d82939faf272e4319afc0d13?s=32&amp;d=identicon&amp;r=g" alt="tshark-user's gravatar image" />
+    <p><a href="/users/4743/tshark-user">tshark-user</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tshark-user has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/20340/">
+                edited
+                <strong>12 Apr '13, 07:14</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-20340">
+    
+</div>
+<div id="comment-tools-20340" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20340-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/20340/using-a-lua-script-to-unbundle-sctp-multi-chunk-packets-and-generate-custom-one-line-summaries-for-each-chunk?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/20340/using-a-lua-script-to-unbundle-sctp-multi-chunk-packets-and-generate-custom-one-line-summaries-for-each-chunk?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/20340/using-a-lua-script-to-unbundle-sctp-multi-chunk-packets-and-generate-custom-one-line-summaries-for-each-chunk?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/20340/using-a-lua-script-to-unbundle-sctp-multi-chunk-packets-and-generate-custom-one-line-summaries-for-each-chunk?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="20732"></a>
+                    <div id="answer-container-20732" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-20732-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/20732/up/" rel="nofollow"> </a>
+<div id="post-20732-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-20732-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/20732/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi,</p>
+<p>Short answers:</p>
+<p>Re: 1) Yes</p>
+<p>Re: 2) Use a tap </p>
+<p>Re: 3) Field extractors in some cases as tables </p>
+<p>Longer answer:</p>
+<p>I've actually did very similar thing to what you've described there.</p>
+<p>I've created in lua what was in fact an SCCP/RANAP/ALCAP analyzer that would track UMTS/GSM events calls, SMS'es, PS sessions etc and then rather than printing it out as you are thinking about doing I used luasql and dumped transactions to a database with a little web interface which allowed me to do loads of statistical analysis. </p>
+<p>It is was a bit tricky as you basically need to do session tracking ending etc but nonetheless doable.</p>
+<p>The problem you've described with multiple tcap.tids is very common</p>
+<p><a href="http://ask.wireshark.org/questions/4225/lua-how-to-get-multiple-values-from-faststart-items-h225-h245?page=1&amp;focusedAnswerId=4236#4236">How to get multiple values from items</a></p>
+<p><a href="http://ask.wireshark.org/questions/11000/lua-tap-and-multiple-instances-of-a-protocol-in-one-frame">Multiple instances of a protocol in one frame</a></p>
+<p>Best advise I could give you is to study lua examples on this website. </p>
+<p>I'd especially recommend reading answers posted by <a href="http://ask.wireshark.org/users/817/helloworld">helloworld</a> his code examples were great help although not directly related to the problem I was trying to solve.</p>
+<p>Have fun</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/20732/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Apr '13, 00:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/96df873546556d82f89c599816554877?s=32&amp;d=identicon&amp;r=g" alt="izopizo's gravatar image" />
+    <p><a href="/users/370/izopizo">izopizo</a><br/>
+    <span class="score" title="202 reputation points">202</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="izopizo has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-20732">
+    
+        <a name="20745"></a>
+        <div class="comment" id="comment-20745">
+            <div id="post-20745-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for your answer, izopizo. I'll look into the links you provided.</p>
+
+<p>What are the field extractors you're referring to? The all_field_infos() method seems to return all fields, while the Field.new() selects a specific field. However, none of the them seems to support navigation of the dissection tree.</p>
+
+<p>I would like to be able to navigate the dissection tree just like you can navigate an XML document, so as to read and process fields knowing their relative position in the tree. Among other things, this would enable me to tell between TCAP transaction IDs of different chunks in the same multi-chunk SCTP packet, or distinguish whether an MSISDN in a GSM MAP operation is the device phone number or the network element (say HLR).</p>
+
+<p>Are there any methods in the Lua API that I can use to navigate the dissection tree (starting from the root)?</p>
+
+<p>In the meantime since I asked the question, I developed a solution to my problem using an existing Perl script (also mentioned in this question <a href="http://ask.wireshark.org/questions/12845/sctp-unbundle">http://ask.wireshark.org/questions/12845/sctp-unbundle</a> ) to split multi-chunk SCTP packets into multiple packets, and then process the output of -T fields with my own Python script to reconstruct the TCAP transactions.</p>
+
+<p>If there are indeed methods to navigate the dissection tree in Lua, I'd be glad to port my Python script for TCAP transaction reconstruction to Lua and make it available to the Wireshark community.</p>
+
+<p>Thank you again for your help.</p></div>
+            <div class="comment-info" id="comment-20745-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Apr '13, 14:23)</span>
+                <a class="comment-user userinfo" href="/users/4743/tshark-user">tshark-user</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-20732" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-20732-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/20340/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='p4Hqb3kuWkmjfZq0NtADb2slD8cO8pkh' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/20340/using-a-lua-script-to-unbundle-sctp-multi-chunk-packets-and-generate-custom-one-line-summaries-for-each-chunk?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/20340/using-a-lua-script-to-unbundle-sctp-multi-chunk-packets-and-generate-custom-one-line-summaries-for-each-chunk?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/lua/"
+            class="tag-link-lua"
+            title="see questions tagged'lua'using tags"
+            rel="tag">lua</a> <span class="tag-number">&#215;431</span><br/>
+        
+        <a href="/tags/sctp/"
+            class="tag-link-sctp"
+            title="see questions tagged'sctp'using tags"
+            rel="tag">sctp</a> <span class="tag-number">&#215;25</span><br/>
+        
+        <a href="/tags/summary/"
+            class="tag-link-summary"
+            title="see questions tagged'summary'using tags"
+            rel="tag">summary</a> <span class="tag-number">&#215;11</span><br/>
+        
+        <a href="/tags/chunk/"
+            class="tag-link-chunk"
+            title="see questions tagged'chunk'using tags"
+            rel="tag">chunk</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/unbundle/"
+            class="tag-link-unbundle"
+            title="see questions tagged'unbundle'using tags"
+            rel="tag">unbundle</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 11, 2013, 8:36 a.m.">11 Apr '13, 08:36</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,165 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 23, 2013, 2:23 p.m.">23 Apr '13, 14:23</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/20264/split-bundled-packets-into-single">Split bundled packets into single</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43543/how-to-iterating-though-a-bundled-ss7-sctp-packet-in-lua">How to iterating though a bundled SS7 SCTP packet in Lua</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12845/sctp-unbundle">SCTP unbundle</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20696/lua-tap-for-bundled-packets">lua tap for bundled packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55367/how-can-i-get-a-pcap-tcp-counts-summary-table-in-a-lua-script">How can I get a PCAP TCP counts summary table in a Lua script?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54770/dissector-with-several-ppi">dissector with several ppi</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29732/a-problem-with-parsing-sctp-chunk-with-more-than-1-diameter-messages">A problem with parsing SCTP chunk with more than 1 Diameter messages</a>
+        </p>
+        
+        <p>
+            <a href="/questions/570/crashing-issue-when-running-lua-dissector-after-upgrading-from-wireshark-100">Crashing issue when running Lua dissector after upgrading from wireshark 1.0.0</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4410/create-my-own-dissector">Create my own dissector</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5868/how-do-i-setup-wireshark-to-run-luas-clrpackage">How do I setup Wireshark to run Lua&#39;s CLRPackage</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1647 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Can we get total length of IP packet from pinfo pointer ? - Wireshark Q&amp;A</title>
+        <meta name="description" content="I intend to dissect last 12 bytes of my protocol packet and for that i am using eth.trailer subdissector list of standard ethernet dissector. And we know that in IP header we have a field of 2 bytes which denotes total length of IP packet.Also i assume IP dissector must have done its dissection befo..." />
+        <meta name="keywords" content="plugin,wireshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/11892/can-we-get-total-length-of-ip-packet-from-pinfo-pointer" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/11892/can-we-get-total-length-of-ip-packet-from-pinfo-pointer?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='nEQrWXlzMk1uMuIvCYzqmbgRx8X2nhaO' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/11892/can-we-get-total-length-of-ip-packet-from-pinfo-pointer">Can we get total length of IP packet from pinfo pointer ?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-11892-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11892/up/" rel="nofollow"> </a>
+<div id="post-11892-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-11892-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11892/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/11892/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I intend to dissect last 12 bytes of my protocol packet and for that i am using eth.trailer subdissector list of standard ethernet dissector. And we know that in IP header we have a field of 2 bytes which denotes total length of IP packet.Also i assume IP dissector must have done its dissection before my dissector will get called. So is there any way to retrieve that value from *pinfo ?? I hope i am clear.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/plugin/" class="post-tag tag-link-plugin"
+                                        title="see questions tagged 'plugin'" rel="tag">plugin</a>
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Jun '12, 00:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d15cd2870e25518ba76d2eb42f56bbcb?s=32&amp;d=identicon&amp;r=g" alt="yogeshg's gravatar image" />
+    <p><a href="/users/2753/yogeshg">yogeshg</a><br/>
+    <span class="score" title="41 reputation points">41</span><span title="22 badges"><span class="badge1">&#9679;</span><span class="badgecount">22</span></span><span title="23 badges"><span class="silver">&#9679;</span><span class="badgecount">23</span></span><span title="26 badges"><span class="bronze">&#9679;</span><span class="badgecount">26</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="yogeshg has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-11892">
+    
+        <a name="11900"></a>
+        <div class="comment" id="comment-11900">
+            <div id="post-11900-score" class="comment-score"></div>
+            <div class="comment-text"><p>Com'on folks please help , its a humble request...
+To make myself clear let me rephrase :</p>
+
+<p>I want to write dissector which will dissect packets whose eth.dst is of a certain pattern. For that i am using heuristic dissector.</p>
+
+<p>But , my data, which i want to dissect is located at end of the IP payload . We can also say it's at end of eth payload or ip payload or tcp payload ..</p>
+
+<p>That's why i think i should use eth.trailer subdissector for this.</p>
+
+<p>But my heuristics need to access eth.dst, which will be already dissected when my dissector gets called isn't it ?</p>
+
+<p>So for that i was wondering if we have any way to fetch eth.dst from pinfo pointer ?</p></div>
+            <div class="comment-info" id="comment-11900-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jun '12, 09:21)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-11892" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11892-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/11892/can-we-get-total-length-of-ip-packet-from-pinfo-pointer?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/11892/can-we-get-total-length-of-ip-packet-from-pinfo-pointer?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/11892/can-we-get-total-length-of-ip-packet-from-pinfo-pointer?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/11892/can-we-get-total-length-of-ip-packet-from-pinfo-pointer?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="11963"></a>
+                    <div id="answer-container-11963" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-11963-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11963/up/" rel="nofollow"> </a>
+<div id="post-11963-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-11963-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11963/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="yogeshg has selected this answer as the correct answer"
+        href="/accept_answer/11963/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You have set a real hard target for yourself trying to keep all Wireshark functionality while dissecting such a violating protocol. What kind of HW or SW is used that overwrites these 12 bytes and the ethernet addresses?</p>
+<p>I think the way forward (warning: uncharted territory!!!) would be:</p>
+<ol>
+<li>Build your own ethernet dissector as a plug-in and add it to the heuristics table.</li>
+<li>If the packet matches your protocol (based on the mac address):<ul>
+<li>Dissect the ethernet header and add it to the tree</li>
+<li>create a new TVB with all IP and upper layer data, up to (but not including) your 12 bytes</li>
+<li>Call the IP dissector with the new TVB</li>
+<li>When the IP dissector returns, dissect your 12 bytes and add it to the tree</li>
+</ul>
+</li>
+<li>If not, don't dissect and let the normal ethernet dissector do it's magic on the packet.</li>
+</ol>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/11963/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Jun '12, 09:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/11963/">
+                edited
+                <strong>15 Jun '12, 09:21</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-11963">
+    
+        <a name="11965"></a>
+        <div class="comment" id="comment-11965">
+            <div id="post-11965-score" class="comment-score"></div>
+            <div class="comment-text"><p>Boss,</p>
+
+<blockquote>
+<blockquote>
+<p>Dissect the ethernet header and add it to the tree</p>
+</blockquote>
+</blockquote>
+
+<p>This part is the only hurdle.I will have to plunge into default eth dissector to comprehend how that is being done.</p></div>
+            <div class="comment-info" id="comment-11965-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 09:35)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+        <a name="11967"></a>
+        <div class="comment" id="comment-11967">
+            <div id="post-11967-score" class="comment-score">1</div>
+            <div class="comment-text"><p>As I mentioned, copy the default eth dissector and remove the unnecessary parts. After all, you know that it's a "default" IP packet you're after, so no need to take care about all the other ethernet stuff, basically just the mac addresses, protocl type (IP) and possibly padding. Easy one ;-))</p></div>
+            <div class="comment-info" id="comment-11967-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 09:46)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11968"></a>
+        <div class="comment" id="comment-11968">
+            <div id="post-11968-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can't thank enough both of you , earlier i was not sure of what i am doing , now that atleast i know how to go forward , i should be able to do it.</p></div>
+            <div class="comment-info" id="comment-11968-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 09:55)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+        <a name="11969"></a>
+        <div class="comment" id="comment-11969">
+            <div id="post-11969-score" class="comment-score"></div>
+            <div class="comment-text"><p>can you please tell us what kind of cluster software or loadbalancer (if any) causes that behaviour? Is it something "home-brewed" or is it available on the market? I want to store that information somewhere deep in my skull, just in case I'll see that ever again in the wild ;-)</p></div>
+            <div class="comment-info" id="comment-11969-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 09:57)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12015"></a>
+        <div class="comment" id="comment-12015">
+            <div id="post-12015-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is it possible to have plugin calling another plugin in wireshark ? if yes , please point examples , thanks</p></div>
+            <div class="comment-info" id="comment-12015-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jun '12, 04:27)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-11963" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11963-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="11902"></a>
+                    <div id="answer-container-11902" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-11902-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11902/up/" rel="nofollow"> </a>
+<div id="post-11902-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-11902-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11902/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'm not sure what you mean, as you are mixing ethernet trailer with last 12 bytes of IP payload in your question. If the 12 bytes you want to dissect are part of the IP payload, then you need to follow the normal path and let the protocol that has your 12 bytes as its payload call your dissector.</p>
+<p>If your 12 bytes come after the IP payload, then it will indeed be handled as ethernet trailer and you will need to add your dissector to the ethernet trailer dissector list. Your dissector will then be called with a TVB pointing to the first byte <strong>after</strong> the IP payload, so that should be the first byte of your 12 bytes.</p>
+<p>You have to be aware though, that there might or might not be a FCS in the trailer as well.</p>
+<p>It would help if you could upload a tracefile with a few of the packets you want to dissect to <a href="http://www.cloudshark.org">www.cloudshark.org</a> and post the link to it here.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/11902/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Jun '12, 10:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-11902">
+    
+        <a name="11907"></a>
+        <div class="comment" id="comment-11907">
+            <div id="post-11907-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi SYN-bit</p>
+
+<p>Yes it's last 12 bytes of IP payload. But the criteria on which i will want my dissector to be called is eth.dst has to be of certain pattern.(02:00:6f:A:B:01) A and B can belong to a range.</p>
+
+<p>So for this i am bound to use eth.heuristics ,or can i use normal ip disssector also and use negative offset with TVB to get to eth.dst in order to check it ? ..</p>
+
+<p>I believe all this trouble is because my protocol data and the criteria part(eth.dst) lie far ahead from each other.</p>
+
+<p>Tried uploading trace but no packets are showing <a href="http://up.It">up.It</a> says "No packets were found"</p></div>
+            <div class="comment-info" id="comment-11907-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jun '12, 16:36)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+        <a name="11908"></a>
+        <div class="comment" id="comment-11908">
+            <div id="post-11908-score" class="comment-score"></div>
+            <div class="comment-text"><p>Did you try to upload a file in libpcap format?</p></div>
+            <div class="comment-info" id="comment-11908-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jun '12, 16:51)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11909"></a>
+        <div class="comment" id="comment-11909">
+            <div id="post-11909-score" class="comment-score"></div>
+            <div class="comment-text"><p>disector_add() is used for definition of criteria right ? and most of examples i saw ,use tcp.port or udp.port equal to some value. But my case is different , i want packets whose eth.dst is of certain pattern as i mentioned above.</p>
+
+<p>That's why i am using eth heuristic dissector. But when we have heuristic dissector , our dissector gets called before that frame (eth in this case) is touched by wireshark. correct me if i am wrong</p></div>
+            <div class="comment-info" id="comment-11909-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jun '12, 17:04)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+        <a name="11916"></a>
+        <div class="comment" id="comment-11916">
+            <div id="post-11916-score" class="comment-score"></div>
+            <div class="comment-text"><p>No , i tried to upload in .cap format not pcap ,can you send me your email address at <a href="http://yogesh.gg">yogesh.gg</a>@<a href="http://hotmail.com">hotmail.com</a> , i will send you file itself or check your facebook message :)</p></div>
+            <div class="comment-info" id="comment-11916-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jun '12, 22:20)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+        <a name="11917"></a>
+        <div class="comment" id="comment-11917">
+            <div id="post-11917-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="http://www.cloudshark.org/captures/7e77eba8a6cb">http://www.cloudshark.org/captures/7e77eba8a6cb</a></p>
+
+<p>Filter -- eth.dst==02:00:6f:01:02:01</p>
+
+<p>Frame number 385</p></div>
+            <div class="comment-info" id="comment-11917-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jun '12, 22:40)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+        <a name="11951"></a>
+        <div class="comment not_top_scorer" id="comment-11951">
+            <div id="post-11951-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, I just took a look at your data. Since "your protocol" seems to change the dst mac address and the last 12 bytes of the IP payload, I'm not sure how you want to dissect this.</p>
+
+<ul>
+<li>Do you want to dissect only your 12 bytes?</li>
+<li>Or also the IP header (and what happens if the IP payload is less then 12 bytes, will the end of the IP header be overwritten?)</li>
+<li>The dissector of the protocol in which the 12 bytes are overwritten will have a hard time dealing with that, regardless of your dissector.</li>
+<li>How do you plan to handle sliced packets (like in frame 412) where (part of) your 12 bytes are missing</li>
+</ul></div>
+            <div class="comment-info" id="comment-11951-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 08:48)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11953"></a>
+        <div class="comment not_top_scorer" id="comment-11953">
+            <div id="post-11953-score" class="comment-score"></div>
+            <div class="comment-text"><p>Or will the following do for you:</p>
+
+<p>Ethernet Dissection
+Padding
+Dissection of your 12 bytes</p>
+
+<p>If that's the case, you should change the Ethernet dissector to recognize your special mac-address and call your dissector as next (instead of the IP dissector).</p>
+
+<p>Then in your dissector, you need to extract the IP length from the IP header to get the offset to your 12 bytes. Show the "padding" as hexdata and then show the dissection of your protocol.</p></div>
+            <div class="comment-info" id="comment-11953-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 08:52)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11954"></a>
+        <div class="comment not_top_scorer" id="comment-11954">
+            <div id="post-11954-score" class="comment-score"></div>
+            <div class="comment-text"><p>You might want to create a new TVB with the IP header and payload up to, but not inlcuding your 12 bytes. Get those dissected by calling the IP dissector and when the dissector returns, dissect your 12 octets. I'm not 100% sure though if that will work, I would have to work that out myself.</p></div>
+            <div class="comment-info" id="comment-11954-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 08:54)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12059"></a>
+        <div class="comment not_top_scorer" id="comment-12059">
+            <div id="post-12059-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi yogeshg,</p>
+
+<p>Just a neat FYI - if you're using CloudShark you can actually embed the filter directly in the URL, thus:</p>
+
+<p><a href="http://www.cloudshark.org/captures/7e77eba8a6cb?filter=eth.dst%3D%3D02%3A00%3A6f%3A01%3A02%3A01">http://www.cloudshark.org/captures/7e77eba8a6cb?filter=eth.dst%3D%3D02%3A00%3A6f%3A01%3A02%3A01</a></p>
+
+<p>(When you hit apply filter, the URL will change so you can copy it easily).</p>
+
+<p>/CS</p></div>
+            <div class="comment-info" id="comment-12059-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '12, 08:25)</span>
+                <a class="comment-user userinfo" href="/users/260/cloudshark">cloudshark</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-11902" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11902-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="11930"></a>
+                    <div id="answer-container-11930" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-11930-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11930/up/" rel="nofollow"> </a>
+<div id="post-11930-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-11930-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11930/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>yogeshg, you are asking a lot of questions about how to write a dissector during the last weeks, which is absolutely fine. </p>
+<p>You say, you need to filter on a specific dst mac address. Then you show a sample (Frame 385) that looks like a somehow "crippled" HTTP request. BTW: There are other, "crippled" HTTP requests to that dst mac. Why is that?</p>
+<p>So, what are you excatly trying to do with your dissector? I'm not sure you really need a dissector. Can you show a binary packet you want to dissect and the logical structure of the data in that packet? You need that information anyway if you want to dissect the packet. </p>
+<p>BTW: Why do you want to filter on the dst mac address? Your sample is TCP on port 80. So, why not just add a heuristic TCP/HTTP dissector? </p>
+<p>Are you interested in the structure of the payload or just the fact that there are packets with that dst mac address?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/11930/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Jun '12, 04:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/11930/">
+                edited
+                <strong>15 Jun '12, 05:10</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-11930">
+    
+        <a name="11931"></a>
+        <div class="comment" id="comment-11931">
+            <div id="post-11931-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes Kurt , its a HTTP packet in this case but in general it can be any packet with that specific dest mac.That is not crippled but chunked HTTP packet , usually when size is big we do this.</p>
+
+<p>In that chunked packet , if you click on HTTP header , then last 12 bytes will get highlighted below. That is precisely the part which i want to dissect.And this dissection i want to be done only on packets whose eth.dst is of that specific pattern.</p>
+
+<p>In that packet, below you can see all the binary and all the info you asked for.</p>
+
+<p>I gave the filter just because you guys can see what i want.</p></div>
+            <div class="comment-info" id="comment-11931-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 05:17)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+        <a name="11932"></a>
+        <div class="comment" id="comment-11932">
+            <div id="post-11932-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for you comment first.</p>
+
+<p>It can be any packet , http,udp,icmp whatever. That's why i can rely only and only on eth.dst.</p>
+
+<p>There are other HTTP requests also because trace was taken during traffic running. So only we are seeing lot of http requests.</p>
+
+<p>Two things i want :</p>
+
+<ol>
+<li>
+<p>Wireshark to search packets with eth.dst of my specific pattern and call my dissector on those packets.</p>
+</li>
+<li>
+<p>The data i want to dissect is <em>PART</em> of IP payload and last 12 bytes of IP payload.</p>
+</li>
+</ol>
+
+<p>That's it.</p></div>
+            <div class="comment-info" id="comment-11932-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 05:29)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+        <a name="11936"></a>
+        <div class="comment" id="comment-11936">
+            <div id="post-11936-score" class="comment-score"></div>
+            <div class="comment-text"><p>UPDATE: see my comment below</p></div>
+            <div class="comment-info" id="comment-11936-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 06:57)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11937"></a>
+        <div class="comment not_top_scorer" id="comment-11937">
+            <div id="post-11937-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually this packet is being steered from one node(a device) to another when any packet from client falls on wrong node. So from client it can be any packet icmp,http .. isn't it ? :)</p>
+
+<p>I just got what i wanted..</p>
+
+<p>for dst mac pinfo-&gt;dl_dst</p>
+
+<p>and i also need to know about src mac .. pinfo-&gt;dl_src ??</p></div>
+            <div class="comment-info" id="comment-11937-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 07:04)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+        <a name="11938"></a>
+        <div class="comment not_top_scorer" id="comment-11938">
+            <div id="post-11938-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>It can be any packet , http,udp,icmp whatever. </p>
+</blockquote>
+
+<p>crazy "protocol", isn't it? I'm just curious: Why are you doing that??? </p>
+
+<p>If it's always an IP packet, why not adding a heuristic IP dissector? <strong>HOWEVER</strong>: I'm not sure if that's possible, as I could not find one in the sources!!<br>
+</p>
+
+<p>Within that dissector you can look for the dst mac (maybe pinfo-&gt;dl_dst) as soon as your dissector gets the packet. If the dst mac matches, look for your magic bytes (if there are any), possibly at position "pfino-&gt;iplen - 12" (or something similar). If neither condition matches return from your dissector. </p>
+
+<p><strong>UPDATE</strong>: I don't think you can add a heuristic IP dissector, as packet-ip.c does not try to call heuristic dissectors. In that case, you can try to add a TCP and UDP heuristic dissector instead. I believe a heuristic ICMP dissector is also not possible (can't find code in packet-icmp.c). If that does not work for you, there is still the fallback to the heuristic ethernet dissector :-) </p>
+
+<p>However, with the information given in this thread, somebody with good experience in writing dissectors, might be able to help you. I'm still diving into the wireshark code and there is a lot I don't understand (from the code and data structure perspective). </p>
+
+<p>What you need: </p>
+
+<ol>
+<li>Add a heuristic ethernet dissector </li>
+<li>As soon as your dissector gets called, check if the dst mac matches your pattern </li>
+<li>If true, extract the last 12 bytes of the ethernet frame (what about trailer?), OR look at the IP structure itself  (if the protocol is IP) and extract the last 12 bytes of the IP frame. As you mentioned, look at the IP len filed. You will have to do the later yourself, as the IP dissector will be called after your dissector, so you can't use that information. </li>
+<li>Build any tree structure you need with the extracted data</li>
+</ol></div>
+            <div class="comment-info" id="comment-11938-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 07:08)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11939"></a>
+        <div class="comment not_top_scorer" id="comment-11939">
+            <div id="post-11939-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Actually this packet is being steered from one node(a device) to another 
+when any packet from client falls on wrong node. So from client it can 
+be any packet icmp,http .. isn't it ? :)</p>
+</blockquote>
+
+<p>Is this some kind of cluster protocol? I have seen some traffic in your capture that looks like cluster communication.</p></div>
+            <div class="comment-info" id="comment-11939-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 07:11)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11944"></a>
+        <div class="comment not_top_scorer" id="comment-11944">
+            <div id="post-11944-score" class="comment-score"></div>
+            <div class="comment-text"><p>Kurt,
+Whatever you just mentioned in "What you need" , i did precisely same in first attempt. But it didn't work. Because when we make heuristic eth dissector , our dissector gets called for every packet before wireshark touches the eth frame and TVB points to first bit of eth header.
+But problem is, when i did the dissection of those 12 bytes and  i called eth dissector using "call_dissector(eth_handle ....)" function , in that call actually it again calls my heuristic dissector with TVB still pointing to first bit of eth header.
+IF you see line number 249 in packet-eth.c you can find it.</p></div>
+            <div class="comment-info" id="comment-11944-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 08:14)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+        <a name="11945"></a>
+        <div class="comment not_top_scorer" id="comment-11945">
+            <div id="post-11945-score" class="comment-score"></div>
+            <div class="comment-text"><p>So it becomes loop kind of thing , because i will use call_dissector function inside my heur_dissect_proto function ..and in turn call_dissector will again call my heuristic dissector. I hope you will follow all what i said. That's why the procedure you mentioned won;t work !!</p>
+
+<p>Thanks anyways for your patience Sir!</p></div>
+            <div class="comment-info" id="comment-11945-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 08:14)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+        <a name="11950"></a>
+        <div class="comment not_top_scorer" id="comment-11950">
+            <div id="post-11950-score" class="comment-score"></div>
+            <div class="comment-text"><p>you should not call the eth dissector in YOUR eth dissector, as it will "loop", as you mentioned. You need to parse the whole data yourself in your own eth dissector, as it will be called very early in the whole dissection process, so you can't access any IP, TCP data structures, as they are not there. No other dissector has been called for that packet, and you should not call any one of them yourself unless you know very well what happens then. </p>
+
+<p>So, basically you need to (kind of) rebuild the basic functionality of the eth and ip dissector to get to the data you need. First look at the eth dst address (see eth fram spec). Look at the protocol field. If it's IP, look at the IP len field and extract the data you need (last 12 bytes).</p>
+
+<p>If you are not interested in the dissection if the IP,TCP,UDP,ICMP part, then you can add your own information to the tree and tell wireshark to stop dissecting the packet any further.</p>
+
+<p>However, if you want other dissectors to be called as well (on such a packet), then it get's really tricky.</p></div>
+            <div class="comment-info" id="comment-11950-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 08:34)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11952"></a>
+        <div class="comment not_top_scorer" id="comment-11952">
+            <div id="post-11952-score" class="comment-score"></div>
+            <div class="comment-text"><p>No i want to dissect every bit :) .. i tried calling ip dissector in my heuristic dissector and that worked only thing is eth part was not dissected.</p>
+
+<p>And you told that pinfo-&gt;dl_dst will give me dst.mac right ? I suppose pinfo-&gt;dl_src will then give me src.mac. Ok that said, is there any way to get my dissector called for all packets without using heuristic dissector.AFAIK, only  heuristic dissector gets called for all packet.</p></div>
+            <div class="comment-info" id="comment-11952-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 08:48)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+        <a name="11955"></a>
+        <div class="comment not_top_scorer" id="comment-11955">
+            <div id="post-11955-score" class="comment-score"></div>
+            <div class="comment-text"><p>as SYN-bit said, change the default eth dissector to detect your special mac addresses. As long as you don't want this change to be included into the official source, it's probably the best (simple) way to go.</p></div>
+            <div class="comment-info" id="comment-11955-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 08:58)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11956"></a>
+        <div class="comment not_top_scorer" id="comment-11956">
+            <div id="post-11956-score" class="comment-score"></div>
+            <div class="comment-text"><p>UPDATE: see my comment below</p></div>
+            <div class="comment-info" id="comment-11956-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 09:04)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11957"></a>
+        <div class="comment not_top_scorer" id="comment-11957">
+            <div id="post-11957-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think only way for me is to build up dissection of eth part myself in my eth heuristic dissector.</p>
+
+<p>And yes you got it right ,i am supposed to dissect all bits ..</p></div>
+            <div class="comment-info" id="comment-11957-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 09:07)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+        <a name="11959"></a>
+        <div class="comment" id="comment-11959">
+            <div id="post-11959-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>No i want to dissect every bit :) </p>
+</blockquote>
+
+<p>Do I get this right? You want to see ALL protocol details (Eth, IP, UDP, TCP, HTTP) plus your 12 last "magic" bytes beeing dissected by your own dissector? If so, you will have a hard time doing this, without some severe changes to wireshark, as those 12 last bytes can be part of any protocol (as you said).</p>
+
+<p>Just a wild idea: Change the default eth dissector to trigger on your mac address. If that trigger fires, look at the last 12 bytes of the packets. If they contain some magic bytes, remove those 12 bytes from the packet (adjust the length) and call the ip dissector. As soon as that dissector returns, add the 12 bytes back to the packet and dissect them yourself within the eth dissector.</p></div>
+            <div class="comment-info" id="comment-11959-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 09:12)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11960"></a>
+        <div class="comment" id="comment-11960">
+            <div id="post-11960-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>I think only way for me is to build up dissection of eth part myself in my eth heuristic dissector.</p>
+</blockquote>
+
+<p>The better (and possibly easier) way would be to fix your cluster protocol ;-))</p></div>
+            <div class="comment-info" id="comment-11960-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 09:14)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11961"></a>
+        <div class="comment not_top_scorer" id="comment-11961">
+            <div id="post-11961-score" class="comment-score"></div>
+            <div class="comment-text"><p>Nice suggestion , until now i was not even thinking of changing default source :) , thanks a ton , i should try to do it.thanks again</p></div>
+            <div class="comment-info" id="comment-11961-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 09:18)</span>
+                <a class="comment-user userinfo" href="/users/2753/yogeshg">yogeshg</a>
+                
+            </div>
+        </div>
+    
+        <a name="11964"></a>
+        <div class="comment not_top_scorer" id="comment-11964">
+            <div id="post-11964-score" class="comment-score"></div>
+            <div class="comment-text"><p>you can also do this:</p>
+
+<ul>
+<li>distribute your own version of the wireshark binary</li>
+<li>just copy the eth dissector code into your heuristic eth dissector plugin and make the necessary changes there. So, you don't have to care about all the obstacles of ethernet. Then just distribute your plugin.</li>
+</ul></div>
+            <div class="comment-info" id="comment-11964-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '12, 09:21)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-11930" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 17
+        </span>
+        <a href="#" class="show-all-comments-link">show 12 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11930-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/11892/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='nEQrWXlzMk1uMuIvCYzqmbgRx8X2nhaO' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/11892/can-we-get-total-length-of-ip-packet-from-pinfo-pointer?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/11892/can-we-get-total-length-of-ip-packet-from-pinfo-pointer?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+        <a href="/tags/plugin/"
+            class="tag-link-plugin"
+            title="see questions tagged'plugin'using tags"
+            rel="tag">plugin</a> <span class="tag-number">&#215;173</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 14, 2012, 12:51 a.m.">14 Jun '12, 00:51</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,515 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 19, 2012, 8:25 a.m.">19 Jun '12, 08:25</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/33958/dissector-parameter-question">Dissector parameter question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42393/update-old-style-plugins">Update &quot;old style&quot; plugins</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45943/how-to-change-a-proto_item-value-at-dissector">How to change a proto_item value at dissector?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11698/pls-point-example-source-file-of-dual-heuristicnormal-dissector">pls point example source file of dual heuristic/normal dissector</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43791/creating-subdissector-table-for-heuristic-dissector">Creating subdissector table for Heuristic Dissector</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49649/which-one-is-the-best-way-to-develop-new-plugin-either-in-c-or-lua">Which one is the best way to develop new plugin either in C or LUA.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56774/64-bit-plugins-on-portable-wireshark">64 bit plugins on portable wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58469/run-wireshark-in-web-page">run wireshark in web page</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11702/can-we-call_dissector-function-prior-to-my-protocol-relevant-dissection">Can we call_dissector function prior to my protocol relevant dissection ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42442/compatibility-of-lua-plugin-in-wireshark">Compatibility of lua plugin in wireshark?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

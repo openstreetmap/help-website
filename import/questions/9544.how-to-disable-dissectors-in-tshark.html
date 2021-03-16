@@ -1,0 +1,1179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>how to disable dissectors in tshark? - Wireshark Q&amp;A</title>
+        <meta name="description" content="This works:  tshark -r $pcap -R &#39;tcp.seq==1 and tcp.flags.push==1&#39; -T fields -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e data ...but when the payload is recognized as SSL or HTTP, the data does not get output. I want to turn off ALL decoding.  This is the parameter that I wish exists:  -d t..." />
+        <meta name="keywords" content="disable,tshark,dissectors" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/9544/how-to-disable-dissectors-in-tshark" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/9544/how-to-disable-dissectors-in-tshark?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='1meW0Nyd4aScnB8TkuSnYImUOjYgFutJ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/9544/how-to-disable-dissectors-in-tshark">how to disable dissectors in tshark?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-9544-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9544/up/" rel="nofollow"> </a>
+<div id="post-9544-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-9544-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9544/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/9544/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>This works:</p>
+<blockquote>
+<p>tshark -r $pcap -R 'tcp.seq==1 and
+tcp.flags.push==1' -T fields -e ip.src
+-e tcp.srcport -e ip.dst -e tcp.dstport -e data
+...but when the payload is recognized as SSL or HTTP, the data does not get output.  I want to turn off ALL decoding.</p>
+</blockquote>
+<p>This is the parameter that I wish exists:</p>
+<blockquote>
+<p>-d tcp.port==any,nodecode
+...or something like that.</p>
+</blockquote>
+<p>Any ideas?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/disable/" class="post-tag tag-link-disable"
+                                        title="see questions tagged 'disable'" rel="tag">disable</a>
+                                
+                                    <a href="/tags/tshark/" class="post-tag tag-link-tshark"
+                                        title="see questions tagged 'tshark'" rel="tag">tshark</a>
+                                
+                                    <a href="/tags/dissectors/" class="post-tag tag-link-dissectors"
+                                        title="see questions tagged 'dissectors'" rel="tag">dissectors</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Mar '12, 13:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e53e3a34f0128d92f4a5379b59fac7f7?s=32&amp;d=identicon&amp;r=g" alt="rafs's gravatar image" />
+    <p><a href="/users/2361/rafs">rafs</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rafs has one accepted answer">50&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/9544/">
+                edited
+                <strong>14 Mar '12, 13:38</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-9544">
+    
+        <a name="9545"></a>
+        <div class="comment" id="comment-9545">
+            <div id="post-9545-score" class="comment-score"></div>
+            <div class="comment-text"><p>I found that you can override 'preferences' for which ports are associated with which protocol.  This isn't exactly what I was looking for, but works to stop http and https dissectors from intercepting my output.  Good enough for now, I guess.</p>
+
+<pre><code>-o http.tcp.port:0 -o http.ssl.port:0
+</code></pre>
+
+<p>I think there might be a way to turn all off.  Wireshark allows this via "Do not decode" in the GUI, but I am not sure what's going on...</p></div>
+            <div class="comment-info" id="comment-9545-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Mar '12, 17:07)</span>
+                <a class="comment-user userinfo" href="/users/2361/rafs">rafs</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-9544" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9544-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/9544/how-to-disable-dissectors-in-tshark?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/9544/how-to-disable-dissectors-in-tshark?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/9544/how-to-disable-dissectors-in-tshark?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/9544/how-to-disable-dissectors-in-tshark?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="9546"></a>
+                    <div id="answer-container-9546" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-9546-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/9546/up/" rel="nofollow"> </a>
+<div id="post-9546-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-9546-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/9546/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="rafs has selected this answer as the correct answer"
+        href="/accept_answer/9546/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In your wireshark preferences folder(1) there is a file called "disabled_protos" which contains all the protocols that wireshark shoudl <strong>not</strong> dissect. If you use configuration profiles, look in the specific configuration profile that you are using (instead of the general preferences folder).</p>
+<p><em>(1) If you don't know the location of your preferences folder, look at the "Help -&gt; About Wireshark" page and click on the "Folders" tab.</em></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/9546/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Mar '12, 17:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/9546/">
+                edited
+                <strong>14 Mar '12, 17:22</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-9546">
+    
+        <a name="9549"></a>
+        <div class="comment" id="comment-9549">
+            <div id="post-9549-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi SYN-bit.  Thanks for the response.  I created a new Configuration Profile called 'disable_some_protos' and then disabled the protocols that I wanted disabled using Wireshark GUI on my WINXP.  I see that my personal configuration profiles are in the folder: 
+C:\Documents and Settings\&lt;myusername&gt;\Application Data\Wireshark\profiles\disable_some_protos
+..and it has cfilters, disabled_protos, preferences, recent.</p></div>
+            <div class="comment-info" id="comment-9549-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Mar '12, 21:16)</span>
+                <a class="comment-user userinfo" href="/users/2361/rafs">rafs</a>
+                
+            </div>
+        </div>
+    
+        <a name="9562"></a>
+        <div class="comment" id="comment-9562">
+            <div id="post-9562-score" class="comment-score"></div>
+            <div class="comment-text"><p>How do I apply the 'disabled_protos' file to my tshark command?</p></div>
+            <div class="comment-info" id="comment-9562-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '12, 14:31)</span>
+                <a class="comment-user userinfo" href="/users/2361/rafs">rafs</a>
+                
+            </div>
+        </div>
+    
+        <a name="9563"></a>
+        <div class="comment" id="comment-9563">
+            <div id="post-9563-score" class="comment-score"></div>
+            <div class="comment-text"><p>from the tshark help: "-C &lt;config profile=""&gt; start with specified configuration profile"</p></div>
+            <div class="comment-info" id="comment-9563-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '12, 14:39)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="9568"></a>
+        <div class="comment" id="comment-9568">
+            <div id="post-9568-score" class="comment-score"></div>
+            <div class="comment-text"><p>This works...</p>
+
+<pre><code>$ tshark -r http01.pcap -R 'tcp.seq==1 &amp;&amp; tcp.flags.push==1' -T fields -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e data -C disable_some_protos
+</code></pre>
+
+<p>...but what about a portable solution, like including this command in a script?  How do I set the search path for config profiles?</p></div>
+            <div class="comment-info" id="comment-9568-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '12, 17:40)</span>
+                <a class="comment-user userinfo" href="/users/2361/rafs">rafs</a>
+                
+            </div>
+        </div>
+    
+        <a name="9601"></a>
+        <div class="comment" id="comment-9601">
+            <div id="post-9601-score" class="comment-score"></div>
+            <div class="comment-text"><p>What is <em>not</em> portable in the command above? How will it <em>not</em> work in a script?</p>
+
+<p>There is no "search path" for profiles, they are always stored in your preferences folder under "profiles/&lt;profile_name&gt;"</p></div>
+            <div class="comment-info" id="comment-9601-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Mar '12, 02:08)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="9736"></a>
+        <div class="comment not_top_scorer" id="comment-9736">
+            <div id="post-9736-score" class="comment-score"></div>
+            <div class="comment-text"><p>I wanted to bundle the configuration profile with the script and give it to co-workers.  In this case, the coworkers have to find out where their config profiles are stored then copy the profile there.  Not a big deal.  Anyways, thanks for the help.  It is already very useful.  I love tshark.  Cheers.</p></div>
+            <div class="comment-info" id="comment-9736-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Mar '12, 15:25)</span>
+                <a class="comment-user userinfo" href="/users/2361/rafs">rafs</a>
+                
+            </div>
+        </div>
+    
+        <a name="9737"></a>
+        <div class="comment not_top_scorer" id="comment-9737">
+            <div id="post-9737-score" class="comment-score"></div>
+            <div class="comment-text"><p>In Windows, the Wireshark personal profiles are stored in <strong>%APPDATA%\Wireshark\profiles</strong> (e.g., "C:\Users\Tony\AppData\Roaming\Wireshark\profiles"). Your script could automatically copy the files to that path, using the <a href="http://en.wikipedia.org/wiki/Environment_variable">%APPDATA%</a> environment variable.</p></div>
+            <div class="comment-info" id="comment-9737-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Mar '12, 16:05)</span>
+                <a class="comment-user userinfo" href="/users/817/helloworld">helloworld</a>
+                
+            </div>
+        </div>
+    
+        <a name="25792"></a>
+        <div class="comment not_top_scorer" id="comment-25792">
+            <div id="post-25792-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've just tried this with TShark 1.10.2 (SVN Rev 51934 from /trunk-1.10) but it says the profile doesn't exist. There was no ...\Wireshark\profiles folder but when I created one and moved my profile file there is still gave the same error.</p>
+
+<p><code>C:\Data&gt;tshark -C my_protos -r Sample.cap -Tfields -eframe.time -eip.src -eip.dst -edata &gt; data.txt
+tshark: Configuration Profile "my_protos" does not exist</code></p></div>
+            <div class="comment-info" id="comment-25792-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '13, 02:44)</span>
+                <a class="comment-user userinfo" href="/users/5836/wiggers">wiggers</a>
+                
+            </div>
+        </div>
+    
+        <a name="25793"></a>
+        <div class="comment not_top_scorer" id="comment-25793">
+            <div id="post-25793-score" class="comment-score"></div>
+            <div class="comment-text"><p>What is the output of <code>dir %APPDATA%\Wireshark\Profiles</code>?</p></div>
+            <div class="comment-info" id="comment-25793-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '13, 03:00)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25799"></a>
+        <div class="comment not_top_scorer" id="comment-25799">
+            <div id="post-25799-score" class="comment-score"></div>
+            <div class="comment-text"><p>It finds my_protos.</p></div>
+            <div class="comment-info" id="comment-25799-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '13, 03:35)</span>
+                <a class="comment-user userinfo" href="/users/5836/wiggers">wiggers</a>
+                
+            </div>
+        </div>
+    
+        <a name="25814"></a>
+        <div class="comment not_top_scorer" id="comment-25814">
+            <div id="post-25814-score" class="comment-score"></div>
+            <div class="comment-text"><p>Under the %APPDATA%\Wireshark\Profiles directory you should have a directory named for the profile, and in that some files, e.g. preferences and recent.</p></div>
+            <div class="comment-info" id="comment-25814-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '13, 07:02)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25828"></a>
+        <div class="comment not_top_scorer" id="comment-25828">
+            <div id="post-25828-score" class="comment-score"></div>
+            <div class="comment-text"><p>There was no Profiles folder, just %APPDATA%\Wireshark, until I created one myself. </p>
+
+<p><code>09/10/2013  10:28                40 disabled_protos
+09/10/2013  10:34    &lt;DIR&gt;          profiles
+09/10/2013  11:52             2,086 recent
+09/10/2013  11:52             1,733 recent_common</code></p></div>
+            <div class="comment-info" id="comment-25828-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '13, 08:00)</span>
+                <a class="comment-user userinfo" href="/users/5836/wiggers">wiggers</a>
+                
+            </div>
+        </div>
+    
+        <a name="25832"></a>
+        <div class="comment not_top_scorer" id="comment-25832">
+            <div id="post-25832-score" class="comment-score"></div>
+            <div class="comment-text"><p>And what is the contents of your <code>my_protos</code> directory, i.e., <code>dir %APPDATA%\Wireshark\profiles\my_protos\</code>?</p></div>
+            <div class="comment-info" id="comment-25832-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Oct '13, 08:33)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25958"></a>
+        <div class="comment not_top_scorer" id="comment-25958">
+            <div id="post-25958-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, finally got it to work. </p>
+
+<ol>
+<li>Create a new profile in Wireshark</li>
+<li>Copy disabled_protos to the profile folder</li>
+<li>Edit disabled_protos to disable the undesired protocols</li>
+<li>Use the tshark switch -C &lt;profile&gt; where 'profile is the name of the profile and not the file containing the protocols.</li>
+</ol>
+
+<p>This seems to have defeated the ability to have multiple different protocol files that you can switch between programmatically. Now you have to create a profile for every different list. Congratulations to whoever thought that was a good idea!</p></div>
+            <div class="comment-info" id="comment-25958-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Oct '13, 04:31)</span>
+                <a class="comment-user userinfo" href="/users/5836/wiggers">wiggers</a>
+                
+            </div>
+        </div>
+    
+        <a name="25981"></a>
+        <div class="comment not_top_scorer" id="comment-25981">
+            <div id="post-25981-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/5836/wiggers">@wiggers</a>, I'm not entirely sure what your specific gripe is, and at this point I don't really care.  But it seems that because you failed to read the <a href="http://www.wireshark.org/docs/wsug_html_chunked/ChCustConfigProfilesSection.html">user guide</a> to find out what configuration profiles are all about and how to easily create them, you:</p>
+
+<ul>
+<li>Didn't understand much about them.</li>
+<li>Struggled unnecessarily to create one and effectively use it.</li>
+<li>Wasted others' time trying to help you.</li>
+<li>Decided that because the configuration profiles didn't meet your specific use case (whatever it might be) that you should mock the feature.</li>
+</ul>
+
+<p>Well, just so you know, your sarcasm is neither welcome nor appreciated here and isn't a particularly good way to encourage anyone to help you in the future.</p></div>
+            <div class="comment-info" id="comment-25981-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Oct '13, 16:05)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25988"></a>
+        <div class="comment not_top_scorer" id="comment-25988">
+            <div id="post-25988-score" class="comment-score"></div>
+            <div class="comment-text"><p>The link you give is to "Chapter 10. Customizing Wireshark". I was trying to find out how to use tshark, the man page for which states baldly "-C &lt;configuration profile=""&gt; - Run with the given configuration profile." This gives no indication that this is a special Wireshark profile. I erroneously assumed that this &lt;configuration profile=""&gt; was a file containing the required settings, instead of a folder containing a number of Wireshark configuration files. This, to my mind being a novice with Wireshark, is counter-intuitive. The community here are no doubt all experienced users laughing at the newbie who doesn't understand the convoluted way things are set up and that all the tools are interdependent, instead of usefully standalone. It was my time that was wasted if anyone's!</p></div>
+            <div class="comment-info" id="comment-25988-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '13, 01:18)</span>
+                <a class="comment-user userinfo" href="/users/5836/wiggers">wiggers</a>
+                
+            </div>
+        </div>
+    
+        <a name="25995"></a>
+        <div class="comment not_top_scorer" id="comment-25995">
+            <div id="post-25995-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/5836/wiggers">@wiggers</a>, please consider this. Wireshark is an open source project <strong>not</strong> a commercial product. There is no entitlement for quick 'support response times' nor any SLA to fulfill. The product may have bugs (including the docs) as any other software. However, in the case of Wireshark there is no vendor to blame for and nobody to demand a fix from, as you payed <strong>nothing</strong> for Wireshark. </p>
+
+<p>So, if you think the docs are misleading, why don't you give back to the Wireshark community by fixing the misleading documentation? </p>
+
+<blockquote>
+<p>It was my time that was wasted if anyone's!</p>
+</blockquote>
+
+<p>After all Wireshark helped you to solve whatever problem you might have had. This was possible due to the effort of the numerous developers and those who answered your questions on this site. All of them do this in their spare time. No one needs to do any of that! </p>
+
+<p>Giving some credit to those people is the least you could do. Even better: post a fix for the misleading docs, now that you understand profiles and know what needs to be fixed ;-)</p></div>
+            <div class="comment-info" id="comment-25995-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '13, 06:26)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25997"></a>
+        <div class="comment not_top_scorer" id="comment-25997">
+            <div id="post-25997-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>There is no entitlement for quick 'support response times' nor any SLA to fulfill.</p>
+</blockquote>
+
+<p>At no time have I indicated this was what I was expecting. My only adverse comment was a tongue-in-cheek one about the need to use a GUI to create a profile for a command line tool and the ambiguity of whether a 'profile' was a file or a folder. This is basic poor workmanship. It doesn't matter if it is a commercial product or something knocked up in your mum's back bedroom. If you make a change to the way something works you must document it. Don't wait for someone else to figure what you've done and do your documentation for you. I have wasted hours reading this forum and trying out the solutions given only to find that the design or implementation has changed so the solutions no longer work.</p></div>
+            <div class="comment-info" id="comment-25997-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '13, 06:39)</span>
+                <a class="comment-user userinfo" href="/users/5836/wiggers">wiggers</a>
+                
+            </div>
+        </div>
+    
+        <a name="25999"></a>
+        <div class="comment not_top_scorer" id="comment-25999">
+            <div id="post-25999-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I have wasted hours reading this forum and trying out the solutions given only to find that the design or implementation has changed so the solutions no longer work.</p>
+</blockquote>
+
+<p>So, now that you know how it works, <strong>why don't you fix the docs</strong>?</p>
+
+<p>I wonder how much time you would have wasted if you had tried to solve your problem with another sniffer and how much you would have payed? </p>
+
+<p>Anyway, I don't like flame wars in general and especially not on this site, so if you want to contribute anything: <strong>Do so</strong> and fix the docs or make a proposal how to fix it. If you just want to use Wireshark without giving back: <strong>Do that</strong></p>
+
+<blockquote>
+<p>This is basic poor workmanship.</p>
+</blockquote>
+
+<p>In either case (see above), if you think you can do it better. <strong>Do so</strong></p></div>
+            <div class="comment-info" id="comment-25999-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '13, 06:47)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-9546" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 19
+        </span>
+        <a href="#" class="show-all-comments-link">show 14 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-9546-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/9544/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='1meW0Nyd4aScnB8TkuSnYImUOjYgFutJ' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9544/how-to-disable-dissectors-in-tshark?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/9544/how-to-disable-dissectors-in-tshark?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tshark/"
+            class="tag-link-tshark"
+            title="see questions tagged'tshark'using tags"
+            rel="tag">tshark</a> <span class="tag-number">&#215;832</span><br/>
+        
+        <a href="/tags/dissectors/"
+            class="tag-link-dissectors"
+            title="see questions tagged'dissectors'using tags"
+            rel="tag">dissectors</a> <span class="tag-number">&#215;18</span><br/>
+        
+        <a href="/tags/disable/"
+            class="tag-link-disable"
+            title="see questions tagged'disable'using tags"
+            rel="tag">disable</a> <span class="tag-number">&#215;14</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 14, 2012, 1:12 p.m.">14 Mar '12, 13:12</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>14,614 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 15, 2013, 6:48 a.m.">15 Oct '13, 06:48</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/5613/disable-protocol-dissection-in-tshark">Disable protocol dissection in tshark?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35010/is-tshark-able-to-use-plugin-dissectors">Is tshark able to use plugin dissectors?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48011/enabled-protocols-negation-of-disabled-proto">Enabled protocols (negation of disabled proto)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62/static-tshark-builds-for-linux-andor-solaris-sparcx64">static tshark builds for linux and/or solaris sparc/x64</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1670/tshark-hex-dump">tshark hex dump</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3479/could-the-file-name-parameter-in-tshark-be-chinese-characters">could the file name parameter in tshark be chinese characters?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5132/write-gzip-encoded-http-as-inflated-in-pcap-file">Write Gzip Encoded HTTP as Inflated in PCAP File</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6488/use-tshark-to-analyze-source-and-destination-ips-from-dumpfile">Use tshark to analyze source and destination IPs from dumpfile?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8324/difference-tshark-wireshark-when-load-a-pcap">Difference TShark / Wireshark when load a pcap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9303/how-to-retrieve-packet-information-using-wireshark-commands">how to retrieve packet information using wireshark commands</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

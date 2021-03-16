@@ -1,0 +1,905 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Capturing raw ATM cells - Wireshark Q&amp;A</title>
+        <meta name="description" content="I am a bit confused about how Libpcap works. As i concern, as it captures Ethernet PDU it can access skb data structure just before it is sent from the NIC. Does it means that NIC driver add MAC header and after that Libpcap reads skb content? Where is the library iimplemented in Linux and how does ..." />
+        <meta name="keywords" content="atm,embedded,libpcap,linux" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/36425/capturing-raw-atm-cells" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/36425/capturing-raw-atm-cells?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='0gSm3EAb9P86kzGLCpEXvQEo7Vusiq44' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/36425/capturing-raw-atm-cells">Capturing raw ATM cells</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-36425-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36425/up/" rel="nofollow"> </a>
+<div id="post-36425-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-36425-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36425/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/36425/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am a bit confused about how Libpcap works. As i concern, as it captures Ethernet PDU it can access <code>skb</code> data structure just before it is sent from the NIC. Does it means that NIC driver add MAC header and after that Libpcap reads <code>skb</code> content? Where is the library iimplemented in Linux and how does it work?. I would like to capture AALX headers with Wireshark but i can not figure why it is not possible to do that in Linux with my chipset (my company works with devices running embedded Linux).</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/atm/" class="post-tag tag-link-atm"
+                                        title="see questions tagged 'atm'" rel="tag">atm</a>
+                                
+                                    <a href="/tags/embedded/" class="post-tag tag-link-embedded"
+                                        title="see questions tagged 'embedded'" rel="tag">embedded</a>
+                                
+                                    <a href="/tags/libpcap/" class="post-tag tag-link-libpcap"
+                                        title="see questions tagged 'libpcap'" rel="tag">libpcap</a>
+                                
+                                    <a href="/tags/linux/" class="post-tag tag-link-linux"
+                                        title="see questions tagged 'linux'" rel="tag">linux</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Sep '14, 14:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/21f0c1f83257b09700ed8c8592651e9e?s=32&amp;d=identicon&amp;r=g" alt="Miguelbc's gravatar image" />
+    <p><a href="/users/7294/miguelbc">Miguelbc</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Miguelbc has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/36425/">
+                edited
+                <strong>17 Sep '14, 14:57</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-36425">
+    
+</div>
+<div id="comment-tools-36425" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36425-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/36425/capturing-raw-atm-cells?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/36425/capturing-raw-atm-cells?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/36425/capturing-raw-atm-cells?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/36425/capturing-raw-atm-cells?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="36488"></a>
+                    <div id="answer-container-36488" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-36488-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/36488/up/" rel="nofollow"> </a>
+<div id="post-36488-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-36488-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/36488/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Miguelbc has selected this answer as the correct answer"
+        href="/accept_answer/36488/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Libpcap works differently on different operating systems.</p>
+<p>On Linux, it uses <code>PF_PACKET</code> sockets.  Linux network device drivers deliver packets, as <code>skb</code> structures, to the Linux network stack, which then delivers them to various protocols that then deliver them to sockets.  For <code>PF_PACKET</code> sockets, the packets are delivered in the form that the device driver provides them.</p>
+<p>Unless your device driver delivers raw ATM cells to the Linux networking stack - and it probably doesn't, as I suspect the Linux ATM code isn't expecting to receive raw ATM cells - there's nothing libpcap can do to get raw ATM cells from Linux.</p>
+<p>However, you say "AALX headers"; do you want to receive raw ATM cells, or do you, for example, want to receive AAL5 PDUs?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/36488/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Sep '14, 16:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-36488">
+    
+        <a name="36655"></a>
+        <div class="comment" id="comment-36655">
+            <div id="post-36655-score" class="comment-score"></div>
+            <div class="comment-text"><p>I would like to sniff link PDU of the ATM interface, so i can see for instance some fields of the AALx header, or see VPI/VCI values. About Linux networking stack, do you meant the TCP/IP stack? I dont understand why Ethernet frames are captured by Wireshark but ATM frames are not captured though they are PDUs regarding link layer. Is the Ethernet device driver delivering Ethernet PDU to Linux networking stack while ATM device driver only delivers the IP datagram?.</p></div>
+            <div class="comment-info" id="comment-36655-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Sep '14, 12:56)</span>
+                <a class="comment-user userinfo" href="/users/7294/miguelbc">Miguelbc</a>
+                
+            </div>
+        </div>
+    
+        <a name="36656"></a>
+        <div class="comment" id="comment-36656">
+            <div id="post-36656-score" class="comment-score"></div>
+            <div class="comment-text"><p>PDU stands for Protocol Data Unit; what protocol are you talking about?  At the lowest level, ATM PDUs are cells, and don't have AALx headers.  The AALs are at a layer above that.</p>
+
+<blockquote>
+<p>About Linux networking stack, do you meant the TCP/IP stack?</p>
+</blockquote>
+
+<p>No, I mean the <strong><em>ENTIRE</em></strong> networking stack - think "everything under the <code>net</code> directory in the kernel source, as well as all the networking device drivers".</p>
+
+<blockquote>
+<p>I dont understand why Ethernet frames are captured by Wireshark but ATM frames are not captured though they are PDUs regarding link layer.</p>
+</blockquote>
+
+<p>The Ethernet link layer is, in some ways, much simpler than the ATM link layer.  In Ethernet, link layer PDUs consist of a destination address, a source address, a type/length field, a variable-length payload, and an FCS, and most protocols can run directly on top of that (with their PDUs inside the payload) or on top of 802.2 (also fairly simple) on top of Ethernet.</p>
+
+<p>ATM PDUs, at the lowest layer, are 53-byte cells, which are not directly useful for most purposes, so there are "adaptation layers" atop that, which have their own types of PDU.  Then, for what's conventionally though of as "networking", there can be several mechanisms for encapsulating protocols and identifying protocol types on top of, for example, AAL5 - LANE, RFC 1483, etc..  So what's considered an ATM PDU depends on the layer at which you - and the networking code that's delivering ATM traffic to your capture program - are working.</p></div>
+            <div class="comment-info" id="comment-36656-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Sep '14, 13:31)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="36658"></a>
+        <div class="comment" id="comment-36658">
+            <div id="post-36658-score" class="comment-score"></div>
+            <div class="comment-text"><p>The network interface I am using is IPoE over ATM, so the IP datagram is encapsulated over an Ethernet frame which is in turn encapsulated over AAL5 protocol. Wirehark is capturing the ethernet frame, but i dont see any AAL5 header. In the same way, If i capture from LAN ethernet interface i can see the ethernet frame. So as i concern, wireshark is capturing not from the below L2 protocol of the network interface. </p>
+
+<p>So im trying to understand  the design behind this, this is at which level of the network stack is wireshark located (at which level it sees skb content) so i can understand why it captures some L2 PDUs while it cant be used to see others L2 headers.</p>
+
+<blockquote>
+<p>Linux network device drivers deliver packets, as skb structures, to the Linux network stack.</p>
+<p>No, I mean the ENTIRE networking stack - think "everything under the net directory in the kernel source, as well as all the networking device drivers".</p>
+</blockquote>
+
+<p>If device driver is part of the Linux network stack, what does it mean that device driver delivers packet to the Linux network stack?</p></div>
+            <div class="comment-info" id="comment-36658-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Sep '14, 14:02)</span>
+                <a class="comment-user userinfo" href="/users/7294/miguelbc">Miguelbc</a>
+                
+            </div>
+        </div>
+    
+        <a name="36659"></a>
+        <div class="comment" id="comment-36659">
+            <div id="post-36659-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>The network interface I am using is IPoE over ATM, so the IP datagram is encapsulated over an Ethernet frame</p>
+</blockquote>
+
+<p>In some fashion.  There are at least two ways that can be done - LANE and RFC 2684 bridging.</p>
+
+<blockquote>
+<p>Wirehark is capturing the ethernet frame, but i dont see any AAL5 header.</p>
+</blockquote>
+
+<p>RFC 2684 bridging is handled by net/atm/br2684.c in the Linux kernel, and the comment at the beginning of that file says</p>
+
+<pre><code> * Ethernet netdevice using ATM AAL5 as underlying carrier
+ * (RFC1483 obsoleted by RFC2684) for Linux
+</code></pre>
+
+<p>"netdevice" means that it creates a networking device of the type that shows up in, for example, the list of network interfaces from libpcap (which is where both tcpdump and Wireshark get their lists of network interfaces), and "Ethernet netdevice" means that the device looks like an Ethernet device, so, if you capture on it, you will see Ethernet packets, with no AAL5 or MPoA headers.</p>
+
+<p>LANE is handled by net/atm/lec.c and possibly part of net/atm/mpc.c.  I don't know for certain, but I suspect it also creates a Ethernet netdevice.</p>
+
+<blockquote>
+<p>at which level of the network stack is wireshark located</p>
+</blockquote>
+
+<p>Presumably you mean "at which level of the network stack is Wireshark <em>capturing</em>, as it's not part of the Linux networking stack because it's not part of the Linux kernel.</p>
+
+<p>It captures at whatever layer libpcap (the library it, and tcpdump, and a number of other programs, use to capture traffic) uses, which depends on the network device on which you're capturing.  Capturing on one of the Ethernet netdevices created for RFC 2864 and LANE means you're capturing at the "Ethernet over XXX" layer and see only Ethernet packets.</p></div>
+            <div class="comment-info" id="comment-36659-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Sep '14, 14:50)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="36660"></a>
+        <div class="comment" id="comment-36660">
+            <div id="post-36660-score" class="comment-score"></div>
+            <div class="comment-text"><p>From a quick look at the kernel ATM code and <a href="http://linux-atm.sourceforge.net/doc.php#atmdd">the ATM device driver documentation from the ATM-on-Linux site</a>, ATM devices do not fit into the Linux networking stack the way "regular" netdevices do, so, if it's even possible for libpcap to get raw AAL5 PDUs from the Linux networking stack, it appears that it would have to do so very differently from the way it captures on regular netdevices - and it currently doesn't have any support for that.</p>
+
+<p>I.e., the layer at which you want to capture is currently not supported by libpcap, and thus not supported by tcpdump or Wireshark or..., and it might not even be <em>available</em> to libpcap.</p></div>
+            <div class="comment-info" id="comment-36660-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Sep '14, 15:11)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="36705"></a>
+        <div class="comment not_top_scorer" id="comment-36705">
+            <div id="post-36705-score" class="comment-score"></div>
+            <div class="comment-text"><p>A bit more looking seems to indicate that there's no standard way to get, for example, reassembled AAL5 PDUs from the driver in Linux; the input path for the Zeitnet ZN122x devices appears to try to find out which virtual circuit the packet is for and:</p>
+
+<ul>
+<li>if there's no VC found, drop the packet;</li>
+<li>if there is a VC, supply it as input to the handler for whatever protocol is being used on that VC;</li>
+</ul>
+
+<p>and the handlers don't appear to have a way to get at the raw packets.</p></div>
+            <div class="comment-info" id="comment-36705-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Sep '14, 13:28)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-36488" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-36488-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/36425/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='0gSm3EAb9P86kzGLCpEXvQEo7Vusiq44' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/36425/capturing-raw-atm-cells?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/36425/capturing-raw-atm-cells?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/linux/"
+            class="tag-link-linux"
+            title="see questions tagged'linux'using tags"
+            rel="tag">linux</a> <span class="tag-number">&#215;154</span><br/>
+        
+        <a href="/tags/libpcap/"
+            class="tag-link-libpcap"
+            title="see questions tagged'libpcap'using tags"
+            rel="tag">libpcap</a> <span class="tag-number">&#215;37</span><br/>
+        
+        <a href="/tags/embedded/"
+            class="tag-link-embedded"
+            title="see questions tagged'embedded'using tags"
+            rel="tag">embedded</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/atm/"
+            class="tag-link-atm"
+            title="see questions tagged'atm'using tags"
+            rel="tag">atm</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 17, 2014, 2:56 p.m.">17 Sep '14, 14:56</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,209 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 29, 2014, 1:28 p.m.">29 Sep '14, 13:28</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/170/wireshark-only-showing-one-way-communication-over-vpn-tunnel">Wireshark only showing one way communication over VPN tunnel</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10784/can-download-wireshark-for-ubuntu-linux">Can Download Wireshark for Ubuntu Linux?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18435/how-do-i-set-up-wireshark-for-linux">How do I set up Wireshark for Linux?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24613/what-does-sll-stand-for-as-in-the-context-of-linux-cooked-headers">What does SLL stand for (as in the context of Linux &quot;cooked&quot; headers)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29024/compiled-wireshark-does-not-color-the-packets-by-default">Compiled wireshark does not color the packets by default</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35615/expert-information-field">Expert information field</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43965/transfer-from-linux-to-windows">transfer from Linux to Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48101/how-do-i-make-a-wireshark-built-from-source-not-require-root-on-linux">How do I make a Wireshark built from source not require root on Linux?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54789/what-exist-between-usbmon-and-the-usb-hardware">What exist between usbmon and the usb hardware?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59869/how-to-build-wireshark-2x-on-redhatcentos">How to build wireshark 2.x on Redhat/Centos</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

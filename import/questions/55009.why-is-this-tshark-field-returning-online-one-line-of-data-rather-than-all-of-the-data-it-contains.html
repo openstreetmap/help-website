@@ -1,0 +1,994 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>why is this tshark field returning online one line of data, rather than all of the data it contains? - Wireshark Q&amp;A</title>
+        <meta name="description" content="I have a .pcap file which has packets of HTTP protocol, one of which has text/html written in the info column in Wireshark. When I double click this packet, I get a window showing the packet details, and there is a node Line-based text data. After this, the entire HTML payload is there.   When I use..." />
+        <meta name="keywords" content="field,payload,tshark,fields,wireshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/55009/why-is-this-tshark-field-returning-online-one-line-of-data-rather-than-all-of-the-data-it-contains" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/55009/why-is-this-tshark-field-returning-online-one-line-of-data-rather-than-all-of-the-data-it-contains?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='LvuWg6Xy7IJjfo9MiRjbfAdqI4Jd23JT' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/55009/why-is-this-tshark-field-returning-online-one-line-of-data-rather-than-all-of-the-data-it-contains">why is this tshark field returning online one line of data, rather than all of the data it contains?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-55009-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55009/up/" rel="nofollow"> </a>
+<div id="post-55009-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55009-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55009/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/55009/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have a <code>.pcap</code> file which has packets of HTTP protocol, one of which has <code>text/html</code> written in the <code>info</code> column in Wireshark. When I double click this packet, I get a window showing the packet details, and there is a node <strong><code>Line-based text data</code></strong>. After this, the entire HTML payload is there. </p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/0.png"></p>
+<p>When I used <code>tshark -r "path\to\pcap\file.pcap" -t ad &gt; "path\for\text\file.txt" -V</code> tshark command to convert the packet <em>details</em> from <code>.pcap</code> file to <code>.txt</code> file, I found the HTML payload (i.e. the entire page HTML):</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/5.png"></p>
+<p><strong>I want to get this HTML payload using <code>tshark</code>.</strong> So I looked in the <code>Display Filter Expressions</code> window of Wireshark to find the <code>field</code> which would get me this <code>HTML</code> payload, and I found that the <code>field</code> is <strong><code>data-text-lines</code></strong>. </p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/3_QdxCKNZ.png"></p>
+<p><strong>But when I used <code>tshark -r path\to\pcap\file.pcap" -T fields -e "data-text-lines" &gt; "path\for\txt\file.txt"</code>, all I got is one following line in the middle of otherwise empty file:</strong> </p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/6.png"></p>
+<p><strong>So what should I do? How do I extract the entire HTML of the page, which is very much there, but I am unable to extract it using some tshark field?</strong></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/field/" class="post-tag tag-link-field"
+                                        title="see questions tagged 'field'" rel="tag">field</a>
+                                
+                                    <a href="/tags/payload/" class="post-tag tag-link-payload"
+                                        title="see questions tagged 'payload'" rel="tag">payload</a>
+                                
+                                    <a href="/tags/tshark/" class="post-tag tag-link-tshark"
+                                        title="see questions tagged 'tshark'" rel="tag">tshark</a>
+                                
+                                    <a href="/tags/fields/" class="post-tag tag-link-fields"
+                                        title="see questions tagged 'fields'" rel="tag">fields</a>
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Aug '16, 23:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2c205566b4047d6494161edbd1223c6?s=32&amp;d=identicon&amp;r=g" alt="Jesss's gravatar image" />
+    <p><a href="/users/25067/jesss">Jesss</a><br/>
+    <span class="score" title="51 reputation points">51</span><span title="14 badges"><span class="badge1">&#9679;</span><span class="badgecount">14</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="20 badges"><span class="bronze">&#9679;</span><span class="badgecount">20</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jesss has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-55009">
+    
+</div>
+<div id="comment-tools-55009" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55009-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/55009/why-is-this-tshark-field-returning-online-one-line-of-data-rather-than-all-of-the-data-it-contains?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/55009/why-is-this-tshark-field-returning-online-one-line-of-data-rather-than-all-of-the-data-it-contains?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/55009/why-is-this-tshark-field-returning-online-one-line-of-data-rather-than-all-of-the-data-it-contains?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/55009/why-is-this-tshark-field-returning-online-one-line-of-data-rather-than-all-of-the-data-it-contains?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="55010"></a>
+                    <div id="answer-container-55010" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55010-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55010/up/" rel="nofollow"> </a>
+<div id="post-55010-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-55010-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55010/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Jesss has selected this answer as the correct answer"
+        href="/accept_answer/55010/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><s>In this case, there are many <code>data-text-lines</code> in the frame, so in addition to <code>-T fields -e data-text-lines</code>, you need to use also <code>-E occurrence=a</code> to make tshark show all of them. I'm not sure their order will be correct, though, so please try and give us a feedback.</s></p><s>
+</s><p><s>Just bear in mind that this may not work for other encodings of the content of a HTTP response, because if the http dissector finds a higher-layer dissector to handle the content, it does not create the <code>data-text-lines</code> field. So you may have to disable the higher level dissectors.</s></p>
+<p><strong>EDIT</strong>: the above was a conclusion based on screenshots. The actual situation is described below in the chain of comments.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55010/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Aug '16, 00:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/55010/">
+                edited
+                <strong>21 Aug '16, 03:34</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55010">
+    
+        <a name="55012"></a>
+        <div class="comment not_top_scorer" id="comment-55012">
+            <div id="post-55012-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you. I added <code>-E "occurrence=a"</code> to the command, but the output is the same as that without the <code>-E</code> argument. =(</p></div>
+            <div class="comment-info" id="comment-55012-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Aug '16, 01:31)</span>
+                <a class="comment-user userinfo" href="/users/25067/jesss">Jesss</a>
+                
+            </div>
+        </div>
+    
+        <a name="55013"></a>
+        <div class="comment" id="comment-55013">
+            <div id="post-55013-score" class="comment-score">1</div>
+            <div class="comment-text"><p>In that case, please upload the capture somewhere (cloudshark is preferred here but any plain file sharing service like google drive, dropbox, microsoft onedrive, ... will do) and edit your Question with a login-free link to it. Guessing by screenshots is a pain.</p></div>
+            <div class="comment-info" id="comment-55013-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Aug '16, 01:33)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="55014"></a>
+        <div class="comment not_top_scorer" id="comment-55014">
+            <div id="post-55014-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy">@sindy</a> Can I do that while ensuring that I don't share my IP address. I am a lil concerned about sharing my IP or MAC address publicly...</p></div>
+            <div class="comment-info" id="comment-55014-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Aug '16, 02:02)</span>
+                <a class="comment-user userinfo" href="/users/25067/jesss">Jesss</a>
+                
+            </div>
+        </div>
+    
+        <a name="55015"></a>
+        <div class="comment" id="comment-55015">
+            <div id="post-55015-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Look at the anonymization features of <a href="https://www.tracewrangler.com/">Tracewrangler</a>.</p></div>
+            <div class="comment-info" id="comment-55015-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Aug '16, 02:04)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="55016"></a>
+        <div class="comment not_top_scorer" id="comment-55016">
+            <div id="post-55016-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy">@sindy</a> Tracewrangler has removed all my HTTP packets :s</p></div>
+            <div class="comment-info" id="comment-55016-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Aug '16, 02:14)</span>
+                <a class="comment-user userinfo" href="/users/25067/jesss">Jesss</a>
+                
+            </div>
+        </div>
+    
+        <a name="55017"></a>
+        <div class="comment" id="comment-55017">
+            <div id="post-55017-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Try again, but this time uncheck the <code>Remove all unknown layers and ...</code> in the Payload menu which is on by default.</p>
+
+<p>Tracewrangler is a powerful tool, and these intrinsically tend to be dangerous.</p></div>
+            <div class="comment-info" id="comment-55017-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Aug '16, 02:18)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="55018"></a>
+        <div class="comment not_top_scorer" id="comment-55018">
+            <div id="post-55018-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy"></a><a href="/users/19586/sindy">@sindy</a> Here: <a href="https://www.cloudshark.org/captures/234d85d617e2">https://www.cloudshark.org/captures/234d85d617e2</a> Please apply a display filter, and then see the second packet (It has "text/html" written in info section)</p></div>
+            <div class="comment-info" id="comment-55018-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Aug '16, 02:45)</span>
+                <a class="comment-user userinfo" href="/users/25067/jesss">Jesss</a>
+                
+            </div>
+        </div>
+    
+        <a name="55019"></a>
+        <div class="comment" id="comment-55019">
+            <div id="post-55019-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Hm, so my assumption based on your screenshots was wrong, the "line-based text data" is a single item and shows size of 1045 bytes, but copying its value provides only the first line.</p>
+
+<p>Worse than that for you, the http dissector could not determine that the text data in frames 10,11,13, and 14 should be handled together, so the payload in frame 10 is dissected as "line-based text data", and its individual lines are dissected into plain "text" fields, the payload in frames 11 and 13 is handled as just "data", for which an alternative representation "data.text" exists, and the payload in frame 14 is dissected as "xml". To make it even more complex, several other items in lower layers of these frames also generate "text" fields.</p>
+
+<p>So all in all, an automated export of http payload from this mess is close to impossible.</p></div>
+            <div class="comment-info" id="comment-55019-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Aug '16, 03:28)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="55020"></a>
+        <div class="comment not_top_scorer" id="comment-55020">
+            <div id="post-55020-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy">@sindy</a> Ooh.. so does that mean there is no way to extract HTTP payload from a <code>.pcap</code> file?</p></div>
+            <div class="comment-info" id="comment-55020-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Aug '16, 04:16)</span>
+                <a class="comment-user userinfo" href="/users/25067/jesss">Jesss</a>
+                
+            </div>
+        </div>
+    
+        <a name="55022"></a>
+        <div class="comment" id="comment-55022">
+            <div id="post-55022-score" class="comment-score">1</div>
+            <div class="comment-text"><p>In general it doesn't, but for this particular payload, the http dissector seems to have an issue with the reassembly. Normally, the last packet of the response (frame 14 in your example capture) would have another tab with a reassembly of the http response as a whole, but this one doesn't. I may only guess that the dissector cannot handle it properly e.g. because the server uses an old version of html and specifies the payload type as text/html.</p></div>
+            <div class="comment-info" id="comment-55022-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Aug '16, 04:52)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="55023"></a>
+        <div class="comment not_top_scorer" id="comment-55023">
+            <div id="post-55023-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy"></a><a href="/users/19586/sindy">@sindy</a> "Normally, the last packet of the response (frame 14 in your example capture) would have another tab with a reassembly of the http response as a whole" - how would I extract the payload through tshark (commandline) if the reassembled http response WAS present there?</p></div>
+            <div class="comment-info" id="comment-55023-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Aug '16, 05:19)</span>
+                <a class="comment-user userinfo" href="/users/25067/jesss">Jesss</a>
+                
+            </div>
+        </div>
+    
+        <a name="55025"></a>
+        <div class="comment not_top_scorer" id="comment-55025">
+            <div id="post-55025-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I haven't found any. The protocol dissectors normally dissect the data they can handle into individual items (= fields) but do not create a field with all the source data as a text or byte string. In GUI Wireshark, <code>File-&gt;Export Objects-&gt;HTTP</code> can be used, but no equivalent functionality is available in tshark.</p></div>
+            <div class="comment-info" id="comment-55025-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Aug '16, 06:47)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="55026"></a>
+        <div class="comment not_top_scorer" id="comment-55026">
+            <div id="post-55026-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy"></a><a href="/users/19586/sindy">@sindy</a> OK. Thank you so much for your help.</p></div>
+            <div class="comment-info" id="comment-55026-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Aug '16, 09:24)</span>
+                <a class="comment-user userinfo" href="/users/25067/jesss">Jesss</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55010" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 13
+        </span>
+        <a href="#" class="show-all-comments-link">show 8 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55010-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/55009/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='LvuWg6Xy7IJjfo9MiRjbfAdqI4Jd23JT' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55009/why-is-this-tshark-field-returning-online-one-line-of-data-rather-than-all-of-the-data-it-contains?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55009/why-is-this-tshark-field-returning-online-one-line-of-data-rather-than-all-of-the-data-it-contains?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+        <a href="/tags/tshark/"
+            class="tag-link-tshark"
+            title="see questions tagged'tshark'using tags"
+            rel="tag">tshark</a> <span class="tag-number">&#215;832</span><br/>
+        
+        <a href="/tags/payload/"
+            class="tag-link-payload"
+            title="see questions tagged'payload'using tags"
+            rel="tag">payload</a> <span class="tag-number">&#215;58</span><br/>
+        
+        <a href="/tags/field/"
+            class="tag-link-field"
+            title="see questions tagged'field'using tags"
+            rel="tag">field</a> <span class="tag-number">&#215;34</span><br/>
+        
+        <a href="/tags/fields/"
+            class="tag-link-fields"
+            title="see questions tagged'fields'using tags"
+            rel="tag">fields</a> <span class="tag-number">&#215;33</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 20, 2016, 11:34 p.m.">20 Aug '16, 23:34</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,896 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 21, 2016, 9:25 a.m.">21 Aug '16, 09:25</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/56289/problem-using-tshark-to-write-fields-to-csv-file-tshark-breaks-a-field-value-into-2-values-if-it-has-a-comma-character">Problem using Tshark to write fields to csv file: Tshark breaks a field value into 2 values if it has a comma character</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40289/how-to-display-the-full-tcp-payload-from-a-pcap-using-tshark">How to display the full TCP payload from a pcap using tshark?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55000/where-can-i-find-a-list-of-all-possible-fields-for-the-tshark-e-commandline-argument">Where can I find a list of all possible fields for the Tshark -e commandline argument?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56117/if-a-tshark-field-occurs-more-than-once-for-a-single-packet-how-can-i-specify-the-one-do-i-need">If a Tshark field occurs more than once for a single packet, how can I specify the one do I need?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3323/printing-tcp-payload-using-tshark-t-fields">Printing tcp payload using tshark -T fields?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18469/dns-leak-looking-up-own-hostname-with-dns-queries">DNS leak: Looking up own hostname with DNS queries</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40201/tshark-batch-process-cap-files-to-find-http-delay-delta-output-to-csv">TShark Batch-process .Cap files to find HTTP delay delta &amp; output to CSV</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56163/psml-and-pdml-file-consistency-between-wireshark-on-windows-wireshark-on-linux-and-tshark">PSML and PDML file consistency between Wireshark on Windows, WireShark on Linux, and Tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62310/wireshark-change-time-utc">Wireshark Change time UTC</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10242/how-can-i-get-the-payload-using-the-command-line">How can I get the payload using the command line</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

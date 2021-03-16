@@ -1,0 +1,972 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>QT vs GTK Info Column Differences in 2.0.1 and Newer - Wireshark Q&amp;A</title>
+        <meta name="description" content="Greetings, I&#39;m noticing that the QT info column of Wireshark v2.0.2 have changed to NOT update after a tree is passed unto the dissector. In looking at the code, the info seen in Qt (left) is populated prior to checking if there is a tree node to populate (as also seen in the display window). The Gt..." />
+        <meta name="keywords" content="gtk,qt5,dissector,plugin" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/51758/qt-vs-gtk-info-column-differences-in-201-and-newer" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/51758/qt-vs-gtk-info-column-differences-in-201-and-newer?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='EmhbK2ub9jiaGvHB32tEj4iYVrnEzLyM' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/51758/qt-vs-gtk-info-column-differences-in-201-and-newer">QT vs GTK Info Column Differences in 2.0.1 and Newer</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-51758-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51758/up/" rel="nofollow"> </a>
+<div id="post-51758-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-51758-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51758/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/51758/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Greetings,</p>
+<p>I'm noticing that the QT info column of Wireshark v2.0.2 have changed to NOT update after a tree is passed unto the dissector. In looking at the code, the info seen in Qt (left) is populated prior to checking if there is a tree node to populate (as also seen in the display window). The Gtk version of Wireshark 2.0.2 (right) updates the info column after populating the tree.</p>
+<p><img alt="QT vs GTK" src="https://osqa-ask.wireshark.org/upfiles/qtvgtk.png"></p>
+<p>This is also observed in Wireshark version 2.0.1, but not in version 2.0.0. Is this a bug or an API change?</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/qtvgtk2.png"></p>
+<p>Thanks in advanced.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/gtk/" class="post-tag tag-link-gtk"
+                                        title="see questions tagged 'gtk'" rel="tag">gtk</a>
+                                
+                                    <a href="/tags/qt5/" class="post-tag tag-link-qt5"
+                                        title="see questions tagged 'qt5'" rel="tag">qt5</a>
+                                
+                                    <a href="/tags/dissector/" class="post-tag tag-link-dissector"
+                                        title="see questions tagged 'dissector'" rel="tag">dissector</a>
+                                
+                                    <a href="/tags/plugin/" class="post-tag tag-link-plugin"
+                                        title="see questions tagged 'plugin'" rel="tag">plugin</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Apr '16, 09:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bfa53b64ea6967e45a614981c461a638?s=32&amp;d=identicon&amp;r=g" alt="coloncm's gravatar image" />
+    <p><a href="/users/17122/coloncm">coloncm</a><br/>
+    <span class="score" title="76 reputation points">76</span><span title="8 badges"><span class="badge1">&#9679;</span><span class="badgecount">8</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="coloncm has 2 accepted answers">66&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/51758/">
+                edited
+                <strong>19 Apr '16, 04:32</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-51758">
+    
+</div>
+<div id="comment-tools-51758" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51758-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/51758/qt-vs-gtk-info-column-differences-in-201-and-newer?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/51758/qt-vs-gtk-info-column-differences-in-201-and-newer?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/51758/qt-vs-gtk-info-column-differences-in-201-and-newer?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/51758/qt-vs-gtk-info-column-differences-in-201-and-newer?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="51760"></a>
+                    <div id="answer-container-51760" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-51760-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51760/up/" rel="nofollow"> </a>
+<div id="post-51760-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-51760-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51760/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi, </p>
+<p>This is a bug in your code. Columns should not be filled under a tree presence condition, as indicated in the documentation doc/README.dissector:</p>
+<p>"Note, however, that you must fill in column information, create conversations, reassemble packets, do calls to "expert" functions, build any other persistent state needed for dissection, and call subdissectors regardless of whether "tree" is NULL or not."</p>
+<p>The fact that it works with GTK UI is by chance and not by design. </p>
+<p>So, for example, code that reads like</p>
+<pre><code>if (tree) {
+
+    ...
+
+    proto_tree_add_XXX(...);
+
+    ...
+
+    col_add_fstr(pinfo-&gt;cinfo, COL_PROTOCOL, "Xyzzy (%u)", code);
+
+    ...
+
+    proto_tree_add_xxx(...);
+}
+</code></pre>
+<p>is incorrect, and should, instead, be:</p>
+<pre><code>if (tree) {
+
+    ...
+
+    proto_tree_add_XXX(...);
+
+    ...
+}
+
+col_add_fstr(pinfo-&gt;cinfo, COL_PROTOCOL, "Xyzzy (%u)", code);
+
+if (tree) {
+    ...
+
+    proto_tree_add_xxx(...);
+}
+</code></pre>
+<p>so that, while code that adds to the protocol tree is inside <code>if (tree) {</code> and <code>}</code>, and is executed only if <code>tree</code> is not null, code that sets or updates the column information is <em>not</em> inside  <code>if (tree) {</code> and <code>}</code> and is executed regardless of whether <code>tree</code> is null or not.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/51760/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Apr '16, 10:14</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/713f24fd877861260b71ecd455018625?s=32&amp;d=identicon&amp;r=g" alt="Pascal%20Quantin's gravatar image" />
+    <p><a href="/users/1538/pascal-quantin">Pascal Quantin</a><br/>
+    <span class="score" title="5544 reputation points"><span class="">5.5k</span></span><span title="10 badges"><span class="silver">&#9679;</span><span class="badgecount">10</span></span><span title="60 badges"><span class="bronze">&#9679;</span><span class="badgecount">60</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Pascal Quantin has 92 accepted answers">30&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/51760/">
+                edited
+                <strong>19 Apr '16, 00:42</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+            <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+            <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-51760">
+    
+        <a name="51762"></a>
+        <div class="comment" id="comment-51762">
+            <div id="post-51762-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry, but your extract says "regardless of whether "tree" is NULL or not", which means to me that it should not matter whether or not I have a tree presence condition when populating info columns. Howbeit, how do you explain that it worked on the QT interfaces of versions 2.0.0 and 2.0.1? Were those bugs?</p></div>
+            <div class="comment-info" id="comment-51762-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Apr '16, 10:43)</span>
+                <a class="comment-user userinfo" href="/users/17122/coloncm">coloncm</a>
+                
+            </div>
+        </div>
+    
+        <a name="51764"></a>
+        <div class="comment" id="comment-51764">
+            <div id="post-51764-score" class="comment-score"></div>
+            <div class="comment-text"><p>You get it wrong: it means that columns must be set whatever the tree state, and all dissectors are written this way (if not it is a bug). 
+We did numerous fixes and performance enhancements since 2.0 which explain the behavior difference.</p></div>
+            <div class="comment-info" id="comment-51764-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Apr '16, 11:52)</span>
+                <a class="comment-user userinfo" href="/users/1538/pascal-quantin">Pascal Quantin</a>
+                
+            </div>
+        </div>
+    
+        <a name="51769"></a>
+        <div class="comment" id="comment-51769">
+            <div id="post-51769-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not certain you've captured what is happening here.</p>
+
+<p>First of all, I said that my dissector, which has been maintained since version 1.10.3, worked on versions 2.0.0 and 2.0.1, so any fixes and performance enhancements made since 2.0.0 did not produce the observed behavior difference described here.</p>
+
+<p>Second, the implication of the observed behavior is that:</p>
+
+<p>1) info columns are being populated "once" on a dissector pass (whether or not the tree is passed), and</p>
+
+<p>2) subsequent updates to the info column to add detailed info about the parsed data is not occurring, which is in contradiction to paragraph 1.4.4(3) of README.dissector:</p>
+
+<p>"... before a dissector fetches any data whatsoever from the
+packet (unless it's a heuristic dissector fetching data to determine
+whether the packet is one that it should dissect, in which case it
+should check, before fetching the data, whether there's any data to
+fetch; if there isn't, it should return FALSE), it should set the
+Protocol column and the Info column."</p>
+
+<p>This is the case in my dissector and has nothing to do with the presence of the tree, nor prohibits population of the info column in the presence of a tree.  Paragraph 1.4.4(4) of README.dissector further states:</p>
+
+<p>"If the Protocol column will ultimately be set to, for example, a value
+containing a protocol version number, with the version number being a
+field in the packet, the dissector should, before fetching the version
+number field or any other field from the packet, set it to a value
+without a version number, using 'col_set_str', and should later set it
+to a value with the version number after it's fetched the version
+number."</p>
+
+<p>This implies that info columns can and should be updated, if needed. This is observed in the Gtk user interface, but not on the Qt interface of Wireshark 2.0.2. Therefore, your statement that "columns should not be filled under a tree presence condition" is not indicated in your reference, and explaining the behavior as occurring "by chance" if a bit hard to swallow (let alone calling it a bug in my part).</p></div>
+            <div class="comment-info" id="comment-51769-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Apr '16, 16:27)</span>
+                <a class="comment-user userinfo" href="/users/17122/coloncm">coloncm</a>
+                
+            </div>
+        </div>
+    
+        <a name="51770"></a>
+        <div class="comment" id="comment-51770">
+            <div id="post-51770-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>First of all, I said that my dissector, which has been maintained since version 1.10.3, worked on versions 2.0.0 and 2.0.1, so any fixes and performance enhancements made since 2.0.0 did not produce the observed behavior difference described here.</p>
+</blockquote>
+
+<p>A performance change made since 2.0.1 <em>could</em> produce the observed behavior difference described here.</p>
+
+<blockquote>
+<p>info columns are being populated "once" on a dissector pass (whether or not the tree is passed)</p>
+</blockquote>
+
+<p>So you have verified, by checking the value of <code>tree</code> passed to your dissector, that the Info column is populated with the correct value even if a non-null value is never passed to <code>tree</code>?</p>
+
+<blockquote>
+<p>This is the case in my dissector and has nothing to do with the presence of the tree, nor prohibits population of the info column in the presence of a tree.</p>
+</blockquote>
+
+<p>What's prohibited is population of the Info column <em>only</em> in cases where <code>tree</code> is set.</p>
+
+<p>Paragraph 1.4.4(3) of README.dissector is not talking about the entire dissector, it's talking only about the code that's run before anything is fetched from the packet.</p>
+
+<blockquote>
+<p>Therefore, your statement that "columns should not be filled under a tree presence condition" is not indicated in your reference,</p>
+</blockquote>
+
+<p>His reference is section 2.11 paragraph 4, which, as indicated, says</p>
+
+<blockquote>
+<p>Note, however, that you must fill in column information, ...  regardless of whether "tree" is NULL or not.</p>
+</blockquote>
+
+<p>which quite clearly indicates that columns should not be filled in inside code that is run only if <code>tree</code> is null (or only if <code>tree</code> is non-null).</p></div>
+            <div class="comment-info" id="comment-51770-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Apr '16, 16:51)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="51771"></a>
+        <div class="comment" id="comment-51771">
+            <div id="post-51771-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think we're splitting hairs, here. I took a second look at 2.0.1 and noticed that the same behavior was occurring, but not in 2.0.0, where I discovered the difference, so I will edit my question to specifically mention that. Reading between the lines, it appears that, since 2.0.1, performance enhancements were made that prohibits the update of info columns. If that's the case, I am fine with it. But, to call out observers of behavior differences to be causers of them is unfair.</p>
+
+<p>Paragraph 1.4, where I am referencing from, is titled "Functions to handle columns in the traffic summary window", which is what my question is about.</p>
+
+<p>Paragraph 2.11 refers to optimizations of the entire dissector, not specifically implementation of info columns. Paragraph 4 refers to the previous paragraph (3) which states that, "in the interest of speed, avoid building a protocol tree and adding stuff to it, or even looking at any packet data needed only if you're building the protocol tree, if possible."</p>
+
+<p>Again, if the API changed for the sake performance enhancements on the Qt interface, I think it at least ought to be mentioned, without the implication that someone else is doing it wrong. I might add that this does not bode well with Wireshark's full migration to Qt.</p></div>
+            <div class="comment-info" id="comment-51771-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Apr '16, 20:43)</span>
+                <a class="comment-user userinfo" href="/users/17122/coloncm">coloncm</a>
+                
+            </div>
+        </div>
+    
+        <a name="51774"></a>
+        <div class="comment not_top_scorer" id="comment-51774">
+            <div id="post-51774-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I think we're splitting hairs, here.</p>
+</blockquote>
+
+<p>No, but if it appears that way, the documentation is apparently unclear.</p>
+
+<p>Updating the column data is permitted, <em>as long as the code that updates it is run regardless of whether <code>tree</code> is null or not</em>.  If you are updating it in the middle of a block of code inside <code>if (tree) {</code> and <code>}</code>, then you must, before each call that updates column information, <em>close</em> the existing <code>if (tree) {</code> block by adding a <code>}</code> before the call that updates column information and, after a sequence of one or more calls that update column information, start a <em>new</em> <code>if (tree) {</code> block by adding <code>if (tree) {</code> after all the calls that update column information.</p>
+
+<p>And, in fact, that should be generalized to include <em>all</em> code that "create[s] conversations, reassemble[s] packets, do[es] calls to "expert" functions, build[s] any other persistent state needed for dissection, and callps] sub dissectors" - that code must be outside <code>if (tree) {</code>/<code>}</code> blocks, so that those blocks must be closed before making such calls, and opening new blocks after marking such calls.</p>
+
+<p>It is not forbidden to update column information (or do any of those other things) at particular points in the flow of the dissection process - it's just forbidden (and has always been forbidden, regardless of whether, by pure luck, it happened to work nonetheless) to do so *inside an <code>if (tree) {</code>/<code>}</code> block, so you have to make sure that those blocks don't cover code that does any of those things, by ending those blocks before doing those things.</p>
+
+<p>See the example I added to the answer.</p></div>
+            <div class="comment-info" id="comment-51774-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Apr '16, 00:49)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-51760" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51760-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/51758/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='EmhbK2ub9jiaGvHB32tEj4iYVrnEzLyM' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/51758/qt-vs-gtk-info-column-differences-in-201-and-newer?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/51758/qt-vs-gtk-info-column-differences-in-201-and-newer?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/dissector/"
+            class="tag-link-dissector"
+            title="see questions tagged'dissector'using tags"
+            rel="tag">dissector</a> <span class="tag-number">&#215;637</span><br/>
+        
+        <a href="/tags/plugin/"
+            class="tag-link-plugin"
+            title="see questions tagged'plugin'using tags"
+            rel="tag">plugin</a> <span class="tag-number">&#215;173</span><br/>
+        
+        <a href="/tags/gtk/"
+            class="tag-link-gtk"
+            title="see questions tagged'gtk'using tags"
+            rel="tag">gtk</a> <span class="tag-number">&#215;25</span><br/>
+        
+        <a href="/tags/qt5/"
+            class="tag-link-qt5"
+            title="see questions tagged'qt5'using tags"
+            rel="tag">qt5</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 18, 2016, 9:33 a.m.">18 Apr '16, 09:33</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,149 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 19, 2016, 4:32 a.m.">19 Apr '16, 04:32</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/22722/backporting-a-wireshark-dissector-plugin">Backporting a wireshark dissector plugin</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33457/multiple-c-files">Multiple .c files</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36193/couldnt-load-module-undefinded-symbol-dissector_add">Couldnt load module:  undefinded symbol: dissector_add</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47261/error-building-plugin">error building plugin</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49690/decode-new-protocolmessage-in-wireshark-using-a-xml-file-in-input">decode new protocol/message in wireshark using a xml file in input</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55962/msbuild-just-my-plugin">msbuild just my plugin?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58138/how-to-modify-the-values-of-an-enum-preference-after-registering">How to modify the values of an enum preference after registering?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16009/compiling-problem-installing-a-dissector-plugin-to-wireshark">Compiling problem installing a dissector plugin to wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26204/status_access_violation-dissector-accessed-an-invalid-memory-address-when-calling-g_free">STATUS_ACCESS_VIOLATION: dissector accessed an invalid memory address when calling g_free</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33958/dissector-parameter-question">Dissector parameter question</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

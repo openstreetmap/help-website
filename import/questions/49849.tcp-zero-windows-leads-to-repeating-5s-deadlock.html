@@ -1,0 +1,804 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TCP Zero windows leads to repeating 5s deadlock - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello, we have a thorny issue here which we cannot get to the bottom of. We have a client-server application where both client and server are sending and receiving data at a high rate (actual cycle is client -&amp;gt; server -&amp;gt; client -&amp;gt; server -&amp;gt; client). For application reasons we want to thr..." />
+        <meta name="keywords" content="zero,deadlock,window" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/49849/tcp-zero-windows-leads-to-repeating-5s-deadlock" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/49849/tcp-zero-windows-leads-to-repeating-5s-deadlock?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='93a2y6b4N4UKwGwW639rZnQBmZHGUEq4' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/49849/tcp-zero-windows-leads-to-repeating-5s-deadlock">TCP Zero windows leads to repeating 5s deadlock</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-49849-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49849/up/" rel="nofollow"> </a>
+<div id="post-49849-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-49849-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49849/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/49849/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello, we have a thorny issue here which we cannot get to the bottom of. We have a client-server application where both client and server are sending and receiving data at a high rate (actual cycle is client -&gt; server -&gt; client -&gt; server -&gt; client). For application reasons we want to throttle this communication and so the client starts to sleep before sending outbound as well as stopping reading data off the inbound. This causes the client recv and send buffers to fill up and the server send buffer to fill (server still reads data). As expected we get shrinking tcp windows on both ends which causes network backpressure through to the application. What we don't understand is that if we push things hard enough the tcp stack seemds to deadlock and then only release data packets every 5s. If we throttle back before this happens then things go through nicely. I've attached a screen shot of wireshark when this happens. You can see the two full TCP windows, what we don't understand is the complete absence of anything in the intervening 5s. We would expect to see at least an ack for frame 213 rather than this piggybacking on frame 215 (the first one after the pause).
+Nagle is off. delayed ack is off.</p>
+<p><strong>Update</strong>: this appears to be related to be the socket buffer sizes. The client has send and receive buffers set to 32k. The server has a receive buffer of 4k and a send buffer of 64k. Changing the receive buffers of both to 1mb and send buffers to 64k seems to avoid the problem. I think this is partly because the network is now operating a lot more efficiently.</p>
+<p>Any ideas?
+Thx
+andy</p>
+<p><img alt="Screen shot of wireshark" src="https://osqa-ask.wireshark.org/upfiles/Screen_Shot_2016-02-04_at_18.19.28.png"></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/zero/" class="post-tag tag-link-zero"
+                                        title="see questions tagged 'zero'" rel="tag">zero</a>
+                                
+                                    <a href="/tags/deadlock/" class="post-tag tag-link-deadlock"
+                                        title="see questions tagged 'deadlock'" rel="tag">deadlock</a>
+                                
+                                    <a href="/tags/window/" class="post-tag tag-link-window"
+                                        title="see questions tagged 'window'" rel="tag">window</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>04 Feb '16, 11:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/76f3605625c8366e05d6f53a04eab397?s=32&amp;d=identicon&amp;r=g" alt="andypiper's gravatar image" />
+    <p><a href="/users/22963/andypiper">andypiper</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andypiper has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/49849/">
+                edited
+                <strong>05 Feb '16, 11:39</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-49849">
+    
+        <a name="49865"></a>
+        <div class="comment" id="comment-49865">
+            <div id="post-49865-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi without a trace (especially the SYN Packets) it nearly impossible to tell you something reliable.</p>
+
+<p>So can you share a capture in a publicly accessible spot, e.g. CloudShark, Google Drive, Dropbox?</p>
+
+<p>Also you can use <a href="https://www.tracewrangler.com/">https://www.tracewrangler.com/</a> for sanitization and anonymization of PCAP and PCAPng files.</p></div>
+            <div class="comment-info" id="comment-49865-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Feb '16, 13:23)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="49866"></a>
+        <div class="comment" id="comment-49866">
+            <div id="post-49866-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Christian, here is the trace:</p>
+
+<p><a href="https://dl.dropboxusercontent.com/u/108802517/dump2.pcap">https://dl.dropboxusercontent.com/u/108802517/dump2.pcap</a></p></div>
+            <div class="comment-info" id="comment-49866-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Feb '16, 13:32)</span>
+                <a class="comment-user userinfo" href="/users/22963/andypiper">andypiper</a>
+                
+            </div>
+        </div>
+    
+        <a name="49872"></a>
+        <div class="comment" id="comment-49872">
+            <div id="post-49872-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi andypiper, I have converted your answer a comment, because it is easier for everyone to follow this question.</p>
+
+<p>The gap is system related. So what does the system monitor say at this moment.</p></div>
+            <div class="comment-info" id="comment-49872-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Feb '16, 14:15)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="49873"></a>
+        <div class="comment" id="comment-49873">
+            <div id="post-49873-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Christian, what should I be looking for? When you say its system related can you expand a little? This is on OSX, the same thing happens on windows. The system is working, as you can see from the trace once the 5s pause is hit it keeps happening.</p></div>
+            <div class="comment-info" id="comment-49873-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Feb '16, 14:35)</span>
+                <a class="comment-user userinfo" href="/users/22963/andypiper">andypiper</a>
+                
+            </div>
+        </div>
+    
+        <a name="49874"></a>
+        <div class="comment not_top_scorer" id="comment-49874">
+            <div id="post-49874-score" class="comment-score"></div>
+            <div class="comment-text"><p>Application logs? Activity Monitor? 
+I mean CPU, Systemload or Application</p></div>
+            <div class="comment-info" id="comment-49874-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Feb '16, 14:43)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="49923"></a>
+        <div class="comment not_top_scorer" id="comment-49923">
+            <div id="post-49923-score" class="comment-score"></div>
+            <div class="comment-text"><p>There is no obvious CPU or system spike. In the application what happens is that we are using non-blocking IO and the socket is basically not ready to write for 5s. So its not that we are not trying to write data - we are, its just the socket won't allow it.</p></div>
+            <div class="comment-info" id="comment-49923-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Feb '16, 03:50)</span>
+                <a class="comment-user userinfo" href="/users/22963/andypiper">andypiper</a>
+                
+            </div>
+        </div>
+    
+        <a name="49925"></a>
+        <div class="comment not_top_scorer" id="comment-49925">
+            <div id="post-49925-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://ask.wireshark.org/questions/34338/gap-between-last-ack-and-zero-window-full-message">https://ask.wireshark.org/questions/34338/gap-between-last-ack-and-zero-window-full-message</a> looks to be exactly the same problem, even down to the 5s pause.</p></div>
+            <div class="comment-info" id="comment-49925-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Feb '16, 04:29)</span>
+                <a class="comment-user userinfo" href="/users/22963/andypiper">andypiper</a>
+                
+            </div>
+        </div>
+    
+        <a name="49936"></a>
+        <div class="comment" id="comment-49936">
+            <div id="post-49936-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I find the capture quite problematic, because it's</p>
+
+<p>1) obviously a in-host communication (both IP addresses being loopback) and</p>
+
+<p>2) the packets showing typical local host capture errors (CRCs, oversized frames, etc)</p>
+
+<p>I have seen similar captures that showed crazy things just because it wasn't a "real cable network" communication and contained details that would never happen on a cable connected to a real network card. In my experience symptoms in PCAPs captured like this cannot be trusted, and trying to troubleshoot with them can turn into a wild goose chase.</p>
+
+<p>So can you reproduce this on a connection between two physical systems, over a cable? Or does this only happen on localhost connections?</p></div>
+            <div class="comment-info" id="comment-49936-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Feb '16, 17:16)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="49937"></a>
+        <div class="comment not_top_scorer" id="comment-49937">
+            <div id="post-49937-score" class="comment-score"></div>
+            <div class="comment-text"><p>I totally agree.</p></div>
+            <div class="comment-info" id="comment-49937-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Feb '16, 18:24)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-49849" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49849-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/49849/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='93a2y6b4N4UKwGwW639rZnQBmZHGUEq4' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49849/tcp-zero-windows-leads-to-repeating-5s-deadlock?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49849/tcp-zero-windows-leads-to-repeating-5s-deadlock?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/window/"
+            class="tag-link-window"
+            title="see questions tagged'window'using tags"
+            rel="tag">window</a> <span class="tag-number">&#215;55</span><br/>
+        
+        <a href="/tags/zero/"
+            class="tag-link-zero"
+            title="see questions tagged'zero'using tags"
+            rel="tag">zero</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/deadlock/"
+            class="tag-link-deadlock"
+            title="see questions tagged'deadlock'using tags"
+            rel="tag">deadlock</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 4, 2016, 11:20 a.m.">04 Feb '16, 11:20</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,192 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 6, 2016, 6:24 p.m.">06 Feb '16, 18:24</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/849/tcp-zerowindow">TCP ZeroWindow</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34338/gap-between-last-ack-and-zero-window-full-message">Gap between last ACK and Zero Window Full message</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64076/rst-packets-with-zero-window-length">RST Packets with zero window length</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10531/tcp-zerowindow-probe">TCP ZeroWindow Probe.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13660/proxy-and-window-scaling-factor-of-0">Proxy and Window scaling factor of 0</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27556/relation-between-window-full-zero-window-and-push">Relation between window full, Zero window and PUSH?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16530/window-close-notification">window close notification</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31048/tcp-window-keeps-decreasing-on-pshacks">TCP window keeps decreasing on PSH,ACKs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57067/intermittent-disconnection">intermittent disconnection</a>
+        </p>
+        
+        <p>
+            <a href="/questions/901/expertmessage-window-update">expert.message == &quot;Window update&quot;</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

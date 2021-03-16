@@ -1,0 +1,841 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>wireshark segfaults gobject errors - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, Since a few days ago wiresharks segfaults whenever its starts. dmesg gives wireshark[2320]: segfault at ffffffffa4004920 ip 00007fa5bc13d425 sp 00007ffcb149fbb8 error 5 in libgobject-2.0.so.0.4400.1[7fa5bc10a000+50000] OS is Ubuntu 15.04 64 bit, wireshark 1.12.6 compiled from source. Please help..." />
+        <meta name="keywords" content="wireshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/43631/wireshark-segfaults-gobject-errors" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/43631/wireshark-segfaults-gobject-errors?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='gw9oC3K62hG42zyfG0lhMnE75DnGgnnL' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/43631/wireshark-segfaults-gobject-errors">wireshark segfaults gobject errors</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-43631-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43631/up/" rel="nofollow"> </a>
+<div id="post-43631-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-43631-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43631/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/43631/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>Since a few days ago wiresharks segfaults whenever its starts. dmesg gives
+wireshark[2320]: segfault at ffffffffa4004920 ip 00007fa5bc13d425 sp 00007ffcb149fbb8 error 5 in libgobject-2.0.so.0.4400.1[7fa5bc10a000+50000]</p>
+<p>OS is Ubuntu 15.04 64 bit, wireshark 1.12.6 compiled from source.</p>
+<p>Please help. Thanks.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Jun '15, 09:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/937b0a2f8973f575fa8ac5e253345787?s=32&amp;d=identicon&amp;r=g" alt="kmod's gravatar image" />
+    <p><a href="/users/18078/kmod">kmod</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="kmod has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/43631/">
+                edited
+                <strong>28 Jun '15, 09:12</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+            <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+            <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-43631">
+    
+        <a name="43632"></a>
+        <div class="comment" id="comment-43632">
+            <div id="post-43632-score" class="comment-score"></div>
+            <div class="comment-text"><p>I suspect you'll have to generate a backtrace to get any further with this.  See the Ubuntu page on how to do this <a href="https://wiki.ubuntu.com/Backtrace">here</a>.</p></div>
+            <div class="comment-info" id="comment-43632-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jun '15, 09:14)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43636"></a>
+        <div class="comment" id="comment-43636">
+            <div id="post-43636-score" class="comment-score"></div>
+            <div class="comment-text"><p>Any changes the last few days, for instance software updates?</p></div>
+            <div class="comment-info" id="comment-43636-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jun '15, 11:54)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43647"></a>
+        <div class="comment" id="comment-43647">
+            <div id="post-43647-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, there was a update of libglib a few days ago.</p>
+
+<p>Upgraded the following packages:
+libglib2.0-0 (2.44.0-1ubuntu3) to 2.44.1-1ubuntu1
+libglib2.0-0:i386 (2.44.0-1ubuntu3) to 2.44.1-1ubuntu1
+libglib2.0-bin (2.44.0-1ubuntu3) to 2.44.1-1ubuntu1
+libglib2.0-data (2.44.0-1ubuntu3) to 2.44.1-1ubuntu1
+libglib2.0-dev (2.44.0-1ubuntu3) to 2.44.1-1ubuntu1</p></div>
+            <div class="comment-info" id="comment-43647-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jun '15, 22:23)</span>
+                <a class="comment-user userinfo" href="/users/18078/kmod">kmod</a>
+                
+            </div>
+        </div>
+    
+        <a name="43656"></a>
+        <div class="comment" id="comment-43656">
+            <div id="post-43656-score" class="comment-score"></div>
+            <div class="comment-text"><p>Here is a backtrace</p>
+
+<pre><code>Reading symbols from wireshark...(no debugging symbols found)...done.
+(gdb) handle SIG33 pass nostop noprint
+Signal        Stop  Print   Pass to program Description
+SIG33         No    No  Yes     Real-time event 33
+(gdb) set pagination 0
+(gdb) run
+Starting program: /usr/bin/wireshark 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7fffe51e8700 (LWP 2907)]
+[New Thread 0x7fffe59e9700 (LWP 2906)]
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00007ffff113d425 in g_type_check_instance_is_fundamentally_a () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+(gdb) backtrace full
+#0  0x00007ffff113d425 in g_type_check_instance_is_fundamentally_a () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x00007ffff111eeae in g_object_ref () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#2  0x00007ffff0e4107d in g_list_foreach () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007ffff22f1e01 in gtk_window_set_icon_list () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#4  0x0000000000441e30 in ?? ()
+No symbol table info available.
+#5  0x00007ffff111a2d5 in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007ffff112c03c in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007ffff1134698 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00007ffff11348ff in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00007ffff22e24ac in gtk_widget_realize () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#10 0x00000000004ba61b in ?? ()
+No symbol table info available.
+#11 0x000000000042311a in ?? ()
+No symbol table info available.
+#12 0x00007fffefd8fa40 in __libc_start_main (main=0x422d10, argc=1, argv=0x7fffffffdfa8, init=&lt;optimized out&gt;, fini=&lt;optimized out&gt;, rtld_fini=&lt;optimized out&gt;, stack_end=0x7fffffffdf98) at libc-start.c:289
+        result = &lt;optimized out&gt;
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, 5433218451502865264, 4342592, 140737488347040, 0, 0, -5433218848626238608, -5433183450742056080}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x5266f0 &lt;__libc_csu_init&gt;, 0x7fffffffdfa8}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5400304}}}
+        not_first_call = &lt;optimized out&gt;
+#13 0x0000000000424369 in _start ()
+No symbol table info available.
+(gdb) info registers
+rax            0x953580 9778560
+rbx            0xffffffffd8004920   -671069920
+rcx            0x2  2
+rdx            0x1  1
+rsi            0x50 80
+rdi            0xffffffffd8004920   -671069920
+rbp            0x0  0x0
+rsp            0x7fffffffd828   0x7fffffffd828
+r8             0x95a330 9806640
+r9             0x95a2e0 9806560
+r10            0x19a    410
+r11            0x7ffff0e41060   140737234866272
+r12            0x7ffff111eea0   140737237872288
+r13            0x1  1
+r14            0x7fffffffda60   140737488345696
+r15            0x7fffffffda00   140737488345600
+rip            0x7ffff113d425   0x7ffff113d425 &lt;g_type_check_instance_is_fundamentally_a+5&gt;
+eflags         0x10282  [ SF IF RF ]
+cs             0x33 51
+ss             0x2b 43
+ds             0x0  0
+es             0x0  0
+fs             0x0  0
+gs             0x0  0
+(gdb) x/16i $pc
+=&gt; 0x7ffff113d425 &lt;g_type_check_instance_is_fundamentally_a+5&gt;: mov    (%rdi),%rax
+   0x7ffff113d428 &lt;g_type_check_instance_is_fundamentally_a+8&gt;: test   %rax,%rax
+   0x7ffff113d42b &lt;g_type_check_instance_is_fundamentally_a+11&gt;:    je     0x7ffff113d470 &lt;g_type_check_instance_is_fundamentally_a+80&gt;
+   0x7ffff113d42d &lt;g_type_check_instance_is_fundamentally_a+13&gt;:    mov    (%rax),%rax
+   0x7ffff113d430 &lt;g_type_check_instance_is_fundamentally_a+16&gt;:    cmp    $0x3fc,%rax
+   0x7ffff113d436 &lt;g_type_check_instance_is_fundamentally_a+22&gt;:    ja     0x7ffff113d460 &lt;g_type_check_instance_is_fundamentally_a+64&gt;
+   0x7ffff113d438 &lt;g_type_check_instance_is_fundamentally_a+24&gt;:    lea    0x21e301(%rip),%rdx        # 0x7ffff135b740
+   0x7ffff113d43f &lt;g_type_check_instance_is_fundamentally_a+31&gt;:    shr    $0x2,%rax
+   0x7ffff113d443 &lt;g_type_check_instance_is_fundamentally_a+35&gt;:    mov    (%rdx,%rax,8),%rax
+   0x7ffff113d447 &lt;g_type_check_instance_is_fundamentally_a+39&gt;:    test   %rax,%rax
+   0x7ffff113d44a &lt;g_type_check_instance_is_fundamentally_a+42&gt;:    je     0x7ffff113d470 &lt;g_type_check_instance_is_fundamentally_a+80&gt;
+   0x7ffff113d44c &lt;g_type_check_instance_is_fundamentally_a+44&gt;:    movzbl 0x14(%rax),%edx
+   0x7ffff113d450 &lt;g_type_check_instance_is_fundamentally_a+48&gt;:    cmp    %rsi,0x48(%rax,%rdx,8)
+   0x7ffff113d455 &lt;g_type_check_instance_is_fundamentally_a+53&gt;:    sete   %al
+   0x7ffff113d458 &lt;g_type_check_instance_is_fundamentally_a+56&gt;:    movzbl %al,%eax
+   0x7ffff113d45b &lt;g_type_check_instance_is_fundamentally_a+59&gt;:    retq   
+(gdb) thread apply all backtrace
+
+Thread 3 (Thread 0x7fffe59e9700 (LWP 2906)):
+#0  0x00007fffefe6a8dd in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffff0e44ebc in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+#2  0x00007ffff0e44fcc in g_main_context_iteration () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+#3  0x00007fffe59f127d in ?? () from /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+#4  0x00007ffff0e6b955 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+#5  0x00007ffff01406aa in start_thread (arg=0x7fffe59e9700) at pthread_create.c:333
+#6  0x00007fffefe75eed in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 2 (Thread 0x7fffe51e8700 (LWP 2907)):
+#0  0x00007fffefe6a8dd in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007ffff0e44ebc in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+#2  0x00007ffff0e45242 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+#3  0x00007fffed300af6 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+#4  0x00007ffff0e6b955 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+#5  0x00007ffff01406aa in start_thread (arg=0x7fffe51e8700) at pthread_create.c:333
+#6  0x00007fffefe75eed in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 1 (Thread 0x7ffff7f899c0 (LWP 2902)):
+#0  0x00007ffff113d425 in g_type_check_instance_is_fundamentally_a () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#1  0x00007ffff111eeae in g_object_ref () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#2  0x00007ffff0e4107d in g_list_foreach () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+#3  0x00007ffff22f1e01 in gtk_window_set_icon_list () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+#4  0x0000000000441e30 in ?? ()
+#5  0x00007ffff111a2d5 in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#6  0x00007ffff112c03c in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#7  0x00007ffff1134698 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#8  0x00007ffff11348ff in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#9  0x00007ffff22e24ac in gtk_widget_realize () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+#10 0x00000000004ba61b in ?? ()
+#11 0x000000000042311a in ?? ()
+#12 0x00007fffefd8fa40 in __libc_start_main (main=0x422d10, argc=1, argv=0x7fffffffdfa8, init=&lt;optimized out&gt;, fini=&lt;optimized out&gt;, rtld_fini=&lt;optimized out&gt;, stack_end=0x7fffffffdf98) at libc-start.c:289
+#13 0x0000000000424369 in _start ()
+(gdb) quit
+A debugging session is active.
+
+    Inferior 1 [process 2902] will be killed.
+
+Quit anyway? (y or n) n[Ky
+</code></pre></div>
+            <div class="comment-info" id="comment-43656-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '15, 03:42)</span>
+                <a class="comment-user userinfo" href="/users/18078/kmod">kmod</a>
+                
+            </div>
+        </div>
+    
+        <a name="43657"></a>
+        <div class="comment" id="comment-43657">
+            <div id="post-43657-score" class="comment-score"></div>
+            <div class="comment-text"><p>I should add that starting wireshark with sudo (yes, I know it is a bad idea) does not cause segfault. But there is a warning</p>
+
+<blockquote>
+<p>Gtk-Message: GtkDialog mapped without
+a transient parent. This is
+discouraged.</p>
+</blockquote>
+
+<p>So I think GtkDialog mapped with a transient parent might have caused segfault, though I have no idea what it means.</p></div>
+            <div class="comment-info" id="comment-43657-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '15, 03:50)</span>
+                <a class="comment-user userinfo" href="/users/18078/kmod">kmod</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-43631" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43631-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/43631/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='gw9oC3K62hG42zyfG0lhMnE75DnGgnnL' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/43631/wireshark-segfaults-gobject-errors?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/43631/wireshark-segfaults-gobject-errors?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 28, 2015, 9:05 a.m.">28 Jun '15, 09:05</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,082 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 29, 2015, 4:30 a.m.">29 Jun '15, 04:30</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/23243/how-do-you-capture-serial-com-communications">How do you capture Serial (COM) communications?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23854/computer-sending-emails-via-phishing-program">Computer sending emails via phishing program.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24457/what-does-referer-field-not-being-present-mean">What does referer field not being present mean?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25533/wirehark-doesnt-start-on-osx">Wirehark doesn&#39;t start on OSX</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26534/how-to-determine-server-with-very-high-bandwidth-consumption-in-vlan-network">How to determine server with very high bandwidth consumption in VLAN network.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27284/how-to-retrieve-file-from-ftp">how to retrieve file from FTP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27943/decode-as-my-protocol">Decode as my protocol</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28516/unknown-udp-traffic-from-unknown-process-on-port-60129">Unknown UDP traffic from unknown process on port 60129</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29345/wrong-start-file-chosen-for-x11-on-osx">Wrong start file chosen for X11 on OSX</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29999/bad-use-of-mine-wireshark-how-do-do">Bad use of mine WIRESHARK how do do ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

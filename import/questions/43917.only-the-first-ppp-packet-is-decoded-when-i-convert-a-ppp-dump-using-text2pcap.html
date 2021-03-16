@@ -1,0 +1,861 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Only the first ppp packet is decoded when I convert a ppp dump using text2pcap - Wireshark Q&amp;A</title>
+        <meta name="description" content="I have a ppp stream over a serial port. Each ppp packet contains an IP datagram, with an ICMP message (ping). I have removed the HDLC headers (7E FF 03) from the stream, and I have also corrected the characters escaped with 0x7D. I convert this ppp dump using text2pcap -l 9 (DLT_PPP protocol), but i..." />
+        <meta name="keywords" content="text2pcap,ppp,hdlc,wireshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/43917/only-the-first-ppp-packet-is-decoded-when-i-convert-a-ppp-dump-using-text2pcap" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/43917/only-the-first-ppp-packet-is-decoded-when-i-convert-a-ppp-dump-using-text2pcap?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='mu2sizuP1vmMEPTcuqCaRAr2ng8pkdsj' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/43917/only-the-first-ppp-packet-is-decoded-when-i-convert-a-ppp-dump-using-text2pcap">Only the first ppp packet is decoded when I convert a ppp dump using text2pcap</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-43917-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43917/up/" rel="nofollow"> </a>
+<div id="post-43917-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-43917-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43917/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/43917/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have a ppp stream over a serial port. Each ppp packet contains an IP datagram, with an ICMP message (ping). I have removed the HDLC headers (7E FF 03) from the stream, and I have also corrected the characters escaped with 0x7D.</p>
+<p>I convert this ppp dump using text2pcap -l 9 (DLT_PPP protocol), but in the resulting pcap file, only the first ppp packet is decoded, as you can see in the following image:</p>
+<p><img alt="capture" src="http://oi58.tinypic.com/6fsfph.jpg"></p>
+<p>I have checked the IP length, and it is right. I have also compared my capture with "ppp-dialup-munged.pcap" in <a href="https://wiki.wireshark.org/PPP">https://wiki.wireshark.org/PPP</a> and, in both captures, packets have a two-byte FCS after the IP datagram, just before the next packet.</p>
+<p>Why in my case the next packet is not decoded? Should I signal in the raw file where the next packet begins?</p>
+<p>The raw file I convert with text2pcap is:</p>
+<pre><code>000000 00 21 45 00 00 3C 6E 5D 00 00 80 01 E9 01 C0 A8 
+000010 0E 21 08 00 0C 99 00 00 52 5C 02 00 01 00 61 62 
+000020 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 
+000030 73 74 75 76 77 61 62 63 64 65 66 67 68 69 CD 94 
+000040 00 21 45 00 00 3C 6E 5E 00 00 80 01 E9 00 C0 A8 
+000050 0E 21 08 00 0C 99 00 00 51 5C 02 00 02 00 61 62 
+000060 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 
+000070 73 74 75 76 77 61 62 63 64 65 66 67 68 69 5D 14 
+000080 00 21 45 00 00 3C 6E 5F 00 00 80 01 E8 FF C0 A8 
+000090 0E 21 08 00 0C 99 00 00 50 5C 02 00 03 00 61 62 
+0000A0 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 
+0000B0 73 74 75 76 77 61 62 63 64 65 66 67 68 69 A1 3C 
+0000C0 00 21 45 00 00 3C 6E 60 00 00 80 01 E8 FE C0 A8 
+0000D0 0E 21 08 00 0C 99 00 00 4F 5C 02 00 04 00 61 62 
+0000E0 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 
+0000F0 73 74 75 76 77 61 62 63 64 65 66 67 68 69 75 1C 
+000100
+</code></pre>
+<p>New packets should start in 0x000000, 0x000040, 0x000080 and 0x0000C0 (the begining is 00 21, IP protocol).
+Thanks in advance.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/text2pcap/" class="post-tag tag-link-text2pcap"
+                                        title="see questions tagged 'text2pcap'" rel="tag">text2pcap</a>
+                                
+                                    <a href="/tags/ppp/" class="post-tag tag-link-ppp"
+                                        title="see questions tagged 'ppp'" rel="tag">ppp</a>
+                                
+                                    <a href="/tags/hdlc/" class="post-tag tag-link-hdlc"
+                                        title="see questions tagged 'hdlc'" rel="tag">hdlc</a>
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Jul '15, 01:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/650d241a03ae63cf616b958ffe420fab?s=32&amp;d=identicon&amp;r=g" alt="jcibar's gravatar image" />
+    <p><a href="/users/18295/jcibar">jcibar</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jcibar has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/43917/">
+                edited
+                <strong>07 Jul '15, 01:42</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-43917">
+    
+</div>
+<div id="comment-tools-43917" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43917-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/43917/only-the-first-ppp-packet-is-decoded-when-i-convert-a-ppp-dump-using-text2pcap?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/43917/only-the-first-ppp-packet-is-decoded-when-i-convert-a-ppp-dump-using-text2pcap?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/43917/only-the-first-ppp-packet-is-decoded-when-i-convert-a-ppp-dump-using-text2pcap?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/43917/only-the-first-ppp-packet-is-decoded-when-i-convert-a-ppp-dump-using-text2pcap?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="43919"></a>
+                    <div id="answer-container-43919" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-43919-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43919/up/" rel="nofollow"> </a>
+<div id="post-43919-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-43919-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43919/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>There are 4 64 bytes PPP frames in the data so you must add the max packet length parameter to text2pcap of <code>-m 64</code>.</p>
+<p>When viewing the capture in Wireshark you should also set the PPP protocol preference "PPP Frame Checksum Type" to "16-Bit".</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/43919/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Jul '15, 02:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+    <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+    <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grahamb has 274 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-43919">
+    
+</div>
+<div id="comment-tools-43919" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43919-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="44007"></a>
+                    <div id="answer-container-44007" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-44007-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/44007/up/" rel="nofollow"> </a>
+<div id="post-44007-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-44007-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/44007/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Finally, I solved the issue restarting the byte count digits when a new packet starts (that is, the new packet starts with 000000):</p>
+<pre><code>000000 00 21 45 00 00 3C 6E 5D 00 00 80 01 E9 01 C0 A8 
+000010 0E 21 08 00 0C 99 00 00 52 5C 02 00 01 00 61 62 
+000020 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 
+000030 73 74 75 76 77 61 62 63 64 65 66 67 68 69 CD 94 
+000040    
+000000 00 21 45 00 00 3C 6E 5E 00 00 80 01 E9 00 C0 A8 
+000010 0E 21 08 00 0C 99 00 00 51 5C 02 00 02 00 61 62 
+000020 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 
+000030 73 74 75 76 77 61 62 63 64 65 66 67 68 69 5D 14 
+000040    
+000000 00 21 45 00 00 3C 6E 5F 00 00 80 01 E8 FF C0 A8 
+000010 0E 21 08 00 0C 99 00 00 50 5C 02 00 03 00 61 62 
+000020 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 
+000030 73 74 75 76 77 61 62 63 64 65 66 67 68 69 A1 3C 
+000040
+000000 00 21 45 00 00 3C 6E 60 00 00 80 01 E8 FE C0 A8 
+000010 0E 21 08 00 0C 99 00 00 4F 5C 02 00 04 00 61 62 
+000020 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 71 72 
+000030 73 74 75 76 77 61 62 63 64 65 66 67 68 69 75 1C 
+000040
+</code></pre>
+<p>Thanks for your help.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/44007/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jul '15, 06:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/650d241a03ae63cf616b958ffe420fab?s=32&amp;d=identicon&amp;r=g" alt="jcibar's gravatar image" />
+    <p><a href="/users/18295/jcibar">jcibar</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jcibar has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-44007">
+    
+</div>
+<div id="comment-tools-44007" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-44007-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/43917/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='mu2sizuP1vmMEPTcuqCaRAr2ng8pkdsj' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/43917/only-the-first-ppp-packet-is-decoded-when-i-convert-a-ppp-dump-using-text2pcap?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/43917/only-the-first-ppp-packet-is-decoded-when-i-convert-a-ppp-dump-using-text2pcap?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+        <a href="/tags/text2pcap/"
+            class="tag-link-text2pcap"
+            title="see questions tagged'text2pcap'using tags"
+            rel="tag">text2pcap</a> <span class="tag-number">&#215;19</span><br/>
+        
+        <a href="/tags/ppp/"
+            class="tag-link-ppp"
+            title="see questions tagged'ppp'using tags"
+            rel="tag">ppp</a> <span class="tag-number">&#215;18</span><br/>
+        
+        <a href="/tags/hdlc/"
+            class="tag-link-hdlc"
+            title="see questions tagged'hdlc'using tags"
+            rel="tag">hdlc</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 7, 2015, 1:38 a.m.">07 Jul '15, 01:38</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,710 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 9, 2015, 6:37 a.m.">09 Jul '15, 06:37</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/45158/is-text2pcap-able-to-produce-valid-ppp-in-hdlc-like-framing-packets-with-escaped-chars">Is text2pcap able to produce valid &quot;PPP In HDLC-Like Framing&quot; packets with escaped chars?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51818/call-wireshark-3gpp-decoder-in-a-python-script">Call wireshark 3gpp decoder in a python script</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32357/difference-between-ppp-pcap-files">Difference between .PPP &amp; .PCAP files ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20824/can-wireshark-capture-on-a-ppp-interface">Can Wireshark capture on a PPP interface?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12007/wireshark-not-in-executable-format-file-format-not-recognized">wireshark not in executable format: File format not recognized</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13012/remote-packet-capturing-from-command-prompt">Remote Packet Capturing from command prompt</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13578/can-tvb_get_ntoh24-tvb_get_guint8-take-negative-offset">Can tvb_get_ntoh24 , tvb_get_guint8 take negative offset ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13951/invalid-key-format-wireshark-182">invalid key format wireshark 1.8.2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14548/capturing-network-traffic-rtmp-between-vms-or-using-loopback-in-the-same-vm-using-wireshark">Capturing network traffic (rtmp) between VMs or using loopback in the same VM using wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15103/why-does-wireshark-show-my-pcs-searching-for-their-default-gateway-address-repeatedly">Why Does Wireshark show my pc&#39;s searching for their default gateway address repeatedly?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

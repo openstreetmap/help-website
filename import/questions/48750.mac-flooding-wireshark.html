@@ -1,0 +1,833 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>mac flooding wireshark - Wireshark Q&amp;A</title>
+        <meta name="description" content="hi all, just wondering, MAC flooding attack. In a typical MAC flooding attack, a switch is flooded with packets, each containing different source MAC addresses. If we consume the limited memory set aside in the switch to store the MAC address-to-physical port translation table it will start to remov..." />
+        <meta name="keywords" content="mac,flooding" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/48750/mac-flooding-wireshark" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/48750/mac-flooding-wireshark?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='jzpjCfn9SmxBarwxKm6zsm6SJXtU0HRI' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/48750/mac-flooding-wireshark">mac flooding wireshark</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-48750-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48750/up/" rel="nofollow"> </a>
+<div id="post-48750-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-48750-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48750/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/48750/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>hi all,</p>
+<p>just wondering, MAC flooding attack. In a typical MAC flooding attack, a switch is flooded with packets, each containing different source MAC addresses. If we consume the limited memory set aside in the switch to store the MAC address-to-physical port translation table it will start to remove valid MAC-to-port mappings. </p>
+<p><strong>All incoming packets are broadcast out on all ports (as with a hub), instead of just down the correct port as per normal operation. A malicious user could then use any packet sniffer (such as Wireshark) running in promiscuous mode to capture sensitive data from other computers (such as unencrypted passwords, e-mail and instant messaging conversations), which would not be accessible were the switch operating normally.</strong></p>
+<p>How can it be technically possible, I mean the MAC table is filled with garbage MAC addresses, removing all valid entries ... so what would happen if I'm in the middle of a file copy between to hosts and both the source and destination MAC addresses get removed? The source MAC is not anymore in the CAM Table (it will not be added because let's say we have reached the limit of 15,000 allowed entries or it would remove another entry to make room for the hosts valid MAC ?? ). What about the destination MAC ? it will broadcast an ARP request in the middle  of the file copy process (TCP stream)??? </p>
+<p>how can be the data intercepted by Wireshark useful for me ?</p>
+<p>I appreciate all comments!</p>
+<p>BR</p>
+<p>Adam </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/mac/" class="post-tag tag-link-mac"
+                                        title="see questions tagged 'mac'" rel="tag">mac</a>
+                                
+                                    <a href="/tags/flooding/" class="post-tag tag-link-flooding"
+                                        title="see questions tagged 'flooding'" rel="tag">flooding</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Dec '15, 13:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2b3f26f3a24449776af62dd8cca7715a?s=32&amp;d=identicon&amp;r=g" alt="adasko's gravatar image" />
+    <p><a href="/users/13062/adasko">adasko</a><br/>
+    <span class="score" title="86 reputation points">86</span><span title="34 badges"><span class="badge1">&#9679;</span><span class="badgecount">34</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="42 badges"><span class="bronze">&#9679;</span><span class="badgecount">42</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="adasko has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-48750">
+    
+</div>
+<div id="comment-tools-48750" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48750-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/48750/mac-flooding-wireshark?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/48750/mac-flooding-wireshark?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/48750/mac-flooding-wireshark?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/48750/mac-flooding-wireshark?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="48752"></a>
+                    <div id="answer-container-48752" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-48752-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48752/up/" rel="nofollow"> </a>
+<div id="post-48752-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-48752-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48752/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="adasko has selected this answer as the correct answer"
+        href="/accept_answer/48752/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>How can it be technically possible, I mean the MAC table is filled with garbage MAC addresses, ... What about the destination MAC ? it will broadcast an ARP request in the middle of the file copy process (TCP stream)???</p>
+</blockquote>
+<p>You mix two things together, the MAC table of the switch and the arp table of the protocol stack on the connected machine. The MAC flood will make the switch send a copy of any received packet out through all ports, which is a default behaviour for any destination MAC unknown to the switch even if there is no ongoing flood. But any receiving machine will ignore packets whose destination MAC is not that machine's own one, and it will not learn those fake source MACs because it does not need them. Similarly, the sending machine will not lose the association between destination IP and destination MAC, so it has no reason to send a new arp request. If it does have a reason, the arp request will reach its destination as it would normally (as arp requests are normally broadcast anyway), and the response will be delivered too. All this is valid if the MAC flood does not cause packet loss, because as ingress traffic from any port is copied to all ports at egress, the total throughput of the switch is equivalent to the nominal bit rate of a single port (same like with a hub).</p>
+<p>The switch itself never sends ARP requests, it builds the association between ports and a MAC addresses solely based on source MACs of packets coming in through a given port. It means that if you connect a piece of equipment to a port of a switch, the switch does not know its MAC until the piece of equipment sends the first packet. In most cases, such first packet will be an arp response, because any other piece of equipment will first ask for the new equipment's MAC address by sending and arp request. In rare cases, the sending equipment will send a unicast packet with destination MAC of the newly connected one without first using an arp request to determine it, but in such cases, the switch will broadcast that first packet not because its destination MAC address is a broadcast/multicast one but because it is unknown to it. And it will continue to do so until it learns the MAC from an incoming packet which has it as a source one - or forever, see how e.g. Microsoft Network Load Balancing works.</p>
+<p>And even if an arp request arrives to a network adaptor (of a PC) between two packets of a TCP session, it causes no trouble, it is a normal event.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/48752/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Dec '15, 14:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/48752/">
+                edited
+                <strong>29 Dec '15, 14:28</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-48752">
+    
+        <a name="48756"></a>
+        <div class="comment" id="comment-48756">
+            <div id="post-48756-score" class="comment-score"></div>
+            <div class="comment-text"><p>But before i can send traffic to a host i need to know it's MAC address. If there's an entry in the CAM table for host A and the receiving host B it will know that it has (the switch) to forward all pacekts for host B to let's say port eth 0/1. After an attack valid entries are removed,so the entry for host B as well. So how can the switch still know where to move the packets? It will broadcast to all ports. But The CAM table is full so how it can again update hosts B mac in it‘s table?</p></div>
+            <div class="comment-info" id="comment-48756-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '15, 01:47)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="48757"></a>
+        <div class="comment" id="comment-48757">
+            <div id="post-48757-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Once again: if the mapping table (MAC -&gt; port) of the switch does not contain (for any reason) a destination MAC address of a packet, the switch sends the packet out through all ports, i.e. does the same thing it would do if the packet's dst mac would be a broadcast one.</p>
+
+<p>This behaviour does not affect arp requests, arp responses and normal communication between any two pieces of connected equipment because this is exactly the same what hubs are doing and equipment connected to hubs was doing just fine for years.</p>
+
+<p>The only purpose of the mapping table is to reduce the collisions: on a hub, if port A receives a packet for port B at the same time when port C receives a packet for port D, both packets will be corrupt because both will be sent to all ports. Thus they will have to be retransmitted (after random delay so that they wouldn't collide again). On a switch, the switching matrix has a throughput which is a double of a sum of ports' speeds, so if the packets do not meet at the same egress (output) port, they do not collide.</p>
+
+<p>The other part is the recovery after the MAC flood ends. The switch replaces the oldest records in the MAC-&gt;port table with the newest arrivals, which is also a normal operation principle (think about how changes in the network configuration on the fly can be handled). So as long as the flood of fake unique source MACs keeps coming in, the switch keeps doing that, quickly pushing the real MACs of connected equipment out of the table again when they get there. As soon as you stop the flood, the switch learns the valid MACs again in no time because they keep coming.</p></div>
+            <div class="comment-info" id="comment-48757-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '15, 02:28)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="48760"></a>
+        <div class="comment" id="comment-48760">
+            <div id="post-48760-score" class="comment-score"></div>
+            <div class="comment-text"><p>thank you <a href="/users/19586/sindy">@sindy</a> for taking the time to answer my questions, I really appreciate it! </p>
+
+<p>to double check.the switch is behaving like a hub during a mac flooding attack, right ?  and because of this, each station running a network analyzer could "see" packets exchanged between each and every hosts in the give LAN segment, right ?</p>
+
+<p>BR</p>
+
+<p>Adam</p></div>
+            <div class="comment-info" id="comment-48760-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '15, 11:16)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="48761"></a>
+        <div class="comment" id="comment-48761">
+            <div id="post-48761-score" class="comment-score">1</div>
+            <div class="comment-text"><p>right and right.</p>
+
+<p>Just don't forget that you cannot be 100% sure that the network analyzer will see all packets: during the flood, the real MACs of connected equipment also keep appearing as source ones, so for short periods of time, until they get pushed out by the flood again, they exist in the MAC -&gt; port mapping table of the switch. Due to this, some packets may be delivered to their proper destination ports directly and thus not reach the analyzer.</p></div>
+            <div class="comment-info" id="comment-48761-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '15, 11:31)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="48763"></a>
+        <div class="comment" id="comment-48763">
+            <div id="post-48763-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you "sindy. It's finally clear now! Great help! </p>
+
+<p>wish you a happy new year !</p></div>
+            <div class="comment-info" id="comment-48763-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Dec '15, 12:08)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-48752" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48752-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/48750/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='jzpjCfn9SmxBarwxKm6zsm6SJXtU0HRI' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48750/mac-flooding-wireshark?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48750/mac-flooding-wireshark?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mac/"
+            class="tag-link-mac"
+            title="see questions tagged'mac'using tags"
+            rel="tag">mac</a> <span class="tag-number">&#215;157</span><br/>
+        
+        <a href="/tags/flooding/"
+            class="tag-link-flooding"
+            title="see questions tagged'flooding'using tags"
+            rel="tag">flooding</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 29, 2015, 1:09 p.m.">29 Dec '15, 13:09</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,446 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 30, 2015, 12:08 p.m.">30 Dec '15, 12:08</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/48903/mac-flooding-attack-unicast-and-sniffer">mac flooding attack, unicast and sniffer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1559/x11-hang-when-cycling-through-windows-on-mac-1065-with-wireshark-140-and-142">X11 hang when cycling through windows on Mac 10.6.5 with Wireshark 1.4.0 and 1.4.2</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5652/osx-lion-release">OSX Lion release?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8391/just-want-to-see-mac-addresses-what-is-the-filter-wording">Just want to See MAC Addresses - what is the filter wording?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13120/mac-crash-with-duplicate-protocol-name">mac crash with &quot;Duplicate protocol name&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18632/same-source-and-destination-mac-address">Same source and destination MAC address</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24385/mac-os-1068-wireshark-wont-start">Mac OS 10.6.8 Wireshark won&#39;t start</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31980/how-to-calculate-ul-throughput-on-the-mac-level">how to calculate UL throughput on the MAC level?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36006/find-mac-address-of-ip-and-network-card-manufacturers-name-from-a-capture-file">Find MAC Address of Ip and Network Card Manufacturer&#39;s name from a capture file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44727/display-ip-and-mac-addresses-and-websitesdomains-visited">Display IP and MAC addresses and websites/domains visited</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

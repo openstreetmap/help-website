@@ -1,0 +1,867 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Intermittent SSL Decryption - Wireshark Q&amp;A</title>
+        <meta name="description" content="I am experiencing intermittent SSL decryption failures (10% success 90% failure) using Wireshark in accordance with the decryption protocol described here:  https://isc.sans.edu/forums/diary/Psst+Your+Browser+Knows+All+Your+Secrets/16415/ After very many attempts I have, I believe, narrowed the prob..." />
+        <meta name="keywords" content="ssl,decryption,intermittent" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/60970/intermittent-ssl-decryption" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/60970/intermittent-ssl-decryption?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='AbOMkxvoJFFPR8I2PwibXV3FO6cYpbV1' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/60970/intermittent-ssl-decryption">Intermittent SSL Decryption</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-60970-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60970/up/" rel="nofollow"> </a>
+<div id="post-60970-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-60970-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60970/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/60970/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am experiencing intermittent SSL decryption failures (10% success 90% failure) using Wireshark in accordance with the decryption protocol described here:<br>
+</p>
+<p><a href="https://isc.sans.edu/forums/diary/Psst+Your+Browser+Knows+All+Your+Secrets/16415/">https://isc.sans.edu/forums/diary/Psst+Your+Browser+Knows+All+Your+Secrets/16415/</a></p>
+<p>After very many attempts I have, I believe, narrowed the problem down to the following hypothesis: My browser (Firefox, Version 45.7.0) writes down several SSL keys in the SSLKey.log text file, many of which are unrelated to the TCP/TLSv1.2 stream of interest. It would appear that Wireshark is selecting the incorrect SSL key from the SSLkey.log file to decode the traffic of interest, and thus the decryption fails.</p>
+<p>So, here are some intermediate questions to help me arrive at a final solution: (1) How does Wireshark select the SSl session key (from SSLkey.log) that it uses to decrypt a stream, which the user has selected for decryption ? (2) Is there a way to force Wireshark to cycle through and to use ALL the stored keys in SSLkey.log in succession, in order to decrypt the user selected stream ? (3) Is there a better method which will unfailing force Wireshark to correctly select the right SSL session key from the SSLkey.log file for its decryption attempt?</p>
+<p>For analysing this problem, I am using Wireshark to decrypt the source of the video feed in the following site:</p>
+<p><a href="http://www.airclips.net/video/airbus-a400m-atlas-german-air-force-54-04-go-around-at-landsberg-airbase">http://www.airclips.net/video/airbus-a400m-atlas-german-air-force-54-04-go-around-at-landsberg-airbase</a></p>
+<p>Finally, In searching the Wireshark.org database for previously reported problems in this connection, the only entry which I found, is the following, as yet unanswered, question: </p>
+<p><a href="https://ask.wireshark.org/questions/46368/ssl-decryption-seems-intermittent">https://ask.wireshark.org/questions/46368/ssl-decryption-seems-intermittent</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ssl/" class="post-tag tag-link-ssl"
+                                        title="see questions tagged 'ssl'" rel="tag">ssl</a>
+                                
+                                    <a href="/tags/decryption/" class="post-tag tag-link-decryption"
+                                        title="see questions tagged 'decryption'" rel="tag">decryption</a>
+                                
+                                    <a href="/tags/intermittent/" class="post-tag tag-link-intermittent"
+                                        title="see questions tagged 'intermittent'" rel="tag">intermittent</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Apr '17, 09:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/469e7fba59f37c655afa16ea559bee97?s=32&amp;d=identicon&amp;r=g" alt="Utnapishtim's gravatar image" />
+    <p><a href="/users/28062/utnapishtim">Utnapishtim</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Utnapishtim has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-60970">
+    
+</div>
+<div id="comment-tools-60970" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60970-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/60970/intermittent-ssl-decryption?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/60970/intermittent-ssl-decryption?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/60970/intermittent-ssl-decryption?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/60970/intermittent-ssl-decryption?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="60985"></a>
+                    <div id="answer-container-60985" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-60985-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60985/up/" rel="nofollow"> </a>
+<div id="post-60985-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-60985-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60985/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Your hypothesis</p>
+<blockquote>
+<p>It would appear that Wireshark is selecting the incorrect SSL key from the SSLkey.log file to decode the traffic of interest, and thus the decryption fails.</p>
+</blockquote>
+<p>is invalid. Wireshark selects the secret based on the Random field in the Client Hello message. This process is deterministic, the same secret is selected each time (but only if it is present).</p>
+<p>More likely scenarios:</p>
+<ul>
+<li>Firefox is too slow in writing the keylog file <em>or</em> Wireshark reads the packets before the key appears in the key log file. In this case, saving the packet capture and then reloading the file should work. Alternatively, you can try toggling a preference which hopefully results in a redissection (and thus re-reading the packet capture).</li>
+<li>Out-of-order TCP segments are received and the decryption state is confused. (See <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=9461).">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=9461).</a> There is no solution for this at the moment other than using a tool to re-order TCP packets in a packet capture (I don't know any).</li>
+</ul>
+<p>Given that you are analyzing a video stream, out-of-order TCP segments sounds more likely to me.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/60985/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Apr '17, 05:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/285b1f0f4caadc088a38c40aea22feba?s=32&amp;d=identicon&amp;r=g" alt="Lekensteyn's gravatar image" />
+    <p><a href="/users/5644/lekensteyn">Lekensteyn</a><br/>
+    <span class="score" title="2213 reputation points"><span class="">2.2k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="24 badges"><span class="bronze">&#9679;</span><span class="badgecount">24</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Lekensteyn has 32 accepted answers">30&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-60985">
+    
+        <a name="60993"></a>
+        <div class="comment" id="comment-60993">
+            <div id="post-60993-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for your helpful reply.</p>
+
+<p>I tried Scenario 1 (saving the packet capture, then reloading it). It failed to correctly decrypt the video stream. This only leaves Scenario 2 and reinforces your comment <em>"Given that you are analyzing a video stream, out-of-order TCP segments sounds more likely to me."</em></p>
+
+<p>This result brings me back to sub-question (2) of my original question, namely:
+<em>Is there a way to force Wireshark to cycle through and to use ALL the stored keys in SSLkey.log in succession, in order to decrypt the user selected stream ?</em> </p>
+
+<p>Doing this would unfailingly solve the decryption problem under both of your scenarios. If this exhaustive search is not possible in the 'standard' Wireshark, would it be difficult to tweak the source code to accomplish it?</p></div>
+            <div class="comment-info" id="comment-60993-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Apr '17, 12:34)</span>
+                <a class="comment-user userinfo" href="/users/28062/utnapishtim">Utnapishtim</a>
+                
+            </div>
+        </div>
+    
+        <a name="61020"></a>
+        <div class="comment" id="comment-61020">
+            <div id="post-61020-score" class="comment-score"></div>
+            <div class="comment-text"><p>TLS does not work like that, you cannot just "decrypt" each packet with the same key. At the beginning of a handshake, a key is agreed on, but decryption of further records depends on earlier ones. If the order is wrong, then the correct decryption keys for the following records cannot be derived. Brute-forcing through an exhaustive search would now work.</p>
+
+<p>What would work is fixing up the TCP dissector to put the TCP segments in the correct order, but this is still an open issue (see the bug I linked in the post).</p></div>
+            <div class="comment-info" id="comment-61020-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '17, 13:45)</span>
+                <a class="comment-user userinfo" href="/users/5644/lekensteyn">Lekensteyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="61053"></a>
+        <div class="comment" id="comment-61053">
+            <div id="post-61053-score" class="comment-score"></div>
+            <div class="comment-text"><p>Once again, thank you for your helpful reply. Please excuse the delay in my response. I am unfamiliar with SSL/TLS and had to spend time reading up on them.</p>
+
+<p>Also, kindly bear with me but I am having difficulty following your statement that:
+<em>" the correct decryption keys for the following records cannot be derived"</em></p>
+
+<p>To speedily allow you to point out the error(s) in my understanding, I have enumerated below, the events which I believe are occurring during the TLS session key  generation process. This understanding is based on my reading of references [1, 2, 3]. I have not been able to determine exactly what my browser is recording in the SSLkey.log text file (step 7 below). The best information which I have managed to obtain is given in reference [4]. Accordingly, there are two possibilities (a) only the session keys themselves are recorded (b) the session keys as well as the intermediate values ie
+client's random value, server's random value, client's premaster secret and server's premaster secret, are being recorded. Here are the steps per my understanding:</p>
+
+<pre><code>1)  My Firefox Browser (the client), sends a "Client hello" message to the server hosting the website containing video (the URL of which I wish to know), along with the client's random value and supported cipher suites.
+2)  The server responds by sending a "Server hello" message to the client, along with the server's random value.
+3)  The server sends its certificate to the client for authentication and may request a certificate from the client. The server sends the "Server hello done" message.
+4)  If the server has requested a certificate from the client, the client sends it.
+5)  The client creates a random Pre-Master Secret and encrypts it with the public key from the server's certificate, sending the encrypted Pre-Master Secret to the server.
+6)  The server receives the Pre-Master Secret. The server and client each generate the Master Secret and session keys based on the Pre-Master Secret.
+7)  The client records the new session keys, one for hashing and a second for encrypting messages and perhaps intermediate values, in the SSLkey.log text file.
+8)  The client sends "Change cipher spec" notification to server to indicate that the client will start using the new session keys for hashing and encrypting messages. Client also sends "Client finished" message.
+9)  Server receives "Change cipher spec" and switches its record layer security state to symmetric encryption using the session keys. Server sends "Server finished" message to the client.
+10) Client and server can now exchange application data over the secured channel they have established. All messages sent from client to server and from server to client are encrypted using session key.
+11) It is possible that the website is 'nested' ie transfers the client to one or more subsequent websites which all require steps 1-10 to be completed.
+</code></pre>
+
+<p>Now, these SSLkey.log entries are being recorded by the Browser, which <strong>always</strong> correctly decrypts the stream of interest (video feed in my case), ie its unaffected by the incorrect byte order issue
+which is confusing Wireshark. Hence these entries are entirely correct. Also, regardless of the two possibilities which I mentioned for the contents of SSLkey.log, one of the entries must be the
+correct session key for decrypting the video stream. Moreover, per the TLS protocol described in steps 1 to 11, the session key for decryption remains unchanged throughout the decryption process
+ie shuffling the videofeed byte order would simply mess up the video but would not affect the decryption session key.<br>
+</p>
+
+<p>If the aforementioned is true, then using each of the entries of the SSLkey.log file in succession (exhaustive search), will unfailingly result in successfully decrypting the stream of interest, 
+regardless of shuffles in byte order.</p>
+
+<p>References
+[1] <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa380513(v=vs.85).aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/aa380513(v=vs.85).aspx</a>
+[2] <a href="https://uk.sans.org/reading-room/whitepapers/protocols/ssl-tls-beginners-guide-1029">https://uk.sans.org/reading-room/whitepapers/protocols/ssl-tls-beginners-guide-1029</a>
+[3] <a href="https://tlswg.github.io/tls13-spec/">https://tlswg.github.io/tls13-spec/</a>
+[4] <a href="https://enterprise.cloudshark.org/blog/2015-05-14-all-about-ssl-key-logging/">https://enterprise.cloudshark.org/blog/2015-05-14-all-about-ssl-key-logging/</a></p></div>
+            <div class="comment-info" id="comment-61053-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Apr '17, 16:51)</span>
+                <a class="comment-user userinfo" href="/users/28062/utnapishtim">Utnapishtim</a>
+                
+            </div>
+        </div>
+    
+        <a name="61056"></a>
+        <div class="comment" id="comment-61056">
+            <div id="post-61056-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>Now, these SSLkey.log entries are being recorded by the Browser, which always correctly decrypts the stream of interest (video feed in my case), ie its unaffected by the incorrect byte order issue which is confusing Wireshark.</blockquote>
+
+<p>The browser won't see an out of order TCP packet, the host OS will present the TCP stream in order to the application.</p></div>
+            <div class="comment-info" id="comment-61056-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Apr '17, 02:41)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="61057"></a>
+        <div class="comment" id="comment-61057">
+            <div id="post-61057-score" class="comment-score">1</div>
+            <div class="comment-text"><p>There are some inaccuracies in your assumptions (e.g. the Client Hello does not store the full URL for example, only the hostname), but let's disregard them and focus on the key material. Your step 7 is about the derivation of MAC (integrity), key/IV (symmetric encryption) as can be found in <a href="https://tools.ietf.org/html/rfc5246#section-6.3">RFC 5246 - TLS 1.2, Section 6.3. Key Calculation</a>. This key is derived from the Master Secret (which is derived from the pre-master secret) combined with the Client and Server Random values.</p>
+
+<p>The key used in step 10 (for Application Data) is based on the key/IV as can be seen in the subsections after <a href="https://tools.ietf.org/html/rfc5246#section-6.2.3">Section 6.2.3. Record Payload Protection</a>. The integrity key depends on a sequence number. Out-of-order packets will result in the wrong integrity check and as a result decryption will fail.</p>
+
+<p>The SSL keylog file stores a mapping from the Client Random value to the Master Secret. Thus it should become clear now that enumerating all entries in the SSL keylog file will not help since the Client Random value is unique and we can figure out whether the key exists or not.</p>
+
+<p>Why does it work for the web browser and not Wireshark? The web browser relies on the operating system to buffer TCP segments and re-order to ensure a stream of data that fixes out-of-order packets. Wireshark (at least for SSL/TLS) currently does not do this re-ordering yet (see the linked bug) and will thus fail to provide the required ordering that is necessary for TLS decryption to function.</p></div>
+            <div class="comment-info" id="comment-61057-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Apr '17, 02:54)</span>
+                <a class="comment-user userinfo" href="/users/5644/lekensteyn">Lekensteyn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-60985" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60985-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/60970/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='AbOMkxvoJFFPR8I2PwibXV3FO6cYpbV1' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60970/intermittent-ssl-decryption?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60970/intermittent-ssl-decryption?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ssl/"
+            class="tag-link-ssl"
+            title="see questions tagged'ssl'using tags"
+            rel="tag">ssl</a> <span class="tag-number">&#215;319</span><br/>
+        
+        <a href="/tags/decryption/"
+            class="tag-link-decryption"
+            title="see questions tagged'decryption'using tags"
+            rel="tag">decryption</a> <span class="tag-number">&#215;165</span><br/>
+        
+        <a href="/tags/intermittent/"
+            class="tag-link-intermittent"
+            title="see questions tagged'intermittent'using tags"
+            rel="tag">intermittent</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 22, 2017, 9:47 a.m.">22 Apr '17, 09:47</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,803 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 26, 2017, 2:54 a.m.">26 Apr '17, 02:54</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/6426/ssl-decryption-problems">SSL Decryption Problems</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8373/dtls-decryption-not-working-on-wireshark-165-even-for-sample-capture">DTLS decryption not working on Wireshark 1.6.5, even for sample capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28145/cant-decrypt-ssl-in-capture-from-windump">Can&#39;t decrypt ssl in capture from windump</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36524/unable-to-decrypt-ssl-traffic-in-wireshark">unable to decrypt ssl traffic in wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54975/issues-decrypting-ssl-traffic">issues decrypting SSL Traffic</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50305/how-does-wireshark-decrypt-ssltls-with-only-clientrandom">How does Wireshark decrypt SSL/TLS with only ClientRandom</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4685/decrypting-ssl">Decrypting SSL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28503/decrypt-ssl-using-wildcard-ip-address">Decrypt SSL using wildcard IP address</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32292/ssltls-decrypt-doesnt-work-if-capture-started-mid-session">SSL/TLS decrypt doesn&#39;t work if capture started mid-session</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50584/not-decrypting-all-http2-traffic-in-session">Not Decrypting all HTTP/2 traffic in session.</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

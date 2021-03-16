@@ -1,0 +1,998 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Duplicate ACK Causing Client Slowdown? - Wireshark Q&amp;A</title>
+        <meta name="description" content="I&#39;m working on troubleshooting a slow application. I took a few packet captures from the client workstation and I&#39;m seeing some odd behavior with duplicate ACKs that I can&#39;t seem to explain. You can see in the screenshot below that the server (172.) is occasionally sending a duplicate ack to the cli..." />
+        <meta name="keywords" content="ack,duplicate,slow,tcp" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/34478/duplicate-ack-causing-client-slowdown" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/34478/duplicate-ack-causing-client-slowdown?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='4WW9SToCIvEo06tV6vKe2zz9uL00D9QA' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/34478/duplicate-ack-causing-client-slowdown">Duplicate ACK Causing Client Slowdown?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-34478-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34478/up/" rel="nofollow"> </a>
+<div id="post-34478-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-34478-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34478/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/34478/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm working on troubleshooting a slow application. I took a few packet captures from the client workstation and I'm seeing some odd behavior with duplicate ACKs that I can't seem to explain. You can see in the screenshot below that the server (172.) is occasionally sending a duplicate ack to the client (10.). After the duplicate ack the client seems to hang for a random amount of time before moving on to the next HTTP request. Usually always more then a second but I have seen some as high as 20 seconds.</p>
+<p>I'm a bit new to analyzing sequence and acknowledgement numbers so feel free to correct me here. But I think the reason for the duplicate ack being sent is because the server is not receiving the ack from the client in frame 90. I'm just not sure why this would cause the client to grind to a halt.</p>
+<p><a href="https://www.dropbox.com/s/8r3ljgks44hkia9/tcp.dup.ack_anon.pcapng">Packet Capture Download</a> - Truncated to 79 bytes.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ack/" class="post-tag tag-link-ack"
+                                        title="see questions tagged 'ack'" rel="tag">ack</a>
+                                
+                                    <a href="/tags/duplicate/" class="post-tag tag-link-duplicate"
+                                        title="see questions tagged 'duplicate'" rel="tag">duplicate</a>
+                                
+                                    <a href="/tags/slow/" class="post-tag tag-link-slow"
+                                        title="see questions tagged 'slow'" rel="tag">slow</a>
+                                
+                                    <a href="/tags/tcp/" class="post-tag tag-link-tcp"
+                                        title="see questions tagged 'tcp'" rel="tag">tcp</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Jul '14, 13:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/aad57de6572d4f83d1bf870ef9f31e3d?s=32&amp;d=identicon&amp;r=g" alt="Strebzilla's gravatar image" />
+    <p><a href="/users/7683/strebzilla">Strebzilla</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Strebzilla has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/34478/">
+                edited
+                <strong>09 Jul '14, 09:01</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-34478">
+    
+        <a name="34486"></a>
+        <div class="comment" id="comment-34486">
+            <div id="post-34486-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Hi,</p>
+
+<p>it's a bit hard to do <strong>packet</strong> analysis based on screenshots, so can you please post a capture file somewhere (google drive, dropbox, cloudshark.org) and post the link here? If you have privacy concerns, you can anonymize the capture file with <a href="http://tracewrangler.com/">Tracewrangler</a>, which is developed by our member <a href="/users/145/jasper">@Jasper</a>.</p>
+
+<p>BTW: Why are you hiding <strong>private</strong> addresses in your screenshot (10.x.x.x and 172.x.x.x)?? O.K. the 172.x.x.x <strong>could</strong> be public addresses....</p>
+
+<p>Regards<br>
+Kurt</p></div>
+            <div class="comment-info" id="comment-34486-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jul '14, 18:05)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="34487"></a>
+        <div class="comment" id="comment-34487">
+            <div id="post-34487-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the tip. I see your point about the private addresses. It's nothing super secret but people get a bit freaked about privacy here. I'll update this post asap.</p></div>
+            <div class="comment-info" id="comment-34487-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Jul '14, 18:10)</span>
+                <a class="comment-user userinfo" href="/users/7683/strebzilla">Strebzilla</a>
+                
+            </div>
+        </div>
+    
+        <a name="34508"></a>
+        <div class="comment" id="comment-34508">
+            <div id="post-34508-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm sorry to tell you, but you removed too data much from the payload. I can't even identify any HTTP requests. With that capture file it's even harder to do analysis than with the screenshot your removed ;-))</p></div>
+            <div class="comment-info" id="comment-34508-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '14, 08:05)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="34513"></a>
+        <div class="comment" id="comment-34513">
+            <div id="post-34513-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry. This is clearly my first crack at soliciting help from the community so bear with me while I get it right. I cleaned out everything after layer 4 because I didn't think it was necessary since the duplicate ack seemed to be causing the slowdown and not http. I really can't make too much of the payload public so is there a reasonable place I can truncate the capture and still make it useful?</p></div>
+            <div class="comment-info" id="comment-34513-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '14, 08:20)</span>
+                <a class="comment-user userinfo" href="/users/7683/strebzilla">Strebzilla</a>
+                
+            </div>
+        </div>
+    
+        <a name="34514"></a>
+        <div class="comment" id="comment-34514">
+            <div id="post-34514-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>so bear with me while I get it right.</p>
+</blockquote>
+
+<p>Don't be afraid, this is a friendly site with patient members ;-)</p>
+
+<blockquote>
+<p>I really can't make too much of the payload public </p>
+</blockquote>
+
+<p>I understand that.</p>
+
+<blockquote>
+<p>so is there a reasonable place I can truncate the capture and still make it useful?</p>
+</blockquote>
+
+<p>That's the tricky part. We would need more information than you want to disclose, to get an idea where the problem might be. Can you try to  keep at least 15-20 bytes of the TCP payload, which would contain the HTTP method and some bytes of the URL. I'm not sure if that is sufficient to do any analysis, but we can start with that.</p></div>
+            <div class="comment-info" id="comment-34514-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '14, 08:24)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="34515"></a>
+        <div class="comment not_top_scorer" id="comment-34515">
+            <div id="post-34515-score" class="comment-score"></div>
+            <div class="comment-text"><p>Your patience is much appreciated :-)</p>
+
+<p>79 Bytes seems to be a good sweet spot to get a unique URI.</p></div>
+            <div class="comment-info" id="comment-34515-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '14, 09:02)</span>
+                <a class="comment-user userinfo" href="/users/7683/strebzilla">Strebzilla</a>
+                
+            </div>
+        </div>
+    
+        <a name="34516"></a>
+        <div class="comment not_top_scorer" id="comment-34516">
+            <div id="post-34516-score" class="comment-score"></div>
+            <div class="comment-text"><p>O.K. I think we can work with the latest capture file. Where do you think there could be a problem? Please post the frame number and your assumption. </p>
+
+<p>BTW: What kind of application is this? Is it an interactive application that needs to wait for input from the user, or something that should do things automatically as fast as possible?</p></div>
+            <div class="comment-info" id="comment-34516-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '14, 09:25)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="34518"></a>
+        <div class="comment not_top_scorer" id="comment-34518">
+            <div id="post-34518-score" class="comment-score"></div>
+            <div class="comment-text"><p>The suspected problem occurs multiple times in the capture but tcp stream index 2 has the most extreme example. Packet 96 is a duplicate to the ack in frame 89. The next packet, number 97, doesn't get sent for 20.895 seconds. I suspect this is what's causing trouble for users. You can see more examples at packets 191, 253, 564, etc.</p>
+
+<p>This seems to be occurring in all of the tcp streams with delays ranging from 1-20 seconds. I realize that you could see this kind of delay while waiting for user input but the fact this always happens after the duplicate ack strikes me as odd.</p>
+
+<p>It's an interactive web application. Users pull up records, make updates, create new records, etc.</p></div>
+            <div class="comment-info" id="comment-34518-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '14, 10:28)</span>
+                <a class="comment-user userinfo" href="/users/7683/strebzilla">Strebzilla</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-34478" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34478-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/34478/duplicate-ack-causing-client-slowdown?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/34478/duplicate-ack-causing-client-slowdown?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/34478/duplicate-ack-causing-client-slowdown?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/34478/duplicate-ack-causing-client-slowdown?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="34520"></a>
+                    <div id="answer-container-34520" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-34520-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/34520/up/" rel="nofollow"> </a>
+<div id="post-34520-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-34520-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/34520/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Strebzilla has selected this answer as the correct answer"
+        href="/accept_answer/34520/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I don't think the DUP-ACK is the problem, because there are other delays in stream #2 that are not accompanied by a DUP-ACK.</p>
+<p>Frame #1455: There is a 37 second delay for the next GET.<br>
+Frame #2305: There is a 34 second delay for the next POST.<br>
+Frame #2672: There is a 11 second delay for the next GET.  <br>
+</p>
+<p>There is no explanation in the capture file for that delay, maybe waiting for the next user action. </p>
+<p>That's the reason why I was asking for the type of the application (interactive versus 'automatic'), as it does <strong>not</strong> only happen after a DUP-ACK.</p>
+<blockquote>
+<p>It's an interactive web application. Users pull up records, make updates, create new records, etc.</p>
+</blockquote>
+<p>O.K. then we would need a much more detailed problem description. </p>
+<ul>
+<li>What exactly is slow? </li>
+<li>When (timestamp in the capture file) did the user report the problem?</li>
+<li>etc. </li>
+</ul>
+<p>If you don't have that information, you should repeat the tests and collect (at least) the following information:</p>
+<ul>
+<li>when does the problem occur - time on the capturing device - to the second! </li>
+<li>which action was initiated in the web app (click on which link)</li>
+<li>what was the expected result</li>
+<li>what was the observed result</li>
+<li>how much data should have been transmitted (estimation)</li>
+<li>what exactly is the 'problem'</li>
+<li>whatever else helps to nail down the problem</li>
+</ul>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/34520/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Jul '14, 10:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/34520/">
+                edited
+                <strong>09 Jul '14, 10:55</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-34520">
+    
+        <a name="34523"></a>
+        <div class="comment" id="comment-34523">
+            <div id="post-34523-score" class="comment-score"></div>
+            <div class="comment-text"><p>A lot of that information I don't have. I've been working with our application team on this issue so I'd need to get that from them. My suspicion is that this has something to do with the application itself or the back end database. I just wanted to make sure those duplicate acks weren't something noteworthy which you have just confirmed.</p>
+
+<p>Thanks so much for looking into this to me and for helping me get a usable packet capture to you.</p></div>
+            <div class="comment-info" id="comment-34523-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '14, 12:34)</span>
+                <a class="comment-user userinfo" href="/users/7683/strebzilla">Strebzilla</a>
+                
+            </div>
+        </div>
+    
+        <a name="34525"></a>
+        <div class="comment" id="comment-34525">
+            <div id="post-34525-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I just wanted to make sure those duplicate acks weren't something noteworthy which you have just confirmed.</p>
+</blockquote>
+
+<p>actually I did not want to 'confirm' that. What I wanted to say: There  is not enough information about the problem to figure out what's going wrong. It could be related to the DUP-ACK (although I don't believe that), it could the something totally different. So, the best thing you can do, is to collect the information I listed above and then come back for further analysis.</p>
+
+<blockquote>
+<p>Thanks so much for looking into this to me</p>
+</blockquote>
+
+<p>You're welcome!</p></div>
+            <div class="comment-info" id="comment-34525-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jul '14, 13:08)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-34520" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-34520-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/34478/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='4WW9SToCIvEo06tV6vKe2zz9uL00D9QA' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/34478/duplicate-ack-causing-client-slowdown?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/34478/duplicate-ack-causing-client-slowdown?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tcp/"
+            class="tag-link-tcp"
+            title="see questions tagged'tcp'using tags"
+            rel="tag">tcp</a> <span class="tag-number">&#215;752</span><br/>
+        
+        <a href="/tags/ack/"
+            class="tag-link-ack"
+            title="see questions tagged'ack'using tags"
+            rel="tag">ack</a> <span class="tag-number">&#215;139</span><br/>
+        
+        <a href="/tags/slow/"
+            class="tag-link-slow"
+            title="see questions tagged'slow'using tags"
+            rel="tag">slow</a> <span class="tag-number">&#215;55</span><br/>
+        
+        <a href="/tags/duplicate/"
+            class="tag-link-duplicate"
+            title="see questions tagged'duplicate'using tags"
+            rel="tag">duplicate</a> <span class="tag-number">&#215;41</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 8, 2014, 1:58 p.m.">08 Jul '14, 13:58</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>9,214 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 9, 2014, 1:08 p.m.">09 Jul '14, 13:08</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/18474/vastly-different-transfer-speeds-on-custom-net-transfer">Vastly different transfer speeds on custom .net transfer</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7972/acked-lost-segments-false-positive">ACKed lost segments - false positive?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14212/router-replies-with-rst-after-fin-ack">Router replies with [RST] after [FIN, ACK]</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39477/difference-in-captured-packets-on-ubuntu-1404-vs-debian-8">Difference in captured packets on Ubuntu 14.04 VS. Debian 8</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42044/how-to-know-if-the-packet-is-acknowledgement-packet-or-not">how to know if the packet is acknowledgement packet or not</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62607/interesting-tcp-segment-ack-pattern">Interesting TCP segment-ACK pattern</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24146/local-network-issues">local network issues</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25374/server-sending-rst-message">Server sending RST Message</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43447/matching-tcp-packets-in-wireshark">matching tcp packets in wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60799/modbus-tcp-connection-drops-after-7-hours-and-20-minutes">Modbus TCP connection drops after 7 hours and 20 minutes</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

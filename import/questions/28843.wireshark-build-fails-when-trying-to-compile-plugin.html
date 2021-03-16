@@ -1,0 +1,1099 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Wireshark build fails when trying to compile plugin - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi,  I&#39;m trying to compile a plugin for Wireshark version 1.10.5 and am getting the following error: c:\wireshark\epan\except.h(97) : error C2054: expected &#39;(&#39; to follow &#39;WS_MSVC_NORETURN&#39; c:\wireshark\epan\except.h(97) : error C2085: &#39;except_rethrow&#39; : not in formal parameter list c:\wireshark\epan..." />
+        <meta name="keywords" content="windows,failed,build,plugin" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/28843/wireshark-build-fails-when-trying-to-compile-plugin" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/28843/wireshark-build-fails-when-trying-to-compile-plugin?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='BsDqT26WpO2MljEfn7vgU8ol7tbZEmWN' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/28843/wireshark-build-fails-when-trying-to-compile-plugin">Wireshark build fails when trying to compile plugin</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-28843-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28843/up/" rel="nofollow"> </a>
+<div id="post-28843-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-28843-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28843/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/28843/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi, </p>
+<p>I'm trying to compile a plugin for Wireshark version 1.10.5 and am getting the following error:</p>
+<pre><code>c:\wireshark\epan\except.h(97) : error C2054: expected '(' to follow 'WS_MSVC_NORETURN'
+c:\wireshark\epan\except.h(97) : error C2085: 'except_rethrow' : not in formal parameter list
+c:\wireshark\epan\except.h(98) : error C2082: redefinition of formal parameter 'WS_MSVC_NORETURN'
+c:\wireshark\epan\except.h(98) : error C2143: syntax error : missing ';' before 'type'
+c:\wireshark\epan\except.h(98) : error C2085: 'except_throw' : not in formal parameter list
+c:\wireshark\epan\except.h(99) : error C2082: redefinition of formal parameter 'WS_MSVC_NORETURN'
+c:\wireshark\epan\except.h(99) : error C2143: syntax error : missing ';' before 'type'
+c:\wireshark\epan\except.h(99) : error C2085: 'except_throwd' : not in formal parameter list
+c:\wireshark\epan\except.h(100) : error C2082: redefinition of formal parameter 'WS_MSVC_NORETURN'
+c:\wireshark\epan\except.h(100) : error C2143: syntax error : missing ';' before 'type'
+c:\wireshark\epan\except.h(100) : error C2085: 'except_throwf' : not in formal parameter list
+c:\wireshark\epan\except.h(101) : error C2085: 'except_unhandled_catcher' : not in formal parameter list
+c:\wireshark\epan\except.h(102) : error C2085: 'except_code' : not in formal parameter list
+c:\wireshark\epan\except.h(103) : error C2085: 'except_group' : not in formal parameter list
+c:\wireshark\epan\except.h(104) : error C2085: 'except_message' : not in formal parameter list
+c:\wireshark\epan\except.h(105) : error C2085: 'except_data' : not in formal parameter list
+c:\wireshark\epan\except.h(106) : error C2085: 'except_take_data' : not in formal parameter list
+c:\wireshark\epan\except.h(107) : error C2085: 'except_set_allocator' : not in formal parameter list
+c:\wireshark\epan\except.h(108) : error C2085: 'except_alloc' : not in formal parameter list
+c:\wireshark\epan\except.h(109) : error C2085: 'except_free' : not in formal parameter list
+C:\wireshark\epan/tvbuff.h(59) : error C2085: 'tvbuff_type' : not in formal parameter list
+C:\wireshark\epan/tvbuff.h(70) : error C2085: 'tvb_backing_t' : not in formal parameter list
+C:\wireshark\epan/tvbuff.h(81) : error C2085: 'tvb_comp_t' : not in formal parameter list
+C:\wireshark\epan/tvbuff.h(83) : error C2085: 'tvbuff_free_cb_t' : not in formal parameter list
+C:\wireshark\epan/tvbuff.h(87) : error C2016: C requires that a struct or union has at least one member
+C:\wireshark\epan/tvbuff.h(87) : error C2061: syntax error : identifier 'tvbuff_type'
+C:\wireshark\epan/tvbuff.h(100) : error C2016: C requires that a struct or union has at least one member
+C:\wireshark\epan/tvbuff.h(100) : error C2061: syntax error : identifier 'tvb_backing_t'
+C:\wireshark\epan/tvbuff.h(101) : error C2061: syntax error : identifier 'composite'
+C:\wireshark\epan/tvbuff.h(101) : error C2059: syntax error : ';'               
+C:\wireshark\epan/tvbuff.h(102) : error C2059: syntax error : '}'
+C:\wireshark\epan/tvbuff.h(122) : error C2061: syntax error : identifier 'free_cb'
+C:\wireshark\epan/tvbuff.h(122) : error C2059: syntax error : ';'
+C:\wireshark\epan/tvbuff.h(123) : error C2059: syntax error : '}'
+C:\wireshark\epan/tvbuff.h(158) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(179) : error C2143: syntax error : missing ')' before '*'
+C:\wireshark\epan/tvbuff.h(179) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(179) : error C2059: syntax error : ')'               
+C:\wireshark\epan/tvbuff.h(179) : error C2059: syntax error : ';'
+C:\wireshark\epan/tvbuff.h(182) : error C2143: syntax error : missing ')' before '*'
+C:\wireshark\epan/tvbuff.h(182) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(182) : error C2059: syntax error : ')'
+C:\wireshark\epan/tvbuff.h(182) : error C2059: syntax error : ';'
+C:\wireshark\epan/tvbuff.h(185) : error C2143: syntax error : missing ')' before '*'
+C:\wireshark\epan/tvbuff.h(185) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(185) : error C2059: syntax error : ','
+C:\wireshark\epan/tvbuff.h(185) : error C2059: syntax error : ')'
+C:\wireshark\epan/tvbuff.h(192) : error C2143: syntax error : missing ')' before '*'
+C:\wireshark\epan/tvbuff.h(192) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(192) : error C2059: syntax error : ','
+C:\wireshark\epan/tvbuff.h(192) : error C2059: syntax error : ')'
+C:\wireshark\epan/tvbuff.h(198) : error C2143: syntax error : missing ')' before '*'
+C:\wireshark\epan/tvbuff.h(198) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(198) : error C2059: syntax error : ','
+C:\wireshark\epan/tvbuff.h(198) : error C2059: syntax error : ')'
+C:\wireshark\epan/tvbuff.h(210) : error C2143: syntax error : missing ')' before '*'
+C:\wireshark\epan/tvbuff.h(210) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(210) : error C2143: syntax error : missing ';' before '*'
+C:\wireshark\epan/tvbuff.h(210) : error C2059: syntax error : ')'
+C:\wireshark\epan/tvbuff.h(212) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(212) : error C2143: syntax error : missing ')' before '*'
+C:\wireshark\epan/tvbuff.h(212) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(212) : error C2371: 'guint8' : redefinition; different basic types
+        C:\wireshark-win32-libs-1.6\gtk2\lib\glib-2.0\include\glibconfig.h(36) : see declaration of 'guint8'
+C:\wireshark\epan/tvbuff.h(212) : warning C4228: nonstandard extension used : qualifiers after comma in declarator list are ignored
+C:\wireshark\epan/tvbuff.h(212) : error C2143: syntax error : missing ';' before '*'
+C:\wireshark\epan/tvbuff.h(212) : warning C4142: benign redefinition of type
+C:\wireshark\epan/tvbuff.h(212) : error C2370: 'guint' : redefinition; different storage class
+        C:\wireshark-win32-libs-1.6\gtk2\include\glib-2.0\glib/gtypes.h(56) : see declaration of 'guint'
+C:\wireshark\epan/tvbuff.h(212) : warning C4228: nonstandard extension used : qualifiers after comma in declarator list are ignored
+C:\wireshark\epan/tvbuff.h(212) : error C2146: syntax error : missing ';' before identifier 'length'
+C:\wireshark\epan/tvbuff.h(212) : warning C4142: benign redefinition of type
+C:\wireshark\epan/tvbuff.h(213) : error C2059: syntax error : 'type'
+C:\wireshark\epan/tvbuff.h(213) : error C2059: syntax error : ')'
+C:\wireshark\epan/tvbuff.h(216) : error C2143: syntax error : missing ')' before '*'
+C:\wireshark\epan/tvbuff.h(216) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(216) : error C2059: syntax error : ','
+C:\wireshark\epan/tvbuff.h(217) : error C2059: syntax error : ')'
+C:\wireshark\epan/tvbuff.h(220) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(237) : error C2143: syntax error : missing ')' before '*'
+C:\wireshark\epan/tvbuff.h(237) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(237) : error C2143: syntax error : missing ';' before '*'
+C:\wireshark\epan/tvbuff.h(238) : error C2370: 'gint' : redefinition; different storage class
+        C:\wireshark-win32-libs-1.6\gtk2\include\glib-2.0\glib/gtypes.h(50) : see declaration of 'gint'
+C:\wireshark\epan/tvbuff.h(238) : warning C4228: nonstandard extension used : qualifiers after comma in declarator list are ignored
+C:\wireshark\epan/tvbuff.h(238) : error C2146: syntax error : missing ';' before identifier 'backing_offset'
+C:\wireshark\epan/tvbuff.h(238) : error C2059: syntax error : 'type'
+C:\wireshark\epan/tvbuff.h(238) : error C2059: syntax error : ')'
+C:\wireshark\epan/tvbuff.h(242) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(242) : error C2143: syntax error : missing ')' before '*'
+C:\wireshark\epan/tvbuff.h(242) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(243) : error C2370: 'gint' : redefinition; different storage class
+        C:\wireshark-win32-libs-1.6\gtk2\include\glib-2.0\glib/gtypes.h(50) : see declaration of 'gint'
+C:\wireshark\epan/tvbuff.h(243) : warning C4228: nonstandard extension used : qualifiers after comma in declarator list are ignored
+C:\wireshark\epan/tvbuff.h(243) : error C2146: syntax error : missing ';' before identifier 'backing_offset'
+C:\wireshark\epan/tvbuff.h(243) : error C2059: syntax error : 'type'
+C:\wireshark\epan/tvbuff.h(243) : error C2059: syntax error : ')'
+C:\wireshark\epan/tvbuff.h(247) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(247) : error C2143: syntax error : missing ')' before '*'
+C:\wireshark\epan/tvbuff.h(247) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(248) : error C2370: 'gint' : redefinition; different storage class
+        C:\wireshark-win32-libs-1.6\gtk2\include\glib-2.0\glib/gtypes.h(50) : see declaration of 'gint'
+C:\wireshark\epan/tvbuff.h(248) : warning C4228: nonstandard extension used : qualifiers after comma in declarator list are ignored
+C:\wireshark\epan/tvbuff.h(248) : error C2146: syntax error : missing ';' before identifier 'backing_offset'
+C:\wireshark\epan/tvbuff.h(248) : error C2059: syntax error : ')'
+C:\wireshark\epan/tvbuff.h(255) : error C2143: syntax error : missing ')' before '*'
+C:\wireshark\epan/tvbuff.h(255) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(255) : error C2143: syntax error : missing ';' before '*'
+C:\wireshark\epan/tvbuff.h(255) : error C2059: syntax error : ')'
+C:\wireshark\epan/tvbuff.h(258) : error C2143: syntax error : missing ')' before '*'
+C:\wireshark\epan/tvbuff.h(258) : error C2143: syntax error : missing '{' before '*'
+C:\wireshark\epan/tvbuff.h(258) : error C2143: syntax error : missing ';' before '*'
+C:\wireshark\epan/tvbuff.h(258) : error C2059: syntax error : ')'
+C:\wireshark\epan/tvbuff.h(258) : fatal error C1003: error count exceeds 100; stopping compilation
+NMAKE : fatal error U1077: '"C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\BIN\cl.EXE"' : return code '0x2'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\BIN\nmake.exe"' : return code '0x2'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\BIN\nmake.exe"' : return code '0x2'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\BIN\nmake.exe"' : return code '0x2'
+Stop.
+</code></pre>
+<p>I know this question is similar to <a href="http://ask.wireshark.org/questions/15580/windows-build-suddenly-failed-after-svn-sync">http://ask.wireshark.org/questions/15580/windows-build-suddenly-failed-after-svn-sync</a> but the solution to this question didnt help me. I tried changing the include in my plugin file the way the solution to that question suggested and the build still failed. Also when i tried to build this plugin using version 1.11.3 it worked fine, however i need to use 1.10.5 so i dont know what to do.</p>
+<p>Thanks in advance</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/windows/" class="post-tag tag-link-windows"
+                                        title="see questions tagged 'windows'" rel="tag">windows</a>
+                                
+                                    <a href="/tags/failed/" class="post-tag tag-link-failed"
+                                        title="see questions tagged 'failed'" rel="tag">failed</a>
+                                
+                                    <a href="/tags/build/" class="post-tag tag-link-build"
+                                        title="see questions tagged 'build'" rel="tag">build</a>
+                                
+                                    <a href="/tags/plugin/" class="post-tag tag-link-plugin"
+                                        title="see questions tagged 'plugin'" rel="tag">plugin</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Jan '14, 08:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5858984777c528900a115852219a1814?s=32&amp;d=identicon&amp;r=g" alt="Hockeyfreak889's gravatar image" />
+    <p><a href="/users/6343/hockeyfreak889">Hockeyfreak889</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hockeyfreak889 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/28843/">
+                edited
+                <strong>13 Jan '14, 08:47</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+            <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+            <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-28843">
+    
+        <a name="28856"></a>
+        <div class="comment" id="comment-28856">
+            <div id="post-28856-score" class="comment-score"></div>
+            <div class="comment-text"><p>There are API and changes to #includes between 1.10.x and 1.11.x so I'd compare with the includes of the plugins that ship with 1.10.x.
+If you show us the include section of your plugin we might be able to figure out what the problem is.</p></div>
+            <div class="comment-info" id="comment-28856-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '14, 03:40)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="28858"></a>
+        <div class="comment" id="comment-28858">
+            <div id="post-28858-score" class="comment-score"></div>
+            <div class="comment-text"><p>the include section of the plugin consists of the following:</p>
+
+<pre>#include "config.h"
+#include &lt;glib.h&gt;
+#include &lt;epan\packet.h&gt;
+
+</pre>
+
+<p>Note: The Q&amp;A markup doesn't play nicely with #includes.</p></div>
+            <div class="comment-info" id="comment-28858-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '14, 05:56)</span>
+                <a class="comment-user userinfo" href="/users/6343/hockeyfreak889">Hockeyfreak889</a>
+                
+            </div>
+        </div>
+    
+        <a name="28871"></a>
+        <div class="comment" id="comment-28871">
+            <div id="post-28871-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't have a 1.10 ref handy, how is "config.h" included in the "standard" plugins?</p></div>
+            <div class="comment-info" id="comment-28871-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '14, 09:24)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="28872"></a>
+        <div class="comment" id="comment-28872">
+            <div id="post-28872-score" class="comment-score"></div>
+            <div class="comment-text"><p>1.10 plugins that is.</p></div>
+            <div class="comment-info" id="comment-28872-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '14, 09:24)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="28873"></a>
+        <div class="comment" id="comment-28873">
+            <div id="post-28873-score" class="comment-score"></div>
+            <div class="comment-text"><p>Looking at <a href="http://anonsvn.wireshark.org/viewvc/trunk-1.10/plugins/gryphon/packet-gryphon.c?revision=48968&amp;view=markup">packet-gryphon.c</a> as an example, it's just:</p>
+
+<pre><code>#include "config.h"
+</code></pre></div>
+            <div class="comment-info" id="comment-28873-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '14, 09:34)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="28875"></a>
+        <div class="comment not_top_scorer" id="comment-28875">
+            <div id="post-28875-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Microsoft Visual Studio 9.0</p>
+</blockquote>
+
+<p>Is that a supported build platform?</p></div>
+            <div class="comment-info" id="comment-28875-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '14, 10:03)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="28877"></a>
+        <div class="comment not_top_scorer" id="comment-28877">
+            <div id="post-28877-score" class="comment-score"></div>
+            <div class="comment-text"><p>The <a href="http://www.wireshark.org/docs/wsdg_html_chunked/ChSetupWin32.html">Developer's Guide</a> mentions MSVC 2010 because that's what the official releases use, but MSVC 2008 is still supported, as indicated in section <a href="http://www.wireshark.org/docs/wsdg_html_chunked/ChToolsMSChain.html#idp352149148">4.4.1 Toolchain Package Alternatives</a>. </p></div>
+            <div class="comment-info" id="comment-28877-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '14, 10:13)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="28879"></a>
+        <div class="comment not_top_scorer" id="comment-28879">
+            <div id="post-28879-score" class="comment-score"></div>
+            <div class="comment-text"><p>O.K. thanks</p></div>
+            <div class="comment-info" id="comment-28879-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '14, 10:20)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-28843" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28843-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/28843/wireshark-build-fails-when-trying-to-compile-plugin?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/28843/wireshark-build-fails-when-trying-to-compile-plugin?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/28843/wireshark-build-fails-when-trying-to-compile-plugin?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/28843/wireshark-build-fails-when-trying-to-compile-plugin?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="28874"></a>
+                    <div id="answer-container-28874" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-28874-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28874/up/" rel="nofollow"> </a>
+<div id="post-28874-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-28874-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28874/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Try carefully reviewing <a href="http://anonsvn.wireshark.org/viewvc/trunk-1.10/doc/README.plugins?revision=48968&amp;view=markup">README.plugins</a> and comparing your plugin files to other plugins, such as <a href="http://anonsvn.wireshark.org/viewvc/trunk-1.10/plugins/gryphon/">gryphon</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/28874/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Jan '14, 10:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" alt="cmaynard's gravatar image" />
+    <p><a href="/users/402/cmaynard">cmaynard ♦♦</a><br/>
+    <span class="score" title="9361 reputation points"><span class="">9.4k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">&#9679;</span><span class="badgecount">142</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cmaynard has 108 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-28874">
+    
+        <a name="28882"></a>
+        <div class="comment" id="comment-28882">
+            <div id="post-28882-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks that helped. Im not really sure what exactly i changed but when i redid all the files the way the README suggested it worked after.</p></div>
+            <div class="comment-info" id="comment-28882-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '14, 11:03)</span>
+                <a class="comment-user userinfo" href="/users/6343/hockeyfreak889">Hockeyfreak889</a>
+                
+            </div>
+        </div>
+    
+        <a name="28884"></a>
+        <div class="comment" id="comment-28884">
+            <div id="post-28884-score" class="comment-score">1</div>
+            <div class="comment-text"><p>What exactly did you change (before/after)? Might be interesting for others as well.</p></div>
+            <div class="comment-info" id="comment-28884-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '14, 11:07)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="28929"></a>
+        <div class="comment" id="comment-28929">
+            <div id="post-28929-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well what happened was that I had an automated process to generate the dissector code and makefiles and what not for Wireshark version 1.4, and then when i used the same process for 1.11 it still worked so i was confused when it didnt work for 1.10. So i ended up just deleting the makefile that my automated process made and following the process in the README you posted. It was pretty straight forward and i didnt run into any problems when i did that.</p></div>
+            <div class="comment-info" id="comment-28929-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jan '14, 10:35)</span>
+                <a class="comment-user userinfo" href="/users/6343/hockeyfreak889">Hockeyfreak889</a>
+                
+            </div>
+        </div>
+    
+        <a name="28932"></a>
+        <div class="comment" id="comment-28932">
+            <div id="post-28932-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually I've run into another problem: As this process is creating a lot of dissectors, I compiled 1 plugin and assumed it would work for the rest of them. However when i tried to apply the same process to plugins that include other C files it gives me:</p>
+
+<p>LNK2019 error unresolved external symbol</p>
+
+<p>I know this comes from me trying to use a function that is defined in an external source and apparently the linker isnt seeing it, but when i try to add this other file to the Makefiles (i tried to copy the process from the asn1 plugin since it appeared to have an external source as well called asn1.c) it gave me the same (or at least similar) errors to when I started. </p>
+
+<p>Sorry if this is a basic question, i really dont know much about C or Makefiles, or wireshark for that matter.</p></div>
+            <div class="comment-info" id="comment-28932-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jan '14, 13:17)</span>
+                <a class="comment-user userinfo" href="/users/6343/hockeyfreak889">Hockeyfreak889</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-28874" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28874-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/28843/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='BsDqT26WpO2MljEfn7vgU8ol7tbZEmWN' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/28843/wireshark-build-fails-when-trying-to-compile-plugin?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/28843/wireshark-build-fails-when-trying-to-compile-plugin?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/windows/"
+            class="tag-link-windows"
+            title="see questions tagged'windows'using tags"
+            rel="tag">windows</a> <span class="tag-number">&#215;254</span><br/>
+        
+        <a href="/tags/plugin/"
+            class="tag-link-plugin"
+            title="see questions tagged'plugin'using tags"
+            rel="tag">plugin</a> <span class="tag-number">&#215;173</span><br/>
+        
+        <a href="/tags/build/"
+            class="tag-link-build"
+            title="see questions tagged'build'using tags"
+            rel="tag">build</a> <span class="tag-number">&#215;110</span><br/>
+        
+        <a href="/tags/failed/"
+            class="tag-link-failed"
+            title="see questions tagged'failed'using tags"
+            rel="tag">failed</a> <span class="tag-number">&#215;12</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 13, 2014, 8:07 a.m.">13 Jan '14, 08:07</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,182 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 15, 2014, 1:17 p.m.">15 Jan '14, 13:17</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/33169/fatal-error-u1077-return-code-0x2-when-compiling-plugins-on-windows">Fatal Error U1077 return code 0x2 when compiling plugins on Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15580/windows-build-suddenly-failed-after-svn-sync">Windows build suddenly failed after svn sync</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59828/build-with-dissector-plugin-fails-in-windows">build with dissector plugin fails in Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30511/editing-makefiles-to-add-a-plugin-in-linux">Editing Makefiles to add a plugin in linux</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55962/msbuild-just-my-plugin">msbuild just my plugin?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19425/the-contents-of-cwireshark-win32-libscurrent_tagtxt-is-unknown">The contents of C:\wireshark-win32-libs\current_tag.txt is (unknown)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39009/trying-wiresharkexe-but-libwiresharkdll-is-missing-from-you-computer">Trying Wireshark.exe, but &quot;libwireshark.dll is missing from you computer&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56866/how-to-compile-wireshark-plugin-code">How to compile wireshark plugin code</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21361/unzip-cygdrivecturbotcbinunzip-how-to-change-it-to-point-to-cygwin">unzip: /cygdrive/c/Turbo/TC/BIN/unzip.. How to change it to point to cygwin</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22216/windows-build-fails">windows build fails</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

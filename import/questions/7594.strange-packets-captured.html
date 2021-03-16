@@ -1,0 +1,769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Strange packets captured. - Wireshark Q&amp;A</title>
+        <meta name="description" content="Does anybody have any idea on why the client received so many ACK packets within such a short time?  16562 16:03:24.960676 122.11.56.106 10.201.228.43 TCP [TCP segment of a reassembled PDU]  16563 16:03:24.961409 10.201.228.43 122.11.56.106 TCP 41945 &amp;gt; 80 [ACK] Seq=305 Ack=4912489 Win=224352 Len=..." />
+        <meta name="keywords" content="tcp" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/7594/strange-packets-captured" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/7594/strange-packets-captured?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Vxfof5RwLR3M2ol1Zdy559S7J1CQizkH' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/7594/strange-packets-captured">Strange packets captured.</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-7594-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7594/up/" rel="nofollow"> </a>
+<div id="post-7594-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-7594-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7594/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/7594/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Does anybody have any idea on why the client received so many ACK packets within such a short time?</p>
+<pre><code>  16562 16:03:24.960676 122.11.56.106         10.201.228.43         TCP      [TCP segment of a reassembled PDU]
+  16563 16:03:24.961409 10.201.228.43         122.11.56.106         TCP      41945 &gt; 80 [ACK] Seq=305 Ack=4912489 Win=224352 Len=0 TSV=24813 TSER=1978476727
+  16567 16:03:24.967421 122.11.56.106         10.201.228.43         TCP      [TCP segment of a reassembled PDU]
+  16569 16:03:24.979078 122.11.56.106         10.201.228.43         TCP      [TCP segment of a reassembled PDU]
+  16570 16:03:24.979872 10.201.228.43         122.11.56.106         TCP      41945 &gt; 80 [ACK] Seq=305 Ack=4915225 Win=224352 Len=0 TSV=24815 TSER=1978476727
+  16573 16:03:24.982801 122.11.56.106         10.201.228.43         TCP      [TCP segment of a reassembled PDU]
+  16574 16:03:24.983015 10.201.228.43         122.11.56.106         TCP      41945 &gt; 80 [ACK] Seq=305 Ack=4916594 Win=224352 Len=0 TSV=24815 TSER=1978476731
+  16578 16:03:25.044386 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#1] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476745 TSER=24805
+  16580 16:03:25.186384 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#2] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476759 TSER=24815
+  16587 16:03:25.218489 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#3] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476761 TSER=24815
+  16589 16:03:25.261427 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#4] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476765 TSER=24815
+  16590 16:03:25.276075 10.201.228.43         122.11.56.106         TCP      41945 &gt; 80 [FIN, ACK] Seq=305 Ack=4916594 Win=224352 Len=0 TSV=24844 TSER=1978476765
+  16594 16:03:25.287672 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#5] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476769 TSER=24815
+  16596 16:03:25.315748 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#6] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476771 TSER=24815
+  16601 16:03:25.350416 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#7] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476775 TSER=24815
+  16603 16:03:25.366804 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#8] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476777 TSER=24815
+  16605 16:03:25.424574 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#9] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476783 TSER=24815
+  16608 16:03:25.471785 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#10] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476787 TSER=24815
+  16610 *REF*           122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#11] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476789 TSER=24815
+  16612 16:03:25.536055 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#12] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476793 TSER=24815
+  16614 16:03:25.564375 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#13] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476797 TSER=24815
+  16616 16:03:25.589369 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#14] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476799 TSER=24815
+  16618 16:03:25.651716 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#15] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476805 TSER=24815
+  16620 16:03:25.664869 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#16] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476807 TSER=24815
+  16623 16:03:25.710402 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#17] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476811 TSER=24815
+  16625 16:03:25.744459 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#18] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476815 TSER=24815
+  16627 16:03:25.769270 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#19] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476817 TSER=24815
+  16629 16:03:25.807508 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#20] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476821 TSER=24815
+  16631 16:03:25.853346 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#21] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476825 TSER=24815
+  16633 16:03:25.894026 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#22] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476829 TSER=24815
+  16635 16:03:25.939314 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#23] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476833 TSER=24815
+  16636 16:03:26.115217 10.201.228.43         122.11.56.106         TCP      41945 &gt; 80 [FIN, ACK] Seq=305 Ack=4916594 Win=224352 Len=0 TSV=24929 TSER=1978476833
+  16638 16:03:26.130659 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#24] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476835 TSER=24815
+  16640 16:03:26.131636 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#25] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476839 TSER=24815
+  16642 16:03:26.133131 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#26] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476843 TSER=24815
+  16644 16:03:26.134016 122.11.56.106         10.201.228.43         TCP      [TCP Dup ACK 16573#27] 80 &gt; 41945 [ACK] Seq=4916594 Ack=305 Win=6912 Len=0 TSV=1978476845 TSER=24815
+  16664 16:03:27.805159 10.201.228.43         122.11.56.106         TCP      41945 &gt; 80 [FIN, ACK] Seq=305 Ack=4916594 Win=224352 Len=0 TSV=25098 TSER=1978476845
+  16666 16:03:31.175459 10.201.228.43         122.11.56.106         TCP      41945 &gt; 80 [FIN, ACK] Seq=305 Ack=4916594 Win=224352 Len=0 TSV=25435 TSER=1978476845
+  16669 16:03:37.905470 10.201.228.43         122.11.56.106         TCP      41945 &gt; 80 [FIN, ACK] Seq=305 Ack=4916594 Win=224352 Len=0 TSV=26108 TSER=1978476845
+  16671 16:03:51.385481 10.201.228.43         122.11.56.106         TCP      41945 &gt; 80 [FIN, ACK] Seq=305 Ack=4916594 Win=224352 Len=0 TSV=27456 TSER=1978476845
+  16756 16:04:47.805531 10.201.228.43         122.11.56.106         TCP      41945 &gt; 80 [FIN, ACK] Seq=305 Ack=4916594 Win=224352 Len=0 TSV=30152 TSER=1978476845
+</code></pre>
+<p>I don’t understand why we have so many ACK packets within such a short time, <strong>10.201.228.43</strong> is local address.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tcp/" class="post-tag tag-link-tcp"
+                                        title="see questions tagged 'tcp'" rel="tag">tcp</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>23 Nov '11, 23:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6535877de270eac71c394ebbe2c5dae5?s=32&amp;d=identicon&amp;r=g" alt="Crs's gravatar image" />
+    <p><a href="/users/1916/crs">Crs</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Crs has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/7594/">
+                edited
+                <strong>23 Nov '11, 23:37</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+            <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+            <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-7594">
+    
+</div>
+<div id="comment-tools-7594" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7594-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/7594/strange-packets-captured?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/7594/strange-packets-captured?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/7594/strange-packets-captured?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/7594/strange-packets-captured?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="7639"></a>
+                    <div id="answer-container-7639" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-7639-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7639/up/" rel="nofollow"> </a>
+<div id="post-7639-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-7639-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7639/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>All the duplicate ACK's that you receive mean that the server did not get one (or more) packets in the stream, but it does receive later packet. For each packet it receives, it will send an ACK asking for the missing packet. </p>
+<p>It is your TCP/IP stack that should retransmit the missing data, either by waiting for the retransmit timer to go off or by detecting a couple of the duplicate ACK's (by which time the sender can assume a packet was really lost instead of just received in a different time order). The exact behavior depends on specific implementation of the IP stack of the sending system.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/7639/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Nov '11, 14:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-7639">
+    
+        <a name="7671"></a>
+        <div class="comment" id="comment-7671">
+            <div id="post-7671-score" class="comment-score"></div>
+            <div class="comment-text"><p>I understand what duplicate ACK means, but from the tcpdump, 10.201.228.43 was receiving data from the server and acknowledge data it received, it was not transmitting any data, so the server should not have transmitted so many ACK packets, if the server had not received ACK packets, it should have retransmitted the last segment, but not so many ACK's.
+Anyway, thanks for your reply.</p></div>
+            <div class="comment-info" id="comment-7671-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '11, 05:04)</span>
+                <a class="comment-user userinfo" href="/users/1916/crs">Crs</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-7639" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7639-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/7594/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Vxfof5RwLR3M2ol1Zdy559S7J1CQizkH' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/7594/strange-packets-captured?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/7594/strange-packets-captured?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tcp/"
+            class="tag-link-tcp"
+            title="see questions tagged'tcp'using tags"
+            rel="tag">tcp</a> <span class="tag-number">&#215;752</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 23, 2011, 11:31 p.m.">23 Nov '11, 23:31</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,494 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 28, 2011, 5:04 a.m.">28 Nov '11, 05:04</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/230/displaying-all-tcp-connections-with-syn-packets">Displaying all TCP connections with SYN packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1698/tcp-out-of-order-what-does-it-means">&quot;TCP out of order &quot; what does it means ?!!!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3235/adding-custom-tcp-options">Adding custom TCP options</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4932/not-honoring-own-mss">Not honoring own MSS?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7043/is-there-any-way-to-find-the-tcp-stream-number-based-on-packet-number">Is there any way to find the tcp stream number based on packet number?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8029/counting-incoming-tcp-open-http-get-requests-to-a-web-server">Counting incoming TCP open &amp; http GET requests to a web server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7763/network-issue-about-fsk-ack">[closed] network issue about fsk ack</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11413/why-do-i-have-video-stutter-through-netgear-mcab1001-moca-adapters-possibly-related-to-tcp-window">Why Do I Have Video Stutter Through Netgear MCAB1001 MoCA Adapters--Possibly Related to TCP Window</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13096/how-to-get-statistics-conversation-list-tcp-information-in-a-text-file">How to get Statistics-&gt;Conversation List--&gt;TCP information in a text file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14280/how-does-wireshark-reassemble-tcp-segments">How does Wireshark reassemble TCP Segments</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

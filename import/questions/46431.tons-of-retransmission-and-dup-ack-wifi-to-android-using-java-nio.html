@@ -1,0 +1,914 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Tons of Retransmission and Dup ACK - WiFi to Android, using Java NIO - Wireshark Q&amp;A</title>
+        <meta name="description" content="New user here, and my knowledge of TCP/IP is not good.  Here&#39;s the WireShark capture: https://www.cloudshark.org/captures/7133e5f96577 The connection is between my PC and an Android device on WiFi. I&#39;m developing my own TCP/IP modules for both ends. I think the PC module is OK - PC-to-PC communicati..." />
+        <meta name="keywords" content="android,retransmissions" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/46431/tons-of-retransmission-and-dup-ack-wifi-to-android-using-java-nio" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/46431/tons-of-retransmission-and-dup-ack-wifi-to-android-using-java-nio?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='iFKpdZj2F57kEcVRi00FnUKeMr4hut0o' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/46431/tons-of-retransmission-and-dup-ack-wifi-to-android-using-java-nio">Tons of Retransmission and Dup ACK - WiFi to Android, using Java NIO</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-46431-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46431/up/" rel="nofollow"> </a>
+<div id="post-46431-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-46431-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46431/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/46431/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>New user here, and my knowledge of TCP/IP is not good. </p>
+<p>Here's the WireShark capture: <a href="https://www.cloudshark.org/captures/7133e5f96577">https://www.cloudshark.org/captures/7133e5f96577</a></p>
+<p>The connection is between my PC and an Android device on WiFi. I'm developing my own TCP/IP modules for both ends. I think the PC module is OK - PC-to-PC communications works fine.</p>
+<p>Android-to-PC also works OK, but PC-to-Android is very slow, down around 10% of the speed in the other direction.</p>
+<p>I've run an Android app called SpeedTest, and it indicates that the WiFi connection is OK, with speed in both directions about the same. </p>
+<p>So in desperation I've tried using WireShark to see what is going on. There are tons of Retransmission and Dup ACK packets. I assume this is what is causing the performance to be so poor, right? (10.2.2.20 is my PC, 172.16.31.178 is the Android device.)</p>
+<p>I'm also assuming my Android programming must be faulty. I'm using Java NIO, if that's relevant. Does anyone have any suggestions as to what is wrong, to cause these symptoms?</p>
+<p>Thanks in advance.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/android/" class="post-tag tag-link-android"
+                                        title="see questions tagged 'android'" rel="tag">android</a>
+                                
+                                    <a href="/tags/retransmissions/" class="post-tag tag-link-retransmissions"
+                                        title="see questions tagged 'retransmissions'" rel="tag">retransmissions</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Oct '15, 06:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cefa500b666d789893f89cae377b7e76?s=32&amp;d=identicon&amp;r=g" alt="RenniePet's gravatar image" />
+    <p><a href="/users/20141/renniepet">RenniePet</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="RenniePet has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-46431">
+    
+</div>
+<div id="comment-tools-46431" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46431-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/46431/tons-of-retransmission-and-dup-ack-wifi-to-android-using-java-nio?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/46431/tons-of-retransmission-and-dup-ack-wifi-to-android-using-java-nio?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/46431/tons-of-retransmission-and-dup-ack-wifi-to-android-using-java-nio?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/46431/tons-of-retransmission-and-dup-ack-wifi-to-android-using-java-nio?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="46437"></a>
+                    <div id="answer-container-46437" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-46437-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46437/up/" rel="nofollow"> </a>
+<div id="post-46437-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-46437-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46437/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="RenniePet has selected this answer as the correct answer"
+        href="/accept_answer/46437/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You are correct, the timer based (= delayed) retransmissions after packet loss are what is hurting performance. So you either need to avoid the packet loss or tune your windows to react faster on it.</p>
+<p>There is a hotfix out there that allows to reduce the minRTO value in Windows: </p>
+<p><a href="http://support.microsoft.com/kb/2472264">http://support.microsoft.com/kb/2472264</a></p>
+<p>" ...
+For example, you can use the following command to set the values for the Custom template.</p>
+<pre><code>netsh interface tcp set supplemental template=custom minRto=20 icw=16 delayedacktimeout=10
+</code></pre>
+<p>Note You have to tell the stack to use these Custom template values. The default template that the stack uses is the Internet template.
+    Set the Custom template to be the global default template by using the following command:</p>
+<pre><code>netsh interface tcp set supplemental template=custom
+</code></pre>
+<p>Note This command makes the custom values valid for all connections. "</p>
+<hr>
+<p>"Why does my PC choose to send small packets to the WiFi router and large packets to the other PC? I'm perhaps misunderstanding something, but the end result is that sending data to the Android device via the WiFi router is very slow, compared with everything else."</p>
+<p>Your PC starts out using Large-Send (TCP Segmentation Offload) however none of those 'large' packets make it to the android device.<br>
+The (duplicate) ACKs indicate that only the second half of the large segment was received by the android's TCP layer. 
+So with the receipt of duplicate ACKs indicating packet loss your windows reverts back to normal sending of segments for a while until it retries segmentation offload with the same results, being the first segment never arrives resulting in 3 dup_ACKs and fast retransmission. </p>
+<pre><code>(tcp.analysis.duplicate_ack_num == 3 or tcp.len gt 1448) and tcp.stream eq 0
+</code></pre>
+<p>I would suggest to turn off Segmentation Offload / TCP Chimney Offload as per <a href="https://support.microsoft.com/en-us/kb/951037">How to enable and disable TCP Chimney Offload in Windows Server 2008</a> to see if it helps avoid the packet loss over WiFi towards  the android TCP layer.</p>
+<p>Regards Matthias </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/46437/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Oct '15, 08:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5500bd1decb766660522dfb347eedc49?s=32&amp;d=identicon&amp;r=g" alt="mrEEde's gravatar image" />
+    <p><a href="/users/4668/mreede">mrEEde</a><br/>
+    <span class="score" title="3892 reputation points"><span class="">3.9k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="70 badges"><span class="bronze">&#9679;</span><span class="badgecount">70</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mrEEde has 48 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/46437/">
+                edited
+                <strong>13 Oct '15, 22:43</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-46437">
+    
+        <a name="46442"></a>
+        <div class="comment" id="comment-46442">
+            <div id="post-46442-score" class="comment-score"></div>
+            <div class="comment-text"><p>Great hotfix link.</p></div>
+            <div class="comment-info" id="comment-46442-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '15, 01:50)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="46487"></a>
+        <div class="comment" id="comment-46487">
+            <div id="post-46487-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your answer. </p>
+
+<p>As I mention, I don't know enough about TCP, but have been reading up on it the last couple of days.</p>
+
+<p>Unfortunately, I don't think your answer is relevant to my problem. In fact, I don't think the Retransmission and Dup ACK packets are relevant either - so I was (probably) wrong on that point, and should not have made that part of my question.</p>
+
+<p>What I'm seeing in this Wireshark log is that sending to the WiFi router (a SonicWall firewall / WiFi router) results in one packet of typically 1.5 KB every 2 ms. or so, while sending to another PC on the network results in one packet of 15 KB every 1 ms. or so. </p>
+
+<p>Why does my PC choose to send small packets to the WiFi router and large packets to the other PC? I'm perhaps misunderstanding something, but the end result is that sending data to the Android device via the WiFi router is very slow, compared with everything else.</p></div>
+            <div class="comment-info" id="comment-46487-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '15, 22:22)</span>
+                <a class="comment-user userinfo" href="/users/20141/renniepet">RenniePet</a>
+                
+            </div>
+        </div>
+    
+        <a name="46583"></a>
+        <div class="comment" id="comment-46583">
+            <div id="post-46583-score" class="comment-score"></div>
+            <div class="comment-text"><p>Matthias, thank you very much. Your last suggestion about turning off the TCP Chimney Offload does indeed fix the problem. </p>
+
+<p>Strangely, for my system (Windows 7 64-bit) turning this option off via the command prompt simply doesn't work. (And yes, I did run command prompt as administrator. I even rebooted the PC to see if that made it work, but no.) When I display the parameters it says "disabled", but I still have the problem. It was first when I disabled the corresponding option for the network card that my problem was fixed.</p>
+
+<p>So now I have a new question, if you'll bear with me. Is this a very rare situation I find myself in? Because I don't feel I can expect the customers of my program to be willing to do something like this, and it's apparently not something I can do via programming. Or is it? Can I specify a max packet size of 1448 bytes somewhere and fix it that way, so the fix is only for my program and not system-wide?</p></div>
+            <div class="comment-info" id="comment-46583-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '15, 15:02)</span>
+                <a class="comment-user userinfo" href="/users/20141/renniepet">RenniePet</a>
+                
+            </div>
+        </div>
+    
+        <a name="46585"></a>
+        <div class="comment not_top_scorer" id="comment-46585">
+            <div id="post-46585-score" class="comment-score"></div>
+            <div class="comment-text"><p>From my point of view it was a little bit strange what we have seen in the trace. So have you ever tried to use an actual nic driver?</p></div>
+            <div class="comment-info" id="comment-46585-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '15, 15:19)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="46586"></a>
+        <div class="comment not_top_scorer" id="comment-46586">
+            <div id="post-46586-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>So have you ever tried to use an actual nic driver?</p>
+</blockquote>
+
+<p>Sorry, I don't understand what you mean. My PC program is written in C#, and uses .Net's SocketAsyncEventArgs, which uses the corresponding Windows API, which uses whatever network card driver and network card that happens to be installed in the machine. For my development machine it's a "Realtek PCIe GBE Family Controller". But when my program gets installed at a customer site it could be any network card and driver that the customer machine has.</p></div>
+            <div class="comment-info" id="comment-46586-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '15, 15:37)</span>
+                <a class="comment-user userinfo" href="/users/20141/renniepet">RenniePet</a>
+                
+            </div>
+        </div>
+    
+        <a name="46587"></a>
+        <div class="comment not_top_scorer" id="comment-46587">
+            <div id="post-46587-score" class="comment-score"></div>
+            <div class="comment-text"><p>So normally TCP Offloading should be no problem. But in the past a lot of problems with  TCP Offloading has been caused by network drivers.
+And I thought you only had problems in this special case?! Am I wrong?
+If I am not wrong, than try to update the Realtek driver and try again with activated TCP Offloading.</p></div>
+            <div class="comment-info" id="comment-46587-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '15, 15:43)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="46614"></a>
+        <div class="comment" id="comment-46614">
+            <div id="post-46614-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>If I am not wrong, than try to update the Realtek driver and try again with activated TCP Offloading.</p>
+</blockquote>
+
+<p><a href="/users/16160/christian_r">@Christian_R</a>: OK, I updated the driver and re-enabled the TCP offloading and now everything works. So I've wasted about three days due to a defective driver. Sigh. At least I've learned a lot about TCP and Wireshark. Thanks for your help.</p></div>
+            <div class="comment-info" id="comment-46614-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Oct '15, 05:50)</span>
+                <a class="comment-user userinfo" href="/users/20141/renniepet">RenniePet</a>
+                
+            </div>
+        </div>
+    
+        <a name="46618"></a>
+        <div class="comment" id="comment-46618">
+            <div id="post-46618-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You are welcome. And I have learned, too.
+E.g. : A great link -&gt; thanks <a href="/users/4668/mreede"></a><a href="/users/4668/mreede">@mrEEde</a></p></div>
+            <div class="comment-info" id="comment-46618-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Oct '15, 06:09)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-46437" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46437-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/46431/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='iFKpdZj2F57kEcVRi00FnUKeMr4hut0o' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46431/tons-of-retransmission-and-dup-ack-wifi-to-android-using-java-nio?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46431/tons-of-retransmission-and-dup-ack-wifi-to-android-using-java-nio?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/retransmissions/"
+            class="tag-link-retransmissions"
+            title="see questions tagged'retransmissions'using tags"
+            rel="tag">retransmissions</a> <span class="tag-number">&#215;104</span><br/>
+        
+        <a href="/tags/android/"
+            class="tag-link-android"
+            title="see questions tagged'android'using tags"
+            rel="tag">android</a> <span class="tag-number">&#215;37</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 9, 2015, 6:23 a.m.">09 Oct '15, 06:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,097 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 16, 2015, 6:11 a.m.">16 Oct '15, 06:11</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/354/suspected-retransmissions">Suspected Retransmissions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17420/losing-packets">Losing Packets??</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25557/can-re-transmissions-from-a-single-ip-identify-the-source-of-a-problem">Can re-transmissions from a single ip identify the source of a problem?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35277/too-many-tcp-retransmissions">Too many tcp retransmissions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43460/tcp-retransmission">TCP Retransmission</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50170/tcp-dups-on-virtually-every-ssl-package-but-not-on-regular-tcp-where-to-look">TCP DUPs on virtually every SSL package, but not on regular TCP. Where to look?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59906/tcp-retransmission-issue-2">TCP Retransmission Issue (2)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25301/apps-for-gsm-packet-analysis">Apps for GSM packet analysis</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45616/how-to-decode-traces-from-shark-android-app">How to decode traces from Shark Android app</a>
+        </p>
+        
+        <p>
+            <a href="/questions/562/lots-of-retransmissions-and-out-of-order-frames">Lots of retransmissions and out of order frames</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Wireshark, tshark - Out of memory problem - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi all, I&#39;m using wireshark and tshark to display data. I search on Internet and know that if we run wireshark day after day without stopping, it could cause two problem:  Temp Data written to disk: We have a workaround by adding an option to write into 5 files with default size, when the new 6 th f..." />
+        <meta name="keywords" content="out-of-memory" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/25091/wireshark-tshark-out-of-memory-problem" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/25091/wireshark-tshark-out-of-memory-problem?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='7z9LgtjHmpr3oqaUUrDCzlT03EKggeoU' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/25091/wireshark-tshark-out-of-memory-problem">Wireshark, tshark - Out of memory problem</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-25091-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25091/up/" rel="nofollow"> </a>
+<div id="post-25091-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-25091-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25091/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/25091/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all, I'm using wireshark and tshark to display data. I search on Internet and know that if we run wireshark day after day without stopping, it could cause two problem:</p>
+<ul>
+<li>Temp Data written to disk: We have a workaround by adding an option to write into 5 files with default size, when the new 6 th file generated, it would replace the 1 st file. </li>
+<li>Wireshark use a lot of memory and auto terminate itself when memory is not enough. We cannot use dumpcap, because it does not support our protocol camel message as wireshark. So, is there any way to fix this problem or I have to modify in the code. I don't want to modify the memory allocation in the code because it could cause many other problem so that I cannot control. But if it is the only way, do you have any suggestion or experience to share? Thanks a lot.</li>
+</ul>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/out-of-memory/" class="post-tag tag-link-out-of-memory"
+                                        title="see questions tagged 'out-of-memory'" rel="tag">out-of-memory</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Sep '13, 19:46</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/824a7342f59ff90e6040505b38626416?s=32&amp;d=identicon&amp;r=g" alt="hoangsonk49's gravatar image" />
+    <p><a href="/users/5593/hoangsonk49">hoangsonk49</a><br/>
+    <span class="score" title="81 reputation points">81</span><span title="28 badges"><span class="badge1">&#9679;</span><span class="badgecount">28</span></span><span title="29 badges"><span class="silver">&#9679;</span><span class="badgecount">29</span></span><span title="33 badges"><span class="bronze">&#9679;</span><span class="badgecount">33</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="hoangsonk49 has 2 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-25091">
+    
+        <a name="25092"></a>
+        <div class="comment" id="comment-25092">
+            <div id="post-25092-score" class="comment-score"></div>
+            <div class="comment-text"><p>P/S: i don't want to save data into file, I just process information in real time, after that we can throw it away, so no need to keep it any more.</p></div>
+            <div class="comment-info" id="comment-25092-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Sep '13, 19:48)</span>
+                <a class="comment-user userinfo" href="/users/5593/hoangsonk49">hoangsonk49</a>
+                
+            </div>
+        </div>
+    
+        <a name="25264"></a>
+        <div class="comment" id="comment-25264">
+            <div id="post-25264-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>because it does not support our protocol camel message as wireshark. So, is there any way to fix this problem or I have to modify in the code.</p>
+</blockquote>
+
+<p>what are you trying to do exactly? Maybe there is an alternative.</p></div>
+            <div class="comment-info" id="comment-25264-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Sep '13, 02:17)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25265"></a>
+        <div class="comment" id="comment-25265">
+            <div id="post-25265-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have a camel protocol in which "camel.local" is what I need. When a message comes, wireshark/tshark can dissect to get the value of "camel.local" and send it to server via socket automatically by source code. But the problem is that our system need to run in real time, day by day, no stopping while we are in trouble with out of memory of wireshark/tshark. So, we don't want to display or store anything. After sending the value, everything could be thrown away. That is our goal.</p></div>
+            <div class="comment-info" id="comment-25265-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Sep '13, 02:59)</span>
+                <a class="comment-user userinfo" href="/users/5593/hoangsonk49">hoangsonk49</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25091" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25091-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/25091/wireshark-tshark-out-of-memory-problem?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/25091/wireshark-tshark-out-of-memory-problem?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/25091/wireshark-tshark-out-of-memory-problem?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/25091/wireshark-tshark-out-of-memory-problem?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="25290"></a>
+                    <div id="answer-container-25290" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-25290-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25290/up/" rel="nofollow"> </a>
+<div id="post-25290-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-25290-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25290/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="hoangsonk49 has selected this answer as the correct answer"
+        href="/accept_answer/25290/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>I have a camel protocol in which "camel.local" is what I need. When a message comes, wireshark/tshark can dissect to get the value of "camel.local" and send it to server via socket automatically by source code. </p>
+</blockquote>
+<p>O.K. here comes a proposed solution, at least I would do it this way ;-) Some ideas have already been mentioned in comments.</p>
+<p><strong>Proposed solution</strong></p>
+<p>Write a "management application" that handles everything. That application does the following steps in an endless loop.</p>
+<ul>
+<li>mkfifo /tmp/dumpcap (needs to be done only once, not within the loop!)</li>
+<li>spawn: <code>tshark -ni /tmp/dumpcap -T fields -e camel.local | send_data</code></li>
+<li>spawn <strong>and</strong> wait for exit: <code>dumpcap -ni eth0 -f "host x.x.x.x and port xyz" -a duration:500 -P -w - &gt; /tmp/dumpcap</code></li>
+<li>After exit of dumpcap, goto 2.</li>
+</ul>
+<p><strong>Here is how it works.</strong></p>
+<ul>
+<li>We create a named pipe (FIFO) on Linux</li>
+<li>We let tshark read from that named pipe, filter the data and pipe STDOUT to an application that sends the output to your backend database. The application <code>send_data</code> needs to be written as well!</li>
+<li>spawn dumpcap and let the management application wait for the exit of its child.</li>
+<li>dumpcap will run for 500 seconds (-a duration) and write the captured data in libpcap format (option -P - IMPORTANT) to the named pipe, from where tshark reads as soon as there is data.</li>
+<li>As soon as dumpcap stops (after 500 seconds), tshark will be terminated as well, as it detects the EOF on the named pipe</li>
+<li>Now you'll have to repeat these steps in a loop</li>
+</ul>
+<p><strong>This solves your problem because</strong></p>
+<ul>
+<li>dumpcap does not use a temp file</li>
+<li>dumpcap and tshark do not run very long, hence no resource problem.</li>
+<li>tshark needs to handle only the traffic of 500 seconds, which should be possible. If not, just reduce the amount of seconds that dumpcap writes data.</li>
+</ul>
+<p><strong>Caveats</strong></p>
+<ul>
+<li>instead of dumpcap, tshark now uses a temp file. However, if you ensure, that there is enough space for 500 seconds of data (or less), this should be no problem. Try to limit the amount of data as much as possible (see capture filter above: host x.x.x.x and port xyz).</li>
+<li>there is a short time gap where you may miss some packets. It's the moment where tshark and dumpcap need to be restarted. However, that's a rather short time interval and if I had to choose between a non existant solution and this one, guess what ;-)). Furthermore, you might be able to work around that little gap, if you start two instances of tshark/dumpcap with an overlapping of a few seconds (start the second instance shortly before the first one terminates), so you won't miss packets. However you will then get duplicate <strong>camel.location</strong> data. You might be able to filter those duplicates in your backend maybe by using the IP ID, as that will be sent identical from both tshark process while they see the same frames.</li>
+</ul>
+<blockquote>
+<p><code>tshark -ni /tmp/dumpcap -T fields -e ip.id -e camel.local | send_data</code></p>
+</blockquote>
+<p><strong>This sounds to good to be true. Does it really work?</strong></p>
+<p>Well, I did not write a management wrapper. I tested it manually and yes it works on Ubuntu 12.04 with tshark 1.10.</p>
+<p><strong>Will it work on Windows?</strong></p>
+<p>I have no idea. Probably yes as there are named pipes on Windows as well. There is no native mkfifo command, but there are other ways to create a named pipe on Windows (google or your local Linux/Windows hero will tell you).</p>
+<p>Have fun!</p>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/25290/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Sep '13, 11:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/25290/">
+                edited
+                <strong>26 Sep '13, 11:35</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-25290">
+    
+</div>
+<div id="comment-tools-25290" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25290-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="25094"></a>
+                    <div id="answer-container-25094" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-25094-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25094/up/" rel="nofollow"> </a>
+<div id="post-25094-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-25094-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25094/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You could still use dumpcap for the actual capture process, and then do a batch script to run tshark/wireshark on the files that are complete to do the analysis you want, with either remembering what file was already processed or by deleting the ones that are complete.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/25094/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Sep '13, 22:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-25094">
+    
+        <a name="25143"></a>
+        <div class="comment" id="comment-25143">
+            <div id="post-25143-score" class="comment-score"></div>
+            <div class="comment-text"><p>actually it is quite complicated, and it could affect our performance. I ever think about that, using tshark to extract data, and then I use Java program to read a text file, but it caused some problems because our system working in real with high performance. Anw, thanks for your suggestion, I should try it again to see if it works well. Btw, do you think code modification is a good way to eliminate the problem completely?</p></div>
+            <div class="comment-info" id="comment-25143-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Sep '13, 18:19)</span>
+                <a class="comment-user userinfo" href="/users/5593/hoangsonk49">hoangsonk49</a>
+                
+            </div>
+        </div>
+    
+        <a name="25150"></a>
+        <div class="comment" id="comment-25150">
+            <div id="post-25150-score" class="comment-score"></div>
+            <div class="comment-text"><p>While I do not know exactly how much work it will actually be, my guess is that code modification is a huge task that will most likely require a lot of work and coordination with the other developers. So I'm not sure if it is possible in a short time frame to solve your current problem with that.</p></div>
+            <div class="comment-info" id="comment-25150-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Sep '13, 22:34)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25268"></a>
+        <div class="comment" id="comment-25268">
+            <div id="post-25268-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/145/jasper"></a><a href="/users/145/jasper">@Jasper</a>: I have some questions: if we use dumpcap, can it solve the problem of memory? Dumpcap does not increase the memory, does it? Dumpcap just save the information into pcap file and not store anything else so that it could run in live network, is it right?<a href="/users/145/jasper"></a><a href="/users/145/jasper">@Jasper</a>:</p></div>
+            <div class="comment-info" id="comment-25268-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Sep '13, 03:37)</span>
+                <a class="comment-user userinfo" href="/users/5593/hoangsonk49">hoangsonk49</a>
+                
+            </div>
+        </div>
+    
+        <a name="25269"></a>
+        <div class="comment" id="comment-25269">
+            <div id="post-25269-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, correct. I did a test once and wrote 34GByte into a single file without any memory problems.</p></div>
+            <div class="comment-info" id="comment-25269-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Sep '13, 03:39)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25094" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25094-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="25116"></a>
+                    <div id="answer-container-25116" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-25116-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25116/up/" rel="nofollow"> </a>
+<div id="post-25116-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-25116-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25116/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>What version are you using?  If you are rotating files then the memory usage problem "should" not be a problem: each time Wireshark goes to a new file the memory used from the last one should be freed.  If you're not using the latest release (1.10.2) you might want to upgrade.</p>
+<p>If you're already on 1.10.2 you might want to try a buildbot build--a fair amount of work has gone into fixing memory leaks (although I thought most of them were not run time leaks).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/25116/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Sep '13, 06:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e0564001bb7deb960d5d9d9c1e0ba074?s=32&amp;d=identicon&amp;r=g" alt="JeffMorriss's gravatar image" />
+    <p><a href="/users/655/jeffmorriss">JeffMorriss ♦</a><br/>
+    <span class="score" title="6219 reputation points"><span class="">6.2k</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="72 badges"><span class="bronze">&#9679;</span><span class="badgecount">72</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JeffMorriss has 103 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-25116">
+    
+        <a name="25119"></a>
+        <div class="comment" id="comment-25119">
+            <div id="post-25119-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ary you sure memory is released at file rotation, I thought we retaned state to be able to reassemble packets in two different files for instance.</p></div>
+            <div class="comment-info" id="comment-25119-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Sep '13, 08:44)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25124"></a>
+        <div class="comment" id="comment-25124">
+            <div id="post-25124-score" class="comment-score"></div>
+            <div class="comment-text"><p>Oh boy, maybe I'm completely losing my mind...  I was pretty sure we did NOT do that (and that we released memory each time we closed a file).  I don't know for sure...</p></div>
+            <div class="comment-info" id="comment-25124-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Sep '13, 12:27)</span>
+                <a class="comment-user userinfo" href="/users/655/jeffmorriss">JeffMorriss ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25144"></a>
+        <div class="comment" id="comment-25144">
+            <div id="post-25144-score" class="comment-score"></div>
+            <div class="comment-text"><p>As I know, file rotation just avoid the problem of disk space but it cannot solve the problem of RAM, please correct me if i was wrong. By the way, I'm using the latest version of wireshark.</p></div>
+            <div class="comment-info" id="comment-25144-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Sep '13, 18:24)</span>
+                <a class="comment-user userinfo" href="/users/5593/hoangsonk49">hoangsonk49</a>
+                
+            </div>
+        </div>
+    
+        <a name="25256"></a>
+        <div class="comment" id="comment-25256">
+            <div id="post-25256-score" class="comment-score"></div>
+            <div class="comment-text"><p>is it possible to add all information to proto tree with NULL value so that nothing stored in proto tree? I don't need to display, so do you think by doing this, the problem of memory could be solved ?</p></div>
+            <div class="comment-info" id="comment-25256-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Sep '13, 18:55)</span>
+                <a class="comment-user userinfo" href="/users/5593/hoangsonk49">hoangsonk49</a>
+                
+            </div>
+        </div>
+    
+        <a name="25261"></a>
+        <div class="comment" id="comment-25261">
+            <div id="post-25261-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Nope.  Dissectors also save lots of stuff in conversation tables and defragmentation tables.</p>
+
+<p>It's a major undertaking to resolve this, hopefully the memory allocator changes currently underway might help.</p>
+
+<p>If it was easy to do it would have been done already.</p></div>
+            <div class="comment-info" id="comment-25261-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Sep '13, 00:32)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25263"></a>
+        <div class="comment not_top_scorer" id="comment-25263">
+            <div id="post-25263-score" class="comment-score"></div>
+            <div class="comment-text"><p>You broke my heart, grahamb, but thanks for your information :-). Hope that the memory allocator can help</p></div>
+            <div class="comment-info" id="comment-25263-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Sep '13, 00:52)</span>
+                <a class="comment-user userinfo" href="/users/5593/hoangsonk49">hoangsonk49</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25116" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25116-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="33952"></a>
+                    <div id="answer-container-33952" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33952-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33952/up/" rel="nofollow"> </a>
+<div id="post-33952-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-33952-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33952/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi all,
+After ~9 months since the last comment, I have some experience to share. With near 6 months of running, our service is still working without any problem of memory. Some related information:</p>
+<ul>
+<li>Command: <strong><em>nohup tshark -i 5 -P -w /tmp/Log.pcap -b filesize:655350|split -b 655350000 -a 10 - /tmp/log/call_log- &amp;</em></strong></li>
+<li>I changed the code to make sure that when a <strong><em>Log_xxx.pcap</em></strong> was processed, its name would be changed into <strong><em>Log_xxx.pcap.bak</em></strong> and <strong><em>call_log</em></strong> become <strong><em>call_log_xxx.bak</em></strong> (in order to remove by cronjob)</li>
+<li>Each Log.pcap reaches the limited size (655350) in about 12 minutes. Service is running in real-time.</li>
+<li>Memory of server: 8 GB</li>
+<li>OS: CentOS 5.8</li>
+<li>I use Top to check memory everyday: never greater than 15%</li>
+<li>A cronjob to remove <strong><em>*.bak</em></strong> every 5 days.</li>
+</ul>
+<p>Before running this service, I'm afraid of the problem of memory, but thank God, we are still alive. The service has not been stopped during 6 months, and still working. In theory, it should get the problem but until now, I'm a lucky guy. Maybe,it would get trouble in the future but 6 months of perfect running is a good result. So, sometime, practice is quite different from theory. I share this information to encourage anyone who is afraid of the problem of memory (just like me before:-)). Just try, all theory is grey, but, the glad golden tree of life is green :-)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33952/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Jun '14, 02:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/824a7342f59ff90e6040505b38626416?s=32&amp;d=identicon&amp;r=g" alt="hoangsonk49's gravatar image" />
+    <p><a href="/users/5593/hoangsonk49">hoangsonk49</a><br/>
+    <span class="score" title="81 reputation points">81</span><span title="28 badges"><span class="badge1">&#9679;</span><span class="badgecount">28</span></span><span title="29 badges"><span class="silver">&#9679;</span><span class="badgecount">29</span></span><span title="33 badges"><span class="bronze">&#9679;</span><span class="badgecount">33</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="hoangsonk49 has 2 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33952">
+    
+        <a name="33959"></a>
+        <div class="comment" id="comment-33959">
+            <div id="post-33959-score" class="comment-score"></div>
+            <div class="comment-text"><p>So, you are saying that <strong>tshark is running for 6 months</strong>, without restarting it a single time <strong>and</strong> you are <strong>not</strong> running into the out of memory problem?</p>
+
+<blockquote>
+<p>Just try, all theory is grey, but, the glad golden tree of life is green :-)</p>
+</blockquote>
+
+<p>Why 'theory'? Wasn't it you who reported a out of memory problem? ;-))</p></div>
+            <div class="comment-info" id="comment-33959-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '14, 10:10)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33973"></a>
+        <div class="comment" id="comment-33973">
+            <div id="post-33973-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>So, you are saying that tshark is running for 6 months, without restarting it a single time and you are not running into the out of memory problem?</p>
+</blockquote>
+
+<p>Yes, I have not met any trouble of memory. It is running without any crash.</p>
+
+<blockquote>
+<p>Why 'theory'? Wasn't it you who reported a out of memory problem? ;-))</p>
+</blockquote>
+
+<p>I'm not the person who reported a problem of memory but actually before working with tshark, I searched on Internet and saw many warnings about problem of memory. It even has a <a href="http://wiki.wireshark.org/KnownBugs/OutOfMemory">report as a known bug</a>. It means if I run tshark for a long time and big data, soon or late, I would met the problem of memory. I don't have much experience on wireshark, so, it is "theory" to me :-)</p></div>
+            <div class="comment-info" id="comment-33973-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '14, 21:26)</span>
+                <a class="comment-user userinfo" href="/users/5593/hoangsonk49">hoangsonk49</a>
+                
+            </div>
+        </div>
+    
+        <a name="34036"></a>
+        <div class="comment" id="comment-34036">
+            <div id="post-34036-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>It even has a report as a known bug. It means if I run tshark for a long time and big data, soon or late,</p>
+</blockquote>
+
+<p>yes, and it <strong>will/should</strong> happen, so the question is, why it does not happen in your environment. </p>
+
+<p>What do you see on the line where tshark is listening (I guess eth0)? </p>
+
+<p>Is that pre-filtered traffic, or the whole traffic on that link, including IP, UDP, TCP, HTTP, SMTP, etc. (actually all protocols)? If it's the later, you <strong>should</strong> run into a memory problem sooner or later, as almost every dissector creates at least an entry in the conversation hash tables. Some dissectors also add data to a conversation (e.g. HTTP). So, the hash table will keep growing as long as tshark is running. There should be other data structures as well in certain dissectors, which would increase the memory usage. </p>
+
+<p>At least that's my understanding of the dissection engine. So, if you don't see any increase in memory usage after running tshark for 6 months, my understanding of the dissection engine might be wrong. I've started a new question about this 'issue'.</p>
+
+<blockquote>
+<p><a href="http://ask.wireshark.org/questions/34035/tshark-memory-usage">http://ask.wireshark.org/questions/34035/tshark-memory-usage</a></p>
+</blockquote>
+
+<p>You are welcome to add your experience, especially about the following parts:</p>
+
+<ul>
+<li>do you see an increased memory usage of the tshark process?</li>
+<li>can you ensure, that its the same tshark process running for 6 months (same PID)?</li>
+<li>do you pre-filter the traffic on eth0 (switch port/TAP filtering)?</li>
+</ul></div>
+            <div class="comment-info" id="comment-34036-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jun '14, 08:27)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-33952" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33952-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/25091/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='7z9LgtjHmpr3oqaUUrDCzlT03EKggeoU' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25091/wireshark-tshark-out-of-memory-problem?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25091/wireshark-tshark-out-of-memory-problem?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/out-of-memory/"
+            class="tag-link-out-of-memory"
+            title="see questions tagged'out-of-memory'using tags"
+            rel="tag">out-of-memory</a> <span class="tag-number">&#215;10</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 22, 2013, 7:46 p.m.">22 Sep '13, 19:46</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,446 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 22, 2014, 8:27 a.m.">22 Jun '14, 08:27</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/8618/out-of-memory">Out Of Memory</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18052/capturing-on-windows-server-2003-runs-out-of-memory-very-quickly">Capturing on Windows Server 2003 runs out of memory very quickly</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20954/tshark-memory-consumption-increasing-continuously">tshark memory consumption increasing continuously</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30873/some-workaround-about-out-of-memory-problem">Some workaround about out of memory problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31648/tshark-uses-all-memory-on-mavericks-triggering-out-of-application-memory-errors">Tshark Uses All Memory on Mavericks Triggering Out Of Application Memory Errors</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34035/tshark-memory-usage-explanation-needed">tshark memory usage - explanation needed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41784/tshark-and-optimizing-memory-consumption">tshark and optimizing memory consumption</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53501/tshark-stops-working-at-random-times">Tshark stops working at random times</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54168/why-does-loading-a-small-pcap-take-lots-of-memory-on-1-machine-but-not-on-another">Why does loading a small pcap take lots of memory on 1 machine but not on another?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

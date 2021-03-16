@@ -1,0 +1,879 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>DNP3 Decode As setting in Wireshark 1.6.3 - Wireshark Q&amp;A</title>
+        <meta name="description" content="What should be setting in Wireshark 1.6.3 [Version 1.6.3 (SVN Rev 39702 from /trunk-1.6)] in Decode As, to properly analyze or capture DNP3 communication? In specific, what selection should be under &quot;Decode As&quot; in right window for each of the tabs:  -Link;  -Network;  -Protocol. When I tried default..." />
+        <meta name="keywords" content="decode_as,dnp3" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/7439/dnp3-decode-as-setting-in-wireshark-163" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/7439/dnp3-decode-as-setting-in-wireshark-163?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='YGj9cwJlBQdgL2k1Ljl2fOlf6H6MYz2G' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/7439/dnp3-decode-as-setting-in-wireshark-163">DNP3 Decode As setting in Wireshark 1.6.3</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-7439-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7439/up/" rel="nofollow"> </a>
+<div id="post-7439-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-7439-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7439/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/7439/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>What should be setting in Wireshark 1.6.3 [Version 1.6.3 (SVN Rev 39702 from /trunk-1.6)]  in Decode As, to properly analyze or capture DNP3 communication?</p>
+<p>In specific, what selection should be under "Decode As" in right window for each of the tabs: 
+-Link; 
+-Network; 
+-Protocol.</p>
+<p>When I tried default selection, it is not decoding any DNP3 traffic</p>
+<p>Any suggestion or help is greatly appreciated.
+Stanko K.
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9cefe8fdf2f7f3b2f7fdfffdeedc">[email&#160;protected]</a><a href="http://siemens.com">siemens.com</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/decode_as/" class="post-tag tag-link-decode_as"
+                                        title="see questions tagged 'decode_as'" rel="tag">decode_as</a>
+                                
+                                    <a href="/tags/dnp3/" class="post-tag tag-link-dnp3"
+                                        title="see questions tagged 'dnp3'" rel="tag">dnp3</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>15 Nov '11, 06:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/21000796d4d8be45c6270510eff632af?s=32&amp;d=identicon&amp;r=g" alt="StankoK's gravatar image" />
+    <p><a href="/users/1881/stankok">StankoK</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="StankoK has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/7439/">
+                edited
+                <strong>26 Feb '12, 21:19</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" alt="cmaynard's gravatar image" />
+            <p><a href="/users/402/cmaynard">cmaynard ♦♦</a><br/>
+            <span class="score" title="9361 reputation points"><span class="">9.4k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">&#9679;</span><span class="badgecount">142</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-7439">
+    
+</div>
+<div id="comment-tools-7439" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7439-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/7439/dnp3-decode-as-setting-in-wireshark-163?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/7439/dnp3-decode-as-setting-in-wireshark-163?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/7439/dnp3-decode-as-setting-in-wireshark-163?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/7439/dnp3-decode-as-setting-in-wireshark-163?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="7442"></a>
+                    <div id="answer-container-7442" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-7442-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7442/up/" rel="nofollow"> </a>
+<div id="post-7442-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-7442-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7442/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The DNP3 dissector has a default port of 20000 as per the IANA registration, so any traffic (TCP or UDP) arriving on this port should be dissected.  For traffic on other ports, use the "Decode As ..." option and on the Transport tab select the source or destination (or both) ports and "DNP3.0" as the protocol for those ports.  You shouldn't need to change anything on the Link or Network tabs.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/7442/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Nov '11, 07:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+    <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+    <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grahamb has 274 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-7442">
+    
+        <a name="7445"></a>
+        <div class="comment" id="comment-7445">
+            <div id="post-7445-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for quick answer, 
+Question is how to force Wireshark to listen port 20000. My colleague in USA is using same Wireshark and his default setting in "Decode As" Tabs are: Link: Ethertype 0x800;  Network: IP Protocol 6; Transport: TCP source(20000)....</p>
+
+<p>My Default setting is completely different: Ethertype 0x800;  Network: IP Protocol 1; Transport: TCP source(10??)....
+I was trying many different selection under link, network, transport to match my colleague setting and decode DNP3 but no luck so far?!?!?
+Also,
+I have tried: "Decode As":  Do Not Decode option but that one give me all raw frames...</p>
+
+<p>Any Suggestion or help is greatly appreciated.</p>
+
+<p>Thx. Stanko</p></div>
+            <div class="comment-info" id="comment-7445-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Nov '11, 07:42)</span>
+                <a class="comment-user userinfo" href="/users/1881/stankok">StankoK</a>
+                
+            </div>
+        </div>
+    
+        <a name="7464"></a>
+        <div class="comment" id="comment-7464">
+            <div id="post-7464-score" class="comment-score"></div>
+            <div class="comment-text"><p>Errm, have you actually captured any DNP3 traffic?  What port is your field device using?  Examine the capture with no display filters set and identify the traffic to and from your field device using the IP and port.  If the field device is using port 20000 then you have nothing further to do, any DNP3 traffic will be displayed, if its using another port, then right click on a frame containing traffic to/from the field device, select "Decode As ..." and on the transport tab select the port the field device is using.</p>
+
+<p>If you still have issues can you post your capture somewhere, e.g. CloudShark</p></div>
+            <div class="comment-info" id="comment-7464-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Nov '11, 02:18)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="9259"></a>
+        <div class="comment" id="comment-9259">
+            <div id="post-9259-score" class="comment-score"></div>
+            <div class="comment-text"><p>DNP3 runs over TCP and UDP; TCP and UDP have IP protocol numbers assigned to them, and probably almost never, or never, use other IP protocol numbers, so there is no need to do <em>anything</em> with the network-layer setting.</p>
+
+<p>TCP and UDP run over IPv4 and IPv6; those protocols have Ethernet type numbers assigned to them, and probably almost never, or never, use different Ethernet type numbers, so there is no need to do <em>anything</em> with the link-layer setting.</p>
+
+<p>The Wireshark DNP dissector registers for TCP and UDP ports 20000 by default, so there's no need to change that, either.</p></div>
+            <div class="comment-info" id="comment-9259-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '12, 13:55)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="9260"></a>
+        <div class="comment" id="comment-9260">
+            <div id="post-9260-score" class="comment-score"></div>
+            <div class="comment-text"><p>The DNP-over-TCP dissector will check whether the TCP segment it's handed has at least 2 bytes of data, equal to 0x05 0x64; if the TCP segments you're capturing don't look like that, they won't be recognized as DNP.  I'd have to check if this is a problem for DNP packets that require more than one TCP segment.</p></div>
+            <div class="comment-info" id="comment-9260-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '12, 13:57)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="57005"></a>
+        <div class="comment" id="comment-57005">
+            <div id="post-57005-score" class="comment-score"></div>
+            <div class="comment-text"><p>Wireshark capture traffic DNP3 without any further adjustment, the problem is the version of Wireshark to win 7, to install an earlier version win 7 the problem remains not see traffic DNP3, it has installed the x86 version and not to run into 7. what win I had to do is enable a virtual machine on an x64 processor, run and install winXP commensurate for this operating system version and it worked. In the win XP you can see DNP3 packages without making any adjustments in Wireshark.</p></div>
+            <div class="comment-info" id="comment-57005-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Nov '16, 17:37)</span>
+                <a class="comment-user userinfo" href="/users/26217/marcos-valarezo">Marcos Valarezo</a>
+                
+            </div>
+        </div>
+    
+        <a name="57007"></a>
+        <div class="comment not_top_scorer" id="comment-57007">
+            <div id="post-57007-score" class="comment-score"></div>
+            <div class="comment-text"><p>No need to post the same comment as an "answer" twice.  Please start a new question for your issue.</p></div>
+            <div class="comment-info" id="comment-57007-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Nov '16, 17:51)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="57008"></a>
+        <div class="comment not_top_scorer" id="comment-57008">
+            <div id="post-57008-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Wireshark capture traffic DNP3 without any further adjustment</p>
+</blockquote>
+
+<p>Wireshark has always been able to <em>capture</em> DNP3 traffic.  What matters is whether it <em>recognizes</em> that it's DNP3 traffic, rather than just TCP payload.</p>
+
+<blockquote>
+<p>the problem is the version of Wireshark to win 7, to install an earlier version win 7 the problem remains not see traffic DNP3, it has installed the x86 version and not to run into 7.</p>
+</blockquote>
+
+<p>So are you saying that if you run Wireshark on Windows 7, it's not recognizing DNP3 traffic, but if you save a capture file that should contain DNP3 traffic but doesn't show any DNP3 traffic in Wireshark, run the <em>same</em> version of Wireshark, and read that <em>same</em> capture file, on Windows XP, it <em>does</em> recognize DNP3 traffic in that file?</p></div>
+            <div class="comment-info" id="comment-57008-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Nov '16, 17:56)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-7442" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7442-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/7439/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='YGj9cwJlBQdgL2k1Ljl2fOlf6H6MYz2G' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/7439/dnp3-decode-as-setting-in-wireshark-163?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/7439/dnp3-decode-as-setting-in-wireshark-163?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/decode_as/"
+            class="tag-link-decode_as"
+            title="see questions tagged'decode_as'using tags"
+            rel="tag">decode_as</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/dnp3/"
+            class="tag-link-dnp3"
+            title="see questions tagged'dnp3'using tags"
+            rel="tag">dnp3</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 15, 2011, 6:34 a.m.">15 Nov '11, 06:34</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>13,255 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 4, 2016, 5:56 p.m.">04 Nov '16, 17:56</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/6231/skip-decoding-unimplemented-protocol">Skip decoding unimplemented protocol?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44272/how-to-dissect-custom-dnp3-data-objects">How to dissect custom DNP3 data objects?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11759/decode-udp-as-rtmp">Decode UDP as RTMP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46739/dnp3-as-default-decoding">DNP3 as default decoding?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12831/how-to-use-dissector-not-in-decode-as">How to use dissector not in &quot;decode as&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51400/dnp3-display-filter-can-you-filter-based-on-a-points-value">DNP3 display filter - Can you filter based on a point&#39;s value?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18814/why-does-the-decode-as-dialog-only-shows-entrys-for-link-layer">Why does the &quot;decode as&quot; dialog only shows entrys for link layer.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51466/why-cant-wireshark-version-1215-decode-dnp3-object-111">Why can&#39;t Wireshark version 1.2.15 decode DNP3 object 111?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20814/decoding-pilot-packet">Decoding Pilot packet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21372/recursively-dissect-data-fields">Recursively dissect data fields</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

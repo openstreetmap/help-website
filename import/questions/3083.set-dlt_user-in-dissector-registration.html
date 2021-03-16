@@ -1,0 +1,808 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Set DLT_USER in dissector registration - Wireshark Q&amp;A</title>
+        <meta name="description" content="Is it possible to set the payload protocol for any of the DLT_USER encapsulations during the build process? Since I have to rebuild Wireshark with new dissectors often, I&#39;d like to do this so that my dissectors are registered correctly as soon as Wireshark is installed, rather than reconfiguring the..." />
+        <meta name="keywords" content="development,uat,dlt_user,build,dlt" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/3083/set-dlt_user-in-dissector-registration" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/3083/set-dlt_user-in-dissector-registration?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='DDIKqO3NBsm197YnMc9IiY7qRILibEz2' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/3083/set-dlt_user-in-dissector-registration">Set DLT_USER in dissector registration</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-3083-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3083/up/" rel="nofollow"> </a>
+<div id="post-3083-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-3083-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3083/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/3083/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Is it possible to set the payload protocol for any of the <code>DLT_USER</code> encapsulations during the build process? Since I have to rebuild Wireshark with new dissectors often, I'd like to do this so that my dissectors are registered correctly as soon as Wireshark is installed, rather than reconfiguring the Encapsulation Table after each new install.</p>
+<p>Is there a configuration file I can edit, or perhaps a source file?</p>
+<p><strong>Update</strong>: I've had no luck finding an obvious solution for this, despite the <code>%appdata%/Wireshark/user_dlts</code> file being automatically generated for each user. Does anyone know of a way to modify the default contents of this file before distributing Wireshark? To clarify, I distribute Wireshark using an NSIS installer that includes a number of dissectors. Some of these register against the <code>DLT_USER</code> encapsulation table exclusively as the dissection entry point so that our log files (which use a <code>DLT_USER</code> entry out of necessity) will be correctly opened by Wireshark.</p>
+<p>As an example, I would like to have each new user's <code>user_dlts</code> file contain something like the following:</p>
+<pre><code># This file is automatically generated, DO NOT MODIFY.
+"User 0 (DLT=147)","foo","0","","0",""
+</code></pre>
+<p><strong>Update</strong>: It looks like I could generate a <code>uat</code> entry and then inject this into the <code>encaps_uat</code> table in the dissector defined in <code>epan/dissectors/packet-user_encap.c</code>, but I can see no clear way of doing this. These are the questions I currently have:</p>
+<ol>
+<li>How can I obtain a reference to the <code>encaps_uat</code> in my <code>proto_reg_handoff</code> function?</li>
+<li>How should the <code>user_encap_t</code> be populated to accomplish this task?</li>
+<li>How can I inspect this table to ensure that my dissector is registered against a user DLT only if it has not already been registered?</li>
+<li>Finally, how can I add my entry to the <code>encaps_uat</code>?</li>
+</ol>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/development/" class="post-tag tag-link-development"
+                                        title="see questions tagged 'development'" rel="tag">development</a>
+                                
+                                    <a href="/tags/uat/" class="post-tag tag-link-uat"
+                                        title="see questions tagged 'uat'" rel="tag">uat</a>
+                                
+                                    <a href="/tags/dlt_user/" class="post-tag tag-link-dlt_user"
+                                        title="see questions tagged 'dlt_user'" rel="tag">dlt_user</a>
+                                
+                                    <a href="/tags/build/" class="post-tag tag-link-build"
+                                        title="see questions tagged 'build'" rel="tag">build</a>
+                                
+                                    <a href="/tags/dlt/" class="post-tag tag-link-dlt"
+                                        title="see questions tagged 'dlt'" rel="tag">dlt</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Mar '11, 09:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fe1cf996b30e896dc95ca3cd47ac7406?s=32&amp;d=identicon&amp;r=g" alt="multipleinterfaces's gravatar image" />
+    <p><a href="/users/730/multipleinterfaces">multipleinte...</a><br/>
+    <span class="score" title="1321 reputation points"><span class="">1.3k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="23 badges"><span class="silver">&#9679;</span><span class="badgecount">23</span></span><span title="40 badges"><span class="bronze">&#9679;</span><span class="badgecount">40</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="multipleinterfaces has 9 accepted answers">12&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/3083/">
+                edited
+                <strong>24 May '11, 12:28</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-3083">
+    
+        <a name="4204"></a>
+        <div class="comment" id="comment-4204">
+            <div id="post-4204-score" class="comment-score"></div>
+            <div class="comment-text"><p>What is the "necessity" out of which you use a DLT_USER value?  Can you not ask <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ffbecffebfae2ffa2f8e0fde4eafdfccffbecffebfae2ffa1e0fde8">[email&#160;protected]</a> for a link-layer type?</p></div>
+            <div class="comment-info" id="comment-4204-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 May '11, 15:49)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="4237"></a>
+        <div class="comment" id="comment-4237">
+            <div id="post-4237-score" class="comment-score"></div>
+            <div class="comment-text"><p>We elected to use DLT_USER values in stead of requesting a link-layer type because we use Wireshark to process log files in-house (in a format that is not released to our customers) and using an unassigned value would mean possibly colliding with a new DLT some time in the future.</p></div>
+            <div class="comment-info" id="comment-4237-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 May '11, 14:38)</span>
+                <a class="comment-user userinfo" href="/users/730/multipleinterfaces">multipleinte...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3083" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3083-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/3083/set-dlt_user-in-dissector-registration?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/3083/set-dlt_user-in-dissector-registration?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/3083/set-dlt_user-in-dissector-registration?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/3083/set-dlt_user-in-dissector-registration?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="4511"></a>
+                    <div id="answer-container-4511" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4511-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4511/up/" rel="nofollow"> </a>
+<div id="post-4511-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-4511-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4511/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="multipleinterfaces has selected this answer as the correct answer"
+        href="/accept_answer/4511/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can't manipulate the encaps_uat from your dissector.</p>
+<p>The best you can do, if you want the association between the LINKTYPE_USER value and the dissector hardwired into a private version of Wireshark, would be to change epan/dissectors/packet-user_encap.c not to register for the particular WTAP_ENCAP_USER value, and have your dissector register for that WTAP_ENCAP_USER value itself.</p>
+<p>If Wireshark were to support "global" UAT files in addition to per-user UAT files, you could distribute a global UAT file with the entry in question, but, as far as I can tell, it doesn't support them (although it <em>does</em> support a global preferences file).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4511/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Jun '11, 11:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4511">
+    
+        <a name="5887"></a>
+        <div class="comment" id="comment-5887">
+            <div id="post-5887-score" class="comment-score"></div>
+            <div class="comment-text"><p>After several experiments, this is definitely the cleanest way to handle this for now.</p></div>
+            <div class="comment-info" id="comment-5887-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Aug '11, 09:07)</span>
+                <a class="comment-user userinfo" href="/users/730/multipleinterfaces">multipleinte...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-4511" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4511-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/3083/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='DDIKqO3NBsm197YnMc9IiY7qRILibEz2' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/3083/set-dlt_user-in-dissector-registration?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/3083/set-dlt_user-in-dissector-registration?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/development/"
+            class="tag-link-development"
+            title="see questions tagged'development'using tags"
+            rel="tag">development</a> <span class="tag-number">&#215;158</span><br/>
+        
+        <a href="/tags/build/"
+            class="tag-link-build"
+            title="see questions tagged'build'using tags"
+            rel="tag">build</a> <span class="tag-number">&#215;110</span><br/>
+        
+        <a href="/tags/uat/"
+            class="tag-link-uat"
+            title="see questions tagged'uat'using tags"
+            rel="tag">uat</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/dlt_user/"
+            class="tag-link-dlt_user"
+            title="see questions tagged'dlt_user'using tags"
+            rel="tag">dlt_user</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/dlt/"
+            class="tag-link-dlt"
+            title="see questions tagged'dlt'using tags"
+            rel="tag">dlt</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 24, 2011, 9:09 a.m.">24 Mar '11, 09:09</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,601 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 26, 2011, 9:07 a.m.">26 Aug '11, 09:07</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/8660/wireshark-building-and-debugging-on-visual-c-or-visual-studio">Wireshark Building and debugging on visual c++ or Visual studio</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38133/how-do-i-make-a-debian-package">How do I make a Debian package?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59869/how-to-build-wireshark-2x-on-redhatcentos">How to build wireshark 2.x on Redhat/Centos</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8873/how-can-i-use-idl2wrs-with-a-dissector">How can I use idl2wrs with a dissector?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5546/preference-table-updating-from-a-file">Preference Table updating from a file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21361/unzip-cygdrivecturbotcbinunzip-how-to-change-it-to-point-to-cygwin">unzip: /cygdrive/c/Turbo/TC/BIN/unzip.. How to change it to point to cygwin</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4725/file-win32mak-not-found-stop">file &#39;win32.mak&#39; not found Stop.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11673/error-on-make-for-171-on-archlinux-64-bit">Error on &#39;make&#39; for 1.7.1 on Archlinux 64 bit</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39635/what-is-the-proper-way-to-include-multiple-entries-in-customm4">What is the proper way to include multiple entries in Custom.m4?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11948/how-do-i-compile-wireshark-with-lua-and-libsmi-in-redhat">How do I compile Wireshark with Lua and libsmi in Redhat?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

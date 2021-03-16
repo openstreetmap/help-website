@@ -1,0 +1,1193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>tcpdump vs wireshark differences (packets merged?) - Wireshark Q&amp;A</title>
+        <meta name="description" content="This started while trying figure out why loading a web page in a browser from apache via HTTP was so very slow going through a pinhole from an untrusted network to a trusted one. I thought it was smoothwall related, see my post here http://community.smoothwall.org/forum/viewtopic.php?p=297864#p29786..." />
+        <meta name="keywords" content="fragmentation,icmp,tcpdump,vmware,wireshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/3949/tcpdump-vs-wireshark-differences-packets-merged" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/3949/tcpdump-vs-wireshark-differences-packets-merged?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='GD2pkNA8V4ovDW7n1zjGiTmSpMfmTOWn' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/3949/tcpdump-vs-wireshark-differences-packets-merged">tcpdump vs wireshark differences (packets merged?)</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-3949-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3949/up/" rel="nofollow"> </a>
+<div id="post-3949-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-3949-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3949/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/3949/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>This started while trying figure out why loading a web page in a browser from apache via HTTP was so very slow going through a pinhole from an untrusted network to a trusted one.</p>
+<p>I thought it was smoothwall related, see my post here http://community.smoothwall.org/forum/viewtopic.php?p=297864#p297864 but not so sure and drove me to using wireshark and tcpdump.</p>
+<p>This is what I am seeing and lead to my main question of why does wireshark show 3 packets but tcpdump only shows 1 big packet? Is something combining them? Why do the ID's go in order for both wireshark and tcpdump (39771, 39772, 39773) and then wireshark goes to 700x but tcpdump goes to 39774? ug, out of my league here.</p>
+<p>Wireshark on the wire shows 3 packets, id 7006, 7007, 7008 with a Total Length of 1500, however, on the router running tcpdump, I see ONE packet, id 39774 with a size of 4420 which causes the router to generate an ICMP Destination unreachable (Fragmentation needed).</p>
+<pre><code>    HTTP Request
+    10:52:03.872268 IP (tos 0x0, ttl 127, id 58378, offset 0, flags [DF], proto TCP (6), length 795) 192.168.5.199.24914 &gt; 10.0.0.16.http: Flags [P.], ack 1, win 64240, length 755
+
+    ACK
+    10:52:03.873744 IP (tos 0x0, ttl 64, id 39771, offset 0, flags [DF], proto TCP (6), length 40) 10.0.0.16.http &gt; 192.168.5.199.24914: Flags [.], cksum 0x6c55 (correct), ack 756, win 6795, length 0
+
+    Start of HTTP response
+    10:52:04.075967 IP (tos 0x0, ttl 64, id 39772, offset 0, flags [DF], proto TCP (6), length 57) 10.0.0.16.http &gt; 192.168.5.199.24914: Flags [P.], ack 756, win 6795, length 17
+    10:52:04.077207 IP (tos 0x0, ttl 64, id 39773, offset 0, flags [DF], proto TCP (6), length 1500) 10.0.0.16.http &gt; 192.168.5.199.24914: Flags [.], ack 756, win 6795, length 1460
+
+    ACK
+    10:52:04.077315 IP (tos 0x0, ttl 127, id 58388, offset 0, flags [DF], proto TCP (6), length 40) 192.168.5.199.24914 &gt; 10.0.0.16.http: Flags [.], cksum 0x862a (correct), ack 1478, win 64240, length 0
+
+ok, this i don't understand. tcpdump on the router says it gets one packet, 
+id: 39774 with a size of 4420!  yes, that is bigger than MTU, 
+so the following ICMP would be correct. 
+however, wireshark running on the wire saw 3 packets, IDs (7006, 7007, 7008) each with size of 1500, 
+but saw no packet with id of 39774. tcpdump never showed the 7006-8 packets.`
+    10:52:04.077647 IP (tos 0x0, ttl 64, id 39774, offset 0, flags [DF], proto TCP (6), length 4420) 10.0.0.16.http &gt; 192.168.5.199.24914: Flags [.], ack 756, win 6795, length 4380
+
+    10:52:04.077679 IP (tos 0xc0, ttl 64, id 57158, offset 0, flags [none], proto ICMP (1), length 576) gate &gt; 10.0.0.16: ICMP 192.168.5.199 unreachable - need to frag (mtu 1500), length 556
+            IP (tos 0x0, ttl 64, id 39774, offset 0, flags [DF], proto TCP (6), length 4420) 10.0.0.16.http &gt; 192.168.5.199.24914:  tcp 4384 [bad hdr length 16 - too short, &lt; 20][|icmp]
+</code></pre>
+<p>Edit 8-may-2011:</p>
+<p>Network "diagram":</p>
+<p>192.168.5.199 client -&gt; vSwitch-X -&gt; Smoothwall -&gt; vSwitch-Y -&gt; 10.0.0.16 server </p>
+<p>WireShark is on a separate machine on vSwitch-Y </p>
+<p>tcpdump is on the server interface of the smoothwall (vSwitch-Y facing)</p>
+<p>I'm now using netcat to transfer/receive 1MB of text data (a-z repeated many times).</p>
+<pre><code>nc {IP} 9876 &lt; data-in        # sender
+nc -l -p 9876 &gt; data-out      # receiver
+</code></pre>
+<p>If Debian is the source machine, very many ICMP Fragmentation Required packets are generated by the router.</p>
+<p>If Windows XP is the source machine, transfer is very fast and no ICMPs.</p>
+<p>vmware-tools and vmxnet3 driver is installed on everything (debian, windows, router)</p>
+<p>Edit: 9-may-2011</p>
+<p>While the issue was not related to wireshark or tcpdump, it was the strange packets I was seeing that sent me here to ask "why" which may have got me looking in the right place.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/fragmentation/" class="post-tag tag-link-fragmentation"
+                                        title="see questions tagged 'fragmentation'" rel="tag">fragmentation</a>
+                                
+                                    <a href="/tags/icmp/" class="post-tag tag-link-icmp"
+                                        title="see questions tagged 'icmp'" rel="tag">icmp</a>
+                                
+                                    <a href="/tags/tcpdump/" class="post-tag tag-link-tcpdump"
+                                        title="see questions tagged 'tcpdump'" rel="tag">tcpdump</a>
+                                
+                                    <a href="/tags/vmware/" class="post-tag tag-link-vmware"
+                                        title="see questions tagged 'vmware'" rel="tag">vmware</a>
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 May '11, 08:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ee065a8f665b18aed8af7c74761fa3e0?s=32&amp;d=identicon&amp;r=g" alt="gregg's gravatar image" />
+    <p><a href="/users/1072/gregg">gregg</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="gregg has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/3949/">
+                edited
+                <strong>08 May '11, 09:17</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-3949">
+    
+        <a name="3953"></a>
+        <div class="comment" id="comment-3953">
+            <div id="post-3953-score" class="comment-score"></div>
+            <div class="comment-text"><p>i forgot to mention that everything is inside an ESXi 4.0 server running on a dell poweredge 2900 with a broadcom netxtreme iibcm5708 1000 base-T card.
+someone thought it might be "an over-enthusiatic 1Gb NIC"</p></div>
+            <div class="comment-info" id="comment-3953-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '11, 09:29)</span>
+                <a class="comment-user userinfo" href="/users/1072/gregg">gregg</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3949" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3949-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/3949/tcpdump-vs-wireshark-differences-packets-merged?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/3949/tcpdump-vs-wireshark-differences-packets-merged?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/3949/tcpdump-vs-wireshark-differences-packets-merged?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/3949/tcpdump-vs-wireshark-differences-packets-merged?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="4005"></a>
+                    <div id="answer-container-4005" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-4005-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/4005/up/" rel="nofollow"> </a>
+<div id="post-4005-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-4005-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/4005/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="gregg has selected this answer as the correct answer"
+        href="/accept_answer/4005/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>So, it looks like I found a fix:
+<a href="https://info.pleasantsolutions.com/Blog/VMware_Networking_Speed_Issue">VMware_Networking_Speed_Issue</a></p>
+<p>Cause: There is a bug related VMware network adapters or their drivers related to "segmentation offload" (TSO and GSO). I have heard one mention that the checksum feature may also have problems.</p>
+<p>Solution: Turning off TSO/GSO on the guest OSes is the fool-proof solution. You could try installing a newer OS or try playing with the adaptor type (eg: E1000, VMxnet2) but that seems to work only some of the time.</p>
+<p>Linux solution (worked for me)</p>
+<pre><code>apt-get install ethtool              # install ethtool if you don't have
+ethtool -k eth0                      # view settings
+ethtool -K eth0 tso off gso off      # disable tso and gso
+</code></pre>
+<p>NB: This linux fix does not persist through reboot. The article talks about how you might do that.</p>
+<p>Windows solution (did not try, never had a problem with WinXP)</p>
+<pre><code>Network Connection icon -&gt; Properties -&gt; Configure -&gt; Advanced Tab.
+
+Look for "TsoEnable", "LargeSendOffload", "IPv4 TSO Offload" or otherwise and set it to 0 / Disabled.
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/4005/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 May '11, 09:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ee065a8f665b18aed8af7c74761fa3e0?s=32&amp;d=identicon&amp;r=g" alt="gregg's gravatar image" />
+    <p><a href="/users/1072/gregg">gregg</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="gregg has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/4005/">
+                edited
+                <strong>08 May '11, 09:11</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-4005">
+    
+</div>
+<div id="comment-tools-4005" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-4005-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="3954"></a>
+                    <div id="answer-container-3954" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3954-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3954/up/" rel="nofollow"> </a>
+<div id="post-3954-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-3954-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3954/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>When capturing on the same device sending packets, you will often see outbound packets greater than the MTU because the capturing software, tcpdump in this case, sees the packet before it's packetized on the wire.  You may also encounter packets with less than the minimum number of bytes required because the padding hasn't been added yet.</p>
+<p>As for the IDs, are you looking at the IP header's identifier field and trying to compare it with Wireshark's relative sequence numbers, perhaps?  If you want to see the identifier, you can add a custom column to display it using ip.id as the display filter.</p>
+<p>As for the fragmentation issue, what's the path MTU?  Most likely it's lower than 1500 bytes, thus the ICMP destination unreachable message.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3954/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 May '11, 09:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" alt="cmaynard's gravatar image" />
+    <p><a href="/users/402/cmaynard">cmaynard ♦♦</a><br/>
+    <span class="score" title="9361 reputation points"><span class="">9.4k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">&#9679;</span><span class="badgecount">142</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cmaynard has 108 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3954">
+    
+        <a name="3955"></a>
+        <div class="comment" id="comment-3955">
+            <div id="post-3955-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, the MTU is 1500, which is why the ICMP does make sense.</p>
+
+<p>The tcpdump ID I was going by:
+10:52:04.077647 IP (tos 0x0, ttl 64, id &gt;&gt; 39774 &lt;&lt;
+and in WireShark, Internet Protocol -&gt; Identification.
+The two matched until I hit the 3 vs 1 packet.
+which after adding ip.id as you mentioned, showed what I was seeing in a more convenient place.</p>
+
+<p>There's 3 virtual adapters across 3 virtual machines in play.
+- 1 on web server
+- 1 on wireshark
+- 1 on router</p>
+
+<p>Wireshark records 3 packets, each 1500, coming out of the webserver, but the router only sees one big one coming in.</p></div>
+            <div class="comment-info" id="comment-3955-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '11, 10:15)</span>
+                <a class="comment-user userinfo" href="/users/1072/gregg">gregg</a>
+                
+            </div>
+        </div>
+    
+        <a name="3956"></a>
+        <div class="comment" id="comment-3956">
+            <div id="post-3956-score" class="comment-score"></div>
+            <div class="comment-text"><p>also, your comment about capturing on the same device as sending packets i think answers this:</p>
+
+<p>[bad hdr length 16 - too short, &lt; 20][|icmp]</p>
+
+<p>(which i was originally ignoring since it didn't seem relevant to my real question) -- but it's good to know!</p></div>
+            <div class="comment-info" id="comment-3956-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '11, 10:19)</span>
+                <a class="comment-user userinfo" href="/users/1072/gregg">gregg</a>
+                
+            </div>
+        </div>
+    
+        <a name="3957"></a>
+        <div class="comment" id="comment-3957">
+            <div id="post-3957-score" class="comment-score"></div>
+            <div class="comment-text"><p>Where does the ICMP destination unreachable message originate from?  Is it possible you are attempting to send a big 4420 byte packet, but due to <a href="http://en.wikipedia.org/wiki/Path_MTU_Discovery">PMTUD</a>, as described in <a href="http://tools.ietf.org/html/rfc1191">RFC1191</a>, the VM responds with the ICMP destination unreachable message and the next hop MTU of 1500, then the fragmentation naturally occurs as a result, but the fragmentation is done at a lower layer so tcpdump never captures the fragments?</p></div>
+            <div class="comment-info" id="comment-3957-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '11, 10:57)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="3994"></a>
+        <div class="comment" id="comment-3994">
+            <div id="post-3994-score" class="comment-score"></div>
+            <div class="comment-text"><p>The router is originating the ICMP message.
+Something is attempting to send a big packet. Specifically debian systems. </p>
+
+<p>I started using netcat to just push data around for testing and if the debian systems are the source, then I get Fragmentation Needed ICMPs on nearly every packet.</p>
+
+<p>This does not happen when the source is Windows (XP in this case)</p>
+
+<p>If Debian is the source, the xfer takes a couple minutes.</p>
+
+<p>If Windows is the source, the xfer takes 2-3 seconds.</p>
+
+<p>I'm still working through this, but running out of ideas.</p></div>
+            <div class="comment-info" id="comment-3994-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '11, 22:00)</span>
+                <a class="comment-user userinfo" href="/users/1072/gregg">gregg</a>
+                
+            </div>
+        </div>
+    
+        <a name="4006"></a>
+        <div class="comment" id="comment-4006">
+            <div id="post-4006-score" class="comment-score"></div>
+            <div class="comment-text"><p>thanks for helping think about the problem!</p></div>
+            <div class="comment-info" id="comment-4006-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '11, 09:20)</span>
+                <a class="comment-user userinfo" href="/users/1072/gregg">gregg</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3954" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3954-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="3969"></a>
+                    <div id="answer-container-3969" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-3969-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/3969/up/" rel="nofollow"> </a>
+<div id="post-3969-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-3969-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/3969/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Let me get this straight, you have a client (192.168.5.199) connected to the Smoothwall (gate) through a virtual switch vSwitch-X and the Smoothwall (gate) is connected with a second interface to the server (10.0.0.16) through vSwitch-Y.</p>
+<p>When you try to open a webpage on the client, on the webserver you can see 3 outgoing packets in Wireshark, while tcpdump on the server interface of the Smoothwall shows you 1 incoming packet from the webserver. Or are you running tcpdump on the client facing interface?</p>
+<p>The behavior is weird, but it looks like somehow one of the systems is trying to create jumbo frames out of the 3 separate packets. And smoothwall does not like it.</p>
+<p>The "[bad hdr length 16 - too short, &lt; 20]" part of the output is due to the fact that the ICMP message contains part of the original packet that caused the unreachable message. tcpdump is interpreting this payload and sees a packet that is cut in the middle of the tcp header (which should at least be 20 bytes long, but only 16 bytes are present).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/3969/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 May '11, 16:17</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-3969">
+    
+        <a name="3995"></a>
+        <div class="comment" id="comment-3995">
+            <div id="post-3995-score" class="comment-score"></div>
+            <div class="comment-text"><p>All of your assumptions are correct re: </p>
+
+<p>.199 client -&gt; vSwitch-X -&gt; Smoothwall -&gt; vSwitch-Y -&gt; .16 server</p>
+
+<p>WireShark is on a separate machine on vSwitch-Y</p>
+
+<p>tcpdump is on the server interface of the smoothwall (vSwitch-Y facing)</p>
+
+<p>In testing, I'm discovering that the direction does not matter. I also discovered that if the source is a debian system, the problems occur (ICMP on nearly every packet).</p>
+
+<p>Windows systems as the source are very fast; no ICMPs</p>
+
+<p>Destination machine does not matter debian-&gt;debian or debian-&gt;win (slow)</p>
+
+<p>win-&gt;win or win-&gt;debian (fast!)</p></div>
+            <div class="comment-info" id="comment-3995-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '11, 22:13)</span>
+                <a class="comment-user userinfo" href="/users/1072/gregg">gregg</a>
+                
+            </div>
+        </div>
+    
+        <a name="3996"></a>
+        <div class="comment" id="comment-3996">
+            <div id="post-3996-score" class="comment-score"></div>
+            <div class="comment-text"><p>Also, if WireShark is on vSwitch-X: I see tons of</p>
+
+<p>TCP Previous segment lost</p>
+
+<p>TCP Dup ACK</p>
+
+<p>TCP Out-Of-Order</p></div>
+            <div class="comment-info" id="comment-3996-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '11, 22:17)</span>
+                <a class="comment-user userinfo" href="/users/1072/gregg">gregg</a>
+                
+            </div>
+        </div>
+    
+        <a name="4007"></a>
+        <div class="comment" id="comment-4007">
+            <div id="post-4007-score" class="comment-score"></div>
+            <div class="comment-text"><p>thanks for helping think about the problem!</p></div>
+            <div class="comment-info" id="comment-4007-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '11, 09:21)</span>
+                <a class="comment-user userinfo" href="/users/1072/gregg">gregg</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-3969" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-3969-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/3949/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='GD2pkNA8V4ovDW7n1zjGiTmSpMfmTOWn' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/3949/tcpdump-vs-wireshark-differences-packets-merged?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/3949/tcpdump-vs-wireshark-differences-packets-merged?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+        <a href="/tags/tcpdump/"
+            class="tag-link-tcpdump"
+            title="see questions tagged'tcpdump'using tags"
+            rel="tag">tcpdump</a> <span class="tag-number">&#215;97</span><br/>
+        
+        <a href="/tags/icmp/"
+            class="tag-link-icmp"
+            title="see questions tagged'icmp'using tags"
+            rel="tag">icmp</a> <span class="tag-number">&#215;74</span><br/>
+        
+        <a href="/tags/fragmentation/"
+            class="tag-link-fragmentation"
+            title="see questions tagged'fragmentation'using tags"
+            rel="tag">fragmentation</a> <span class="tag-number">&#215;30</span><br/>
+        
+        <a href="/tags/vmware/"
+            class="tag-link-vmware"
+            title="see questions tagged'vmware'using tags"
+            rel="tag">vmware</a> <span class="tag-number">&#215;23</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 5, 2011, 8:53 a.m.">05 May '11, 08:53</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>29,682 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 8, 2011, 9:21 a.m.">08 May '11, 09:21</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/52573/pipe-tcpdump-from-two-machines-to-wireshark-in-my-local-machine">Pipe tcpdump from two machines to wireshark in my local machine</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14064/read-multiple-files-using-tcpdump">read multiple files using tcpdump</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23972/multiple-messages-in-single-frame-causing-problems-while-converting-to-csv-using-tshark">Multiple Messages in single frame causing problems while converting to csv using tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45438/understanding-offset-values-settings-icmp-fragementation">Understanding offset values  settings icmp fragementation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62325/calculate-round-trip-time-rtt-manually">Calculate Round Trip Time (RTT) manually</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14699/cant-display-rssi-values-in-wireshark">Can&#39;t display RSSI values in Wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37911/tcp-dump-cannot-understand-these-4-lines">TCP Dump, cannot understand these 4 lines?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22260/icmp-fragmentation">ICMP fragmentation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15293/how-to-filter-out-mac-addresses-with-tcpdump">How to filter out MAC addresses with tcpdump</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36127/capture-all-incoming-traffic-and-only-incoming-traffic">Capture ALL incoming traffic and ONLY incoming traffic.</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,982 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Won&#39;t Capture Packets That I Know Are There - Wireshark Q&amp;A</title>
+        <meta name="description" content="Experts, Does Wireshark have hidden capture filters? As far as I can tell, I have no capture filters (or display filters) enabled that would restrict the capture (or display) of any packets. Yet I cannot capture traffic between two devices that I know are communicating with each other. I am getting ..." />
+        <meta name="keywords" content="server2008,packets,teraterm,moxa,missing" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/7664/wont-capture-packets-that-i-know-are-there" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/7664/wont-capture-packets-that-i-know-are-there?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='tuUjWEECD0sDgUZ42yvyz3bMMFLJPLAm' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/7664/wont-capture-packets-that-i-know-are-there">Won&#39;t Capture Packets That I Know Are There</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-7664-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7664/up/" rel="nofollow"> </a>
+<div id="post-7664-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-7664-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7664/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/7664/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Experts,</p>
+<p>Does Wireshark have hidden capture filters?</p>
+<p>As far as I can tell, I have no capture filters (or display filters) enabled that would restrict
+the capture (or display) of any packets.  Yet I cannot capture traffic between two devices
+that I know are communicating with each other.  I am getting no notification that packets are 
+being dropped.</p>
+<p>Running ...</p>
+<p>Wireshark 1.6.4 (SVN Rev 39941 from /trunk-1.6)</p>
+<p>WinPcap version 4.1.2</p>
+<p>... on 64-bit Windows Server 2008 R2 Service Pack 1.</p>
+<p>I'm trying to capture traffic between a Dell R710 Server and a Moxa 5210 NPort device.
+The server and Moxa device are both plugged into the same Cisco ethernet switch.</p>
+<p>The Moxa 5210 device has two RS-232 serial ports that are connected to the serial console
+ports of a pair of Devices Under Test.  A terminal emulation program (TeraTerm) that supports Telnet'ing into the Moxa 5210 runs on the Dell R710 Server system (also where Wireshark is installed/running).</p>
+<p>On the Dell R710 Server, I open a TeraTerm (ver. 2.3) session and specify the IP Address and
+Port # associated with say RS-232 port #1.</p>
+<p>The TeraTerm session establishes connections with one of the Devices Under Test.  Via TeraTerm,
+I can send to (and receive from) the remote Device Under Test without problem.  The appropriate
+ports on the Cisco switch light up while this data is being transferred.  I know there are
+packets being sent/received by the respective devices.</p>
+<p>Unfortunately, all attempts to get Wireshark to capture this information flow do not work.</p>
+<p>The Wireshark trace only shows the initial flurry of activity that happens when the TeraTerm
+program is initially invoked.  In the attached trace, packets 18-22 show that start-up interaction.</p>
+<p>Dell R710 Server = 192.1.1.88</p>
+<p>Moxa 5210 Nport Device = 192.1.1.27, TeraTerm is using Port #4001. <br>
+</p>
+<p>Can somebody tell me why Wireshark doesn't capture / display anything beyond what appears in the
+trace?</p>
+<p>(I'm trying to debug an automated test.  At random times, we get "impossible" data from the 
+Devices Under Test. I'm trying to determine if this bogus data is really being sent on the wire,
+or if it's being corrupted higher up the communications stack.)</p>
+<p>Thanks much.</p>
+<p>DReif</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/server2008/" class="post-tag tag-link-server2008"
+                                        title="see questions tagged 'server2008'" rel="tag">server2008</a>
+                                
+                                    <a href="/tags/packets/" class="post-tag tag-link-packets"
+                                        title="see questions tagged 'packets'" rel="tag">packets</a>
+                                
+                                    <a href="/tags/teraterm/" class="post-tag tag-link-teraterm"
+                                        title="see questions tagged 'teraterm'" rel="tag">teraterm</a>
+                                
+                                    <a href="/tags/moxa/" class="post-tag tag-link-moxa"
+                                        title="see questions tagged 'moxa'" rel="tag">moxa</a>
+                                
+                                    <a href="/tags/missing/" class="post-tag tag-link-missing"
+                                        title="see questions tagged 'missing'" rel="tag">missing</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+<div class="community-wiki">
+        This question is marked "community wiki".
+        
+    </div>
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>27 Nov '11, 17:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c78562aa134509923b15e5a171e1aa44?s=32&amp;d=identicon&amp;r=g" alt="DReif's gravatar image" />
+    <p><a href="/users/1928/dreif">DReif</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DReif has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-7664">
+    
+        <a name="7665"></a>
+        <div class="comment" id="comment-7665">
+            <div id="post-7665-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's me again. I'd hoped to be able to attach my sample capture after registering as a real site user.  But I see that even after registration, that doesn't appear to be an option.<br>
+</p>
+
+<p>Can someone explain to a newbie the accepted way to upload a Wireshark trace?<br>
+</p>
+
+<p>Thanks again.</p>
+
+<p>DReif</p></div>
+            <div class="comment-info" id="comment-7665-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '11, 18:03)</span>
+                <a class="comment-user userinfo" href="/users/1928/dreif">DReif</a>
+                
+            </div>
+        </div>
+    
+        <a name="7667"></a>
+        <div class="comment" id="comment-7667">
+            <div id="post-7667-score" class="comment-score"></div>
+            <div class="comment-text"><p>Drop it on <a href="http://cloudshark.org/">CloudShark</a> and post the link here.</p></div>
+            <div class="comment-info" id="comment-7667-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '11, 23:17)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="7668"></a>
+        <div class="comment" id="comment-7668">
+            <div id="post-7668-score" class="comment-score"></div>
+            <div class="comment-text"><p>You never described how you hooked Wireshark into this setup. On the host, though a tap, a span? Then, what do you mean by "the initial flurry of activity"?</p></div>
+            <div class="comment-info" id="comment-7668-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Nov '11, 23:20)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="7678"></a>
+        <div class="comment" id="comment-7678">
+            <div id="post-7678-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've uploaded a file named 'Moxa_TeraTerm_No_Packets.pcap' to CloudShark.  Wireshark is running on the Dell R710 Server - I'm not using a tap or span.  Capturing in Promiscuous Mode - though that shouldn't be a requirement in this setup.  See Packets 18-22.  They appear to be the "setup" to establish the communications link.  Yet there are no further packets captured between 192.1.1.27 and 192.1.1.88 - even though I can see via the TeraTerm terminal emulator that data is being transferred.</p>
+
+<p>Sincere thanks for your help/advice.</p>
+
+<p>DReif</p></div>
+            <div class="comment-info" id="comment-7678-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '11, 10:05)</span>
+                <a class="comment-user userinfo" href="/users/1928/dreif">DReif</a>
+                
+            </div>
+        </div>
+    
+        <a name="7679"></a>
+        <div class="comment" id="comment-7679">
+            <div id="post-7679-score" class="comment-score"></div>
+            <div class="comment-text"><p>Cloudshark does not have a search function (at least not that I'm aware of), could you post the link to the file?</p></div>
+            <div class="comment-info" id="comment-7679-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '11, 10:25)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="7681"></a>
+        <div class="comment not_top_scorer" id="comment-7681">
+            <div id="post-7681-score" class="comment-score"></div>
+            <div class="comment-text"><p>SYNbit, I originally used the direct "upload" option at the CloudShark site.  It didn't provide a link.  So, based upon your comment - I resubmitted it as an attachment to an e-mail.  The FAQ at cloudshark.org says it would then send me a response with the link.
+That doesn't work either.  Here is the response I got ...</p>
+
+<p>Hello,</p>
+
+<p>Thank you for trying CloudShark.org. The decode service at
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3d5e5c4d7d5e515248594e555c4f5613524f5a">[email&#160;protected]</a> has been discontinued. Please try uploading your
+files directly at http://www.cloudshark.org.</p>
+
+<p>Regards,</p>
+
+<p>CloudShark</p></div>
+            <div class="comment-info" id="comment-7681-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '11, 11:06)</span>
+                <a class="comment-user userinfo" href="/users/1928/dreif">DReif</a>
+                
+            </div>
+        </div>
+    
+        <a name="7682"></a>
+        <div class="comment not_top_scorer" id="comment-7682">
+            <div id="post-7682-score" class="comment-score"></div>
+            <div class="comment-text"><p>After you paste the file to www.cloudshark.org, you need to copy the address in the location bar of your browser, that's the link to your capture file :-)</p></div>
+            <div class="comment-info" id="comment-7682-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '11, 11:26)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="7687"></a>
+        <div class="comment not_top_scorer" id="comment-7687">
+            <div id="post-7687-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hmmm, OK I see now my original upload didn't work at all (that'll teach me to use Internet Explorer).  Just uploaded it with Firefox and that worked fine.  The link is</p>
+
+<p>http://www.cloudshark.org/captures/f66482719cf8</p></div>
+            <div class="comment-info" id="comment-7687-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '11, 11:29)</span>
+                <a class="comment-user userinfo" href="/users/1928/dreif">DReif</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-7664" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7664-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/7664/wont-capture-packets-that-i-know-are-there?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/7664/wont-capture-packets-that-i-know-are-there?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/7664/wont-capture-packets-that-i-know-are-there?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/7664/wont-capture-packets-that-i-know-are-there?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="7690"></a>
+                    <div id="answer-container-7690" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-7690-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7690/up/" rel="nofollow"> </a>
+<div id="post-7690-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-7690-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7690/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>From your capture it looks like you are only capturing the 3-way-handshake of each TCP connection (SYN, SYN/ACK, ACK). </p>
+<p>Sounds like <a href="http://wiki.wireshark.org/CaptureSetup/Offloading#TCP_Chimney">TCP Chimney</a> to me...</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/7690/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Nov '11, 15:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-7690">
+    
+        <a name="7692"></a>
+        <div class="comment" id="comment-7692">
+            <div id="post-7692-score" class="comment-score">1</div>
+            <div class="comment-text"><p>SYNbit, </p>
+
+<p>You are correct, sir. After disabling that feature on the appropriate NIC in the Dell R710 Server, I now see that Winshark is capturing all of the expected traffic.<br>
+</p>
+
+<p>Thanks for your most excellent advice.</p>
+
+<p>For future searchers ...</p>
+
+<p>The Dell R710 Server uses Broadcom BCM5709C NetXtreme II GigE NICs (4 of them built into motherboard).  I modified the following properties via the 'Advanced' tab of the NIC configuration tool ...</p>
+
+<p>Changed 'IPv4 Checksum Offload' to 'None'.
+Changed 'TCP COnnection Offload (IPv4)' to 'Disable'.</p></div>
+            <div class="comment-info" id="comment-7692-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Nov '11, 21:12)</span>
+                <a class="comment-user userinfo" href="/users/1928/dreif">DReif</a>
+                
+            </div>
+        </div>
+    
+        <a name="7694"></a>
+        <div class="comment" id="comment-7694">
+            <div id="post-7694-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think disabling only "TCP connection Offload" will do the trick too... but since you're troubleshooting, it is nice to have the correct checksums in the trace as well, so disabling both is nice :-)</p></div>
+            <div class="comment-info" id="comment-7694-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '11, 00:11)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-7690" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7690-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/7664/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='tuUjWEECD0sDgUZ42yvyz3bMMFLJPLAm' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/7664/wont-capture-packets-that-i-know-are-there?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/7664/wont-capture-packets-that-i-know-are-there?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/packets/"
+            class="tag-link-packets"
+            title="see questions tagged'packets'using tags"
+            rel="tag">packets</a> <span class="tag-number">&#215;205</span><br/>
+        
+        <a href="/tags/missing/"
+            class="tag-link-missing"
+            title="see questions tagged'missing'using tags"
+            rel="tag">missing</a> <span class="tag-number">&#215;42</span><br/>
+        
+        <a href="/tags/server2008/"
+            class="tag-link-server2008"
+            title="see questions tagged'server2008'using tags"
+            rel="tag">server2008</a> <span class="tag-number">&#215;7</span><br/>
+        
+        <a href="/tags/moxa/"
+            class="tag-link-moxa"
+            title="see questions tagged'moxa'using tags"
+            rel="tag">moxa</a> <span class="tag-number">&#215;1</span><br/>
+        
+        <a href="/tags/teraterm/"
+            class="tag-link-teraterm"
+            title="see questions tagged'teraterm'using tags"
+            rel="tag">teraterm</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 27, 2011, 5:24 p.m.">27 Nov '11, 17:24</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>36,404 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 12, 2015, 8:09 p.m.">12 Aug '15, 20:09</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/50598/tcp-streams-missing-first-2-packets-of-3-way-handshake">TCP streams missing first 2 packets of 3-way handshake</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7477/wireshark-not-capturing-packets-where-tpcsrcmyipaddr">Wireshark not capturing packets where tpc.src==my.ip.addr</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44666/missing-packets-in-vm-capturing">missing packets in VM capturing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36581/packets-missing-using-pcap_open_live-and-also-in-wireshark">packets missing using pcap_open_live and also in wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15114/including-packets-from-a-conversation-not-matching-the-filter">Including packets from a conversation not matching the filter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21715/how-to-display-some-udp-missing-packets">How to display some UDP missing packets?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11651/cdp-packets-missing">cdp packets missing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/84/does-the-packet-make-it-to-the-other-end">Does the packet make it to the other end?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2960/drop-packets">Drop packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7248/a-question-related-to-another-question">A question related to another question</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

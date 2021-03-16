@@ -1,0 +1,1219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Checking out source code with git svn - Wireshark Q&amp;A</title>
+        <meta name="description" content="For a while I could check out the source code with git svn, but now it doesn&#39;t work anymore. The command I used: git svn clone -s http://anonsvn.wireshark.org/wireshark/trunk/ .  My computer shows some activities in CPU load, HDD, and even network traffic. But then after about 5 minutes it&#39;s just qu..." />
+        <meta name="keywords" content="svn,source,clone,git,code" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/6069/checking-out-source-code-with-git-svn" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/6069/checking-out-source-code-with-git-svn?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ZkpqLzSrReavLjEinQ2C5MBkJjHwXoRk' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/6069/checking-out-source-code-with-git-svn">Checking out source code with git svn</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-6069-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6069/up/" rel="nofollow"> </a>
+<div id="post-6069-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-6069-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6069/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/6069/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>For a while I could check out the source code with git svn, but now it doesn't work anymore. The command I used:</p>
+<pre><code>git svn clone -s http://anonsvn.wireshark.org/wireshark/trunk/ .
+</code></pre>
+<p>My computer shows some activities in CPU load, HDD, and even network traffic. But then after about 5 minutes it's just quit without any files downloaded after showing:</p>
+<pre><code>Initialized empty Git repository in /home/dev/workspace/wireshark/.git/
+Using higher level of URL: http://anonsvn.wireshark.org/wireshark/trunk =&gt; http://anonsvn.wireshark.org/wireshark
+</code></pre>
+<p>The process /usr/lib/git-core/git-svn was running during that 5 minutes with quite a high CPU load.</p>
+<p>Could anyone help?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/svn/" class="post-tag tag-link-svn"
+                                        title="see questions tagged 'svn'" rel="tag">svn</a>
+                                
+                                    <a href="/tags/source/" class="post-tag tag-link-source"
+                                        title="see questions tagged 'source'" rel="tag">source</a>
+                                
+                                    <a href="/tags/clone/" class="post-tag tag-link-clone"
+                                        title="see questions tagged 'clone'" rel="tag">clone</a>
+                                
+                                    <a href="/tags/git/" class="post-tag tag-link-git"
+                                        title="see questions tagged 'git'" rel="tag">git</a>
+                                
+                                    <a href="/tags/code/" class="post-tag tag-link-code"
+                                        title="see questions tagged 'code'" rel="tag">code</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>04 Sep '11, 00:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3488aa79b487aecdaf16356c4e747a5e?s=32&amp;d=identicon&amp;r=g" alt="francesc's gravatar image" />
+    <p><a href="/users/1553/francesc">francesc</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="francesc has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-6069">
+    
+        <a name="6100"></a>
+        <div class="comment" id="comment-6100">
+            <div id="post-6100-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Wireshark svn does not use standard layout, so I think you you should skip the '-s' option.</p></div>
+            <div class="comment-info" id="comment-6100-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Sep '11, 12:17)</span>
+                <a class="comment-user userinfo" href="/users/8/stig">stig ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6134"></a>
+        <div class="comment" id="comment-6134">
+            <div id="post-6134-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you haven't already, place your vote (for Git) at <a href="http://ask.wireshark.org/questions/5975/should-we-migrate-to-a-different-scm">Should we migrate to a different SCM?</a>. :)</p></div>
+            <div class="comment-info" id="comment-6134-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '11, 11:55)</span>
+                <a class="comment-user userinfo" href="/users/1039/bstn">bstn</a>
+                
+            </div>
+        </div>
+    
+        <a name="6135"></a>
+        <div class="comment" id="comment-6135">
+            <div id="post-6135-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you try cloning from http://code.wireshark.org/git/wireshark ? It seems to work fine so far but I'd like to hear from more testers before making it official.</p></div>
+            <div class="comment-info" id="comment-6135-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '11, 12:26)</span>
+                <a class="comment-user userinfo" href="/users/1/gerald-combs">Gerald Combs ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6136"></a>
+        <div class="comment" id="comment-6136">
+            <div id="post-6136-score" class="comment-score"></div>
+            <div class="comment-text"><p>It seems to work (I haven't tried building this):</p>
+
+<pre><code>c:\sandbox&gt;git clone --depth 1 http://code.wireshark.org/git/wireshark wireshark
+
+Cloning into wireshark...
+remote: Counting objects: 44136, done.
+remote: Compressing objects: 100% (23237/23237), done.
+remote: Total 44136 (delta 37889), reused 25015 (delta 20741)
+Receiving objects: 100% (44136/44136), 65.52 MiB | 328 KiB/s, done.
+Resolving deltas: 100% (37889/37889), done.
+</code></pre></div>
+            <div class="comment-info" id="comment-6136-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '11, 12:54)</span>
+                <a class="comment-user userinfo" href="/users/1039/bstn">bstn</a>
+                
+            </div>
+        </div>
+    
+        <a name="6138"></a>
+        <div class="comment" id="comment-6138">
+            <div id="post-6138-score" class="comment-score"></div>
+            <div class="comment-text"><p>Under Ubuntu 11.04, 2.6.38-11-generic-pae, and git version 1.7.4.1 it works fine.</p>
+
+<p>~/workspace/tmp2$ git clone --depth 1 http://code.wireshark.org/git/wireshark .
+Cloning into ....
+remote: Counting objects: 44131, done.
+remote: Compressing objects: 100% (23235/23235), done.
+remote: Total 44131 (delta 37884), reused 25012 (delta 20738)
+Receiving objects: 100% (44131/44131), 65.47 MiB | 472 KiB/s, done.
+Resolving deltas: 100% (37884/37884), done.</p>
+
+<p>Builded and run correctly.</p></div>
+            <div class="comment-info" id="comment-6138-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '11, 13:21)</span>
+                <a class="comment-user userinfo" href="/users/1553/francesc">francesc</a>
+                
+            </div>
+        </div>
+    
+        <a name="6142"></a>
+        <div class="comment not_top_scorer" id="comment-6142">
+            <div id="post-6142-score" class="comment-score"></div>
+            <div class="comment-text"><p>@Gerald, Any particular reason not to use a public git host like <a href="http://github.com">github</a> (just curious)?</p></div>
+            <div class="comment-info" id="comment-6142-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '11, 16:16)</span>
+                <a class="comment-user userinfo" href="/users/817/helloworld">helloworld</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6069" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6069-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/6069/checking-out-source-code-with-git-svn?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/6069/checking-out-source-code-with-git-svn?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/6069/checking-out-source-code-with-git-svn?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/6069/checking-out-source-code-with-git-svn?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="6109"></a>
+                    <div id="answer-container-6109" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6109-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6109/up/" rel="nofollow"> </a>
+<div id="post-6109-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-6109-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6109/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="francesc has selected this answer as the correct answer"
+        href="/accept_answer/6109/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>I think you you should skip the '-s' option.</p>
+</blockquote>
+<p>You're right, it works like a charm. Thanks a lot.</p>
+<p>Cheers,</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6109/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Sep '11, 00:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3488aa79b487aecdaf16356c4e747a5e?s=32&amp;d=identicon&amp;r=g" alt="francesc's gravatar image" />
+    <p><a href="/users/1553/francesc">francesc</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="francesc has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/6109/">
+                edited
+                <strong>06 Sep '11, 00:34</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6109">
+    
+</div>
+<div id="comment-tools-6109" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6109-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="6110"></a>
+                    <div id="answer-container-6110" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6110-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6110/up/" rel="nofollow"> </a>
+<div id="post-6110-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-6110-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6110/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Try:</p>
+<pre><code>git svn init http://anonsvn.wireshark.org/wireshark/trunk/
+git svn fetch
+</code></pre>
+<p>This will give you the full history of the repository, so will take some time, took me a little over 5 hours when svn HEAD was at r38891.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6110/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Sep '11, 00:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/56efc2002b68941a713d05ae6c39cde5?s=32&amp;d=identicon&amp;r=g" alt="Code%20Buddy's gravatar image" />
+    <p><a href="/users/1556/code-buddy">Code Buddy</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Code Buddy has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6110">
+    
+        <a name="6111"></a>
+        <div class="comment" id="comment-6111">
+            <div id="post-6111-score" class="comment-score"></div>
+            <div class="comment-text"><p>This works either, but I believe it has the same effect as using clone in term of the history. I used the one suggested from Stig, and it also took approximately 5h until finished.</p></div>
+            <div class="comment-info" id="comment-6111-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '11, 00:40)</span>
+                <a class="comment-user userinfo" href="/users/1553/francesc">francesc</a>
+                
+            </div>
+        </div>
+    
+        <a name="6132"></a>
+        <div class="comment" id="comment-6132">
+            <div id="post-6132-score" class="comment-score">1</div>
+            <div class="comment-text"><p>It's only taking that long because you're downloading <em>every</em> branch and release (unnecessarily). You only need to download the HEAD revision. You can determine that rev by:</p>
+
+<p>a. Manually looking at the rev number of trunk from <a href="http://anonsvn.wireshark.org/viewvc/">http://anonsvn.wireshark.org/viewvc/</a>.</p>
+
+<p>OR</p>
+
+<p>b. Using <a href="http://svnbook.red-bean.com/en/1.1/re57.html"><code>svn-info</code></a> and awk to query the latest rev of trunk:</p>
+
+<pre><code>$ svn info http://anonsvn.wireshark.org/wireshark/trunk/ | awk '/Revision:/ { print $2 }'
+</code></pre></div>
+            <div class="comment-info" id="comment-6132-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '11, 11:51)</span>
+                <a class="comment-user userinfo" href="/users/1039/bstn">bstn</a>
+                
+            </div>
+        </div>
+    
+        <a name="6133"></a>
+        <div class="comment" id="comment-6133">
+            <div id="post-6133-score" class="comment-score"></div>
+            <div class="comment-text"><p>If the latest rev was 38900 and you wanted to download it to a local directory named "wireshark", you would use the <code>-r</code> parameter of <code>git-svn</code> like this:</p>
+
+<pre><code>$ git svn clone -r38900 http://anonsvn.wireshark.org/wireshark/trunk/ wireshark
+</code></pre>
+
+<p>(*NIX): Here's a <code>bash</code> one-liner that downloads the latest rev automatically (note the backticks):</p>
+
+<pre><code>$ git svn clone -r`svn info http://anonsvn.wireshark.org/wireshark/trunk/ | awk '/Revision:/ { print $2 }'` http://anonsvn.wireshark.org/wireshark/trunk/ wireshark
+</code></pre></div>
+            <div class="comment-info" id="comment-6133-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '11, 11:51)</span>
+                <a class="comment-user userinfo" href="/users/1039/bstn">bstn</a>
+                
+            </div>
+        </div>
+    
+        <a name="6140"></a>
+        <div class="comment" id="comment-6140">
+            <div id="post-6140-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>It's only taking that long because you're downloading every branch and release (unnecessarily).</p>
+</blockquote>
+
+<p>I don't think we downloaded all branches and releases as we specified to clone/fetch the trunk only, and "gitk --all" showed only the master branch. This took so much time because of the number of commits alone. Downloading all branches might take more than a day until finished.</p>
+
+<p>The command you suggested is indeed very fast, one might use it to quickly build wireshark. But for developing, I'd like to have the entire history of the trunk.</p></div>
+            <div class="comment-info" id="comment-6140-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Sep '11, 15:00)</span>
+                <a class="comment-user userinfo" href="/users/1553/francesc">francesc</a>
+                
+            </div>
+        </div>
+    
+        <a name="6182"></a>
+        <div class="comment" id="comment-6182">
+            <div id="post-6182-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ah, my mistake.</p>
+
+<p>How does having the entire history help you?</p></div>
+            <div class="comment-info" id="comment-6182-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '11, 06:59)</span>
+                <a class="comment-user userinfo" href="/users/1039/bstn">bstn</a>
+                
+            </div>
+        </div>
+    
+        <a name="6185"></a>
+        <div class="comment not_top_scorer" id="comment-6185">
+            <div id="post-6185-score" class="comment-score"></div>
+            <div class="comment-text"><p>It helps me a lot indeed. I'm always interested how someone implemented a certain feature in the past that might help me implementing a related feature. This way, I can also see which components are related with the feature and thus it makes me aware of possible conflicts.</p></div>
+            <div class="comment-info" id="comment-6185-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '11, 07:26)</span>
+                <a class="comment-user userinfo" href="/users/1553/francesc">francesc</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6110" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6110-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="6168"></a>
+                    <div id="answer-container-6168" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6168-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6168/up/" rel="nofollow"> </a>
+<div id="post-6168-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-6168-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6168/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Use git repository
+origin  http://code.wireshark.org/git/wireshark (fetch)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6168/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Sep '11, 03:02</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/901ce058ac79b8a1287dd954709095aa?s=32&amp;d=identicon&amp;r=g" alt="Andrei%20Emeltchenko's gravatar image" />
+    <p><a href="/users/1533/andrei-emeltchenko">Andrei Emelt...</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Andrei Emeltchenko has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6168">
+    
+        <a name="6176"></a>
+        <div class="comment" id="comment-6176">
+            <div id="post-6176-score" class="comment-score"></div>
+            <div class="comment-text"><p>As Gerald's comment above indicates, this isn't yet official.</p></div>
+            <div class="comment-info" id="comment-6176-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '11, 04:43)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6168" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6168-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/6069/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ZkpqLzSrReavLjEinQ2C5MBkJjHwXoRk' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/6069/checking-out-source-code-with-git-svn?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/6069/checking-out-source-code-with-git-svn?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/source/"
+            class="tag-link-source"
+            title="see questions tagged'source'using tags"
+            rel="tag">source</a> <span class="tag-number">&#215;40</span><br/>
+        
+        <a href="/tags/code/"
+            class="tag-link-code"
+            title="see questions tagged'code'using tags"
+            rel="tag">code</a> <span class="tag-number">&#215;23</span><br/>
+        
+        <a href="/tags/git/"
+            class="tag-link-git"
+            title="see questions tagged'git'using tags"
+            rel="tag">git</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/svn/"
+            class="tag-link-svn"
+            title="see questions tagged'svn'using tags"
+            rel="tag">svn</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/clone/"
+            class="tag-link-clone"
+            title="see questions tagged'clone'using tags"
+            rel="tag">clone</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 4, 2011, 12:26 a.m.">04 Sep '11, 00:26</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,339 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 7, 2011, 7:27 a.m.">07 Sep '11, 07:27</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1382/source-code-for-building-latest-version-of-wireshark-using-rhel5">Source Code for building latest version of wireshark using RHEL5</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36786/getting-compiler-error-with-toolstextifyshline50u2dcommand-not-found">Getting compiler error with tools/textify.sh:line50:u2d:command not found</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5975/should-we-migrate-to-a-different-scm">Should we migrate to a different SCM?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19600/how-to-get-source-code">how to get source code</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31936/retrieving-an-old-svn-version-snapshot">Retrieving an old SVN version snapshot</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41286/is-wireshark-from-github-different-from-the-one-on-codewireshark">Is Wireshark from GitHub different from the one on code.wireshark?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24379/change-package-string-and-install-directory-during-wireshark-build-process">Change package string and install directory during wireshark build process</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45383/enhancements-to-dissector-code-by-integrating-other-free-software">Enhancements to dissector code by integrating other free software</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41624/how-to-configure-wireshark-source-code-with-the-latest-version-of-qt-541">How to configure wireshark source code with the latest version of qt 5.4.1?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36011/installed-greasy-monkey-and-cookie-injector">installed greasy monkey and cookie injector</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

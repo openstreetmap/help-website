@@ -1,0 +1,813 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>FTP no offset and APPE problem - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hey, I have two production machines in VLAN5 which sent data to VLAN10 where is Filezilla ftp server. One machine works ok, i mean data are trasfered corecctly with APPE command. Unfortunately on second is not. Example log of first one which is ok:  (000614)2016-08-01 11:25:43 - (not logged in) (192..." />
+        <meta name="keywords" content="ftp" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/54576/ftp-no-offset-and-appe-problem" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/54576/ftp-no-offset-and-appe-problem?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='UyXeTw0dWKttvgy761n2AswityRkNKWF' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/54576/ftp-no-offset-and-appe-problem">FTP no offset and APPE problem</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-54576-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54576/up/" rel="nofollow"> </a>
+<div id="post-54576-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54576-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54576/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/54576/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hey,</p>
+<p>I have two production machines in VLAN5 which sent data to VLAN10 where is Filezilla ftp server.
+One machine works ok, i mean data are trasfered corecctly with APPE command.
+Unfortunately on second is not.
+Example log of first one which is ok:</p>
+<p><code></code></p><code>
+</code><p><code>(000614)2016-08-01 11:25:43 - (not logged in) (192.168.XX.XX)&gt; Connected on port 21, sending welcome message...
+(000614)2016-08-01 11:25:43 - (not logged in) (192.168.XX.XX)&gt; 220 FTP Server
+(000614)2016-08-01 11:25:43 - (not logged in) (192.168.XX.XX)&gt; USER userX
+(000614)2016-08-01 11:25:43 - (not logged in) (192.168.XX.XX)&gt; 331 Password required for userX
+(000614)2016-08-01 11:25:43 - (not logged in) (192.168.XX.XX)&gt; PASS <strong><em>*</em></strong>*
+(000614)2016-08-01 11:25:43 - userX (192.168.XX.XX)&gt; 230 Logged on
+(000614)2016-08-01 11:25:43 - userX (192.168.XX.XX)&gt; TYPE I
+(000614)2016-08-01 11:25:43 - userX (192.168.XX.XX)&gt; 200 Type set to I
+(000614)2016-08-01 11:25:43 - userX (192.168.XX.XX)&gt; PASV
+(000614)2016-08-01 11:25:43 - userX (192.168.XX.XX)&gt; 227 Entering Passive Mode (192,168,YYY,YYY,249,114)
+(000614)2016-08-01 11:25:43 - userX (192.168.XX.XX)&gt; APPE 6457_56_2016-8-1.txt
+(000614)2016-08-01 11:25:43 - userX (192.168.XX.XX)&gt; 150 Opening data channel for file upload to server of "/6457_56_2016-8-1.txt", restarting at offset 17235
+(000614)2016-08-01 11:25:43 - userX (192.168.XX.XX)&gt; 426 Connection closed; aborted transfer of "/6457_56_2016-8-1.txt"
+(000614)2016-08-01 11:25:43 - userX (192.168.XX.XX)&gt; QUIT
+(000614)2016-08-01 11:25:43 - userX (192.168.XX.XX)&gt; 221 Goodbye
+(000614)2016-08-01 11:25:43 - userX (192.168.XX.XX)&gt; disconnected.
+</code></p>
+<p>Second, which create file but file has always 0 data in it. Just empty. </p>
+<p><code></code></p><code>
+</code><p><code>(000594)2016-08-01 11:12:31 - (not logged in) (192.168.XX.YY)&gt; Connected on port 21, sending welcome message...
+(000594)2016-08-01 11:12:31 - (not logged in) (192.168.XX.YY)&gt; 220 FTP Server
+(000594)2016-08-01 11:12:31 - (not logged in) (192.168.XX.YY)&gt; USER userY
+(000594)2016-08-01 11:12:31 - (not logged in) (192.168.XX.YY)&gt; 331 Password required for userY
+(000594)2016-08-01 11:12:31 - (not logged in) (192.168.XX.YY)&gt; PASS <strong><em>*</em></strong>*
+(000594)2016-08-01 11:12:31 - userY (192.168.XX.YY)&gt; 230 Logged on
+(000594)2016-08-01 11:12:31 - userY (192.168.XX.YY)&gt; TYPE I
+(000594)2016-08-01 11:12:31 - userY (192.168.XX.YY)&gt; 200 Type set to I
+(000594)2016-08-01 11:12:31 - userY (192.168.XX.YY)&gt; PASV
+(000594)2016-08-01 11:12:31 - userY (192.168.XX.YY)&gt; 227 Entering Passive Mode (192,168,XXX,XXX,198,207)
+(000594)2016-08-01 11:12:31 - userY (192.168.XX.YY)&gt; APPE test.txt
+(000594)2016-08-01 11:12:31 - userY (192.168.XX.YY)&gt; 150 Opening data channel for file upload to server of "/test.txt"
+(000594)2016-08-01 11:12:31 - userY (192.168.XX.YY)&gt; 426 Connection closed; aborted transfer of "/test.txt"
+(000594)2016-08-01 11:12:31 - userY (192.168.XX.YY)&gt; QUIT
+(000594)2016-08-01 11:12:31 - userY (192.168.XX.YY)&gt; 221 Goodbye
+(000594)2016-08-01 11:12:31 - userY (192.168.XX.YY)&gt; disconnected.
+</code></p>
+<p>I've sniffed data on server and this is result:</p>
+<p><code></code></p><code>
+<p>GOOD
+Apply to end of file.</p>
+<p>6939   2016-08-04 11:53:25.085005   192.168.0.11   192.168.1.200   FTP   78   Request: APPE rf_2_2016-8-4.txt
+6940   2016-08-04 11:53:25.085005   192.168.0.11   192.168.1.200   TCP   60   49471 → 60988 [SYN] Seq=0 Win=4096 Len=0 MSS=1400
+6942   2016-08-04 11:53:25.085005   192.168.0.11   192.168.1.200   TCP   60   49471 → 60988 [ACK] Seq=1 Ack=1 Win=4096 Len=0
+6943   2016-08-04 11:53:25.085005   192.168.1.200   192.168.0.11   FTP   157   Response: 150 Opening data channel for file upload to server of "/rf_2_2016-8-4.txt", restarting at offset 3416
+6947   2016-08-04 11:53:25.100605   192.168.0.11   192.168.1.200   TCP   60   49470 → 21 [ACK] Seq=73 Ack=250 Win=4096 Len=0
+6948   2016-08-04 11:53:25.100605   192.168.0.11   192.168.1.200   FTP-DATA   197   FTP Data: 143 bytes
+6949   2016-08-04 11:53:25.100605   192.168.0.11   192.168.1.200   TCP   60   49471 → 60988 [RST, ACK] Seq=144 Ack=1 Win=4096 Len=0
+6950   2016-08-04 11:53:25.100605   192.168.1.200   192.168.0.11   FTP   119   Response: 426 Connection closed; aborted transfer of "/rf_2_2016-8-4.txt"
+6952   2016-08-04 11:53:25.116206   192.168.0.11   192.168.1.200   FTP   60   Request: QUIT
+6953   2016-08-04 11:53:25.116206   192.168.1.200   192.168.0.11   FTP   67   Response: 221 Goodbye
+6954   2016-08-04 11:53:25.116206   192.168.1.200   192.168.0.11   TCP   54   21 → 49470 [FIN, ACK] Seq=328 Ack=79 Win=64322 Len=0
+6955   2016-08-04 11:53:25.116206   192.168.0.11   192.168.1.200   TCP   60   49470 → 21 [ACK] Seq=79 Ack=329 Win=4083 Len=0
+6956   2016-08-04 11:53:25.116206   192.168.0.11   192.168.1.200   TCP   60   49470 → 21 [RST, ACK] Seq=79 Ack=329 Win=4096 Len=0</p>
+<p>BAD: No store data in file. File is 0 bytes</p>
+<p>7568   2016-08-04 11:53:34.679128   192.168.0.48   192.168.1.200   FTP   81   Request: APPE r_1_2016-8-4CTC2.txt
+7569   2016-08-04 11:53:34.679128   192.168.0.48   192.168.1.200   TCP   66   49441 → 50234 [SYN] Seq=0 Win=29200 Len=0 MSS=1400 SACK_PERM=1 WS=128
+7570   2016-08-04 11:53:34.679128   192.168.1.200   192.168.0.48   TCP   66   50234 → 49441 [SYN, ACK] Seq=0 Ack=1 Win=8192 Len=0 MSS=1460 WS=256 SACK_PERM=1
+7571   2016-08-04 11:53:34.679128   192.168.0.48   192.168.1.200   TCP   60   49441 → 50234 [ACK] Seq=1 Ack=1 Win=29312 Len=0
+7572   2016-08-04 11:53:34.679128   192.168.1.200   192.168.0.48   TCP   54   [TCP Window Update] 50234 → 49441 [ACK] Seq=1 Ack=1 Win=262144 Len=0
+7573   2016-08-04 11:53:34.679128   192.168.1.200   192.168.0.48   FTP   133   Response: 150 Opening data channel for file upload to server of "/r_1_2016-8-4CTC2.txt"
+7577   2016-08-04 11:53:34.694728   192.168.0.48   192.168.1.200   TCP   60   49441 → 50234 [RST, ACK] Seq=1 Ack=1 Win=29312 Len=0
+7578   2016-08-04 11:53:34.694728   192.168.1.200   192.168.0.48   FTP   122   Response: 426 Connection closed; aborted transfer of "/r_1_2016-8-4CTC2.txt"
+7579   2016-08-04 11:53:34.694728   192.168.0.48   192.168.1.200   TCP   60   49440 → 21 [ACK] Seq=77 Ack=295 Win=29312 Len=0
+7580   2016-08-04 11:53:34.725929   192.168.0.48   192.168.1.200   FTP   60   Request: QUIT
+7581   2016-08-04 11:53:34.725929   192.168.1.200   192.168.0.48   FTP   67   Response: 221 Goodbye
+7582   2016-08-04 11:53:34.725929   192.168.1.200   192.168.0.48   TCP   54   21 → 49440 [FIN, ACK] Seq=308 Ack=83 Win=65536 Len=0
+7584   2016-08-04 11:53:34.741529   192.168.0.48   192.168.1.200   TCP   60   49440 → 21 [RST, ACK] Seq=83 Ack=309 Win=29312 Len=0</p>
+</code><p><code></code></p>
+<p>It's look that ftp server don't open file to write and show end of file. What do You think? How can i solve it or make more tests.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ftp/" class="post-tag tag-link-ftp"
+                                        title="see questions tagged 'ftp'" rel="tag">ftp</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>04 Aug '16, 04:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1285da97ee7fe8695cd3c0f7a77847c9?s=32&amp;d=identicon&amp;r=g" alt="Tester1's gravatar image" />
+    <p><a href="/users/24996/tester1">Tester1</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Tester1 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54576/">
+                edited
+                <strong>04 Aug '16, 04:39</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-54576">
+    
+        <a name="54579"></a>
+        <div class="comment" id="comment-54579">
+            <div id="post-54579-score" class="comment-score"></div>
+            <div class="comment-text"><p>Debugging on text is a pain in general; here, it is not clear what display filter you have used, so some overhead TCP messages (i.e. without FTP of FTP-DATA payload) may be missing. So if you can publish the complete capture files, maybe anonymized using Tracewrangler, you can get much more reasoned guesses.</p>
+
+<p>Without the capture, I would first think of user privileges (where UserY may have different access rights to the target directory) and of firewall settings (where the FTP server may not be able to open the FTP-DATA TCP session towards the client Y).</p></div>
+            <div class="comment-info" id="comment-54579-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '16, 05:09)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54580"></a>
+        <div class="comment" id="comment-54580">
+            <div id="post-54580-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've filtered IP of client and server. Is it enough? </p>
+
+<p><a href="https://www.cloudshark.org/captures/f99b933801b9">https://www.cloudshark.org/captures/f99b933801b9</a>
+<a href="https://www.cloudshark.org/captures/980a9e53de20">https://www.cloudshark.org/captures/980a9e53de20</a></p></div>
+            <div class="comment-info" id="comment-54580-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '16, 06:19)</span>
+                <a class="comment-user userinfo" href="/users/24996/tester1">Tester1</a>
+                
+            </div>
+        </div>
+    
+        <a name="54581"></a>
+        <div class="comment" id="comment-54581">
+            <div id="post-54581-score" class="comment-score"></div>
+            <div class="comment-text"><p>It is actually more than enough as you've also stripped the ftp and ftp-data payload :-) Substitution of the IP addresses but keeping the payload would have been better in this particular case.</p>
+
+<p>What I can see is an attempt to set up a second TCP connection, presumably for ftp-data, which ends by RST (rather than FIN) sent by the TCP client (which is the FTP client as well in this case). This excludes the possibility that a firewall would prevent this session from being set up, but without the ftp payload it is hard to say more. So what about the user privileges, can you log in to the server as userY and check whether you can create a file in the ftpd's root directory?</p></div>
+            <div class="comment-info" id="comment-54581-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '16, 06:31)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54582"></a>
+        <div class="comment" id="comment-54582">
+            <div id="post-54582-score" class="comment-score"></div>
+            <div class="comment-text"><p>Only 3 machines upload\download to server text files. When i collect data for analyses only two machines work in the same time. So i don't think is ftp payload problem, becouse it's problem only one machine. </p>
+
+<p>About privilages: I've tested on other user on which it works on first machine and the same problem. 
+I made test: I've disconnected client (production machine) and give the same IP for notebook and from the ftp windows command line i've make append function and it works. </p>
+
+<p><code>
+ftp&gt; append c:\temp\test.txt test.txt
+200 Port command successful
+150 Opening data channel for file upload to server of "/tests/test.txt", restarting at offset 93
+226 Successfully transferred "/tests/test.txt"
+ftp: 11 bytes sent in 0.01Seconds 0.73Kbytes/sec.
+ftp&gt; append c:\temp\test.txt test.txt
+200 Port command successful
+</code></p>
+
+<p>I know that ftp windows client don't use passive mode.</p>
+
+<p>What can i test next?</p></div>
+            <div class="comment-info" id="comment-54582-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '16, 06:48)</span>
+                <a class="comment-user userinfo" href="/users/24996/tester1">Tester1</a>
+                
+            </div>
+        </div>
+    
+        <a name="54584"></a>
+        <div class="comment" id="comment-54584">
+            <div id="post-54584-score" class="comment-score"></div>
+            <div class="comment-text"><p>I haven't got it from the initial description, but can you confirm that only Append is problematic, while normal Put works fine from all machines? Because if yes, it is not a task for Wireshark, as that would mean an application level issue at either the server or the client, and Wireshark can only show you what happens at protocol level.</p></div>
+            <div class="comment-info" id="comment-54584-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Aug '16, 11:35)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54626"></a>
+        <div class="comment not_top_scorer" id="comment-54626">
+            <div id="post-54626-score" class="comment-score"></div>
+            <div class="comment-text"><p>I can't test PUT on client, because it's PLC client and I have to ask to external programmer. I can ask him to modify it at Monday. </p>
+
+<p>I made other test. On second server i've installed FTP server with the same configuration and it works :) Second server is in the same subnetwork like first one. </p>
+
+<p>First server has had Kaspersky KES8, so i deinstalled and problem is the same. I thought that it can do something bad. I haven't any information in events.</p></div>
+            <div class="comment-info" id="comment-54626-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Aug '16, 06:07)</span>
+                <a class="comment-user userinfo" href="/users/24996/tester1">Tester1</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54576" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54576-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/54576/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='UyXeTw0dWKttvgy761n2AswityRkNKWF' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54576/ftp-no-offset-and-appe-problem?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54576/ftp-no-offset-and-appe-problem?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ftp/"
+            class="tag-link-ftp"
+            title="see questions tagged'ftp'using tags"
+            rel="tag">ftp</a> <span class="tag-number">&#215;56</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 4, 2016, 4:38 a.m.">04 Aug '16, 04:38</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,343 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 6, 2016, 6:07 a.m.">06 Aug '16, 06:07</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1864/analysis-request-for-a-server-at-my-university">Analysis request - for a server at my University</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16642/analyze-a-wifi-camera">Analyze a wifi camera</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37261/io-graph-throughput-calculation">IO graph throughput calculation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56650/why-does-ftp-not-have-header">Why does ftp not have header?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3487/how-to-capture-ftp-traffic-over-ssh">How to capture ftp traffic over ssh?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18454/tcpftp-performance">tcp/ftp performance</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37992/ack-packets-are-getting-dropped-causing-a-ftp-session-reset">Ack packets are getting dropped, causing a FTP session reset</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56889/device-can-retrieve-file-over-active-ftp-from-one-server-but-not-another">Device can retrieve file over active FTP from one server but not another</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4025/from-godaddy">From Godaddy</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20751/help-analyzing-ftp-connection-problem">Help analyzing ftp connection problem</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

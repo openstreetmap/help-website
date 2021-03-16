@@ -1,0 +1,980 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TCP Retransmissions, reassembled PDU, TCP Out-of-order, issue with slow connectivity - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello everyone, I am troubleshooting an issue with slow and sometimes no connectivity, when a end user tries to open a file (PDF) on a file server over the internet. The users has internet connection, the problem only happens when accessing a specific site to view files. I&#39;ve confirmed the issue is ..." />
+        <meta name="keywords" content="tls,reassembly,retransmissions,tcp,wireshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/48918/tcp-retransmissions-reassembled-pdu-tcp-out-of-order-issue-with-slow-connectivity" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/48918/tcp-retransmissions-reassembled-pdu-tcp-out-of-order-issue-with-slow-connectivity?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='IE1EKTE1MUxOwa0GZiwMbm9xZcfz1REn' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/48918/tcp-retransmissions-reassembled-pdu-tcp-out-of-order-issue-with-slow-connectivity">TCP Retransmissions, reassembled PDU, TCP Out-of-order, issue with slow connectivity</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-48918-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48918/up/" rel="nofollow"> </a>
+<div id="post-48918-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-48918-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48918/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/48918/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello everyone,
+I am troubleshooting an issue with slow and sometimes no connectivity, when a end user tries to open a file (PDF) on a file server over the internet. The users has internet connection, the problem only happens when accessing a specific site to view files. I've confirmed the issue is not on the end users workstation as the issue happens from my PC as well.</p>
+<p>Network is as shown : 
+User-&gt; switch -&gt; (in)firewall<strong><em>(out) -&gt;</em></strong> switch -&gt; gateway router</p>
+<p>Here are some of the packets:
+The packets shown are from a trace on the switchport connected to the outside port of the firewall. </p>
+<pre><code>No. 1093 | time (Since prev pkt) 0.010808000 | src addr 23.200.30.6 | desti addr 10.10.1.45 | Strm indx 4 | src prt 443 | protocol TCP | info **[TCP Spurious Retransmission] [TCP segment of a reassembled PDU]**
+
+No. 1838 | time (Since prev pkt) 0.011681000 | src addr 23.200.30.6 | desti addr 10.10.1.45 | Strm indx 4 |src prt 443 | protocol TCP | info : **[TCP Spurious Retransmission] 443&gt;56886 [ACK] Seq=990774 Ack=1358 Win=31872 Len=1380[reassembly error, protocol TCP: New Fragment overpaps old data (retransmission?)]**
+
+No. 1782 | time (Since prev pkt) 0.038045000 | src addr 23.200.30.6 | desti addr 10.10.1.45 | Strm indx 4 | src prt 443 | protocol TCP | info : **[TCP Retransmission] [TCP segment of a reassembled PDU]**
+
+No.283 | time  (Since prev pkt) 0.001030000 | src addr 23.200.30.6 | desti addr 10.10.1.45 |Strm indx 4 |   src prt 443 | procotol TLSv1.2 | info : **[TCP Retransmission] Application Data**
+
+No.358 | time (Since prev pkt) 0.000533000 | src addr 23.200.30.6 | desti addr 10.10.1.45 | Strm indx 4 | src prt 443 | procotol TCP | info : **[TCP Out-Of-Order] [TCP segment reassembled PDU]**
+
+No. 317 | time (Since prev pkt) 0.000001000 | src addr 23.200.30.6 | desti addr 10.10.1.45 | Strm indx 4 | src prt 443 | procotol TLSv1.2 | info : **[TCP Out-Of-Order] Application Data**
+</code></pre>
+<p>Here is the location of the PCAPS and network diagram:
+<a href="https://drive.google.com/folderview?id=0B41R9G9kL5L-S1JWZ0Z2bTFKN3c&amp;usp=sharing">https://drive.google.com/folderview?id=0B41R9G9kL5L-S1JWZ0Z2bTFKN3c&amp;usp=sharing</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tls/" class="post-tag tag-link-tls"
+                                        title="see questions tagged 'tls'" rel="tag">tls</a>
+                                
+                                    <a href="/tags/reassembly/" class="post-tag tag-link-reassembly"
+                                        title="see questions tagged 'reassembly'" rel="tag">reassembly</a>
+                                
+                                    <a href="/tags/retransmissions/" class="post-tag tag-link-retransmissions"
+                                        title="see questions tagged 'retransmissions'" rel="tag">retransmissions</a>
+                                
+                                    <a href="/tags/tcp/" class="post-tag tag-link-tcp"
+                                        title="see questions tagged 'tcp'" rel="tag">tcp</a>
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Jan '16, 09:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d1740cb5b9c3de85d65623d87d51f7f3?s=32&amp;d=identicon&amp;r=g" alt="Lewis%20Travieso's gravatar image" />
+    <p><a href="/users/22222/lewis-travieso">Lewis Travieso</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Lewis Travieso has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/48918/">
+                edited
+                <strong>08 Jan '16, 12:53</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-48918">
+    
+        <a name="48919"></a>
+        <div class="comment" id="comment-48919">
+            <div id="post-48919-score" class="comment-score"></div>
+            <div class="comment-text"><p>The packets (as shown by the frame number) seems to be in an odd order.</p>
+
+<p>Apart from that there's not enough info in the text dump to diagnose the issue.  A capture file shared in a public spot will help immensely.</p></div>
+            <div class="comment-info" id="comment-48919-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '16, 09:42)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="48946"></a>
+        <div class="comment" id="comment-48946">
+            <div id="post-48946-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb">@grahamb</a>
+The packets shown are only one a few of the packets that seem to have errors. There are quite a few of them.</p>
+
+<p>Here is a link to the pcaps. Ive also included a diagram of what we are working with. Ive named the pcaps based on where the traces were taken on the network.
+<a href="https://drive.google.com/folderview?id=0B41R9G9kL5L-S1JWZ0Z2bTFKN3c&amp;usp=sharing">https://drive.google.com/folderview?id=0B41R9G9kL5L-S1JWZ0Z2bTFKN3c&amp;usp=sharing</a></p>
+
+<p>PS. The orignal post was based on the pcap named "Trace from Outside Firewall Port"</p></div>
+            <div class="comment-info" id="comment-48946-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jan '16, 07:45)</span>
+                <a class="comment-user userinfo" href="/users/22222/lewis-travieso">Lewis Travieso</a>
+                
+            </div>
+        </div>
+    
+        <a name="49023"></a>
+        <div class="comment" id="comment-49023">
+            <div id="post-49023-score" class="comment-score"></div>
+            <div class="comment-text"><p>The sessions in "Inside Firewall" and "My Switchport" show different source ports, which means you did not capture the <strong>same</strong> session in parallel. With that it's not possible to compare the sessions in order to figure out if one of the components drops frames. Can you please repeat your test and then post the capture files taken in parallel on all three or four locations?</p></div>
+            <div class="comment-info" id="comment-49023-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jan '16, 12:16)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="49067"></a>
+        <div class="comment" id="comment-49067">
+            <div id="post-49067-score" class="comment-score"></div>
+            <div class="comment-text"><p>Packets are arriving out_of_sequence already in the "Trace from Outside Firewall Port" causing a high number of SACK packets flowing out which trigger (spurious) retransmissions.</p>
+
+<p>The ip.ids on the inbound packets look kind of strange as they suggest the packets were already out of order when they left the source. </p>
+
+<p>May I suggest you turn on TCP timestamps in your windows by setting Tcp1323Opts  to 3 
+<a href="https://technet.microsoft.com/en-us/library/cc938205.aspx">https://technet.microsoft.com/en-us/library/cc938205.aspx</a>  so we can get some clues as to when they left the source and, while you're at it - temporarily disable SACK by setting SackOpts 0 (maybe it confuses some NAT devices on the path.<br>
+</p>
+
+<p>Also for the next trace action I suggest you in addition trace between your Firewall and the gateway router to see the sequence of arrival from the internet.</p></div>
+            <div class="comment-info" id="comment-49067-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Jan '16, 23:10)</span>
+                <a class="comment-user userinfo" href="/users/4668/mreede">mrEEde</a>
+                
+            </div>
+        </div>
+    
+        <a name="54619"></a>
+        <div class="comment" id="comment-54619">
+            <div id="post-54619-score" class="comment-score"></div>
+            <div class="comment-text"><p>hi, did you able to solve the issue? i happen to face the same exact issue </p></div>
+            <div class="comment-info" id="comment-54619-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Aug '16, 12:15)</span>
+                <a class="comment-user userinfo" href="/users/25002/zareefaqmar">zareefaqmar</a>
+                
+            </div>
+        </div>
+    
+        <a name="54622"></a>
+        <div class="comment not_top_scorer" id="comment-54622">
+            <div id="post-54622-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/25002/zareefaqmar">@zareefaqmar</a>, if you want assistance, you'll have to follow the advice of <a href="/users/4668/mreede">@mrEEde</a> to the OP regarding the points where you capture at the same time (so that the same session can be observed at both sides of the firewall) and what settings in the Windows TCP stack to use, and post the resulting capture files.</p></div>
+            <div class="comment-info" id="comment-54622-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Aug '16, 13:25)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54628"></a>
+        <div class="comment not_top_scorer" id="comment-54628">
+            <div id="post-54628-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy"></a><a href="/users/19586/sindy">@sindy</a> hi sindy. thank you for the reply. i have taken the pcap at both ingress &amp; engress at the same time. i can see that after client are sending GET, the client would one again send TCP Spurious Retransmission. </p>
+
+<p>As per quoted previously, the issue in real life is that the website would load up normally. Only that when I tried to view the pdf file onto the page, it would see an error. </p>
+
+<p>PCAP file are shared as below:</p>
+
+<p><a href="https://www.dropbox.com/sh/50djblz04h4m1fq/AABtZ9WdqklVydF6-g-b9o9Ma?dl=0">https://www.dropbox.com/sh/50djblz04h4m1fq/AABtZ9WdqklVydF6-g-b9o9Ma?dl=0</a></p></div>
+            <div class="comment-info" id="comment-54628-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Aug '16, 14:04)</span>
+                <a class="comment-user userinfo" href="/users/25002/zareefaqmar">zareefaqmar</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-48918" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48918-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/48918/tcp-retransmissions-reassembled-pdu-tcp-out-of-order-issue-with-slow-connectivity?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/48918/tcp-retransmissions-reassembled-pdu-tcp-out-of-order-issue-with-slow-connectivity?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/48918/tcp-retransmissions-reassembled-pdu-tcp-out-of-order-issue-with-slow-connectivity?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/48918/tcp-retransmissions-reassembled-pdu-tcp-out-of-order-issue-with-slow-connectivity?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="54630"></a>
+                    <div id="answer-container-54630" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54630-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54630/up/" rel="nofollow"> </a>
+<div id="post-54630-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-54630-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54630/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I feel a bit weird answering a Question based on a capture file provided by a 3rd party, but the world isn't black and white.</p>
+<p>The first question would be what kind "firewall" do you use (and <a href="/users/22222/lewis-travieso"><a href="/users/22222/lewis-travieso">@Lewis Travieso</a></a>, if you are still interested, the same question applies to you)? Looking at the captures, I can see that the device is as if filtering out the turbulences happening at the WAN side so that they wouldn't affect the LAN side. But obviously the primary goal is not the filtering but either caching or, even more likely, analysing the files as they are downloaded for possible malicious contents.</p>
+<p>If you apply a display filter <code>tcp.stream == 9</code> at both files and have a closer look at the packets which Wireshark's TCP analysis marks as unusual ones in the WAN-side capture, you'll see the following:<br>
+while at WAN side, the incoming packet with seq 21240, next seq 22620 (in frame 344) is immediately followed by an incoming packet with seq 44700, next seq 46080 (in frame 346), at LAN side the "same" packet with seq 21240, next seq 22620 (in frame 348) is immediately followed by a packet with seq 22620, next seq 24000 (in frame 350) after that packet has arrived to the WAN side (in frame 350).<br>
+<s>The WAN-side packet in frame 346 has arrived out of sequence most likely because between the firewall and the server, there are multiple paths with significantly different propagation time.</s><br>
+<strong>EDIT:</strong> as <a href="/users/4668/mreede"><a href="/users/4668/mreede">@mrEEde</a></a> has noted for the capture provided by the OP, the <code>ip.id</code> field suggests that the weird order of WAN-side packets mentioned earlier is not caused by multiple routes between the server ad client ends. As the same behaviour can be observed in the capture provided by <a href="/users/25002/zareefaqmar"><a href="/users/25002/zareefaqmar">@zareefaqmar</a></a>, and lacking any knowledge about the network architecture at the server end, I hereby guess that there is some NAT/firewall/load balancing device there which assigns its own values of <code>ip.id</code> to packets it forwards from the actual server.</p>
+<p>The "firewall" device at the client end is also responsible for the crash of the TCP session. The last incoming packet from WAN side to be properly retransmitted to LAN side is the one in frame 462 (WAN)/frame 464 (LAN); after that, the firewall sends (inevitably impersonating the remote server) a locally generated RST, although at the WAN side, subsequent packets (frames 463 and 464) have arrived from the remote server in the meantime. But the firewall stops talking to the server completely, so after a short while, the server starts retransmitting the last packet it didn't get acknowledged, and it sends a RST itself after still getting no acknowledge for almost 20 seconds.</p>
+<p>So my conclusion is that the "firewall" is actually a more sophisticated security device, which analyses the HTTP responses as it forwards them, and it either does not like or merely does not understand the contents of the pdf file, so it causes the TCP session to fail as a consequence, either intentionally or due to a bug. Notably, Wireshark's <code>File-&gt;Export Objects-&gt;HTTP</code> didn't recognize the pdf payload either.</p>
+<p>The url (<code>gltopdf</code>) suggests that the pdf file is generated, so maybe its contents is really malformed?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54630/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Aug '16, 03:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54630/">
+                edited
+                <strong>07 Aug '16, 12:55</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54630">
+    
+        <a name="54726"></a>
+        <div class="comment" id="comment-54726">
+            <div id="post-54726-score" class="comment-score"></div>
+            <div class="comment-text"><p>hi <a href="/users/19586/sindy">@sindy</a> thank you for the lead. the firewall is cisco ASA. upon furher inspection on the logs and firewall configuration; the culprit is the 'http inspection policy' that dropping the packet prior to policy violation and mismatch body size (200). currently are seeking principle advise on fine-tuning the configuration.</p></div>
+            <div class="comment-info" id="comment-54726-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Aug '16, 17:13)</span>
+                <a class="comment-user userinfo" href="/users/25002/zareefaqmar">zareefaqmar</a>
+                
+            </div>
+        </div>
+    
+        <a name="54729"></a>
+        <div class="comment" id="comment-54729">
+            <div id="post-54729-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not an expert on http, but as Wireshark was unable to identify the pdf file in the HTTP 200, can you check whether a browser on a PC bypassing the ASA can display the pdf properly? I mean, the ASA is most likely right and there is really something wrong about the way the http body is encoded, so the fix should be done at the server rather than the ASA.</p>
+
+<p>In particular, the HTTP <code>Content-Type</code> header of the 200 OK doesn't mention a multi-part body (it says just <code>Content-Type: application/pdf</code>) but in reality, the pdf part is immediately followed by a html one, while the size indicated by <code>Content-Length: 87851</code> is of the pdf part alone.</p></div>
+            <div class="comment-info" id="comment-54729-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Aug '16, 23:24)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54748"></a>
+        <div class="comment" id="comment-54748">
+            <div id="post-54748-score" class="comment-score"></div>
+            <div class="comment-text"><p>FYI, the pdf itself is fine (Acrobat Reader DC doesn't complain about anything), so only the http appendix to the 200's contents seems to cause the trouble.</p></div>
+            <div class="comment-info" id="comment-54748-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '16, 07:26)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54630" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54630-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/48918/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='IE1EKTE1MUxOwa0GZiwMbm9xZcfz1REn' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48918/tcp-retransmissions-reassembled-pdu-tcp-out-of-order-issue-with-slow-connectivity?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48918/tcp-retransmissions-reassembled-pdu-tcp-out-of-order-issue-with-slow-connectivity?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+        <a href="/tags/tcp/"
+            class="tag-link-tcp"
+            title="see questions tagged'tcp'using tags"
+            rel="tag">tcp</a> <span class="tag-number">&#215;752</span><br/>
+        
+        <a href="/tags/retransmissions/"
+            class="tag-link-retransmissions"
+            title="see questions tagged'retransmissions'using tags"
+            rel="tag">retransmissions</a> <span class="tag-number">&#215;104</span><br/>
+        
+        <a href="/tags/reassembly/"
+            class="tag-link-reassembly"
+            title="see questions tagged'reassembly'using tags"
+            rel="tag">reassembly</a> <span class="tag-number">&#215;78</span><br/>
+        
+        <a href="/tags/tls/"
+            class="tag-link-tls"
+            title="see questions tagged'tls'using tags"
+            rel="tag">tls</a> <span class="tag-number">&#215;75</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 6, 2016, 9:25 a.m.">06 Jan '16, 09:25</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,820 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 11, 2016, 7:26 a.m.">11 Aug '16, 07:26</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/13600/unexpected-tcp-retransmissions">Unexpected TCP retransmissions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1284/wireshark-showing-lot-of-tcp-retransmissions-is-it-real-retransmission-or-wireshark-showing-incorrectly">Wireshark showing lot of TCP retransmissions - Is it real Retransmission or Wireshark showing incorrectly</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37566/wireshark-dissector-development-reassembly-tcp-frames">Wireshark dissector development - Reassembly tcp frames</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59906/tcp-retransmission-issue-2">TCP Retransmission Issue (2)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13321/networking-issue-or-wireshark">Networking Issue or Wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34810/tcp-retransmission-after-reset-rst-flag">TCP Retransmission after Reset RST flag</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44540/tcp-previous-segment-not-captured-does-it-indicate-something-wrong">[TCP Previous segment not captured] Does it indicate something wrong?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49575/how-works-tcp-flow">how works TCP Flow</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56730/how-to-find-the-latency-of-rtps-real-time-publish-subscribe-in-wireshark">How to find the latency of RTPS (Real Time Publish-Subscribe) in Wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60840/tcp-analysis">TCP analysis</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

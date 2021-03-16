@@ -1,0 +1,873 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Filtering in VoIP traffic with Wireshark - Wireshark Q&amp;A</title>
+        <meta name="description" content="I want to use a Port Mirroring switch to capture and analyze on a Win10 PC VoIP traffic going to my VoIP phone hooked on the same LAN segment. I attached the phone to port 1 of Netgear GS105E mirroring switch, configured the switch to mirror port 1 to port 2, hooked port 1 of a dual-port network ada..." />
+        <meta name="keywords" content="capture-filter,voip" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/57467/filtering-in-voip-traffic-with-wireshark" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/57467/filtering-in-voip-traffic-with-wireshark?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='qfjjvH61f3sWTisyIaw8gytVcVLwpnuN' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/57467/filtering-in-voip-traffic-with-wireshark">Filtering in VoIP traffic with Wireshark</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-57467-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57467/up/" rel="nofollow"> </a>
+<div id="post-57467-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-57467-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57467/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/57467/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I want to use a Port Mirroring switch to capture and analyze on a Win10 PC VoIP traffic going to my VoIP phone hooked on the same LAN segment. I attached the phone to port 1 of Netgear GS105E mirroring switch, configured the switch to mirror port 1 to port 2, hooked port 1 of a dual-port network adapter of the PC with Wireshark running to switch port 2 for VoIP capture. Optionally, I hooked port 2 of the adapter to switch port 3 for web browsing, so the web traffic wouldn't interfere with VoIP capture. The switch port 5 WAN is connected to the router.</p>
+<p>My problem is, when running Wireshark all day, it collects huge amount of traffic data, and VoIP traffic is a minor share of this entire traffic. It makes it harder and longer to separate and process. Even if traffic from the VoIP phone is mirrored to a dedicated network adapter, there is still fair amount of service traffic passing through it not directly related to VoIP calls.</p>
+<p>How do I setup a filter that would capture only RTP and SIP packets directly related to each call, and discard all other traffic through the adapter, including unrelated to calls SIP "keep alive" registration traffic? Its possible, since specialized VoiP Call Monitoring &amp; Recording packages do exactly that, and some (if not all) are based on the same techniques and drivers Wireshark uses.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/capture-filter/" class="post-tag tag-link-capture-filter"
+                                        title="see questions tagged 'capture-filter'" rel="tag">capture-filter</a>
+                                
+                                    <a href="/tags/voip/" class="post-tag tag-link-voip"
+                                        title="see questions tagged 'voip'" rel="tag">voip</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Nov '16, 16:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/764d2b10a7290e1803a5d8a6ac5a62a9?s=32&amp;d=identicon&amp;r=g" alt="zamar24's gravatar image" />
+    <p><a href="/users/26233/zamar24">zamar24</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="zamar24 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/57467/">
+                edited
+                <strong>20 Nov '16, 07:01</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-57467">
+    
+</div>
+<div id="comment-tools-57467" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57467-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/57467/filtering-in-voip-traffic-with-wireshark?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/57467/filtering-in-voip-traffic-with-wireshark?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/57467/filtering-in-voip-traffic-with-wireshark?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/57467/filtering-in-voip-traffic-with-wireshark?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="57479"></a>
+                    <div id="answer-container-57479" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-57479-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57479/up/" rel="nofollow"> </a>
+<div id="post-57479-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-57479-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57479/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="zamar24 has selected this answer as the correct answer"
+        href="/accept_answer/57479/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In general, from this point of view, there are two basic categories of traffic:</p>
+<ul>
+<li>
+<p>the one which can be recognized by static scalar values (like IP addresses, ethertype values, TCP or UDP ports). To filter such traffic positively or negatively, you can use a capture filter, and you can use tools which do not maintain context, such as dumpcap or tcpdump, to capture</p>
+</li>
+<li>
+<p>the one which has to be analysed deeper and within a context (such as RTP whose source and destination ports are changing dynamically, call per call). Only display filter, which depends on existence of context, can be used to filter this category of traffic positively or negatively. Dependence on context means that the capturing application consumes memory and so the amount of traffic it can handle before stalling is limited by the memory available, even if you split the output into several files.</p>
+</li>
+</ul>
+<p>In particular, I would try to find out the following:</p>
+<ul>
+<li>
+<p>does your phone use UDP or TCP (or both) as SIP transport? As you mention REGISTER as "keepalive", it cannot be determined from what you wrote. Periodic re-registrations are not necessarily keepalives, so if more than 5 minutes elapse between REGISTERs, keepalives are either not necessary or done using some other traffic (like UDP packets between the SIP ports but with no actual SIP payload).</p>
+</li>
+<li>
+<p>the pool of IP addresses your VoIP provider is using for SIP and for RTP. In public VoIP services, it is rare that the RTP would be sent directly between CPEs (VoIP phones) because the CPEs rarely have public IP addresses, so the service provider typically uses a pool of RTP forwarding machines. Also for SIP, there may be a pool, if the provider uses DNS SRV records and other advanced methods. So if you can see that your CPE sends a DNS SRV query and gets a response to it, all the machines to which it may send the REGISTER should be listed in the DNS SRV response. In the response to the REGISTER, there may be a Service-Route header, telling your CPE where to send the initial INVITE; the address may change with each 200 to the REGISTER. Incoming INVITEs will be coming from the address to which the CPE has sent the last REGISTER.</p>
+</li>
+</ul>
+<p>If you cannot determine in advance the whole pool, I would use a capture filter like <code>(host s.s.s.s/24 or r.r.r.r/23) and host p.p.p.p</code> where <code>s.s.s.s</code> is the IP address to/from which the SIP went in the call you've captured manually, <code>r.r.r.r</code> is the IP address to/from which the RTP was going in that call, and <code>p.p.p.p</code> is your phone's IP address. That should filter most of the unwanted traffic away and hopefully still cover at least part of the VoIP provider's farm; you should be able to learn the rest iteratively.</p>
+<p>As for filtering out the re-registrations, this is not possible using a capture filter. While a capture filter can recognize the string "REGISTER" in the beginning of TCP or UDP payload, it cannot distinguish the responses to REGISTER because the string "REGISTER" in the CSeq will not be at a fixed offset from the payload beginning. So to get rid of REGISTER traffic, you have to use a display filter <code>!(sip.CSeq.method == "REGISTER")</code> and, therefore, you need to use tshark for capturing, which means the capture cannot run forever. But if you use the capture filter as suggested above, it can run for quite a long time as the context data would grow slowly.</p>
+<p>A software dedicated for VoIP monitoring does essentially the same, except that it does not keep any context for other than VoIP traffic, and that it drops any context related to a call which has already ended (which is what tshark/Wireshark apparently doesn't, lacking any notion of a timeout). This alone allows it to run forever, except if there are too many calls which haven't ended correctly.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/57479/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Nov '16, 02:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-57479">
+    
+        <a name="57481"></a>
+        <div class="comment" id="comment-57481">
+            <div id="post-57481-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy"></a><a href="/users/19586/sindy">@sindy</a>  Thanks for the feedback. Will try to follow through and post back here. An obvious question is, if I don't use any display filter on the dedicated LAN adapter that captures only mirrored VoIP traffic, and not connected to the web, will Wireshark run "forever" or hang anyway at some point? </p>
+
+<p>Another Q is, can Wireshark automatically "drop" from memory the calls that were already captured and processed, i.e. manually saved to files by the user at the day end, or it would require to manually restart the capture after saving traffic?</p>
+
+<p>Did you get your Netgear mirroring switch and have a chance to play with it? What is your verdict? Hopefully, you can try to figure out a proper VoIP filter for your own phone calls captured via the mirror, and share it here, of course without private details. :)</p></div>
+            <div class="comment-info" id="comment-57481-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Nov '16, 06:49)</span>
+                <a class="comment-user userinfo" href="/users/26233/zamar24">zamar24</a>
+                
+            </div>
+        </div>
+    
+        <a name="57483"></a>
+        <div class="comment" id="comment-57483">
+            <div id="post-57483-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>if I don't use any display filter on the dedicated LAN adapter that captures only mirrored VoIP traffic, and not connected to the web, will Wireshark run "forever" or hang anyway at some point?</p>
+</blockquote>
+
+<p>The tshark/Wireshark dissectors collect context data regardless whether you use display filters or not. So the more you reduce the amount of traffic by disabling all protocols on the capturing port and by using capture filters, the longer tshark or Wireshark will be able to run, but there is currently no way to make it drop the context of already processed VoIP calls, TCP sessions etc.</p>
+
+<blockquote>
+<p>can Wireshark automatically "drop" from memory the calls that were already captured and processed, i.e. manually saved to files by the user at the day end, or it would require to manually restart the capture after saving traffic?</p>
+</blockquote>
+
+<p>A manual restart is necessary.</p>
+
+<blockquote>
+<p>Did you get your Netgear mirroring switch and have a chance to play with it? What is your verdict?</p>
+</blockquote>
+
+<p>Yes, and I have commented the relevant question and even the Wiki. As said there - a 1 Gbit/s "hub" is better than nothing, at least in many capturing scenarios. For scenarios with high traffic volume and/or more complex traffic pattern (i.e. where you need to mirror more than a single port), you'd need something more advanced and thus more expensive.</p>
+
+<p>I!ve also commented your other question (regarding traffic loss) with my experience on that subject.</p>
+
+<blockquote>
+<p>Hopefully, you can try to figure out a proper VoIP filter for your own phone calls captured via the mirror, and share it here, of course without private details. :)</p>
+</blockquote>
+
+<p>That's what I've already done, isn't it? It is normally sufficient to use a capture filter listing all IPs used by your VoIP provider to get rid of any other traffic, and there is no way to identify responses to REGISTER requests using tcpdump or dumpcap.</p>
+
+<p>But you may try <a href="https://linux.die.net/man/8/ngrep">ngrep</a> with <code>-O</code> and <code>-v</code> options and a regexp like <code>"[Cc][Ss]eq: *[0-9]+ *REGISTER"</code> instead, which acts similarly to tcpdump/dumpcap in terms that it does not maintain any context but it can classify packets by applying regular expressions on their contents. Using the <code>-v</code> option you say that only packets <strong>not</strong> matching the expression should be captured.</p></div>
+            <div class="comment-info" id="comment-57483-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Nov '16, 07:33)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="57505"></a>
+        <div class="comment" id="comment-57505">
+            <div id="post-57505-score" class="comment-score"></div>
+            <div class="comment-text"><p>For the task clarity, I wonder how exactly Port Mirroring works in case of capturing VoIP traffic on a PC via switch from a standalone phone or ATA? Does the PC adapter only receive bidirectional traffic? Or it also transmits some traffic? What "bidirectional port mirror" would mean in this application, as such port is required by some VoIP Recording packages?</p>
+
+<p>Btw, I found your suggestion to disable IP protocol in Properties of the LAN adapter dedicated to capture the mirrored VoIP traffic to work better than set it to DHCP or different subnet. In case of DHCP, various Windows programs tend to randomly select the adapter of higher priority, thus mixing VoIP and web traffic through same adapter. In case of a different subnet, I couldn't capture any traffic through the adapter. I wonder, how exactly disabling IP protocol affects traffic through an adapter?</p></div>
+            <div class="comment-info" id="comment-57505-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Nov '16, 13:48)</span>
+                <a class="comment-user userinfo" href="/users/26233/zamar24">zamar24</a>
+                
+            </div>
+        </div>
+    
+        <a name="57512"></a>
+        <div class="comment" id="comment-57512">
+            <div id="post-57512-score" class="comment-score"></div>
+            <div class="comment-text"><p>"Does the PC adapter only receive bidirectional traffic? Or it also transmits some traffic? "</p>
+
+<p>I think the answer to that is it depends on the switch as I have seen both kinds.</p></div>
+            <div class="comment-info" id="comment-57512-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Nov '16, 22:06)</span>
+                <a class="comment-user userinfo" href="/users/10019/koundi">koundi</a>
+                
+            </div>
+        </div>
+    
+        <a name="57513"></a>
+        <div class="comment" id="comment-57513">
+            <div id="post-57513-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>various Windows programs tend to randomly select the adapter of higher priority</p>
+</blockquote>
+
+<p>Interesting &amp; good to know. Seems like a bug to me (why should Windows choose an adaptor without an IP address assigned for sending IP traffic), but I guess we have to accept it as a fact.</p>
+
+<blockquote>
+<p>how exactly Port Mirroring works in case of capturing VoIP traffic on a PC via switch from a standalone phone or ATA?</p>
+</blockquote>
+
+<p>It's not important whether it is VoIP traffic or any other. What is important is whether you can mirror each direction (ingress, egress) of a given source port to a distinct mirroring port and whether you need it because either the sum of egress and ingress bandwidth exceeds the bandwidth of the mirroring port or the mirroring has problems to handle two source frames starting at the same time.</p>
+
+<p>If mirroring can resolve simultaneous occurrence of frames in both source directions properly (by queueing) and the sum of bandwidths on the source port is lower than the capacity of the mirroring port, you can use a single mirroring port. The only penalty you pay as compared to mirroring each direction separately is lower precision of timestamps (frames which had to wait in the mirroring port's queue will be delayed). At gigabit speeds, the timestamping error caused by this will be negligible compared to the actual jitter caused by WAN, so it won't noticeably affect your jitter analysis.</p></div>
+            <div class="comment-info" id="comment-57513-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Nov '16, 02:14)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-57479" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57479-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/57467/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='qfjjvH61f3sWTisyIaw8gytVcVLwpnuN' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/57467/filtering-in-voip-traffic-with-wireshark?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/57467/filtering-in-voip-traffic-with-wireshark?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/capture-filter/"
+            class="tag-link-capture-filter"
+            title="see questions tagged'capture-filter'using tags"
+            rel="tag">capture-filter</a> <span class="tag-number">&#215;184</span><br/>
+        
+        <a href="/tags/voip/"
+            class="tag-link-voip"
+            title="see questions tagged'voip'using tags"
+            rel="tag">voip</a> <span class="tag-number">&#215;139</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 19, 2016, 4:06 p.m.">19 Nov '16, 16:06</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,834 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 21, 2016, 2:14 a.m.">21 Nov '16, 02:14</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/4929/how-do-i-capture-only-voip-packets-is-there-a-filter-option">How do I capture only VOIP packets, is there a filter option?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12/how-do-you-filter-different-types-of-icmpv6-messages">How do you filter different types of ICMPv6 messages?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7410/required-hardware-for-capture-filter">required hardware for capture filter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13408/tshark-capture-and-display-filters-for-httphttps">TShark: Capture and Display Filters for HTTP/HTTPS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17862/count-connected-computer-to-ap">count connected computer to ap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21191/how-to-capture-the-information-just-for-one-ip-address-t-shark">How to capture the information just for one IP ADDRESS? (T-SHARK)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25901/wireshark-capture-filter-syntax">wireshark capture filter syntax</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31959/how-can-capture-filters-capture-both-tx-and-rx-traffic">How can capture filters capture both Tx and Rx traffic?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37594/tshark-capture-filters">TShark Capture Filters</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42826/how-to-filter-out-tcp-acks">How to filter out TCP ACKs?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

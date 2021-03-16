@@ -1,0 +1,950 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Why Does wireshark not capture any traffic from Source Machine with Outbound Firewall Rules? - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, I was testing on Windows 2008 Standard Edition (Local Machine IP :- 192.168.2.160) with normal windows firewall (no 3rd party) and created an outbound firewall rule to deny for TCP Ports 80/443 of Remote IP (i.e. 192.168.10.104) (and Local Port All as it could be random). The firewall worked fin..." />
+        <meta name="keywords" content="source,wireshark,outboundfirewall,capture" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/11149/why-does-wireshark-not-capture-any-traffic-from-source-machine-with-outbound-firewall-rules" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/11149/why-does-wireshark-not-capture-any-traffic-from-source-machine-with-outbound-firewall-rules?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='IVHVpArTmeMZTMs87YXXSFTfy9vwAbZU' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/11149/why-does-wireshark-not-capture-any-traffic-from-source-machine-with-outbound-firewall-rules">Why Does wireshark not capture any traffic from Source Machine with Outbound Firewall Rules?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-11149-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11149/up/" rel="nofollow"> </a>
+<div id="post-11149-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-11149-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11149/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/11149/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I was testing on Windows 2008 Standard Edition (Local Machine IP :- 192.168.2.160) with normal windows firewall (no 3rd party) and created an outbound firewall rule to deny for TCP Ports 80/443 of Remote IP (i.e. 192.168.10.104) (and Local Port All as it could be random). The firewall worked fine and I could block all outbound traffic to Ports 80/443 of that remote IP. Traffic to same ports on any other remote IP worked just fine.</p>
+<p>However I would have expected wireshark to have picked up the traffic initiation attempt at least from local PC/random ports and drops when matched against remote IP/Port that I have defined in the Outbound Rules.</p>
+<p>== &gt; However I could see absolutely no traffic for this when running wire shark on the Local PC where I had applied such a rule.</p>
+<p>== &gt; Checking the windows Firewall Logs I could see the Drops:- </p>
+<p>2012-05-20 10:08:34 DROP TCP 192.168.2.160 192.168.10.104 49215 80 0 - 0 0 0 - - - SEND</p>
+<p>2012-05-20 10:08:35 DROP TCP 192.168.2.160 192.168.10.104 49216 80 0 - 0 0 0 - - - SEND</p>
+<p>== &gt; So the windows firewall clearly shows the drops then why does that not reflect in the wireshark?</p>
+<p>== &gt; Is it because the Firewall is software based and the request was made via a browser that it never gets sent down beyond the network layer from the App layer of the same PC when Windows firewall and the PC in fact never sends the packet.</p>
+<p>Or is there some setting on wire-shark that can allow such drops to show as well as we can see in the Firewall logs above.</p>
+<p>The main reason for me to ask this I want to clarify the way this works as the traffic not showing could be an issue with:- </p>
+<p>1.) An application as well which might not be able to invoke the lower layers and initiate from source itself. 
+OR,
+2.) It could be an issue with block as well like this and we would not be able to distinguish via packet captures b/w them and more so if no such logs / 3rd party unknown firewall apps are present.</p>
+<p>== &gt; I am not sure if I should have posted this concern in Windows forum or wireshark but since I could see nothing in wire-shark unlike in the Windows Firewall Logs.</p>
+<p>Please suggest</p>
+<p>Regards,
+Prad
+:)</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/source/" class="post-tag tag-link-source"
+                                        title="see questions tagged 'source'" rel="tag">source</a>
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                                    <a href="/tags/outboundfirewall/" class="post-tag tag-link-outboundfirewall"
+                                        title="see questions tagged 'outboundfirewall'" rel="tag">outboundfirewall</a>
+                                
+                                    <a href="/tags/capture/" class="post-tag tag-link-capture"
+                                        title="see questions tagged 'capture'" rel="tag">capture</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 May '12, 22:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a34698968aabc8ad733cd1445d1f4bb2?s=32&amp;d=identicon&amp;r=g" alt="im_prad's gravatar image" />
+    <p><a href="/users/2705/im_prad">im_prad</a><br/>
+    <span class="score" title="5 reputation points">5</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="im_prad has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/11149/">
+                edited
+                <strong>19 May '12, 22:03</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-11149">
+    
+</div>
+<div id="comment-tools-11149" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11149-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/11149/why-does-wireshark-not-capture-any-traffic-from-source-machine-with-outbound-firewall-rules?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/11149/why-does-wireshark-not-capture-any-traffic-from-source-machine-with-outbound-firewall-rules?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/11149/why-does-wireshark-not-capture-any-traffic-from-source-machine-with-outbound-firewall-rules?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/11149/why-does-wireshark-not-capture-any-traffic-from-source-machine-with-outbound-firewall-rules?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="11152"></a>
+                    <div id="answer-container-11152" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-11152-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11152/up/" rel="nofollow"> </a>
+<div id="post-11152-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-11152-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11152/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="im_prad has selected this answer as the correct answer"
+        href="/accept_answer/11152/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Most likely the Windows Firewall will drop the packets before they even get close to the point where dumpcap (which does the actually capture for Wireshark) can see it and pick it up.</p>
+<p>My advice is always the same: if you want to verify if a node behaves like it should, do <strong>not</strong> capture on the node. Capture on a third, passive device, that runs Wireshark and that picks up the nodes packets from a SPAN Port/HUB/TAP. It's the only way to know what really happens (or doesn't happen).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/11152/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 May '12, 05:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-11152">
+    
+        <a name="11430"></a>
+        <div class="comment" id="comment-11430">
+            <div id="post-11430-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the suggestion Jasper,</p>
+
+<p>However if the packet capture from Same system where the firewall is implemented doesn't show in Wireshark, then while capturing for a third, passive device, that runs Wireshark and is port spanned for System where firewall is, will that show the traffic initiation there?</p>
+
+<p>Thanks,
+Prad</p></div>
+            <div class="comment-info" id="comment-11430-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 May '12, 16:49)</span>
+                <a class="comment-user userinfo" href="/users/2705/im_prad">im_prad</a>
+                
+            </div>
+        </div>
+    
+        <a name="11452"></a>
+        <div class="comment" id="comment-11452">
+            <div id="post-11452-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, because if you use a third system that captures the traffic between the other two will see packets that are already "on their way" and on the wire. They can't be "hidden" inside internal OS channels or paths. As long as they have been put on the wire you will see them, unless they get damaged (which means: discarded) or your capture device is too slow to pick them all up.</p></div>
+            <div class="comment-info" id="comment-11452-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 May '12, 10:18)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="11453"></a>
+        <div class="comment" id="comment-11453">
+            <div id="post-11453-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Even when you are on a third system, any traffic originating on the firewall machine and blocked by the firewall (Windows internal, for example) will still not show up, since it never reaches the network. 
+But if you are looking for packets that are managing to evade the firewall in some way and get out anyway, then they will be seen.</p></div>
+            <div class="comment-info" id="comment-11453-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 May '12, 11:47)</span>
+                <a class="comment-user userinfo" href="/users/2397/inetdog">inetdog</a>
+                
+            </div>
+        </div>
+    
+        <a name="11483"></a>
+        <div class="comment" id="comment-11483">
+            <div id="post-11483-score" class="comment-score"></div>
+            <div class="comment-text"><p>Conflicting views here from the experts.</p>
+
+<p>I'll mark this as answered for now as it's on VM and can't test anytime soon with the port span/ 3rd Machine option.</p>
+
+<p>Thanks a lot to all of you here.</p></div>
+            <div class="comment-info" id="comment-11483-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 May '12, 20:15)</span>
+                <a class="comment-user userinfo" href="/users/2705/im_prad">im_prad</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-11152" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11152-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="11155"></a>
+                    <div id="answer-container-11155" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-11155-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/11155/up/" rel="nofollow"> </a>
+<div id="post-11155-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-11155-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/11155/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The Windows 2008 firewall is implemented with the WFP (Windows Filtering Platform), which is implemented deeply in the windows kernel, as one of the core components. Before a packet is allowed, the related stack (e.g. TCP) uses the WFP API to determine if the connection/packet is allowed, according to the filtering rules. </p>
+<p>The NPF driver of WinPcap is implemented as a NDIS protocol driver. Without knowing it for sure, I strongly assume that the NPF filter is located somewhere "below" the windows TCP/IP stack, so you won't see any blocked packets/connections.</p>
+<p>For further reading I recommend these links:</p>
+<blockquote>
+<p><code><a href="http://www.winpcap.org/docs/docs_41b5/html/group__NPF.html">http://www.winpcap.org/docs/docs_41b5/html/group__NPF.html</a></code><br>
+<code><a href="http://msdn.microsoft.com/en-us/library/windows/desktop/aa366510(v=vs.85).aspx">http://msdn.microsoft.com/en-us/library/windows/desktop/aa366510(v=vs.85).aspx</a></code><br>
+<code><a href="http://msdn.microsoft.com/en-us/library/windows/desktop/aa366509(v=vs.85).aspx">http://msdn.microsoft.com/en-us/library/windows/desktop/aa366509(v=vs.85).aspx</a></code><br>
+</p>
+</blockquote>
+<p>Furthermore I second what <a href="/users/145/jasper">@Jasper</a> said. If sniffing is your main interest, please do it "off system". If the internal workings of the Windows Firewall is your main interest, I recommend the links above.</p>
+<p>Regards 
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/11155/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 May '12, 09:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-11155">
+    
+        <a name="11156"></a>
+        <div class="comment" id="comment-11156">
+            <div id="post-11156-score" class="comment-score"></div>
+            <div class="comment-text"><p>You have to keep in mind TCP chimney offloading as well, setting up some kind of "vitrual tunnel" between application/network stack interface and an NDIS capable NIC, which also has an impact on the data wireshark is able to "see".</p>
+
+<p>So I'd always go for a by-system analysis if those question are of interest, because with simply changing the NIC to another driver version / manufacturer things could change at all</p></div>
+            <div class="comment-info" id="comment-11156-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 May '12, 09:21)</span>
+                <a class="comment-user userinfo" href="/users/146/landi">Landi</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-11155" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-11155-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/11149/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='IVHVpArTmeMZTMs87YXXSFTfy9vwAbZU' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/11149/why-does-wireshark-not-capture-any-traffic-from-source-machine-with-outbound-firewall-rules?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/11149/why-does-wireshark-not-capture-any-traffic-from-source-machine-with-outbound-firewall-rules?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+        <a href="/tags/capture/"
+            class="tag-link-capture"
+            title="see questions tagged'capture'using tags"
+            rel="tag">capture</a> <span class="tag-number">&#215;549</span><br/>
+        
+        <a href="/tags/source/"
+            class="tag-link-source"
+            title="see questions tagged'source'using tags"
+            rel="tag">source</a> <span class="tag-number">&#215;40</span><br/>
+        
+        <a href="/tags/outboundfirewall/"
+            class="tag-link-outboundfirewall"
+            title="see questions tagged'outboundfirewall'using tags"
+            rel="tag">outboundfirewall</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 19, 2012, 10 p.m.">19 May '12, 22:00</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>14,311 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 30, 2012, 8:15 p.m.">30 May '12, 20:15</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/16705/wireshark-capture-crashing">Wireshark Capture Crashing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9080/implementing-autostop-condition-on-packet-capture">implementing autostop condition on packet capture!</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2911/windows-vista-there-are-no-interfaces-on-which-a-capture-can-be-done">Windows Vista : There are no interfaces on which a capture can be done</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42141/port-mirroring-cannot-capture-all-traffic-from-my-virtual-machines">port mirroring: Cannot capture all traffic from my virtual machines.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45634/start-button-not-appearing-and-cant-capture">Start button not appearing and can&#39;t capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8574/wireshark-teardrop-attack-help">Wireshark teardrop attack help</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10545/sasl-gss-api-privacy">SASL GSS-API Privacy</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36096/capture-data-in-wireshark-through-switch">Capture data in wireshark through Switch</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42736/dissection-bug-live-capture">Dissection Bug (Live Capture)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45383/enhancements-to-dissector-code-by-integrating-other-free-software">Enhancements to dissector code by integrating other free software</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

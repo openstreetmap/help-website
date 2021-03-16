@@ -1,0 +1,1091 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>PSH, ACK; FIN, ACK; PSH, ACK; RST,ACK; - Wireshark Q&amp;A</title>
+        <meta name="description" content="i copied the picture url::https://i.stack.imgur.com/ORq6X.png 1) 53165-&amp;gt;8475 Psh,Ack Len 57; 2) 53165-&amp;gt;8475 Fin,Ack len 0; 3) 8475 -&amp;gt;53165 Psh,Ack len 0; 4) 53165-&amp;gt;8475 Rst,Ack len 0 My scenario:: 53165(windows server) is the source 8475(mainframe -OS/400) is the destination machine 5316..." />
+        <meta name="keywords" content="tcpdump,tcp" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/59621/psh-ack-fin-ack-psh-ack-rstack" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/59621/psh-ack-fin-ack-psh-ack-rstack?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='XATgQrsaLGYYlxtsHq8vF5BzENOenEGN' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/59621/psh-ack-fin-ack-psh-ack-rstack">PSH, ACK; FIN, ACK; PSH, ACK; RST,ACK;</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-59621-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/59621/up/" rel="nofollow"> </a>
+<div id="post-59621-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-59621-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/59621/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/59621/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>i copied the picture url::<a href="https://i.stack.imgur.com/ORq6X.png">https://i.stack.imgur.com/ORq6X.png</a></p>
+<p>1) 53165-&gt;8475 Psh,Ack Len 57; 2) 53165-&gt;8475 Fin,Ack len 0; 3) 8475 -&gt;53165 Psh,Ack len 0; 4) 53165-&gt;8475 Rst,Ack len 0</p>
+<p>My scenario:: 53165(windows server) is the source 8475(mainframe -OS/400) is the destination machine</p>
+<p>53165(Source) port sending data and waiting for the response from port 8475.</p>
+<p>8475(destination) takes 15 minutes to execute and will reply back but unfortunately tcp connection is getting closed after 2 minutes So the source is never getting the result back.
+I have to correct this.</p>
+<p>Please explain which system is responsible for closing the connection? Can you explain me what is happening? Why the connection is getting closed?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tcpdump/" class="post-tag tag-link-tcpdump"
+                                        title="see questions tagged 'tcpdump'" rel="tag">tcpdump</a>
+                                
+                                    <a href="/tags/tcp/" class="post-tag tag-link-tcp"
+                                        title="see questions tagged 'tcp'" rel="tag">tcp</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Feb '17, 14:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2705247ac3328f077563d5d249ca74ac?s=32&amp;d=identicon&amp;r=g" alt="vaibhav_v's gravatar image" />
+    <p><a href="/users/27970/vaibhav_v">vaibhav_v</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="vaibhav_v has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/59621/">
+                edited
+                <strong>23 Feb '17, 14:53</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-59621">
+    
+</div>
+<div id="comment-tools-59621" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-59621-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/59621/psh-ack-fin-ack-psh-ack-rstack?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/59621/psh-ack-fin-ack-psh-ack-rstack?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/59621/psh-ack-fin-ack-psh-ack-rstack?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/59621/psh-ack-fin-ack-psh-ack-rstack?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="59622"></a>
+                    <div id="answer-container-59622" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-59622-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/59622/up/" rel="nofollow"> </a>
+<div id="post-59622-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-59622-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/59622/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The Client (Port 53165) closes the Connection with a FIN packet.
+That is no problem normally the mainframe is allowed to send his data as long as he sends a FIN, too.
+But when the Mainframe ACKs the FIN, the Client terminates teh Session with an RST and no more data is allowed to send.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/59622/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Feb '17, 14:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3b24b339fc62fb46dced6a443d3202ea?s=32&amp;d=identicon&amp;r=g" alt="Christian_R's gravatar image" />
+    <p><a href="/users/16160/christian_r">Christian_R</a><br/>
+    <span class="score" title="1830 reputation points"><span class="">1.8k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="25 badges"><span class="bronze">&#9679;</span><span class="badgecount">25</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Christian_R has 25 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-59622">
+    
+        <a name="59623"></a>
+        <div class="comment" id="comment-59623">
+            <div id="post-59623-score" class="comment-score"></div>
+            <div class="comment-text"><p>"But when the Mainframe ACKs the FIN,"</p>
+
+<p>mainframe cannot send the data until 15 minutes. It takes 15 minutes for mainframe to execute the request.
+So the underlying protocol TCP(mainframe) do not has any response other than zero bytes.</p>
+
+<p>So mainframe cannot send the data as soon as it recieved FIN.</p></div>
+            <div class="comment-info" id="comment-59623-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Feb '17, 14:54)</span>
+                <a class="comment-user userinfo" href="/users/27970/vaibhav_v">vaibhav_v</a>
+                
+            </div>
+        </div>
+    
+        <a name="59627"></a>
+        <div class="comment" id="comment-59627">
+            <div id="post-59627-score" class="comment-score"></div>
+            <div class="comment-text"><p>The mainframe can't send data after it has received the client's Reset.</p>
+
+<p>It appears that your client is timing out the connection - probably due to no activity.  You need to be focussing on how to make the client keep the connection open for longer.</p>
+
+<p>Or can you make the PC and/or mainframe keep the connection going by sending Keep-Alive packets.</p></div>
+            <div class="comment-info" id="comment-59627-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Feb '17, 19:35)</span>
+                <a class="comment-user userinfo" href="/users/26122/philst">Philst</a>
+                
+            </div>
+        </div>
+    
+        <a name="59635"></a>
+        <div class="comment" id="comment-59635">
+            <div id="post-59635-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you, i will try that.
+Actually I dont know i can do that because i am calling a .net program which is using tcp.</p></div>
+            <div class="comment-info" id="comment-59635-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Feb '17, 09:27)</span>
+                <a class="comment-user userinfo" href="/users/27970/vaibhav_v">vaibhav_v</a>
+                
+            </div>
+        </div>
+    
+        <a name="59636"></a>
+        <div class="comment" id="comment-59636">
+            <div id="post-59636-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do you use z/OS or which OS does the Mainframe use?</p></div>
+            <div class="comment-info" id="comment-59636-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Feb '17, 11:27)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="59639"></a>
+        <div class="comment" id="comment-59639">
+            <div id="post-59639-score" class="comment-score"></div>
+            <div class="comment-text"><p>As it is long time ago I have worked with z/OS, here is what I googled for z/OS at the TCPIP.Profile configuration Reference, but maybe <a href="/users/4668/mreede">@mrEEde</a> could help you further: </p>
+
+<pre><code>INTERVAL default_keepalive_interval
+    The default TCP keepalive interval for applications that enable the SO_KEEPALIVE socket option and do not override the interval using the TCP_KEEPALIVE socket option. The range is 0 - 35791 minutes, and the default is 120. A value of 0 disables the keepalive function, so that sockets for which SO_KEEPALIVE is specified do not perform TCP keepalive. In this case, sockets specifying a specific interval using TCP_KEEPALIVE continue to send keepalive probes.
+
+    TCP keepalive probes end TCP connections after a period of inactivity. TCP keepalive is disabled by default for a connection, but can be enabled by issuing the SO_KEEPALIVE or TCP_KEEPALIVE socket options. The TCP_KEEPALIVE socket option enables the application to specify the keepalive probe interval, while the SO_KEEPALIVE socket option uses default_keepalive_interval as the interval.
+
+    After the interval has expired, TCP sends a single keepalive probe to the peer. If the TCP_KEEPALIVE socket option is not used to specify the probe interval, a total of ten probes are then sent at 75-second intervals if no response is received from the peer. If no response has been received 75 seconds after the last probe, the connection is reset. If TCP_KEEPALIVE is used to specify the keepalive probe interval, the number of probes and the interval between the probes might differ depending on the interval specified.
+</code></pre></div>
+            <div class="comment-info" id="comment-59639-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Feb '17, 11:39)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="59641"></a>
+        <div class="comment not_top_scorer" id="comment-59641">
+            <div id="post-59641-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am doing research on what you just informed, I will keep you posted.</p></div>
+            <div class="comment-info" id="comment-59641-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Feb '17, 13:25)</span>
+                <a class="comment-user userinfo" href="/users/27970/vaibhav_v">vaibhav_v</a>
+                
+            </div>
+        </div>
+    
+        <a name="59644"></a>
+        <div class="comment not_top_scorer" id="comment-59644">
+            <div id="post-59644-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/16160/christian_r">@Christian_R</a> </p>
+
+<p>Can you summarize what happening with my request?
+Client(windows-53165) closes the connection with FIN and Mainframe acknowledges the FIN.So client terminates the session.</p>
+
+<p>So here the culprit is mainframe's configuration right? As mainframe acknowledges the fin.</p>
+
+<p>So i have to correct the mainframe tcp ip configuration, not the windows.
+Is it right?</p></div>
+            <div class="comment-info" id="comment-59644-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Feb '17, 14:31)</span>
+                <a class="comment-user userinfo" href="/users/27970/vaibhav_v">vaibhav_v</a>
+                
+            </div>
+        </div>
+    
+        <a name="59645"></a>
+        <div class="comment not_top_scorer" id="comment-59645">
+            <div id="post-59645-score" class="comment-score"></div>
+            <div class="comment-text"><p>Please look at the successful process's trace here::</p>
+
+<p><img src="https://i.stack.imgur.com/pWW2J.png" width="640"></p>
+
+<p>52531 - windows(client) , 8475- mainframe (server) </p>
+
+<pre><code>1) 52531-&gt;8475 Psh,Ack Len 57;
+2) 52531-&gt;8475 Fin,Ack len 0;
+3) 8475-&gt;52531 Psh,Ack len=0
+4) 8475-&gt;52531 Psh,Ack len=38
+5) 8475-&gt;52531 Fin,Psh,Ack len=0
+6) 52531-&gt;8475 Ack Len=0
+</code></pre>
+
+<p>I removed the delay, now the server(mainframe) responds immediately so i got the success.</p>
+
+<p>But in reality, my process will have the 15 min delay. So i have to correct this.</p></div>
+            <div class="comment-info" id="comment-59645-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Feb '17, 14:42)</span>
+                <a class="comment-user userinfo" href="/users/27970/vaibhav_v">vaibhav_v</a>
+                
+            </div>
+        </div>
+    
+        <a name="59646"></a>
+        <div class="comment not_top_scorer" id="comment-59646">
+            <div id="post-59646-score" class="comment-score"></div>
+            <div class="comment-text"><p>OS/400 - is the OS for mainframe</p></div>
+            <div class="comment-info" id="comment-59646-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Feb '17, 14:54)</span>
+                <a class="comment-user userinfo" href="/users/27970/vaibhav_v">vaibhav_v</a>
+                
+            </div>
+        </div>
+    
+        <a name="59647"></a>
+        <div class="comment not_top_scorer" id="comment-59647">
+            <div id="post-59647-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well the mainframe reacts correct. Would be helpful if you could share the trace or at least the time column</p></div>
+            <div class="comment-info" id="comment-59647-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Feb '17, 14:58)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="59648"></a>
+        <div class="comment not_top_scorer" id="comment-59648">
+            <div id="post-59648-score" class="comment-score"></div>
+            <div class="comment-text"><p>windows(client) , 8475- mainframe (server) </p>
+
+<p><strong>Failure::</strong>
+<img src="https://i.stack.imgur.com/twlop.png" width="640"></p>
+
+<p>Client sends the request, mainframe takes 15 minutes to execute the request. So mainframe cannot send any response until 15 minutes.
+Getting an error after 2 minutes on the client side.</p>
+
+<pre><code>Error::
+{"HISMDTT0006 The DPCTransport received a socket error while attempting to receive user data when processing method P4667. IP Address: xx.xxx.xxxxx.xxxx, port: 8475, program name: P4667, Error description: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+</code></pre>
+
+<p><strong>Success::</strong>
+<img src="https://i.stack.imgur.com/xXkgo.png" width="640"></p>
+
+<p>Client sends request, This scenario mainframe only takes 5 secs to execute the request. So Client(windows) is getting back the response back .</p>
+
+<p>Can you help me who is the culprit mainframe(server- 8475 port) or windows(client)?</p></div>
+            <div class="comment-info" id="comment-59648-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Feb '17, 15:32)</span>
+                <a class="comment-user userinfo" href="/users/27970/vaibhav_v">vaibhav_v</a>
+                
+            </div>
+        </div>
+    
+        <a name="59658"></a>
+        <div class="comment not_top_scorer" id="comment-59658">
+            <div id="post-59658-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi <a href="/users/27970/vaibhav_v"></a><a href="/users/27970/vaibhav_v">@vaibhav_V</a> I have converted your answers to comments, as they are more comments for me.</p>
+
+<p>Thank you for the timings. Yeah now we clearly can see the things. Well The windows system terminates the session 2 minutes after the FIN which would be ok. 
+ So now you can do different things from my point of view.</p>
+
+<ol>
+<li>The windows client should finish (FIN) the session first after he receives the answer from the mainframe (my preffered way)</li>
+<li>Try to play with keepalives </li>
+<li>Try to play with the FINWAIT1 Timer at client side</li>
+</ol></div>
+            <div class="comment-info" id="comment-59658-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '17, 03:55)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="59662"></a>
+        <div class="comment not_top_scorer" id="comment-59662">
+            <div id="post-59662-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/16160/christian_r"></a><a href="/users/16160/christian_r">@Christian_R</a> </p>
+
+<p>I already played with Below entries in windows(client).
+“TcpTimedWaitDelay=300”, “TcpMaxDataRetransmissions= 5” ; “KeepAliveInterval= 1” ;StrictTimeWaitSeqCheck=1 and other.
+Nothing really helped.
+As you have mentioned i will try again, to makesure.</p>
+
+<p>Please check my windows(client) registry entries::<img alt="alt text" src="https://i.stack.imgur.com/sP5n9.png"></p>
+
+<p>At comment section i am unable to add image- there is no image icon that is why i am posting as an answer so that i can copy url as an image.</p></div>
+            <div class="comment-info" id="comment-59662-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '17, 07:51)</span>
+                <a class="comment-user userinfo" href="/users/27970/vaibhav_v">vaibhav_v</a>
+                
+            </div>
+        </div>
+    
+        <a name="59664"></a>
+        <div class="comment not_top_scorer" id="comment-59664">
+            <div id="post-59664-score" class="comment-score"></div>
+            <div class="comment-text"><p>""""TCPIP driver won’t start sending TCP Keepalives until Keepalives are enabled via various methods at upper layers (layers above TCPIP driver). """
+Source:: <a href="https://blogs.technet.microsoft.com/nettracer/2010/06/03/things-that-you-may-want-to-know-about-tcp-keepalives/">https://blogs.technet.microsoft.com/nettracer/2010/06/03/things-that-you-may-want-to-know-about-tcp-keepalives/</a></p>
+
+<p>above link says, i have to set those values explicitly by program otherwise those registry values will remain ineffective.</p></div>
+            <div class="comment-info" id="comment-59664-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '17, 08:11)</span>
+                <a class="comment-user userinfo" href="/users/27970/vaibhav_v">vaibhav_v</a>
+                
+            </div>
+        </div>
+    
+        <a name="59676"></a>
+        <div class="comment not_top_scorer" id="comment-59676">
+            <div id="post-59676-score" class="comment-score"></div>
+            <div class="comment-text"><p>If I were you I would really try to tune the client application behaviour. Or to find out why the mainframe needs 15 Minutes????</p></div>
+            <div class="comment-info" id="comment-59676-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Feb '17, 20:52)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="59712"></a>
+        <div class="comment not_top_scorer" id="comment-59712">
+            <div id="post-59712-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you, i will try the same.</p></div>
+            <div class="comment-info" id="comment-59712-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '17, 08:51)</span>
+                <a class="comment-user userinfo" href="/users/27970/vaibhav_v">vaibhav_v</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-59622" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 16
+        </span>
+        <a href="#" class="show-all-comments-link">show 11 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-59622-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/59621/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='XATgQrsaLGYYlxtsHq8vF5BzENOenEGN' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/59621/psh-ack-fin-ack-psh-ack-rstack?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/59621/psh-ack-fin-ack-psh-ack-rstack?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tcp/"
+            class="tag-link-tcp"
+            title="see questions tagged'tcp'using tags"
+            rel="tag">tcp</a> <span class="tag-number">&#215;752</span><br/>
+        
+        <a href="/tags/tcpdump/"
+            class="tag-link-tcpdump"
+            title="see questions tagged'tcpdump'using tags"
+            rel="tag">tcpdump</a> <span class="tag-number">&#215;97</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 22, 2017, 2:25 p.m.">22 Feb '17, 14:25</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>8,225 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 27, 2017, 8:51 a.m.">27 Feb '17, 08:51</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/29095/server-stops-reading-tcp-stream-after-it-sends-a-tcp-window-update">Server stops reading TCP stream after it sends a TCP Window update</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7268/http-continuation-vs-tcp-segment">HTTP Continuation vs. TCP segment</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37811/intrepreting-tcp-packet-from-server-to-client-with-tcpdump">Intrepreting TCP packet from server to client with TCPDUMP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58909/tcp-rest-after-sync-ack-from-server">TCP REST after SYNC-ACK from Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37911/tcp-dump-cannot-understand-these-4-lines">TCP Dump, cannot understand these 4 lines?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32918/percentage-of-tcp-traffic-to-total-traffic">Percentage of TCP traffic to Total Traffic</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33638/packet-count">packet count</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61389/tcpdump-capture-packets">tcpdump - capture packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61406/tcp-state-of-incoming-packets-tcpdump">TCP state of incoming packets - tcpdump</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34231/no-root-privileges-packet-size-limited-during-capture">No root privileges: Packet size limited during capture</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

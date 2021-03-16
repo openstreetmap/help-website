@@ -1,0 +1,927 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Updating COL_INFO column after packet visited - Wireshark Q&amp;A</title>
+        <meta name="description" content="I am writing a custom protocol dissector for our protocol layered on top of UDP. From the protocol header I can determine various packet attributes which allows me to group the packets into conversations of related data and ack packets.  As part of the protocol header I have a source channel ID whic..." />
+        <meta name="keywords" content="info,col_info,update,cinfo" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/26290/updating-col_info-column-after-packet-visited" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/26290/updating-col_info-column-after-packet-visited?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='H5UqTwqXkQWtziXeNye2xMbXouS1YZ53' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/26290/updating-col_info-column-after-packet-visited">Updating COL_INFO column after packet visited</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-26290-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26290/up/" rel="nofollow"> </a>
+<div id="post-26290-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-26290-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26290/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/26290/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am writing a custom protocol dissector for our protocol layered on top of UDP. From the protocol header I can determine various packet attributes which allows me to group the packets into conversations of related data and ack packets. </p>
+<p>As part of the protocol header I have a source channel ID which I extract and store in the conversation. The source channel ID from the first data packet and return ack can be used to create a source / destination channel pair which I want to use in the COL_INFO info column, for example "data packet from 3 &gt; 7", however when the first packet is initially dissected I only know the source channel ID as I have not seen the ack containing the destination ID. This results in the Info column for the first packet only being able to show the source ID and not the destination ID as its unknown at the point the info is constructed, however subsequent packets after the ack is received can be displayed with the full source and destination channel ID data in the info column.</p>
+<p>Is there anyway to go back and update the Info column of a packet, for example when its selected in the GUI and re-dissected, so I can correct the text based on the collected conversation data? I had hoped that the info column would be recreated each time the packet dissector function is run but now I realise that the packets cinfo pointer is NULL on subsequent dissector calls.</p>
+<p>Surely this is not an unusual thing to need to do, i.e. update an Info column text based on information not necessarily available when dissecting an individual packet but amassed as a result of dissecting multiple packets in say a conversation.</p>
+<p>Any help welcome, thanks.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/info/" class="post-tag tag-link-info"
+                                        title="see questions tagged 'info'" rel="tag">info</a>
+                                
+                                    <a href="/tags/col_info/" class="post-tag tag-link-col_info"
+                                        title="see questions tagged 'col_info'" rel="tag">col_info</a>
+                                
+                                    <a href="/tags/update/" class="post-tag tag-link-update"
+                                        title="see questions tagged 'update'" rel="tag">update</a>
+                                
+                                    <a href="/tags/cinfo/" class="post-tag tag-link-cinfo"
+                                        title="see questions tagged 'cinfo'" rel="tag">cinfo</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Oct '13, 08:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6812a2b96d35b55d32826ff02fea6b92?s=32&amp;d=identicon&amp;r=g" alt="Mike%20the%20TV's gravatar image" />
+    <p><a href="/users/5918/mike-the-tv">Mike the TV</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Mike the TV has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-26290">
+    
+        <a name="26351"></a>
+        <div class="comment" id="comment-26351">
+            <div id="post-26351-score" class="comment-score"></div>
+            <div class="comment-text"><p>Interestingly I notice I get different results depending upon whether the packets are dissected from a live capture or a saved file. From the saved file the final conversation data seems to get used when setting the COL_INFO column so I get the correct packet destination ID.</p>
+
+<p>That said I have also seen consecutive live captures display the COL_INFO data differently. For example my protocol has an end of message marker which obviously only can be determined once the last packet is received, however for display I was setting the notification that the EOM was missing in the COL_INFO column of all packets in the message. Sometimes the first packet which is dissected in the protocol gets marked with the no EOM tag despite the message having an EOM, but the rest of the packets don't get marked with the no EOM tag, seeming to suggest that the cinfo field only goes NULL after some period of time thereby allowing some of the later packets info field to be updated with the correct error tags once the whole conversation has been processed. </p>
+
+<p>On other captures however all packets, even the first, get tagged correctly, i.e. no rouge EOM errors.</p>
+
+<p>At what point in the dissection process does the cinfo field become invalid and the text in the COL_INFO field read-only?</p></div>
+            <div class="comment-info" id="comment-26351-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '13, 01:08)</span>
+                <a class="comment-user userinfo" href="/users/5918/mike-the-tv">Mike the TV</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-26290" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26290-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/26290/updating-col_info-column-after-packet-visited?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/26290/updating-col_info-column-after-packet-visited?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/26290/updating-col_info-column-after-packet-visited?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/26290/updating-col_info-column-after-packet-visited?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="26352"></a>
+                    <div id="answer-container-26352" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-26352-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/26352/up/" rel="nofollow"> </a>
+<div id="post-26352-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-26352-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/26352/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Packets are only scanned secuentially on the first pass when column info (should) be written,
+subsequent visits to packets happens when they are vissible in the GUI basing coulmn info on that would be unreliably. Fist you get one info then you scroll down in the list and go back and something different is shown.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/26352/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Oct '13, 01:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2d3d425a7a829209431fb38d326b53af?s=32&amp;d=identicon&amp;r=g" alt="Anders's gravatar image" />
+    <p><a href="/users/42/anders">Anders ♦</a><br/>
+    <span class="score" title="4578 reputation points"><span class="">4.6k</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="52 badges"><span class="bronze">&#9679;</span><span class="badgecount">52</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Anders has 56 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-26352">
+    
+        <a name="26353"></a>
+        <div class="comment" id="comment-26353">
+            <div id="post-26353-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the reply. So should I not be adding text to the COL_INFO column which can only be determined based on whole conversation data? </p>
+
+<p>Should the COL_INFO column be limited to just data decoded from the current packet only in isolation?</p>
+
+<p>How would you therefore alert a user to packets making up a bad conversation if it's not possible to update the COL_INFO column after processing the packets on the first pass, at which time you may not know if the conversation is bad? I know you can add it to the protocol tree pane, and I do also, but having to scroll through each packet to see when a conversation is bad would be a pain, the COL_INFO column seems to naturally provide a nice summary area to indicate this?</p>
+
+<p>Also why do I sometimes see the correct information in the COL_INFO column which could only be determined from conversation data obtained from later packets if the COL_INFO field is only available for update when dissecting the packet on the first pass?</p>
+
+<p>It also seems that the processing behaviour is inconsistent when you capture packets live compared to loading a capture from file, does the scanning work differently when loading from a file?</p></div>
+            <div class="comment-info" id="comment-26353-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '13, 02:46)</span>
+                <a class="comment-user userinfo" href="/users/5918/mike-the-tv">Mike the TV</a>
+                
+            </div>
+        </div>
+    
+        <a name="26355"></a>
+        <div class="comment" id="comment-26355">
+            <div id="post-26355-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually I don't think the packet processing in live captures is as straightforward as you say which may explain why sometime I see it generate the correct COL_INFO text. </p>
+
+<p>I added some debug to my dissector in my set_info_column_summary() function which I call on every packet after the update_conversation_data() function. This latter function is the one which determines the src and dst channel IDs from my packets, each packet only containing the src channel ID, therefore to get the full src/dst pair the conversation update function must have seen the first and second (ACK) packet in each conversation. This src/dst pair is used to set the channel IDs in the COL_INFO column.</p>
+
+<p>pkt 5 is the start of a new conversation. From its packet I can determine the src chan as 4, dst chan is unknown -1. Interestingly cinfo pointer is NULL. </p>
+
+<p>pkt 6 is the ACK reply which gives us the dst chan ID of 0, again the cinfo field is NULL. pkt 5 and 6 then get dissected again with a valid cinfo and by now I know both src and dst channel IDs so the Info field gets set correctly. </p>
+
+<p>pkts 7-13 then get processed all with cinfo NULL the first time, then again with valid cinfo.</p>
+
+<p>I am confused as sometimes it works, sometimes it don't?</p>
+
+<pre><code>Pkt 5: new conversation
+Pkt 5: Src chan = 4, dst chan = -1, cinfo = 0x00000000
+Pkt 6: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 5: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 6: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 7: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 8: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 9: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 10: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 11: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 12: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 13: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 7: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 8: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 9: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 10: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 11: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 12: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 13: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 12: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+</code></pre></div>
+            <div class="comment-info" id="comment-26355-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '13, 03:50)</span>
+                <a class="comment-user userinfo" href="/users/5918/mike-the-tv">Mike the TV</a>
+                
+            </div>
+        </div>
+    
+        <a name="26356"></a>
+        <div class="comment" id="comment-26356">
+            <div id="post-26356-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK here's a time when it put unknown for the destination channel ID in the COL_INFO column for the first conversation packet.</p>
+
+<pre><code>Pkt 27: new conversation
+Pkt 27: Src chan = 4, dst chan = -1, cinfo = 0x00000000
+Pkt 27: Src chan = 4, dst chan = -1, cinfo = 0x3f9f9138
+Pkt 28: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 29: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 30: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 31: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 32: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 33: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 34: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 35: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 36: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 37: Src chan = 4, dst chan = 0, cinfo = 0x00000000
+Pkt 28: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 29: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 30: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 31: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 32: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 33: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 34: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 35: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 36: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+Pkt 37: Src chan = 4, dst chan = 0, cinfo = 0x3f9f9138
+</code></pre></div>
+            <div class="comment-info" id="comment-26356-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '13, 04:03)</span>
+                <a class="comment-user userinfo" href="/users/5918/mike-the-tv">Mike the TV</a>
+                
+            </div>
+        </div>
+    
+        <a name="26358"></a>
+        <div class="comment" id="comment-26358">
+            <div id="post-26358-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think it's better to ask this type of questions on the developper mailing list</p></div>
+            <div class="comment-info" id="comment-26358-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '13, 05:25)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26364"></a>
+        <div class="comment" id="comment-26364">
+            <div id="post-26364-score" class="comment-score"></div>
+            <div class="comment-text"><p>I sort of thought this was. I'll go and look for that list instead. Thanks.</p></div>
+            <div class="comment-info" id="comment-26364-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '13, 06:13)</span>
+                <a class="comment-user userinfo" href="/users/5918/mike-the-tv">Mike the TV</a>
+                
+            </div>
+        </div>
+    
+        <a name="26366"></a>
+        <div class="comment not_top_scorer" id="comment-26366">
+            <div id="post-26366-score" class="comment-score"></div>
+            <div class="comment-text"><p>See here:</p>
+
+<blockquote>
+<p><a href="https://www.wireshark.org/mailman/listinfo/wireshark-dev">https://www.wireshark.org/mailman/listinfo/wireshark-dev</a></p>
+</blockquote></div>
+            <div class="comment-info" id="comment-26366-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '13, 06:53)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-26352" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-26352-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/26290/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='H5UqTwqXkQWtziXeNye2xMbXouS1YZ53' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/26290/updating-col_info-column-after-packet-visited?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/26290/updating-col_info-column-after-packet-visited?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/info/"
+            class="tag-link-info"
+            title="see questions tagged'info'using tags"
+            rel="tag">info</a> <span class="tag-number">&#215;33</span><br/>
+        
+        <a href="/tags/update/"
+            class="tag-link-update"
+            title="see questions tagged'update'using tags"
+            rel="tag">update</a> <span class="tag-number">&#215;18</span><br/>
+        
+        <a href="/tags/col_info/"
+            class="tag-link-col_info"
+            title="see questions tagged'col_info'using tags"
+            rel="tag">col_info</a> <span class="tag-number">&#215;6</span><br/>
+        
+        <a href="/tags/cinfo/"
+            class="tag-link-cinfo"
+            title="see questions tagged'cinfo'using tags"
+            rel="tag">cinfo</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 22, 2013, 8:32 a.m.">22 Oct '13, 08:32</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,144 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 24, 2013, 6:53 a.m.">24 Oct '13, 06:53</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/901/expertmessage-window-update">expert.message == &quot;Window update&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/63222/disable-update-check">Disable update check</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18428/expert-info">expert info</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60474/can-the-ble-info-be-configured-for-specific-data">Can the BLE Info be configured for specific data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6675/detecting-static-route-update-contents-in-a-wireshark-trace">detecting static route update contents in a wireshark trace</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2128/deleting-error-packets">deleting error packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18480/info-column-auto-wrapping">Info column auto-wrapping</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21208/how-to-display-multiline-col_info">How to display multiline COL_INFO ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8256/auto-update-check">Auto-update check</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2517/trace-pane-shows-incorrect-info-message">Trace pane shows incorrect info message</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

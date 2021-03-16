@@ -1,0 +1,939 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Is there a &quot;Quick Reference&quot; for using DUMPCAP? - Wireshark Q&amp;A</title>
+        <meta name="description" content="I have need to run captures for a protracted period of time to try and catch an elusive problem. I need to be able to set capture filters for two IP hosts and I want to span multiple files, changing every 4 hours and I would like to be able to leave this running for several days without manual inter..." />
+        <meta name="keywords" content="dumpcap" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/6320/is-there-a-quick-reference-for-using-dumpcap" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/6320/is-there-a-quick-reference-for-using-dumpcap?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hlHpMvuwuo5IxMAEaptwb2CEIpMrolqI' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/6320/is-there-a-quick-reference-for-using-dumpcap">Is there a &quot;Quick Reference&quot; for using DUMPCAP?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-6320-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6320/up/" rel="nofollow"> </a>
+<div id="post-6320-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-6320-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6320/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/6320/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have need to run captures for a protracted period of time to try and catch an elusive problem. I need to be able to set capture filters for two IP hosts and I want to span multiple files, changing every 4 hours and I would like to be able to leave this running for several days without manual intervention. </p>
+<p>I've been using Wireshark and have hit the "End of Memory" bug a few times now... The instructions for DUMPCAP are not terribly intuitive. </p>
+<p>Is there a "Quick Reference" for dumpcap with sample commands to do specific sorts of tasks? I could try and hack my way thru this, but I'm hoping there is an easier way... I just lack the time to become a dumpcap specialist and meet my current deadlines. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/dumpcap/" class="post-tag tag-link-dumpcap"
+                                        title="see questions tagged 'dumpcap'" rel="tag">dumpcap</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Sep '11, 08:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5e08be60267d16d727d058a0eb799c94?s=32&amp;d=identicon&amp;r=g" alt="NCPman's gravatar image" />
+    <p><a href="/users/1595/ncpman">NCPman</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="NCPman has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/6320/">
+                edited
+                <strong>13 Sep '11, 09:00</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/362ba1008ad9a075d1556d33e97dfed6?s=32&amp;d=identicon&amp;r=g" alt="helloworld's gravatar image" />
+            <p><a href="/users/817/helloworld">helloworld</a><br/>
+            <span class="score" title="3149 reputation points"><span class="">3.1k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="20 badges"><span class="silver">&#9679;</span><span class="badgecount">20</span></span><span title="41 badges"><span class="bronze">&#9679;</span><span class="badgecount">41</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-6320">
+    
+</div>
+<div id="comment-tools-6320" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6320-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/6320/is-there-a-quick-reference-for-using-dumpcap?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/6320/is-there-a-quick-reference-for-using-dumpcap?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/6320/is-there-a-quick-reference-for-using-dumpcap?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/6320/is-there-a-quick-reference-for-using-dumpcap?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="6322"></a>
+                    <div id="answer-container-6322" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6322-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6322/up/" rel="nofollow"> </a>
+<div id="post-6322-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-6322-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6322/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Run $ dumpcap -h or see the <a href="http://www.wireshark.org/docs/man-pages/dumpcap.html">man-page</a> for more information.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6322/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Sep '11, 08:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fac200552b0c24be2bc93a740bd54d0d?s=32&amp;d=identicon&amp;r=g" alt="joke's gravatar image" />
+    <p><a href="/users/100/joke">joke</a><br/>
+    <span class="score" title="1278 reputation points"><span class="">1.3k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="34 badges"><span class="bronze">&#9679;</span><span class="badgecount">34</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="joke has 6 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6322">
+    
+        <a name="6351"></a>
+        <div class="comment" id="comment-6351">
+            <div id="post-6351-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The manual page could use an Examples section.</p></div>
+            <div class="comment-info" id="comment-6351-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Sep '11, 03:55)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6322" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6322-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="6323"></a>
+                    <div id="answer-container-6323" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6323-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6323/up/" rel="nofollow"> </a>
+<div id="post-6323-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-6323-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6323/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If by "the instructions for DUMPCAP are not terribly intuitive" you mean the instructions you get when you click on Help &gt; Manual Pages &gt; Dumpcap, well, that is the quick reference. Everything you want to do is listed there.</p>
+<p>First, run "dumpcap -D" to get a list of the interfaces on your system.</p>
+<p>You'll want these options:</p>
+<p>-i n    Where 'n' is the number of the interface you want to capture on.</p>
+<p>-b duration:14400  To specify that dumpcap should start a new file after four hours (14400 seconds).</p>
+<p>-f "ip host 192.168.1.1 or ip host 192.168.10.10" To specify a capture filter for two IP hosts.</p>
+<p>-w filename.pcap  To specify the base filename for your capture files.</p>
+<p>So, putting it all together, you'll have something like:</p>
+<p>dumpcap -i 1 -b duration:14400 -f "ip host 192.168.1.1 or ip host 192,168.10.10" -w filename.pcap</p>
+<p>It sounds like you already are able to do this in the GUI, but you run into End of Memory errors. Four hours is a long time to capture on a busy network. Perhaps you could do this successfully from the GUI if you shortened the time interval so that the amount of data Wireshark has to keep in memory at one time is smaller.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6323/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Sep '11, 08:50</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/071fe61f64868d98bdf4eb060b63b6ca?s=32&amp;d=identicon&amp;r=g" alt="Jim%20Aragon's gravatar image" />
+    <p><a href="/users/527/jim-aragon">Jim Aragon</a><br/>
+    <span class="score" title="7187 reputation points"><span class="">7.2k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="33 badges"><span class="silver">&#9679;</span><span class="badgecount">33</span></span><span title="118 badges"><span class="bronze">&#9679;</span><span class="badgecount">118</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jim Aragon has 70 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6323">
+    
+        <a name="6325"></a>
+        <div class="comment" id="comment-6325">
+            <div id="post-6325-score" class="comment-score">2</div>
+            <div class="comment-text"><blockquote>
+<p>if you shortened the time interval so that the amount of data 
+Wireshark has to keep in memory at one time is smaller.</p>
+</blockquote>
+
+<p>Uh, actually, Wireshark (the GUI) does not free up state (i.e., memory) each time a new file is opened when using multiple files.</p>
+
+<p>Update: I'm wrong: state <em>is</em> freed up each time a new file is opened when using multiple files.</p>
+
+<p>Dumpcap with multiple files is the way to go when doing extended captures.</p></div>
+            <div class="comment-info" id="comment-6325-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Sep '11, 09:30)</span>
+                <a class="comment-user userinfo" href="/users/22/bill-meier">Bill Meier ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6327"></a>
+        <div class="comment" id="comment-6327">
+            <div id="post-6327-score" class="comment-score"></div>
+            <div class="comment-text"><p>I didn't know that. What determines how much memory Wireshark (GUI) uses? Even though Wireshark doesn't fee up memory when you start a new file, doesn't it re-use the memory that has already been allocated, and doesn't it have to allocate less memory if you start a new file sooner rather than later?</p>
+
+<p>If you use the multiple files option and start a new file every 10,000 packets, will that use less memory than if you start a new file every 50,000 packets?</p>
+
+<p>I agree that dumpcap is the way to go for extended captures.</p></div>
+            <div class="comment-info" id="comment-6327-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Sep '11, 12:03)</span>
+                <a class="comment-user userinfo" href="/users/527/jim-aragon">Jim Aragon</a>
+                
+            </div>
+        </div>
+    
+        <a name="6366"></a>
+        <div class="comment" id="comment-6366">
+            <div id="post-6366-score" class="comment-score"></div>
+            <div class="comment-text"><p>Wireshark (and tshark) accumulate "dissection state information" as they dissect input data (depending upon the protocol, things like "re-assembled" data, "conversation" information, and so on).</p>
+
+<p>This happens independently of how the input may have been broken up into multiple files.</p>
+
+<p>See <a href="http://wiki.wireshark.org/KnownBugs/OutOfMemory">OutOfMemory</a> for more details.</p>
+
+<p>Update: I should have read the link myself; My statement above is incorrect.</p></div>
+            <div class="comment-info" id="comment-6366-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Sep '11, 12:22)</span>
+                <a class="comment-user userinfo" href="/users/22/bill-meier">Bill Meier ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6380"></a>
+        <div class="comment" id="comment-6380">
+            <div id="post-6380-score" class="comment-score"></div>
+            <div class="comment-text"><p>I read the "Known Bugs - Out of Memory" page linked to above. It certainly implies that splitting the capture into smaller files will help.</p>
+
+<p>Under "Workaround(s)" it states:</p>
+
+<p>"If you encounter problems that Wireshark is running out of memory, you can do the following:"</p>
+
+<p>"Split the capture file into several smaller ones. This can be done while capturing using the 'Use multiple files' setting in the capture options, or using the editcap command line tool. Switching to a new file while capturing won't release all memory (some memory leaks currently remain), but it will release a lot of it."</p></div>
+            <div class="comment-info" id="comment-6380-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Sep '11, 19:16)</span>
+                <a class="comment-user userinfo" href="/users/527/jim-aragon">Jim Aragon</a>
+                
+            </div>
+        </div>
+    
+        <a name="6389"></a>
+        <div class="comment" id="comment-6389">
+            <div id="post-6389-score" class="comment-score"></div>
+            <div class="comment-text"><p>Oops:  I got this one completely wrong. Wireshark <em>does</em> clear saved state for each new file when capturing to multiple files.</p>
+
+<p>Jim: Thanks ...</p></div>
+            <div class="comment-info" id="comment-6389-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Sep '11, 07:39)</span>
+                <a class="comment-user userinfo" href="/users/22/bill-meier">Bill Meier ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6323" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6323-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/6320/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hlHpMvuwuo5IxMAEaptwb2CEIpMrolqI' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/6320/is-there-a-quick-reference-for-using-dumpcap?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/6320/is-there-a-quick-reference-for-using-dumpcap?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/dumpcap/"
+            class="tag-link-dumpcap"
+            title="see questions tagged'dumpcap'using tags"
+            rel="tag">dumpcap</a> <span class="tag-number">&#215;89</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 13, 2011, 8:11 a.m.">13 Sep '11, 08:11</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>18,647 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 15, 2011, 7:45 a.m.">15 Sep '11, 07:45</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/302/initd-scipt-for-dumpcap-on-fedora-linux">init.d scipt for dumpcap on Fedora Linux?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13113/gui-of-dumpcap">GUI of dumpcap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24335/wireshark-and-2008-r2-server-reliability-issues">Wireshark and 2008 R2 server reliability issues</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34747/how-to-remove-tcp-header">How to remove tcp header?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47726/capturing-5-gig-of-traffic-using-dumpcap-on-vm">capturing 5 gig of traffic using dumpcap on VM</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58194/missing-data-when-displaying-dumpcap-output-on-wireshark">Missing data when displaying dumpcap output on Wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1069/dumpcap-syntax-error">Dumpcap syntax error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13381/using-dumpcap-without-installing-wireshark">Using dumpcap without installing Wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24804/dumpcap-how-to-download-the-sources-and-build-it-on-windows">dumpcap - how to download the sources and build it on Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38546/how-do-i-configure-dumpcap-from-tshark-while-pipeing-the-tshark-output-to-my-program">how do I configure dumpcap from tshark while pipeing the tshark output to my program?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

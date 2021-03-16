@@ -1,0 +1,1093 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Unusual Behavior with Stacked VLAN Tags and Capture Filter - Wireshark Q&amp;A</title>
+        <meta name="description" content="I have a strange issue that I have attempted to research but would welcome input from anyone else that may have encountered anything similar. Specifics: VM Ubuntu 13 server on ESXi 5.0 with 3 NICs (type VMXNET3). (Note: Today I just rebuilt the VM using the new Ubuntu 14 LTS.) Eth0 is for the local ..." />
+        <meta name="keywords" content="stacking,vlan,mirroring,esx" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/31953/unusual-behavior-with-stacked-vlan-tags-and-capture-filter" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/31953/unusual-behavior-with-stacked-vlan-tags-and-capture-filter?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hMZnyjiS5fLYgqJmCDIQa18v0yOcdFcS' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/31953/unusual-behavior-with-stacked-vlan-tags-and-capture-filter">Unusual Behavior with Stacked VLAN Tags and Capture Filter</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-31953-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31953/up/" rel="nofollow"> </a>
+<div id="post-31953-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31953-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31953/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/31953/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   3
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have a strange issue that I have attempted to research but would welcome input from anyone else that may have encountered anything similar.</p>
+<p>Specifics: VM Ubuntu 13 server on ESXi 5.0 with 3 NICs (type VMXNET3). (Note: Today I just rebuilt the VM using the new Ubuntu 14 LTS.) Eth0 is for the local network. Eth1 and Eth2 are dedicated to port mirrors from switches/taps. Eth1 only has single VLAN tags in the mirrored traffic. Eth2 has what I consider stacked tags. (I have included an image below.)</p>
+<p>When I attempt to use a capture filter for VLAN 992 (993, 994, etc), I do not capture any data. I can use a display filter to show the VLAN 992 after it has been captured but this isn't what I desire for troubleshooting purposes due to the high amount of traffic.</p>
+<p>I can capture filter the second VLANs (811, 812, etc) just fine.</p>
+<p>I'm not sure where the issue resides.</p>
+<p>I have experimented with other E1000 NICs in ESXi. I have the virtual switch set properly in ESX for promisc. (If this was set incorrectly I wouldn't have any traffic in the captures.) I have the VM NICs set for promisc (even though they appear not to need it since ESX is handling it). The version of Wireshark is 1.10.6 from the apt repository and whatever pcap is included - I mention this to confirm it's not an issue I created with a custom build/install of source.</p>
+<p>Although I don't think it is worth going into a great amount of detail, I did install a CentOS 6.5 VM today as well and did perform a custom build/install of pcap and wireshark. Same NIC parameters. When I did this, I was no longer able to see the outer VLAN tag. I'm not sure if that is giving me a clue or not.</p>
+<p>I know someone smarter than me could likely shed some light on my mystery.</p>
+<p>Thanks for any assistance!</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/Wireshark.PNG"></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/stacking/" class="post-tag tag-link-stacking"
+                                        title="see questions tagged 'stacking'" rel="tag">stacking</a>
+                                
+                                    <a href="/tags/vlan/" class="post-tag tag-link-vlan"
+                                        title="see questions tagged 'vlan'" rel="tag">vlan</a>
+                                
+                                    <a href="/tags/mirroring/" class="post-tag tag-link-mirroring"
+                                        title="see questions tagged 'mirroring'" rel="tag">mirroring</a>
+                                
+                                    <a href="/tags/esx/" class="post-tag tag-link-esx"
+                                        title="see questions tagged 'esx'" rel="tag">esx</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Apr '14, 15:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/73bcc9038f127739c0856748313dbe73?s=32&amp;d=identicon&amp;r=g" alt="stjaru's gravatar image" />
+    <p><a href="/users/7148/stjaru">stjaru</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="stjaru has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/31953/">
+                edited
+                <strong>17 Apr '14, 15:28</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-31953">
+    
+        <a name="32011"></a>
+        <div class="comment" id="comment-32011">
+            <div id="post-32011-score" class="comment-score"></div>
+            <div class="comment-text"><p>There are answers below about how to filter for the inner tag, but when I read this question, it sounds more to me like you're unable to filter the outer tag, 992 in this case.  To quote:</p>
+
+<p><em>When I attempt to use a capture filter for VLAN 992 (993, 994, etc), I do not capture any data. I can use a display filter to show the VLAN 992 after it has been captured but this isn't what I desire for troubleshooting purposes due to the high amount of traffic.</em></p>
+
+<p>So when you apply a capture filter of, "<code>vlan 992</code>" you don't capture anything?  But if you <strong>don't</strong> apply any capture filter, then you can later apply a Wireshark display filter of "<code>vlan.id == 992</code>" to filter the packets of interest?  Is that right?</p></div>
+            <div class="comment-info" id="comment-32011-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Apr '14, 10:17)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32015"></a>
+        <div class="comment" id="comment-32015">
+            <div id="post-32015-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>There are answers below about <strong>how to filter for the inner tag</strong>, </p>
+</blockquote>
+
+<p>well, my answer is actually primarily about the problem of filtering several <strong>outer tags</strong> in one capture filter statement.</p></div>
+            <div class="comment-info" id="comment-32015-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Apr '14, 14:46)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="32022"></a>
+        <div class="comment" id="comment-32022">
+            <div id="post-32022-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you Guy for participating in the thread. Good stuff!</p>
+
+<p>Kurt, wow man, that was fantastic information! I appreciate you taking the time to give such excellent detail and sourcing! I'm very appreciative of everyone taking some time to help on this topic.</p>
+
+<p>Now that I better understand why my other assumption was incorrect, would anyone have any ideas about why I cannot capture successfully on just the outer tag? That would be the heart of the issue.</p>
+
+<p>I'm still unable to understand why I cannot use capture with "vlan 99x" and see packets (which is the answer to cmaynard's request for clarification/confirmation). Again, I cannot capture using that filter, but I can display to see the VLAN.</p>
+
+<p>Thanks all,</p></div>
+            <div class="comment-info" id="comment-32022-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Apr '14, 20:17)</span>
+                <a class="comment-user userinfo" href="/users/7148/stjaru">stjaru</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31953" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31953-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/31953/unusual-behavior-with-stacked-vlan-tags-and-capture-filter?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/31953/unusual-behavior-with-stacked-vlan-tags-and-capture-filter?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/31953/unusual-behavior-with-stacked-vlan-tags-and-capture-filter?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/31953/unusual-behavior-with-stacked-vlan-tags-and-capture-filter?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="31955"></a>
+                    <div id="answer-container-31955" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31955-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31955/up/" rel="nofollow"> </a>
+<div id="post-31955-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31955-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31955/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Have you tried filtering on both VLAN ids at the same time? Something like "vlan 992 and vlan 811"? If I remember correctly this is required when filtering on QinQ traffic.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31955/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Apr '14, 15:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31955">
+    
+        <a name="31956"></a>
+        <div class="comment" id="comment-31956">
+            <div id="post-31956-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for your input Jasper. :)</p>
+
+<p>I have tried that without success.</p>
+
+<p>Capture filter "vlan 992 or vlan 811" will not collect anything.</p>
+
+<p>But I did discover something interesting - Capture filter "vlan 810 or vlan 811" will only collect the first VLAN (810). I would not expect a problem with that capture filter.</p>
+
+<p>However since I have never been able to capture filter on the outer tag, I normally capture everything on the interface and then use a display filter on the outer tag. Hence the discovery of the behavior.</p>
+
+<p>I don't know if these problems are related but I'm still wrestling with the original question.</p></div>
+            <div class="comment-info" id="comment-31956-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Apr '14, 15:49)</span>
+                <a class="comment-user userinfo" href="/users/7148/stjaru">stjaru</a>
+                
+            </div>
+        </div>
+    
+        <a name="31979"></a>
+        <div class="comment" id="comment-31979">
+            <div id="post-31979-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I would not expect a problem with that capture filter.</p>
+</blockquote>
+
+<p>I would, but that's because I know the rather kludgy way that the "vlan" capture filter works.  "vlan" turns everything to the right of it into a test for traffic under that VLAN, so "vlan 810 or vlan 811" doesn't do what you'd expect.</p></div>
+            <div class="comment-info" id="comment-31979-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Apr '14, 13:57)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31955" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31955-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="32006"></a>
+                    <div id="answer-container-32006" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-32006-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32006/up/" rel="nofollow"> </a>
+<div id="post-32006-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-32006-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32006/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>Capture filter "vlan 992 or vlan 811" will not collect anything. <br>
+Capture filter "vlan 810 or vlan 811" will only collect the first VLAN (810). </p>
+</blockquote>
+<p>as <a href="/users/79/guy-harris"><a href="/users/79/guy-harris">@Guy Harris</a></a> already mentioned the <strong>vlan</strong> capture filter 'primitive' does some magic behind the curtains, and thus it does not work as you might expect it, based on the behavior of other <strong>logical OR</strong> operations in capture filters.</p>
+<p>See <a href="http://www.tcpdump.org/manpages/pcap-filter.7.html">man page of pcap-filter</a>:</p>
+<pre>vlan [vlan_id]
+   Note that the first vlan keyword encountered in expression <b>changes 
+   the decoding offsets for the remainder</b> of expression on the 
+   assumption that the packet is a VLAN packet.
+
+   The  vlan [vlan_id] expression may be used more than once, to filter on 
+   VLAN hierarchies. <b>Each use of that expression increments the filter 
+   offsets by 4.</b>
+</pre>
+
+<p>So, lets have a look at the BPF code for the following capture filter</p>
+<blockquote>
+<p>tcpdump -ni eth0 -d <strong>'vlan 100'</strong></p>
+</blockquote>
+<pre>(000) ldh      [12]           
+(001) jeq      #0x8100          jt 2    jf 6
+(002) ldh      [14]
+(003) and      #0xfff
+(004) jeq      #0x64            jt 5    jf 6
+(005) ret      #65535
+(006) ret      #0
+</pre>
+
+<p><strong>(000):</strong> Load the location of the ethertype.<br>
+<strong>(001):</strong> Is it a VLAN tag (0x8100)?<br>
+<strong>(002-004):</strong> If true: load the value at position 14 (the VLAN tag) and compare it with 0x64 (100 decimal)<br>
+</p>
+<p>So far, so good.</p>
+<p>Now lets check the BPF code of the following capture filter</p>
+<blockquote>
+<p>tcpdump -ni eth0 -d <strong>'vlan 100 or vlan 200'</strong></p>
+</blockquote>
+<pre>(000) ldh      [12]
+(001) jeq      #0x8100          jt 2    jf 5
+(002) ldh      [14]
+(003) and      #0xfff
+(004) jeq      #0x64            jt 10   jf 5
+
+(005) ldh      [16]          &lt;&lt;=== PROBLEM HERE !!!
+
+(006) jeq      #0x8100          jt 7    jf 11
+(007) ldh      [18]
+(008) and      #0xfff
+(009) jeq      #0xc8            jt 10   jf 11
+(010) ret      #65535
+(011) ret      #0
+</pre>
+
+<p><strong>(000-004):</strong> same as before <br>
+<strong>(005):</strong> The whole problem occurs here. As the <strong>vlan</strong> primitive increases the decoding offset by 4 (see man page above - regardless of logical operator), the second <strong>vlan</strong> primitive will simply look at the wrong place for the ethertype. It should look at position 12 in the ethernet frame, but due to the decoding offset increase of 4, it looks at position 16, which is apparently wrong for a <strong>logical OR</strong> vlan operation (at least as one would assume/expect how it should work).</p>
+<p>Due to this behavior (call is a bug or not), you cannot capture for several vlan tags in a single capture filter, combined with a <strong>logical OR</strong> operation. Furthermore, if you use a <strong>logical AND</strong> operation, you will only see double tagged or QinQ frames (as <a href="/users/145/jasper"><a href="/users/145/jasper">@Jasper</a></a>) mentioned. </p>
+<p>Solution: Run several instances of tcpdump, each with a single vlan capture filter and later merge the capture files with mergecap.</p>
+<blockquote>
+<p>tcpdump -ni eth0 -w /tmp/vlan811.pcap 'vlan 811'&amp;  <br>
+tcpdump -ni eth0 -w /tmp/vlan800.pcap 'vlan 800'&amp;  <br>
+tcpdump -ni eth0 -w /tmp/vlan900.pcap 'vlan 900'&amp;  <br>
+sleep 500 <br>
+killall tcpdump  <br>
+mergecap -w /tmp/vlan800+811+900.pcap /tmp/vlan800.pcap /tmp/vlan811.pcap /tmp/vlan900.pcap<br>
+</p>
+</blockquote>
+<p><strong>+++ UPDATE +++</strong></p>
+<p>I have to correct myself. <strong>It is possible</strong> to capture multiple (outer) vlan tags in a single capture filter, by doing the vlan tag matching 'manually'.</p>
+<blockquote>
+<p>tcpdump -ni eth0 'vlan and (ether[14:2]&amp;0xfff=100 or ether[14:2]&amp;0xfff=200)'</p>
+</blockquote>
+<p>If you look at the BPF code, you'll see that it is essentially the same as 'vlan 100' combined with 'vlan 200', which is essentially the same as 'vlan 100 or vlan 200'.</p>
+<pre>(000) ldh      [12]
+(001) jeq      #0x8100          jt 2    jf 7
+(002) ldh      [14]
+(003) and      #0xfff
+(004) jeq      #0x64            jt 6    jf 5
+(005) jeq      #0xc8            jt 6    jf 7
+(006) ret      #65535
+(007) ret      #0
+</pre>
+
+<p><strong>(000):</strong> Load the location of the ethertype.<br>
+<strong>(001):</strong> Is it a VLAN tag (0x8100)?<br>
+<strong>(002):</strong> If true: load the value at position 14 (the vlan tag)<br>
+<strong>(004):</strong> compare the vlan tag with 0x64 (100 decimal)<br>
+<strong>(005):</strong> compare the vlan tag with 0xc8 (200 decimal)<br>
+</p>
+<p>Regards  <br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/32006/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Apr '14, 16:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/32006/">
+                edited
+                <strong>20 Apr '14, 14:48</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-32006">
+    
+        <a name="32027"></a>
+        <div class="comment" id="comment-32027">
+            <div id="post-32027-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I'm still unable to understand why I cannot use capture with "vlan 99x" and see packets</p>
+</blockquote>
+
+<p>O.K. we need more information. Here are some questions for you:</p>
+
+<ul>
+<li>How did you capture the traffic (tcpdump, dumpcap, tshark, Wireshark)</li>
+<li>Is your capturing system configured to use VLAN tags on the capturing interface?</li>
+</ul>
+
+<p>You say: </p>
+
+<blockquote>
+<p>When I attempt to use a <strong>capture filter for VLAN 992 (993, 994, etc) - OUTER tag - </strong>, I do not capture any data. <br>
+I can capture filter the second VLANs (811, 812, etc) - INNER tag - just fine.</p>
+</blockquote>
+
+<p>O.K. so, either there are no frames with VLAN tag 99x, <strong>or something on your system strip the outer VLAN tag</strong> before the capturing system gets the frame, which would explain, why you do see the inner tag. </p>
+
+<p><strong>However</strong>, if the outer tag would have been removed, it does not explain why you see the outer tag in the capture file, with a display filter. But maybe I misunderstand what you did in that case!?!</p>
+
+<p>So, can you please add more details about your capturing setup: What do you see in the capture file, if you</p>
+
+<ul>
+<li>don't use any capture filter</li>
+<li>use a capture filter for the outer tag: <code>vlan 99x</code></li>
+<li>use a combined capture filter for the outer tag: <code>vlan 99x or vlan 99y</code></li>
+<li>use a capture filter for the inner tag: <code>vlan 88x</code></li>
+<li>use a combined capture filter for the inner tag: <code>vlan 88x or vlan 88y</code></li>
+<li>use a capture filter as shown in my answer: <code>vlan and ether[14:2]&amp;0xfff=99x</code></li>
+</ul>
+
+<p>BTW: Can you provide a sample capture somewhere (google docs, dropbox, cloudshark.org)?</p></div>
+            <div class="comment-info" id="comment-32027-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Apr '14, 03:27)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-32006" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32006-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/31953/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hMZnyjiS5fLYgqJmCDIQa18v0yOcdFcS' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31953/unusual-behavior-with-stacked-vlan-tags-and-capture-filter?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31953/unusual-behavior-with-stacked-vlan-tags-and-capture-filter?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/vlan/"
+            class="tag-link-vlan"
+            title="see questions tagged'vlan'using tags"
+            rel="tag">vlan</a> <span class="tag-number">&#215;66</span><br/>
+        
+        <a href="/tags/mirroring/"
+            class="tag-link-mirroring"
+            title="see questions tagged'mirroring'using tags"
+            rel="tag">mirroring</a> <span class="tag-number">&#215;24</span><br/>
+        
+        <a href="/tags/esx/"
+            class="tag-link-esx"
+            title="see questions tagged'esx'using tags"
+            rel="tag">esx</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/stacking/"
+            class="tag-link-stacking"
+            title="see questions tagged'stacking'using tags"
+            rel="tag">stacking</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 17, 2014, 3:26 p.m.">17 Apr '14, 15:26</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,773 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 21, 2014, 3:27 a.m.">21 Apr '14, 03:27</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/50/make-wireshark-analysis-vlan-aware">make Wireshark analysis vlan aware</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10868/adding-vlan-tag-on-wireshark-capture">Adding VLAN Tag on Wireshark capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26641/realtek-pcie-gbe-vlan-stripping">Realtek PCIe GBE vlan stripping</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43879/bpf-for-protocol-exclude-list">BPF for protocol exclude list</a>
+        </p>
+        
+        <p>
+            <a href="/questions/63052/how-do-i-capture-iscsi-traffic-on-a-vlan">How do I capture iscsi traffic on a VLAN?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34939/port-mirroringfrom-minigbic-to-ethernet-port">port mirroring...from miniGBIC to ethernet port.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/112/whats-the-best-way-to-capture-packets-on-a-trunked-port-cisco-catalyst">What&#39;s the best way to capture packets on a trunked port (Cisco Catalyst)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11175/tshark-filters-using-and-vs">tshark filters using &quot;and&quot; vs &quot;&amp;&amp;&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26867/outer-vlan-tag-removed-windows-7">Outer vlan tag removed (Windows 7)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44566/capture-q-in-q-vlan-ids-with-tshark-t-fields">capture Q-in-Q VLAN IDs with tshark -T fields</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

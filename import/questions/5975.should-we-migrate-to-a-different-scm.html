@@ -1,0 +1,2099 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Should we migrate to a different SCM? - Wireshark Q&amp;A</title>
+        <meta name="description" content="For a long time people have suggested that we migrate from Subversion  (our current version control system) to Git or  Mercurial. This isn&#39;t a trivial undertaking, but if the CVS to Subversion migration in 2004 is any indication it would definitely be worthwhile. Unfortunately the path forward isn&#39;t..." />
+        <meta name="keywords" content="svn,development,git,hg" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/5975/should-we-migrate-to-a-different-scm" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/5975/should-we-migrate-to-a-different-scm?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='sE9TW6LQGKotEU1jBsxRe4Hu5jY9RtP8' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/5975/should-we-migrate-to-a-different-scm">Should we migrate to a different SCM?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-5975-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5975/up/" rel="nofollow"> </a>
+<div id="post-5975-score" class="post-score"
+    title="current number of votes">
+    8
+</div>
+<a id="post-5975-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5975/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/5975/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   4
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>For a <a href="http://www.wireshark.org/lists/wireshark-dev/200911/msg00058.html">long time</a> people have suggested that we migrate from <a href="http://subversion.apache.org/">Subversion</a> 
+(our current version control system) to <a href="http://git-scm.com/">Git</a> or 
+<a href="http://mercurial.selenic.com/">Mercurial</a>. This isn't a trivial undertaking, but if the CVS to Subversion migration in 2004 is any indication it would definitely be worthwhile.</p>
+<p>Unfortunately the path forward isn't obvious. Subversion, Git and Mercurial all work well. It's also unclear how much trouble switching away from Subversion would cause any downstream organizations who maintain their own versions of Wireshark. As a result I'm asking for input from the development community.</p>
+<p>Please vote for your preferred course of action below. Feel free to add additional answers as you see fit. If you downvote an answer, please explain your reason in a comment.</p>
+<p>As with any other question on this site, the accepted answer may not necessarily be the one with the most votes. :)</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/svn/" class="post-tag tag-link-svn"
+                                        title="see questions tagged 'svn'" rel="tag">svn</a>
+                                
+                                    <a href="/tags/development/" class="post-tag tag-link-development"
+                                        title="see questions tagged 'development'" rel="tag">development</a>
+                                
+                                    <a href="/tags/git/" class="post-tag tag-link-git"
+                                        title="see questions tagged 'git'" rel="tag">git</a>
+                                
+                                    <a href="/tags/hg/" class="post-tag tag-link-hg"
+                                        title="see questions tagged 'hg'" rel="tag">hg</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>30 Aug '11, 16:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6db117a984c6529df88330dc49fb1ee4?s=32&amp;d=identicon&amp;r=g" alt="Gerald%20Combs's gravatar image" />
+    <p><a href="/users/1/gerald-combs">Gerald Combs ♦♦</a><br/>
+    <span class="score" title="3332 reputation points"><span class="">3.3k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="58 badges"><span class="bronze">&#9679;</span><span class="badgecount">58</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gerald Combs has 32 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-5975">
+    
+        <a name="6038"></a>
+        <div class="comment" id="comment-6038">
+            <div id="post-6038-score" class="comment-score">1</div>
+            <div class="comment-text"><p>...and don't add an answer if you're just supporting one of the existing answers - vote up the existing answer in question and, if you have something more to say, add a comment to it.</p></div>
+            <div class="comment-info" id="comment-6038-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 17:21)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5975" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5975-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    5 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/5975/should-we-migrate-to-a-different-scm?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/5975/should-we-migrate-to-a-different-scm?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/5975/should-we-migrate-to-a-different-scm?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/5975/should-we-migrate-to-a-different-scm?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="5977"></a>
+                    <div id="answer-container-5977" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5977-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5977/up/" rel="nofollow"> </a>
+<div id="post-5977-score" class="post-score"
+    title="current number of votes">
+    18
+</div>
+<a id="post-5977-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5977/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="cmaynard has selected this answer as the correct answer"
+        href="/accept_answer/5977/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Migrate to Git! Linus knows best.</p>
+<p>If you'd like to test Git a mirror of the SVN repository is available for cloning and browsing at   http://code.wireshark.org/git/wireshark. (This isn't an endorsment of Git; we simply have a lot of vocal Git fans.)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5977/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Aug '11, 16:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6db117a984c6529df88330dc49fb1ee4?s=32&amp;d=identicon&amp;r=g" alt="Gerald%20Combs's gravatar image" />
+    <p><a href="/users/1/gerald-combs">Gerald Combs ♦♦</a><br/>
+    <span class="score" title="3332 reputation points"><span class="">3.3k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="58 badges"><span class="bronze">&#9679;</span><span class="badgecount">58</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gerald Combs has 32 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/5977/">
+                edited
+                <strong>30 Aug '11, 16:43</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5977">
+    
+        <a name="5982"></a>
+        <div class="comment" id="comment-5982">
+            <div id="post-5982-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Must read:</p>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/871/why-is-git-better-than-subversion">Why is Git better than Subversion?</a></li>
+<li><a href="http://stackoverflow.com/questions/740053/why-should-i-use-git-instead-of-svn">Why should I use git instead of svn?</a></li>
+</ul></div>
+            <div class="comment-info" id="comment-5982-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Aug '11, 19:05)</span>
+                <a class="comment-user userinfo" href="/users/817/helloworld">helloworld</a>
+                
+            </div>
+        </div>
+    
+        <a name="5993"></a>
+        <div class="comment" id="comment-5993">
+            <div id="post-5993-score" class="comment-score">1</div>
+            <div class="comment-text"><p>For developing the DVB-CI dissector, I import the svn repository into git. This allows me to keep local branches for new things I'm trying out. I can easily merge things between those branches and keep them in sync with updates made by others.</p>
+
+<p>If I used svn directly, I'd have no chance to commit things locally (and I'm not allowed to commit directly to the svn repository ;-( ).</p></div>
+            <div class="comment-info" id="comment-5993-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 00:48)</span>
+                <a class="comment-user userinfo" href="/users/1528/martinkaiser">MartinKaiser</a>
+                
+            </div>
+        </div>
+    
+        <a name="6019"></a>
+        <div class="comment" id="comment-6019">
+            <div id="post-6019-score" class="comment-score"></div>
+            <div class="comment-text"><p>I was also using git-svn. hopefully we get git as a main SCM.</p></div>
+            <div class="comment-info" id="comment-6019-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 11:24)</span>
+                <a class="comment-user userinfo" href="/users/1533/andrei-emeltchenko">Andrei Emelt...</a>
+                
+            </div>
+        </div>
+    
+        <a name="6025"></a>
+        <div class="comment" id="comment-6025">
+            <div id="post-6025-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The git (or other dvcs) workflow outside of linux kernel work isn't clear to me.  Does Gerald create a repo that core devs have push privs on, or does Gerald (or someone else) have to respond to pull requests and then deal with merge issues?</p>
+
+<p>How can access to the buildbots be delivered for repos other than the "main" one?</p></div>
+            <div class="comment-info" id="comment-6025-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 12:42)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6028"></a>
+        <div class="comment not_top_scorer" id="comment-6028">
+            <div id="post-6028-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think buildbot shoue automatically build Core Devs' repositories and commits should enter main after having at least one successful build in any of the Core Developers repositories.</p></div>
+            <div class="comment-info" id="comment-6028-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 13:43)</span>
+                <a class="comment-user userinfo" href="/users/1535/rbalint">rbalint</a>
+                
+            </div>
+        </div>
+    
+        <a name="6043"></a>
+        <div class="comment not_top_scorer" id="comment-6043">
+            <div id="post-6043-score" class="comment-score"></div>
+            <div class="comment-text"><p>@grahamb workflow can be defined as you want to. And as far as I know, it has not been defined for wireshark yet. Could be a different thread on the mailing list.</p>
+
+<p>For sure, Gerald (nor a <em>1</em> someone else) would not have to deal with merge issues. Each contributor would have to lead with merge issues.</p></div>
+            <div class="comment-info" id="comment-6043-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Sep '11, 04:25)</span>
+                <a class="comment-user userinfo" href="/users/1529/standel">standel</a>
+                
+            </div>
+        </div>
+    
+        <a name="6076"></a>
+        <div class="comment not_top_scorer" id="comment-6076">
+            <div id="post-6076-score" class="comment-score"></div>
+            <div class="comment-text"><p>What I want most is to be able to checkpoint one or more intermediate states of my current patch before its ready to submit.
+E.g.
+- builds under linux
+- first working version
+- builds under windows
+- passes checkAPIs
+and be able to diff/revert back to them, before pushing a single, complete change to the main repo. I would want this branch to be local/private - I doubt I'd want to share my branch with anyone else. Would git enable this workflow for me?</p></div>
+            <div class="comment-info" id="comment-6076-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Sep '11, 15:03)</span>
+                <a class="comment-user userinfo" href="/users/1551/martinm">MartinM</a>
+                
+            </div>
+        </div>
+    
+        <a name="6078"></a>
+        <div class="comment" id="comment-6078">
+            <div id="post-6078-score" class="comment-score">1</div>
+            <div class="comment-text"><p>@MartinM:</p>
+
+<p>Yes, with git you in fact build a sequence of commits (changeset) on top of the last public commit.  The order of these commits can be changed, you can aggregate two or more commits in one, or split one in multiple commits or modify (amend) a commit.  You can rebase at any time (i.e. download the latest public commits and move your changeset in front of them) - I personally rebase all my branches each morning.  Commits can be copied between branches, bisection can be used to find what commit introduced a bug.</p>
+
+<p>When your changeset is ready, you can send it to a commiter.</p></div>
+            <div class="comment-info" id="comment-6078-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Sep '11, 17:41)</span>
+                <a class="comment-user userinfo" href="/users/1524/petithug">petithug</a>
+                
+            </div>
+        </div>
+    
+        <a name="6096"></a>
+        <div class="comment not_top_scorer" id="comment-6096">
+            <div id="post-6096-score" class="comment-score"></div>
+            <div class="comment-text"><p>@MartinM, I think you can do this already with git-svn as MartinK posted above.  See also <a href="http://stackoverflow.com/questions/1129688/git-svn-workflow-feature-branches-and-merge">HERE</a>.</p></div>
+            <div class="comment-info" id="comment-6096-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Sep '11, 08:16)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6188"></a>
+        <div class="comment not_top_scorer" id="comment-6188">
+            <div id="post-6188-score" class="comment-score"></div>
+            <div class="comment-text"><p>Remember how the site of linux kernel was attacked a few days ago (http://lxnews.org/2011/09/02/linux-kernel-website-hacked/)?</p>
+
+<p>I don't know if it is like what I imagined, but I'm sure the source codes (and the SHA-1 hash values) were secure enough since they are distributed among the core developers. Thus any eventual changes in the codes and/or the hash values by the attacker could be easily checked.</p>
+
+<p>This is one major advantage of git, but surely it depends on which git model is used.</p></div>
+            <div class="comment-info" id="comment-6188-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '11, 07:54)</span>
+                <a class="comment-user userinfo" href="/users/1553/francesc">francesc</a>
+                
+            </div>
+        </div>
+    
+        <a name="6197"></a>
+        <div class="comment not_top_scorer" id="comment-6197">
+            <div id="post-6197-score" class="comment-score"></div>
+            <div class="comment-text"><p>@petithug, "When your changeset is ready, you can send it to a commiter." Which committer?  I don't think that would work well in practice as committer availability/knowledge/time varies.  I think a workflow that still involves Bugzilla is more practical.</p></div>
+            <div class="comment-info" id="comment-6197-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '11, 16:22)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6199"></a>
+        <div class="comment not_top_scorer" id="comment-6199">
+            <div id="post-6199-score" class="comment-score"></div>
+            <div class="comment-text"><p>@cmaynard, I haven't yet used Gerrit myself, but its <a href="http://source.android.com/source/life-of-a-patch.html">workflow</a> (taken from <a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.1.7/index.html">Gerrit docs</a>) shows that once a patch is submitted, Gerrit automatically notifies the project owners/verifiers while the submitter notifies reviewers through Gerrit. These steps closely match up to the current patch submittal process with Bugzilla.</p></div>
+            <div class="comment-info" id="comment-6199-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '11, 16:58)</span>
+                <a class="comment-user userinfo" href="/users/817/helloworld">helloworld</a>
+                
+            </div>
+        </div>
+    
+        <a name="6200"></a>
+        <div class="comment not_top_scorer" id="comment-6200">
+            <div id="post-6200-score" class="comment-score"></div>
+            <div class="comment-text"><p>@cmaynard, ...and Gerrit supports side-by-side or unified diff for patches (something Bugzilla does not). See Gerrit <a href="http://unethicalblogger.com/2009/12/07/code-review-with-gerrit-a-mostly-visual-guide.html">screenshots</a> (probably slightly outdated).</p></div>
+            <div class="comment-info" id="comment-6200-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '11, 17:04)</span>
+                <a class="comment-user userinfo" href="/users/817/helloworld">helloworld</a>
+                
+            </div>
+        </div>
+    
+        <a name="6201"></a>
+        <div class="comment not_top_scorer" id="comment-6201">
+            <div id="post-6201-score" class="comment-score"></div>
+            <div class="comment-text"><p>@helloworld, it's nice that gerrit allows you to compare side-by-side or unified, but my comment about viewcvs was geared toward comparing changes already committed.</p></div>
+            <div class="comment-info" id="comment-6201-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '11, 18:09)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6205"></a>
+        <div class="comment not_top_scorer" id="comment-6205">
+            <div id="post-6205-score" class="comment-score"></div>
+            <div class="comment-text"><p>@cmaynard:  That was just an example.  You can send it to a mailing list (there is even a git command to send it directly), store it in Bugzilla, or push it in something like Gerrit.  See my comments below about a workflow that can be implemented with Gerrit.</p></div>
+            <div class="comment-info" id="comment-6205-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '11, 23:15)</span>
+                <a class="comment-user userinfo" href="/users/1524/petithug">petithug</a>
+                
+            </div>
+        </div>
+    
+        <a name="6221"></a>
+        <div class="comment not_top_scorer" id="comment-6221">
+            <div id="post-6221-score" class="comment-score"></div>
+            <div class="comment-text"><p>@cmaynard, I agree with your thoughts on viewgit, and I wasn't arguing that (otherwise, I would've commented on that post instead of this one). I was only pointing out that Gerrit has better diff support for patches than Bugzilla does.</p></div>
+            <div class="comment-info" id="comment-6221-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Sep '11, 15:34)</span>
+                <a class="comment-user userinfo" href="/users/817/helloworld">helloworld</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5977" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 16
+        </span>
+        <a href="#" class="show-all-comments-link">show 11 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5977-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="5976"></a>
+                    <div id="answer-container-5976" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5976-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5976/up/" rel="nofollow"> </a>
+<div id="post-5976-score" class="post-score"
+    title="current number of votes">
+    6
+</div>
+<a id="post-5976-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5976/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Stay with Subversion! It does what I need, and I don't need any more.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5976/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Aug '11, 16:38</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6db117a984c6529df88330dc49fb1ee4?s=32&amp;d=identicon&amp;r=g" alt="Gerald%20Combs's gravatar image" />
+    <p><a href="/users/1/gerald-combs">Gerald Combs ♦♦</a><br/>
+    <span class="score" title="3332 reputation points"><span class="">3.3k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="58 badges"><span class="bronze">&#9679;</span><span class="badgecount">58</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gerald Combs has 32 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5976">
+    
+        <a name="5981"></a>
+        <div class="comment" id="comment-5981">
+            <div id="post-5981-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Change for the sake of change is silly.
+What are the current issues which Subversion cannot handle?</p></div>
+            <div class="comment-info" id="comment-5981-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Aug '11, 18:48)</span>
+                <a class="comment-user userinfo" href="/users/1525/mavetju">MavEtJu</a>
+                
+            </div>
+        </div>
+    
+        <a name="5986"></a>
+        <div class="comment" id="comment-5986">
+            <div id="post-5986-score" class="comment-score"></div>
+            <div class="comment-text"><p>Our inhouse version and merge procedures is setup to use SVN</p></div>
+            <div class="comment-info" id="comment-5986-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Aug '11, 21:39)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="5992"></a>
+        <div class="comment" id="comment-5992">
+            <div id="post-5992-score" class="comment-score"></div>
+            <div class="comment-text"><p>My preferred option too, but see my comment to SYNbit's answer about making use of feature branches.</p></div>
+            <div class="comment-info" id="comment-5992-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 00:03)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="5998"></a>
+        <div class="comment" id="comment-5998">
+            <div id="post-5998-score" class="comment-score">1</div>
+            <div class="comment-text"><p>With svn feature branches are not available for everyone. Only for core developers!
+With git, feature branches are available for everyone.</p></div>
+            <div class="comment-info" id="comment-5998-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 06:44)</span>
+                <a class="comment-user userinfo" href="/users/1529/standel">standel</a>
+                
+            </div>
+        </div>
+    
+        <a name="6014"></a>
+        <div class="comment" id="comment-6014">
+            <div id="post-6014-score" class="comment-score"></div>
+            <div class="comment-text"><p>Slightly different aim with feature branches and local branches.  I would think that most if not all dvcs would support local branches.</p></div>
+            <div class="comment-info" id="comment-6014-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 09:30)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6037"></a>
+        <div class="comment not_top_scorer" id="comment-6037">
+            <div id="post-6037-score" class="comment-score"></div>
+            <div class="comment-text"><p>Please do <em>NOT</em> post your own answers to the question if you're just going to vote for git/Subversion/Mercurial; this is kind of a "funny" question, in that the votes for the answers will be treated as votes for the choices given by Gerald's answers.  I've converted "Change for the sake of change is silly. What are the current issues which Subversion cannot handle?" to a comment on "Stay with Subversion", and added its two votes to "Stay with Subversion".</p></div>
+            <div class="comment-info" id="comment-6037-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 17:18)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6198"></a>
+        <div class="comment not_top_scorer" id="comment-6198">
+            <div id="post-6198-score" class="comment-score"></div>
+            <div class="comment-text"><p>Personally I think viewcvs is far superior to what I've seen from viewgit.  I really like having the ability to view changes side by side.  Maybe that is possible from viewgit?  Also, I've read discussions about versioning, and maybe it's just me, but I just don't get it.  With subversion, it's very easy to know that r38904 is older than svn r38928.  With git, hashes don't tell me much.  Then there's the workflow.  I'm sure it's because of my lack of git knowledge, but I don't really understand the git workflow.  If a switch to git is made, then I guess I've got some reading to do ...</p></div>
+            <div class="comment-info" id="comment-6198-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '11, 16:30)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5976" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5976-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="5978"></a>
+                    <div id="answer-container-5978" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5978-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5978/up/" rel="nofollow"> </a>
+<div id="post-5978-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-5978-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5978/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Migrate to Mercurial! Guido van Rossum and Joel Spolsky have the right idea.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5978/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Aug '11, 16:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6db117a984c6529df88330dc49fb1ee4?s=32&amp;d=identicon&amp;r=g" alt="Gerald%20Combs's gravatar image" />
+    <p><a href="/users/1/gerald-combs">Gerald Combs ♦♦</a><br/>
+    <span class="score" title="3332 reputation points"><span class="">3.3k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="58 badges"><span class="bronze">&#9679;</span><span class="badgecount">58</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Gerald Combs has 32 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5978">
+    
+        <a name="6013"></a>
+        <div class="comment" id="comment-6013">
+            <div id="post-6013-score" class="comment-score"></div>
+            <div class="comment-text"><p>Joel Spolsky has an excellent Mercurial tutorial: <a href="http://hginit.com/">Hg Init</a></p></div>
+            <div class="comment-info" id="comment-6013-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 08:45)</span>
+                <a class="comment-user userinfo" href="/users/1/gerald-combs">Gerald Combs ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6041"></a>
+        <div class="comment" id="comment-6041">
+            <div id="post-6041-score" class="comment-score"></div>
+            <div class="comment-text"><p>The last time I checked (was two years ago or so...) Mercurial had a better Windows support than Git with a community actively supporting Microsoft OS.</p></div>
+            <div class="comment-info" id="comment-6041-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 23:36)</span>
+                <a class="comment-user userinfo" href="/users/1538/pascal-quantin">Pascal Quantin</a>
+                
+            </div>
+        </div>
+    
+        <a name="6045"></a>
+        <div class="comment" id="comment-6045">
+            <div id="post-6045-score" class="comment-score"></div>
+            <div class="comment-text"><p>@Pascal: How do you define "better"? Performance? Memory? OS integration (with File Explorer, etc.)?</p>
+
+<p>In any case, a lot of improvements can happen in 2 years. I wouldn't vote based on outdated info.</p></div>
+            <div class="comment-info" id="comment-6045-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Sep '11, 07:28)</span>
+                <a class="comment-user userinfo" href="/users/1039/bstn">bstn</a>
+                
+            </div>
+        </div>
+    
+        <a name="6206"></a>
+        <div class="comment" id="comment-6206">
+            <div id="post-6206-score" class="comment-score"></div>
+            <div class="comment-text"><p>@bstn: I meant that core developers of Mercurial are Windows users and ensure that it works out of the box, fixing specific Windows issues. I also find the Mercurial user interface more intuitive (just a matter of taste) and globally it is really easy to use and perfectly suits my needs.
+But I will have another look at the current state of the art for Git as you suggested.</p></div>
+            <div class="comment-info" id="comment-6206-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '11, 23:54)</span>
+                <a class="comment-user userinfo" href="/users/1538/pascal-quantin">Pascal Quantin</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5978" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5978-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="6008"></a>
+                    <div id="answer-container-6008" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-6008-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/6008/up/" rel="nofollow"> </a>
+<div id="post-6008-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-6008-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/6008/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I already use the Subversion under git (using git svn), so staying with Subversion is OK for me.  On the other hand I voted for git because the work-flow that git naturally favors makes for better commits - if one ever try to do some bisecting on the git tree, one would discover that the current work flow is more like "commit until it builds", than the "commit a well-tested and peer reviewed changeset" that is the git way.  Moving to git would, hopefully, naturally improve this.</p>
+<p>It seems that it is also possible to use mercurial with git (http://hg-git.github.com/) but that seems rather difficult in the other direction.</p>
+<p>But the sticky point will probably be that AFAIK it is not possible to use git (or mercurial) from svn and as you have to unlearn svn to learn git, that would leave a lot of developers unhappy.  So if there is consensus on git then by all means switch to that, but I predict that we'll stay on subversion because people can use either svn, git or mercurial in this case.  I just wish that the committers start using git (or mercurial) themselves, so we do not have as frequent breakage as today.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/6008/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>31 Aug '11, 07:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/964d1f6d7ff1def4919656ece3974332?s=32&amp;d=identicon&amp;r=g" alt="petithug's gravatar image" />
+    <p><a href="/users/1524/petithug">petithug</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="petithug has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/6008/">
+                edited
+                <strong>31 Aug '11, 09:05</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-6008">
+    
+        <a name="6015"></a>
+        <div class="comment not_top_scorer" id="comment-6015">
+            <div id="post-6015-score" class="comment-score"></div>
+            <div class="comment-text"><p>As mentioned elsewhere, feature branches are the preferred svn method to handle large "breaking" changes.</p></div>
+            <div class="comment-info" id="comment-6015-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 09:31)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6022"></a>
+        <div class="comment not_top_scorer" id="comment-6022">
+            <div id="post-6022-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>that the current work flow is more like "commit until it builds", &gt;than the "commit a well-tested and peer reviewed changeset" that is &gt;the git way. Moving to git would, hopefully, naturally improve this.
+That assumes more than one person picking up a branch testing it and
+submitting patches to it...Not sure how often that happens with wireshark. Today we have the support of the build bots to verify between platforms how to do that on GIT branches? or will it only happen at merge to master?</p>
+</blockquote></div>
+            <div class="comment-info" id="comment-6022-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 11:49)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6023"></a>
+        <div class="comment not_top_scorer" id="comment-6023">
+            <div id="post-6023-score" class="comment-score"></div>
+            <div class="comment-text"><p>as mentioned in different places, "feature" branches with svn are not available to everyone ... only to core developers.</p></div>
+            <div class="comment-info" id="comment-6023-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 12:24)</span>
+                <a class="comment-user userinfo" href="/users/1529/standel">standel</a>
+                
+            </div>
+        </div>
+    
+        <a name="6027"></a>
+        <div class="comment" id="comment-6027">
+            <div id="post-6027-score" class="comment-score">2</div>
+            <div class="comment-text"><p>@Anders: One could do creative things with multiple central repositories. For instance, have an 'incoming' staging repository that the buildbots use and only push to the 'main' repository when the buildbots are green.</p></div>
+            <div class="comment-info" id="comment-6027-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 13:23)</span>
+                <a class="comment-user userinfo" href="/users/1534/leogah">leogah</a>
+                
+            </div>
+        </div>
+    
+        <a name="6029"></a>
+        <div class="comment not_top_scorer" id="comment-6029">
+            <div id="post-6029-score" class="comment-score"></div>
+            <div class="comment-text"><p>Did I mention this <a href="http://nvie.com/posts/a-successful-git-branching-model/">Git branching model</a> before? I think it would be worthwhile working out the specifics for Wireshark development.</p></div>
+            <div class="comment-info" id="comment-6029-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 13:57)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6030"></a>
+        <div class="comment" id="comment-6030">
+            <div id="post-6030-score" class="comment-score">3</div>
+            <div class="comment-text"><p>@Anders: One of the tools I put in place in my company is Gerrit, a peer review tool which is integrated with git.  It in fact manages a central git repository, but still permits to all my developers (who are in 3 different continents) to develop offline and to need a connection only to upload a changeset, pull the latest version of the tree or do a review.  This is the tool that Google is using for Android:</p>
+
+<p>https://review.source.android.com</p></div>
+            <div class="comment-info" id="comment-6030-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 14:20)</span>
+                <a class="comment-user userinfo" href="/users/1524/petithug">petithug</a>
+                
+            </div>
+        </div>
+    
+        <a name="6034"></a>
+        <div class="comment not_top_scorer" id="comment-6034">
+            <div id="post-6034-score" class="comment-score"></div>
+            <div class="comment-text"><p>another very interesting code review tool is Review Board (http://www.reviewboard.org)</p>
+
+<p>An example of a patch review :
+http://demo.reviewboard.org/r/48/diff/#index_header</p></div>
+            <div class="comment-info" id="comment-6034-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 16:08)</span>
+                <a class="comment-user userinfo" href="/users/1529/standel">standel</a>
+                
+            </div>
+        </div>
+    
+        <a name="6093"></a>
+        <div class="comment" id="comment-6093">
+            <div id="post-6093-score" class="comment-score">2</div>
+            <div class="comment-text"><p>It seems that Buildbot can be integrated with Gerrit, which could permit to build a nice workflow:
+1 Any developer can upload their changeset to Gerrit.
+2 Buildbots automatically pull the changeset from Gerrit and build for various platforms. If a build fails, the changeset is marked as failed by the Buildbot, and the developer has to update the changeset.
+3 A committer do a review of the code, the developer does the suggested modifications until the reviewer and the Buildbots are happy.
+4 When the committer marks the changeset as reviewed, the changeset is committed in the central repository.</p></div>
+            <div class="comment-info" id="comment-6093-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Sep '11, 07:36)</span>
+                <a class="comment-user userinfo" href="/users/1524/petithug">petithug</a>
+                
+            </div>
+        </div>
+    
+        <a name="6095"></a>
+        <div class="comment not_top_scorer" id="comment-6095">
+            <div id="post-6095-score" class="comment-score"></div>
+            <div class="comment-text"><p>@ Jaap, I thought git made life simple, that seems very complex to me.</p></div>
+            <div class="comment-info" id="comment-6095-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Sep '11, 08:10)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6097"></a>
+        <div class="comment" id="comment-6097">
+            <div id="post-6097-score" class="comment-score">1</div>
+            <div class="comment-text"><p>@petithug: Your suggested workflow with integrating git with gerrit sounds really good. I guess that would be a real advantage over having SVN for the central repository and having people use git-svn to use git locally.</p></div>
+            <div class="comment-info" id="comment-6097-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Sep '11, 11:15)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6191"></a>
+        <div class="comment not_top_scorer" id="comment-6191">
+            <div id="post-6191-score" class="comment-score"></div>
+            <div class="comment-text"><p>@petithug &amp; SYNbit All that is lacking is the manpower :-)
+I think we are stuggling to keep up with bugzilla as it is.</p></div>
+            <div class="comment-info" id="comment-6191-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '11, 09:10)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6196"></a>
+        <div class="comment" id="comment-6196">
+            <div id="post-6196-score" class="comment-score">2</div>
+            <div class="comment-text"><p>@Anders: IMO using Gerrit decreases the load on commiters. First of all the burden of rebasing is on the developer. Then with git and Gerrit it is better to split a big commit in multiple commits, so reviews are easier. The fact that you can directly comment on the web a commit (line by line) should also help (and anybody can comment on a patch). I used svn + patches in bugzilla for years, and switching to git + gerrit definitively improved things. I used the difference in time to implement more thorough peer reviews, so with the same resources I was able to produce a far better code.</p></div>
+            <div class="comment-info" id="comment-6196-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '11, 11:23)</span>
+                <a class="comment-user userinfo" href="/users/1524/petithug">petithug</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-6008" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 12
+        </span>
+        <a href="#" class="show-all-comments-link">show 7 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-6008-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="5988"></a>
+                    <div id="answer-container-5988" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5988-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5988/up/" rel="nofollow"> </a>
+<div id="post-5988-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-5988-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5988/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>For me it does not really matter which SCM we use, as long as it does its job. Subversion does the job for me. </p>
+<p>However, I run into problems when I develop stuff when it is something substantial (which I can not do in one run, so sometimes things lie on the shelf for months). The way I do it now is to save my partial diff and then re-patch when I continue. </p>
+<p>No need to say that often (especially with the GUI stuff) I need to rewrite lots of stuff to make it even possible to reload my partial code.</p>
+<p>I have not explored the possibilities of subversion to make my life easier in this regard, so it could be that subversion has could already make my life easier in this regard. If not another SCM which does have functionality in this area might be beneficial.</p>
+<p>Can anyone with more experience on SCM's enlighten me on how I could make my life easier with any of the SCM's?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5988/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Aug '11, 22:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5988">
+    
+        <a name="5990"></a>
+        <div class="comment" id="comment-5990">
+            <div id="post-5990-score" class="comment-score"></div>
+            <div class="comment-text"><p>For longer lived pieces of development work we should make use of feature branches in svn.</p>
+
+<p>A feature branch is created (usually in /reporoot/branches/nameofmyfeature) by copying from the trunk.  The developer(s) switch their working copy to the branch and can commit away without upsetting anyone else.  Other changes applied to the trunk are merged into the branch as required.  When dev is complete, switch your working copy back to trunk, merge in your branch and test.  When happy, commit back to trunk (using the --reintegrate option) and delete the branch.</p></div>
+            <div class="comment-info" id="comment-5990-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 00:00)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="5991"></a>
+        <div class="comment" id="comment-5991">
+            <div id="post-5991-score" class="comment-score"></div>
+            <div class="comment-text"><p>Pt2.</p>
+
+<p>Note that you are free to switch your working copy (or create another) between trunk and feature branches at will to work on either, although you should make sure your working copy is free from local changes before doing so as you don't want to carry changes destined from the branch direct into the trunk and vice-versa.</p>
+
+<p>To really make this useful it would be handy to direct the buildbots to do a run against a feature branch.</p></div>
+            <div class="comment-info" id="comment-5991-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 00:01)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="5997"></a>
+        <div class="comment" id="comment-5997">
+            <div id="post-5997-score" class="comment-score">1</div>
+            <div class="comment-text"><p>With svn, once you commit back to trunk, you have to delete your branch. Have you ever wonder why?
+With git (or mercurial), you don't need to!</p>
+
+<p>feature branch with git is LOCAL, you don't need to have any write access to the server. Imagine all the non-core developers who want to create a feature branch? They don't have any commit access to wireshark svn server. Have you already thought of them?</p></div>
+            <div class="comment-info" id="comment-5997-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 06:43)</span>
+                <a class="comment-user userinfo" href="/users/1529/standel">standel</a>
+                
+            </div>
+        </div>
+    
+        <a name="6017"></a>
+        <div class="comment" id="comment-6017">
+            <div id="post-6017-score" class="comment-score"></div>
+            <div class="comment-text"><p>@Graham: Thanks for the explanation on how to work on big changes. However, do I understand you correctly that I need to make a feature branch on the central repository to make this scheme work? I would rather keep my projects local until they are ready. Is this possible with svn (as you can see, I have not done any "homework" on svn).</p></div>
+            <div class="comment-info" id="comment-6017-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 10:35)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6024"></a>
+        <div class="comment" id="comment-6024">
+            <div id="post-6024-score" class="comment-score"></div>
+            <div class="comment-text"><p>@standel, There is no absolute need to delete an svn feature branch but as work on it is complete after it has been merged to the trunk it''s usually deleted as a matter of hygiene.  What you mustn't do is do further work on the feature branch and try to merge to trunk again.</p>
+
+<p>@SYNbit, As svn is a centralised vcs then yes the feature branch must be created in the main repo.  What this does allow, though is other folks to have visibility of the work (and collaborate) on the branch and for buildbots to attempt to build the branch.</p></div>
+            <div class="comment-info" id="comment-6024-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 12:38)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6035"></a>
+        <div class="comment not_top_scorer" id="comment-6035">
+            <div id="post-6035-score" class="comment-score"></div>
+            <div class="comment-text"><ul>
+<li>
+<p>Well, ok, no absolute need to delete a svn feature branch after a merge to trunk.
+But what purpose to maintain it if we can't merge it anymore to trunk?</p>
+</li>
+<li>
+<p>There is nothing with git/mercurial that prohibits from creating a branch in the central repository.
+Furthermore, nothing prohibits SYNbit from creating a branch on its local repository and sharing it with me without going to the central repository.</p>
+</li>
+</ul>
+
+<p>There is no workflow possible with svn that are impossible with a dvcs (be it git or mercurial). They're just a lot more flexible than svn.</p></div>
+            <div class="comment-info" id="comment-6035-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Aug '11, 16:14)</span>
+                <a class="comment-user userinfo" href="/users/1529/standel">standel</a>
+                
+            </div>
+        </div>
+    
+        <a name="6072"></a>
+        <div class="comment not_top_scorer" id="comment-6072">
+            <div id="post-6072-score" class="comment-score"></div>
+            <div class="comment-text"><p>From all the things I've read so far, git has more options to maintain local branches and merge them when needed, while SVN supports our current workflow better and people are more familiar with it at the moment. I also understand that it is possible to use git svn to import and export changes from SVN to git and back.</p>
+
+<p>Are there any downsides in keeping SVN for the central Wireshark repository and letting people use git for their local branches?</p></div>
+            <div class="comment-info" id="comment-6072-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Sep '11, 03:27)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6094"></a>
+        <div class="comment not_top_scorer" id="comment-6094">
+            <div id="post-6094-score" class="comment-score"></div>
+            <div class="comment-text"><p>@ standel And what do dvcs users do when finished with a feature or local branch?  Deleting the svn feature branch just removes it from current view of "HEAD", it's still there in the history.</p>
+
+<p>Flexibility usually comes with the cost of complexity.</p>
+
+<p>@SYNbit I agree with you here, folks have already posted recipes for doing this.</p></div>
+            <div class="comment-info" id="comment-6094-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Sep '11, 08:05)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="6178"></a>
+        <div class="comment not_top_scorer" id="comment-6178">
+            <div id="post-6178-score" class="comment-score"></div>
+            <div class="comment-text"><p>@grahamb When a user merges his branch with git/hg, he /can/ continue to develop on top of that branch without any further action if needed. Later, when he'll decide to merge again its new work, it will work. Simple as that.
+Of course, if the branch is not useful anymore because the feature is fully finished, he could choose to delete the branch (or keep it for historic reasons, whatever).</p>
+
+<p>My point is that a user won't delete the branch because working more on top of it after a merge could create a mess with the SCM on the next merge.</p></div>
+            <div class="comment-info" id="comment-6178-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '11, 05:26)</span>
+                <a class="comment-user userinfo" href="/users/1529/standel">standel</a>
+                
+            </div>
+        </div>
+    
+        <a name="6180"></a>
+        <div class="comment not_top_scorer" id="comment-6180">
+            <div id="post-6180-score" class="comment-score"></div>
+            <div class="comment-text"><p>about complexity coming with flexibility ... It's assuming there is no useless complexity in the product you're considering.
+For example: 
+Do you think svn is more flexible than cvs? (I hope you think svn is more flexible :))
+But ... would you say cvs is simpler than svn?</p></div>
+            <div class="comment-info" id="comment-6180-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Sep '11, 06:21)</span>
+                <a class="comment-user userinfo" href="/users/1529/standel">standel</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5988" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5988-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/5975/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='sE9TW6LQGKotEU1jBsxRe4Hu5jY9RtP8' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5975/should-we-migrate-to-a-different-scm?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5975/should-we-migrate-to-a-different-scm?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/development/"
+            class="tag-link-development"
+            title="see questions tagged'development'using tags"
+            rel="tag">development</a> <span class="tag-number">&#215;158</span><br/>
+        
+        <a href="/tags/git/"
+            class="tag-link-git"
+            title="see questions tagged'git'using tags"
+            rel="tag">git</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/svn/"
+            class="tag-link-svn"
+            title="see questions tagged'svn'using tags"
+            rel="tag">svn</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/hg/"
+            class="tag-link-hg"
+            title="see questions tagged'hg'using tags"
+            rel="tag">hg</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 30, 2011, 4:37 p.m.">30 Aug '11, 16:37</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,178 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 8, 2011, 3:34 p.m.">08 Sep '11, 15:34</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/31936/retrieving-an-old-svn-version-snapshot">Retrieving an old SVN version snapshot</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6069/checking-out-source-code-with-git-svn">Checking out source code with git svn</a>
+        </p>
+        
+        <p>
+            <a href="/questions/828/how-to-add-extra-file-to-wireshark-folder-for-plugin">How to add extra file to Wireshark folder for plugin</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5376/wireshark-161-title-shows-svn-rev-unknown-from-unknown">wireshark 1.6.1 - title shows &quot;SVN Rev Unknown from unknown&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6050/proto_tree_add_bits_item-bit-limit">proto_tree_add_bits_item(), bit limit?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6892/glib-directory-not-being-created-or-updated-in-149">glib directory not being created or updated in 1.4.9</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8660/wireshark-building-and-debugging-on-visual-c-or-visual-studio">Wireshark Building and debugging on visual c++ or Visual studio</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9301/how-to-display-strings-instead-of-values-for-custom-columns-defined">How to display strings instead of values for custom columns defined</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14393/how-does-tcp-track-sequence-numbers">How does TCP track sequence numbers?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32722/undefined-symbol-xmlparsefile">undefined symbol: xmlParseFile</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

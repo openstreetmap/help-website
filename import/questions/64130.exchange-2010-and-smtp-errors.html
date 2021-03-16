@@ -1,0 +1,1721 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Exchange 2010 and SMTP errors - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello all, I have Exchange 2010 running on a Win 2012 R2 VM We use ProofPoint Essentials as our mail filtering service. I am having problems receiving emails In the receive log I see 354 Start Mail Input, then nothing comes through, it just dies and ends connection. When I look on the ProofPoint Adm..." />
+        <meta name="keywords" content="smtp,2010,exchange" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/64130/exchange-2010-and-smtp-errors" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/64130/exchange-2010-and-smtp-errors?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='arek9GAQD3cFjkF5fY0CFxT38dzLo8RZ' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/64130/exchange-2010-and-smtp-errors">Exchange 2010 and SMTP errors</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-64130-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/64130/up/" rel="nofollow"> </a>
+<div id="post-64130-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-64130-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/64130/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/64130/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello all,
+I have Exchange 2010 running on a Win 2012 R2 VM
+We use ProofPoint Essentials as our mail filtering service.
+I am having problems receiving emails
+In the receive log I see 354 Start Mail Input, then nothing comes through, it just dies and ends connection.
+When I look on the ProofPoint Admin Console the errors relate to Time Outs.</p>
+<p>I did a capture, but am not sure what I should look for and what is causing the problem.
+I would appreciate any input....
+I have the capture file, not sure where I can upload it.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/smtp/" class="post-tag tag-link-smtp"
+                                        title="see questions tagged 'smtp'" rel="tag">smtp</a>
+                                
+                                    <a href="/tags/2010/" class="post-tag tag-link-2010"
+                                        title="see questions tagged '2010'" rel="tag">2010</a>
+                                
+                                    <a href="/tags/exchange/" class="post-tag tag-link-exchange"
+                                        title="see questions tagged 'exchange'" rel="tag">exchange</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>23 Oct '17, 15:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a3e41ddcb006c09a722a297a31dfeef6?s=32&amp;d=identicon&amp;r=g" alt="sethdunn96's gravatar image" />
+    <p><a href="/users/45670/sethdunn96">sethdunn96</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sethdunn96 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-64130">
+    
+        <a name="64131"></a>
+        <div class="comment" id="comment-64131">
+            <div id="post-64131-score" class="comment-score"></div>
+            <div class="comment-text"><p>I also did a capture of a successful send/receive on my server...</p></div>
+            <div class="comment-info" id="comment-64131-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Oct '17, 15:59)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64132"></a>
+        <div class="comment" id="comment-64132">
+            <div id="post-64132-score" class="comment-score"></div>
+            <div class="comment-text"><p>This was a successful send capture from one of our AV Gateway boxes to our Exchange server
+<a href="https://drive.google.com/open?id=0B4PA4PyuOxmWdmNNTlRhdEw4aTg">https://drive.google.com/open?id=0B4PA4PyuOxmWdmNNTlRhdEw4aTg</a></p>
+
+<p>This is the packet capture of the failed receive from ProofPoint server:
+<a href="https://drive.google.com/open?id=0B4PA4PyuOxmWd1ZNZkRIVUk4WDQ">https://drive.google.com/open?id=0B4PA4PyuOxmWd1ZNZkRIVUk4WDQ</a></p></div>
+            <div class="comment-info" id="comment-64132-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Oct '17, 16:09)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64165"></a>
+        <div class="comment" id="comment-64165">
+            <div id="post-64165-score" class="comment-score"></div>
+            <div class="comment-text"><p>In the failed capture there seems to be packet loss from 67.231.154.164 (frame 175-176) to 10.77.50.25.</p>
+
+<p>10.77.50.25 reports this packet loss by sending DupACKs (frame 178 ff.) ACKing frame 175 + additional data with "Selective ACKs" (SACK option).
+Furthermore it seems that 67.231.154.164 received these DupACKs (the number of RST packets is more or less the amount of DupACKs).</p>
+
+<p>Two possible reasons which comes to my mind:</p>
+
+<ul>
+<li>There is a middlebox (e.g. a firewall) between client and server altering packets with SACK.</li>
+<li>The client can't handle SACK</li>
+</ul></div>
+            <div class="comment-info" id="comment-64165-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '17, 12:40)</span>
+                <a class="comment-user userinfo" href="/users/11681/uli">Uli</a>
+                
+            </div>
+        </div>
+    
+        <a name="64168"></a>
+        <div class="comment" id="comment-64168">
+            <div id="post-64168-score" class="comment-score"></div>
+            <div class="comment-text"><p>So how would I rectify this?
+When we had Exchange 2003 running on Windows 2003, the setup was the same as it is now, but there wasn't this problem.</p>
+
+<p>This seems to be Windows 2012 R2 and Exchange 2010 SP3 thing....
+(This is a VM running on a Windows 2012 R2 Host)</p></div>
+            <div class="comment-info" id="comment-64168-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '17, 14:03)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64175"></a>
+        <div class="comment" id="comment-64175">
+            <div id="post-64175-score" class="comment-score"></div>
+            <div class="comment-text"><p>To debug this further my next steps would be:</p>
+
+<ul>
+<li>Take more sample captures to find/verify a pattern</li>
+<li>If the pattern is "Issue with SACK packets" I would go on and disable SACK, take more captures, verify...</li>
+<li>Checking the middleboxes on the path client &lt;-&gt; server</li>
+</ul>
+
+<p>Site node: <a href="https://support.microsoft.com/en-us/help/224829/description-of-windows-2000-and-windows-server-2003-tcp-features">SACK was enabled by default with Windows 2003</a> too.</p></div>
+            <div class="comment-info" id="comment-64175-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Oct '17, 22:40)</span>
+                <a class="comment-user userinfo" href="/users/11681/uli">Uli</a>
+                
+            </div>
+        </div>
+    
+        <a name="64180"></a>
+        <div class="comment not_top_scorer" id="comment-64180">
+            <div id="post-64180-score" class="comment-score"></div>
+            <div class="comment-text"><p>What does SACK do/don't do in regards to the communication?</p>
+
+<p>Cause one thing I notice when I watch the real-time log on my firewall.
+The ProofPoint server will build an inbound connection to my exchange server....then it will rattle off a bunch of "Deny TCP (no connection)...."with a few diff. flags....
+i.e.  RST, RST and ACK, FIN and ACK
+But I think it is mostly just the ACK flag</p></div>
+            <div class="comment-info" id="comment-64180-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '17, 04:29)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64186"></a>
+        <div class="comment not_top_scorer" id="comment-64186">
+            <div id="post-64186-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://tools.ietf.org/html/rfc2018">The receiving TCP sends back SACK packets to the sender informing the sender of data that has been received. The sender can then retransmit only the missing data segments.</a></p></div>
+            <div class="comment-info" id="comment-64186-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '17, 06:58)</span>
+                <a class="comment-user userinfo" href="/users/11681/uli">Uli</a>
+                
+            </div>
+        </div>
+    
+        <a name="64188"></a>
+        <div class="comment not_top_scorer" id="comment-64188">
+            <div id="post-64188-score" class="comment-score"></div>
+            <div class="comment-text"><p>So it seems that SACK is enabled by default, whether it is in the registry or not.
+What would the benefit of disabling it be?</p></div>
+            <div class="comment-info" id="comment-64188-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '17, 07:28)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64198"></a>
+        <div class="comment not_top_scorer" id="comment-64198">
+            <div id="post-64198-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>What would the benefit of disabling SACK be?</p>
+</blockquote>
+
+<p>if the middlebox handles SACK incorrectly, it would have nothing to spoil if SACK would not be there at all. Better to have a slower but reliable connection than to have a breaking down one.</p></div>
+            <div class="comment-info" id="comment-64198-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '17, 11:09)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="64199"></a>
+        <div class="comment not_top_scorer" id="comment-64199">
+            <div id="post-64199-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok, I will try disabling it tonight then and see what happens.</p></div>
+            <div class="comment-info" id="comment-64199-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '17, 11:28)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64203"></a>
+        <div class="comment not_top_scorer" id="comment-64203">
+            <div id="post-64203-score" class="comment-score"></div>
+            <div class="comment-text"><p>So I 
+Enabled PMTU and had SACKOpt Disabled.
+MTU on the interface was 1500, according to netsh command.
+Problem still persisted, I did a wireshark capture and it looked the same as the capture I posted above.  The server was rebooted before this test.</p>
+
+<p>Then I 
+Disabled PMTU, Enabled SACKOpts
+Changed interface MTU to 1470
+Rebooted server.
+Ran wireshark...the packets definitely were smaller coming in, but the results were the same.
+Here is the capture:
+<a href="https://drive.google.com/open?id=0B4PA4PyuOxmWQXhGMVd3d3RWMGc">https://drive.google.com/open?id=0B4PA4PyuOxmWQXhGMVd3d3RWMGc</a></p></div>
+            <div class="comment-info" id="comment-64203-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '17, 15:56)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64204"></a>
+        <div class="comment not_top_scorer" id="comment-64204">
+            <div id="post-64204-score" class="comment-score"></div>
+            <div class="comment-text"><p>Tried disabling Chunking and BinaryMime, no dice.
+<a href="https://drive.google.com/open?id=0B4PA4PyuOxmWOV9SSXNrUWEwaVk">https://drive.google.com/open?id=0B4PA4PyuOxmWOV9SSXNrUWEwaVk</a></p></div>
+            <div class="comment-info" id="comment-64204-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '17, 16:18)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64205"></a>
+        <div class="comment not_top_scorer" id="comment-64205">
+            <div id="post-64205-score" class="comment-score"></div>
+            <div class="comment-text"><p>When I watch the log on my Firewall (PIX 515E)
+This is the communication.
+The connection is built then immediate tear down from the outside (ProofPoint Server)</p>
+
+<p><code>6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|Exchange|67.231.154.164|Deny TCP (no connection) from Exchange/25 to 67.231.154.164/50138 flags ACK  on interface DMZ4
+6|Oct 25 2017|19:44:59|302014|67.231.154.164|Exchange|Teardown TCP connection 3913035 for outside:67.231.154.164/50138 to DMZ4:Exchange/25 duration 0:00:00 bytes 189250 TCP Reset-O
+6|Oct 25 2017|19:44:58|302013|67.231.154.164|Exchange|Built inbound TCP connection 3913035 for outside:67.231.154.164/50138 (67.231.154.164/50138) to DMZ4:Exchange/25 (216.54.104.225/25)</code></p></div>
+            <div class="comment-info" id="comment-64205-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '17, 16:59)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64206"></a>
+        <div class="comment not_top_scorer" id="comment-64206">
+            <div id="post-64206-score" class="comment-score"></div>
+            <div class="comment-text"><p>Here is the Log from my firewall (PIX 515E)
+Connection is built, then immediate tear down (from the ProofPoint Server)</p>
+
+<p><code>6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/50138 to 216.54.104.225/25 flags RST  on interface outside
+6|Oct 25 2017|19:44:59|106015|Exchange|67.231.154.164|Deny TCP (no connection) from Exchange/25 to 67.231.154.164/50138 flags ACK  on interface DMZ4
+6|Oct 25 2017|19:44:59|302014|67.231.154.164|Exchange|Teardown TCP connection 3913035 for outside:67.231.154.164/50138 to DMZ4:Exchange/25 duration 0:00:00 bytes 189250 TCP Reset-O
+6|Oct 25 2017|19:44:58|302013|67.231.154.164|Exchange|Built inbound TCP connection 3913035 for outside:67.231.154.164/50138 (67.231.154.164/50138) to DMZ4:Exchange/25 (216.54.104.225/25)</code></p></div>
+            <div class="comment-info" id="comment-64206-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Oct '17, 17:00)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64216"></a>
+        <div class="comment not_top_scorer" id="comment-64216">
+            <div id="post-64216-score" class="comment-score"></div>
+            <div class="comment-text"><p>The capture above shows that the connection runs for a while until some packets stop getting through. To verify whether it is a network issue or an issue of the sending client, you would have to capture simultaneously at the client and at the server and then compare the captures.</p>
+
+<p>However, the security devices sometimes behave funny when they think something is wrong. Could it be that the issue is related to contents of one of the messages, so the security device would use rough means to stop its sending because it has classified its contents as malicious?</p>
+
+<p>To avoid influence of eventual security applications or hardware acceleration on the client and the server, you should not capture on those machines directly but using other machines and network tap or monitoring port.</p>
+
+<p>The final result should be identification of the element of the chain which causes trouble.</p></div>
+            <div class="comment-info" id="comment-64216-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 01:22)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="64222"></a>
+        <div class="comment not_top_scorer" id="comment-64222">
+            <div id="post-64222-score" class="comment-score"></div>
+            <div class="comment-text"><p>I know on this one particular email that is trying to be sent it has an attachment...a .wav file I believe.
+But I don't have anything enabled on the Firewall to stop email from being sent.  It wasn't configured to do so when we were on Exchange 2003, and I have not altered anything when I migrated to Exchange 2010.</p>
+
+<p>I will have to see if I can set up a capture from another machine, I know the Cisco Switch I have the machines going into, I have a port set up for promiscuous mode.</p></div>
+            <div class="comment-info" id="comment-64222-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 04:13)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64225"></a>
+        <div class="comment not_top_scorer" id="comment-64225">
+            <div id="post-64225-score" class="comment-score"></div>
+            <div class="comment-text"><p>Here is the capture done from a different server:
+<a href="https://drive.google.com/open?id=0B4PA4PyuOxmWUy12aFJuOFdIaHc">https://drive.google.com/open?id=0B4PA4PyuOxmWUy12aFJuOFdIaHc</a>
+The traffic looks similar as to when it was done on Exchange server.</p></div>
+            <div class="comment-info" id="comment-64225-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 05:07)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64226"></a>
+        <div class="comment not_top_scorer" id="comment-64226">
+            <div id="post-64226-score" class="comment-score"></div>
+            <div class="comment-text"><p>As said you need to capture as close as possible to the client and as close as possible to the server, while "client" and "server" are roles of machines in the TCP session used as transport for the SMTP session. So as you say you have trouble <strong>receiving</strong> emails, I guess your MS Exchange is the server and some machine in the internet is the client. As the server has a private address while the client has a public one,  I assume that there is a port forwarding set up somewhere.</p>
+
+<p>If my guess is correct, capture <strong>simultaneously</strong> next to the uplink connection to internet (so that you could see whether the packets are missing already at the edge of your company network) and next to the Exchange server. If the packets missing at Exchange side can be found at uplink side, something in your network is dropping them; if they are missing already at the uplink, something outside your network is dropping them.</p></div>
+            <div class="comment-info" id="comment-64226-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 05:27)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="64227"></a>
+        <div class="comment not_top_scorer" id="comment-64227">
+            <div id="post-64227-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think at this point it has to do with the network adapters and Exchange being a VM.
+I did some file transfer testing
+My PC at home has an IPSec tunnel built to the servers.
+So I transferred a folder (110 MB, using my machine at home) from one Physical Server on the LAN I am tunneled into, to another Physical Server (win 2012 R2) on the LAN.  Transfer speed shows &gt;500 KB/sec
+If I do the same folder transfer to my Exchange (VM) the speed is only ~150 KB/sec....and at times it looks like things time out....then starts over again.</p>
+
+<p>I have the latest drivers installed on the Host machine (I will check HP's site again to be sure).
+But is there any Adapter Advanced settings I should look into?
+I have disabled VMQ on the adapters as well as in Hyper-V.</p></div>
+            <div class="comment-info" id="comment-64227-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 05:54)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64228"></a>
+        <div class="comment not_top_scorer" id="comment-64228">
+            <div id="post-64228-score" class="comment-score"></div>
+            <div class="comment-text"><p>A blind shot then... look at the answer to <a href="https://ask.wireshark.org/questions/50123/win-2012-r2-vm-network-much-faster-after-wireshark-was-started">this question</a>. Althought the symptoms are just loosely relevant, maybe the sending client isn't patient enough and that causes the session to fail?</p></div>
+            <div class="comment-info" id="comment-64228-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 06:09)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="64229"></a>
+        <div class="comment not_top_scorer" id="comment-64229">
+            <div id="post-64229-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have been running Wireshark on the VM, but the problem persists.</p>
+
+<p>I have went in and made a few changes to the adapter (both on host and VM)
+File transfer speeds to the VM are now on par with transfer speeds to physical machines....
+But still the Email issues persists. :(</p>
+
+<p>I disabled VMQ in the registry of the Host machine, stumbled across this thread (the OP enabled it, I disabled it)
+<a href="https://www.reddit.com/r/sysadmin/comments/2k7jn5/after_2_years_i_have_finally_solved_my_slow/">https://www.reddit.com/r/sysadmin/comments/2k7jn5/after_2_years_i_have_finally_solved_my_slow/</a></p>
+
+<p>Then made sure that VMQ is disabled in Hyper-V as well as the physical adapter.</p></div>
+            <div class="comment-info" id="comment-64229-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 07:04)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64230"></a>
+        <div class="comment not_top_scorer" id="comment-64230">
+            <div id="post-64230-score" class="comment-score"></div>
+            <div class="comment-text"><p>A simultaneous capture at the Exchange VM itself and at a mirror of a switch port to which the physical server on which the VM is running is connected should tell you whether VMware and the network card drivers are actually the root cause or not. Same approach - if you can see the packet on the wire but not on the VM, something in between has dropped it. Otherwise, dig in another direction.</p></div>
+            <div class="comment-info" id="comment-64230-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 07:13)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="64231"></a>
+        <div class="comment not_top_scorer" id="comment-64231">
+            <div id="post-64231-score" class="comment-score"></div>
+            <div class="comment-text"><p>I will see how I can do that...
+Because the server has 4 ethernet ports.
+So I have a dedicated port for the VM and the host machine has it's own port.
+On the host machine, the ethernet port I use for the VM, I do not have any IP information assigned to it.</p></div>
+            <div class="comment-info" id="comment-64231-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 07:21)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64232"></a>
+        <div class="comment not_top_scorer" id="comment-64232">
+            <div id="post-64232-score" class="comment-score"></div>
+            <div class="comment-text"><p>You don't need IP settings to be attached to a network card in order to capture on it. If you know to which port of a switch the dedicated Ethernet port of the host machine is connected, mirror that switch port to another one and capture on the mirroring port using a physical machine. You'll see the packets to/from the IP address of the VM's virtual port in the capture. Even though the whole path from the Eth port of the host to the virtual Eth port of the VM is expected to act as a switch, it may drop packets (which is what you need to confirm or prove false).</p></div>
+            <div class="comment-info" id="comment-64232-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 07:26)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="64233"></a>
+        <div class="comment not_top_scorer" id="comment-64233">
+            <div id="post-64233-score" class="comment-score"></div>
+            <div class="comment-text"><p>So I did a packet capture.
+One from the VM and the source IP
+The other capture from another server for the IP addresses of the VM and the Source IP
+For this particular conversation, both instances capture the same amount of packets.  232
+At the end of the capture, both instances show the same entry.
+So it looks like the data is the same, correct?</p>
+
+<p>Capture from External Server:
+<a href="https://drive.google.com/open?id=0B4PA4PyuOxmWbEtmYjlOR3BUckE">https://drive.google.com/open?id=0B4PA4PyuOxmWbEtmYjlOR3BUckE</a></p>
+
+<p>Capture from the VM itself.
+<a href="https://drive.google.com/open?id=0B4PA4PyuOxmWVFo4TWpRbkRZODg">https://drive.google.com/open?id=0B4PA4PyuOxmWVFo4TWpRbkRZODg</a></p></div>
+            <div class="comment-info" id="comment-64233-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 07:33)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64234"></a>
+        <div class="comment not_top_scorer" id="comment-64234">
+            <div id="post-64234-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well, I wouldn't look so much at the number of packets and the last one to be captured as I don't know how precisely you can synchronise start and stop of the capture on the two machines :) What is relevant is that, in both capture files,</p>
+
+<ul>
+<li>the last packet from client to server before the trouble starts has <code>tcp.seq</code> 145080, and</li>
+<li>the first "black" one ("previous segment not captured") comes right after it and has <code>tcp.seq</code> 150552.</li>
+</ul>
+
+<p>This means that the network path between these two capture points is not the source of the trouble as the trouble is present at both capture points. So now reuse whichever one is more convenient for you of these two capture points, find another one closer to the source (the SMTP client), and try again.</p></div>
+            <div class="comment-info" id="comment-64234-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 07:46)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="64235"></a>
+        <div class="comment not_top_scorer" id="comment-64235">
+            <div id="post-64235-score" class="comment-score"></div>
+            <div class="comment-text"><p>For the synchronize aspect. I start the capture and filter on the IP addresses relevant to the capture.  Then from the ProofPoint Admin console, I do a resend on an email that is hung in queue there.  This way the traffic captured, is done at the same time.</p>
+
+<p>All the traffic once inside the firewall is on the same Cisco Switch (3 VLANs on the switch).
+Exchange is on VLAN3, the external capture I did from the other server was on VLAN2
+So I am not sure how I would setup another capture point.</p>
+
+<p>Would you suspect that my firewall for whatever reason is dropping a packet?</p></div>
+            <div class="comment-info" id="comment-64235-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 07:52)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64236"></a>
+        <div class="comment not_top_scorer" id="comment-64236">
+            <div id="post-64236-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Would you suspect that my firewall for whatever reason is dropping a packet?</p>
+</blockquote>
+
+<p>Yes, it is one of possible explanations.</p></div>
+            <div class="comment-info" id="comment-64236-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 07:58)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="64237"></a>
+        <div class="comment not_top_scorer" id="comment-64237">
+            <div id="post-64237-score" class="comment-score"></div>
+            <div class="comment-text"><p>Only thing I can come up with now, but I am not seeing where it would be dropping it.
+As I said the config on the Firewall is the same as when Exchange 2003 was in the picture.
+And I am not seeing interface errors on the associated interfaces with the flow of traffic.</p>
+
+<p>This looks to me like it is a problem with Win 2012 R2/Exchange 2010 being a VM
+But I am completely stumped as to why it is happening.</p></div>
+            <div class="comment-info" id="comment-64237-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 08:02)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64238"></a>
+        <div class="comment not_top_scorer" id="comment-64238">
+            <div id="post-64238-score" class="comment-score"></div>
+            <div class="comment-text"><p>So the sending client is the ProofPoint itself and both the ProofPoint and the receiving server are under your management access, and something routes between the client's subnet in VLAN 2 and the server's subnet in VLAN 3?</p></div>
+            <div class="comment-info" id="comment-64238-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 08:02)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="64240"></a>
+        <div class="comment not_top_scorer" id="comment-64240">
+            <div id="post-64240-score" class="comment-score"></div>
+            <div class="comment-text"><p>ProofPoint is an ext. service provider, we just pay for their filtering services.  I have an admin console where I can log in and check the queues and see what is being hung up there for whatever reason.</p>
+
+<p>We have a Cisco PIX 515E in place, due to PCI Compliance we have had to segment the network, so there are 3 LANs. 
+2 LANs are secured for PCI Compliance, the 3rd party server I ran the capture from was done from one of these segments
+The other LAN is not monitored for PCI Compliance, this is where my Exchange server sits.</p>
+
+<p>The PIX has 6 ethernet ports, so that is how traffic is sent between the LANs as well as from Outside (Public) to inside</p></div>
+            <div class="comment-info" id="comment-64240-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 08:09)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64245"></a>
+        <div class="comment not_top_scorer" id="comment-64245">
+            <div id="post-64245-score" class="comment-score"></div>
+            <div class="comment-text"><p>So I went into the registry on both Host and VM
+I set the jumbo packets to 9014 for all adapters available.
+On the Host Machine, I set all entries for VMQ to disabled.
+All done in the registry.</p>
+
+<p>Powered down VM, then reboot Host machine, brought back up VM
+Problem still persists.</p></div>
+            <div class="comment-info" id="comment-64245-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 10:03)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64252"></a>
+        <div class="comment not_top_scorer" id="comment-64252">
+            <div id="post-64252-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think you are too stuck to the idea that the change of Exchange version is guilty. But the missing packet is <strong>to</strong> the Exchange, so even if change of version is guilty, it affects something on the sending side, not in the VM settings. As reasoned above, the host and VM do not seem to steal the missing packets.</p>
+
+<p>So where did you capture? Between ProofPoint and your PIX or between the PIX and the Exchange? The capture suggests that between the PIX and the Exchange because the source and destination MAC addresses are the same in both captures and I assume the PIX acts at L3. So if you can capture at both sides of the PIX (the one facing towards internet/ProofPoint and the one facing towards the Exchange VM), you should see whether it is your PIX which is stealing the packets or something even closer to the ProofPoint.</p></div>
+            <div class="comment-info" id="comment-64252-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Oct '17, 12:54)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="64276"></a>
+        <div class="comment not_top_scorer" id="comment-64276">
+            <div id="post-64276-score" class="comment-score"></div>
+            <div class="comment-text"><p>The reason I think it is Exchange or it being a VM "feature" is due to the fact that the traffic does seem to get to Exchange, but then something goes sideways the longer it takes to deliver a message (being an attachment present).</p>
+
+<p>Yes packet captures were done on the inside of the PIX. Don't have a way to do a capture using the outside of the PIX.
+I can watch the Log of the PIX during a transaction with the ProofPoint server, and the initial inbound connection is built, and then instantly it gets tore down, 
+6|Oct 27 2017|07:31:14|106015|67.231.154.164|216.54.104.225|Deny TCP (no connection) from 67.231.154.164/58726 to 216.54.104.225/25 flags FIN ACK  on interface outside</p>
+
+<p>........
+6|Oct 27 2017|07:31:11|106015|148.163.129.52|216.54.104.225|Deny TCP (no connection) from 148.163.129.52/47238 to 216.54.104.225/25 flags RST  on interface outside</p>
+
+<p>6|Oct 27 2017|07:31:11|106015|148.163.129.52|216.54.104.225|Deny TCP (no connection) from 148.163.129.52/47238 to 216.54.104.225/25 flags RST  on interface outside</p>
+
+<p>6|Oct 27 2017|07:31:11|106015|148.163.129.52|216.54.104.225|Deny TCP (no connection) from 148.163.129.52/47238 to 216.54.104.225/25 flags RST  on interface outside</p>
+
+<p>6|Oct 27 2017|07:31:11|106015|148.163.129.52|216.54.104.225|Deny TCP (no connection) from 148.163.129.52/47238 to 216.54.104.225/25 flags RST  on interface outside</p>
+
+<p>6|Oct 27 2017|07:31:11|106015|148.163.129.52|216.54.104.225|Deny TCP (no connection) from 148.163.129.52/47238 to 216.54.104.225/25 flags RST  on interface outside</p>
+
+<p>6|Oct 27 2017|07:31:11|106015|148.163.129.52|216.54.104.225|Deny TCP (no connection) from 148.163.129.52/47238 to 216.54.104.225/25 flags RST  on interface outside</p>
+
+<p>6|Oct 27 2017|07:31:11|106015|148.163.129.52|216.54.104.225|Deny TCP (no connection) from 148.163.129.52/47238 to 216.54.104.225/25 flags RST  on interface outside</p>
+
+<p>6|Oct 27 2017|07:31:11|106015|148.163.129.52|216.54.104.225|Deny TCP (no connection) from 148.163.129.52/47238 to 216.54.104.225/25 flags RST  on interface outside</p>
+
+<p>6|Oct 27 2017|07:31:11|106015|148.163.129.52|216.54.104.225|Deny TCP (no connection) from 148.163.129.52/47238 to 216.54.104.225/25 flags RST  on interface outside</p>
+
+<p>6|Oct 27 2017|07:31:10|302013|148.163.129.52|Exchange|Built inbound TCP connection 4512210 for outside:148.163.129.52/47238 (148.163.129.52/47238) to DMZ4:Exchange/25 (216.54.104.225/25)</p></div>
+            <div class="comment-info" id="comment-64276-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '17, 04:34)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64277"></a>
+        <div class="comment not_top_scorer" id="comment-64277">
+            <div id="post-64277-score" class="comment-score"></div>
+            <div class="comment-text"><p>I had to remove a bunch of the "Deny TCP (no connection)" entries due to character limit.</p></div>
+            <div class="comment-info" id="comment-64277-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '17, 04:34)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64278"></a>
+        <div class="comment not_top_scorer" id="comment-64278">
+            <div id="post-64278-score" class="comment-score"></div>
+            <div class="comment-text"><p>The one email that was hung up, went through this morning after 3 days of trying.
+10.77.50.25:25,67.231.154.164:49860,+,,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,*,SMTPSubmit SMTPAcceptAnySender SMTPAcceptAuthoritativeDomainSender AcceptRoutingHeaders,Set Session Permissions</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,*,SMTPSubmit SMTPAcceptAnyRecipient SMTPAcceptAuthenticationFlag SMTPAcceptAnySender SMTPAcceptAuthoritativeDomainSender BypassAntiSpam BypassMessageSizeLimit SMTPAcceptEXCH50 AcceptRoutingHeaders,Set Session Permissions</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,"220 exch.d2ms.com Microsoft ESMTP MAIL Service ready at Fri, 27 Oct 2017 06:57:03 -0400",</p>
+
+<p>10.77.50.25:25,67.231.154.164:49842,-,,Remote</p>
+
+<p>10.77.50.25:25,67.231.154.164:49850,-,,Remote</p>
+
+<p>10.77.50.25:25,67.231.154.164:49852,-,,Remote</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&lt;,EHLO dispatch1-us1.ppe-hosted.com,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,250-exch.d2ms.com Hello [67.231.154.164],</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,250-SIZE,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,250-PIPELINING,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,250-DSN,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,250-ENHANCEDSTATUSCODES,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,250-AUTH,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,250-8BITMIME,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,250-BINARYMIME,</p>
+
+<p>,10.77.50.25:25,67.231.154.164:49860,&gt;,250-CHUNKING,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,250-XEXCH50,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,250 XSHADOW,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&lt;,MAIL FROM:<a href="/cdn-cgi/l/email-protection#176060603a737663765774786572263a65767b3962647e6774787a3974787a"><span class="__cf_email__" data-cfemail="e99e9e9ec48d889d88a98a869b8cd8c49b8885c79c9a80998a8684c78a8684">[email&#160;protected]</span></a> SIZE=248166 BODY=8BITMIME,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,*,08D51C91FA7F1C33;2017-10-27T10:57:04.662Z;1,receiving message</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&lt;,RCPT TO:<a href="/cdn-cgi/l/email-protection#badedbccdfc8fadfcec8dbd4c9dcdfc894d9d5d7"><span class="__cf_email__" data-cfemail="c5a1a4b3a0b785a0b1b7a4abb6a3a0b7eba6aaa8">[email&#160;protected]</span></a> ORCPT=rfc822;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6e0a0f180b1c2e0b1a1c0f001d080b1c400d0103">[email&#160;protected]</a>,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&lt;,DATA,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,250 2.1.0 Sender OK,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,250 2.1.5 Recipient OK,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,354 Start mail input; end with &lt;crlf&gt;.&lt;crlf&gt;,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,250 2.6.0 <a href="/cdn-cgi/l/email-protection#b5808cd3858582d78180868cd68181848cd787d0818387d384d18d83d1d1d081d6f5d6dac7d08498c7d4d99bc0c6dcc5d6dad89bd6dad8"><span class="__cf_email__" data-cfemail="52676b34626265306667616b316666636b3060376664603463366a64363637663112313d2037637f20333e7c27213b22313d3f7c313d3f">[email&#160;protected]</span></a> [InternalId=293419] Queued mail for delivery,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&lt;,QUIT,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,&gt;,221 2.0.0 Service closing transmission channel,</p>
+
+<p>10.77.50.25:25,67.231.154.164:49860,-,,Local</p></div>
+            <div class="comment-info" id="comment-64278-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '17, 04:43)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64281"></a>
+        <div class="comment not_top_scorer" id="comment-64281">
+            <div id="post-64281-score" class="comment-score"></div>
+            <div class="comment-text"><p>I checked the syslog of my PIX for when that message finally did go through this morning.  This is what it saw.</p>
+
+<p>Oct 27 06:57:06 10.76.0.1 Oct 27 2017 06:56:13: %PIX-6-302013: Built inbound TCP connection 4495227 for outside:67.231.154.164/49860 (67.231.154.164/49860) to DMZ4:Exchange/25 (216.54.104.225/25)</p>
+
+<p>Oct 27 06:57:07 10.76.0.1 Oct 27 2017 06:56:14: %PIX-6-302014: Teardown TCP connection 4495227 for outside:67.231.154.164/49860 to DMZ4:Exchange/25 duration 0:00:00 bytes 248873 TCP Reset-O</p>
+
+<p>Oct 27 06:57:08 10.76.0.1 Oct 27 2017 06:56:15: %PIX-6-106015: Deny TCP (no connection) from Exchange/25 to 67.231.154.164/49860 flags ACK on interface DMZ4</p>
+
+<p>Oct 27 06:57:08 10.76.0.1 Oct 27 2017 06:56:15: %PIX-6-106015: Deny TCP (no connection) from Exchange/25 to 67.231.154.164/49860 flags FIN PSH ACK on interface DMZ4</p></div>
+            <div class="comment-info" id="comment-64281-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '17, 05:23)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64283"></a>
+        <div class="comment not_top_scorer" id="comment-64283">
+            <div id="post-64283-score" class="comment-score"></div>
+            <div class="comment-text"><p>I could even imagine that some element on one path between ProofPoint and your network had a problem to handle a specific packet contents while another path hasn't, and that the only change was that dynamic routing has chosen the problem-free path this time. If the issue was with a single e-mail message, I'm afraid it is gonna remain an unsolved mystery.</p></div>
+            <div class="comment-info" id="comment-64283-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '17, 05:58)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="64284"></a>
+        <div class="comment not_top_scorer" id="comment-64284">
+            <div id="post-64284-score" class="comment-score"></div>
+            <div class="comment-text"><p>It is beginning to look that way.
+But what worries me, is I am getting ready to migrate us again to Exchange 2016, and my plan was to put that on a VM as well vs. a physical machine.
+But if this is a problem with Hyper V and Exchange being on a VM, then my problem will follow and of course my boss and some others in the company will not be happy with this.
+So that is why I have been wanting to narrow this down and know what the problem is....
+Then I can better decide which route to take.</p></div>
+            <div class="comment-info" id="comment-64284-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '17, 06:01)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64285"></a>
+        <div class="comment not_top_scorer" id="comment-64285">
+            <div id="post-64285-score" class="comment-score"></div>
+            <div class="comment-text"><p>I still don't get what makes you think it was a VM/Hyper V/Exchange problem. Once again - you have seen from the synchronous captures on the switch and on the Exchange's VM that the packet sent by ProofPoint towards Exchange got lost already before it could arrive to the VMware host.</p>
+
+<p>A coincidence is not necessarily a correlation - the more that the issue turned out not to be a permanent one but was related to a single message (and, most likely, to a single packet in that message). So it may have nothing to do with VMware or Exchange at all.</p>
+
+<p>I've read about network cards sensitive about several-byte patterns in packets, causing them to drop such packets (or handle them in a specific way which effectively means a drop).</p></div>
+            <div class="comment-info" id="comment-64285-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '17, 06:40)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="64290"></a>
+        <div class="comment not_top_scorer" id="comment-64290">
+            <div id="post-64290-score" class="comment-score"></div>
+            <div class="comment-text"><p>Because when I look at the PIX logs, as well as the captures.  There are resets that are happening...but the traffic still appears to have went to Exchange.  But I see resets on the Firewall from outside.  U can see in the post I did above that there was a TCP Reset-O</p>
+
+<p>And we never had this issue when Exchange 2003 was in place....the firewall, and internal network is all the same.  Once I decommissioned and removed Exchange 2003, I assigned the Exchange 2003 IP address to Exchange 2010, so all would be the same....just as I will do when I migrate to Exchange 2016.</p>
+
+<p>I agree with the network card being an issue.  This proliant uses Broadcom NICs, which seems to be a card that has issues with Hyper V/VMs
+But the workarounds are to disable VMQ and some other things which I have done...so while internal traffic transfer to and from Exchange are on par with physical boxes....the translation happening at the Firewall coming in, seem to be having problems.  (So yes I would concur it looks to be at the Firewall or on the outside).  I just assume it isn't since it was working good before migration.</p></div>
+            <div class="comment-info" id="comment-64290-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '17, 07:18)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64292"></a>
+        <div class="comment not_top_scorer" id="comment-64292">
+            <div id="post-64292-score" class="comment-score"></div>
+            <div class="comment-text"><p>In my understanding the tcp reset is just a consequence. And I had in mind a network card somewhere out there, not on your proliant, as the packet has already been missing before the proliant's network card could ever see it.</p></div>
+            <div class="comment-info" id="comment-64292-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '17, 07:30)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="64293"></a>
+        <div class="comment not_top_scorer" id="comment-64293">
+            <div id="post-64293-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok I see what you're saying
+But one other thing I will point out, is that when I remove the ProofPoint server MX records from DNS and put in our AV Gateway servers in DNS.
+The email appears to get to them fine (clients are not telling us about NDR's being received) and then relayed on to Exchange fine.
+So that is another reason why I point at Exchange/VM setup.</p></div>
+            <div class="comment-info" id="comment-64293-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '17, 07:33)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64294"></a>
+        <div class="comment not_top_scorer" id="comment-64294">
+            <div id="post-64294-score" class="comment-score"></div>
+            <div class="comment-text"><p>Funny that we come to completely contradictory conclusions on same input data. For me, the fact that it is better when you let the clients' mail servers talk SMTP directly with your Exchange on VM rather than via ProofPoint's filtering gateway means at first place that the network path from TCP client to TCP server is very likely to differ (as the TCP clients are clients' mailservers at different places across the 'net if you set MX to point to your Exchange), while the last section of that path, the one from your PIX through the VM host to the Exchange VM, is the same in both cases (MX pointing to ProofPoint or MX pointing to the public address of the Exchange directly).</p>
+
+<p>So for me, the fact that redirecting the SMTP communication to bypass ProofPoint makes things better is an inditia that at least one of possible network paths between ProofPoint and your PIX is ill, while for you it is a proof that the part of the path which is common for both scenarios is ill.</p></div>
+            <div class="comment-info" id="comment-64294-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '17, 07:49)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="64295"></a>
+        <div class="comment not_top_scorer" id="comment-64295">
+            <div id="post-64295-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yeah I see your point and reasoning...
+I guess I am just coming to the conclusion I am, because when we were on Exchange 2k3, it worked.   No issues.  No backups/NDR at ProofPoint.
+Then when I make the move to Exchange 2010 and a VM...that is when things act up.</p>
+
+<p>And as I said, my big concern is moving forward to Exchange 2016 and the problem is still there...vs. it may not be if I put it on a physical server.</p>
+
+<p>So yes, logic would dictate that I go with how you see it.
+But gut feeling is going in the opposite direction...</p></div>
+            <div class="comment-info" id="comment-64295-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '17, 09:14)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+        <a name="64298"></a>
+        <div class="comment not_top_scorer" id="comment-64298">
+            <div id="post-64298-score" class="comment-score"></div>
+            <div class="comment-text"><p>One other thing I will note 
+When I watch the PIX log for incoming email transactions.  When traffic coming from a ProofPoint server to our exchange server comes through, it has a very odd readout (like what I posted above) vs. email servers contacting our AV Gateway boxes and sending to them.
+When our AV Gateway boxes are contacted, you can see in the log on the PIX, the inbound connection build, then you will see the connection be tore down (after email has been delivered).  I don't see the multiple Deny TCP (no connection) entries for them, like I do for the ProofPoint to Exchange entries.</p></div>
+            <div class="comment-info" id="comment-64298-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '17, 09:59)</span>
+                <a class="comment-user userinfo" href="/users/45670/sethdunn96">sethdunn96</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-64130" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 46
+        </span>
+        <a href="#" class="show-all-comments-link">show 41 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-64130-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/64130/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='arek9GAQD3cFjkF5fY0CFxT38dzLo8RZ' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64130/exchange-2010-and-smtp-errors?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/64130/exchange-2010-and-smtp-errors?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/smtp/"
+            class="tag-link-smtp"
+            title="see questions tagged'smtp'using tags"
+            rel="tag">smtp</a> <span class="tag-number">&#215;25</span><br/>
+        
+        <a href="/tags/exchange/"
+            class="tag-link-exchange"
+            title="see questions tagged'exchange'using tags"
+            rel="tag">exchange</a> <span class="tag-number">&#215;14</span><br/>
+        
+        <a href="/tags/2010/"
+            class="tag-link-2010"
+            title="see questions tagged'2010'using tags"
+            rel="tag">2010</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 23, 2017, 3:30 p.m.">23 Oct '17, 15:30</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,503 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 27, 2017, 9:59 a.m.">27 Oct '17, 09:59</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/6574/problem-with-exchange-2010-and-outlook">[closed] Problem with Exchange 2010 and Outlook</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36826/rst-ack-win0">RST ACK Win=0?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/652/connection-to-microsoft-exchange-has-been-lost-outlook-will-restore-the-connection-when-possible">Connection to Microsoft Exchange has been lost. Outlook will restore the connection when possible</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8729/missing-smtp-traffic">missing SMTP traffic</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53121/is-there-a-way-to-replay-a-packet-capture-of-a-smtp-session-for-the-purpose-of-debugging">Is there a way to “replay” a packet capture of a smtp session for the purpose of debugging?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15071/554-message-is-not-rfc-compliantmissing-date-header">554 message is not RFC compliant;missing &quot;date&quot; header</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56272/java-email-fails">[closed] Java email fails</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6963/ssl-decryption-issue-using-p12-pfx">SSL decryption issue using p12 (.pfx)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16511/wireshark-decode-smtp">Wireshark decode SMTP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58309/why-are-the-ack-packets-getting-lost">Why are the ACK packets getting lost?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

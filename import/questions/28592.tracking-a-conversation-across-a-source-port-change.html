@@ -1,0 +1,861 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Tracking a conversation across a source port change - Wireshark Q&amp;A</title>
+        <meta name="description" content="I have a protocol in which the client changes source ports regularly (the server has a single well known port). I&#39;m trying to maintain a single conversation through this (each host can only have a single instance of the client). For example, I would expect this kind of traffic (52230 is the well kno..." />
+        <meta name="keywords" content="conversation,dissector" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/28592/tracking-a-conversation-across-a-source-port-change" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/28592/tracking-a-conversation-across-a-source-port-change?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='YeixyvwEj3IcOij9hQJkNmc5M64kp7Je' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/28592/tracking-a-conversation-across-a-source-port-change">Tracking a conversation across a source port change</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-28592-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28592/up/" rel="nofollow"> </a>
+<div id="post-28592-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-28592-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28592/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/28592/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have a protocol in which the client changes source ports regularly (the server has a single well known port). I'm trying to maintain a single conversation through this (each host can only have a single instance of the client). For example, I would expect this kind of traffic (52230 is the well known port):</p>
+<pre><code>client:12345 -&gt; server:52230
+server:52230 -&gt; client:12345
+client:23456 -&gt; server:52230
+server:55230 -&gt; client:23456
+</code></pre>
+<p>This is one conversation. I've been trying to build a dissector that will handle this, and expected <code>NO_PORT_B</code> to be exactly what I needed, but I haven't been able to get it to work. In its most basic form, I try finding the conversation this way:</p>
+<pre><code>conversation_t *conversation = find_conversation(pinfo-&gt;fd-&gt;num,
+                &amp;pinfo-&gt;src, &amp;pinfo-&gt;dst,
+                pinfo-&gt;ptype, 
+                pinfo-&gt;srcport, pinfo-&gt;destport, 
+                NO_PORT_B);
+</code></pre>
+<p>If it doesn't exist, I try creating it this way:</p>
+<pre><code>    conversation = conversation_new(pinfo-&gt;fd-&gt;num,
+                &amp;pinfo-&gt;src, &amp;pinfo-&gt;dst,
+                pinfo-&gt;ptype, 
+                pinfo-&gt;srcport, pinfo-&gt;destport,
+                NO_PORT2);
+</code></pre>
+<p>That leads to:</p>
+<pre><code>first column: CONV + "!" if a conversation was not found and was created
+second column: source
+third column: destination
+forth column: found conversation (possibly created)
+fifth column: counter number attached to conversation conversation_add_proto_data
+
+CONV!:  172.16.244.1:61661  -&gt;  172.16.244.160:52230    =&gt;  0x10cd02d68 1
+CONV!:  172.16.244.160:52230    -&gt;  172.16.244.1:61661  =&gt;  0x10cd02fe8 2
+CONV!:  172.16.244.1:61669  -&gt;  172.16.244.160:52230    =&gt;  0x10cd033c8 3
+CONV!:  172.16.244.160:52230    -&gt;  172.16.244.1:61669  =&gt;  0x10cd03578 4
+CONV:   172.16.244.1:61669  -&gt;  172.16.244.160:52230    =&gt;  0x10cd033c8 3
+CONV:   172.16.244.160:52230    -&gt;  172.16.244.1:61669  =&gt;  0x10cd03578 4
+CONV:   172.16.244.1:61669  -&gt;  172.16.244.160:52230    =&gt;  0x10cd033c8 3
+</code></pre>
+<p>No wildcarding appears to be happening. It isn't even joining symmetric communications like the first two packets.</p>
+<p>I've tried many other combinations, including passing 0 instead of the port, or passing 52230 as the srcport rather than pinfo-&gt;srcport. I've even played with CONVERSATION_TEMPLATE, but I'm not quite certain what it's doing. Every combination has created multiple conversations.</p>
+<p>Below is my full test code. I can post a small pcap if that's helpful.</p>
+<hr>
+<pre><code>#include &lt;stdio.h&gt;    
+#include &lt;config.h&gt;
+#include &lt;epan/packet.h&gt;
+#include &lt;epan/conversation.h&gt;
+
+#define AMP_PORT 52230
+
+static dissector_handle_t amp_handle;
+
+static int proto_amp = -1;
+static gint ett_amp = -1;
+
+static int counter = 1;
+
+static int
+dissect_amp(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree) {
+    col_set_str(pinfo-&gt; cinfo, COL_PROTOCOL, "AMP");
+    col_clear(pinfo-&gt;cinfo, COL_INFO);
+
+    int newConv = 0;
+    conversation_t *conversation = find_conversation(pinfo-&gt;fd-&gt;num,
+                    &amp;pinfo-&gt;src, &amp;pinfo-&gt;dst,
+                    pinfo-&gt;ptype, 
+                    pinfo-&gt;srcport, pinfo-&gt;destport, 
+                    NO_PORT_B);
+    if (! conversation) {
+        /* If we make a conversation, stick some unique data on it */
+        newConv = 1;
+        conversation = conversation_new(pinfo-&gt;fd-&gt;num,
+                    &amp;pinfo-&gt;src, &amp;pinfo-&gt;dst,
+                    pinfo-&gt;ptype, 
+                    pinfo-&gt;srcport, pinfo-&gt;destport,
+                    NO_PORT2);
+
+        int *writeValue = malloc(sizeof(int));
+        *writeValue = counter++;
+        conversation_add_proto_data(conversation, proto_amp, writeValue);
+        // conversation_set_dissector(conversation, amp_handle);
+    }
+
+    int *readValue = conversation_get_proto_data(conversation, proto_amp);
+
+    printf("CONV%s:\t%s:%u\t-&gt;\t%s:%u\t=&gt;\t%p\t%d\n",
+        newConv ? "!" : "",
+        ep_address_to_str(&amp;pinfo-&gt;src), 
+        pinfo-&gt;srcport,
+        ep_address_to_str(&amp;pinfo-&gt;dst),
+        pinfo-&gt;destport,
+        conversation,
+        readValue ? *readValue : 0);
+
+    return tvb_length(tvb);
+}
+void
+proto_register_amp(void) {
+    static hf_register_info hf_amp[] = {};
+    static gint *ett_amp_arr[] = { &amp;ett_amp };
+
+    proto_amp = proto_register_protocol("KACE Agent Messaging Protocol", "AMP", "amp");
+    proto_register_field_array(proto_amp, hf_amp, array_length(hf_amp));
+    proto_register_subtree_array(ett_amp_arr, array_length(ett_amp_arr));
+}
+
+void
+proto_reg_handoff_amp(void)
+{
+    amp_handle = new_create_dissector_handle((new_dissector_t)dissect_amp, proto_amp);
+    dissector_add_uint("tcp.port", AMP_PORT, amp_handle);
+}
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/conversation/" class="post-tag tag-link-conversation"
+                                        title="see questions tagged 'conversation'" rel="tag">conversation</a>
+                                
+                                    <a href="/tags/dissector/" class="post-tag tag-link-dissector"
+                                        title="see questions tagged 'dissector'" rel="tag">dissector</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Jan '14, 18:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ed9a0d8cd44b62539b141f6c10405db1?s=32&amp;d=identicon&amp;r=g" alt="Rob%20Napier's gravatar image" />
+    <p><a href="/users/6430/rob-napier">Rob Napier</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Rob Napier has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/28592/">
+                edited
+                <strong>05 Jan '14, 18:15</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-28592">
+    
+</div>
+<div id="comment-tools-28592" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28592-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/28592/tracking-a-conversation-across-a-source-port-change?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/28592/tracking-a-conversation-across-a-source-port-change?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/28592/tracking-a-conversation-across-a-source-port-change?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/28592/tracking-a-conversation-across-a-source-port-change?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="28599"></a>
+                    <div id="answer-container-28599" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-28599-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/28599/up/" rel="nofollow"> </a>
+<div id="post-28599-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-28599-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/28599/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Rob Napier has selected this answer as the correct answer"
+        href="/accept_answer/28599/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Possible answer to my own question. Correct me if this is the hard way.</p>
+<p>I believe I over-estimated the power of <code>NO_PORT_B</code>. This flag appears to mean exactly what it says. The second port is ignored, not "one of the ports" as I'd hoped. So the solution is to create the conversation such that the server is first, and always query it such that the server is first.</p>
+<p>Since the server has a reliable port, this isn't too difficult. I can check <code>pinfo-&gt;srcport</code> and <code>pinfo-&gt;destport</code>, and whichever of them matches my well-known port, it goes as the "addr1/port1" parameters.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/28599/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Jan '14, 06:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ed9a0d8cd44b62539b141f6c10405db1?s=32&amp;d=identicon&amp;r=g" alt="Rob%20Napier's gravatar image" />
+    <p><a href="/users/6430/rob-napier">Rob Napier</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Rob Napier has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-28599">
+    
+        <a name="28604"></a>
+        <div class="comment" id="comment-28604">
+            <div id="post-28604-score" class="comment-score">1</div>
+            <div class="comment-text"><p>An alternative would be to do an exact match (i.e., pass 0 instead of <code>NO_PORT_B</code> to <code>find_conversation()</code> and 0 instead of <code>NO_PORT2</code> to <code>conversation_new()</code>) but replace the "non-well-known ports" with a constant value, such as 0.  I'm not sure which method would be clearer and/or more efficient.</p></div>
+            <div class="comment-info" id="comment-28604-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jan '14, 08:32)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="28644"></a>
+        <div class="comment" id="comment-28644">
+            <div id="post-28644-score" class="comment-score"></div>
+            <div class="comment-text"><p>I switched to the "0" port solution you mention. It seemed a bit more straightforward, and was successful. I haven't found a good harness for testing overall efficiency, though. Is there an established way to test dissector performance?</p></div>
+            <div class="comment-info" id="comment-28644-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jan '14, 10:09)</span>
+                <a class="comment-user userinfo" href="/users/6430/rob-napier">Rob Napier</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-28599" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-28599-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/28592/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='YeixyvwEj3IcOij9hQJkNmc5M64kp7Je' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/28592/tracking-a-conversation-across-a-source-port-change?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/28592/tracking-a-conversation-across-a-source-port-change?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/dissector/"
+            class="tag-link-dissector"
+            title="see questions tagged'dissector'using tags"
+            rel="tag">dissector</a> <span class="tag-number">&#215;637</span><br/>
+        
+        <a href="/tags/conversation/"
+            class="tag-link-conversation"
+            title="see questions tagged'conversation'using tags"
+            rel="tag">conversation</a> <span class="tag-number">&#215;34</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 5, 2014, 6:10 p.m.">05 Jan '14, 18:10</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,601 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 7, 2014, 10:09 a.m.">07 Jan '14, 10:09</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/22727/determine-the-direction-of-a-conversation-client-server">Determine the direction of a conversation (client, server)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5956/setting-address-information-in-packet-info-structure-for-conversations">Setting address information in packet info structure for conversations</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34214/conversation-question">Conversation question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46203/howt-to-distinguish-multiple-conversations-with-the-same-addr1port1-and-addr2port2-pair">Howt to distinguish multiple conversations with the same addr1/port1 and addr2/port2 pair</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27354/how-to-use-conversation-without-any-port_type-defined-ports">How to use conversation without any port_type defined ports</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55552/including-custom-dissector-conversation-as-part-of-wireshark-conversations-window">Including custom dissector conversation as part of Wireshark Conversations window</a>
+        </p>
+        
+        <p>
+            <a href="/questions/480/how-the-protocol-hierarchy-statistics-works">How the Protocol Hierarchy Statistics works?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2099/can-i-have-two-separate-builds-of-wireshark-running-on-my-ubuntu">can i have two separate builds of wireshark running on my ubuntu?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3553/building-rpm">building rpm</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4797/dissector-debugging-how-to-find-the-exact-line-of-a-malformed-packet-exception">dissector debugging -- how to find the exact line of a &quot;malformed packet&quot; exception</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

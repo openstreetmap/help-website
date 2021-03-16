@@ -1,0 +1,845 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Compilation with MacPorts - Plugins fail to load - Wireshark Q&amp;A</title>
+        <meta name="description" content="I&#39;m attempting to compile Wireshark from the GitHub repo on macOS Sierra using MacPorts. I know there&#39;s a macosx-setup.sh script for installing all the dependencies, but I&#39;d rather not go this route since I have my dependencies fulfilled by MacPorts and I don&#39;t want duplicates strewn around my syste..." />
+        <meta name="keywords" content="macosx,build,macports" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/61106/compilation-with-macports-plugins-fail-to-load" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/61106/compilation-with-macports-plugins-fail-to-load?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='wO5wkyEMk6DjJ2WDNFNOtr3nLSztQ08n' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/61106/compilation-with-macports-plugins-fail-to-load">Compilation with MacPorts - Plugins fail to load</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-61106-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61106/up/" rel="nofollow"> </a>
+<div id="post-61106-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-61106-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61106/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/61106/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm attempting to compile Wireshark from the GitHub repo on macOS Sierra using MacPorts. I know there's a <code>macosx-setup.sh</code> script for installing all the dependencies, but I'd rather not go this route since I have my dependencies fulfilled by MacPorts and I don't want duplicates strewn around my system. I can build and run Wireshark but none of the plugins load. They each fail with an error like the following:</p>
+<pre><code>Couldn't load module /Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/PlugIns/wireshark/ethercat.so: dlopen(/Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/PlugIns/wireshark/ethercat.so, 2): initializer function 0x10fd09b92 not in mapped image for /opt/local/lib/libgpg-error.0.dylib
+</code></pre>
+<p>The initializer function address is different with each build of Wireshark that I make. The steps I use for building are:</p>
+<pre><code>mkdir build
+cd build
+cmake ..
+make
+make app_bundle
+</code></pre>
+<p>CMake doesn't report any required dependencies missing, and GPG itself is discovered as follows:</p>
+<pre><code>-- Found GCRYPT: /opt/local/lib/libgcrypt.dylib (found suitable version "1.7.6", minimum required is "1.4.2") 
+-- GCRYPT FOUND
+-- GCRYPT includes: /opt/local/include
+-- GCRYPT libs: /opt/local/lib/libgcrypt.dylib;/opt/local/lib/libgpg-error.dylib
+</code></pre>
+<p>I notice that <code>libgpg-error.0.dylib</code> in the build output differs from the one MacPorts provides.</p>
+<pre><code>diff /opt/local/lib/libgpg-error.0.dylib /Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/Frameworks/libgpg-error.0.dylib
+Binary files /opt/local/lib/libgpg-error.0.dylib and /Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/Frameworks/libgpg-error.0.dylib differ
+</code></pre>
+<p>It appears that some paths in the Application-local dylib are being remapped in the build process (from <code>otool -l</code>):</p>
+<pre><code>Load command 10
+          cmd LC_LOAD_DYLIB
+      cmdsize 72
+         name @executable_path/../Frameworks/libintl.8.dylib (offset 24)
+</code></pre>
+<p>It seems to me, that the Application-local dylib (not the MacPorts one) should be loading. I don't have any of these environment variables set:</p>
+<pre><code>$DYLD_FRAMEWORK_PATH
+$DYLD_FALLBACK_FRAMEWORK_PATH
+$DYLD_VERSIONED_FRAMEWORK_PATH
+$DYLD_LIBRARY_PATH
+$DYLD_FALLBACK_LIBRARY_PATH
+$DYLD_VERSIONED_LIBRARY_PATH
+$DYLD_ROOT_PATH
+$DYLD_INSERT_LIBRARIES
+</code></pre>
+<p>I would expect Wireshark's <code>dlopen</code> call to first look in the application package before searching the system. Has anyone else built on a MacPorts system and run into this?</p>
+<p><strong>EDIT:</strong></p>
+<p>I did some tracking of the module load process by turning on some DYLD environment variables. I just looked at the <code>docsis.so</code> plugin.</p>
+<p>The applicable parts of the debug trace are as follows:</p>
+<pre><code>dyld: Main executable mapped /Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/MacOS/Wireshark
+        __PAGEZERO at 0x00000000-&gt;0x100000000
+            __TEXT at 0x10636E000-&gt;0x1069B6000
+            __DATA at 0x1069B6000-&gt;0x106A1E000
+        __LINKEDIT at 0x106A1E000-&gt;0x106B7B9F8
+dyld: loaded: /Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/MacOS/Wireshark
+</code></pre>
+<p>dyld: re-using existing development shared cache mapping
+            0x7FFF8A27D000-&gt;0x7FFFA5009FFF read execute  init=5, max=5
+            0x7FFFA900A000-&gt;0x7FFFADBE4FFF read write  init=3, max=3
+            0x7FFFB1BE5000-&gt;0x7FFFB915CFFF read  init=1, max=1
+            0x7FFF9EEE0000-&gt;0x7FFF9F3C0000 (code signature)</p>
+<p>This is where we're loading all the shared libraries on startup. Notice that <code>libgpg-error.0.dylib</code> is first loaded from the application package.</p>
+<pre><code>dyld: Mapping /Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/MacOS/../Frameworks/libgpg-error.0.dylib
+            __TEXT at 0x10A4BA000-&gt;0x10A4C7FFF with permissions r.x
+            __DATA at 0x10A4C8000-&gt;0x10A4C8FFF with permissions rw.
+        __LINKEDIT at 0x10A4C9000-&gt;0x10A4CD1E7 with permissions r..
+            __DATA prefetching 0x10A4C8000 -&gt; 0x10A4C8FFF
+dyld: loaded: /Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/MacOS/../Frameworks/libgpg-error.0.dylib
+</code></pre>
+<p>Here's the binding of the initialization function:</p>
+<pre><code>dyld: bind: libgpg-error.0.dylib:0x10A4C84B8 = libgpg-error.0.dylib:_gpg_err_init, *0x10A4C84B8 = 0x10A4C3B92
+</code></pre>
+<p>Then, it's called.</p>
+<pre><code>dyld: calling initializer function 0x10a4c3b92 in /Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/MacOS/../Frameworks/libgpg-error.0.dylib
+</code></pre>
+<p>This looks like a lazy bind of the initialization function again, but it starts with two underscores.</p>
+<pre><code>dyld: lazy bind: libgpg-error.0.dylib:0x10A4C8078 = libgpg-error.0.dylib:__gpg_err_init, *0x10A4C8078 = 0x10A4BC345
+</code></pre>
+<p>Now the docsis plugin is loaded.</p>
+<pre><code>dlopen(/Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/PlugIns/wireshark/docsis.so, 0x00000002)
+dyld: Mapping /Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/PlugIns/wireshark/docsis.so
+            __TEXT at 0x114D47000-&gt;0x114D6DFFF with permissions r.x
+            __DATA at 0x114D6E000-&gt;0x114D84FFF with permissions rw.
+        __LINKEDIT at 0x114D85000-&gt;0x114DABBDB with permissions r..
+dyld: loaded: /Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/PlugIns/wireshark/docsis.so
+</code></pre>
+<p>Then <code>libgpg-error.0.dylib</code> is loaded again! But this time it's from MacPorts and it's going into a different part of memory.</p>
+<pre><code>dyld: Mapping /opt/local/lib/libgpg-error.0.dylib
+            __TEXT at 0x114F68000-&gt;0x114F75FFF with permissions r.x
+            __DATA at 0x114F76000-&gt;0x114F76FFF with permissions rw.
+        __LINKEDIT at 0x114F77000-&gt;0x114F7BA37 with permissions r..
+dyld: loaded: /opt/local/lib/libgpg-error.0.dylib
+</code></pre>
+<p>The initialization function is bound again. It's bound to the same address as before, but this time from the memory location holding the MacPorts version of the library.</p>
+<pre><code>dyld: bind: libgpg-error.0.dylib:0x114F764B8 = libgpg-error.0.dylib:_gpg_err_init, *0x114F764B8 = 0x10A4C3B92
+</code></pre>
+<p>Then the lazy bind of the init function with two underscores again.</p>
+<pre><code>dyld: forced lazy bind: libgpg-error.0.dylib:0x114F76078 = libgpg-error.0.dylib:__gpg_err_init, *0x114F76078 = 0x10A4BC345
+</code></pre>
+<p>The glib initializer is called, and then docsis is considered unused? Huh.</p>
+<pre><code>dyld: calling initializer function 0x114dd66ae in /opt/local/lib/libglib-2.0.0.dylib
+dlclose(), found unused image 0x7fa2d2c1f610 docsis.so
+dlclose(), deleting 0x7fa2d2c1f610 docsis.so
+dyld: unloaded: /Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/PlugIns/wireshark/docsis.so
+</code></pre>
+<p>Then one (the MacPorts one, I think) of the gpg lib's images is considered unused.</p>
+<pre><code>dlclose(), found unused image 0x60000015c1a0 libgpg-error.0.dylib
+</code></pre>
+<p>It's unloaded.</p>
+<pre><code>dlclose(), deleting 0x60000015c1a0 libgpg-error.0.dylib
+dyld: unloaded: /opt/local/lib/libgpg-error.0.dylib
+</code></pre>
+<p>Now DYLD spits out the error about not finding the initialization function for gpg.</p>
+<pre><code>  dlopen() failed, error: 'dlopen(/Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/PlugIns/wireshark/docsis.so, 2): initializer function 0x10a4c3b92 not in mapped image for /opt/local/lib/libgpg-error.0.dylib
+'
+dyld: lazy bind: libgmodule-2.0.0.dylib:0x10B78E0C8 = libdyld.dylib:_dlerror, *0x10B78E0C8 = 0x7FFFA4D89907
+dlerror()
+</code></pre>
+<hr>
+<p>It makes sense that I'm having this problem given the output of <code>otool</code> on Wireshark versus the docsis plugin:</p>
+<pre><code>hostname:~ username$ otool -L ~/src/github/wireshark/build/run/Wireshark.app/Contents/MacOS/Wireshark 
+/Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/MacOS/Wireshark:
+    @executable_path/../Frameworks/libgpg-error.0.dylib (compatibility version 22.0.0, current version 22.0.0)
+
+hostname:~ username$ otool -L ~/src/github/wireshark/build/run/Wireshark.app/Contents/PlugIns/wireshark/docsis.so 
+/Users/username/src/github/wireshark/build/run/Wireshark.app/Contents/PlugIns/wireshark/docsis.so:
+    /opt/local/lib/libgpg-error.0.dylib (compatibility version 22.0.0, current version 22.0.0)
+</code></pre>
+<p>However, I'm not sure why the docsis plugin looks in one location for libgpg while the Wireshark binary looks elsewhere.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/macosx/" class="post-tag tag-link-macosx"
+                                        title="see questions tagged 'macosx'" rel="tag">macosx</a>
+                                
+                                    <a href="/tags/build/" class="post-tag tag-link-build"
+                                        title="see questions tagged 'build'" rel="tag">build</a>
+                                
+                                    <a href="/tags/macports/" class="post-tag tag-link-macports"
+                                        title="see questions tagged 'macports'" rel="tag">macports</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Apr '17, 10:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2e9c62b124fec3ee23c99d84d58ca5bf?s=32&amp;d=identicon&amp;r=g" alt="watkipet's gravatar image" />
+    <p><a href="/users/29472/watkipet">watkipet</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="watkipet has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/61106/">
+                edited
+                <strong>28 Apr '17, 16:47</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-61106">
+    
+</div>
+<div id="comment-tools-61106" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61106-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/61106/compilation-with-macports-plugins-fail-to-load?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/61106/compilation-with-macports-plugins-fail-to-load?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/61106/compilation-with-macports-plugins-fail-to-load?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/61106/compilation-with-macports-plugins-fail-to-load?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="61234"></a>
+                    <div id="answer-container-61234" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-61234-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/61234/up/" rel="nofollow"> </a>
+<div id="post-61234-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-61234-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/61234/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The problem is that the relative path translation normally performed by <code>packaging/macosx/osx-app.sh</code> is not occurring. <code>osx-app.sh:424</code> looks at the Mach headers (using <code>otool -hv</code>) to determine whether the file in question is an executable, dynamic library, or bundle. It then passes the <code>otool</code> output through <code>sed</code> and <code>awk</code> to pull out a specific token. It appears that in the past (or on some other machine / macOS version / installation configuration?) <code>otool</code> spit out 4 lines of output and thus the <code>sed</code> command looked at line 4. However, on my machine, <code>otool</code> spits out only three lines. Thus:</p>
+<ol>
+<li>rpath translation fails silently when running <code>make app_bundle</code></li>
+<li>The plugins use the MacPorts versions of libraries instead of the Wireshark.app versions</li>
+<li>The main Wireshark app successfully uses the Wireshark.app versions of the libraries (not sure why it's different here)</li>
+<li>Two different versions of the same libraries are loaded at runtime</li>
+<li>DYLD now cannot call the proper library initialization function when attempting to load the plugins--thus the cryptic error</li>
+</ol>
+<p>If I can figure out how to contribute a change to the source, I'll try to do that. However, I'm concerned that the 4 versus 3 line output of <code>otool</code> is something specific to my machine / configuration and I'd just be breaking things for others. Anyone else run into this?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/61234/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>04 May '17, 09:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2e9c62b124fec3ee23c99d84d58ca5bf?s=32&amp;d=identicon&amp;r=g" alt="watkipet's gravatar image" />
+    <p><a href="/users/29472/watkipet">watkipet</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="watkipet has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-61234">
+    
+</div>
+<div id="comment-tools-61234" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-61234-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/61106/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='wO5wkyEMk6DjJ2WDNFNOtr3nLSztQ08n' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61106/compilation-with-macports-plugins-fail-to-load?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/61106/compilation-with-macports-plugins-fail-to-load?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/build/"
+            class="tag-link-build"
+            title="see questions tagged'build'using tags"
+            rel="tag">build</a> <span class="tag-number">&#215;110</span><br/>
+        
+        <a href="/tags/macosx/"
+            class="tag-link-macosx"
+            title="see questions tagged'macosx'using tags"
+            rel="tag">macosx</a> <span class="tag-number">&#215;53</span><br/>
+        
+        <a href="/tags/macports/"
+            class="tag-link-macports"
+            title="see questions tagged'macports'using tags"
+            rel="tag">macports</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 28, 2017, 10:20 a.m.">28 Apr '17, 10:20</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,355 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 4, 2017, 9:05 a.m.">04 May '17, 09:05</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/20756/trouble-building-stand-alone-osx-app-for-mountain-lion">trouble building stand-alone osx app for mountain lion</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62/static-tshark-builds-for-linux-andor-solaris-sparcx64">static tshark builds for linux and/or solaris sparc/x64</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8344/how-do-i-correct-this-problem-with-verify_tools">How do I correct this problem with verify_tools?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19378/nmake-errors">nmake errors</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28843/wireshark-build-fails-when-trying-to-compile-plugin">Wireshark build fails when trying to compile plugin</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38124/error-building-wireshark-windows">Error building Wireshark - Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48127/error-on-generating-build-files">error on generating build files</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59828/build-with-dissector-plugin-fails-in-windows">build with dissector plugin fails in Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15207/why-doesnt-the-mac-os-x-106-installer-write-librarywireshark">Why doesn&#39;t the Mac OS X 10.6+ installer write /Library/Wireshark?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34616/x11-wireshark-losing-focus-on-mac">x11 wireshark losing focus on MAC</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

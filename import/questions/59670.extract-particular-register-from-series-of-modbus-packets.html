@@ -1,0 +1,1197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Extract particular Register from series of Modbus packets - Wireshark Q&amp;A</title>
+        <meta name="description" content="I am using Wireshark to analyze Modbus data exchanged between a device and my PC. When I use Modbus &quot;MODICOM FLT&quot; preference I can see the floating point parameter I need (i.e. Register 5523). It has value 1234.900635 in the image below. How can I export this parameter for many times to make a time ..." />
+        <meta name="keywords" content="modbus,modicon" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/59670/extract-particular-register-from-series-of-modbus-packets" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/59670/extract-particular-register-from-series-of-modbus-packets?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='mtGDTKM21VwS8bTKwWeUbUKIZPKvPyDD' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/59670/extract-particular-register-from-series-of-modbus-packets">Extract particular Register from series of Modbus packets</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-59670-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/59670/up/" rel="nofollow"> </a>
+<div id="post-59670-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-59670-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/59670/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/59670/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am using Wireshark to analyze Modbus data exchanged between a device and my PC.  When I use Modbus "MODICOM FLT" preference I can see the floating point parameter I need (i.e. Register 5523).  It has value 1234.900635 in the image below.  How can I export this parameter for many times to make a time plot?.
+<img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/modbusTrace.jpg"> </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/modbus/" class="post-tag tag-link-modbus"
+                                        title="see questions tagged 'modbus'" rel="tag">modbus</a>
+                                
+                                    <a href="/tags/modicon/" class="post-tag tag-link-modicon"
+                                        title="see questions tagged 'modicon'" rel="tag">modicon</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Feb '17, 12:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dc183a0a76a78266937363c87d768eaa?s=32&amp;d=identicon&amp;r=g" alt="bmain57's gravatar image" />
+    <p><a href="/users/28004/bmain57">bmain57</a><br/>
+    <span class="score" title="0 reputation points">0</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="bmain57 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-59670">
+    
+</div>
+<div id="comment-tools-59670" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-59670-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/59670/extract-particular-register-from-series-of-modbus-packets?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/59670/extract-particular-register-from-series-of-modbus-packets?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/59670/extract-particular-register-from-series-of-modbus-packets?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/59670/extract-particular-register-from-series-of-modbus-packets?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="59673"></a>
+                    <div id="answer-container-59673" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-59673-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/59673/up/" rel="nofollow"> </a>
+<div id="post-59673-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-59673-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/59673/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This is <em>probably</em> better handled with <a href="https://www.wireshark.org/docs/man-pages/tshark.html"><code>tshark</code></a>.  If you want to export <em>all</em> register values, then you can use something like:</p>
+<pre><code>tshark -r modbusTrace.pcap -Y "modbus.reg32" -T fields -e modbus.reg32
+</code></pre>
+<p>However, if you <em>only</em> want the value for register 5523, then I think this is only possible if there are always a fixed number of <code>modbus.reg32 values</code> returned and Register 5523 is always the <em>N</em>th one - in that case you can specify which <strong><em>occurrence</em></strong> of the field to display using a more targeted command, such as:</p>
+<p>Windows:
+<code>
+    tshark.exe -r modbusTrace.pcap -Y "modbus.reg32" -o "gui.column.format:\"Register 5523\",\"%Cus:modbus.reg32:N\""
+</code></p>
+<p>*nix:
+<code>
+    tshark -r modbusTrace.pcap -Y "modbus.reg32" -o 'gui.column.format:"Register 5523","%Cus:modbus.reg32:N"'
+</code></p>
+<p>... where <em><code>N</code></em> is the occurrence of the field you're interested in.</p>
+<p><em>(You can add other fields as well, such as Frame number, time, etc., if you like.  Run "<code>tshark -G column-formats</code>" for additional help with that.)</em></p>
+<p>If you redirect the output to a file, you should be able to import it into another program (such as your favorite spreadsheet program), so that you can plot the values.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/59673/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Feb '17, 13:52</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" alt="cmaynard's gravatar image" />
+    <p><a href="/users/402/cmaynard">cmaynard ♦♦</a><br/>
+    <span class="score" title="9361 reputation points"><span class="">9.4k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">&#9679;</span><span class="badgecount">142</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cmaynard has 108 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-59673">
+    
+        <a name="59684"></a>
+        <div class="comment not_top_scorer" id="comment-59684">
+            <div id="post-59684-score" class="comment-score"></div>
+            <div class="comment-text"><p>I really appreciate the time you spend giving me such a detailed response.  And it works great for listing the register numbers.  What I want, however, is the value of the register (in the example above (register 5523 has the value 1234.900635).  I am writing a more detailed response to your answer in my "answer" below since it allows images.</p></div>
+            <div class="comment-info" id="comment-59684-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Feb '17, 11:21)</span>
+                <a class="comment-user userinfo" href="/users/28004/bmain57">bmain57</a>
+                
+            </div>
+        </div>
+    
+        <a name="59685"></a>
+        <div class="comment not_top_scorer" id="comment-59685">
+            <div id="post-59685-score" class="comment-score"></div>
+            <div class="comment-text"><p>I really appreciate your answer above!  And it works great for listing the register numbers. When I use your first solution: </p>
+
+<p><strong>tshark -r modbusTrace.pcapng -Y "modbus.reg32" -T fields -e modbus.reg32 &gt; test1.csv</strong></p>
+
+<p>I get all the register numbers.  The image below shows a small piece of the test1.csv output file:</p>
+
+<p><img src="https://osqa-ask.wireshark.org/upfiles/cm_sol1Table1.jpg" width="640"></p>
+
+<p>It is really interesting when I run your second solution, I get the vertical column of this table that that matches the number "N".  So If I use N=20 </p>
+
+<p><strong>tshark.exe -r modbusTrace.pcapng -Y "modbus.reg32" -o "gui.column.format:\"Register 5523\",\"%Cus:modbus.reg32:20\"" &gt; test2.csv</strong></p>
+
+<p>I get just the 20th vertical column of the above table:</p>
+
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/cm_sol2Table.jpg"></p>
+
+<p>Now what I am really looking for is the value of a particular register, not the register number.  For example, register 5523 has the value of 1234.900635</p>
+
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/valueof5523.jpg"></p>
+
+<p>Is there a tshark command that will allow me to get that?</p>
+
+<p>And I want to thank you so much for your previous response. Even though it didn't give me the exact parameter I wanted, I am learning more from your short comments that scouring manuals for hours.</p></div>
+            <div class="comment-info" id="comment-59685-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Feb '17, 11:24)</span>
+                <a class="comment-user userinfo" href="/users/28004/bmain57">bmain57</a>
+                
+            </div>
+        </div>
+    
+        <a name="59709"></a>
+        <div class="comment" id="comment-59709">
+            <div id="post-59709-score" class="comment-score">1</div>
+            <div class="comment-text"><p>What version of Wireshark are you using?  Also, maybe you could post a small capture file (even one with a single packet should suffice) so folks can see exactly which field it is that you're interested in and how best to retrieve it.</p></div>
+            <div class="comment-info" id="comment-59709-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '17, 07:42)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="59720"></a>
+        <div class="comment not_top_scorer" id="comment-59720">
+            <div id="post-59720-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am using Wireshark 2.2.0 on Win7 64 bit.  I would like to upload my trace file, how do I upload a file on this site?
+(Also, in my original question above do have an image of the Wireshark GUI which shows the register I am trying to get).</p></div>
+            <div class="comment-info" id="comment-59720-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Feb '17, 17:26)</span>
+                <a class="comment-user userinfo" href="/users/28004/bmain57">bmain57</a>
+                
+            </div>
+        </div>
+    
+        <a name="59723"></a>
+        <div class="comment not_top_scorer" id="comment-59723">
+            <div id="post-59723-score" class="comment-score"></div>
+            <div class="comment-text"><p>You can share a capture in a publicly accessible spot, e.g. <a href="http://cloudshark.org">CloudShark</a>, Google Drive, DropBox etc.</p>
+
+<p>Edit your question with a link to the file.</p></div>
+            <div class="comment-info" id="comment-59723-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '17, 02:57)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="59729"></a>
+        <div class="comment not_top_scorer" id="comment-59729">
+            <div id="post-59729-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, my sample trace is here:
+<a href="https://www.cloudshark.org/captures/cf81fdc7e257">https://www.cloudshark.org/captures/cf81fdc7e257</a></p></div>
+            <div class="comment-info" id="comment-59729-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '17, 07:43)</span>
+                <a class="comment-user userinfo" href="/users/28004/bmain57">bmain57</a>
+                
+            </div>
+        </div>
+    
+        <a name="59733"></a>
+        <div class="comment not_top_scorer" id="comment-59733">
+            <div id="post-59733-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, well with older versions of Wireshark (such as 1.12.13), you could do this:</p>
+
+<pre><code>tshark.exe -r modbusTrace.pcap -Y "modbus.register.modicon_float" -o mbtcp.mbus_register_format:"MODICON FLT" -o gui.column.format:"Register 5523","%Cus:modbus.register.modicon_float:N"
+</code></pre>
+
+<p>I don't know how to achieve this same thing using newer versions of Wireshark, such as the version you're using.  It seems that you can now only display the <code>modbus.reg32</code> value.  This looks like a bug to me.</p></div>
+            <div class="comment-info" id="comment-59733-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '17, 08:32)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="59773"></a>
+        <div class="comment not_top_scorer" id="comment-59773">
+            <div id="post-59773-score" class="comment-score"></div>
+            <div class="comment-text"><p>I installed Wireshark 1.12.13 and ran the command you suggested, however I get the error message: 
+tshark:  Invalid -o flag "mbtcp.mbus_register_format:"</p></div>
+            <div class="comment-info" id="comment-59773-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '17, 11:18)</span>
+                <a class="comment-user userinfo" href="/users/28004/bmain57">bmain57</a>
+                
+            </div>
+        </div>
+    
+        <a name="59775"></a>
+        <div class="comment not_top_scorer" id="comment-59775">
+            <div id="post-59775-score" class="comment-score"></div>
+            <div class="comment-text"><p>I just tried the command again and it worked.  Can you post your entire command?</p></div>
+            <div class="comment-info" id="comment-59775-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '17, 11:43)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="59779"></a>
+        <div class="comment not_top_scorer" id="comment-59779">
+            <div id="post-59779-score" class="comment-score"></div>
+            <div class="comment-text"><p>tshark.exe -r modbusTrace.pcapng -Y "modbus.register.modicon_float" -o mbtcp.mbus_register_format: "MODICON FLT" -o gui.column.format: "Register 5523","%Cus:modbus.register.modicon_float:143" &gt; test5.csv</p></div>
+            <div class="comment-info" id="comment-59779-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '17, 12:13)</span>
+                <a class="comment-user userinfo" href="/users/28004/bmain57">bmain57</a>
+                
+            </div>
+        </div>
+    
+        <a name="59780"></a>
+        <div class="comment not_top_scorer" id="comment-59780">
+            <div id="post-59780-score" class="comment-score"></div>
+            <div class="comment-text"><p><code>mbtcp.mbus_register_format: "MODICON FLT"</code></p>
+
+<p>You have a space between the colon and the quote character.  Try again with no space.</p></div>
+            <div class="comment-info" id="comment-59780-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '17, 12:16)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="59781"></a>
+        <div class="comment not_top_scorer" id="comment-59781">
+            <div id="post-59781-score" class="comment-score"></div>
+            <div class="comment-text"><p>Here is the Command Line capture of the error: </p>
+
+<p>C:\Users\bmain\Documents\Ansel\SSMM\PWM_SporaticError&gt;tshark.exe -r modbusTrace.
+pcapng -Y "modbus.register.modicon_float" -o mbtcp.mbus_register_format: "MODICO
+N FLT" -o gui.column.format: "Register 5523","%Cus:modbus.register.modicon_float
+:143" &gt; test5.csv</p>
+
+<p><strong> (tshark.exe:17620): WARNING </strong>: No such preference "modbus.mbus_register_form
+at" at line 3131 of
+C:\Users\bmain\AppData\Roaming\Wireshark\preferences (save preferences to remove
+ this warning)
+tshark: Invalid -o flag "mbtcp.mbus_register_format:"</p></div>
+            <div class="comment-info" id="comment-59781-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '17, 12:18)</span>
+                <a class="comment-user userinfo" href="/users/28004/bmain57">bmain57</a>
+                
+            </div>
+        </div>
+    
+        <a name="59783"></a>
+        <div class="comment" id="comment-59783">
+            <div id="post-59783-score" class="comment-score">1</div>
+            <div class="comment-text"><p><code>mbtcp.mbus_register_format: "MODICO N FLT"</code></p>
+
+<p>Once again, you have a space between the colon and quote.  Try removing it.  And you seem to have <em>added</em> a space where it doesn't belong.  It's not <code>"MODICO N FLT"</code> but <code>"MODICON FLT"</code>.</p></div>
+            <div class="comment-info" id="comment-59783-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '17, 12:22)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="59784"></a>
+        <div class="comment" id="comment-59784">
+            <div id="post-59784-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Since you seem to be having trouble with that command-line option, you can omit it if you've already set the preference in Wireshark.  I merely added it to the command-line so it would always override whatever setting you might have had in Wireshark.</p></div>
+            <div class="comment-info" id="comment-59784-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '17, 12:43)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="59786"></a>
+        <div class="comment not_top_scorer" id="comment-59786">
+            <div id="post-59786-score" class="comment-score"></div>
+            <div class="comment-text"><p>I fixed my spacing but now get a new error:</p>
+
+<p>C:\Users\bmain\Documents\Ansel\SSMM\PWM_SporaticError&gt;tshark.exe -r modbusTrace.
+pcapng -Y "modbus.register.modicon_float" -o mbtcp.mbus_register_format:"MODICON
+ FLT" -o gui.column.format:"Register 5523","%Cus:modbus.register.modicon_float:1
+43" &gt; test5.csv</p>
+
+<p><strong> (tshark.exe:13608): WARNING </strong>: No such preference "modbus.mbus_register_form
+at" at line 3131 of
+C:\Users\bmain\AppData\Roaming\Wireshark\preferences (save preferences to remove
+ this warning)</p>
+
+<p>C:\Users\bmain\Documents\Ansel\SSMM\PWM_SporaticError&gt;</p>
+
+<p>Line 3131 is the last line of the sequence below.</p>
+
+<h1>Register Format</h1>
+
+<h1>One of: UINT16     , INT16      , UINT32     , INT32      , IEEE FLT   , MODICON FLT</h1>
+
+<h1>(case-insensitive).</h1>
+
+<p>modbus.mbus_register_format: MODICON FLT</p>
+
+<p>I also noticed that my preference file header says version 2.2.0 even though I uninstalled that version and installed 1.12.13 as you suggested earlier.</p></div>
+            <div class="comment-info" id="comment-59786-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '17, 14:55)</span>
+                <a class="comment-user userinfo" href="/users/28004/bmain57">bmain57</a>
+                
+            </div>
+        </div>
+    
+        <a name="59787"></a>
+        <div class="comment not_top_scorer" id="comment-59787">
+            <div id="post-59787-score" class="comment-score"></div>
+            <div class="comment-text"><p>Try again line 3131 of preferences:</p>
+
+<p>Register Format
+One of: UINT16     , INT16      , UINT32     , INT32      , IEEE FLT   , MODICON FLT
+(case-insensitive).
+modbus.mbus_register_format: MODICON FLT</p>
+
+<p>In my previous post I forgot to strip off the pound signs from the pref file test</p></div>
+            <div class="comment-info" id="comment-59787-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '17, 14:58)</span>
+                <a class="comment-user userinfo" href="/users/28004/bmain57">bmain57</a>
+                
+            </div>
+        </div>
+    
+        <a name="59788"></a>
+        <div class="comment not_top_scorer" id="comment-59788">
+            <div id="post-59788-score" class="comment-score"></div>
+            <div class="comment-text"><p>Register Format</p>
+
+<p>One of: UINT16     , INT16      , UINT32     , INT32      , IEEE FLT   , MODICON FLT</p>
+
+<p>(case-insensitive).</p>
+
+<p>modbus.mbus_register_format: MODICON FLT</p></div>
+            <div class="comment-info" id="comment-59788-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '17, 15:00)</span>
+                <a class="comment-user userinfo" href="/users/28004/bmain57">bmain57</a>
+                
+            </div>
+        </div>
+    
+        <a name="59789"></a>
+        <div class="comment not_top_scorer" id="comment-59789">
+            <div id="post-59789-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you upload your AppData\Roaming\Wireshark\preferences file for me if this is the issue?</p></div>
+            <div class="comment-info" id="comment-59789-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '17, 15:05)</span>
+                <a class="comment-user userinfo" href="/users/28004/bmain57">bmain57</a>
+                
+            </div>
+        </div>
+    
+        <a name="59790"></a>
+        <div class="comment" id="comment-59790">
+            <div id="post-59790-score" class="comment-score">1</div>
+            <div class="comment-text"><p>So <code>tshark</code> is just warning you of an unknown preference, namely <code>modbus.mbus_register_form</code>.  It's just a warning though.  Did you look at the contents of your <code>test5.csv</code> file?  It should contain the information you're after.<br>
+</p>
+
+<p>If you want to eliminate the warning, you can do as instructed and save your preferences file from Wireshark.  When you do that, Wireshark should remove all unknown preferences.  Another option is to simply rename your preferences file (e.g., preferences-2.2.0) and the next time you run the <code>tshark</code> command, <code>tshark</code> will use default preferences except for any you specify on the command-line.</p>
+
+<p>Ideally this could be solved using Wireshark 2.2.x though.  Perhaps it can be and I'm just missing something myself, but if it can't be, then a bug report should be opened because this seems like a regression to me.  You shouldn't have to downgrade Wireshark to solve this problem.  Wireshark bugs can be filed at <a href="https://bugs.wireshark.org/bugzilla/">https://bugs.wireshark.org/bugzilla/</a>.</p></div>
+            <div class="comment-info" id="comment-59790-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '17, 15:31)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="59794"></a>
+        <div class="comment not_top_scorer" id="comment-59794">
+            <div id="post-59794-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, test5.csv does have the data!!  Thanks for your patience in solving this issue.   I am so relieved.  I have requested a bugzilla login so I can submit the bug. By the way, while I am waiting for the fix, can I run two different versions of Wireshark on the same win7 computer?  It seems like multiple versions will share the same preferences file and thus lead to some confusion (like the warning I was getting earlier).</p></div>
+            <div class="comment-info" id="comment-59794-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '17, 16:36)</span>
+                <a class="comment-user userinfo" href="/users/28004/bmain57">bmain57</a>
+                
+            </div>
+        </div>
+    
+        <a name="59804"></a>
+        <div class="comment" id="comment-59804">
+            <div id="post-59804-score" class="comment-score">1</div>
+            <div class="comment-text"><p><em>can I run two different versions of Wireshark on the same win7 computer?</em></p>
+
+<p>It <em>should</em> be possible, although only one of them can be associated with .pcap files though, and only one of them will take precedence if the installation directory is added to the %PATH%.  But try installing the 2 versions in different locations to find out.</p>
+
+<p>Alternatively ...</p>
+
+<ul>
+<li>you could install the PortableApps version of one of them on a USB flash drive and run it from there instead of installing it on your PC.</li>
+<li>you could compile each version yourself and run it from your build directory instead of installing it, per se.</li>
+<li>In the old days, I believe a zip file was available and you could just unzip it and run it from the unzip folder, again without installing it, per se.  I don't know if that's still possible, but it doesn't look like zips are available anymore, which is too bad.  Perhaps another bug report asking for zips to be created and made available on the download site could be opened too.</li>
+</ul></div>
+            <div class="comment-info" id="comment-59804-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Mar '17, 07:07)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-59673" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 21
+        </span>
+        <a href="#" class="show-all-comments-link">show 16 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-59673-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/59670/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='mtGDTKM21VwS8bTKwWeUbUKIZPKvPyDD' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/59670/extract-particular-register-from-series-of-modbus-packets?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/59670/extract-particular-register-from-series-of-modbus-packets?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/modbus/"
+            class="tag-link-modbus"
+            title="see questions tagged'modbus'using tags"
+            rel="tag">modbus</a> <span class="tag-number">&#215;32</span><br/>
+        
+        <a href="/tags/modicon/"
+            class="tag-link-modicon"
+            title="see questions tagged'modicon'using tags"
+            rel="tag">modicon</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 24, 2017, 12:23 p.m.">24 Feb '17, 12:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,691 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 2, 2017, 7:07 a.m.">02 Mar '17, 07:07</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/342/anyone-have-a-capture-of-modbus-over-tcp-i-can-have">Anyone have a capture of modbus over TCP I can have?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35271/modscan-over-tcpip-disconnect-every-52-seconds-in-win7">Modscan over TCP/IP: disconnect every 52 seconds in WIN7</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1089/monitor-traffic-to-another-ip">Monitor traffic to another IP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37233/modbus-display-filter">Modbus display filter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9547/does-wireshark-support-modbustcp">Does Wireshark support Modbus/TCP?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37869/decode-as-modbustcp-problem">Decode as Modbus/TCP problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14190/possible-to-setup-wireshark-to-use-alternate-port-for-modbus-tcp">Possible to setup Wireshark to use alternate port for Modbus TCP?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37975/modbus-tcp-working-on-original-device-but-not-new">Modbus TCP working on original device but not new</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15046/modbus-tcp-traffic-is-not-captured">MODBUS TCP  traffic is not captured</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40529/does-wireshark-recognise-serial-over-tcp-protocols-eg-modbus-dnp3-etc">Does Wireshark recognise serial over TCP protocols? E.G. Modbus, DNP3, etc.</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

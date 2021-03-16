@@ -1,0 +1,1079 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>RTP dissector in Lua not chained with SDP setup info present and post-dissector not saved in pdml - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, I&#39;m pretty much a Wireshark noob, but.. I&#39;m trying to analyze some RTP streams, some of which are set up by SIP (with some additional features). I&#39;m writing packet dissectors in Lua, but there are a couple of problems. As far as I can tell, if I use a chained dissector and add it to the udp diss..." />
+        <meta name="keywords" content="lua,pdml,rtp,dissectors" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/17989/rtp-dissector-in-lua-not-chained-with-sdp-setup-info-present-and-post-dissector-not-saved-in-pdml" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/17989/rtp-dissector-in-lua-not-chained-with-sdp-setup-info-present-and-post-dissector-not-saved-in-pdml?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='l7ZIxDrei363hpLGGct88X0W69ADRTp4' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/17989/rtp-dissector-in-lua-not-chained-with-sdp-setup-info-present-and-post-dissector-not-saved-in-pdml">RTP dissector in Lua not chained with SDP setup info present and post-dissector not saved in pdml</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-17989-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17989/up/" rel="nofollow"> </a>
+<div id="post-17989-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-17989-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17989/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/17989/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi, I'm pretty much a Wireshark noob, but..</p>
+<p>I'm trying to analyze some RTP streams, some of which are set up by SIP (with some additional features).</p>
+<p>I'm writing packet dissectors in Lua, but there are a couple of problems.  As far as I can tell, if I use a chained dissector and add it to the udp dissector table where udp.port == [port of interest] then the dissector works fine EXCEPT where the builtin Wireshark RTP dissector has added a 'Stream setup by SDP' subtree.  I'm not sure how Wireshark determines which packets are RTP other than as part of a SIP conversation, but I haven't had any luck attaching a dissector to these packets.</p>
+<p>The most reliable way is to disable RTP protocol and dissect the RTP headers myself, but then I lose the stream setup by info that Wireshark provides.  I can probably do this myself with Lua but it seems like a lot of extra work, given my level of expertise..  I would prefer to take advantage of all of Wiresharks built in RTP dissectors and just add my stuff.</p>
+<p>Which leads me to my second problem.  A post dissector actually works fine, is easy to write and accomplishes EVERYTHING I need, EXCEPT for the fact that the post dissector tree IS NOT WRITTEN to an exported .PDML file.  This is a blocking issue for me as I'm doing further analysis with this file.</p>
+<p>I'd be very grateful for any pointers on what is causing the SDP setup info dissector to disable my dissector and how to make it work.  Failing that, is exporting of post dissector info to .pdml problematic, or is this just an omission that could be fixed in the source?  (I'm not keen to build Wireshark myself as I'm using windoze, but maybe if this is an easy fix, somebody could submit a patch?).</p>
+<p><strong>UPDATE</strong>
+I thought the first problem might be with Wireshark decoding dynamic payload type 99 as RFC 2198.
+I disabled the dissector RFC 2198 in RTP preferences.  see: <a href="http://ask.wireshark.org/questions/13891/how-to-decode-dynamic-pt-in-rtp-eg-rfc-2429-in-rtp-carring-h263-video">http://ask.wireshark.org/questions/13891/how-to-decode-dynamic-pt-in-rtp-eg-rfc-2429-in-rtp-carring-h263-video</a>  ..However my dissector still won't run on those packets.  The only difference seems to be the SDP stream setup info but if I disable this in preferences, the problem persists.</p>
+<p>My dissector is installed using <code>DissectorTable.get("udp.port"):add(9050, proto)</code></p>
+<p>I also use <code>Dissector.get("rtp"):call(buf(0):tvb(),pkt,root)</code> at the start of the dissector function, but adding or removing this has no effect other than what's expected.</p>
+<p>Cheers,
+Jono Poff.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/lua/" class="post-tag tag-link-lua"
+                                        title="see questions tagged 'lua'" rel="tag">lua</a>
+                                
+                                    <a href="/tags/pdml/" class="post-tag tag-link-pdml"
+                                        title="see questions tagged 'pdml'" rel="tag">pdml</a>
+                                
+                                    <a href="/tags/rtp/" class="post-tag tag-link-rtp"
+                                        title="see questions tagged 'rtp'" rel="tag">rtp</a>
+                                
+                                    <a href="/tags/dissectors/" class="post-tag tag-link-dissectors"
+                                        title="see questions tagged 'dissectors'" rel="tag">dissectors</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>27 Jan '13, 12:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/754877fa55fad6f262af00189b7447ed?s=32&amp;d=identicon&amp;r=g" alt="J0N0's gravatar image" />
+    <p><a href="/users/4276/j0n0">J0N0</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="J0N0 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/17989/">
+                edited
+                <strong>27 Jan '13, 19:05</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-17989">
+    
+        <a name="18051"></a>
+        <div class="comment" id="comment-18051">
+            <div id="post-18051-score" class="comment-score"></div>
+            <div class="comment-text"><p>If I decode packets as RTP using 'decode as' they also are bypassed by the Lua plugin dissector..</p></div>
+            <div class="comment-info" id="comment-18051-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jan '13, 11:42)</span>
+                <a class="comment-user userinfo" href="/users/4276/j0n0">J0N0</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17989" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17989-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/17989/rtp-dissector-in-lua-not-chained-with-sdp-setup-info-present-and-post-dissector-not-saved-in-pdml?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/17989/rtp-dissector-in-lua-not-chained-with-sdp-setup-info-present-and-post-dissector-not-saved-in-pdml?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/17989/rtp-dissector-in-lua-not-chained-with-sdp-setup-info-present-and-post-dissector-not-saved-in-pdml?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/17989/rtp-dissector-in-lua-not-chained-with-sdp-setup-info-present-and-post-dissector-not-saved-in-pdml?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="18876"></a>
+                    <div id="answer-container-18876" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-18876-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/18876/up/" rel="nofollow"> </a>
+<div id="post-18876-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-18876-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/18876/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>So it turns out PDML writing should work with a Lua post-dissector, but wasn't in your case due to bug 6020.  Ironically that bug was fixed by me, and the code change was just delivered into 1.9.1 this afternoon.  So it should work with the latest automated build of 1.9.1, SVN-47877 or higher. (see <a href="http://www.wireshark.org/download/automated/">http://www.wireshark.org/download/automated/</a>)</p>
+<p>I don't know if/when it will be back-ported to stable release patches.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/18876/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 Feb '13, 22:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d02f20c18a7742ec73a666f1974bf6dc?s=32&amp;d=identicon&amp;r=g" alt="Hadriel's gravatar image" />
+    <p><a href="/users/4318/hadriel">Hadriel</a><br/>
+    <span class="score" title="2652 reputation points"><span class="">2.7k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="39 badges"><span class="bronze">&#9679;</span><span class="badgecount">39</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hadriel has 30 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-18876">
+    
+        <a name="18898"></a>
+        <div class="comment" id="comment-18898">
+            <div id="post-18898-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Hadriel,</p>
+
+<p>yes I can confirm that Version 1.9.1-SVN-47899 writes post-dissector info and fixes a lot of these issues.  RTP setup info is still missing from PDML output, even tho it appears in the GUI.  Maybe there's an explanation for this..  Anyway, it's irrelevant to me now as I've written my own RTP and SDP dissectors to analyse setup and add RTP dissectors to new streams.</p>
+
+<p>Thanks again for all your help.  Btw, I've written an XSLT to transform PDML as swim lanes into HTML.  I'll ask my boss if I can contribute it if anyone's interested.</p>
+
+<p>Cheers,
+Jono</p></div>
+            <div class="comment-info" id="comment-18898-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Feb '13, 14:55)</span>
+                <a class="comment-user userinfo" href="/users/4276/j0n0">J0N0</a>
+                
+            </div>
+        </div>
+    
+        <a name="18899"></a>
+        <div class="comment" id="comment-18899">
+            <div id="post-18899-score" class="comment-score"></div>
+            <div class="comment-text"><p>Your answer has been converted to a comment as that's how this site works. Please read the FAQ for more information.</p>
+
+<p>If an answer has solved your issue, please accept the answer for the benefit of other users by clicking the checkmark icon next to the answer. Please read the FAQ for more information.</p></div>
+            <div class="comment-info" id="comment-18899-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Feb '13, 15:01)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="18900"></a>
+        <div class="comment" id="comment-18900">
+            <div id="post-18900-score" class="comment-score"></div>
+            <div class="comment-text"><p>The setup info appears for me:
+'
+ &lt;proto name="rtp" showname="Real-Time Transport Protocol" size="252" pos="42"&gt;
+    &lt;field name="rtp.setup" showname="Stream setup by SDP (frame 11)" size="0" pos="42" show=""&gt;
+      &lt;field name="rtp.setup-frame" showname="Setup frame: 11" size="0" pos="42" show="11"/&gt;
+      &lt;field name="rtp.setup-method" showname="Setup Method: SDP" size="0" pos="42" show="SDP"/&gt;
+    &lt;/field&gt;
+'</p>
+
+<p>Did you re-enabled Preferences -&gt; Protocols -&gt; SDP -&gt; Establish Media Conversation?</p></div>
+            <div class="comment-info" id="comment-18900-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Feb '13, 15:15)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="18902"></a>
+        <div class="comment" id="comment-18902">
+            <div id="post-18902-score" class="comment-score"></div>
+            <div class="comment-text"><p>It works!</p>
+
+<p>Wireshark wrote the built-in SDP/RTP setup info to PDML just fine, but I wanted to use this info downstream in a post-dissector (eg, see below) and write it to PDML.  Up til now, that has worked in the GUI but not with PDML.</p>
+
+<p>Now it works for both, which is awesome.  Thx.</p>
+
+<p>:-)</p>
+
+<p></p><hr>
+<pre><code>udp_src_f = Field.new("udp.srcport")
+rtp_setup_f = Field.new("rtp.setup-frame")<p></p>
+<p>trivial_proto = Proto("trivial","Trivial Postdissector")</p>
+<p>f_port = ProtoField.uint16("trivial.port","Port")
+f_setup = ProtoField.uint8("tait.rtp_setup_frame","SetupFrame")
+f_comment = ProtoField.string("trivial.comment","Comment")</p>
+<p>trivial_proto.fields = {f_comment}</p>
+<p>function trivial_proto.dissector(buffer,pinfo,tree)
+    local subtree = tree:add(trivial_proto,"Trivial")
+    if udp_src_f() then
+       subtree:add(f_comment, "udp.srcport found")
+       subtree:add(f_port, udp_src_f().value)
+   else
+       subtree:add(f_comment, "udp.srcport not found")
+   end</p>
+<pre><code>if rtp_setup_f() then
+   subtree:add(f_comment, "rtp.setup-frame")
+   subtree:add(f_setup, rtp_setup_f().value)
+</code></pre>
+<p>else
+       subtree:add(f_comment, "rtp.setup-frame not found")
+   end
+end</p>
+</code><p><code>register_postdissector(trivial_proto)
+</code></p></pre><p></p></div>
+            <div class="comment-info" id="comment-18902-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Feb '13, 16:43)</span>
+                <a class="comment-user userinfo" href="/users/4276/j0n0">J0N0</a>
+                
+            </div>
+        </div>
+    
+        <a name="18903"></a>
+        <div class="comment" id="comment-18903">
+            <div id="post-18903-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry about my comment that it didn't work in 1.9.1, SVN-47877.  Not sure what happened there...</p></div>
+            <div class="comment-info" id="comment-18903-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Feb '13, 16:45)</span>
+                <a class="comment-user userinfo" href="/users/4276/j0n0">J0N0</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-18876" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-18876-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="17999"></a>
+                    <div id="answer-container-17999" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-17999-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17999/up/" rel="nofollow"> </a>
+<div id="post-17999-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-17999-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17999/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>SDP makes an interpretation of the media lines and uses a helper function in the RTP dissector to define a conversation, with RTP as dissector. This is how the setup information comes in RTP, and assigns RTP as dissector for this stream. Either showing or not showing the setup information doesn't prevent the SDP from creating these conversations. So, these two come in pair: setup information and RTP dissector gets the payload. I think all you can do is inhibit SDP from setting up the conversation. That allows your dissector access to the payload, but you loose the setup info.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/17999/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Jan '13, 03:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2337f0406681e5c72ea0e6f1f0d6c0b0?s=32&amp;d=identicon&amp;r=g" alt="Jaap's gravatar image" />
+    <p><a href="/users/4/jaap">Jaap ♦</a><br/>
+    <span class="score" title="11680 reputation points"><span class="">11.7k</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="101 badges"><span class="bronze">&#9679;</span><span class="badgecount">101</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jaap has 155 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-17999">
+    
+        <a name="18016"></a>
+        <div class="comment" id="comment-18016">
+            <div id="post-18016-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Jaap, I thought that might be the case.<br>
+</p>
+
+<p>If I disable the RTP dissector entirely and get setup info directly from the SDP message header, eg: </p>
+
+<p>o=16386 1355173130331 1355173130331 IN IP4 172.26.26.8
+m=audio 9050 RTP/AVP 100</p>
+
+<p>how practical would it be to follow the conversations myself (with a listener maybe?) then add setup info to my own RTP packet dissector.  I guess it would require some ongoing analysis of the SIP conversation..</p>
+
+<p>What would be really great would be a hook to override the RTP dissector being called by SDP with a user supplied one.</p></div>
+            <div class="comment-info" id="comment-18016-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jan '13, 13:17)</span>
+                <a class="comment-user userinfo" href="/users/4276/j0n0">J0N0</a>
+                
+            </div>
+        </div>
+    
+        <a name="18020"></a>
+        <div class="comment" id="comment-18020">
+            <div id="post-18020-score" class="comment-score"></div>
+            <div class="comment-text"><p>That would mean you have to parse SDP as well. From that you would create a conversation defining UDP packet flow to that endpoint to go to your dissector. I'm not well versed enough in Lua to know if that's possible.</p></div>
+            <div class="comment-info" id="comment-18020-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jan '13, 23:00)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="18856"></a>
+        <div class="comment" id="comment-18856">
+            <div id="post-18856-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think what Jaap means is to go into Preferences -&gt; Protocol -&gt; SDP, and de-select the "Establish Media Conversation" checkbox.  That should make the SDP dissector not invoke RTP dissection for the UDP ip:port flows that is indicated by SDP, so that RTP's dissector won't get called before/instead-of your own dissector for those UDP ip:port flows.</p>
+
+<p>Of course that also means there won't be any setup info and dynamic RTP dissection.</p>
+
+<p>Another alternative is to submit an enhancement request for the tree info generated by a post-dissector to be exported in PDML, so that you can instead use a post-dissector - since that's arguably the right thing to use to begin with.</p></div>
+            <div class="comment-info" id="comment-18856-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Feb '13, 11:30)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="18863"></a>
+        <div class="comment" id="comment-18863">
+            <div id="post-18863-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Hadriel,</p>
+
+<p>I've written the SDP setup stuff in Lua and am now loading RTP dissectors as needed according to that info.<br>
+</p>
+
+<p>It does feel like reinventing the wheel tho, and really all I need is for the post-dissector to be written to pdml, so that wld definitely be a good enhancement from my perspective.  Therefore I'll put in a request!</p>
+
+<p>Cheers,
+Jono</p></div>
+            <div class="comment-info" id="comment-18863-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Feb '13, 14:06)</span>
+                <a class="comment-user userinfo" href="/users/4276/j0n0">J0N0</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17999" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17999-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/17989/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='l7ZIxDrei363hpLGGct88X0W69ADRTp4' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17989/rtp-dissector-in-lua-not-chained-with-sdp-setup-info-present-and-post-dissector-not-saved-in-pdml?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17989/rtp-dissector-in-lua-not-chained-with-sdp-setup-info-present-and-post-dissector-not-saved-in-pdml?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/lua/"
+            class="tag-link-lua"
+            title="see questions tagged'lua'using tags"
+            rel="tag">lua</a> <span class="tag-number">&#215;431</span><br/>
+        
+        <a href="/tags/rtp/"
+            class="tag-link-rtp"
+            title="see questions tagged'rtp'using tags"
+            rel="tag">rtp</a> <span class="tag-number">&#215;238</span><br/>
+        
+        <a href="/tags/pdml/"
+            class="tag-link-pdml"
+            title="see questions tagged'pdml'using tags"
+            rel="tag">pdml</a> <span class="tag-number">&#215;19</span><br/>
+        
+        <a href="/tags/dissectors/"
+            class="tag-link-dissectors"
+            title="see questions tagged'dissectors'using tags"
+            rel="tag">dissectors</a> <span class="tag-number">&#215;18</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 27, 2013, 12:56 p.m.">27 Jan '13, 12:56</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,269 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 26, 2013, 7:15 p.m.">26 Feb '13, 19:15</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/63411/multiple-lua-error-during-loading-issues-reported-after-install-of-win64-version-240">Multiple &quot;Lua: Error during loading&quot; issues reported after install of Win64 version 2.4.0</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47943/need-to-get-rtp-sequence-number-from-payload-dissector">Need to get RTP sequence number from payload dissector</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30686/define-a-custom-rtp-header-extensions">Define a custom RTP header Extensions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8328/order-of-entries-in-dissector-tables-at-startup-and-lua">Order of entries in dissector tables at startup and lua</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8629/rtp-header-extension-in-lua">RTP Header extension in Lua</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9368/count-simultaneous-rtp-sessions-from-live-capturesaved-pcap-with-lua">count simultaneous RTP sessions from live capture/saved pcap with Lua</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43521/retrieve-hex-values-in-lua">Retrieve hex values in Lua</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45230/wireshark-lua-tcp-dissector">Wireshark Lua TCP dissector</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11/how-do-you-capture-rtp-packets">How do you capture RTP packets?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3401/get-all-rtp-streams">get all rtp streams</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

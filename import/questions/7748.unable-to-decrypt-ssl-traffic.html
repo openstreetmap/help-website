@@ -1,0 +1,840 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Unable to decrypt SSL traffic - Wireshark Q&amp;A</title>
+        <meta name="description" content="I am attempting to decrypt ssl communication for troublshooting purposes but am unable to decode the traffic. It looks like there is a problem with not enough data to generate the key based on the debug log.  This part of the log file seems to be the same each time I try to decrypt something. The po..." />
+        <meta name="keywords" content="ssl,decryption" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/7748/unable-to-decrypt-ssl-traffic" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/7748/unable-to-decrypt-ssl-traffic?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='udYxSUH9ZBQBCBKq4OozcK8x8pSEs2YD' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/7748/unable-to-decrypt-ssl-traffic">Unable to decrypt SSL traffic</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-7748-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/7748/up/" rel="nofollow"> </a>
+<div id="post-7748-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-7748-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/7748/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/7748/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am attempting to decrypt ssl communication for troublshooting purposes but am unable to decode the traffic.  It looks like there is a problem with not enough data to generate the key based on the debug log.<br>
+</p>
+<p>This part of the log file seems to be the same each time I try to decrypt something.  The portion after this changes as I try different applications/protocols</p>
+<p>===============================================================================================</p>
+<pre><code>Private key imported: KeyID 85:0c:cf:1b:45:ec:f6:b3:99:02:09:5f:d7:4a:a9:b6:...
+ssl_init IPv4 addr '172.26.134.118' (172.26.134.118) port '443' filename 'C:\Users\mmull04\Documents\myprivatekey.pem' password(only for p12 file) ''
+ssl_init private key file C:\Users\mmull04\Documents\myprivatekey.pem successfully loaded.
+association_add TCP port 443 protocol http handle 0000000004AA8DC0
+
+dissect_ssl enter frame #4 (first time)
+ssl_session_init: initializing ptr 00000000063C1D00 size 680
+  conversation = 00000000063C1880, ssl_session = 00000000063C1D00
+  record: offset = 0, reported_length_remaining = 72
+packet_from_server: is from server - FALSE
+ssl_find_private_key server 172.26.134.118:443
+client random len: 16 padded to 32
+dissect_ssl2_hnd_client_hello found CLIENT RANDOM -&gt; state 0x01
+
+dissect_ssl enter frame #5 (first time)
+  conversation = 00000000063C1880, ssl_session = 00000000063C1D00
+  record: offset = 0, reported_length_remaining = 969
+dissect_ssl3_record found version 0x0301 -&gt; state 0x11
+dissect_ssl3_record: content_type 22
+decrypt_ssl3_record: app_data len 964, ssl state 0x11
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 70 bytes, remaining 969 
+dissect_ssl3_hnd_hello_common found SERVER RANDOM -&gt; state 0x13
+dissect_ssl3_hnd_srv_hello found CIPHER 0x0004 -&gt; state 0x17
+dissect_ssl3_hnd_srv_hello trying to generate keys
+ssl_generate_keyring_material not enough data to generate key (0x17 required 0x37 or 0x57)
+</code></pre>
+<p>=============================================================================================</p>
+<p>The log file begins as follows</p>
+<pre><code>Private key imported: KeyID 85:0c:cf:1b:45:ec:f6:b3:99:02:09:5f:d7:4a:a9:b6:...
+ssl_init IPv4 addr '172.26.134.118' (172.26.134.118) port '443' filename 'C:\Users\mmull04\Documents\myprivatekey.pem' password(only for p12 file) ''
+ssl_init private key file C:\Users\mmull04\Documents\myprivatekey.pem successfully loaded.
+association_add TCP port 443 protocol http handle 0000000004AA8DC0
+
+dissect_ssl enter frame #4 (first time)
+ssl_session_init: initializing ptr 00000000063C1D00 size 680
+  conversation = 00000000063C1880, ssl_session = 00000000063C1D00
+  record: offset = 0, reported_length_remaining = 72
+packet_from_server: is from server - FALSE
+ssl_find_private_key server 172.26.134.118:443
+client random len: 16 padded to 32
+dissect_ssl2_hnd_client_hello found CLIENT RANDOM -&gt; state 0x01
+
+dissect_ssl enter frame #5 (first time)
+  conversation = 00000000063C1880, ssl_session = 00000000063C1D00
+  record: offset = 0, reported_length_remaining = 969
+dissect_ssl3_record found version 0x0301 -&gt; state 0x11
+dissect_ssl3_record: content_type 22
+decrypt_ssl3_record: app_data len 964, ssl state 0x11
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 70 bytes, remaining 969 
+dissect_ssl3_hnd_hello_common found SERVER RANDOM -&gt; state 0x13
+dissect_ssl3_hnd_srv_hello found CIPHER 0x0004 -&gt; state 0x17
+dissect_ssl3_hnd_srv_hello trying to generate keys
+ssl_generate_keyring_material not enough data to generate key (0x17 required 0x37 or 0x57)
+dissect_ssl3_hnd_srv_hello can't generate keyring material
+dissect_ssl3_handshake iteration 0 type 11 offset 79 length 882 bytes, remaining 969 
+dissect_ssl3_handshake iteration 0 type 14 offset 965 length 0 bytes, remaining 969
+
+dissect_ssl enter frame #6 (first time)
+  conversation = 00000000063C1880, ssl_session = 00000000063C1D00
+  record: offset = 0, reported_length_remaining = 118
+dissect_ssl3_record: content_type 22
+decrypt_ssl3_record: app_data len 70, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 16 offset 5 length 66 bytes, remaining 75 
+pre master encrypted[64]:
+6f 8e 98 88 4e 4e e5 06 f7 39 ae c3 ab 93 e6 bc 
+3f 9c 40 3d ce 60 00 e2 83 76 56 e1 4f e1 94 57 
+2c 86 c0 40 d3 9f 72 05 5b f9 b5 e1 e4 bb ce e1 
+e5 fb 61 6d c2 d0 42 54 07 f0 0d 1e 34 e8 67 21 
+ssl_decrypt_pre_master_secret:RSA_private_decrypt
+pcry_private_decrypt: stripping 15 bytes, decr_len 63
+decrypted_unstrip_pre_master[63]:
+02 e0 41 59 ae ac 12 93 d5 38 33 ac d4 0b 00 03 
+01 98 06 4f 85 ee c8 62 73 87 0a c1 17 79 8e 0b 
+72 7f 21 80 3a 6d f5 ca 9d d5 e7 c9 13 8c 32 67 
+51 f1 3a c3 eb 74 d9 a8 47 7a 02 ca b3 73 22 
+pre master secret[48]:
+03 01 98 06 4f 85 ee c8 62 73 87 0a c1 17 79 8e 
+0b 72 7f 21 80 3a 6d f5 ca 9d d5 e7 c9 13 8c 32 
+67 51 f1 3a c3 eb 74 d9 a8 47 7a 02 ca b3 73 22 
+ssl_generate_keyring_material:PRF(pre_master_secret)
+pre master secret[48]:
+03 01 98 06 4f 85 ee c8 62 73 87 0a c1 17 79 8e 
+0b 72 7f 21 80 3a 6d f5 ca 9d d5 e7 c9 13 8c 32 
+67 51 f1 3a c3 eb 74 d9 a8 47 7a 02 ca b3 73 22 
+client random[32]:
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+d6 6d 40 16 db 54 79 16 e1 9b c3 43 9e 27 d1 66 
+server random[32]:
+4e d9 2f bf 13 a1 64 bb d7 14 0b da d7 b2 39 29 
+af 1a 56 a7 e7 be a2 70 b5 24 af 0d e1 a1 bf 0f 
+tls_prf: tls_hash(md5 secret_len 24 seed_len 77 )
+tls_hash: hash secret[24]:
+03 01 98 06 4f 85 ee c8 62 73 87 0a c1 17 79 8e 
+0b 72 7f 21 80 3a 6d f5 
+tls_hash: hash seed[77]:
+6d 61 73 74 65 72 20 73 65 63 72 65 74 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 d6 6d 40 
+16 db 54 79 16 e1 9b c3 43 9e 27 d1 66 4e d9 2f 
+bf 13 a1 64 bb d7 14 0b da d7 b2 39 29 af 1a 56 
+a7 e7 be a2 70 b5 24 af 0d e1 a1 bf 0f 
+hash out[48]:
+22 cc 15 aa dc 33 96 75 2f bb 7f 34 65 bb c9 ef 
+d6 62 65 c9 9c 6b b7 58 d7 c7 85 7b f3 a4 82 f9 
+96 b0 60 fe c2 49 31 4e e7 e3 72 69 1a 2b 4b 19 
+tls_prf: tls_hash(sha)
+tls_hash: hash secret[24]:
+ca 9d d5 e7 c9 13 8c 32 67 51 f1 3a c3 eb 74 d9 
+a8 47 7a 02 ca b3 73 22 
+tls_hash: hash seed[77]:
+6d 61 73 74 65 72 20 73 65 63 72 65 74 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 d6 6d 40 
+16 db 54 79 16 e1 9b c3 43 9e 27 d1 66 4e d9 2f 
+bf 13 a1 64 bb d7 14 0b da d7 b2 39 29 af 1a 56 
+a7 e7 be a2 70 b5 24 af 0d e1 a1 bf 0f 
+hash out[48]:
+92 92 f9 eb 89 ad c3 d0 01 5d 83 7e 45 0a c2 b6 
+b7 ef db 9e 14 1c 08 21 fd 4a 68 84 6d e7 a7 6e 
+fd 09 1d 51 98 bc 52 cc 7c 63 86 da 51 b5 27 89 
+PRF out[48]:
+b0 5e ec 41 55 9e 55 a5 2e e6 fc 4a 20 b1 0b 59 
+61 8d be 57 88 77 bf 79 2a 8d ed ff 9e 43 25 97 
+6b b9 7d af 5a f5 63 82 9b 80 f4 b3 4b 9e 6c 90 
+master secret[48]:
+b0 5e ec 41 55 9e 55 a5 2e e6 fc 4a 20 b1 0b 59 
+61 8d be 57 88 77 bf 79 2a 8d ed ff 9e 43 25 97 
+6b b9 7d af 5a f5 63 82 9b 80 f4 b3 4b 9e 6c 90 
+ssl_generate_keyring_material sess key generation
+tls_prf: tls_hash(md5 secret_len 24 seed_len 77 )
+tls_hash: hash secret[24]:
+b0 5e ec 41 55 9e 55 a5 2e e6 fc 4a 20 b1 0b 59 
+61 8d be 57 88 77 bf 79 
+tls_hash: hash seed[77]:
+6b 65 79 20 65 78 70 61 6e 73 69 6f 6e 4e d9 2f 
+bf 13 a1 64 bb d7 14 0b da d7 b2 39 29 af 1a 56 
+a7 e7 be a2 70 b5 24 af 0d e1 a1 bf 0f 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 d6 6d 40 
+16 db 54 79 16 e1 9b c3 43 9e 27 d1 66 
+hash out[64]:
+bb b3 7a 0b db a4 14 d5 8b 29 8f aa 6d 1a f3 1c 
+8b 1e 3c 63 4d 15 6a 0b 36 d4 45 94 96 18 e8 06 
+13 0d cc 8f e6 57 51 1c d6 61 18 a4 9d 94 7a ed 
+6d 53 92 9b 3b b5 c4 8f ba a4 41 b9 ca 45 9a 9e 
+tls_prf: tls_hash(sha)
+tls_hash: hash secret[24]:
+2a 8d ed ff 9e 43 25 97 6b b9 7d af 5a f5 63 82 
+9b 80 f4 b3 4b 9e 6c 90 
+tls_hash: hash seed[77]:
+6b 65 79 20 65 78 70 61 6e 73 69 6f 6e 4e d9 2f 
+bf 13 a1 64 bb d7 14 0b da d7 b2 39 29 af 1a 56 
+a7 e7 be a2 70 b5 24 af 0d e1 a1 bf 0f 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 d6 6d 40 
+16 db 54 79 16 e1 9b c3 43 9e 27 d1 66 
+hash out[64]:
+7a b6 65 69 6c 3b a7 02 b7 56 2d 8d 5a d5 ad 4f 
+45 b5 d0 fd f2 d5 79 12 ae 7b 7c 09 4e 8b b3 3e 
+85 c6 99 f8 dd 3d 44 c6 cc bc 89 32 c2 75 d6 1e 
+bb 9e 41 03 46 ec 61 a7 cf 2a 56 ad 7a 04 70 d8 
+PRF out[64]:
+c1 05 1f 62 b7 9f b3 d7 3c 7f a2 27 37 cf 5e 53 
+ce ab ec 9e bf c0 13 19 98 af 39 9d d8 93 5b 38 
+96 cb 55 77 3b 6a 15 da 1a dd 91 96 5f e1 ac f3 
+d6 cd d3 98 7d 59 a5 28 75 8e 17 14 b0 41 ea 46 
+key expansion[64]:
+c1 05 1f 62 b7 9f b3 d7 3c 7f a2 27 37 cf 5e 53 
+ce ab ec 9e bf c0 13 19 98 af 39 9d d8 93 5b 38 
+96 cb 55 77 3b 6a 15 da 1a dd 91 96 5f e1 ac f3 
+d6 cd d3 98 7d 59 a5 28 75 8e 17 14 b0 41 ea 46 
+Client MAC key[16]:
+c1 05 1f 62 b7 9f b3 d7 3c 7f a2 27 37 cf 5e 53 
+Server MAC key[16]:
+ce ab ec 9e bf c0 13 19 98 af 39 9d d8 93 5b 38 
+Client Write key[16]:
+96 cb 55 77 3b 6a 15 da 1a dd 91 96 5f e1 ac f3 
+Server Write key[16]:
+d6 cd d3 98 7d 59 a5 28 75 8e 17 14 b0 41 ea 46 
+Client Write IV[8]:
+00 00 7f 60 00 00 00 00 
+Server Write IV[8]:
+00 00 00 00 00 00 00 00 
+ssl_generate_keyring_material ssl_create_decoder(client)
+ssl_create_decoder CIPHER: ARCFOUR
+decoder initialized (digest len 16)
+ssl_generate_keyring_material ssl_create_decoder(server)
+ssl_create_decoder CIPHER: ARCFOUR
+decoder initialized (digest len 16)
+ssl_generate_keyring_material: client seq 0, server seq 0
+ssl_save_session stored session id[32]:
+22 22 02 f0 f8 ad de 03 6e 80 5f 73 5f 4c b4 20 
+f4 d5 c1 ad 40 4d 72 08 8b 76 b1 e4 e3 5e ba ca 
+ssl_save_session stored master secret[48]:
+b0 5e ec 41 55 9e 55 a5 2e e6 fc 4a 20 b1 0b 59 
+61 8d be 57 88 77 bf 79 2a 8d ed ff 9e 43 25 97 
+6b b9 7d af 5a f5 63 82 9b 80 f4 b3 4b 9e 6c 90 
+dissect_ssl3_handshake session keys successfully generated
+  record: offset = 75, reported_length_remaining = 43
+dissect_ssl3_record: content_type 20
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - FALSE
+ssl_change_cipher CLIENT
+  record: offset = 81, reported_length_remaining = 37
+dissect_ssl3_record: content_type 22
+decrypt_ssl3_record: app_data len 32, ssl state 0x3F
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+ssl_decrypt_record ciphertext len 32
+Ciphertext[32]:
+63 13 f5 70 15 45 0f 2b e3 ef 82 93 5b 7c b2 31 
+cf 0b af c3 58 04 1b 8f a3 e0 85 f8 0c 35 79 6a 
+Plaintext[32]:
+14 00 00 0c 3a 41 de ff 51 4f 01 10 6f 29 cf e8 
+97 9c 3d ab cb ff e1 c5 06 87 13 8a ef 3d f4 8a 
+checking mac (len 16, version 301, ct 22 seq 0)
+tls_check_mac mac type:MD5 md 1
+Mac[16]:
+97 9c 3d ab cb ff e1 c5 06 87 13 8a ef 3d f4 8a 
+ssl_decrypt_record: mac ok
+dissect_ssl3_handshake iteration 1 type 20 offset 0 length 12 bytes, remaining 16
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ssl/" class="post-tag tag-link-ssl"
+                                        title="see questions tagged 'ssl'" rel="tag">ssl</a>
+                                
+                                    <a href="/tags/decryption/" class="post-tag tag-link-decryption"
+                                        title="see questions tagged 'decryption'" rel="tag">decryption</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>02 Dec '11, 12:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dca43b1845c50b5fc716431e181b47e6?s=32&amp;d=identicon&amp;r=g" alt="iwtsyb's gravatar image" />
+    <p><a href="/users/1945/iwtsyb">iwtsyb</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="iwtsyb has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/7748/">
+                edited
+                <strong>02 Dec '11, 13:19</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+            <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+            <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-7748">
+    
+</div>
+<div id="comment-tools-7748" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-7748-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/7748/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='udYxSUH9ZBQBCBKq4OozcK8x8pSEs2YD' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/7748/unable-to-decrypt-ssl-traffic?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/7748/unable-to-decrypt-ssl-traffic?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ssl/"
+            class="tag-link-ssl"
+            title="see questions tagged'ssl'using tags"
+            rel="tag">ssl</a> <span class="tag-number">&#215;319</span><br/>
+        
+        <a href="/tags/decryption/"
+            class="tag-link-decryption"
+            title="see questions tagged'decryption'using tags"
+            rel="tag">decryption</a> <span class="tag-number">&#215;165</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 2, 2011, 12:32 p.m.">02 Dec '11, 12:32</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,010 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 2, 2011, 1:19 p.m.">02 Dec '11, 13:19</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/8373/dtls-decryption-not-working-on-wireshark-165-even-for-sample-capture">DTLS decryption not working on Wireshark 1.6.5, even for sample capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28145/cant-decrypt-ssl-in-capture-from-windump">Can&#39;t decrypt ssl in capture from windump</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36524/unable-to-decrypt-ssl-traffic-in-wireshark">unable to decrypt ssl traffic in wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54975/issues-decrypting-ssl-traffic">issues decrypting SSL Traffic</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6426/ssl-decryption-problems">SSL Decryption Problems</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50305/how-does-wireshark-decrypt-ssltls-with-only-clientrandom">How does Wireshark decrypt SSL/TLS with only ClientRandom</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28503/decrypt-ssl-using-wildcard-ip-address">Decrypt SSL using wildcard IP address</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32292/ssltls-decrypt-doesnt-work-if-capture-started-mid-session">SSL/TLS decrypt doesn&#39;t work if capture started mid-session</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50584/not-decrypting-all-http2-traffic-in-session">Not Decrypting all HTTP/2 traffic in session.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55099/tshark-decrypts-only-firsts-https-packets">Tshark decrypts only firsts https packets</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

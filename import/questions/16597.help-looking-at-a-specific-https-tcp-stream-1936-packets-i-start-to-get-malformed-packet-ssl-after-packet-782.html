@@ -1,0 +1,1046 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>HELP! Looking at a specific (HTTPS) TCP stream (1936 packets) I start to get Malformed Packet: SSL after packet 782 - Wireshark Q&amp;A</title>
+        <meta name="description" content="All, we&#39;re baffled with an issue encountered. We&#39;re monitoring (using tshark) off an inline TAP sitting between a client browser (pc) and web server. I can see the 3-way handshake incl. the SSL v3 handshake thereafter. I can see the GET / requests from client to server incl. the &#39;Continuation or non..." />
+        <meta name="keywords" content="ssl,decrypt,malformed" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/16597/help-looking-at-a-specific-https-tcp-stream-1936-packets-i-start-to-get-malformed-packet-ssl-after-packet-782" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/16597/help-looking-at-a-specific-https-tcp-stream-1936-packets-i-start-to-get-malformed-packet-ssl-after-packet-782?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='GnU6J44qFwwJztlEq0P8MQ6WdnflP5cN' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/16597/help-looking-at-a-specific-https-tcp-stream-1936-packets-i-start-to-get-malformed-packet-ssl-after-packet-782">HELP! Looking at a specific (HTTPS) TCP stream (1936 packets) I start to get Malformed Packet: SSL after packet 782</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-16597-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16597/up/" rel="nofollow"> </a>
+<div id="post-16597-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-16597-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16597/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/16597/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>All,</p>
+<p>we're baffled with an issue encountered. We're monitoring (using tshark) off an inline TAP sitting between a client browser (pc) and web server. I can see the 3-way handshake incl. the SSL v3 handshake thereafter. I can see the GET / requests from client to server incl. the 'Continuation or non-HTTP traffic' from the server back to the client (in producing the HTTP response). All fine so far.</p>
+<p>At packet 782 we start to see 'Continuation Data[Malformed Packet]' messages and I'm unable to decrypt the conversation thereafter... No more SSL dissector :(</p>
+<p>It's also at this stage where I get heaps of duplicate ACKs from the client back to the server. The server then responds with a number of TCP retransmissions. This continues till the connection is closed (RST).</p>
+<p>I don't see any dropped packets from the captured interface so we <em>should</em> have all the segments and hence be able to decrypt it, no? We really have our hair in a twist with this one :) I'm happy to share the pcap sample with anyone keen enough to help. I've searched the Internet and this forum and I didn't come up with anything tangible.</p>
+<p>Please help!</p>
+<p>Thx</p>
+<p>Jaco Greyling</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ssl/" class="post-tag tag-link-ssl"
+                                        title="see questions tagged 'ssl'" rel="tag">ssl</a>
+                                
+                                    <a href="/tags/decrypt/" class="post-tag tag-link-decrypt"
+                                        title="see questions tagged 'decrypt'" rel="tag">decrypt</a>
+                                
+                                    <a href="/tags/malformed/" class="post-tag tag-link-malformed"
+                                        title="see questions tagged 'malformed'" rel="tag">malformed</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Dec '12, 08:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9bc020091b2ccd9bf169ed70c4576646?s=32&amp;d=identicon&amp;r=g" alt="jgreyling's gravatar image" />
+    <p><a href="/users/4011/jgreyling">jgreyling</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jgreyling has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-16597">
+    
+        <a name="16624"></a>
+        <div class="comment" id="comment-16624">
+            <div id="post-16624-score" class="comment-score"></div>
+            <div class="comment-text"><p>We've been seeing this behavior, started about a year ago, and is getting more and more common. Only thing we could do until now is to exclude the Sending side and the network Probe connected inline to be the culprit. The Receiver side seems to be OK too. 
+It is as if something on the wire is starting to force TCP/IP congestion handling to be overall brutal in dealing with the traffic.</p>
+
+<p>What has been observed so far is that the TCP Window is filled up pretty fast, but is not reduced until after some time. We see most ACK's (up to 100) for SEQ #1 and the gradually it goes down until the windows size is adapted to the network speed. The fact that several TCP Window Full messages show up tends to pioint into a dynamic rerouting into network of different speed to happen during the entire conversation. Could that be the case ? Measurements have pointed this to happen mainly on g3 initiated connections. Manually reducing the speed (traffic shaper) did not really bring any conclusive answer/hint.</p>
+
+<p>However - even if this is the the case - why would we all of a sudden have so many problems decrypting the traffic in a Monitoring env. using a MiMa method with private key etc. ? We are using a probe that relies on the OSI application layer, and requiring the HTTP code to be decrypted correctly so that it can be analyzed for errors (It's quality/SLA Monitoring done here, not security)</p>
+
+<p>Any hints ? What to check for ? we'd really only like to understand why it is happening...
+Thx.</p></div>
+            <div class="comment-info" id="comment-16624-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Dec '12, 01:01)</span>
+                <a class="comment-user userinfo" href="/users/4015/smurphy">Smurphy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16597" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16597-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/16597/help-looking-at-a-specific-https-tcp-stream-1936-packets-i-start-to-get-malformed-packet-ssl-after-packet-782?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/16597/help-looking-at-a-specific-https-tcp-stream-1936-packets-i-start-to-get-malformed-packet-ssl-after-packet-782?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/16597/help-looking-at-a-specific-https-tcp-stream-1936-packets-i-start-to-get-malformed-packet-ssl-after-packet-782?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/16597/help-looking-at-a-specific-https-tcp-stream-1936-packets-i-start-to-get-malformed-packet-ssl-after-packet-782?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="16598"></a>
+                    <div id="answer-container-16598" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16598-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16598/up/" rel="nofollow"> </a>
+<div id="post-16598-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-16598-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16598/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>What kind of TAP is your "inline" TAP? If it is a link aggregation TAP (meaning that it outputs RX/TX on one single port to the tshark PC) you may encounter one of the frequent problems with link aggregation TAPs. I have plenty of cases where those TAPs got me or someone else in trouble, for example when it did not deliver packets that were really on the link (which had a 10% load, so no buffering should occur), resulting in missing packets in the trace file. Other cases include inducing CRC errors to a connection between a Cisco switch and a router that were gone as soon as we removed the TAP. Both cases happened with major vendor devices, so they were no cheap knockoff but worth a four digit number of dollars each.</p>
+<p>Personally, I only use full duplex TAPs to avoid that kind of trouble, since it is annoying to be unsure if the TAP worked correctly or not, and in case of link aggregation TAPs I had too many bad experiences.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16598/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Dec '12, 08:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16598">
+    
+        <a name="16621"></a>
+        <div class="comment" id="comment-16621">
+            <div id="post-16621-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you for the prompt response!</p>
+
+<p>The TAP is a VSS Monitoring TAP Model: V12.4C.C-F-V3 running software version 2.5.65</p>
+
+<p>The thing is in an attempt to eliminate the TAP, I ran a Wireshark capture from my laptop to compare it with the pcap from the monitoring device. I used a mobile 3G connection and I got over 200 malformed SSL packets just with the secure website login?! So the fact that I could reproduce it on the 'live' wire vs. TAP tells me it's not the TAP (am I wrong in my synopsis?) I did the same exercise over a fixed line and I got 0 malformed SSL packets. How do you explain that?</p></div>
+            <div class="comment-info" id="comment-16621-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '12, 21:32)</span>
+                <a class="comment-user userinfo" href="/users/4011/jgreyling">jgreyling</a>
+                
+            </div>
+        </div>
+    
+        <a name="16622"></a>
+        <div class="comment" id="comment-16622">
+            <div id="post-16622-score" class="comment-score"></div>
+            <div class="comment-text"><p>When I looked at it, I didn't pick up any missing packets...(I compared the sequence numbers with the acknowledgements) so surely the SSL libraries should be able to decrypt the conversation (irrespective of the 'quality' of the network - retransmits, dup ACKs, etc.), right? Under what conditions won't Wireshark be able to decrypt a specific packet?</p>
+
+<p>Again, I have plenty of samples if someone would like to take a look, we're really stumped :(</p></div>
+            <div class="comment-info" id="comment-16622-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Dec '12, 21:35)</span>
+                <a class="comment-user userinfo" href="/users/4011/jgreyling">jgreyling</a>
+                
+            </div>
+        </div>
+    
+        <a name="16626"></a>
+        <div class="comment" id="comment-16626">
+            <div id="post-16626-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do I understand this correctly: 
+1. You captured on the client where you opened the SSL session over 3G and had errors
+2. You captured on the client using a fixed line and had no errors
+3. Capturing at the TAP on a fixed line you had errors</p>
+
+<p>Can you post the samples on <a href="http://www.cloudshark.org">www.cloudshark.org</a> and give us the links with an explanation what the capture setup was for each sample?</p></div>
+            <div class="comment-info" id="comment-16626-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Dec '12, 01:50)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16630"></a>
+        <div class="comment" id="comment-16630">
+            <div id="post-16630-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sure thing, here is the upload:</p>
+
+<p><a href="http://www.cloudshark.org/captures/175e88a3891b">http://www.cloudshark.org/captures/175e88a3891b</a></p>
+
+<p>Please note that I was unable to upload the SSL session key as well? Please let me know and I can email the session key to you directly?</p>
+
+<p>41.160.153.130 is the client and 196.11.125.154 is the web server. In this example I captured it off the inline TAP.</p>
+
+<p><a href="http://www.cloudshark.org/captures/261e0b82e70d">http://www.cloudshark.org/captures/261e0b82e70d</a></p>
+
+<p>In this example I captured off my PC using Wireshark. Here I am the client (192.168.1.101) connecting to the same server. Here I'm not capturing off the TAP but on the live wire so to speak.</p>
+
+<p>Thx for your time!</p></div>
+            <div class="comment-info" id="comment-16630-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Dec '12, 03:43)</span>
+                <a class="comment-user userinfo" href="/users/4011/jgreyling">jgreyling</a>
+                
+            </div>
+        </div>
+    
+        <a name="16632"></a>
+        <div class="comment" id="comment-16632">
+            <div id="post-16632-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sure, try sending the key to jasper [at] <a href="http://packet-foo.com">packet-foo.com</a>, but only if the key can be shared and isn't secret (meaning: it should not be a production key).</p></div>
+            <div class="comment-info" id="comment-16632-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Dec '12, 04:31)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16634"></a>
+        <div class="comment not_top_scorer" id="comment-16634">
+            <div id="post-16634-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm correct in saying, if I share the session key (export in Wireshark) you will ONLY be able to decrypt that one session, right?</p></div>
+            <div class="comment-info" id="comment-16634-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Dec '12, 06:20)</span>
+                <a class="comment-user userinfo" href="/users/4011/jgreyling">jgreyling</a>
+                
+            </div>
+        </div>
+    
+        <a name="16637"></a>
+        <div class="comment not_top_scorer" id="comment-16637">
+            <div id="post-16637-score" class="comment-score"></div>
+            <div class="comment-text"><p>For the session key that is correct AFAIK. Please do not share the private server key, because with that any session can be decrypted.</p></div>
+            <div class="comment-info" id="comment-16637-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Dec '12, 07:31)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16659"></a>
+        <div class="comment not_top_scorer" id="comment-16659">
+            <div id="post-16659-score" class="comment-score"></div>
+            <div class="comment-text"><p>Okay, looks to me like there is a problem with the SSL decoding module, since as you already mentioned it starts running into exceptions in packet 782 for no apparent reason - all packets up to that number are seen in the trace with nothing missing. I guess it would make sense to open a bug report in the bug tracker for this. Maybe a developer can take a look and determine the cause for the exception of the decoder.</p></div>
+            <div class="comment-info" id="comment-16659-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Dec '12, 14:28)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16661"></a>
+        <div class="comment not_top_scorer" id="comment-16661">
+            <div id="post-16661-score" class="comment-score"></div>
+            <div class="comment-text"><p>On a side note - the client is pretty slow when acknowledging packets - which leads to window full messages. At the beginning the ACK times are alright, but they degrade continuously even though the client window size climbs to 64k. </p>
+
+<p>As a result, the server becomes impatient and retransmits frames that are not really lost (just acked too late). The client clearly indicates that the retransmissions it receives are duplicates by using SACK options with edges below the acknowledge number, so it really got the original AND the retransmission. I haven't checked all frames, but it seems consistent.</p></div>
+            <div class="comment-info" id="comment-16661-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Dec '12, 14:42)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16672"></a>
+        <div class="comment not_top_scorer" id="comment-16672">
+            <div id="post-16672-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes - that's what we experience too. For no apparent reason, decryption stops. 
+On the other side though, the clients are not that slow (Standard laptop (2.4GHz CPU, 8GB Ram, 7200RPM HD) which usually has no problem using it through ADSL Link, where that issue won't show up. IMHO - it's in the PATH from the Server to the client that something is slowing things down that much. Can that be ? And - can the interaction in (slowdown, congestion handling etc. ?) the PATH cause such a sudden decryption capability problem ?
+Thx</p></div>
+            <div class="comment-info" id="comment-16672-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Dec '12, 00:43)</span>
+                <a class="comment-user userinfo" href="/users/4015/smurphy">Smurphy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16598" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16598-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="16800"></a>
+                    <div id="answer-container-16800" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16800-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16800/up/" rel="nofollow"> </a>
+<div id="post-16800-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-16800-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16800/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>All-</p>
+<p>Thanks to Jasper and Evan this issue is now resolved. It turned out to be a software bug in the SSL dissector after all. Evan committed the change to the trunk (revision 46510) and we've tested it this morning.</p>
+<p>Log Message: Use the complete fragment length to reassembly SSL frames. The old method of picking them up one at a time failed on jumbo frames.</p>
+<p>The full report can be found here: <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=8075">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=8075</a></p>
+<p>Thanks</p>
+<p>Jaco</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16800/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Dec '12, 06:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9bc020091b2ccd9bf169ed70c4576646?s=32&amp;d=identicon&amp;r=g" alt="jgreyling's gravatar image" />
+    <p><a href="/users/4011/jgreyling">jgreyling</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="jgreyling has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16800">
+    
+</div>
+<div id="comment-tools-16800" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16800-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/16597/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='GnU6J44qFwwJztlEq0P8MQ6WdnflP5cN' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/16597/help-looking-at-a-specific-https-tcp-stream-1936-packets-i-start-to-get-malformed-packet-ssl-after-packet-782?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/16597/help-looking-at-a-specific-https-tcp-stream-1936-packets-i-start-to-get-malformed-packet-ssl-after-packet-782?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ssl/"
+            class="tag-link-ssl"
+            title="see questions tagged'ssl'using tags"
+            rel="tag">ssl</a> <span class="tag-number">&#215;319</span><br/>
+        
+        <a href="/tags/decrypt/"
+            class="tag-link-decrypt"
+            title="see questions tagged'decrypt'using tags"
+            rel="tag">decrypt</a> <span class="tag-number">&#215;62</span><br/>
+        
+        <a href="/tags/malformed/"
+            class="tag-link-malformed"
+            title="see questions tagged'malformed'using tags"
+            rel="tag">malformed</a> <span class="tag-number">&#215;47</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 5, 2012, 8:23 a.m.">05 Dec '12, 08:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,410 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 12, 2012, 7:03 a.m.">12 Dec '12, 07:03</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/4303/decrypt-ssl-traffic-destined-for-squid-proxy-server">Decrypt SSL Traffic destined for Squid Proxy Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10184/ssl-descrypt-_without_-specifying-a-protocol">SSL Descrypt _without_ specifying a protocol?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4320/strange-ssl-capture-ignored-unknown-record-instead-of-serverhello">Strange SSL capture: &quot;Ignored Unknown Record&quot; instead of ServerHello</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6584/decrypt-ssl-to-pcap">decrypt ssl to pcap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9071/unable-to-view-https-stream-using-ssl-decryption-follow-ssl-stream-is-greyed-out">Unable to view HTTPS stream using SSL decryption (&quot;Follow SSL Stream&quot; is greyed out.)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10286/unable-to-decode-ssl">unable to decode SSL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13721/decrypt-ssl-traffic-problem-because-of-dhe-cipher">Decrypt SSL traffic problem because of DHE Cipher</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13874/ssl-decrypt-works-depending-on-the-used-browser">SSL Decrypt works depending on the used browser</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37383/how-do-i-followdecrypt-a-tlsssl-session-containing-a-tls-ticket-change">How do I follow/decrypt a TLS/SSL session containing a TLS ticket change?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43788/struggling-to-decrypt-ssl">Struggling to decrypt SSL</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

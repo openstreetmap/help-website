@@ -1,0 +1,1187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Tshark conversation statistics - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello: I am trying to use tshark to gather statistics of the conversations between endpoints in a trace file. I would like to get an output similar to what I obtain using Wireshark-&amp;gt; Statistics -&amp;gt; Conversations. For the same trace file, Wireshark takes about 1 minute to compute the statistics...." />
+        <meta name="keywords" content="statistics,tshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/15730/tshark-conversation-statistics" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/15730/tshark-conversation-statistics?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='pwZgv3WueVlSKcHHGrXJ8jLvajU10fN2' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/15730/tshark-conversation-statistics">Tshark conversation statistics</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-15730-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15730/up/" rel="nofollow"> </a>
+<div id="post-15730-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-15730-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15730/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/15730/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello:</p>
+<p>I am trying to use tshark to gather statistics of the conversations between endpoints in a trace file. I would like to get an output similar to what I obtain using Wireshark-&gt; Statistics -&gt; Conversations. For the same trace file, Wireshark takes about 1 minute to compute the statistics. Tshark keeps running and does not finish.. Here is the command I am running:</p>
+<p>C:\Program Files\Wireshark&gt;tshark -q -z conv,ip -r "C:\captures\file1.pcap"</p>
+<p>Is there anything wrong?</p>
+<p>Thank you!
+Hugo</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/statistics/" class="post-tag tag-link-statistics"
+                                        title="see questions tagged 'statistics'" rel="tag">statistics</a>
+                                
+                                    <a href="/tags/tshark/" class="post-tag tag-link-tshark"
+                                        title="see questions tagged 'tshark'" rel="tag">tshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Nov '12, 08:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/93c3b1d3f74af64ff716efa87a04e5cc?s=32&amp;d=identicon&amp;r=g" alt="hugosp's gravatar image" />
+    <p><a href="/users/3815/hugosp">hugosp</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="hugosp has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-15730">
+    
+        <a name="15731"></a>
+        <div class="comment" id="comment-15731">
+            <div id="post-15731-score" class="comment-score"></div>
+            <div class="comment-text"><p>how big is the file you're trying to read?</p></div>
+            <div class="comment-info" id="comment-15731-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '12, 08:47)</span>
+                <a class="comment-user userinfo" href="/users/1268/zachad">zachad</a>
+                
+            </div>
+        </div>
+    
+        <a name="15732"></a>
+        <div class="comment" id="comment-15732">
+            <div id="post-15732-score" class="comment-score"></div>
+            <div class="comment-text"><p>it is ~100 MB..</p></div>
+            <div class="comment-info" id="comment-15732-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '12, 09:02)</span>
+                <a class="comment-user userinfo" href="/users/3815/hugosp">hugosp</a>
+                
+            </div>
+        </div>
+    
+        <a name="15735"></a>
+        <div class="comment" id="comment-15735">
+            <div id="post-15735-score" class="comment-score"></div>
+            <div class="comment-text"><p>What I find unexpected is that Wireshark is actually faster. In the statistics window, wireshark computes stats for all types of conversations (ip, tcp, etc.) and even shows them. So it would make sense for tshark to be much faster</p></div>
+            <div class="comment-info" id="comment-15735-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '12, 09:11)</span>
+                <a class="comment-user userinfo" href="/users/3815/hugosp">hugosp</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15730" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15730-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/15730/tshark-conversation-statistics?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/15730/tshark-conversation-statistics?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/15730/tshark-conversation-statistics?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/15730/tshark-conversation-statistics?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="15749"></a>
+                    <div id="answer-container-15749" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15749-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15749/up/" rel="nofollow"> </a>
+<div id="post-15749-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-15749-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15749/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>tshark uses a tap to collect information for the conversation stats. So, basically it's the same code that wireshark is using and therefore there is no reason why tshark 'conv stats' should be slower than Wireshark stats.</p>
+<p>So, there must be a problem with your tshark version, your OS config, or the tshark/wireshark configuration.</p>
+<p>Some questions: </p>
+<ul>
+<li>what is your tshark version: tshark -v</li>
+<li>What is your OS version</li>
+<li>What is the output of tshark until it "freezes"</li>
+</ul>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15749/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Nov '12, 19:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15749">
+    
+        <a name="15754"></a>
+        <div class="comment" id="comment-15754">
+            <div id="post-15754-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello Kurt,</p>
+
+<p>TShark 1.8.3 (SVN Rev 45256 from /trunk-1.8)
+Running on 64-bit Windows 7 Service Pack 1, build 7601, with WinPcap versio
+4.1.2 (packet.dll version 4.1.0.2001), based on libpcap version 1.0 branch
+1_0_rel0b (20091008).</p>
+
+<p>Regarding the last question, Tshark actually shows two messages (which I have searched I read to be a bug with no special problem):</p>
+
+<p>OOPS: dissector table "sctp.ppi" doesn't exist
+Protocol being registered is "Datagram Transport Layer Security"</p>
+
+<p>Actually I have now left it running for half an hour and it did end. I still don't understand why it is so much slower than Wireshark.</p>
+
+<p>Your help is very much appreciated! Thanks,
+Hugo</p></div>
+            <div class="comment-info" id="comment-15754-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Nov '12, 21:21)</span>
+                <a class="comment-user userinfo" href="/users/3815/hugosp">hugosp</a>
+                
+            </div>
+        </div>
+    
+        <a name="15763"></a>
+        <div class="comment" id="comment-15763">
+            <div id="post-15763-score" class="comment-score"></div>
+            <div class="comment-text"><p>some more questions:</p>
+
+<ul>
+<li>how large is your pcap file?</li>
+<li>did tshark complete with the "full" stats output?</li>
+</ul></div>
+            <div class="comment-info" id="comment-15763-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '12, 02:02)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="15777"></a>
+        <div class="comment" id="comment-15777">
+            <div id="post-15777-score" class="comment-score"></div>
+            <div class="comment-text"><p>My pcap file is 119 MB. I am not sure what you mean by full stats, but I think the answer is yes, I used -&gt;C:\captures\<a href="http://results.txt">results.txt</a> and the text file has a list of conversations along with the statistics for each.</p>
+
+<p>I actually tried to compare the statistics obtained with Wireshark and those with tshark for the same conversation, and the numbers actually do not match exactly...</p></div>
+            <div class="comment-info" id="comment-15777-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '12, 08:40)</span>
+                <a class="comment-user userinfo" href="/users/3815/hugosp">hugosp</a>
+                
+            </div>
+        </div>
+    
+        <a name="15778"></a>
+        <div class="comment" id="comment-15778">
+            <div id="post-15778-score" class="comment-score"></div>
+            <div class="comment-text"><p>As I cannot observe that behavior on the same system (Win7, 1.8.3), it must be related to either your system, your wireshark configuration or the pcap file. Let's try to sort it out:</p>
+
+<ul>
+<li>do you see the same effect with another pcap file?</li>
+<li>please post the output of the following command:</li>
+</ul>
+
+<blockquote>
+<p><code>tshark -G currentprefs | find "resolve"</code></p>
+</blockquote></div>
+            <div class="comment-info" id="comment-15778-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Nov '12, 11:41)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="15789"></a>
+        <div class="comment" id="comment-15789">
+            <div id="post-15789-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello:</p>
+
+<p>So I tried the same command for a smaller pcap file (23 MB) and it worked fine, meaning that the results are the same as those computed by Wireshark and it run in a reasonable amount of time. But I also tried another large pcap file and it again takes too long to run (~40 minutes), much more than Wireshark. Good news is that the results seem to be coherent with the ones from Wireshark. Here is the output of the command you requested:</p>
+
+<p>OOPS: dissector table "sctp.ppi" doesn't exist
+Protocol being registered is "Datagram Transport Layer Security"</p>
+
+<p># TRUE or FALSE (case-insensitive), or a list of address types to resolve.</p>
+
+<p>#name_resolve: mtC</p>
+
+<p>#name_resolve_concurrency: 500</p>
+
+<p>#name_resolve_load_smi_modules: FALSE</p>
+
+<p>#name_resolve_suppress_smi_errors: FALSE</p>
+
+<p># Whether the NCP dissector should echo the NDS Entry ID to name resolves to the
+ expert table.</p>
+
+<p>Thanks again, Hugo</p></div>
+            <div class="comment-info" id="comment-15789-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Nov '12, 13:20)</span>
+                <a class="comment-user userinfo" href="/users/3815/hugosp">hugosp</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15749" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15749-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="15795"></a>
+                    <div id="answer-container-15795" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15795-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15795/up/" rel="nofollow"> </a>
+<div id="post-15795-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-15795-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15795/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>But I also tried another large pcap file and it again takes too long to run (~40 minutes), much more than Wireshark.</p>
+</blockquote>
+<p>O.K. so, it looks like it's related to the size of the capture file. Strange. I'll do some tests myself.</p>
+<p><strong>UPDATE</strong></p>
+<p>tshark (1.8.3) seems to be a notably faster on my system for comparable statistics (tshark: -z conv,tcp; Wireshark: Conversation List -&gt; TCP). I have not checked why tshark is that much faster than Wireshark. Maybe it's due to the GUI overhead (updating the listview while running the statistics).</p>
+<p><strong>Test #1</strong>: 250 MBytes HTTP data <br>
+</p>
+<ul>
+<li>tshark: 25 seconds<br>
+</li>
+<li>Wireshark: 45 seconds </li>
+</ul>
+<p><strong>Test #2</strong>: 500 MBytes HTTP data <br>
+</p>
+<ul>
+<li>tshark: 50 seconds<br>
+</li>
+<li>Wireshark: 90 seconds </li>
+</ul>
+<p><strong>Conclusion:</strong> If tshark takes <strong>40 minutes</strong> on your system it's either related to the configuration of your system, or you discovered a bug that only shows up in your special environment.</p>
+<ul>
+<li>Do you observe high CPU or <strong>RAM usage</strong> while tshark runs?</li>
+<li>Do you have any kind of security software installed (Firewall, IDS, Endpoint Protection, Antivirus, and the like)? If so, please disable all of them temporarily and try again.</li>
+</ul>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15795/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Nov '12, 01:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/15795/">
+                edited
+                <strong>18 Nov '12, 03:57</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15795">
+    
+        <a name="16001"></a>
+        <div class="comment" id="comment-16001">
+            <div id="post-16001-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hey, so did you get to any conclusion? Thanks!</p></div>
+            <div class="comment-info" id="comment-16001-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Nov '12, 14:09)</span>
+                <a class="comment-user userinfo" href="/users/3815/hugosp">hugosp</a>
+                
+            </div>
+        </div>
+    
+        <a name="16005"></a>
+        <div class="comment" id="comment-16005">
+            <div id="post-16005-score" class="comment-score"></div>
+            <div class="comment-text"><p>see my UPDATE in the answer</p></div>
+            <div class="comment-info" id="comment-16005-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Nov '12, 03:46)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16166"></a>
+        <div class="comment" id="comment-16166">
+            <div id="post-16166-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello:</p>
+
+<p>So the CPU usage is around 35% and memory is 2.34 GB. Regarding the Antivirus, I have Symantec endpoint protection, which i believe that came with the computer. I tried to disable it, but the problem persists. Tshark takes much longer than Wireshark. Also, could you please try conv,ip instead of conv,tcp?</p>
+
+<p>Thanks again,
+Hugo</p></div>
+            <div class="comment-info" id="comment-16166-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Nov '12, 09:17)</span>
+                <a class="comment-user userinfo" href="/users/3815/hugosp">hugosp</a>
+                
+            </div>
+        </div>
+    
+        <a name="16173"></a>
+        <div class="comment" id="comment-16173">
+            <div id="post-16173-score" class="comment-score"></div>
+            <div class="comment-text"><p>same result for conv,ip. However my CPU runs at 100% load all taken by tshark.</p>
+
+<blockquote>
+<p>I tried to disable it, but the problem persists.</p>
+</blockquote>
+
+<p>Are you sure it was totally disabled? Can you possibly uninstall it?</p></div>
+            <div class="comment-info" id="comment-16173-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Nov '12, 10:40)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="18994"></a>
+        <div class="comment" id="comment-18994">
+            <div id="post-18994-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hello Kurt,</p>
+
+<p>I tried to run this on my Ubuntu OS and the run time is the same. Do you think you can give me the file you are using or that I give you my file? I am pretty sure it must have to do with the pcap file. Thanks</p></div>
+            <div class="comment-info" id="comment-18994-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '13, 16:26)</span>
+                <a class="comment-user userinfo" href="/users/3815/hugosp">hugosp</a>
+                
+            </div>
+        </div>
+    
+        <a name="19038"></a>
+        <div class="comment not_top_scorer" id="comment-19038">
+            <div id="post-19038-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>or that I give you my file? I am pretty sure it must have to do with the pcap file. Thanks</p>
+</blockquote>
+
+<p>sure. Just upload it somewhere (google docs, one-click file hoster, etc.) and post the link here.</p>
+
+<p>Regards<br>
+Kurt</p></div>
+            <div class="comment-info" id="comment-19038-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '13, 09:37)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="19069"></a>
+        <div class="comment not_top_scorer" id="comment-19069">
+            <div id="post-19069-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you. Here is the file. </p>
+
+<p><a href="https://dl.dropbox.com/u/8056002/secs_00000_20120920085905.pcap">https://dl.dropbox.com/u/8056002/secs_00000_20120920085905.pcap</a></p>
+
+<p>Let me know how long it takes for you.</p></div>
+            <div class="comment-info" id="comment-19069-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Mar '13, 13:21)</span>
+                <a class="comment-user userinfo" href="/users/3815/hugosp">hugosp</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15795" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15795-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/15730/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='pwZgv3WueVlSKcHHGrXJ8jLvajU10fN2' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15730/tshark-conversation-statistics?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15730/tshark-conversation-statistics?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tshark/"
+            class="tag-link-tshark"
+            title="see questions tagged'tshark'using tags"
+            rel="tag">tshark</a> <span class="tag-number">&#215;832</span><br/>
+        
+        <a href="/tags/statistics/"
+            class="tag-link-statistics"
+            title="see questions tagged'statistics'using tags"
+            rel="tag">statistics</a> <span class="tag-number">&#215;86</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 8, 2012, 8:42 a.m.">08 Nov '12, 08:42</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>12,386 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 1, 2013, 1:21 p.m.">01 Mar '13, 13:21</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/53456/how-can-get-netflow-information-when-pcap-file-is-too-big-for-wireshark-to-open">How can get netflow information when pcap file is too big for wireshark to open</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10190/absolute-time-in-statistics-from-tshark-z-iostat">Absolute time in statistics from &quot;tshark -z io,stat&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16371/how-can-i-get-packet-size-summary-by-tshark">How can I get packet size summary by tshark ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41231/port-statistics">Port statistics</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39512/show-tcpstream-index-when-using-tshark-z-convtcp">Show tcp.stream index when using tshark -z conv,tcp</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14367/tshark-iostat-filtering-broken-in-18x">Tshark io,stat, filtering broken in 1.8.x?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61738/tcp-session-syn-synack-one-row-with-unique-column-details-tshark-csv-file">TCP Session Syn &amp; Syn/Ack One row with unique column details Tshark csv file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8639/statistics-over-multiple-captures">Statistics over multiple captures</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50445/tshark-stats-ip-conversations-sorted-to-most-bytes">Tshark Stats - IP conversations sorted to most bytes?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59265/list-source-ip-address-and-its-destination-addresses">List Source IP address and its destination addresses</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

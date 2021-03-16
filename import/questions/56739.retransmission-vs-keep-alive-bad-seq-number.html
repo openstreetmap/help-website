@@ -1,0 +1,1160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Retransmission vs keep-alive - bad seq number - Wireshark Q&amp;A</title>
+        <meta name="description" content="Pkt #3 is lost in transit. Packet 4 is a retransmit (based on timing and changed timing when rto is changed). Shown as keep-alive due to incorrect Seq number in pkt 4.  So two issues, why is Seq incorrect in #4 and how can WireShark figure out it is a retransmit vs keep-alive. link:capture" />
+        <meta name="keywords" content="ack_lost_seq,tcp_retransmission,keep-alive" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/56739/retransmission-vs-keep-alive-bad-seq-number" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/56739/retransmission-vs-keep-alive-bad-seq-number?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='qYmuoSGu4dqZ3Fc6FExJCxBpYIgqpEs8' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/56739/retransmission-vs-keep-alive-bad-seq-number">Retransmission vs keep-alive - bad seq number</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-56739-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56739/up/" rel="nofollow"> </a>
+<div id="post-56739-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-56739-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56739/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/56739/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Pkt #3 is lost in transit. Packet 4 is a retransmit (based on timing and changed timing when rto is changed). Shown as keep-alive due to incorrect Seq number in pkt 4.<br>
+</p>
+<p>So two issues, why is Seq incorrect in #4 and how can WireShark figure out it is a retransmit vs keep-alive.</p>
+<p>link:<a href="https://drive.google.com/file/d/0Bww-llCEGqMedVlpYnRaTXBpT00/view?usp=sharing" title="Capture">capture</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ack_lost_seq/" class="post-tag tag-link-ack_lost_seq"
+                                        title="see questions tagged 'ack_lost_seq'" rel="tag">ack_lost_seq</a>
+                                
+                                    <a href="/tags/tcp_retransmission/" class="post-tag tag-link-tcp_retransmission"
+                                        title="see questions tagged 'tcp_retransmission'" rel="tag">tcp_retransmission</a>
+                                
+                                    <a href="/tags/keep-alive/" class="post-tag tag-link-keep-alive"
+                                        title="see questions tagged 'keep-alive'" rel="tag">keep-alive</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>27 Oct '16, 07:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1aaaed196aa9c036c56f4db5a4fceb10?s=32&amp;d=identicon&amp;r=g" alt="devilbob's gravatar image" />
+    <p><a href="/users/26061/devilbob">devilbob</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="devilbob has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-56739">
+    
+        <a name="56748"></a>
+        <div class="comment" id="comment-56748">
+            <div id="post-56748-score" class="comment-score"></div>
+            <div class="comment-text"><p>Are the TCP CRC errors and undersized packets also present in the original capture (before sanitizing it)? If so, the capture quality isn't really that good...</p></div>
+            <div class="comment-info" id="comment-56748-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 10:39)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56752"></a>
+        <div class="comment" id="comment-56752">
+            <div id="post-56752-score" class="comment-score"></div>
+            <div class="comment-text"><p>No, the CRC errors are a function of the sanitizing. Not sure why you are saying the packets are undersized. They all look good to me.</p></div>
+            <div class="comment-info" id="comment-56752-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 12:54)</span>
+                <a class="comment-user userinfo" href="/users/26061/devilbob">devilbob</a>
+                
+            </div>
+        </div>
+    
+        <a name="56754"></a>
+        <div class="comment" id="comment-56754">
+            <div id="post-56754-score" class="comment-score"></div>
+            <div class="comment-text"><p>Jasper has meant, that the first packet has a size of 74 Byte. The second is 58 Byte. But the other packets are only 54 Byte long. That can normally not be. If we trace on a host the local packets might be under 64 byte. But the incomming packets are normally never under 64 byte.</p></div>
+            <div class="comment-info" id="comment-56754-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 13:15)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="56758"></a>
+        <div class="comment" id="comment-56758">
+            <div id="post-56758-score" class="comment-score"></div>
+            <div class="comment-text"><p>Could you provide the output of :</p>
+
+<p><code>tshark -r retran_anon.pcapng -otcp.relative_sequence_numbers:FALSE -T fields -e frame.number -e frame.len -e tcp.seq -e tcp.ack -e tcp.len -e tcp.window_size</code></p>
+
+<p>It would show if the sanitizing might have messed with some of the TCP headers...</p></div>
+            <div class="comment-info" id="comment-56758-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 15:38)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56761"></a>
+        <div class="comment" id="comment-56761">
+            <div id="post-56761-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/26061/devilbob">@devilbob</a> thanks, I think I need to adjust the Tracewrangler default setting a bit.</p></div>
+            <div class="comment-info" id="comment-56761-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 15:53)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56739" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56739-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/56739/retransmission-vs-keep-alive-bad-seq-number?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/56739/retransmission-vs-keep-alive-bad-seq-number?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/56739/retransmission-vs-keep-alive-bad-seq-number?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/56739/retransmission-vs-keep-alive-bad-seq-number?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="56741"></a>
+                    <div id="answer-container-56741" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-56741-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56741/up/" rel="nofollow"> </a>
+<div id="post-56741-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-56741-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56741/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The RFC 1122 definition of KEEP-ALIVE is next SEQ -1:</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/56741/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Oct '16, 07:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3b24b339fc62fb46dced6a443d3202ea?s=32&amp;d=identicon&amp;r=g" alt="Christian_R's gravatar image" />
+    <p><a href="/users/16160/christian_r">Christian_R</a><br/>
+    <span class="score" title="1830 reputation points"><span class="">1.8k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="25 badges"><span class="bronze">&#9679;</span><span class="badgecount">25</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Christian_R has 25 accepted answers">16&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/56741/">
+                edited
+                <strong>27 Oct '16, 08:09</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-56741">
+    
+        <a name="56742"></a>
+        <div class="comment" id="comment-56742">
+            <div id="post-56742-score" class="comment-score"></div>
+            <div class="comment-text"><p>I wonder if the client is upset because the server's SYN, ACK response has a window scale of 0?</p></div>
+            <div class="comment-info" id="comment-56742-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 08:01)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56743"></a>
+        <div class="comment" id="comment-56743">
+            <div id="post-56743-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb"></a><a href="/users/1225/grahamb">@grahamb</a>: Not only the window scaling is not advertised but the entire window is zero. Yeah I think that is the reason why the session looks so strange. At the beginning. In Packet #5 the system sets the Window to 4096 Byte. But the client never tells the server what he wants from the server. At the end the 8.x.x.x closes the session.</p></div>
+            <div class="comment-info" id="comment-56743-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 08:12)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="56744"></a>
+        <div class="comment" id="comment-56744">
+            <div id="post-56744-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/16160/christian_r">@Christian_R</a>, I meant window size.</p></div>
+            <div class="comment-info" id="comment-56744-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 08:16)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="56745"></a>
+        <div class="comment" id="comment-56745">
+            <div id="post-56745-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb">@grahamb</a> :)</p></div>
+            <div class="comment-info" id="comment-56745-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 08:19)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="56751"></a>
+        <div class="comment" id="comment-56751">
+            <div id="post-56751-score" class="comment-score"></div>
+            <div class="comment-text"><p>However keep-alives shouldn't happen till after two hours of idle. </p>
+
+<p>Part of the issue is the window size.  All connections  with this server have the window size set to 0 in the syn/ack. Normally when it sees the 3rd packet it sends a window size update with ACK=1 and SEQ=1.  When the ACK isn't received, then the retransmission is seen as the ACK but what would be the window update has ack=0 and we seem to ignore it except to resend a dup ACK which they ignore.</p>
+
+<p>I have set the rto to 10 seconds and the other end does not resend the syn/ack in that time before we send the retransmission.  Now trying with 30 seconds.</p></div>
+            <div class="comment-info" id="comment-56751-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 12:53)</span>
+                <a class="comment-user userinfo" href="/users/26061/devilbob">devilbob</a>
+                
+            </div>
+        </div>
+    
+        <a name="56753"></a>
+        <div class="comment not_top_scorer" id="comment-56753">
+            <div id="post-56753-score" class="comment-score"></div>
+            <div class="comment-text"><pre>However keep-alives shouldn't happen till after two hours of idle</pre>
+
+<p>That´s not the whole true. 2 hours is the default for keep alives, but the time must be configurable. So I don´t know what time your system has configured. </p>
+
+<p>BTW: About what OS do we speak?</p></div>
+            <div class="comment-info" id="comment-56753-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 13:10)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="56768"></a>
+        <div class="comment not_top_scorer" id="comment-56768">
+            <div id="post-56768-score" class="comment-score"></div>
+            <div class="comment-text"><p>Maybe the following situation has happened here. But the text is from the year 1989.
+So I am really not sure:</p>
+
+<pre>Unfortunately, some misbehaved TCP implementations fail
+to respond to a segment with SEG.SEQ = SND.NXT-1 unless
+the segment contains data.  Alternatively, an
+implementation could determine whether a peer responded
+correctly to keep-alive packets with no garbage data
+octet.
+</pre></div>
+            <div class="comment-info" id="comment-56768-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Oct '16, 22:36)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56741" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56741-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="56759"></a>
+                    <div id="answer-container-56759" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-56759-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56759/up/" rel="nofollow"> </a>
+<div id="post-56759-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-56759-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56759/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If the SEQ and ACK numbers were not anonymized, then I would say that both TCP implementations have issues.</p>
+<p>10.1.2.3 should not send frame #4, as there is no data to retransmit. The phantom byte in the SYN has been acknowledged in frame #2 and therefor it is the duty of 8.7.6.5 to retransmit the SYN/ACK if the ACK got lost.</p>
+<p>8.7.6.5 however should not use an ACK of 0 in frame #5 as it already acknowledged the phantom byte of the SYN in frame #2, therefor the ACK should be 1 (even though it should not send an ACK in the first place as there was no data received).</p>
+<p>Are both systems using a custom TCP/IP implementation?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/56759/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Oct '16, 15:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-56759">
+    
+        <a name="56862"></a>
+        <div class="comment" id="comment-56862">
+            <div id="post-56862-score" class="comment-score"></div>
+            <div class="comment-text"><p>No, 10.1.2.3 is using vanilla RHEL 6.8. Not sure what the other end is running. I do know they have an F5 in the mix but they have been unable to provide captures. Not really sure why not but they claim not to be able to.  I did at one point get a capture from their firewall, one direction used public address and the other direction used private addresses. Looked like we were seeing one direction on pre-NAT and the other post-NAT.</p></div>
+            <div class="comment-info" id="comment-56862-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Oct '16, 05:56)</span>
+                <a class="comment-user userinfo" href="/users/26061/devilbob">devilbob</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-56759" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56759-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="56899"></a>
+                    <div id="answer-container-56899" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-56899-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/56899/up/" rel="nofollow"> </a>
+<div id="post-56899-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-56899-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/56899/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I now understand this capture. The other end is misbehaving, but the "keep-alives" shown in wireshark are in this case zero-window probes.  I didn't realize that zero-window probes use the same timer as rto.  So the syn/ack said zero window and we want to start this conversation so we probe. </p>
+<p>I'm good with this now I just have to get the capture from the other end to confirm.</p>
+<p>Thanks for all the input.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/56899/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Nov '16, 07:25</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1aaaed196aa9c036c56f4db5a4fceb10?s=32&amp;d=identicon&amp;r=g" alt="devilbob's gravatar image" />
+    <p><a href="/users/26061/devilbob">devilbob</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="devilbob has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-56899">
+    
+</div>
+<div id="comment-tools-56899" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-56899-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/56739/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='qYmuoSGu4dqZ3Fc6FExJCxBpYIgqpEs8' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56739/retransmission-vs-keep-alive-bad-seq-number?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/56739/retransmission-vs-keep-alive-bad-seq-number?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tcp_retransmission/"
+            class="tag-link-tcp_retransmission"
+            title="see questions tagged'tcp_retransmission'using tags"
+            rel="tag">tcp_retransmission</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/keep-alive/"
+            class="tag-link-keep-alive"
+            title="see questions tagged'keep-alive'using tags"
+            rel="tag">keep-alive</a> <span class="tag-number">&#215;7</span><br/>
+        
+        <a href="/tags/ack_lost_seq/"
+            class="tag-link-ack_lost_seq"
+            title="see questions tagged'ack_lost_seq'using tags"
+            rel="tag">ack_lost_seq</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 27, 2016, 7:41 a.m.">27 Oct '16, 07:41</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,660 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 1, 2016, 7:25 a.m.">01 Nov '16, 07:25</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/23547/application-going-slow-same-time-at-night">Application going slow same time at night</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55387/lag-network-httphttps">Lag network http/https?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44609/wireshark-tcp-keep-alive-detection">Wireshark TCP Keep-Alive detection</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55638/ack-for-fin-re-transmission-errors-on-web-service-client">ACK for FIN Re transmission errors on web service client.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53668/lot-of-tcp-keep-alive-and-webpage-doesnt-open-as-expected">Lot of TCP keep-alive and webpage doesn&#39;t open as expected</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61537/tcp-transmission-from-client">TCP Transmission from Client</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55758/mssql-keep-aliverst-troubleshooting">MSSQL Keep-alive/RST Troubleshooting</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62143/tcp-previous-segment-not-captured">TCP Previous Segment not Captured</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60836/too-many-fin_wait_2-and-clients-delayed-tls-encrypted-alert-followed-by-servers-fin-with-keep-alive-on">Too many FIN_WAIT_2 and Client&#39;s delayed tls encrypted alert followed by server&#39;s fin with Keep-Alive On</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62411/can-not-open-http-port-80-internal-web-page">Can not open HTTP port 80 internal web page</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

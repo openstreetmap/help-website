@@ -1,0 +1,869 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to dissect the MMS pdu encrypted with TLS? - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi everyone, in my client/server application I&#39;m sending some MMS packets ecnrypted in the TLS session. I&#39;m able to decrypt the TLS data, and take a look at the plain text in the segments with the &quot;Follow SSL stream&quot; function (according to the instructions in https://ask.wireshark.org/questions/4229..." />
+        <meta name="keywords" content="tls,ssl,mms,encryption" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/37556/how-to-dissect-the-mms-pdu-encrypted-with-tls" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/37556/how-to-dissect-the-mms-pdu-encrypted-with-tls?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='dZ9AimGJMyQ0JpuvunLsChflurqnlN4W' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/37556/how-to-dissect-the-mms-pdu-encrypted-with-tls">How to dissect the MMS pdu encrypted with TLS?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-37556-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/37556/up/" rel="nofollow"> </a>
+<div id="post-37556-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-37556-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/37556/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/37556/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi everyone,</p>
+<p>in my client/server application I'm sending some MMS packets ecnrypted in the TLS session. I'm able to decrypt the TLS data, and take a look at the plain text in the segments with the "Follow SSL stream" function (according to the instructions in <a href="https://ask.wireshark.org/questions/4229/follow-ssl-stream-using-master-key-and-session-id">https://ask.wireshark.org/questions/4229/follow-ssl-stream-using-master-key-and-session-id</a>).</p>
+<p>I'm looking for a way to present the MMS data properly, with the common protocol structure visualization, not only a textual presentation.</p>
+<p><img alt="alt text" src="http://i60.tinypic.com/35ho4up.png"></p>
+<p>I would like to see the MMS protocol menu instead of "Encrypted Application Data"</p>
+<p>I've already tried with no success what has been write here:
+<a href="https://ask.wireshark.org/questions/6298/wireshark-cannot-dissect-mms-packets-that-dont-begin-with-initiate">https://ask.wireshark.org/questions/6298/wireshark-cannot-dissect-mms-packets-that-dont-begin-with-initiate</a></p>
+<p>I'm using Wireshark 1.12.</p>
+<p>Marc</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tls/" class="post-tag tag-link-tls"
+                                        title="see questions tagged 'tls'" rel="tag">tls</a>
+                                
+                                    <a href="/tags/ssl/" class="post-tag tag-link-ssl"
+                                        title="see questions tagged 'ssl'" rel="tag">ssl</a>
+                                
+                                    <a href="/tags/mms/" class="post-tag tag-link-mms"
+                                        title="see questions tagged 'mms'" rel="tag">mms</a>
+                                
+                                    <a href="/tags/encryption/" class="post-tag tag-link-encryption"
+                                        title="see questions tagged 'encryption'" rel="tag">encryption</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>03 Nov '14, 07:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c7306c011d7f22a048e2cd12e503ae8d?s=32&amp;d=identicon&amp;r=g" alt="Marc184's gravatar image" />
+    <p><a href="/users/11411/marc184">Marc184</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Marc184 has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/37556/">
+                edited
+                <strong>04 Nov '14, 06:20</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-37556">
+    
+        <a name="37567"></a>
+        <div class="comment" id="comment-37567">
+            <div id="post-37567-score" class="comment-score"></div>
+            <div class="comment-text"><p><em>Update</em></p>
+
+<p>I've tried the <a href="http://blogs.technet.com/b/nettracer/archive/2013/10/12/decrypting-ssl-tls-sessions-with-wireshark-reloaded.aspx">rsa private key approach</a> to decrypt the TLS session, by giving to wireshark the rsa private keys in .pem files, plus ip address and tcp port of the sniffed machines, and the indication of the application protocol used, MMS.</p>
+
+<p>I've also mantained the previous SSL settings (tls session id and rsa pre master secret in .log files)</p>
+
+<p>In the picture you can see what I've obtained:</p>
+
+<p><img alt="alt text" src="http://i60.tinypic.com/2z7rkvb.png"></p>
+
+<p>In the SSL stream I can see the decrypted session correctly, but wireshark can't reconstruct the MMS pdu.</p>
+
+<p>Any ideas?</p></div>
+            <div class="comment-info" id="comment-37567-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Nov '14, 05:02)</span>
+                <a class="comment-user userinfo" href="/users/11411/marc184">Marc184</a>
+                
+            </div>
+        </div>
+    
+        <a name="37593"></a>
+        <div class="comment" id="comment-37593">
+            <div id="post-37593-score" class="comment-score"></div>
+            <div class="comment-text"><p>I converted your Answer to a Comment since it doesn't appear to be an answer to your question.  (Remember that this is a Q&amp;A site, not a forum.)</p></div>
+            <div class="comment-info" id="comment-37593-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Nov '14, 07:50)</span>
+                <a class="comment-user userinfo" href="/users/655/jeffmorriss">JeffMorriss ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="37603"></a>
+        <div class="comment" id="comment-37603">
+            <div id="post-37603-score" class="comment-score"></div>
+            <div class="comment-text"><p>Tahnks, you're right, I'm sorry for the mistake.</p></div>
+            <div class="comment-info" id="comment-37603-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Nov '14, 00:16)</span>
+                <a class="comment-user userinfo" href="/users/11411/marc184">Marc184</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-37556" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-37556-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/37556/how-to-dissect-the-mms-pdu-encrypted-with-tls?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/37556/how-to-dissect-the-mms-pdu-encrypted-with-tls?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/37556/how-to-dissect-the-mms-pdu-encrypted-with-tls?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/37556/how-to-dissect-the-mms-pdu-encrypted-with-tls?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="37612"></a>
+                    <div id="answer-container-37612" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-37612-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/37612/up/" rel="nofollow"> </a>
+<div id="post-37612-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-37612-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/37612/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Marc184 has selected this answer as the correct answer"
+        href="/accept_answer/37612/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I found the solution!</p>
+<p>In the <em>SSL protocol preferences -&gt; RSA keys list -&gt; Edit</em> the protocol I choosed was wrong. The correct one is <strong>tpkt</strong>, not mms.
+Now I can see all the decrypted MMS structured payload.</p>
+<p><img alt="alt text" src="http://i62.tinypic.com/28b5kt1.png"></p>
+<h2>SOLUTION RECAP</h2>
+<ul>
+<li>
+<p>create a .log file with SSL session id and pre master secret key. Use the format:</p>
+<pre><code>RSA Session-ID:xxxx Master-Key:xxxx
+</code></pre>
+</li>
+</ul>
+<p>don't forget the CRLF at the end of the line. You should obtain something like:</p>
+<pre><code>    RSA Session-ID:B5AEB800F43F96A9BAD007A5D26423E43479B904166FA72A4789DEA15A830E26 Master-Key:454AD3030F0AE8234508DF959EF533675E225BBB388EE5F80A20A007BAB63E1ABB972F39401796FB02F27AF95AB083A4
+</code></pre>
+<p>(one line only)</p>
+<p>Go to SSL protocol preferences.</p>
+<ul>
+<li>
+<p>Link the .log file you've created in the <em>(Pre)-master secret log filename</em> form </p>
+</li>
+<li>
+<p>For this step we need the private keys of machines involved in the SSL session.</p>
+</li>
+</ul>
+<p>The .pem file with the private key should look like this:</p>
+<pre><code>    -----BEGIN RSA PRIVATE KEY-----
+    MIIEpAIBAAKCAQEAtIvaDmeOGleYuxT01GfAmgugHVlqCOFfGYqy3gxMWt/fxO/7
+    s7BJzqnhAFOWBjmBAdj7hHmPyCoJM7/MdCDJt1y7d20BJAGxD0ZQ4kxzGZDCjc5z
+    ....... some 20-100 lines of base64 encoded data ...............
+    Jh2kZkKoVG3Qr+66IlBDuVllIbwQU0F1fYy2FTjZL4vbmdupwHUyTnPK57vP8RJ7
+    cpc1qwLZxfurxZfhI9gxXOO5eUg1WBupw029SSoSafYBqO4a9wg1OA==
+    -----END RSA PRIVATE KEY-----
+</code></pre>
+<p>If the .pem file format is:</p>
+<pre><code>    -----BEGIN RSA PRIVATE KEY-----
+    Proc-Type: 4,ENCRYPTED
+    DEK-Info: DES-EDE3-CBC,CB7BE7B5A318ACE6
+
+    ScuaEtGA1xy7iVvvntc4hZ9Kl0VOKmA9sOcfP1CnrUVpAuLoHPEXTsc10smlXwsl
+     [...]
+    yy7ANfGCZTWaWP89uOIwlXK0n8hHZjTjw5axBuWXvgWHNbvein7tsg==
+    -----END RSA PRIVATE KEY-----
+</code></pre>
+<p>the key is protected with a passphrase, and wireshark can't decipher it. We have to create a plain  text key file. We can use openssl:</p>
+<pre><code>    openssl rsa -in &lt; old-keyfile &gt; -out &lt; new-keyfile &gt;
+</code></pre>
+<p>when asked, insert the passphrase you used to create the original .pem file.</p>
+<p>Now go to <em>RSA keys list-&gt;Edit</em> and create 2 rules, one for each "way" of the SSL communication. Insert the Ip address of the sender, the TCP port, the application protocol used (<strong>TKPT</strong> in this case) and the private key plain text .pem file</p>
+<p>At this point you will be able to see corretly the decrypted MMS structured pdu, not only the deciphered data in the <em>Follow SSL stream</em> function .</p>
+<p>References:</p>
+<ul>
+<li><a href="https://ask.wireshark.org/questions/4229/follow-ssl-stream-using-master-key-and-session-id">Session id + master secret procedure</a></li>
+<li><a href="http://blogs.technet.com/b/nettracer/archive/2013/10/12/decrypting-ssl-tls-sessions-with-wireshark-reloaded.aspx">Adding RSA keys</a></li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/37612/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Nov '14, 03:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c7306c011d7f22a048e2cd12e503ae8d?s=32&amp;d=identicon&amp;r=g" alt="Marc184's gravatar image" />
+    <p><a href="/users/11411/marc184">Marc184</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Marc184 has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/37612/">
+                edited
+                <strong>06 Nov '14, 03:16</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-37612">
+    
+</div>
+<div id="comment-tools-37612" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-37612-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/37556/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='dZ9AimGJMyQ0JpuvunLsChflurqnlN4W' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37556/how-to-dissect-the-mms-pdu-encrypted-with-tls?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37556/how-to-dissect-the-mms-pdu-encrypted-with-tls?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ssl/"
+            class="tag-link-ssl"
+            title="see questions tagged'ssl'using tags"
+            rel="tag">ssl</a> <span class="tag-number">&#215;319</span><br/>
+        
+        <a href="/tags/tls/"
+            class="tag-link-tls"
+            title="see questions tagged'tls'using tags"
+            rel="tag">tls</a> <span class="tag-number">&#215;75</span><br/>
+        
+        <a href="/tags/encryption/"
+            class="tag-link-encryption"
+            title="see questions tagged'encryption'using tags"
+            rel="tag">encryption</a> <span class="tag-number">&#215;34</span><br/>
+        
+        <a href="/tags/mms/"
+            class="tag-link-mms"
+            title="see questions tagged'mms'using tags"
+            rel="tag">mms</a> <span class="tag-number">&#215;12</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 3, 2014, 7:34 a.m.">03 Nov '14, 07:34</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,217 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 6, 2014, 3:16 a.m.">06 Nov '14, 03:16</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/21215/rtp-over-tls-connection-cant-be-decrypted-in-wireshark">RTP over TLS connection can&#39;t be decrypted in wireshark?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37383/how-do-i-followdecrypt-a-tlsssl-session-containing-a-tls-ticket-change">How do I follow/decrypt a TLS/SSL session containing a TLS ticket change?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52657/why-is-the-communication-protocol-sslv3-being-used">Why is the communication protocol SSLv3 being used?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55529/tls-handshake-appears-to-fail-after-encrypted-handshake-message">TLS handshake appears to fail after Encrypted Handshake Message.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58925/ssltls-decryption-problem">SSL/TLS Decryption Problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43815/tls-half-decryption-problem">TLS &quot;half&quot; decryption problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52808/tls12-with-client-cert-auth-doesnt-send-certificate-verify-message">TLS1.2 with client cert auth doesn&#39;t send &quot;Certificate Verify&quot; message</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17630/cant-decrypt-tlsv1-traffic">Can&#39;t Decrypt TLSv1 Traffic</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28823/decryption-with-ssltls-pre-master">Decryption with SSL/TLS pre-master</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44433/how-can-i-fully-decode-secure-ftp-traffic">How can I fully decode secure FTP traffic?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

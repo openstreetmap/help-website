@@ -1,0 +1,802 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>capture without connection to access point - Wireshark Q&amp;A</title>
+        <meta name="description" content="I need to capture mdns multicast from a device that is NOT connected to an access point. Is this possible? I am new to wireshark but not to networking. I have been searching for how to do this and messing with filters but nothing works so far." />
+        <meta name="keywords" content="mdns" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/60239/capture-without-connection-to-access-point" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/60239/capture-without-connection-to-access-point?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='ZVbI7T2jPGD82iqxu497qguhNbq5vuQb' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/60239/capture-without-connection-to-access-point">capture without connection to access point</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-60239-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/60239/up/" rel="nofollow"> </a>
+<div id="post-60239-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-60239-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/60239/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/60239/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I need to capture mdns multicast from a device that is NOT connected to an access point. Is this possible?  I am new to wireshark but not to networking.  I have been searching for how to do this and messing with filters but nothing works so far.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/mdns/" class="post-tag tag-link-mdns"
+                                        title="see questions tagged 'mdns'" rel="tag">mdns</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Mar '17, 13:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/27ac806990fdf1d04f1171d53480a2bd?s=32&amp;d=identicon&amp;r=g" alt="pmycue's gravatar image" />
+    <p><a href="/users/28373/pmycue">pmycue</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="pmycue has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-60239">
+    
+        <a name="60240"></a>
+        <div class="comment" id="comment-60240">
+            <div id="post-60240-score" class="comment-score"></div>
+            <div class="comment-text"><p>Are you sure the device produces mdns when not connected to an AP?  The link is down, so not obvious why mdns would be produced.</p></div>
+            <div class="comment-info" id="comment-60240-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Mar '17, 14:28)</span>
+                <a class="comment-user userinfo" href="/users/112/bob-jones">Bob Jones</a>
+                
+            </div>
+        </div>
+    
+        <a name="60257"></a>
+        <div class="comment" id="comment-60257">
+            <div id="post-60257-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, bot for android using wifp2p and for iOS using multipeer they send mdns packets without access points in order to advertise services before setting  up wifi direct or multipeer groups.   I can see the services advertised by iOS from another iOS devices with neither connected to an access point and i can see the services advertised by Android from another android device without access points as well.  What i am trying to do is see if /how i can see iOS from android and vice versa.</p></div>
+            <div class="comment-info" id="comment-60257-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Mar '17, 06:16)</span>
+                <a class="comment-user userinfo" href="/users/28373/pmycue">pmycue</a>
+                
+            </div>
+        </div>
+    
+        <a name="60264"></a>
+        <div class="comment" id="comment-60264">
+            <div id="post-60264-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, this sounds interesting.  Can you give some more clues - what tool or app do you use to see these?  If I can see this info on my equipment, I can capture traffic on all 802.11 2.4/5GHz channels that are legal in my domain and try and find them.</p>
+
+<p>I just need some more tips to get started - I want to be sure my phone(s) pick this up as well so when I look I have a chance of finding them.</p>
+
+<p>Some of these devices use anonymous MAC addresses while probing and with likely other behavior.  Could make it a challenge here if that feature is in play.</p></div>
+            <div class="comment-info" id="comment-60264-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Mar '17, 08:22)</span>
+                <a class="comment-user userinfo" href="/users/112/bob-jones">Bob Jones</a>
+                
+            </div>
+        </div>
+    
+        <a name="60265"></a>
+        <div class="comment" id="comment-60265">
+            <div id="post-60265-score" class="comment-score"></div>
+            <div class="comment-text"><p>I may be able to give you an android sample app that does this, but anything that uses wifip2p on android or multipeer (MPC) on iOS will do, just have it forget any access point and leave wifi on.I don't think android does the anonymous mac.  In any case i am having trouble getting wireshark to filter on anything but i am just starting working with this and likely that is my mistake.</p></div>
+            <div class="comment-info" id="comment-60265-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Mar '17, 08:45)</span>
+                <a class="comment-user userinfo" href="/users/28373/pmycue">pmycue</a>
+                
+            </div>
+        </div>
+    
+        <a name="60270"></a>
+        <div class="comment" id="comment-60270">
+            <div id="post-60270-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Hello <a href="/users/28373/pmycue"></a><a href="/users/28373/pmycue">@pmycue</a> and <a href="/users/112/bob-jones"></a><a href="/users/112/bob-jones">@Bob Jones</a>,
+  I would like to make a suggestion in that pre-association discovery (PAD) of services are carried over Action frames - specifically Public Action Frames or Protected Dual of Public Action frames.</p>
+
+<p>Both the Public and Protected Dual of Public Action Frames are able to carry Generic Advertisement Service (GAS) information.  GAS provides functionality that enables WiFi devices to discover the availability of information related to desired network services either prior to joining a BSS or after joining the BSS.  Originally GAS provided very little about network services, but with 802.11aq, that changed.  (Note 11aq is not officially released).</p>
+
+<p>Here is a link with more information about the IEEE task group for 11aq:</p>
+
+<p><a href="https://mentor.ieee.org/802.11/dcn/13/11-13-1313-04-0000-tgaq-mini-tutorial.ppt">https://mentor.ieee.org/802.11/dcn/13/11-13-1313-04-0000-tgaq-mini-tutorial.ppt</a></p>
+
+<p>The link should download a PowerPoint.</p>
+
+<p>What filters to use?</p>
+
+<ol>
+<li>
+<p>(wlan.fc.type_subtype == 0x000d)
+   ---All Action frames</p>
+</li>
+<li>
+<p>(wlan.fc.type_subtype == 0x000d)&amp;&amp; (wlan_mgt.fixed.category_code == 4)
+   ---Public Action Frames only - not sure if this will work.  I have to verify</p>
+</li>
+<li>
+<p>(wlan.fc.type_subtype == 0x000d)&amp;&amp; (wlan_mgt.fixed.category_code == 9)<br>
+   ---Protected Dual of Public Action Frames only - not sure if this will work.  I have to verify.</p>
+</li>
+</ol>
+
+<p>Please note that all the above filters are display filters.  This means you can only apply them AFTER the capture is complete.  I would recommend capturing on 1 channel (e.g., channel 6) for a few minutes.  Then apply the above filters.<br>
+</p>
+
+<p>I will try to perform a capture and see what I observe in the next few days.  But this may be a start?</p></div>
+            <div class="comment-info" id="comment-60270-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Mar '17, 20:02)</span>
+                <a class="comment-user userinfo" href="/users/3386/amato_c">Amato_C</a>
+                
+            </div>
+        </div>
+    
+        <a name="60277"></a>
+        <div class="comment not_top_scorer" id="comment-60277">
+            <div id="post-60277-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you, i have started having some success after discovering that there are wifip2p keywords for filtering as well.  AN odd thing, my device shows its mac address in settings as 2c:0e:3d:bd:25:ab BUT in the trace, it shows up as 2c:0e:3d:bd:25:ab WHICH is why i had such a hard time finding its frames.   It is clearly the right device, i have all others turned off and it identifies it as a samsung s7 properly.</p></div>
+            <div class="comment-info" id="comment-60277-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Mar '17, 06:53)</span>
+                <a class="comment-user userinfo" href="/users/28373/pmycue">pmycue</a>
+                
+            </div>
+        </div>
+    
+        <a name="60278"></a>
+        <div class="comment not_top_scorer" id="comment-60278">
+            <div id="post-60278-score" class="comment-score"></div>
+            <div class="comment-text"><p>sorry, shows in settings as 2c:0e:3d:bd:25:ab but 2e:0e:3d:bd:25:ab in logs</p></div>
+            <div class="comment-info" id="comment-60278-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Mar '17, 06:54)</span>
+                <a class="comment-user userinfo" href="/users/28373/pmycue">pmycue</a>
+                
+            </div>
+        </div>
+    
+        <a name="60280"></a>
+        <div class="comment not_top_scorer" id="comment-60280">
+            <div id="post-60280-score" class="comment-score"></div>
+            <div class="comment-text"><p>The different MAC addresses make sense.</p>
+
+<p>2c:0e:3d:bd:25:ab = This is a universally administered address and is uniquely assigned to a device by its manufacturer. The first three octets (in transmission order) identify the organization that issued the identifier and are known as the Organizationally Unique Identifier (OUI).  In this case, 2c:0e:3d is registered to Samsung.</p>
+
+<p>2e:0e:3d:bd:25:ab = This is a locally administered address and does not need to be registered with the IEEE. The local addresses are typically used by devices for P2P or Mobile Hotspot.</p>
+
+<p>A good P2P filter is = wlan_mgt.ssid contains "DIRECT"</p>
+
+<p>All WiFi P2P connections must have the word DIRECT in their SSID per the specification.</p>
+
+<p><a href="/users/28373/pmycue">@pmycue</a> = Are you still seeing mdns multicast traffic when not connected to an AP?  Are you only seeing mdns traffic while attempting to connect via P2P or have already established a P2P session?</p></div>
+            <div class="comment-info" id="comment-60280-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Mar '17, 07:58)</span>
+                <a class="comment-user userinfo" href="/users/3386/amato_c">Amato_C</a>
+                
+            </div>
+        </div>
+    
+        <a name="60288"></a>
+        <div class="comment not_top_scorer" id="comment-60288">
+            <div id="post-60288-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/3386/amato_c">@Amato</a>,</p>
+
+<p>Thanks for the detail and the link.  Interesting new technology.</p></div>
+            <div class="comment-info" id="comment-60288-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Mar '17, 12:22)</span>
+                <a class="comment-user userinfo" href="/users/112/bob-jones">Bob Jones</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-60239" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-60239-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/60239/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='ZVbI7T2jPGD82iqxu497qguhNbq5vuQb' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60239/capture-without-connection-to-access-point?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/60239/capture-without-connection-to-access-point?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/mdns/"
+            class="tag-link-mdns"
+            title="see questions tagged'mdns'using tags"
+            rel="tag">mdns</a> <span class="tag-number">&#215;11</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 21, 2017, 1:40 p.m.">21 Mar '17, 13:40</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,961 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 23, 2017, 12:22 p.m.">23 Mar '17, 12:22</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/14622/decode-mdns">Decode mDNS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23518/mdns-protocol-filtering">mDNS Protocol filtering</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34456/capturing-mdns-packet">Capturing mDNS packet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34480/wireshark-capture-packet-color">Wireshark capture packet color</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47786/received-multicast-dns-not-showing-in-wireshark">received Multicast DNS not showing in Wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55819/mdns-protocol-is-normal">MDNS protocol is normal?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59874/queries-and-answers-of-mdns-are-in-the-same-frame">queries and answers of mDNS are in the same frame</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59944/whats-the-meaning-of-these-nsec-records-in-mdns-response-packet">what&#39;s the meaning of these NSEC records in mDNS response packet?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60104/whats-the-meaning-of-this-mdns-response-packet-without-any-answerauthorityadditional-rrs">what&#39;s the meaning of this mDNS response packet without any answer/authority/additional RRs?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61791/protocol-mdns-smartphone-huawei-p9lite">protocol mdns - smartphone huawei p9lite</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

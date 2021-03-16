@@ -1,0 +1,799 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>tshark print dns query hostname and http hostnames - Wireshark Q&amp;A</title>
+        <meta name="description" content="Find a tshark command that can print the following: go through all packets,  if it dns request, print  pktNum DNS dns.qry.name  if it is HTTP request, print  pktNum HTTP http.host " />
+        <meta name="keywords" content="tshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/48648/tshark-print-dns-query-hostname-and-http-hostnames" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/48648/tshark-print-dns-query-hostname-and-http-hostnames?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='TSNgjOAuILfVOq1ba8KoMLZW6cSmYYPm' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/48648/tshark-print-dns-query-hostname-and-http-hostnames">tshark print dns query hostname and http hostnames</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-48648-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48648/up/" rel="nofollow"> </a>
+<div id="post-48648-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-48648-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48648/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/48648/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Find a tshark command that can print the following:</p>
+<pre><code>go through all packets,
+    if it dns request, print
+       pktNum  DNS  dns.qry.name
+    if it is HTTP request, print
+       pktNum HTTP http.host
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tshark/" class="post-tag tag-link-tshark"
+                                        title="see questions tagged 'tshark'" rel="tag">tshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 Dec '15, 07:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7bb7310612573625abd07a67f22724ad?s=32&amp;d=identicon&amp;r=g" alt="pktUser1001's gravatar image" />
+    <p><a href="/users/16546/pktuser1001">pktUser1001</a><br/>
+    <span class="score" title="201 reputation points">201</span><span title="49 badges"><span class="badge1">&#9679;</span><span class="badgecount">49</span></span><span title="50 badges"><span class="silver">&#9679;</span><span class="badgecount">50</span></span><span title="54 badges"><span class="bronze">&#9679;</span><span class="badgecount">54</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="pktUser1001 has one accepted answer">12&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-48648">
+    
+</div>
+<div id="comment-tools-48648" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48648-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/48648/tshark-print-dns-query-hostname-and-http-hostnames?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/48648/tshark-print-dns-query-hostname-and-http-hostnames?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/48648/tshark-print-dns-query-hostname-and-http-hostnames?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/48648/tshark-print-dns-query-hostname-and-http-hostnames?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="48649"></a>
+                    <div id="answer-container-48649" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-48649-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/48649/up/" rel="nofollow"> </a>
+<div id="post-48649-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-48649-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/48649/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'm afraid the <code>ТCP</code> and <code>HTTP</code> strings are only displayed as contents of "protocol" column in the packet list pane, and they always indicate the topmost client protocol in the frame, so eventual http packets carrying some payload object would not be displayed even if a corresponding field name would be available inside them.</p>
+<p>So try <code>-T fields -e frame.number -e frame.protocols -e dns.qry.name -e http.host -Y "dns.qry.name or http.host"</code>, you'll get the full list of protocol layers identified in each packet, and you'll have to use some post-process if necessary.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/48649/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Dec '15, 09:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-48649">
+    
+        <a name="48653"></a>
+        <div class="comment" id="comment-48653">
+            <div id="post-48653-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks <a href="/users/19586/sindy">@sindy</a> for the tip, it's almost there.  The <code>-e dns.qry.name</code> will catch both the host name in request and reply. Is there a way to skip DNS responses?</p></div>
+            <div class="comment-info" id="comment-48653-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Dec '15, 16:07)</span>
+                <a class="comment-user userinfo" href="/users/16546/pktuser1001">pktUser1001</a>
+                
+            </div>
+        </div>
+    
+        <a name="48654"></a>
+        <div class="comment" id="comment-48654">
+            <div id="post-48654-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sure there is.</p>
+
+<p>As it seems you don't have a possibility to use GUI Wireshark, all the protocol fields that can be chosen for display using <code>-e</code> as well for filtering using <code>-Y</code> or <code>-R</code> in tshark (see the difference between <code>-Y</code> and -R <a href="https://www.wireshark.org/docs/man-pages/tshark.html">here</a>) are listed <a href="https://www.wireshark.org/docs/dfref/">here</a>.</p>
+
+<p>If you can use a GUI Wireshark, it is much more straightforward (especially if you are not familiar with your protocol of interest) to choose a packet which contains what you need, go to the packet dissection pane, unfold the protocol which you are interested in, and select the lines representing field dissections which seem to you as perspective candidates for being printed using <code>-e</code> or becoming part of the <code>-Y</code> or <code>-R</code> filter conditions. When a line is selected, the field name in a display filter format is displayed in the bottom part of the window frame. On top of that, you can right-click the line and choose e.g. <code>Prepare as filter -&gt; ...or Selected</code> to extend the existing display filter in the required way, without applying the change immediately.</p>
+
+<p>So in case of a DNS query, the packet dissection looks like follows:</p>
+
+<p><code>Frame 947: 71 bytes on wire (568 bits), 71 bytes captured (568 bits) on interface 0
+Ethernet II, Src: 1c:3a:51:4c:47:74, Dst: 00:1e:56:71:9a:d3
+Internet Protocol Version 4, Src: 192.168.15.160, Dst: 192.168.15.1
+User Datagram Protocol, Src Port: 50670 (50670), Dst Port: 53 (53)
+Domain Name System (query)
+    [Response In: 948]
+    Transaction ID: 0x5acf
+    Flags: 0x0100 Standard query
+        0... .... .... .... = Response: Message is a query
+        .000 0... .... .... = Opcode: Standard query (0)
+        .... ..0. .... .... = Truncated: Message is not truncated
+        .... ...1 .... .... = Recursion desired: Do query recursively
+        .... .... .0.. .... = Z: reserved (0)
+        .... .... ...0 .... = Non-authenticated data: Unacceptable
+    Questions: 1
+    Answer RRs: 0
+    Authority RRs: 0
+    Additional RRs: 0
+    ...</code></p>
+
+<p>You select (i.e. left-click) the line <code>Questions: 1</code> and in the bottom of the window frame you'll see the field name: <code>dns.count.queries</code>. So you'll modify the <code>-Y</code> part of the tshark filter to <code>-Y "(dns.qry.name and dns.count.queries &gt; 0) or http.host"</code> and you are there. Or you can use <code>dns.flags.response == 0</code> instead, but purely theoretically there may be a query carrying no question.</p></div>
+            <div class="comment-info" id="comment-48654-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '15, 00:00)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="48666"></a>
+        <div class="comment" id="comment-48666">
+            <div id="post-48666-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks <a href="/users/19586/sindy">@sindy</a>, I tried <code>tshark -r 2015-12-21-threatglass.pcap -T fields -e frame.number -e frame.protocols -e dns.qry.name -e http.host -Y "(dns.qry.name and dns.count.queries &gt; 0) or http.host"</code> but still see the output contains for both DNS request and DNS query.</p></div>
+            <div class="comment-info" id="comment-48666-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '15, 20:53)</span>
+                <a class="comment-user userinfo" href="/users/16546/pktuser1001">pktUser1001</a>
+                
+            </div>
+        </div>
+    
+        <a name="48667"></a>
+        <div class="comment" id="comment-48667">
+            <div id="post-48667-score" class="comment-score"></div>
+            <div class="comment-text"><p>Okay, so replace the <code>dns.count.queries &gt; 0</code> with <code>dns.flags.response == 0</code> . The <code>dns.qry.name</code> in the <code>-Y</code> should be enough to eliminate packets without any queried name, even without <code>dns.count.queries &gt; 0</code>. Just check how a PTR query looks like (as I'm not sure whether the IP address you want to resolve into name will be displayed as <code>dns.qry.name</code>). You can generate one using <code>nslookup ip.add.re.ss</code> on Windows or <code>dig -x ip.add.re.ss</code> on Linux.</p></div>
+            <div class="comment-info" id="comment-48667-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '15, 23:55)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-48649" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-48649-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/48648/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='TSNgjOAuILfVOq1ba8KoMLZW6cSmYYPm' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48648/tshark-print-dns-query-hostname-and-http-hostnames?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/48648/tshark-print-dns-query-hostname-and-http-hostnames?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tshark/"
+            class="tag-link-tshark"
+            title="see questions tagged'tshark'using tags"
+            rel="tag">tshark</a> <span class="tag-number">&#215;832</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 20, 2015, 7:56 a.m.">20 Dec '15, 07:56</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,412 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 21, 2015, 11:55 p.m.">21 Dec '15, 23:55</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/62/static-tshark-builds-for-linux-andor-solaris-sparcx64">static tshark builds for linux and/or solaris sparc/x64</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1670/tshark-hex-dump">tshark hex dump</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3479/could-the-file-name-parameter-in-tshark-be-chinese-characters">could the file name parameter in tshark be chinese characters?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5132/write-gzip-encoded-http-as-inflated-in-pcap-file">Write Gzip Encoded HTTP as Inflated in PCAP File</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6488/use-tshark-to-analyze-source-and-destination-ips-from-dumpfile">Use tshark to analyze source and destination IPs from dumpfile?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8324/difference-tshark-wireshark-when-load-a-pcap">Difference TShark / Wireshark when load a pcap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9303/how-to-retrieve-packet-information-using-wireshark-commands">how to retrieve packet information using wireshark commands</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10173/covert-the-pcap-file-to-a-csv-file-using-tshark">Covert the .pcap file to a .csv file using tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10605/tshark-commands-e-and-t">tshark commands -e and -T</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12348/how-to-calculate-the-total-network-traffic-pass-though-a-gigabit-nic-with-high-precision">How to calculate the total network traffic pass though a Gigabit NIC with high precision?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

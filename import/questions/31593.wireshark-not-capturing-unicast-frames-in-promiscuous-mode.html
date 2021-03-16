@@ -1,0 +1,979 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Wireshark not capturing unicast frames in promiscuous mode - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, I have a test set up in which my test board is connected to a machine on which Wireshark is installed. I see that my unicast (and multicast) frames are not captured by the Wireshark. However, all my broadcast frames are captured properly by it. Please let me know whether there is any setting par..." />
+        <meta name="keywords" content="unicast" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/31593/wireshark-not-capturing-unicast-frames-in-promiscuous-mode" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/31593/wireshark-not-capturing-unicast-frames-in-promiscuous-mode?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='uDLgJbHCuUCMLU1GDlF9pSl3lAsi5Svh' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/31593/wireshark-not-capturing-unicast-frames-in-promiscuous-mode">Wireshark not capturing unicast frames in promiscuous mode</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-31593-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31593/up/" rel="nofollow"> </a>
+<div id="post-31593-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31593-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31593/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/31593/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I have a test set up in which my test board is connected to a machine on which Wireshark is installed. I see that my unicast (and multicast) frames are not captured by the Wireshark. However, all my broadcast frames are captured properly by it. Please let me know whether there is any setting particular for unicast or multicast frames so that they are captured. I do believe that the crc for the unicast and multicast frames are correct because i had the same test setup connected to an ixia and have seen that ixia is collecting and reporting those frames. So i think we can drop the possibility of my nic dropping packets with wrong crc (unless it drops for some other reason).</p>
+<p>I have promiscuous mode enabled for my interface. Is there a way to ensure that the promiscuous mode of the Wireshark is active on Windows 7 and it is not overridden  (overridden by administrative rights)? </p>
+<p>I would also like to know the scenarios where in my nic will drop the frames apart from erroneous crc.</p>
+<p>Please also note that am not using any capture filters</p>
+<p>Any help is appreciated!!!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/unicast/" class="post-tag tag-link-unicast"
+                                        title="see questions tagged 'unicast'" rel="tag">unicast</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Apr '14, 04:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e7d566c97adbee1a09ad4458551f4e13?s=32&amp;d=identicon&amp;r=g" alt="Hafiz219's gravatar image" />
+    <p><a href="/users/6898/hafiz219">Hafiz219</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hafiz219 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/31593/">
+                edited
+                <strong>07 Apr '14, 04:24</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-31593">
+    
+        <a name="31608"></a>
+        <div class="comment" id="comment-31608">
+            <div id="post-31608-score" class="comment-score"></div>
+            <div class="comment-text"><p>This is on Ethernet, not Wi-Fi, correct?  (Promiscuous mode does not work very well at all on Wi-Fi adapters on Windows.)</p></div>
+            <div class="comment-info" id="comment-31608-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Apr '14, 20:00)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="31611"></a>
+        <div class="comment" id="comment-31611">
+            <div id="post-31611-score" class="comment-score"></div>
+            <div class="comment-text"><p>How exactly is your test board connected to the PC?</p>
+
+<p>Do you see the frames if you run Wireshark in non-promiscuous mode?</p></div>
+            <div class="comment-info" id="comment-31611-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Apr '14, 22:25)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="31612"></a>
+        <div class="comment" id="comment-31612">
+            <div id="post-31612-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/79/guy-harris">@Guy Harris</a>: Yes, my test is on ethernet and not on wifi.</p></div>
+            <div class="comment-info" id="comment-31612-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Apr '14, 23:21)</span>
+                <a class="comment-user userinfo" href="/users/6898/hafiz219">Hafiz219</a>
+                
+            </div>
+        </div>
+    
+        <a name="31613"></a>
+        <div class="comment" id="comment-31613">
+            <div id="post-31613-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/2593/kurt-knochner">@Kurt</a>: I tried with non-promiscuous mode setting and still am not able to capture the unicast frames. However, am still able to capture broadcast frames.
+The test board is connected to the PC via an ethernet cable. I have also tried connecting an ixia to the PC with Wireshark and pumping packets directly to PC.</p></div>
+            <div class="comment-info" id="comment-31613-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Apr '14, 23:46)</span>
+                <a class="comment-user userinfo" href="/users/6898/hafiz219">Hafiz219</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31593" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31593-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/31593/wireshark-not-capturing-unicast-frames-in-promiscuous-mode?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/31593/wireshark-not-capturing-unicast-frames-in-promiscuous-mode?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/31593/wireshark-not-capturing-unicast-frames-in-promiscuous-mode?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/31593/wireshark-not-capturing-unicast-frames-in-promiscuous-mode?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="31601"></a>
+                    <div id="answer-container-31601" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31601-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31601/up/" rel="nofollow"> </a>
+<div id="post-31601-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31601-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31601/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Generate some traffic and in the Windows CMD type "netstat -e" several times to see which counter increases. If you see no discards, no errors and the unicast counter is increasing, try MS Network Monitor and check if it captures the traffic. Also try disabling any endpoint security software you may have installed.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31601/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Apr '14, 12:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/721b9692d2a30fc3b386b7fae9a44220?s=32&amp;d=identicon&amp;r=g" alt="Roland's gravatar image" />
+    <p><a href="/users/6889/roland">Roland</a><br/>
+    <span class="score" title="764 reputation points">764</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Roland has 9 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31601">
+    
+        <a name="31614"></a>
+        <div class="comment" id="comment-31614">
+            <div id="post-31614-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Roland for the suggestion. I tried using the netstat -e option.  So whenever i pump packets from an ixia or my test board the unicast packet count is incremented. I do not see any discards or errors.
+However, the observation is that the unicast packet count increments by a multiple of 4. For example, if i sent 10 frames, the unicast frame count increases by 40. If the number of frames sent is 100, the unicast frame count increases by 400 and so on.... Is this the expected behavior?
+Can i assume that my nic is not dropping any of the incoming unicast packets since my unicast frame count is incremented?</p></div>
+            <div class="comment-info" id="comment-31614-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Apr '14, 00:10)</span>
+                <a class="comment-user userinfo" href="/users/6898/hafiz219">Hafiz219</a>
+                
+            </div>
+        </div>
+    
+        <a name="31643"></a>
+        <div class="comment" id="comment-31643">
+            <div id="post-31643-score" class="comment-score"></div>
+            <div class="comment-text"><p>The behaviour is expected but I don't know why it does that. If you don't see errors or discards it is safe to assume that the NIC is not dropping the packets. Have you tried Network Monitor?</p></div>
+            <div class="comment-info" id="comment-31643-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Apr '14, 11:45)</span>
+                <a class="comment-user userinfo" href="/users/6889/roland">Roland</a>
+                
+            </div>
+        </div>
+    
+        <a name="31669"></a>
+        <div class="comment" id="comment-31669">
+            <div id="post-31669-score" class="comment-score"></div>
+            <div class="comment-text"><p>Roland, I haven't tried the Network Monitor yet. But i had tried disabling the endpoint security software that i was running. I still do not see unicast frames captured by wireshark.</p></div>
+            <div class="comment-info" id="comment-31669-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Apr '14, 06:18)</span>
+                <a class="comment-user userinfo" href="/users/6898/hafiz219">Hafiz219</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31601" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31601-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="31657"></a>
+                    <div id="answer-container-31657" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31657-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31657/up/" rel="nofollow"> </a>
+<div id="post-31657-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31657-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31657/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>The test board is connected to the PC via an ethernet cable</p>
+</blockquote>
+<p>Sounds like your test board is either not doing ARP or it is doing it in the wrong way. Do you see any ARP requests in Wireshark?</p>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31657/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Apr '14, 22:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31657">
+    
+        <a name="31668"></a>
+        <div class="comment" id="comment-31668">
+            <div id="post-31668-score" class="comment-score"></div>
+            <div class="comment-text"><p>Kurt, I do see ARP request in Wireshark. But the source for ARP requests is the machine running wireshark itself. Am now connecting ixia directly to the machine running wireshark. Is there anyway to ensure that the ARP is done correctly?
+Is it possible to turn off the address resolution? If so, can you please let me know how to do that?</p></div>
+            <div class="comment-info" id="comment-31668-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Apr '14, 06:16)</span>
+                <a class="comment-user userinfo" href="/users/6898/hafiz219">Hafiz219</a>
+                
+            </div>
+        </div>
+    
+        <a name="31688"></a>
+        <div class="comment" id="comment-31688">
+            <div id="post-31688-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Is there anyway to ensure that the ARP is done correctly? </p>
+</blockquote>
+
+<p>sure, post the capture file somewhere (google drive, dropbox, cloudshark.org) and we will tell you. Please add information about your environment here, like:</p>
+
+<ul>
+<li>MAC and IP of the test board</li>
+<li>MAC and IP of the PC</li>
+<li>how is sending and who is receiving data</li>
+</ul>
+
+<blockquote>
+<p>Is it possible to turn off the address resolution?</p>
+</blockquote>
+
+<p>On your test board? I don't know! Please ask the vendor. However, it would not make much sense to disable that!</p>
+
+<p>On you PC? Well, you can't disable just ARP on Windows, at least I don't know a way how to do it, and it wouldn't make much sense, as you would not be able to resolve the MAC address of the 'other' side. </p>
+
+<p>You can however set a static ARP entry. See <code>arp -h</code> (you would need option -s).</p></div>
+            <div class="comment-info" id="comment-31688-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Apr '14, 13:58)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31657" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31657-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/31593/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='uDLgJbHCuUCMLU1GDlF9pSl3lAsi5Svh' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31593/wireshark-not-capturing-unicast-frames-in-promiscuous-mode?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31593/wireshark-not-capturing-unicast-frames-in-promiscuous-mode?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/unicast/"
+            class="tag-link-unicast"
+            title="see questions tagged'unicast'using tags"
+            rel="tag">unicast</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 7, 2014, 4:16 a.m.">07 Apr '14, 04:16</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,199 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 9, 2014, 1:58 p.m.">09 Apr '14, 13:58</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/268/seeing-unicast-traffic-on-a-switchport-without-spanning">Seeing unicast traffic on a switchport without spanning</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8513/cant-see-other-traffic-but-my-own">Can&#39;t see other traffic but my own</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20390/why-captured-other-unicast-transmission-on-a-switch-not-broadcast-and-not-multicast">Why captured other unicast transmission on a switch? (NOT broadcast and NOT multicast)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25873/unicast-frame-not-seen-by-wireshark">unicast frame not seen by Wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35800/unicast-packet-capture-failure-on-wireshark">Unicast Packet capture failure on wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46384/how-can-i-capture-on-a-switched-network-unicast-packets-to-a-specific-ip-address">How can I capture, on a switched network, unicast packets to a specific IP address ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49904/how-to-work-around-unicast-messages">how to work around unicast messages</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59876/how-can-wireshark-observe-arp-unicast-requests-for-two-other-machines-on-the-same-network">How can Wireshark observe ARP unicast requests for two other machines on the same network?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1051 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Getting Tshark up to wire speed for NFS packet captures - Wireshark Q&amp;A</title>
+        <meta name="description" content="I am trying to use tshark for reassembling and extracting NFS payloads. Because of the large amount of data I am processing (and some security concerns) I can not do this processing offline so I am trying to get tshark to run at or as close to wire speed as possible. I initially tried using tshark t..." />
+        <meta name="keywords" content="performance" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/16613/getting-tshark-up-to-wire-speed-for-nfs-packet-captures" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/16613/getting-tshark-up-to-wire-speed-for-nfs-packet-captures?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='E6bmWIJUaj9UQEdqbjPvDIVnuQPiGE4y' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/16613/getting-tshark-up-to-wire-speed-for-nfs-packet-captures">Getting Tshark up to wire speed for NFS packet captures</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-16613-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16613/up/" rel="nofollow"> </a>
+<div id="post-16613-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-16613-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16613/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/16613/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am trying to use tshark for reassembling and extracting NFS payloads.  Because of the large amount of data I am processing (and some security concerns) I can not do this processing offline so I am trying to get tshark to run at or as close to wire speed as possible.   I initially tried using tshark to do the packet capture but it was dropping too many packets so I am using another pcap based tool to do the packet capture (and successfully capturing and writing packets at wire speed) and then I am piping the output of tshark to another process that does processing on the payloads.  So the whole setup looks something like this:</p>
+<p>pcap-packet-capture-tool | tshark -i - -n -T fields -e nfs.data | my_program</p>
+<p>In my experiments, I have seen that tshark significantly lags wire speed (1 Gb/s).  It's actual rate is roughly 25 MB/s and this lag manifests itself by tshark taking extra time after the packet capture is complete to finish at roughly the rate of 1 to 1 ie. if I do a packet capture for 30 minutes, it will take tshark a total of an hour to finish.</p>
+<p>I have looked into trying to speed it up myself by not converting the data into hex representations and just printing the binary but the improvements were marginal.  For more significant performance improvements I would either need a better understanding of the code (to know what to adjust/strip off) or perhaps I am missing some crucial parameters that will significantly speed tshark up.  Please let me know if you have any suggestions on either front.  I would also be happy to provide any extra information if this is not enough to troubleshoot the issue.</p>
+<p>I should add, this is running in a virtualized linux environment with a relatively modern/ powerful server and I have already disabled host look up (as I know that can significantly slow down packet captures). <br>
+</p>
+<p>Thanks you!</p>
+<p>UPDATE:
+Thank you for the quick responses.  Below are some clarifications.</p>
+<ol>
+<li>The testing that I've done to find the speed of tshark were not in the full setup.  I am writing the pcap to tshark with dd and letting tshark write it's output to /dev/null so there are no external limiting factors.  The note above about tshark going at 25 MB/s is from the isolated tests, not the full setup.  I just added those details in case there is some slowdown when capturing on the stdin interface or writing to stdout.<br>
+</li>
+<li>The pcap tool is tcpdump with pfring.</li>
+<li>I have looked at top and vmstat while it runs.  It uses up to 1 GB of ram and 100% cpu.  tshark is single threaded so it's only taking up 1 of the 4 cores.</li>
+<li>I do run tshark with -n, I just omitted it above.  I am re-adding it now.</li>
+</ol>
+<p>Update 2:
+I added my own benchmarks in an answer.</p>
+<p>Update 3:
+I have used the tshark that gets installed with apt-get and I have built the latest myself.  apt-get gives you 1.8.2 and the one I built is 1.8.4.  The results from both are similar.  I am running it in Ubuntu 12.10 VM running in VMWare fusion on OS X Mountain Lion.  It's a macbook air with i7 processor, 8 GB of ram.  The VM has 3GB of ram and 4 vCPUs.<br>
+</p>
+<pre><code>$ ./tshark -v
+TShark 1.8.4 (SVN Rev Unknown from unknown)
+
+Copyright 1998-2012 Gerald Combs &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="680f0d1a09040c28">[email&#160;protected]</a><a href="http://wireshark.org">wireshark.org</a>&gt; and contributors.
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Compiled (64-bit) with GLib 2.34.0, with libpcap, with libz 1.2.7, without POSIX
+capabilities, without SMI, without c-ares, without ADNS, without Lua, without
+Python, without GnuTLS, without Gcrypt, without Kerberos, without GeoIP.
+
+Running on Linux 3.5.0-19-generic, with locale en_US.UTF-8, with libpcap version
+1.3.0, with libz 1.2.7.
+
+Built using gcc 4.7.2.
+
+$ tshark -v
+TShark 1.8.2
+
+Copyright 1998-2012 Gerald Combs &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7c1b190e1d10183c">[email&#160;protected]</a><a href="http://wireshark.org">wireshark.org</a>&gt; and contributors.
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Compiled (64-bit) with GLib 2.34.0, with libpcap, with libz 1.2.7, with POSIX
+capabilities (Linux), with SMI 0.4.8, with c-ares 1.9.1, with Lua 5.1, without
+Python, with GnuTLS 2.12.14, with Gcrypt 1.5.0, with MIT Kerberos, with GeoIP.
+
+Running on Linux 3.5.0-19-generic, with locale en_US.UTF-8, with libpcap version
+1.3.0, with libz 1.2.7.
+
+Built using gcc 4.7.2.
+
+$ uname -a
+Linux ubuntu 3.5.0-19-generic #30-Ubuntu SMP Tue Nov 13 17:48:01 UTC 2012 x86_64 x86_64 x86_64 GNU/Linux
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/performance/" class="post-tag tag-link-performance"
+                                        title="see questions tagged 'performance'" rel="tag">performance</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Dec '12, 14:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/08f0b2e3262cfb486306c28a042948f3?s=32&amp;d=identicon&amp;r=g" alt="notorious-pcaper's gravatar image" />
+    <p><a href="/users/4013/notorious-pcaper">notorious-pc...</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="notorious-pcaper has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/16613/">
+                edited
+                <strong>06 Dec '12, 10:05</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-16613">
+    
+        <a name="16648"></a>
+        <div class="comment" id="comment-16648">
+            <div id="post-16648-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you are building from source you are better off building from trunk, checking out from svn. In that way you get access to the latest improvments if any. Building a profiling build might help(I don't know how to do that) finding out where the bottleneck is.</p></div>
+            <div class="comment-info" id="comment-16648-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Dec '12, 11:14)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16613" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16613-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/16613/getting-tshark-up-to-wire-speed-for-nfs-packet-captures?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/16613/getting-tshark-up-to-wire-speed-for-nfs-packet-captures?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/16613/getting-tshark-up-to-wire-speed-for-nfs-packet-captures?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/16613/getting-tshark-up-to-wire-speed-for-nfs-packet-captures?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="16618"></a>
+                    <div id="answer-container-16618" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-16618-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/16618/up/" rel="nofollow"> </a>
+<div id="post-16618-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-16618-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/16618/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Some questions/suggestions:</p>
+<ul>
+<li>What is your pcap-packet-capture-tool?</li>
+<li>How do you know that this tool is not the limiting factor? Did you measure it's performance with cpipe?</li>
+</ul>
+<blockquote>
+<p><code>pcap-packet-capture-tool | cpipe -vt &gt; /dev/null</code><br>
+</p>
+</blockquote>
+<ul>
+<li>decoding the whole traffic will take a lot of resources. Did you check the resource usage of tshark while it is running? (top, vmstat, atop, etc.)</li>
+<li>How do you know that your program (my_program) is not the limiting factor? What happens if you run this:</li>
+</ul>
+<blockquote>
+<p><code>pcap-packet-capture-tool | tshark -i - -T fields -e nfs.data &gt; /dev/null</code><br>
+</p>
+</blockquote>
+<ul>
+<li>the pipe buffer size is limited. If one process fills it up fast and the other is not reading fast enough, the first process might block.</li>
+</ul>
+<blockquote>
+<p>and I have already disabled host look up</p>
+</blockquote>
+<p>You did not use the option <code>-n</code> with tshark (at least not in your example above). Please try that.</p>
+<p><strong>UPDATE</strong> </p>
+<p>replying to your update in the question.</p>
+<p>I did some test with dd and the buffer size and that is a crucial factor.</p>
+<p>dd with default buffer size (you did not mention your buffer size for dd!!)
+</p><pre>dd if=http_250.cap | cpipe -b 1024 -vt &gt; /dev/null 
+thru: 320.396ms at    3.1MB/s (   3.1MB/s avg) 1024.0kB
+thru: 302.170ms at    3.3MB/s (   3.2MB/s avg)    2.0MB
+thru: 304.235ms at    3.3MB/s (   3.2MB/s avg)    3.0MB
+thru: 300.765ms at    3.3MB/s (   3.3MB/s avg)    4.0MB
+</pre><p></p>
+<p>That's pretty slow! The buffer of dd is to small.</p>
+<p>Now cat.
+</p><pre>cat http_250.cap | cpipe -b 1024 -vt &gt; /dev/null 
+thru:   5.004ms at  199.8MB/s ( 199.8MB/s avg) 1024.0kB
+thru:   5.092ms at  196.4MB/s ( 196.9MB/s avg)    2.0MB
+thru:   5.027ms at  198.9MB/s ( 197.3MB/s avg)    3.0MB
+thru:   5.188ms at  192.8MB/s ( 195.8MB/s avg)    4.0MB
+</pre><p></p>
+<p>That's much better.</p>
+<p>Now dd with a decent buffer size.</p>
+<pre>dd bs=512000 if=http_250.cap | cpipe -b 1024 -vt &gt; /dev/null 
+thru:   2.006ms at  498.5MB/s ( 498.5MB/s avg) 1024.0kB
+thru:   0.743ms at    1.3GB/s ( 714.5MB/s avg)    2.0MB
+thru:   0.759ms at    1.3GB/s ( 813.0MB/s avg)    3.0MB
+thru:   0.708ms at    1.4GB/s ( 897.1MB/s avg)    4.0MB
+thru:   0.717ms at    1.4GB/s ( 955.7MB/s avg)    5.0MB
+thru:   0.725ms at    1.3GB/s ( 995.2MB/s avg)    6.0MB
+thru:   0.723ms at    1.4GB/s (   1.0GB/s avg)    7.0MB
+thru:   0.739ms at    1.3GB/s (   1.0GB/s avg)    8.0MB
+</pre>
+
+<p>nearly 1 GByte/s (avg). That's not bad :-) </p>
+<p><strong>HINT</strong>: This is <strong>obviously</strong> using the filesystem cache of Linux. My SSD is only capable of reading with at max. speed of 400-500 MByte/s (specs and measured).</p>
+<p>now, let's bring in tshark.
+</p><pre>dd bs=512000 if=http_250.cap | cpipe -b 1024 -vt | tshark -ni - &gt; /dev/null 
+Capturing on Standard input
+thru:   4.809ms at  207.9MB/s (  90.7MB/s avg)   41.0MB
+thru:   5.187ms at  192.8MB/s (  91.8MB/s avg)   42.0MB
+thru:   5.586ms at  179.0MB/s (  92.9MB/s avg)   43.0MB
+thru:   5.552ms at  180.1MB/s (  93.9MB/s avg)   44.0MB
+thru:   9.280ms at  107.8MB/s (  94.1MB/s avg)   45.0MB
+thru:  17.993ms at   55.6MB/s (  92.7MB/s avg)   46.0MB
+</pre><p></p>
+<p>O.K. that's odd. Only 10% of the input stream, but still fast enough for a 1 GBit/s link, as the output of cpipe is in Byte/s, so it's ~90 MByte/s.</p>
+<p>Now tshark filtering on only some fields:</p>
+<pre>dd bs=512000 if=http_250.cap | cpipe -b 1024 -vt | tshark -ni - -T fields -e tcp.port &gt; /dev/null 
+Capturing on Standard input
+thru:   5.584ms at  179.1MB/s ( 109.4MB/s avg)  125.0MB
+thru:   5.746ms at  174.0MB/s ( 109.7MB/s avg)  126.0MB
+thru:   7.830ms at  127.7MB/s ( 109.8MB/s avg)  127.0MB
+thru:   6.039ms at  165.6MB/s ( 110.1MB/s avg)  128.0MB
+thru:   5.836ms at  171.4MB/s ( 110.4MB/s avg)  129.0MB
+thru:   7.159ms at  139.7MB/s ( 110.6MB/s avg)  130.0MB
+thru: 193.072ms at    5.2MB/s (  95.7MB/s avg)  131.0MB
+thru:   5.408ms at  184.9MB/s (  96.0MB/s avg)  132.0MB
+thru:   5.573ms at  179.4MB/s (  96.4MB/s avg)  133.0MB
+thru:   5.702ms at  175.4MB/s (  96.7MB/s avg)  134.0MB
+thru:   6.357ms at  157.3MB/s (  97.0MB/s avg)  135.0MB
+thru:   6.004ms at  166.6MB/s (  97.3MB/s avg)  136.0MB
+</pre>
+
+<p>O.K, a bit better, with a (avg) peak up to 110 MByte/s.</p>
+<p>So, why is your tshark not that fast? I did my test in a VMware on a laptop. The file is on a real fast SSD (400 MByte/s). HOWEVER, I used just <strong>http</strong> traffic. </p>
+<p>There is a pretty good chance, that the NFS dissector consumes much more resources, and thus it is so much slower. As I don't have a large NFS capture file, I cannot test it. However, you can test your environment with a large http capture file (easy to create). Then compare your results with mine. If tshark is still much slower, then it's related to your system (CPU, I/O, etc.) or to the tshark version (mine: 1.8.3 on Ubuntu 12.04). If your system is much faster with http, then it's the NFS dissector and there is probably nothing you can do, except speeding up the dissector by improving the code or by using an even faster system (CPU) ;-)</p>
+<p>BTW: If you run tshark for a long time at a high data rate, it will build up internal state (hash tables, lists, etc.) and it will become slower over time, as it takes longer to add/extract data to those data structures!</p>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/16618/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Dec '12, 16:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-16618">
+    
+        <a name="16638"></a>
+        <div class="comment" id="comment-16638">
+            <div id="post-16638-score" class="comment-score"></div>
+            <div class="comment-text"><p>So I did your set of tests to see how I compare.  I have them below.  In short, it seems my system's capabilities are similar to yours but when I add in tshark it's much slower.  I think my pcap is a bit smaller (50MB) but I don't think that should make a this huge of a difference.</p>
+
+<p>Writing with dd with no block size specified is quite faster for me.</p>
+
+<pre><code>$ dd if=../../pcap/http-50MB.pcap | cpipe -b 1024 -vt &gt; /dev/null 
+thru:   9.865ms at  101.4MB/s ( 101.4MB/s avg) 1024.0kB
+thru:   4.987ms at  200.5MB/s ( 133.8MB/s avg)    2.0MB
+thru:   2.256ms at  443.3MB/s ( 173.5MB/s avg)    3.0MB
+thru:  22.243ms at   45.0MB/s ( 100.9MB/s avg)    4.0MB
+thru:  22.767ms at   43.9MB/s (  80.0MB/s avg)    5.0MB
+thru:  15.571ms at   64.2MB/s (  76.4MB/s avg)    6.0MB
+thru:  16.805ms at   59.5MB/s (  73.4MB/s avg)    7.0MB
+thru:  10.056ms at   99.4MB/s (  75.8MB/s avg)    8.0MB
+thru:  10.396ms at   96.2MB/s (  77.5MB/s avg)    9.0MB
+thru:  21.253ms at   47.1MB/s (  72.8MB/s avg)   10.0MB
+</code></pre>
+
+<p>Using a bigger block size anyway:</p>
+
+<pre><code>$ dd bs=512k if=../../pcap/http-50MB.pcap | cpipe -b 1024 -vt  &gt; /dev/null
+thru:   3.327ms at  300.6MB/s ( 300.6MB/s avg) 1024.0kB
+thru:   2.213ms at  451.9MB/s ( 350.1MB/s avg)    2.0MB
+thru:   2.240ms at  446.4MB/s ( 369.9MB/s avg)    3.0MB
+thru:   3.805ms at  262.8MB/s ( 330.7MB/s avg)    4.0MB
+thru:   2.395ms at  417.5MB/s ( 343.1MB/s avg)    5.0MB
+thru:   2.467ms at  405.4MB/s ( 347.7MB/s avg)    6.0MB
+thru:   1.602ms at  624.2MB/s ( 370.2MB/s avg)    7.0MB
+thru:   1.528ms at  654.5MB/s ( 388.9MB/s avg)    8.0MB
+thru:   1.135ms at  881.1MB/s ( 412.3MB/s avg)    9.0MB
+thru:   1.065ms at  939.0MB/s ( 435.3MB/s avg)   10.0MB
+</code></pre>
+
+<p>Ok, that's pretty slow, but still above wire speed.  Also, looking later in the process (MB 38 and on)</p>
+
+<pre><code>thru:   0.931ms at    1.0GB/s ( 694.1MB/s avg)   38.0MB
+thru:   0.798ms at    1.2GB/s ( 701.6MB/s avg)   39.0MB
+thru:   0.933ms at    1.0GB/s ( 707.1MB/s avg)   40.0MB
+thru:   0.822ms at    1.2GB/s ( 714.0MB/s avg)   41.0MB
+thru:   0.587ms at    1.7GB/s ( 723.6MB/s avg)   42.0MB
+thru:   0.636ms at    1.5GB/s ( 732.5MB/s avg)   43.0MB
+thru:   0.755ms at    1.3GB/s ( 739.8MB/s avg)   44.0MB
+thru:   0.758ms at    1.3GB/s ( 746.7MB/s avg)   45.0MB
+thru:   0.667ms at    1.5GB/s ( 754.5MB/s avg)   46.0MB
+thru:   0.745ms at    1.3GB/s ( 761.2MB/s avg)   47.0MB
+thru:   0.832ms at    1.2GB/s ( 766.7MB/s avg)   48.0MB
+</code></pre>
+
+<p>That's pretty comprable to your results.  Here comes tshark:</p>
+
+<pre><code>$ dd bs=512k if=../../pcap/http-50MB.pcap | cpipe -b 1024 -vt | ./tshark -ni - &gt; /dev/null
+Capturing on Standard input
+thru: 222.728ms at    4.5MB/s (   4.5MB/s avg) 1024.0kB
+thru:  16.554ms at   60.4MB/s (   8.4MB/s avg)    2.0MB
+thru:  12.820ms at   78.0MB/s (  11.9MB/s avg)    3.0MB
+thru:  19.805ms at   50.5MB/s (  14.7MB/s avg)    4.0MB
+thru:  14.044ms at   71.2MB/s (  17.5MB/s avg)    5.0MB
+thru:  14.296ms at   69.9MB/s (  19.9MB/s avg)    6.0MB
+thru:  16.266ms at   61.5MB/s (  22.1MB/s avg)    7.0MB
+thru:  10.686ms at   93.6MB/s (  24.4MB/s avg)    8.0MB
+thru:   9.888ms at  101.1MB/s (  26.6MB/s avg)    9.0MB
+thru:  19.367ms at   51.6MB/s (  28.0MB/s avg)   10.0MB
+thru:  19.538ms at   51.2MB/s (  29.2MB/s avg)   11.0MB
+thru:  19.455ms at   51.4MB/s (  30.3MB/s avg)   12.0MB
+thru:  12.148ms at   82.3MB/s (  31.8MB/s avg)   13.0MB
+thru:  15.142ms at   66.0MB/s (  33.0MB/s avg)   14.0MB
+...
+thru:  19.875ms at   50.3MB/s (  44.0MB/s avg)   37.0MB
+thru:  18.174ms at   55.0MB/s (  44.2MB/s avg)   38.0MB
+thru:  42.073ms at   23.8MB/s (  43.3MB/s avg)   39.0MB
+thru:  27.417ms at   36.5MB/s (  43.1MB/s avg)   40.0MB
+thru:  33.191ms at   30.1MB/s (  42.6MB/s avg)   41.0MB
+thru:   9.252ms at  108.1MB/s (  43.3MB/s avg)   42.0MB
+thru:  15.505ms at   64.5MB/s (  43.6MB/s avg)   43.0MB
+thru:   8.617ms at  116.0MB/s (  44.2MB/s avg)   44.0MB
+thru:  11.868ms at   84.3MB/s (  44.7MB/s avg)   45.0MB
+thru:  34.991ms at   28.6MB/s (  44.1MB/s avg)   46.0MB
+thru:  18.417ms at   54.3MB/s (  44.3MB/s avg)   47.0MB
+thru:  28.615ms at   34.9MB/s (  44.1MB/s avg)   48.0MB
+</code></pre>
+
+<p>Similar situation with the fields:</p>
+
+<pre><code>$ dd bs=512k if=../../pcap/http-50MB.pcap | cpipe -b 1024 -vt | ./tshark -ni - -T fields -e tcp.port&gt; /dev/null
+Capturing on Standard input
+thru: 205.944ms at    4.9MB/s (   4.9MB/s avg) 1024.0kB
+thru:  10.363ms at   96.5MB/s (   9.2MB/s avg)    2.0MB
+thru:  12.774ms at   78.3MB/s (  13.1MB/s avg)    3.0MB
+thru:  10.068ms at   99.3MB/s (  16.7MB/s avg)    4.0MB
+thru:   7.983ms at  125.3MB/s (  20.2MB/s avg)    5.0MB
+thru:   8.106ms at  123.4MB/s (  23.4MB/s avg)    6.0MB
+thru:   9.250ms at  108.1MB/s (  26.4MB/s avg)    7.0MB
+thru:   8.799ms at  113.6MB/s (  29.2MB/s avg)    8.0MB
+thru:   9.492ms at  105.4MB/s (  31.7MB/s avg)    9.0MB
+thru:  13.729ms at   72.8MB/s (  33.6MB/s avg)   10.0MB
+thru:  21.893ms at   45.7MB/s (  34.4MB/s avg)   11.0MB
+thru:   8.379ms at  119.3MB/s (  36.6MB/s avg)   12.0MB
+thru:  11.659ms at   85.8MB/s (  38.3MB/s avg)   13.0MB
+thru:  17.193ms at   58.2MB/s (  39.2MB/s avg)   14.0MB
+thru:  13.114ms at   76.3MB/s (  40.5MB/s avg)   15.0MB
+...
+thru:  17.869ms at   56.0MB/s (  51.3MB/s avg)   36.0MB
+thru:  11.028ms at   90.7MB/s (  51.9MB/s avg)   37.0MB
+thru:  10.326ms at   96.8MB/s (  52.6MB/s avg)   38.0MB
+thru:  13.916ms at   71.9MB/s (  52.9MB/s avg)   39.0MB
+thru:   8.701ms at  114.9MB/s (  53.6MB/s avg)   40.0MB
+thru:   8.585ms at  116.5MB/s (  54.4MB/s avg)   41.0MB
+thru:  15.419ms at   64.9MB/s (  54.6MB/s avg)   42.0MB
+thru:  24.169ms at   41.4MB/s (  54.2MB/s avg)   43.0MB
+thru:  24.658ms at   40.6MB/s (  53.7MB/s avg)   44.0MB
+thru:  19.379ms at   51.6MB/s (  53.7MB/s avg)   45.0MB
+thru:  19.207ms at   52.1MB/s (  53.7MB/s avg)   46.0MB
+thru:  16.235ms at   61.6MB/s (  53.8MB/s avg)   47.0MB
+thru:  13.310ms at   75.1MB/s (  54.1MB/s avg)   48.0MB
+</code></pre>
+
+<p>Interestingly, it goes the same speed for NFS reassembly so it seems that whatever is making my tshark slow should also help with the NFS case.  Do you have any thoughts on what might cause this (about 2x) slowdown?  Do you need more explicit details about my system/ setup to have a better idea of where to start looking?</p>
+
+<p>Thanks again.</p></div>
+            <div class="comment-info" id="comment-16638-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Dec '12, 08:26)</span>
+                <a class="comment-user userinfo" href="/users/4013/notorious-pcaper">notorious-pc...</a>
+                
+            </div>
+        </div>
+    
+        <a name="16640"></a>
+        <div class="comment" id="comment-16640">
+            <div id="post-16640-score" class="comment-score"></div>
+            <div class="comment-text"><p>what is your tshark version? Please post the output of.</p>
+
+<blockquote>
+<p><code>tshark -v</code> <br>
+</p>
+</blockquote>
+
+<p>What is your OS version?</p>
+
+<blockquote>
+<p>Do you need more explicit details about my system/ setup to have a better idea of where to start looking?</p>
+</blockquote>
+
+<p>Yes, every detail you can give (e.g. VMware Version, Host OS version, virtual OS version, etc.) may help.</p>
+
+<p>BTW: I converted your answer to a comment, as that's how this site works.</p></div>
+            <div class="comment-info" id="comment-16640-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Dec '12, 09:14)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="16651"></a>
+        <div class="comment" id="comment-16651">
+            <div id="post-16651-score" class="comment-score"></div>
+            <div class="comment-text"><p>Upon some further investigation I was able to get tshark to read in data up to 200 MB/s with a VM with 32 GB of RAM.  This showed that the throughput measurement is not accurate because tshark will continue to run after it has read everything and finish reassembly much later.  For example, I fed tshark a 1GB pcap which it consumed in 5 seconds (probably buffering most of it) but tshark actually runs for 3 minutes so if you average that 1GB over 180 seconds it's actually more like 5MB/s.</p></div>
+            <div class="comment-info" id="comment-16651-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Dec '12, 11:23)</span>
+                <a class="comment-user userinfo" href="/users/4013/notorious-pcaper">notorious-pc...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-16618" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-16618-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/16613/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='E6bmWIJUaj9UQEdqbjPvDIVnuQPiGE4y' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/16613/getting-tshark-up-to-wire-speed-for-nfs-packet-captures?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/16613/getting-tshark-up-to-wire-speed-for-nfs-packet-captures?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/performance/"
+            class="tag-link-performance"
+            title="see questions tagged'performance'using tags"
+            rel="tag">performance</a> <span class="tag-number">&#215;55</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 5, 2012, 2:11 p.m.">05 Dec '12, 14:11</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,253 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 6, 2012, 11:23 a.m.">06 Dec '12, 11:23</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/346/wireshark-performance-freezing-when-stopping-capture-closing-file">Wireshark performance - freezing when stopping capture / closing file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19133/tshark-memory-consumption-and-temporary-file-usage">tshark memory consumption and temporary file usage</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38443/wireshark-opening-vs-exporting-performance">Wireshark opening vs exporting performance</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52515/slow-application-response-times">Slow application response times</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2075/very-slow-gui-when-running-wireshark-remotely">Very slow GUI when running wireshark remotely</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19135/improving-performance">Improving performance</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39163/tshark-command-to-find-answer-field-in-dns-query-response-with-more-than-1-answer-rrs">tshark command to find answer field in dns query response with more than 1 answer RRs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53703/slow-performance-on-aveva-software">slow performance on aveva software</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2500/queries-regarding-http-protocol">queries regarding http protocol</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19433/tshark-performance-problem">Tshark performance problem</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1049 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>network stack Wireshark driver placement - Wireshark Q&amp;A</title>
+        <meta name="description" content="How can I list the order of drivers in the Windows network stack. For example, when installing Wireshark winpcap will place itself before the NIC driver. I&#39;m asking because I was reading that in case of VPN solutions sometimes Wireshark won&#39;t be able to capture frames because of how the driver was w..." />
+        <meta name="keywords" content="wireshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/54712/network-stack-wireshark-driver-placement" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/54712/network-stack-wireshark-driver-placement?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='mFuoOCIFNmWVR8EZuW67jPgbYzONk4Uv' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/54712/network-stack-wireshark-driver-placement">network stack Wireshark driver placement</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-54712-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54712/up/" rel="nofollow"> </a>
+<div id="post-54712-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54712-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54712/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/54712/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>How can I list the order of drivers in the Windows network stack. For example, when installing Wireshark winpcap will place itself before the NIC driver. I'm asking because I was reading that in case of VPN solutions sometimes Wireshark won't be able to capture frames because of how the driver was written so per my understanding the VPN's driver needs to be before winpcap and the physical NIC driver , correct? </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Aug '16, 00:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2b3f26f3a24449776af62dd8cca7715a?s=32&amp;d=identicon&amp;r=g" alt="adasko's gravatar image" />
+    <p><a href="/users/13062/adasko">adasko</a><br/>
+    <span class="score" title="86 reputation points">86</span><span title="34 badges"><span class="badge1">&#9679;</span><span class="badgecount">34</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="42 badges"><span class="bronze">&#9679;</span><span class="badgecount">42</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="adasko has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54712/">
+                edited
+                <strong>10 Aug '16, 00:46</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-54712">
+    
+</div>
+<div id="comment-tools-54712" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54712-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/54712/network-stack-wireshark-driver-placement?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/54712/network-stack-wireshark-driver-placement?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/54712/network-stack-wireshark-driver-placement?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/54712/network-stack-wireshark-driver-placement?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="54722"></a>
+                    <div id="answer-container-54722" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54722-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54722/up/" rel="nofollow"> </a>
+<div id="post-54722-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-54722-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54722/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Npcap is the NDIS 6 fork of WinPcap. And there is a sequence for all filter drivers in NDIS 6 stack. Some of the filters in my Win10 is here:<br>
+</p>
+<pre><code>Service Name  Description                                 FilterClass                 Inf File
+MsBridge      Microsoft MAC Bridge                        ms_implatform               netbrdg.inf
+WfpLwfs       WFP 802.3 MAC Layer LightWeight Filter      ms_firewall_upper           wfplwfs.inf  
+WfpLwfs       WFP Native MAC Layer LightWeight Filter     ms_medium_converter_bottom  wfplwfs.inf  
+WfpLwfs       Microsoft Windows Filtering Platform        ms_switch_filter            wfplwfs.inf  
+vwififlt      Virtual WiFi Filter Driver                  ms_medium_converter_128     netvwififlt.inf  
+npf           Npcap Packet Driver (NPCAP)                 compression                 npf.inf  
+Psched        QoS Packet Scheduler                        scheduler                   netpacer.inf  
+NativeWifiP   NativeWiFi Filter                           ms_medium_converter_top     netnwifi.inf  
+NdisCap       Microsoft NDIS Capture                      ms_switch_capture           ndiscap.inf  
+jnprns        Juniper Network Service                     NULL                        jnprns.inf  
+VBoxNetLwf    VirtualBox NDIS6 Bridged Networking Driver  compression                 VBoxNetLwf.inf
+</code></pre>
+<p>The most important part is the FilterClass. It determines the filter sequence. It's defined <a href="https://msdn.microsoft.com/en-us/library/windows/hardware/ff545161%28v=vs.85%29.aspx?f=255&amp;MSPPError=-2147217396">here</a>.</p>
+<p>The sequence is:</p>
+<pre><code>ms_firewall_upper
+scheduler
+encryption
+compression
+vpn
+loadbalance
+failover
+diagnostic
+custom
+provider_address
+ms_implatform
+ms_switch_capture
+ms_switch_filter
+ms_switch_reserved
+ms_switch_forward
+ms_firewall_lower
+ms_medium_converter_top
+ms_medium_converter_128
+ms_medium_converter_bottom
+</code></pre>
+<p>Npcap's FilterClass is compression. So it will be higher than all "vpn" filters and lower than "encryption" filters.</p>
+<p>But I don't quite know VPN drivers, you can't think they are using the "vpn" FilterClass. Because when you capture on Wireshark with Npcap, you can still see VPN encrypted packets. So it means that Npcap is lower than VPN softwares.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54722/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Aug '16, 09:01</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0f8ec58f46e4af3a67f768675c20aac8?s=32&amp;d=identicon&amp;r=g" alt="Yang%20Luo's gravatar image" />
+    <p><a href="/users/20301/yang-luo">Yang Luo</a><br/>
+    <span class="score" title="91 reputation points">91</span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Yang Luo has one accepted answer">4&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54722/">
+                edited
+                <strong>11 Aug '16, 02:01</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54722">
+    
+        <a name="54727"></a>
+        <div class="comment" id="comment-54727">
+            <div id="post-54727-score" class="comment-score"></div>
+            <div class="comment-text"><p>So the Npcap driver is a <a href="https://msdn.microsoft.com/en-us/library/windows/hardware/ff545161(v=vs.85).aspx"><em>modifying</em> filter driver</a> rather than a <a href="https://msdn.microsoft.com/en-us/library/windows/hardware/ff545162(v=vs.85).aspx"><em>monitoring</em> filter driver</a>?</p></div>
+            <div class="comment-info" id="comment-54727-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Aug '16, 17:23)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="54728"></a>
+        <div class="comment" id="comment-54728">
+            <div id="post-54728-score" class="comment-score">1</div>
+            <div class="comment-text"><p><a href="/users/79/guy-harris"></a><a href="/users/79/guy-harris">@Guy Harris</a>, yes. Npcap has been a modifying LWF from the very beginning. Because a monitoring filter can't originate its own packets into the NDIS stack, but Npcap needs to send packets in the Tx way.</p></div>
+            <div class="comment-info" id="comment-54728-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Aug '16, 17:39)</span>
+                <a class="comment-user userinfo" href="/users/20301/yang-luo">Yang Luo</a>
+                
+            </div>
+        </div>
+    
+        <a name="54734"></a>
+        <div class="comment" id="comment-54734">
+            <div id="post-54734-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not sure i got it all right, but wouldn't that mean that a network capture using NETSH would capture the greatest amount of packets?</p></div>
+            <div class="comment-info" id="comment-54734-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '16, 01:14)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="54737"></a>
+        <div class="comment" id="comment-54737">
+            <div id="post-54737-score" class="comment-score"></div>
+            <div class="comment-text"><p>On what do you base such conclusion? Do you know which of the filter classes <code>netsh</code> is using to capture?</p></div>
+            <div class="comment-info" id="comment-54737-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '16, 01:37)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54749"></a>
+        <div class="comment" id="comment-54749">
+            <div id="post-54749-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy">@sindy</a> That's the point. Maybe I'm wrong I don't know I just try to understand. I have the following filters on my Windows 7: 
+Filter Count: 9
+Filter List:</p>
+
+<p>Description : Virtual WiFi Filter Driver
+PSPath      : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\system\currentcontrolset\control\network{4d36e974
+              -e325-11ce-bfc1-08002be10318}{5CBF81BF-5055-47CD-9055-A76B2B4E3698}</p>
+
+<p>Description : Microsoft Network Monitor 3 Driver
+PSPath      : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\system\currentcontrolset\control\network{4d36e974
+              -e325-11ce-bfc1-08002be10318}{6E022F38-AB31-44C5-8206-2EB023EFF145}</p>
+
+<p>Description : Symantec Endpoint Protection Firewall
+PSPath      : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\system\currentcontrolset\control\network{4d36e974
+              -e325-11ce-bfc1-08002be10318}{72891E7B-0A3D-4541-BDCB-3DA62E25B6A8}</p>
+
+<p>Description : QoS Packet Scheduler
+PSPath      : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\system\currentcontrolset\control\network{4d36e974
+              -e325-11ce-bfc1-08002be10318}{B5F4D659-7DAA-4565-8E41-BE220ED60542}</p>
+
+<p>Description : WFP Lightweight Filter
+PSPath      : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\system\currentcontrolset\control\network{4d36e974
+              -e325-11ce-bfc1-08002be10318}{B70D6460-3635-4D42-B866-B8AB1A24454C}</p>
+
+<p>Description : Microsoft PEF NDIS ETW Provider Driver
+PSPath      : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\system\currentcontrolset\control\network{4d36e974
+              -e325-11ce-bfc1-08002be10318}{BD583A2D-7410-4BD1-B9C0-ECA0E65E6980}</p>
+
+<p>Description : Juniper Network Service
+PSPath      : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\system\currentcontrolset\control\network{4d36e974
+              -e325-11ce-bfc1-08002be10318}{C02D1E54-FBAB-46BB-8052-BE25AB90C99A}</p>
+
+<p>Description : NativeWiFi Filter
+PSPath      : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\system\currentcontrolset\control\network{4d36e974
+              -e325-11ce-bfc1-08002be10318}{E475CF9A-60CD-4439-A75F-0079CE0E18A1}</p>
+
+<p>Description : NDIS Capture LightWeight Filter
+PSPath      : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\system\currentcontrolset\control\network{4d36e974
+              -e325-11ce-bfc1-08002be10318}{EA24CD6C-D17A-4348-9190-09F0D5BE83DD}</p>
+
+<p>Microsoft Network Monitor 3 Driver was installed because I’ve installed NetMon. I can see one for Juniper (it’s my VPN). Is there a way to list the preferred order of which filter is going to be used  ?</p></div>
+            <div class="comment-info" id="comment-54749-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '16, 07:49)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="54751"></a>
+        <div class="comment not_top_scorer" id="comment-54751">
+            <div id="post-54751-score" class="comment-score"></div>
+            <div class="comment-text"><p>Adam, some months ago <a href="/users/20301/yang-luo">@Yang Luo</a> gave me a link to a <a href="http://www.nirsoft.net/utils/installed_drivers_list.html">software which allows to list all drivers</a>. That software, if I remember right, shows the FilterClass of the driver. Or you can use <code>regedit</code> to find the FilterClass, using one of the long hexadecimal IDs as a search key.</p></div>
+            <div class="comment-info" id="comment-54751-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '16, 08:09)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54753"></a>
+        <div class="comment not_top_scorer" id="comment-54753">
+            <div id="post-54753-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you mean InstalledDriversList, it probably doesn't show you the FilterClass, because it's not only for NDIS filter drivers. There is no ready way to get the existing filters' sequence automatically. You can write a program to read the registry key to do that. Read their FilterClass, then match them with MSDN's sequence.</p></div>
+            <div class="comment-info" id="comment-54753-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '16, 09:07)</span>
+                <a class="comment-user userinfo" href="/users/20301/yang-luo">Yang Luo</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54722" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54722-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="54713"></a>
+                    <div id="answer-container-54713" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54713-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54713/up/" rel="nofollow"> </a>
+<div id="post-54713-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-54713-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54713/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This document: "Fulvio Risso, Loris Degioanni, <a href="https://winpcap.org/docs/iscc01-wpcap.pdf">An Architecture for High Performance Network Analysis</a>, Proceedings of the 6th IEEE Symposium on Computers and Communications (ISCC 2001), Hammamet, Tunisia, July 2001", contains the most detailed description there is on this subject, especially section 4.2.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54713/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Aug '16, 01:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2337f0406681e5c72ea0e6f1f0d6c0b0?s=32&amp;d=identicon&amp;r=g" alt="Jaap's gravatar image" />
+    <p><a href="/users/4/jaap">Jaap ♦</a><br/>
+    <span class="score" title="11680 reputation points"><span class="">11.7k</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="101 badges"><span class="bronze">&#9679;</span><span class="badgecount">101</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jaap has 155 accepted answers">14&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54713">
+    
+        <a name="54716"></a>
+        <div class="comment" id="comment-54716">
+            <div id="post-54716-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The npcap project aims at replacing winpcap with a more modern driver
+<a href="https://github.com/nmap/npcap">https://github.com/nmap/npcap</a></p></div>
+            <div class="comment-info" id="comment-54716-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Aug '16, 03:57)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="54755"></a>
+        <div class="comment" id="comment-54755">
+            <div id="post-54755-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>The npcap project aims at replacing winpcap with a more modern driver</p>
+</blockquote>
+
+<p>See <a href="/users/20301/yang-luo">@Yang Luo</a>'s answer above for some information about it.  (The more modern driver only works on Windows Vista and later, as it requires NDIS 6.)</p></div>
+            <div class="comment-info" id="comment-54755-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Aug '16, 11:12)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54713" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54713-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/54712/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='mFuoOCIFNmWVR8EZuW67jPgbYzONk4Uv' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54712/network-stack-wireshark-driver-placement?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54712/network-stack-wireshark-driver-placement?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 10, 2016, 12:43 a.m.">10 Aug '16, 00:43</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,811 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 11, 2016, 11:12 a.m.">11 Aug '16, 11:12</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/23243/how-do-you-capture-serial-com-communications">How do you capture Serial (COM) communications?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23854/computer-sending-emails-via-phishing-program">Computer sending emails via phishing program.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24457/what-does-referer-field-not-being-present-mean">What does referer field not being present mean?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25533/wirehark-doesnt-start-on-osx">Wirehark doesn&#39;t start on OSX</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26534/how-to-determine-server-with-very-high-bandwidth-consumption-in-vlan-network">How to determine server with very high bandwidth consumption in VLAN network.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27284/how-to-retrieve-file-from-ftp">how to retrieve file from FTP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27943/decode-as-my-protocol">Decode as my protocol</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28516/unknown-udp-traffic-from-unknown-process-on-port-60129">Unknown UDP traffic from unknown process on port 60129</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29345/wrong-start-file-chosen-for-x11-on-osx">Wrong start file chosen for X11 on OSX</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29999/bad-use-of-mine-wireshark-how-do-do">Bad use of mine WIRESHARK how do do ?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

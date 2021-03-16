@@ -1,0 +1,936 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>wifi decryption not working ( with EAPOL packets and SSID and Key) - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello, I have a wireless capture and I see that the EAPOL exchange is been captured and I have also provided the SSID and key under the 802.11 preferences. I have captured and successfully decrypted wifi traffic before with the same settings. The only difference this time is thatthe Acesspoint is my..." />
+        <meta name="keywords" content="decryption,eapol,hotspot" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/53230/wifi-decryption-not-working-with-eapol-packets-and-ssid-and-key" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/53230/wifi-decryption-not-working-with-eapol-packets-and-ssid-and-key?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='0bc30pu4IMBmIVGiL38waiybbsF3tgci' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/53230/wifi-decryption-not-working-with-eapol-packets-and-ssid-and-key">wifi decryption not working ( with EAPOL packets and SSID and Key)</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-53230-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53230/up/" rel="nofollow"> </a>
+<div id="post-53230-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53230-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53230/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/53230/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I have a wireless capture and I see that the EAPOL exchange is been captured and I have also provided the SSID and key under the 802.11 preferences. I have captured and successfully decrypted wifi traffic before with the same settings.
+The only difference this time is thatthe Acesspoint is my samsung cellphone mobile hotspot. I have configured the AP to use a specific channel and I have see the traffic flowing in the Wireshark but still unable to decrypt it despite a sucesfull handshake and access to the SSID and key.
+i am right now only have one client connected.</p>
+<p>Any pointers will be really helpful.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/decryption/" class="post-tag tag-link-decryption"
+                                        title="see questions tagged 'decryption'" rel="tag">decryption</a>
+                                
+                                    <a href="/tags/eapol/" class="post-tag tag-link-eapol"
+                                        title="see questions tagged 'eapol'" rel="tag">eapol</a>
+                                
+                                    <a href="/tags/hotspot/" class="post-tag tag-link-hotspot"
+                                        title="see questions tagged 'hotspot'" rel="tag">hotspot</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>06 Jun '16, 04:45</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7fd117f217c3d5db308532949376848c?s=32&amp;d=identicon&amp;r=g" alt="airhack's gravatar image" />
+    <p><a href="/users/24354/airhack">airhack</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="airhack has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-53230">
+    
+        <a name="53234"></a>
+        <div class="comment" id="comment-53234">
+            <div id="post-53234-score" class="comment-score"></div>
+            <div class="comment-text"><p>A couple of maybe obvious pointers, but since you don't provide any trace, there is nothing I can really do to test it:</p>
+
+<ol>
+<li>Reload the trace after the psk info is entered</li>
+<li>Be sure you have all four of the eapol keys (labelled 1 through 4)</li>
+</ol>
+
+<p>We also don't know what traffic you have to decrypt.  It needs to be of type Data or QoS Data.  It's common when capturing 802.11n or ac traffic to not get many of the data frames due to difficulties with modulation differences between Tx/Rx and capture device.  Since there is no trace to review, I can't check for any of this.</p></div>
+            <div class="comment-info" id="comment-53234-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '16, 05:24)</span>
+                <a class="comment-user userinfo" href="/users/112/bob-jones">Bob Jones</a>
+                
+            </div>
+        </div>
+    
+        <a name="53242"></a>
+        <div class="comment" id="comment-53242">
+            <div id="post-53242-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have uploaded the capture at the below location <a href="https://drive.google.com/open?id=0ByOYyC-nQZluWnpsS1hNZkwtNnc">https://drive.google.com/open?id=0ByOYyC-nQZluWnpsS1hNZkwtNnc</a></p>
+
+<p>To answer your questions, yes all the 4 EAPOl packets are captured and I have reloaded the trace multiple times. I have initiated some web browsing and other stuffs to generate data so there is surely data flowing through.</p>
+
+<p>To add one more point. I am using the Alpha USB adapter which works on b/g range. I assume that the hotspot works in mixed mode since the alpha card is able to see the traffic just not decrypt it. Any pointers ?</p></div>
+            <div class="comment-info" id="comment-53242-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '16, 09:59)</span>
+                <a class="comment-user userinfo" href="/users/24354/airhack">airhack</a>
+                
+            </div>
+        </div>
+    
+        <a name="53244"></a>
+        <div class="comment" id="comment-53244">
+            <div id="post-53244-score" class="comment-score">1</div>
+            <div class="comment-text"><p>If you use a display filter <code>wlan.ta == ec:1f:72:9c:d0:bb or wlan.ra == ec:1f:72:9c:d0:bb</code>, you'll see only frames sent by your Samsung device acting as an AP, and frames unicast to it by other devices. And among these, there are just a few Data or QoS Data frames.</p>
+
+<p>As you haven't published the passphrase, you'll have to have a look at frames 463, 499, 504, 517 yourself. The first two on the list are broadcast frames from the other Samsung device, so I'd assume them to be ARP request and deciphered as such if you provide the right passphrase to Wireshark.</p>
+
+<p>If you extend the display filter to <code>(wlan.ta == ec:1f:72:9c:d0:bb or wlan.ra == ec:1f:72:9c:d0:bb) and wlan.fc.type_subtype == 0x0028</code>, you should see only this type of frames, and these should be deciphered.</p>
+
+<p>If they are not, please change your passphrase on the AP and the test client to a stupid one you would never think of using normally, so that knowledge of it is useless for anyone, take a new capture including the EAPOL exchange and some web traffic, and then change the passphrase back to the one you use normally. Then publish that new capture together with the temporary passphrase, as it would really indicate something weird about the deciphering.</p></div>
+            <div class="comment-info" id="comment-53244-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '16, 10:26)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="58666"></a>
+        <div class="comment" id="comment-58666">
+            <div id="post-58666-score" class="comment-score"></div>
+            <div class="comment-text"><p>Did you ever manage to get this solved ?
+I have the same issue with the Alpha AWUS036NH adapater (802.11-b/g/n).
+On several AP's the Alpha is able to capture session data (random http/https browsing) between Station and AP after 4 way handshake is captured.
+On other AP's (Asus RT-AC66u) the 4 way handshake is captured but none of the data packets following the handshake is captured, so can not be decrypted.</p></div>
+            <div class="comment-info" id="comment-58666-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jan '17, 12:08)</span>
+                <a class="comment-user userinfo" href="/users/27325/-jayjay-">--JayJay--</a>
+                
+            </div>
+        </div>
+    
+        <a name="58667"></a>
+        <div class="comment" id="comment-58667">
+            <div id="post-58667-score" class="comment-score"></div>
+            <div class="comment-text"><p>@JayJay - Following on from your aircrack-ng forum question:</p>
+
+<p>If you start a new question, we can work through the capability differences between the different products.  We will need some sample traces (with some beacons and probes/associations for devices) and some other information related to your hardware.  We should be able to determine what settings are preventing the proper capture of various wireless frames with Wireshark.</p>
+
+<p>This is a very common issue.</p></div>
+            <div class="comment-info" id="comment-58667-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Jan '17, 12:42)</span>
+                <a class="comment-user userinfo" href="/users/112/bob-jones">Bob Jones</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-53230" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53230-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/53230/wifi-decryption-not-working-with-eapol-packets-and-ssid-and-key?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/53230/wifi-decryption-not-working-with-eapol-packets-and-ssid-and-key?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/53230/wifi-decryption-not-working-with-eapol-packets-and-ssid-and-key?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/53230/wifi-decryption-not-working-with-eapol-packets-and-ssid-and-key?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="53254"></a>
+                    <div id="answer-container-53254" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-53254-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/53254/up/" rel="nofollow"> </a>
+<div id="post-53254-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-53254-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/53254/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I revisited the decryption keys under the 802.11 preferences option and found out the the AccessPoint incorrectly spelled out instead of AndroidAP it was AndriodAP (keep searching for the diff):D.
+Thanks Bob on your quick turnaround on my questions, with the correct decryption keys Wireshark is decrypting the packets properly.</p>
+<p>A couple of more questions:
+Is the QoS data frame same as the Data frame, which contains the actual payload ?
+What is the correct filter to use to only filter the capture to a specific network/SID, should wlan.bssid == "ID" work ? I guess so.</p>
+<p>Thanks Again!!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/53254/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Jun '16, 15:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7fd117f217c3d5db308532949376848c?s=32&amp;d=identicon&amp;r=g" alt="airhack's gravatar image" />
+    <p><a href="/users/24354/airhack">airhack</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="airhack has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-53254">
+    
+        <a name="53270"></a>
+        <div class="comment" id="comment-53270">
+            <div id="post-53270-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<blockquote>
+<p>Is the QoS data frame same as the Data frame, which contains the actual payload ? </p>
+</blockquote>
+</blockquote>
+
+<p>Yes, they serve the same purpose.  The QoS Data frame has QoS information attached in the header and you are likely to see these with 802.11n or higher rates and/or when using WMM.</p>
+
+<blockquote>
+<blockquote>
+<p>What is the correct filter to use to only filter the capture to a specific network/SID, should wlan.bssid == "ID" work ?</p>
+</blockquote>
+</blockquote>
+
+<p>This is a display filter and is how I would do it.  Some shortcuts I use, so I don't type the whole bssid all the time:</p>
+
+<p>wlan.bssid[4:2] == &lt;last two="" octets=""&gt; </p>
+
+<p>--&gt; example    wlan.bssid[4:2] == 45:67</p>
+
+<p>If you want to run a capture filter, i.e. only capture from your bssid, the syntax is different and you need the tcpdump syntax.  However, wireless traces are more difficult - not all frames between a client and an AP have the bssid field, so you have to be creative in your filtering to capture everything.  For example, ACKs do not have a bssid field, nor do broadcast probe requests from a client.</p></div>
+            <div class="comment-info" id="comment-53270-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jun '16, 03:05)</span>
+                <a class="comment-user userinfo" href="/users/112/bob-jones">Bob Jones</a>
+                
+            </div>
+        </div>
+    
+        <a name="53385"></a>
+        <div class="comment" id="comment-53385">
+            <div id="post-53385-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the display filter.</p>
+
+<p>What could possibly reason where all the 4 EAPOL packets are not captured. I am currently capturing traffic from a device and I constantly see only the (message 1 of 4) and (message 3 of 4) been captured. Message 2 and 4 are not captured.
+Any thoughts ?</p></div>
+            <div class="comment-info" id="comment-53385-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '16, 16:22)</span>
+                <a class="comment-user userinfo" href="/users/24354/airhack">airhack</a>
+                
+            </div>
+        </div>
+    
+        <a name="53386"></a>
+        <div class="comment" id="comment-53386">
+            <div id="post-53386-score" class="comment-score"></div>
+            <div class="comment-text"><p>There are a number of reasons why this could be, and it happens often.</p>
+
+<ol>
+<li>Probability of packet loss is much higher in the WiFi world relative to wired networks.  Everything else being equal, if I <em>really</em> need to capture packets on WiFi for decryption, then I will capture on at least two different capture configurations.  For instance, OmniPeek on a Win PC and then Linux with an adapter in monitor mode at the same time.  Or Windows with AirPcap and a lightweight AP set to monitor mode.  Other examples exist.  <br>
+</li>
+<li>Issues with modulation compatibility - be sure those frames are sent with a modulation/rate that your sniffer can decode.  This is a common issue for these type of questions on this forum.  Things like frequency band, channel width, guard interval, MCS Index, etc., all play into this.  Be sure they are compatible.  If you just want to 'play' with decryption, then adjusting the AP to match what you can capture might be OK.  In production, it probably isn't so you will need to upgrade your capture capability.</li>
+<li>Location matters.  What you sniff is what your sniffer can see in the RF environment, so it is relative.  If you are next to the AP, you will see roughly what the AP sees.  If you are next to the client, you will see roughly what the client sees.  if you are somewhere else, you might see something else.  Pay attention to RSSI values and such to be sure you can capture the correct data.  Signal can be too strong too, so don't be too close.</li>
+</ol>
+
+<p>I really can't help deduce what might be your specific issue since no real data is provided.</p></div>
+            <div class="comment-info" id="comment-53386-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '16, 17:49)</span>
+                <a class="comment-user userinfo" href="/users/112/bob-jones">Bob Jones</a>
+                
+            </div>
+        </div>
+    
+        <a name="53416"></a>
+        <div class="comment" id="comment-53416">
+            <div id="post-53416-score" class="comment-score"></div>
+            <div class="comment-text"><p>Packet loss is what I suspected too, the device I am testing a a client VPN device that can connect via wifi. I guess modulation compatibility would be the most likely reason. Will play with the device and AP settings.
+Thanks!!</p></div>
+            <div class="comment-info" id="comment-53416-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jun '16, 12:07)</span>
+                <a class="comment-user userinfo" href="/users/24354/airhack">airhack</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-53254" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-53254-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/53230/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='0bc30pu4IMBmIVGiL38waiybbsF3tgci' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53230/wifi-decryption-not-working-with-eapol-packets-and-ssid-and-key?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/53230/wifi-decryption-not-working-with-eapol-packets-and-ssid-and-key?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/decryption/"
+            class="tag-link-decryption"
+            title="see questions tagged'decryption'using tags"
+            rel="tag">decryption</a> <span class="tag-number">&#215;165</span><br/>
+        
+        <a href="/tags/eapol/"
+            class="tag-link-eapol"
+            title="see questions tagged'eapol'using tags"
+            rel="tag">eapol</a> <span class="tag-number">&#215;38</span><br/>
+        
+        <a href="/tags/hotspot/"
+            class="tag-link-hotspot"
+            title="see questions tagged'hotspot'using tags"
+            rel="tag">hotspot</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 6, 2016, 4:45 a.m.">06 Jun '16, 04:45</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,843 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 11, 2017, 12:42 p.m.">11 Jan '17, 12:42</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/8170/cannot-capture-eapol-packets-from-client-to-ap">Cannot capture EAPOL packets from client to AP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15592/decrypting-multiple-wpa-connections">Decrypting multiple WPA connections</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16271/decrypting-wpa2-traffic-of-a-client">decrypting WPA2 Traffic of a client</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60947/why-isnt-wireshark-decrypting-80211-traffic-in-my-capture-even-if-the-eapol-handshake-is-present">Why isn&#39;t Wireshark decrypting 802.11 traffic in my capture, even if the EAPOL handshake is present?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20796/do-you-need-a-four-way-handshake-for-each-client">Do you need a Four-way Handshake for each client?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1038/decrypting-ssl-packets-on-chromium-or-opera-does-not-work">decrypting SSL packets on Chromium or Opera does not work?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7886/ssl-decrypting-problem">SSL decrypting problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14805/ssl-decryption-error">SSL Decryption Error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21341/cant-save-the-decrypted-data-in-wireshark">Can&#39;t save the decrypted data in wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25156/ldap-ssl-decrypt-issue">LDAP SSL decrypt issue</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

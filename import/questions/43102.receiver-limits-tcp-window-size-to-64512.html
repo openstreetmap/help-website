@@ -1,0 +1,1076 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Receiver limits TCP window size to 64,512 - Wireshark Q&amp;A</title>
+        <meta name="description" content="Facts (please identify any false statements):   I have a 100 Mbps connection between two sites that are 80 ms apart   This is a long fat connection that could benefit from a large TCP window size perhaps up to 100 Mbps * 0.08 sec = 1,000,000 bytes   Both machines are running Windows Server 2012. &quot;Re..." />
+        <meta name="keywords" content="tcpwindowsize" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/43102/receiver-limits-tcp-window-size-to-64512" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/43102/receiver-limits-tcp-window-size-to-64512?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='9iDmCo7U3FhEbHBArAW01oGe2NdFC4oK' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/43102/receiver-limits-tcp-window-size-to-64512">Receiver limits TCP window size to 64,512</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-43102-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/43102/up/" rel="nofollow"> </a>
+<div id="post-43102-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-43102-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/43102/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/43102/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p><strong>Facts</strong> (please identify any false statements):</p>
+<ol>
+<li>
+<p>I have a 100 Mbps connection between two sites that are 80 ms apart</p>
+</li>
+<li>
+<p>This is a long fat connection that could benefit from a large TCP window size perhaps up to 100 Mbps * 0.08 sec = 1,000,000 bytes</p>
+</li>
+<li>
+<p>Both machines are running Windows Server 2012.  "Receive window auto tuning level" is normal on both.  "Window scaling heuristics" are disabled on both.</p>
+</li>
+<li>
+<p>I ran "iperf -s" on one side and "iperf -c" on the other.  The transfer happened at 5 Mbps.  I get the same result going the other direction.</p>
+</li>
+<li>
+<p>Both sides advertised support for TCP sliding windows in their SYNs.</p>
+</li>
+<li>
+<p>The receiver requested a TCP window size of 64,512 bytes (0xFC00)
+    during the entire run with a TCP window scale value of "no shift"
+    (0x000).</p>
+</li>
+<li>
+<p>The network was able to handle a larger window size (see sequence
+    diagrams below)</p>
+</li>
+<li>
+<p>The receiver kept the window smaller than the network supports</p>
+</li>
+<li>
+<p>This connection is happening within an IPSEC VPN.  MTU of the tunnel interface is reduced to 1400 bytes in both directions.</p>
+</li>
+</ol>
+<p><strong>Question</strong></p>
+<p>Why is the receiver keeping the window small?</p>
+<hr>
+<p><strong>Sender TCP Settings</strong></p>
+<pre><code>PS C:\Users\acs&gt; netsh interface tcp show global
+Querying active state...
+
+TCP Global Parameters
+----------------------------------------------
+Receive-Side Scaling State          : enabled
+Chimney Offload State               : disabled
+NetDMA State                        : disabled
+Direct Cache Access (DCA)           : disabled
+Receive Window Auto-Tuning Level    : normal
+Add-On Congestion Control Provider  : none
+ECN Capability                      : enabled
+RFC 1323 Timestamps                 : disabled
+Initial RTO                         : 3000
+Receive Segment Coalescing State    : enabled
+
+PS C:\Users\acs&gt; netsh interface tcp show heuristics
+TCP Window Scaling heuristics Parameters
+----------------------------------------------
+Window Scaling heuristics         : disabled
+Qualifying Destination Threshold  : 3
+Profile type unknown              : normal
+Profile type public               : normal
+Profile type private              : normal
+Profile type domain               : normal
+
+PS C:\Users\acs&gt; Get-NetTCPSetting
+
+SettingName                   : Automatic
+MinRto(ms)                    : 
+InitialCongestionWindow(MSS)  : 
+CongestionProvider            : 
+CwndRestart                   : 
+DelayedAckTimeout(ms)         : 
+MemoryPressureProtection      : 
+AutoTuningLevelLocal          : 
+AutoTuningLevelGroupPolicy    : 
+AutoTuningLevelEffective      : 
+EcnCapability                 : 
+Timestamps                    : 
+InitialRto(ms)                : 
+ScalingHeuristics             : 
+DynamicPortRangeStartPort     : 
+DynamicPortRangeNumberOfPorts :
+
+SettingName                   : Custom
+MinRto(ms)                    : 20
+InitialCongestionWindow(MSS)  : 4
+CongestionProvider            : DCTCP
+CwndRestart                   : True
+DelayedAckTimeout(ms)         : 10
+MemoryPressureProtection      : Enabled
+AutoTuningLevelLocal          : Normal
+AutoTuningLevelGroupPolicy    : NotConfigured
+AutoTuningLevelEffective      : Local
+EcnCapability                 : Enabled
+Timestamps                    : Disabled
+InitialRto(ms)                : 3000
+ScalingHeuristics             : Disabled
+DynamicPortRangeStartPort     : 49152
+DynamicPortRangeNumberOfPorts : 16384
+
+SettingName                   : Compat
+MinRto(ms)                    : 300
+InitialCongestionWindow(MSS)  : 2
+CongestionProvider            : Default
+CwndRestart                   : False
+DelayedAckTimeout(ms)         : 200
+MemoryPressureProtection      : Enabled
+AutoTuningLevelLocal          : Normal
+AutoTuningLevelGroupPolicy    : NotConfigured
+AutoTuningLevelEffective      : Local
+EcnCapability                 : Enabled
+Timestamps                    : Disabled
+InitialRto(ms)                : 3000
+ScalingHeuristics             : Disabled
+DynamicPortRangeStartPort     : 49152
+DynamicPortRangeNumberOfPorts : 16384
+
+SettingName                   : Datacenter
+MinRto(ms)                    : 20
+InitialCongestionWindow(MSS)  : 4
+CongestionProvider            : DCTCP
+CwndRestart                   : True
+DelayedAckTimeout(ms)         : 10
+MemoryPressureProtection      : Enabled
+AutoTuningLevelLocal          : Normal
+AutoTuningLevelGroupPolicy    : NotConfigured
+AutoTuningLevelEffective      : Local
+EcnCapability                 : Enabled
+Timestamps                    : Disabled
+InitialRto(ms)                : 3000
+ScalingHeuristics             : Disabled
+DynamicPortRangeStartPort     : 49152
+DynamicPortRangeNumberOfPorts : 16384
+
+SettingName                   : Internet
+MinRto(ms)                    : 300
+InitialCongestionWindow(MSS)  : 4
+CongestionProvider            : CTCP
+CwndRestart                   : False
+DelayedAckTimeout(ms)         : 50
+MemoryPressureProtection      : Enabled
+AutoTuningLevelLocal          : Normal
+AutoTuningLevelGroupPolicy    : NotConfigured
+AutoTuningLevelEffective      : Local
+EcnCapability                 : Enabled
+Timestamps                    : Disabled
+InitialRto(ms)                : 3000
+ScalingHeuristics             : Disabled
+DynamicPortRangeStartPort     : 49152
+DynamicPortRangeNumberOfPorts : 16384
+</code></pre>
+<p><strong>Sender SYN</strong></p>
+<pre><code>No.     Time           Source                Destination           Protocol Length Delta      Sequence number Acknowledgment number Bytes in flight Calculated window size Info
+    814 5.036577000    10.10.0.21            10.11.0.1             TCP      66     0.000000000 0               0                                     64512                  49758→5001 [SYN, ECN, CWR] Seq=0 Win=64512 Len=0 MSS=1460 WS=1 SACK_PERM=1
+
+Frame 814: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: 00:11:22:33:44:55, Dst: aa:bb:cc:dd:ee:ff
+Internet Protocol Version 4, Src: 10.10.0.21 (10.10.0.21), Dst: 10.11.0.1 (10.11.0.1)
+Transmission Control Protocol, Src Port: 49758 (49758), Dst Port: 5001 (5001), Seq: 0, Len: 0
+    Source Port: 49758 (49758)
+    Destination Port: 5001 (5001)
+    [Stream index: 73]
+    [TCP Segment Len: 0]
+    Sequence number: 0    (relative sequence number)
+    Acknowledgment number: 0
+    Header Length: 32 bytes
+    .... 0000 1100 0010 = Flags: 0x0c2 (SYN, ECN, CWR)
+    Window size value: 64512
+    [Calculated window size: 64512]
+    Checksum: 0x1451 [validation disabled]
+    Urgent pointer: 0
+    Options: (12 bytes), Maximum segment size, No-Operation (NOP), Window scale, No-Operation (NOP), No-Operation (NOP), SACK permitted
+        Maximum segment size: 1460 bytes
+        No-Operation (NOP)
+        Window scale: 0 (multiply by 1)
+            Kind: Window Scale (3)
+            Length: 3
+            Shift count: 0
+            [Multiplier: 1]
+        No-Operation (NOP)
+        No-Operation (NOP)
+        TCP SACK Permitted Option: True
+</code></pre>
+<p><strong>Sender perspective of sequence graph</strong></p>
+<p><a href="https://www.stankevitz.com/images/sender-seq.png">Sequence graph</a></p>
+<hr>
+<p><strong>Receiver TCP Settings</strong></p>
+<pre><code>PS C:\Users\acs&gt; netsh interface tcp show global
+Querying active state...
+
+TCP Global Parameters
+----------------------------------------------
+Receive-Side Scaling State          : enabled
+Chimney Offload State               : disabled
+NetDMA State                        : disabled
+Direct Cache Access (DCA)           : disabled
+Receive Window Auto-Tuning Level    : normal
+Add-On Congestion Control Provider  : none
+ECN Capability                      : enabled
+RFC 1323 Timestamps                 : disabled
+Initial RTO                         : 3000
+Receive Segment Coalescing State    : enabled
+
+PS C:\Users\acs&gt; netsh interface tcp show heuristics
+TCP Window Scaling heuristics Parameters
+----------------------------------------------
+Window Scaling heuristics         : disabled
+Qualifying Destination Threshold  : 3
+Profile type unknown              : normal
+Profile type public               : normal
+Profile type private              : normal
+Profile type domain               : normal
+
+PS C:\Users\acs&gt; Get-NetTCPSetting
+
+SettingName                   : Automatic
+MinRto(ms)                    : 
+InitialCongestionWindow(MSS)  : 
+CongestionProvider            : 
+CwndRestart                   : 
+DelayedAckTimeout(ms)         : 
+MemoryPressureProtection      : 
+AutoTuningLevelLocal          : 
+AutoTuningLevelGroupPolicy    : 
+AutoTuningLevelEffective      : 
+EcnCapability                 : 
+Timestamps                    : 
+InitialRto(ms)                : 
+ScalingHeuristics             : 
+DynamicPortRangeStartPort     : 
+DynamicPortRangeNumberOfPorts :
+
+SettingName                   : Custom
+MinRto(ms)                    : 20
+InitialCongestionWindow(MSS)  : 4
+CongestionProvider            : DCTCP
+CwndRestart                   : True
+DelayedAckTimeout(ms)         : 10
+MemoryPressureProtection      : Enabled
+AutoTuningLevelLocal          : Normal
+AutoTuningLevelGroupPolicy    : NotConfigured
+AutoTuningLevelEffective      : Local
+EcnCapability                 : Enabled
+Timestamps                    : Disabled
+InitialRto(ms)                : 3000
+ScalingHeuristics             : Disabled
+DynamicPortRangeStartPort     : 49152
+DynamicPortRangeNumberOfPorts : 16384
+
+SettingName                   : Compat
+MinRto(ms)                    : 300
+InitialCongestionWindow(MSS)  : 2
+CongestionProvider            : Default
+CwndRestart                   : False
+DelayedAckTimeout(ms)         : 200
+MemoryPressureProtection      : Enabled
+AutoTuningLevelLocal          : Normal
+AutoTuningLevelGroupPolicy    : NotConfigured
+AutoTuningLevelEffective      : Local
+EcnCapability                 : Enabled
+Timestamps                    : Disabled
+InitialRto(ms)                : 3000
+ScalingHeuristics             : Disabled
+DynamicPortRangeStartPort     : 49152
+DynamicPortRangeNumberOfPorts : 16384
+
+SettingName                   : Datacenter
+MinRto(ms)                    : 20
+InitialCongestionWindow(MSS)  : 4
+CongestionProvider            : DCTCP
+CwndRestart                   : True
+DelayedAckTimeout(ms)         : 10
+MemoryPressureProtection      : Enabled
+AutoTuningLevelLocal          : Normal
+AutoTuningLevelGroupPolicy    : NotConfigured
+AutoTuningLevelEffective      : Local
+EcnCapability                 : Enabled
+Timestamps                    : Disabled
+InitialRto(ms)                : 3000
+ScalingHeuristics             : Disabled
+DynamicPortRangeStartPort     : 49152
+DynamicPortRangeNumberOfPorts : 16384
+
+SettingName                   : Internet
+MinRto(ms)                    : 300
+InitialCongestionWindow(MSS)  : 4
+CongestionProvider            : CTCP
+CwndRestart                   : False
+DelayedAckTimeout(ms)         : 50
+MemoryPressureProtection      : Enabled
+AutoTuningLevelLocal          : Normal
+AutoTuningLevelGroupPolicy    : NotConfigured
+AutoTuningLevelEffective      : Local
+EcnCapability                 : Enabled
+Timestamps                    : Disabled
+InitialRto(ms)                : 3000
+ScalingHeuristics             : Disabled
+DynamicPortRangeStartPort     : 49152
+DynamicPortRangeNumberOfPorts : 16384
+</code></pre>
+<p><strong>Receiver SYN</strong></p>
+<pre><code>No.     Time           Source                Destination           Protocol Length Delta      Sequence number Acknowledgment number Bytes in flight Calculated window size Info
+    817 5.110501000    10.11.0.1             10.10.0.21            TCP      70     0.073924000 0               1                                     64512                  5001→49758 [SYN, ACK, ECN] Seq=0 Ack=1 Win=64512 Len=0 MSS=1460 WS=1 SACK_PERM=1 [ETHERNET FRAME CHECK SEQUENCE INCORRECT]
+
+Frame 817: 70 bytes on wire (560 bits), 70 bytes captured (560 bits) on interface 0
+Ethernet II, Src: aa:bb:cc:dd:ee:ff, Dst: 00:11:22:33:44:55
+Internet Protocol Version 4, Src: 10.11.0.1 (10.11.0.1), Dst: 10.10.0.21 (10.10.0.21)
+Transmission Control Protocol, Src Port: 5001 (5001), Dst Port: 49758 (49758), Seq: 0, Ack: 1, Len: 0
+    Source Port: 5001 (5001)
+    Destination Port: 49758 (49758)
+    [Stream index: 73]
+    [TCP Segment Len: 0]
+    Sequence number: 0    (relative sequence number)
+    Acknowledgment number: 1    (relative ack number)
+    Header Length: 32 bytes
+    .... 0000 0101 0010 = Flags: 0x052 (SYN, ACK, ECN)
+    Window size value: 64512
+    [Calculated window size: 64512]
+    Checksum: 0xb5bb [validation disabled]
+    Urgent pointer: 0
+    Options: (12 bytes), Maximum segment size, No-Operation (NOP), Window scale, No-Operation (NOP), No-Operation (NOP), SACK permitted
+        Maximum segment size: 1460 bytes
+        No-Operation (NOP)
+        Window scale: 0 (multiply by 1)
+            Kind: Window Scale (3)
+            Length: 3
+            Shift count: 0
+            [Multiplier: 1]
+        No-Operation (NOP)
+        No-Operation (NOP)
+        TCP SACK Permitted Option: True
+    [SEQ/ACK analysis]
+</code></pre>
+<p><strong>Receiver perspective of sequence graph</strong></p>
+<p><a href="https://www.stankevitz.com/images/receiver-seq.png">Sequence graph</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tcpwindowsize/" class="post-tag tag-link-tcpwindowsize"
+                                        title="see questions tagged 'tcpwindowsize'" rel="tag">tcpwindowsize</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Jun '15, 12:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9d84a3bc6c2a9a6dfd97b3a17252e0be?s=32&amp;d=identicon&amp;r=g" alt="chrisstankevitz's gravatar image" />
+    <p><a href="/users/17712/chrisstankevitz">chrisstankevitz</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="chrisstankevitz has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-43102">
+    
+        <a name="43106"></a>
+        <div class="comment" id="comment-43106">
+            <div id="post-43106-score" class="comment-score"></div>
+            <div class="comment-text"><p>Have you ever tried to disable the autotuning level?</p></div>
+            <div class="comment-info" id="comment-43106-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '15, 14:14)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="43110"></a>
+        <div class="comment" id="comment-43110">
+            <div id="post-43110-score" class="comment-score"></div>
+            <div class="comment-text"><p>My question would be: did you ever see the window size being a problem? Meaning: did the trace show symptoms at any point in time that the sender had to actually wait for an ACK before it continue to send? You should see things like "Window Full" etc. if that happens, plus long delta times before continuing to send.</p></div>
+            <div class="comment-info" id="comment-43110-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jun '15, 15:16)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43189"></a>
+        <div class="comment" id="comment-43189">
+            <div id="post-43189-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/16160/christian_r">@Christian_R</a>: No, my autotuning is enabled.  Are you suggesting that disabling autotuning will "solve" my problem?  Or are you concerned that I inadvertently disabled autotuning and that is why I am having a problem?  I believe "disable autotuning" causes the receive window to be stuck at some fixed value, which is not what I'm after.</p></div>
+            <div class="comment-info" id="comment-43189-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '15, 09:08)</span>
+                <a class="comment-user userinfo" href="/users/17712/chrisstankevitz">chrisstankevitz</a>
+                
+            </div>
+        </div>
+    
+        <a name="43190"></a>
+        <div class="comment" id="comment-43190">
+            <div id="post-43190-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/145/jasper">@Jasper</a>: Thank you.  You are correct, no "window full".  I now believe the question is "When one is not specified, why isn't Windows Server 2012 dynamically increasing SO_SNDBUF/SO_RCVBUF to accommodate long fat pipes as described at <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb736549(v=vs.85).aspx">MSDN</a>?"</p></div>
+            <div class="comment-info" id="comment-43190-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '15, 09:12)</span>
+                <a class="comment-user userinfo" href="/users/17712/chrisstankevitz">chrisstankevitz</a>
+                
+            </div>
+        </div>
+    
+        <a name="43191"></a>
+        <div class="comment" id="comment-43191">
+            <div id="post-43191-score" class="comment-score"></div>
+            <div class="comment-text"><p>Wouldn't setting the buffer sizes be an application issue?</p></div>
+            <div class="comment-info" id="comment-43191-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '15, 09:44)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="43197"></a>
+        <div class="comment not_top_scorer" id="comment-43197">
+            <div id="post-43197-score" class="comment-score"></div>
+            <div class="comment-text"><p>@christiankevitz: Easily said I just were interested if you tried it.
+I never tried, because of the same reason as you. </p>
+
+<p>I have a side question out of topic, just for interest the questions really have nothing to do with the window size: 
+Do you use nlb?
+Do you have a lot of multicasts/broadcast at the servers?
+Are the systems physical or virtualized?</p></div>
+            <div class="comment-info" id="comment-43197-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Jun '15, 15:19)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="43199"></a>
+        <div class="comment not_top_scorer" id="comment-43199">
+            <div id="post-43199-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb">@grahamb</a>: indeed setting buffer sizes is an application issue.  In this particular case, the application is not setting a buffer size... in which case I'm expecting Windows to dynamically increase the buffer sizes as needed per the MSDN link posted above.  But apparently that is not happening and I'm trying to figure out why.</p></div>
+            <div class="comment-info" id="comment-43199-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Jun '15, 01:14)</span>
+                <a class="comment-user userinfo" href="/users/17712/chrisstankevitz">chrisstankevitz</a>
+                
+            </div>
+        </div>
+    
+        <a name="43367"></a>
+        <div class="comment not_top_scorer" id="comment-43367">
+            <div id="post-43367-score" class="comment-score"></div>
+            <div class="comment-text"><p>Did you have any more joy with this? I also have a window size limited to this value despite setting larger buffer sizes. While its not a problem, as <a href="/users/145/jasper">@Jasper</a> pointed out, with the window getting full, I do believe it can limit the maximum congestion window size, which may be more of an issue. (And we do often have to wait for ACKs before it continues to send)</p></div>
+            <div class="comment-info" id="comment-43367-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jun '15, 06:27)</span>
+                <a class="comment-user userinfo" href="/users/17850/glyn_walters">glyn_walters</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-43102" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-43102-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/43102/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='9iDmCo7U3FhEbHBArAW01oGe2NdFC4oK' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/43102/receiver-limits-tcp-window-size-to-64512?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/43102/receiver-limits-tcp-window-size-to-64512?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tcpwindowsize/"
+            class="tag-link-tcpwindowsize"
+            title="see questions tagged'tcpwindowsize'using tags"
+            rel="tag">tcpwindowsize</a> <span class="tag-number">&#215;28</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 12, 2015, 12:58 p.m.">12 Jun '15, 12:58</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,032 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 19, 2015, 6:27 a.m.">19 Jun '15, 06:27</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/27319/performance-testing-iperf">Performance Testing iperf</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57067/intermittent-disconnection">intermittent disconnection</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27889/tcp-zero-window">TCP zero window</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57353/a-question-about-windows-size-window-size-scaling-and-max-throughput-on-10gb-lan">A question about Windows Size, Window Size Scaling and max throughput on 10GB LAN</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31831/what-are-possible-reason-for-window-size-drop">What are possible reason for window size drop</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58286/bytes-in-flight-exceeds-window-size">Bytes in Flight exceeds window size</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32297/iperf-and-64k-window-size">iperf and 64K window size</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58452/which-tcp-packet-does-reset-the-connection">Which TCP Packet does reset the connection ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36850/initial-tcpwindow_size_value-tcpwindow_size_scalefactor">Initial tcp.window_size_value / tcp.window_size_scalefactor</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59593/strange-window-scaling-graph">Strange window scaling graph</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

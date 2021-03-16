@@ -1,0 +1,1136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Wireshark with customized Radius dissector crashing on RHEL 6.1 64 bit OS - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, We are using Wireshark 1.0.1, customized RADIUS dissector to suit our requirements. We developed this on RHEL4.7, few years back for one of our clients.  Currently we are moving on to RHEL 6.1 64 bit OS with the same source code and when we try to run our wireshark, it opens up good and when we ..." />
+        <meta name="keywords" content="rhel6,crash,radius" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/23628/wireshark-with-customized-radius-dissector-crashing-on-rhel-61-64-bit-os" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/23628/wireshark-with-customized-radius-dissector-crashing-on-rhel-61-64-bit-os?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='20guaz0zvWePZvwottybprjycNulps3p' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/23628/wireshark-with-customized-radius-dissector-crashing-on-rhel-61-64-bit-os">Wireshark with customized Radius dissector crashing on RHEL 6.1 64 bit OS</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-23628-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23628/up/" rel="nofollow"> </a>
+<div id="post-23628-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-23628-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23628/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/23628/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>We are using Wireshark 1.0.1, customized RADIUS dissector to suit our requirements. We developed this on RHEL4.7, few years back for one of our clients. </p>
+<p>Currently we are moving on to RHEL 6.1 64 bit OS with the same source code and when we try to run our wireshark, it opens up good and when we try to load a capture file, it crashes.</p>
+<p>As per our requirements, we cant directly move on to latest version of Wireshark before solving this issue with v1.0.1. </p>
+<ul>
+<li>The same source code runs perfectly on Windows XP and RHEL 4.7 32 bit
+   without any issues.<br>
+</li>
+<li>The source code compiles good on RHEL 6.1 64 bit OS.</li>
+<li>The problem is there only when we try to run compiled wireshark on RHEL 6.1 64 bit OS. <ul>
+<li>The Wireshark GUI opens good, But when I load a RADIUS capture file (the dissector for which is enhanced) wireshark crashes.</li>
+<li>Capture file containing other protocols (example SNMP, TCP) loads good.</li>
+</ul>
+</li>
+</ul>
+<p>When I try to debug using gdb, these are the logs that i see,</p>
+<pre><code>*Program received signal SIGSEGV, Segmentation fault.
+except_pop () at except.c:258
+258     set_top(top-&gt;except_down);
+Missing separate debuginfos, use: debuginfo-install GConf2-2.28.0-6.el6.x86_64 ORBit2-2.14.17-3.1.el6.x86_64 PackageKit-gtk-module-0.5.8-19.el6.x86_64 atk-1.28.0-2.el6.x86_64*
+</code></pre>
+<p>and the list of Missing separate debuginfos goes on.</p>
+<hr>
+<p>When i back traced the stack, here is what i see,</p>
+<pre><code>(gdb) bt
+0  except_pop () at except.c:258
+1  0x00007ffff6165e41 in dissect_packet (edt=0x16c7430,  pseudo_header=&lt;value optimized out&gt;, pd=0x167c700 "", fd=0x1538ba0, cinfo=0x16c7440) at packet.c:349
+2 0x0000000000430f02 in add_packet_to_packet_list (fdata=0x1538ba0, cf=0x7932c0, dfcode=&lt;value optimized out&gt;, pseudo_header=0x8b1928, buf= 0x167c700 "", refilter=&lt;value&gt; optimized out&gt;) at file.c:1004
+3 0x00000000004329c8 in cf_read (cf=0x7932c0) at file.c:532
+4 0x000000000044973a in menu_open_recent_file_cmd (w=0x1539cd0) at menu.c:1709
+5 0x00000036d240bb3e in g_closure_invoke () from /lib64/libgobject-2.0.so.0
+6 0x00000036d2420e23 in ?? () from /lib64/libgobject-2.0.so.0
+7 0x00000036d24220af in g_signal_emit_valist () from /lib64/libgobject-2.0.so.0
+8 0x00000036d24225f3 in g_signal_emit () from /lib64/libgobject-2.0.so.0
+9 0x00000036d8a7dcce in gtk_widget_activate () from /usr/lib64/libgtk-x11-2.0.so.0
+10 0x00000036d8964bdd in gtk_menu_shell_activate_item () from /usr/lib64/libgtk-x11-2.0.so.0
+11 0x00000036d896688a in ?? () from /usr/lib64/libgtk-x11-2.0.so.0
+12 0x00000036d8953ef3 in ?? () from /usr/lib64/libgtk-x11-2.0.so.0
+13 0x00000036d240bb3e in g_closure_invoke () from /lib64/libgobject-2.0.so.0
+14 0x00000036d24209ed in ?? () from /lib64/libgobject-2.0.so.0
+15 0x00000036d2421f4a in g_signal_emit_valist () from /lib64/libgobject-2.0.so.0
+16 0x00000036d24225f3 in g_signal_emit () from /lib64/libgobject-2.0.so.0
+17 0x00000036d8a76b2f in ?? () from /usr/lib64/libgtk-x11-2.0.so.0
+18 0x00000036d894ac6a in gtk_propagate_event () from /usr/lib64/libgtk-x11-2.0.so.0
+19 0x00000036d894bddc in gtk_main_do_event () from /usr/lib64/libgtk-x11-2.0.so.0
+20 0x00000036d7c5fffc in ?? () from /usr/lib64/libgdk-x11-2.0.so.0
+21 0x00000036d1838f0e in g_main_context_dispatch () from /lib64/libglib-2.0.so.0
+22 0x00000036d183c938 in ?? () from /lib64/libglib-2.0.so.0
+23 0x00000036d183cd55 in g_main_loop_run () from /lib64/libglib-2.0.so.0
+24 0x00000036d894c2c7 in gtk_main () from /usr/lib64/libgtk-x11-2.0.so.0
+25 0x00000000004470ca in main (argc=0, argv=0x7fffffffe2f0) at main.c:3197
+</code></pre>
+<p>Linux Server Details:</p>
+<hr>
+<pre><code>[<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7b0914140f3b091614150b1a4d4f">[email&#160;protected]</a> ~]# uname -a Linux
+rmonpa64 2.6.32-131.0.15.el6.x86_64 #1 SMP Tue May 10 15:42:40 EDT 2011 x86_64 x86_64 x86_64 GNU/Linux
+[<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a0d2cfcfd4e0d2cdcfced0c19694">[email&#160;protected]</a> ~]#
+</code></pre>
+<p>Wireshark Details:</p>
+<hr>
+<pre><code>[<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b9cbd6d6cdf9cbd4d6d7c9d88f8d">[email&#160;protected]</a> ~]# wireshark --version
+wireshark 1.0.1
+
+Copyright 1998-2008 Gerald Combs &lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b5d2d0c7d4d9d1f5c2dcc7d0c6ddd4c7de9bdac7d2">[email&#160;protected]</a>&gt; and contributors.
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Compiled with GTK+ 2.18.9, with GLib 2.22.5, with libpcap 1.0.0, with libz
+1.2.3, without POSIX capabilities, without libpcre, without SMI, without ADNS,
+without Lua, with GnuTLS 2.8.5, with Gcrypt 1.4.5, with MIT Kerberos, without
+PortAudio, without AirPcap.
+NOTE: this build doesn't support the "matches" operator for Wireshark filter
+syntax.
+
+Running on Linux 2.6.32-131.0.15.el6.x86_64, with libpcap version 1.0.0.
+
+Built using gcc 4.4.5 20110214 (Red Hat 4.4.5-6).
+[<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f1839e9e85b1839c9e9f8190c7c5">[email&#160;protected]</a> ~]#
+</code></pre>
+<p>Any information in this regard would be greatly helpful to us.</p>
+<p>ldd <code>which wireshark</code> command output
+<a href="http://pastebin.com/iHPcPUEM">http://pastebin.com/iHPcPUEM</a></p>
+<p>strace output:
+<a href="http://pastebin.com/jDbwwkf9">http://pastebin.com/jDbwwkf9</a></p>
+<p>Thanks,
+Purandhar K</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rhel6/" class="post-tag tag-link-rhel6"
+                                        title="see questions tagged 'rhel6'" rel="tag">rhel6</a>
+                                
+                                    <a href="/tags/crash/" class="post-tag tag-link-crash"
+                                        title="see questions tagged 'crash'" rel="tag">crash</a>
+                                
+                                    <a href="/tags/radius/" class="post-tag tag-link-radius"
+                                        title="see questions tagged 'radius'" rel="tag">radius</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>08 Aug '13, 00:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a811fcbfa3be32d52c491c061274a8e0?s=32&amp;d=identicon&amp;r=g" alt="Purandhar%20K's gravatar image" />
+    <p><a href="/users/5420/purandhar-k">Purandhar K</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Purandhar K has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/23628/">
+                edited
+                <strong>08 Aug '13, 15:34</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+            <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+            <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-23628">
+    
+        <a name="23640"></a>
+        <div class="comment" id="comment-23640">
+            <div id="post-23640-score" class="comment-score"></div>
+            <div class="comment-text"><p>Does vanilla 1.01 work? It's probably a waist of time trying to get the old director to work when you probably can get away with just adding a custom dictionary on the latest version possibly With vsa subdissectors.</p></div>
+            <div class="comment-info" id="comment-23640-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Aug '13, 06:06)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23667"></a>
+        <div class="comment" id="comment-23667">
+            <div id="post-23667-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Anders,</p>
+
+<p>Thanks for the information. I will have to get this v1.0.1 working for RHEL6 64 bit, which i am pretty close now, before moving on to latest wireshark-1.10.1. Please see my comments to Jeff.</p>
+
+<p>-Purandhar</p></div>
+            <div class="comment-info" id="comment-23667-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Aug '13, 23:01)</span>
+                <a class="comment-user userinfo" href="/users/5420/purandhar-k">Purandhar K</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23628" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23628-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/23628/wireshark-with-customized-radius-dissector-crashing-on-rhel-61-64-bit-os?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/23628/wireshark-with-customized-radius-dissector-crashing-on-rhel-61-64-bit-os?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/23628/wireshark-with-customized-radius-dissector-crashing-on-rhel-61-64-bit-os?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/23628/wireshark-with-customized-radius-dissector-crashing-on-rhel-61-64-bit-os?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="23639"></a>
+                    <div id="answer-container-23639" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23639-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23639/up/" rel="nofollow"> </a>
+<div id="post-23639-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-23639-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23639/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This looks similar to the crash reported in <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=7978">bug 7978</a>.  That was fixed in <a href="https://anonsvn.wireshark.org/viewvc?view=revision&amp;revision=46066">r46066</a> by taking out a 'return' from within a TRY/CATCH/ENTRY block.  Is it possible your modifications have introduced such a return?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23639/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Aug '13, 06:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e0564001bb7deb960d5d9d9c1e0ba074?s=32&amp;d=identicon&amp;r=g" alt="JeffMorriss's gravatar image" />
+    <p><a href="/users/655/jeffmorriss">JeffMorriss ♦</a><br/>
+    <span class="score" title="6219 reputation points"><span class="">6.2k</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="72 badges"><span class="bronze">&#9679;</span><span class="badgecount">72</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JeffMorriss has 103 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23639">
+    
+        <a name="23666"></a>
+        <div class="comment" id="comment-23666">
+            <div id="post-23666-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Jeff,</p>
+
+<p>Thanks for your reply. </p>
+
+<p>Tried debug the issue using eclipse and also with gdb, didnt give me any useful information on the crash. (may be i am missing something in them). I tried with Valgrid and it took me through to the issue directly. </p>
+
+<p>The issues were,</p>
+
+<ol>
+<li>
+<p>I am trying to use 'pinfo' in my dissector and that crashes saying that I am trying to use an undeclared variable. Strange, pinfo is declared in wireshark's packet.c file and used in few other places in dissector.</p>
+</li>
+<li>
+<p>in except.c, the except_pop() was throwing segmentation fault. Changing the following 
+'set_top(top-&gt;except_down);'
+to 
+'set_top(top);' 
+worked. I havent changed anything in except.c. </p>
+</li>
+</ol>
+
+<p>Now that wireshark with my customized Radius dissector can load the capture files, i will dig in to see the actual reason for crash. I will keep your comments in mind while doing it.</p>
+
+<p>thanks again!</p>
+
+<p>-Purandhar</p></div>
+            <div class="comment-info" id="comment-23666-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Aug '13, 22:55)</span>
+                <a class="comment-user userinfo" href="/users/5420/purandhar-k">Purandhar K</a>
+                
+            </div>
+        </div>
+    
+        <a name="23668"></a>
+        <div class="comment" id="comment-23668">
+            <div id="post-23668-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I am trying to use 'pinfo' in my dissector and that crashes saying that I am trying to use an undeclared variable.</p>
+</blockquote>
+
+<p>In C and C++, an "undeclared variable" is a compile-time error, not a crash (a crash is a run-time error); is your dissector written in C (or C++), or in Lua?</p></div>
+            <div class="comment-info" id="comment-23668-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Aug '13, 23:58)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23670"></a>
+        <div class="comment" id="comment-23670">
+            <div id="post-23670-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Guy,</p>
+
+<p>I have customized the default Radius dissector in C, extended it to dissect custom AVPs in Radius packets. </p>
+
+<p>My bad (tired eyes), its 'Conditional jump or move depends on uninitialised value(s)' and not undeclared. </p>
+
+<p>-Purandhar</p></div>
+            <div class="comment-info" id="comment-23670-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '13, 01:55)</span>
+                <a class="comment-user userinfo" href="/users/5420/purandhar-k">Purandhar K</a>
+                
+            </div>
+        </div>
+    
+        <a name="23677"></a>
+        <div class="comment" id="comment-23677">
+            <div id="post-23677-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>in except.c, the except_pop() was
+throwing segmentation fault. Changing
+the following
+'set_top(top-&gt;except_down);' to
+'set_top(top);' worked. I havent
+changed anything in except.c.</p>
+</blockquote>
+
+<p>That change does not look correct to me.  You may have band-aided the problem to avoid the crash but it's likely the functionality will not be correct with such a change.</p>
+
+<p>But anyway if you can "fix" the crash like and thus be allowed to upgrade to an at least half-modern version, hopefully the crash will just be fixed in the newer version.</p></div>
+            <div class="comment-info" id="comment-23677-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '13, 07:11)</span>
+                <a class="comment-user userinfo" href="/users/655/jeffmorriss">JeffMorriss ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23678"></a>
+        <div class="comment" id="comment-23678">
+            <div id="post-23678-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thats the plan, quick fix the issues and move on to the latest wireshark version, 1.10.1 as soon as possible :) .</p>
+
+<p>However, i will keep looking for the root cause for the crash and will update here when i find it.</p></div>
+            <div class="comment-info" id="comment-23678-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Aug '13, 07:24)</span>
+                <a class="comment-user userinfo" href="/users/5420/purandhar-k">Purandhar K</a>
+                
+            </div>
+        </div>
+    
+        <a name="24099"></a>
+        <div class="comment not_top_scorer" id="comment-24099">
+            <div id="post-24099-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi, I have been looking for the root cause for the issue mentioned in this ticket. The problem within the custom Radius dissector is resolved. I had to write up few lines of code as work around for 'Conditional jump or move depends on uninitialized value(s)'.</p>
+
+<p>Wireshark still crashes when i load a Radius capture file. I dont have any returns from TRY CATCH Blocks.</p>
+
+<p>Backtrace of the recent crash:</p>
+
+<pre><code>==27733== Invalid read of size 8
+==27733==    at 0x59ADA37: except_pop (except.c:258)
+==27733==    by 0x5B7CD61: dissect_frame (packet-frame.c:346)
+==27733==    by 0x59B3D9F: call_dissector_through_handle (packet.c:396)
+==27733==    by 0x59B44E5: call_dissector_work (packet.c:485)
+==27733==    by 0x59B4630: call_dissector (packet.c:1787)
+==27733==    by 0x59B5F51: dissect_packet (packet.c:332)
+==27733==    by 0x430F01: add_packet_to_packet_list (file.c:1004)
+==27733==    by 0x4329C7: cf_read (file.c:532)
+==27733==    by 0x449739: menu_open_recent_file_cmd (menu.c:1709)
+==27733==    by 0x36D240BB3D: g_closure_invoke (in /lib64/libgobject-2.0.so.0.2200.5)
+==27733==    by 0x36D2420E22: ??? (in /lib64/libgobject-2.0.so.0.2200.5)
+==27733==    by 0x36D24220AE: g_signal_emit_valist (in /lib64/libgobject-2.0.so.0.2200.5)
+==27733==  Address 0x3604 is not stack'd, malloc'd or (recently) free'd
+
+==27733== Process terminating with default action of signal 11 (SIGSEGV)
+==27733==  Access not within mapped region at address 0x3604
+==27733==    at 0x59ADA37: except_pop (except.c:258)
+==27733==    by 0x5B7CD61: dissect_frame (packet-frame.c:346)
+==27733==    by 0x59B3D9F: call_dissector_through_handle (packet.c:396)
+==27733==    by 0x59B44E5: call_dissector_work (packet.c:485)
+==27733==    by 0x59B4630: call_dissector (packet.c:1787)
+==27733==    by 0x59B5F51: dissect_packet (packet.c:332)
+==27733==    by 0x430F01: add_packet_to_packet_list (file.c:1004)
+by 0x4329C7: cf_read (file.c:532)
+ by 0x449739: menu_open_recent_file_cmd (menu.c:1709)
+by 0x36D240BB3D: g_closure_invoke (in /lib64/libgobject-2.0.so.0.2200.5)
+ by 0x36D2420E22: ??? (in /lib64/libgobject-2.0.so.0.2200.5)
+   by 0x36D24220AE: g_signal_emit_valist (in /lib64/libgobject-2.0.so.0.2200.5)
+</code></pre>
+
+<p>Your guidance would be of great help to me. I am still using wireshark-1.0.1 version, and can only move on to 1.10.1 after seeing the packets loaded on 1.0.1 :(</p>
+
+<p>Thanks!</p></div>
+            <div class="comment-info" id="comment-24099-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Aug '13, 07:57)</span>
+                <a class="comment-user userinfo" href="/users/5420/purandhar-k">Purandhar K</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23639" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23639-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="24604"></a>
+                    <div id="answer-container-24604" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-24604-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/24604/up/" rel="nofollow"> </a>
+<div id="post-24604-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-24604-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/24604/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Issue has been resolved. problem was with one of the strcpy function, trying to copy a bigger string in to smaller one. Strange thing is same code runs well without crashing on RHEL4.7 32 bit.</p>
+<p>Anyway, thanks for your time and guidance.</p>
+<p>-Purandhar</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/24604/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Sep '13, 04:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/a811fcbfa3be32d52c491c061274a8e0?s=32&amp;d=identicon&amp;r=g" alt="Purandhar%20K's gravatar image" />
+    <p><a href="/users/5420/purandhar-k">Purandhar K</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Purandhar K has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-24604">
+    
+</div>
+<div id="comment-tools-24604" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-24604-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/23628/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='20guaz0zvWePZvwottybprjycNulps3p' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23628/wireshark-with-customized-radius-dissector-crashing-on-rhel-61-64-bit-os?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23628/wireshark-with-customized-radius-dissector-crashing-on-rhel-61-64-bit-os?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/crash/"
+            class="tag-link-crash"
+            title="see questions tagged'crash'using tags"
+            rel="tag">crash</a> <span class="tag-number">&#215;84</span><br/>
+        
+        <a href="/tags/radius/"
+            class="tag-link-radius"
+            title="see questions tagged'radius'using tags"
+            rel="tag">radius</a> <span class="tag-number">&#215;25</span><br/>
+        
+        <a href="/tags/rhel6/"
+            class="tag-link-rhel6"
+            title="see questions tagged'rhel6'using tags"
+            rel="tag">rhel6</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 8, 2013, 12:39 a.m.">08 Aug '13, 00:39</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,782 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 12, 2013, 4:06 a.m.">12 Sep '13, 04:06</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/462/can-anyone-explain-why-i-cant-capture-any-traffic-on-my-radius-ip">Can anyone explain why I can&#39;t capture any traffic on my Radius IP?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38902/filtering-radius-attributes-by-length">Filtering Radius Attributes by length</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4847/wireshark-crashes-when-left-open-for-over-5-minutes-on-windows-7-64bit">Wireshark crashes when left open for over 5 minutes on windows 7 64bit</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8915/how-can-i-read-k18-traces-in-wireshark">How can I read K18 traces in Wireshark?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25304/wireshark-crashes-upon-clicking-on-fields-of-expanded-trees">Wireshark crashes upon clicking on fields of expanded trees</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39702/wireshark-1123-for-mac-crashes-upon-startup">Wireshark 1.12.3 for Mac crashes upon startup</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50837/why-is-wireshark-crashing-when-i-print-selected-packets">Why is Wireshark Crashing when I print selected packets?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1183/radius-authentication-of-apple-devices">Radius Authentication of Apple devices</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45416/display-filter-for-missing-radius-accounting-responses">Display filter for missing RADIUS Accounting Responses</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4944/wireshark-keeps-crashing-while-doing-rtp-stream-analysis">Wireshark keeps crashing while doing RTP stream analysis</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1090 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Acknowledgment number: Broken TCP. The acknowledge field is nonzero while the ACK flag is not set - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, We are currently having a recurring (and intermittent) problem with an in-house application connecting to a server sitting on our local network. The process works fine for a certain amount of time (sometimes hours, sometimes days - never more than 48 Hours) then suddenly starts failing - the app..." />
+        <meta name="keywords" content="nonzero,brokentcp,rst" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/8465/acknowledgment-number-broken-tcp-the-acknowledge-field-is-nonzero-while-the-ack-flag-is-not-set" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/8465/acknowledgment-number-broken-tcp-the-acknowledge-field-is-nonzero-while-the-ack-flag-is-not-set?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='NQUpk8H0tWoXj5OtSClTbo5FCZP5xcWm' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/8465/acknowledgment-number-broken-tcp-the-acknowledge-field-is-nonzero-while-the-ack-flag-is-not-set">Acknowledgment number: Broken TCP. The acknowledge field is nonzero while the ACK flag is not set</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-8465-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8465/up/" rel="nofollow"> </a>
+<div id="post-8465-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-8465-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8465/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/8465/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>We are currently having a recurring (and intermittent) problem with an in-house application connecting to a server sitting on our local network. The process works fine for a certain amount of time (sometimes hours, sometimes days - never more than 48 Hours) then suddenly starts failing - the application hosted on the workstation throwing error messages.</p>
+<p>The "process" works as followed:
+- The client creates a TCP connection to a server on a specific port then passes some data through.
+- At the server level, there is an application listening to the specific port and uses the data to "do stuff". The application then shuts the TCP connection.</p>
+<p>During normal operations, we see the following at network level:</p>
+<ul>
+<li>Client initiates a connection [SYN] to Server, seq=0</li>
+<li>Server responds to Client [SYN, ACK], seq=0 Ack=1</li>
+<li>Client responds to Server [ACK], seq=1, Ack=1</li>
+<li>Client responds to Server [PSH, ACK] , seq=1 Ack=1 </li>
+<li>Server responds to Client [FIN, ACK], seq=1 Ack=32</li>
+</ul>
+<p>What we are seeing when the process fails is that the TCP connection is established between the client and the server but the server resets the connection [RST] prior to the [PSH, ACK] message coming through:</p>
+<ul>
+<li>Client initiates a connection [SYN] to Server, seq=0</li>
+<li>Server responds to Client [SYN, ACK], seq=0 Ack=1</li>
+<li>Client responds to Server [ACK], seq=1, Ack=1</li>
+<li>Server responds to Client [RST], seq=1</li>
+<li>Client responds to Server [PSH, ACK] , seq=1 Ack=1 </li>
+<li>Server responds to Client [RST], seq=1</li>
+</ul>
+<p>The [RST] message contains the following error description "Acknowledgment number: Broken TCP. The acknowledge field is nonzero while the ACK flag is not set"</p>
+<p>Once this happens, the server effectively refuses any new connection on that specific port, regardless of the source.
+To work-around the problem, I have to change the application on the client level to use another port and set the "listener" on the server to listen to the new port.</p>
+<p>We've already established that the [RST] is not triggered by the application as we don't see any connection being created at application level when the process is failing.</p>
+<p>We've also established that all previous TCPconnections are being closed correctly by the server.</p>
+<p>We've recently rebuilt the server with latest firmware and Windows Security Updates to see if it would fix the issue - no joy there.</p>
+<p>The other interesting point is that we ran this process from another server for 2 weeks and did not have any issue - both servers were on the same Hardware / OS / Windows SU / Application version ...
+The difference is that they are sitting into 2 different offices (2 different VLAN's) - connecting via a WAN Link (Metro Ethernet).</p>
+<p>I've gone through a series of websites about this problem but couldn't find anything relevant.</p>
+<p>Could you please help identifying what is causing the server / network to "block" the port ?
+I really don't have any idea where to start.</p>
+<p>Thanks.</p>
+<p>CalaoSHP</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/nonzero/" class="post-tag tag-link-nonzero"
+                                        title="see questions tagged 'nonzero'" rel="tag">nonzero</a>
+                                
+                                    <a href="/tags/brokentcp/" class="post-tag tag-link-brokentcp"
+                                        title="see questions tagged 'brokentcp'" rel="tag">brokentcp</a>
+                                
+                                    <a href="/tags/rst/" class="post-tag tag-link-rst"
+                                        title="see questions tagged 'rst'" rel="tag">rst</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Jan '12, 05:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d7a7c0810d5b291188b071de571c066c?s=32&amp;d=identicon&amp;r=g" alt="CalaoSHP's gravatar image" />
+    <p><a href="/users/2113/calaoshp">CalaoSHP</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="CalaoSHP has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/8465/">
+                edited
+                <strong>19 Jan '12, 06:56</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-8465">
+    
+        <a name="8467"></a>
+        <div class="comment" id="comment-8467">
+            <div id="post-8467-score" class="comment-score"></div>
+            <div class="comment-text"><p>Good write up!  Where are you taking the captures from?  When you look at the captures of the failed transactions can you verify that the ACK flag is not set?  Do other communications from the server still work?  Does this application rely on the Windoze TCP stack, or does it have it's own implementation?  Does the server's switchport show any interesting / unusual errors?  Does simply  killing/restarting the daemon process fix the problem?  Is there any kind of firewall in place - either hardware or software on the server?</p></div>
+            <div class="comment-info" id="comment-8467-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '12, 06:03)</span>
+                <a class="comment-user userinfo" href="/users/67/geonjay">GeonJay</a>
+                
+            </div>
+        </div>
+    
+        <a name="8470"></a>
+        <div class="comment" id="comment-8470">
+            <div id="post-8470-score" class="comment-score"></div>
+            <div class="comment-text"><p>RESPONSE PART 1</p>
+
+<p>Hi GeonJay,</p>
+
+<p>Thanks for replying so quickly - I'll do my best to answer your questions.</p>
+
+<ol>
+<li>The captures were taken from the server.</li>
+<li>The ACK is set - this is no different from when it works.</li>
+<li>Other communications to the server work fine - all except on the port used</li>
+<li>I believe that the application relies on the Windows TCP stack (Windows 2003 R2 SP2)</li>
+<li>I don't believe that the switchport is showing anything interesting / unusual ... I'll get the Network Engineers to monitor it though</li>
+</ol></div>
+            <div class="comment-info" id="comment-8470-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '12, 07:50)</span>
+                <a class="comment-user userinfo" href="/users/2113/calaoshp">CalaoSHP</a>
+                
+            </div>
+        </div>
+    
+        <a name="8471"></a>
+        <div class="comment" id="comment-8471">
+            <div id="post-8471-score" class="comment-score"></div>
+            <div class="comment-text"><p>REPONSE PART 2</p>
+
+<ol>
+<li>I actually don't kill the process as such, I just get it to listen to another port. When doing Netstat on the server you can still see the application listening to the previous port.</li>
+<li>There is a Fortigate Firewall managing the WAN circuits but this problem is impacting all clients, including ones that are on the same LAN as the server.</li>
+</ol>
+
+<p>Looking forward to hearing from you.</p></div>
+            <div class="comment-info" id="comment-8471-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '12, 07:51)</span>
+                <a class="comment-user userinfo" href="/users/2113/calaoshp">CalaoSHP</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-8465" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8465-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/8465/acknowledgment-number-broken-tcp-the-acknowledge-field-is-nonzero-while-the-ack-flag-is-not-set?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/8465/acknowledgment-number-broken-tcp-the-acknowledge-field-is-nonzero-while-the-ack-flag-is-not-set?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/8465/acknowledgment-number-broken-tcp-the-acknowledge-field-is-nonzero-while-the-ack-flag-is-not-set?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/8465/acknowledgment-number-broken-tcp-the-acknowledge-field-is-nonzero-while-the-ack-flag-is-not-set?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="8468"></a>
+                    <div id="answer-container-8468" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-8468-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/8468/up/" rel="nofollow"> </a>
+<div id="post-8468-score" class="post-score"
+    title="current number of votes">
+    4
+</div>
+<a id="post-8468-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/8468/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>First of all, I'm not sure that the message <strong>"Acknowledgment number: Broken TCP. The acknowledge field is nonzero while the ACK flag is not set"</strong> within the RST Paket is the actual cause of the connection failing, because the RST already is a result of that having happened, so I'd guess it's just a side effect. </p>
+<p>More interesting is the reason why the server would suddenly refuse a session after it has already been established on the TCP level. I've seen this kind of thing to happen when an application decides that it doesn't like the client, for example because it's IP address isn't in the pool of allowed nodes and shuts it down right after the Three Way Handshake. In your case this should not be the reason, since I'm sure you'd already know if the application has a feature like that.</p>
+<p>Since you said it happens after a while I'd start monitoring the concurrent session count, and try to find out if there is some kind of resource exhaustion taking place. You could either capture all connection until the problem shows up (which might be tons of data, and a lot of work to process), or maybe a simple <strong>netstat -an</strong> can help. It will tell you how many sessions there are, and since you tear down your "good" communication with FINs you might have a problem with too many TimeWait states still being kept. You might want to look into setting the <strong>tcptimedwaitdelay</strong> in the Windows Registry to the lowest possible value (30 seconds) - take a look at the "TCP/IP implementation details" from Microsoft technet for details.</p>
+<p>The curious thing is that the three way handshake works, which it wouldn't in the first place if the port is not open and listened to by an application. The application learns about the new connection after the handshake is completed, and it looks to me like the application is saying "New Connection? Naw...", which results in the unfriendly "RST" paket going out when the application closes the socket.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/8468/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Jan '12, 07:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/8468/">
+                edited
+                <strong>19 Jan '12, 07:28</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-8468">
+    
+        <a name="8472"></a>
+        <div class="comment" id="comment-8472">
+            <div id="post-8472-score" class="comment-score"></div>
+            <div class="comment-text"><p>The "we use a different port" piece piques my interest.  And you're right, the immediate RST looks like a firewall denying access.  The servers are identical, but I wonder if their usage is identical.</p></div>
+            <div class="comment-info" id="comment-8472-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '12, 07:54)</span>
+                <a class="comment-user userinfo" href="/users/67/geonjay">GeonJay</a>
+                
+            </div>
+        </div>
+    
+        <a name="8473"></a>
+        <div class="comment not_top_scorer" id="comment-8473">
+            <div id="post-8473-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Jasper,</p>
+
+<p>Thanks for your response - I know it's a bizarre behaviour - I've been on the case for a few months now and still nowhere on finding what is happening. Especially that the same application works on a different server with the same hardware / OS / application; but in a different office and on different VLAN.</p>
+
+<p>We've monitored the concurrent sessions on that specific port but it hardly ever exceeds 30 - so we discounted that theory.</p>
+
+<p>I hear what you're saying about the "New Connection? Nah..." but we don't even see the connection reaching the application.</p>
+
+<p>Frustrating !</p></div>
+            <div class="comment-info" id="comment-8473-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '12, 08:04)</span>
+                <a class="comment-user userinfo" href="/users/2113/calaoshp">CalaoSHP</a>
+                
+            </div>
+        </div>
+    
+        <a name="8475"></a>
+        <div class="comment not_top_scorer" id="comment-8475">
+            <div id="post-8475-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi GeonJay,</p>
+
+<p>If it was Firewall related, wouldn't it only impact people going through the Firewall? Which is not the case here as people on the same LAN as the server (therefore not going through the Firewall) are also affected.</p>
+
+<p>The server in the other office is a full backup of the first one - so once it is in use, it does everything that the primary server does.</p></div>
+            <div class="comment-info" id="comment-8475-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '12, 08:49)</span>
+                <a class="comment-user userinfo" href="/users/2113/calaoshp">CalaoSHP</a>
+                
+            </div>
+        </div>
+    
+        <a name="8477"></a>
+        <div class="comment" id="comment-8477">
+            <div id="post-8477-score" class="comment-score">2</div>
+            <div class="comment-text"><p>The message "Acknowledgment number: Broken TCP, The acknowledge field is nonzero while the ACK flag is not set" can be regarded as cosmetic. Per the RFCs, any time the ACK flag is not set, the acknowledgment number field SHOULD BE set to zero, however, recent Windows versions don't bother to zero the acknowledgment number if the RST bit is set. As @Jasper says, this is a side effect, not a cause. This is not RFC-compliant behavior, but I've never seen it cause a problem.</p></div>
+            <div class="comment-info" id="comment-8477-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '12, 09:12)</span>
+                <a class="comment-user userinfo" href="/users/527/jim-aragon">Jim Aragon</a>
+                
+            </div>
+        </div>
+    
+        <a name="8480"></a>
+        <div class="comment not_top_scorer" id="comment-8480">
+            <div id="post-8480-score" class="comment-score"></div>
+            <div class="comment-text"><p>@CalaoSHP: if the application doesn't get the connection but the TCP stack allows to create it in the first place I can only think of the Windows OS having some sort of trouble talking to the application. The OS has to know that the application has the port open, otherwise it wouldn't SYN/ACK at all. Looks like OS and Application have communication issues, especially if you say it keeps the old port open when you change it...
+By the way, what's the timing between SYN-SYN/ACK-ACK and the RST? Is there a delay, or is it instant?</p></div>
+            <div class="comment-info" id="comment-8480-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '12, 09:32)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="8481"></a>
+        <div class="comment" id="comment-8481">
+            <div id="post-8481-score" class="comment-score">1</div>
+            <div class="comment-text"><p>One other thing that just came to mind - can you monitor the application ressource usage, maybe with Process Explorer? It is possible that the application has some sort of memory leak, increasing over time, and at some point when the failing connection comes in the application fails to allocate ressources for it so it gets dropped. A telltale sign could that the consumed memory goes up or stays the same, but never goes down. On a final note: I doubt you have a network issue here, it really looks like "OS vs. Application".</p></div>
+            <div class="comment-info" id="comment-8481-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jan '12, 09:35)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="8493"></a>
+        <div class="comment not_top_scorer" id="comment-8493">
+            <div id="post-8493-score" class="comment-score"></div>
+            <div class="comment-text"><p>@Jasper - we're talking miliseconds between [SYN] - [SYN,ACK] - [ACK].</p></div>
+            <div class="comment-info" id="comment-8493-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jan '12, 01:18)</span>
+                <a class="comment-user userinfo" href="/users/2113/calaoshp">CalaoSHP</a>
+                
+            </div>
+        </div>
+    
+        <a name="8499"></a>
+        <div class="comment not_top_scorer" id="comment-8499">
+            <div id="post-8499-score" class="comment-score"></div>
+            <div class="comment-text"><p>What about the RST? The Handshake isn't that interesting, but does the RST take a while, or is it just as fast?</p></div>
+            <div class="comment-info" id="comment-8499-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jan '12, 03:35)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="8505"></a>
+        <div class="comment not_top_scorer" id="comment-8505">
+            <div id="post-8505-score" class="comment-score"></div>
+            <div class="comment-text"><p>@Jasper - the whole handshake takes miliseconds</p></div>
+            <div class="comment-info" id="comment-8505-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jan '12, 04:18)</span>
+                <a class="comment-user userinfo" href="/users/2113/calaoshp">CalaoSHP</a>
+                
+            </div>
+        </div>
+    
+        <a name="8506"></a>
+        <div class="comment not_top_scorer" id="comment-8506">
+            <div id="post-8506-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry - got my knickers in a twist ... the RST is also instant.</p></div>
+            <div class="comment-info" id="comment-8506-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jan '12, 04:32)</span>
+                <a class="comment-user userinfo" href="/users/2113/calaoshp">CalaoSHP</a>
+                
+            </div>
+        </div>
+    
+        <a name="8507"></a>
+        <div class="comment" id="comment-8507">
+            <div id="post-8507-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Okay... so I think you'll have to focus on troubleshooting the OS/Application parts on the bad server, or you could go for a differential analysis to see what the differences are between the bad and the good server. I doubt it's the VLAN or the physical location, but maybe stuff like concurrent sessions, requests per minute etc. which are different and give you a hint.</p></div>
+            <div class="comment-info" id="comment-8507-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jan '12, 04:38)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="8647"></a>
+        <div class="comment" id="comment-8647">
+            <div id="post-8647-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Hi,</p>
+
+<p>I'm glad to say we found out what the problem was and fixed it :-)
+A little by accident I admit but it's now been working for 2 days without a glitch.</p>
+
+<p>At the same time as troubleshooting this problem (port blocking / connection reset), we were also troubleshooting another one on the same server whereby processes were failing to initialise. The error message we were getting in the system event log was something like "Application Error : The application failed to initialize properly (0xc0000142)".</p>
+
+<p>I then found this article <a href="http://support.microsoft.com/kb/824422" title="Link">http://support.microsoft.com/kb/824422</a> which suggested that the server was running out Desktop Heap Memory.</p>
+
+<p>I applied the recommended changes (changing the registry value from 512 to 1024) and we've not had the problem since.</p>
+
+<p>Conclusion: The O/S was not able to manage the non-interactive processes on the server, therefore rejecting new requests (RST - Acknowledgment number: Broken TCP. The acknowledge field is nonzero while the ACK flag is not set) which subsequently caused the port to be "corrupted".</p>
+
+<p>If you want to monitor the Desktop Heap activity on your server, you can download the Desktop Heap Monitor tool from <a href="http://www.microsoft.com/download/en/confirmation.aspx?displayLang=en&amp;id=17782">http://www.microsoft.com/download/en/confirmation.aspx?displayLang=en&amp;id=17782</a>
+It's a little fiddly to install &amp; run but once installed you can get detailed information.</p>
+
+<p>I hope this helps anybody with similar issues.</p>
+
+<p>CalaoSHP</p></div>
+            <div class="comment-info" id="comment-8647-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jan '12, 02:41)</span>
+                <a class="comment-user userinfo" href="/users/2113/calaoshp">CalaoSHP</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-8468" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 12
+        </span>
+        <a href="#" class="show-all-comments-link">show 7 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-8468-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/8465/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='NQUpk8H0tWoXj5OtSClTbo5FCZP5xcWm' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8465/acknowledgment-number-broken-tcp-the-acknowledge-field-is-nonzero-while-the-ack-flag-is-not-set?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/8465/acknowledgment-number-broken-tcp-the-acknowledge-field-is-nonzero-while-the-ack-flag-is-not-set?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/rst/"
+            class="tag-link-rst"
+            title="see questions tagged'rst'using tags"
+            rel="tag">rst</a> <span class="tag-number">&#215;81</span><br/>
+        
+        <a href="/tags/brokentcp/"
+            class="tag-link-brokentcp"
+            title="see questions tagged'brokentcp'using tags"
+            rel="tag">brokentcp</a> <span class="tag-number">&#215;3</span><br/>
+        
+        <a href="/tags/nonzero/"
+            class="tag-link-nonzero"
+            title="see questions tagged'nonzero'using tags"
+            rel="tag">nonzero</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 19, 2012, 5:05 a.m.">19 Jan '12, 05:05</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>27,776 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Feb. 3, 2012, 4:12 a.m.">03 Feb '12, 04:12</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/25374/server-sending-rst-message">Server sending RST Message</a>
+        </p>
+        
+        <p>
+            <a href="/questions/348/credit-card-transactions-experience-multiple-declines-why">Credit card transactions experience multiple declines. Why?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13826/rst-ack-after-sending-huge-portion-of-data">RST, ACK after sending huge portion of data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24339/can-anyone-explain-this-tcp-sequence-to-me">Can anyone explain this TCP sequence to me</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35835/iis-85-windows-2012-r2-rst-ack-problem-question">IIS 8.5 Windows 2012 R2 - RST ACK problem question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55362/remote-desktop-not-connecting">Remote Desktop not connecting</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14462/broken-tcp-ack-in-the-syn-packet">Broken TCP ACK in the SYN Packet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1408/rst-tracing">RST - tracing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13986/why-tcp-reset-sent-after-receive-finack-packet">Why TCP Reset sent after receive [FIN,ACK] Packet?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24961/filter-for-syn-psh-and-rst-flags">Filter for SYN, PSH and RST flags</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

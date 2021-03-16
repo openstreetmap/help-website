@@ -1,0 +1,905 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Axis Camera - RTP/RTSP over HTTP - Wireshark Q&amp;A</title>
+        <meta name="description" content="I would think this has been done/asked before, but google was not my friend this time. I took a wireshark capture of streaming video from an Axis camera on a PC viewing that video stream. The settings were described by Axis in the plugin as &quot;RTP over RTSP over HTTP&quot;. I think this is RTP interleaved ..." />
+        <meta name="keywords" content="rtsp,http,rtp" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/44274/axis-camera-rtprtsp-over-http" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/44274/axis-camera-rtprtsp-over-http?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hkua7llVF0DUC4xIX7BfSxtcCUmMS2cM' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/44274/axis-camera-rtprtsp-over-http">Axis Camera - RTP/RTSP over HTTP</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-44274-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/44274/up/" rel="nofollow"> </a>
+<div id="post-44274-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-44274-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/44274/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/44274/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I would think this has been done/asked before, but google was not my friend this time.</p>
+<p>I took a wireshark capture of streaming video from an Axis camera on a PC viewing that video stream.
+The settings were described by Axis in the plugin as "RTP over RTSP over HTTP".</p>
+<p>I think this is RTP interleaved with RTSP and encapsulated in HTTP (the video itself is the H264 codec)
+Something similar is described <a href="http://www.cardinalpeak.com/blog/the-many-ways-to-stream-video-using-rtp-and-rtsp">here</a></p>
+<p>How do I decode this in wireshark? Can it be done? Is there a way to extract the video to a file?</p>
+<p>Thank you!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/rtsp/" class="post-tag tag-link-rtsp"
+                                        title="see questions tagged 'rtsp'" rel="tag">rtsp</a>
+                                
+                                    <a href="/tags/http/" class="post-tag tag-link-http"
+                                        title="see questions tagged 'http'" rel="tag">http</a>
+                                
+                                    <a href="/tags/rtp/" class="post-tag tag-link-rtp"
+                                        title="see questions tagged 'rtp'" rel="tag">rtp</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Jul '15, 16:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b7c7f4bd23ceb9467dd62e7673f7a3db?s=32&amp;d=identicon&amp;r=g" alt="sharky123's gravatar image" />
+    <p><a href="/users/18560/sharky123">sharky123</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sharky123 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-44274">
+    
+        <a name="44283"></a>
+        <div class="comment" id="comment-44283">
+            <div id="post-44283-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you post the capture file somewhere? I don't think Wireshark has a way to decode this right now, but a Lua plugin might be able to do it (by explicitly invoking the built-in RTSP and RTP dissectors); and if not then at least getting a capture file would help us figure out how hard it would be to make Wireshark be able to decode it. It might be fairly trivial.</p></div>
+            <div class="comment-info" id="comment-44283-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '15, 05:42)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="44284"></a>
+        <div class="comment" id="comment-44284">
+            <div id="post-44284-score" class="comment-score"></div>
+            <div class="comment-text"><p>I do have a capture file. How do I share it?</p></div>
+            <div class="comment-info" id="comment-44284-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '15, 06:38)</span>
+                <a class="comment-user userinfo" href="/users/18560/sharky123">sharky123</a>
+                
+            </div>
+        </div>
+    
+        <a name="44285"></a>
+        <div class="comment" id="comment-44285">
+            <div id="post-44285-score" class="comment-score"></div>
+            <div class="comment-text"><p>You can upload it to cloudshark.org or pcapr.net or dropbox/google-drive/etc. Or even add it to <a href="https://wiki.wireshark.org/SampleCaptures">https://wiki.wireshark.org/SampleCaptures</a></p></div>
+            <div class="comment-info" id="comment-44285-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '15, 07:57)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="44286"></a>
+        <div class="comment" id="comment-44286">
+            <div id="post-44286-score" class="comment-score"></div>
+            <div class="comment-text"><p>Try this: <a href="https://danahertm.box.com/RTPoverHTTP">https://danahertm.box.com/RTPoverHTTP</a></p></div>
+            <div class="comment-info" id="comment-44286-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '15, 09:27)</span>
+                <a class="comment-user userinfo" href="/users/18560/sharky123">sharky123</a>
+                
+            </div>
+        </div>
+    
+        <a name="44287"></a>
+        <div class="comment" id="comment-44287">
+            <div id="post-44287-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually that just looks like RTP in RTSP's interleaved channel, over port 80. Port 80 is of course normally HTTP, but there doesn't appear to be actual HTTP protocol in it - just RTSP.</p>
+
+<p>If you right-click packet #1, and select "<code>Decode As...</code>" from the menu which appears, and then select the protocol "<code>RTSP</code>", it correctly parses it as interleaved channel data. It <em>would</em> even have decoded it as RTP inside that channel data, except this capture is missing the initial RTSP messages on that TCP connection, which should have made it all work. (you'll note the capture starts in the middle of the TCP connection, as you don't see the SYN/SYN-ACK exchange)</p>
+
+<p>Can you get a capture from the very beginning? (for example by rebooting the Axis camera?)</p></div>
+            <div class="comment-info" id="comment-44287-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Jul '15, 11:35)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="44375"></a>
+        <div class="comment not_top_scorer" id="comment-44375">
+            <div id="post-44375-score" class="comment-score"></div>
+            <div class="comment-text"><p>I suppose I could get a capture from the beginning. But these cameras are specifically in place to be constantly streaming. Ideally I'm looking to jump in the conversation, verify they are functioning, then get out. Restarting the cameras is not ideal.</p></div>
+            <div class="comment-info" id="comment-44375-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '15, 09:15)</span>
+                <a class="comment-user userinfo" href="/users/18560/sharky123">sharky123</a>
+                
+            </div>
+        </div>
+    
+        <a name="44387"></a>
+        <div class="comment not_top_scorer" id="comment-44387">
+            <div id="post-44387-score" class="comment-score"></div>
+            <div class="comment-text"><p>I just meant to make sure Wireshark would decode it right if it had the whole thing.</p></div>
+            <div class="comment-info" id="comment-44387-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '15, 14:13)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="44391"></a>
+        <div class="comment not_top_scorer" id="comment-44391">
+            <div id="post-44391-score" class="comment-score"></div>
+            <div class="comment-text"><p>I made a small code change to enable dissecting it without the initial RTSP messages, which seems to decode your file fine now - and if you wait a few hours there should be a downloadable version on the automated downloads page to try it out.  But even though I can dissect it as RTP, and can extract the RTP payload, that doesn't mean the video content will end up in a usable form to you. I don't even know what kind of video it is inside the RTP, since the initial RTSP messages would have indicated that but they're missing - and even if I knew I've never tried extracting RTP video.  Googling might be a better resource for that.</p></div>
+            <div class="comment-info" id="comment-44391-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '15, 14:59)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="44392"></a>
+        <div class="comment not_top_scorer" id="comment-44392">
+            <div id="post-44392-score" class="comment-score"></div>
+            <div class="comment-text"><p>I should have mentioned you can track the <a href="https://code.wireshark.org/review/#/c/9749/">change on Wireshark's gerrit site</a>.</p></div>
+            <div class="comment-info" id="comment-44392-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '15, 15:01)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-44274" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-44274-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/44274/axis-camera-rtprtsp-over-http?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/44274/axis-camera-rtprtsp-over-http?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/44274/axis-camera-rtprtsp-over-http?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/44274/axis-camera-rtprtsp-over-http?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="44395"></a>
+                    <div id="answer-container-44395" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-44395-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/44395/up/" rel="nofollow"> </a>
+<div id="post-44395-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-44395-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/44395/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You can download the latest build of Wireshark from the <a href="https://www.wireshark.org/download/automated/">automated downloads section</a> - it must be version 1.99.8-495 or higher to have the relevant change.</p>
+<p>Once that new Wireshark is installed, open your capture file in it, right click on one of the "HTTP" packets, select "Decode As..." and select "RTSP" from the drop-down list, and click OK or Apply. That will make them be decoded as RTSP instead of HTTP - Wireshark assumes they're HTTP because they're on TCP port 80.  So you should now see all the packets decoded as RTSP, but not as RTP inside yet.  Then go to the menu "Analyze" and select "Enabled Protocols", and in the dialog box that shows up, there's a tab called "Heuristic Protocols" or some such. (This is a newly added tab in Wireshark 1.99.8, and will probably disappear soon and just become one big tab with consolidated info.) But anyway, in this Heuristics tab, check-mark the "RTP for RTSP" to enable that protocol decoder, and again click OK or Apply.  You should now see all of the RTP in RTSP packets decoded properly.</p>
+<p>If you close down the file or Wireshark and open it again, the setting for the "RTP in RTSP" heuristic should be saved and not require you to enable it again. But Wireshark will again try to decode the TCP packets as HTTP by default - you can make it not do that by changing the preferences, by going to the "Edit-&gt;Preferences-&gt;Protocols" for "RTSP" and adding 80 to its TCP port list; and you might need to go into the one for "HTTP" and remove 80 from its TCP port list.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/44395/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Jul '15, 17:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d02f20c18a7742ec73a666f1974bf6dc?s=32&amp;d=identicon&amp;r=g" alt="Hadriel's gravatar image" />
+    <p><a href="/users/4318/hadriel">Hadriel</a><br/>
+    <span class="score" title="2652 reputation points"><span class="">2.7k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="39 badges"><span class="bronze">&#9679;</span><span class="badgecount">39</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hadriel has 30 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-44395">
+    
+        <a name="44400"></a>
+        <div class="comment" id="comment-44400">
+            <div id="post-44400-score" class="comment-score"></div>
+            <div class="comment-text"><p>Oh, and I should mention when you install the new Wireshark you'll have to use the GTK version, which means starting Wireshark from the command line with "wireshark-gtk".  The Qt-based Wireshark, which is the default one in 1.99.8, doesn't have the "Analyze-&gt;Enabled Protocols" feature yet. (it looks like it will tomorrow though)</p></div>
+            <div class="comment-info" id="comment-44400-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '15, 18:05)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-44395" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-44395-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/44274/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hkua7llVF0DUC4xIX7BfSxtcCUmMS2cM' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/44274/axis-camera-rtprtsp-over-http?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/44274/axis-camera-rtprtsp-over-http?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/http/"
+            class="tag-link-http"
+            title="see questions tagged'http'using tags"
+            rel="tag">http</a> <span class="tag-number">&#215;293</span><br/>
+        
+        <a href="/tags/rtp/"
+            class="tag-link-rtp"
+            title="see questions tagged'rtp'using tags"
+            rel="tag">rtp</a> <span class="tag-number">&#215;238</span><br/>
+        
+        <a href="/tags/rtsp/"
+            class="tag-link-rtsp"
+            title="see questions tagged'rtsp'using tags"
+            rel="tag">rtsp</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 17, 2015, 4:51 p.m.">17 Jul '15, 16:51</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,211 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 22, 2015, 6:05 p.m.">22 Jul '15, 18:05</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/57775/decoding-the-data-in-rtsp-interleaved-packets-as-rtp">decoding the data in RTSP interleaved packets as RTP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3097/capturing-gmail-packets">Capturing gmail packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6294/using-wireshark-to-debug-http-traffic-on-a-non-standard-port">using wireshark to debug http traffic on a non standard port</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8786/how-can-i-determine-the-total-time-taken-to-load-a-webpage">How can I determine the total time taken to load a Webpage?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10135/wireshark-core-dump-while-dissecting-http-traffic-capture">Wireshark core dump while dissecting http traffic capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13384/display-http-header">Display HTTP Header</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15805/capture-http-get-request">Capture http Get request</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19410/how-can-i-see-how-long-takes-from-when-the-http-get-message-was-sent-until-the-http-ok-reply-was-received">How can I see how long takes from when the HTTP GET message was sent until the HTTP OK  reply was received</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22530/capture-website-name-of-statistics-by-wireshark">Capture website name of statistics  by Wireshark ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26622/could-someone-explain-me-differences-in-http-protocols-info">Could someone explain me differences in HTTP protocol&#39;s info?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

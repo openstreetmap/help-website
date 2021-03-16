@@ -1,0 +1,1057 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>AirPcapNX packet capture 802.11n at 2.4Ghz - Wireshark Q&amp;A</title>
+        <meta name="description" content="I&#39;m using AirPcapNX to sniff 2.4Ghz clients, dongle configured for channel 1,+1. (Channel 1 - 40Mhz) Test is to sniff my connection while downloading a 2MB file with success from server to client. Traffic from Client to AP:  Client connected at 130/195Mbps on channel 1 (as Christian_R noted, this is..." />
+        <meta name="keywords" content="airpcap,wireshark,wifi" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/42081/airpcapnx-packet-capture-80211n-at-24ghz" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/42081/airpcapnx-packet-capture-80211n-at-24ghz?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='Au0QQA5RaVF8d39JTqB8uAfphJYLyv16' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/42081/airpcapnx-packet-capture-80211n-at-24ghz">AirPcapNX packet capture 802.11n at 2.4Ghz</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-42081-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/42081/up/" rel="nofollow"> </a>
+<div id="post-42081-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-42081-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/42081/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/42081/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm using AirPcapNX to sniff 2.4Ghz clients, dongle configured for channel 1,+1. (Channel 1 - 40Mhz)</p>
+<p>Test is to sniff my connection while downloading a 2MB file with success from server to client.</p>
+<p>Traffic from Client to AP:</p>
+<ul>
+<li>Client connected at 130/195Mbps on channel 1 (as Christian_R noted, this is 20Mhz connection speed)</li>
+<li>Management frames seen</li>
+<li>1700 packets data seen, mostly valid, all at 20Mhz (pure-g)</li>
+</ul>
+<p>Traffic from AP to Client:</p>
+<ul>
+<li>Management frames seen</li>
+<li>68 packets data seen, all with bad FCS, all pure-g</li>
+</ul>
+<p>-&gt;I'm missing all data packets coming from the AP to my client. (2MB file download!)</p>
+<p>My guess is that they're being sent over 40Mhz and AirPcap is missing them?</p>
+<p>This work perfectly in 5Ghz, where with 36,+1, I see 802.11n packets when needed.</p>
+<p>Anyone has tried AirPcapNX + 2.4Ghz + 802.11n ?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/airpcap/" class="post-tag tag-link-airpcap"
+                                        title="see questions tagged 'airpcap'" rel="tag">airpcap</a>
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                                    <a href="/tags/wifi/" class="post-tag tag-link-wifi"
+                                        title="see questions tagged 'wifi'" rel="tag">wifi</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 May '15, 07:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/822be38630e1b9b5a1505f259322c63b?s=32&amp;d=identicon&amp;r=g" alt="TomLaBaude's gravatar image" />
+    <p><a href="/users/16747/tomlabaude">TomLaBaude</a><br/>
+    <span class="score" title="66 reputation points">66</span><span title="17 badges"><span class="badge1">&#9679;</span><span class="badgecount">17</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="24 badges"><span class="bronze">&#9679;</span><span class="badgecount">24</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TomLaBaude has 2 accepted answers">66&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/42081/">
+                edited
+                <strong>06 May '15, 10:36</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-42081">
+    
+        <a name="42082"></a>
+        <div class="comment" id="comment-42082">
+            <div id="post-42082-score" class="comment-score"></div>
+            <div class="comment-text"><ol>
+<li>
+<p>Is the AP configured for 40MHz channel bandwidth on channel 1 (2.4GHz)?</p>
+</li>
+<li>
+<p>Does your AP and client support LDPC coding at 2.4GHz?  Does your WiFi adapter used for sniffing support LDPC coding?</p>
+</li>
+</ol></div>
+            <div class="comment-info" id="comment-42082-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '15, 07:29)</span>
+                <a class="comment-user userinfo" href="/users/3386/amato_c">Amato_C</a>
+                
+            </div>
+        </div>
+    
+        <a name="42083"></a>
+        <div class="comment" id="comment-42083">
+            <div id="post-42083-score" class="comment-score"></div>
+            <div class="comment-text"><ol>
+<li>Yes definitely and my client is connected at 130Mbit/s in 802.11ng</li>
+<li>No idea, Wifi adapter is dongle AirPcapNX</li>
+</ol></div>
+            <div class="comment-info" id="comment-42083-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '15, 07:33)</span>
+                <a class="comment-user userinfo" href="/users/16747/tomlabaude">TomLaBaude</a>
+                
+            </div>
+        </div>
+    
+        <a name="42084"></a>
+        <div class="comment" id="comment-42084">
+            <div id="post-42084-score" class="comment-score"></div>
+            <div class="comment-text"><p>Regarding #2 (LDPC coding).<br>
+1. Perform a WiFi capture between the AP and the client during the Association.<br>
+2. Make sure you have captured the Beacons and Association Response from the AP.<br>
+3. Make sure you have captured the Association Request from the client.<br>
+4. In the Association Request and Response, look for the HT Capabilities Information Element (ID = 45).  Then open the HT Capabilities Info.
+5. At the top you should see LDPC coding capability.
+6. If this field = 1, the LDPC coding is supported.  If 0, then no.</p></div>
+            <div class="comment-info" id="comment-42084-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '15, 07:43)</span>
+                <a class="comment-user userinfo" href="/users/3386/amato_c">Amato_C</a>
+                
+            </div>
+        </div>
+    
+        <a name="42086"></a>
+        <div class="comment" id="comment-42086">
+            <div id="post-42086-score" class="comment-score"></div>
+            <div class="comment-text"><p>0 -&gt; LDPC is not supported - What does this mean?</p></div>
+            <div class="comment-info" id="comment-42086-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '15, 07:51)</span>
+                <a class="comment-user userinfo" href="/users/16747/tomlabaude">TomLaBaude</a>
+                
+            </div>
+        </div>
+    
+        <a name="42087"></a>
+        <div class="comment not_top_scorer" id="comment-42087">
+            <div id="post-42087-score" class="comment-score"></div>
+            <div class="comment-text"><p>LDPC = Low Density Parity Check.  On the hardware level, 802.11n packets are encoded using either Binary Convolutional Code (BCC) coding or Low Density Parity Check (LDPC) coding. BCC is the default coding method used by most older 802.11n devices. However, LDPC is an optional coding method supported by newer 802.11n devices.  When a client associates to an AP, the HT Capabilities Info element in the association request and association response packets determine the use of one of the two coding methods. For example, if the default BCC mode is being used, the HT Capabilities Info contains the "HT LDPC coding capability: Transmitter does not support receiving LDPC coded packets" field. If the WLAN being monitored uses LDPC coding, your monitoring adapter must support LDPC coding too; otherwise, packets sent at HT rates in one or both directions will be missing or damaged.</p>
+
+<p>Since your WLAN (AP and client) do not support LDPC, you do not have a hardware issue.  Now we need to troubleshoot other issues.</p>
+
+<p>What is the difference between the 5GHz WLAN and 2.4GHz WLAN?  Same client? Same WiFi adapter used for monitoring? Same AP?</p></div>
+            <div class="comment-info" id="comment-42087-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '15, 07:58)</span>
+                <a class="comment-user userinfo" href="/users/3386/amato_c">Amato_C</a>
+                
+            </div>
+        </div>
+    
+        <a name="42088"></a>
+        <div class="comment not_top_scorer" id="comment-42088">
+            <div id="post-42088-score" class="comment-score"></div>
+            <div class="comment-text"><p>All the same, to me it's like if AirPcapNX doesn't support it, would be nice to have a confirmation of someone who have seen it</p></div>
+            <div class="comment-info" id="comment-42088-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '15, 08:06)</span>
+                <a class="comment-user userinfo" href="/users/16747/tomlabaude">TomLaBaude</a>
+                
+            </div>
+        </div>
+    
+        <a name="42110"></a>
+        <div class="comment" id="comment-42110">
+            <div id="post-42110-score" class="comment-score">2</div>
+            <div class="comment-text"><p>Maybe I am wrong. But I think, that when you see a Datarate of 130Mbit/s you have a Channelwidth of 20 MHz with 2 MIMOs.</p></div>
+            <div class="comment-info" id="comment-42110-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '15, 15:10)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="42112"></a>
+        <div class="comment not_top_scorer" id="comment-42112">
+            <div id="post-42112-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/16160/christian_r">@Christian_R</a> = Good catch!  130Mbps data rate at 11n is indeed only available using a 20MHz channel.</p>
+
+<p><a href="/users/16747/tomlabaude">@TomLaBaude</a> = did you try performing the same capture using a 20MHz channel (i.e., no extension channel) on the AirPcap NX adapter in the 2.4GHz?  Some wireless routers do not allow 40MHz channels in the 2.4GHz range</p></div>
+            <div class="comment-info" id="comment-42112-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 May '15, 17:55)</span>
+                <a class="comment-user userinfo" href="/users/3386/amato_c">Amato_C</a>
+                
+            </div>
+        </div>
+    
+        <a name="42148"></a>
+        <div class="comment not_top_scorer" id="comment-42148">
+            <div id="post-42148-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've reformulated the question to be more clear with numbers.</p>
+
+<p><a href="/users/16160/christian_r">@Christian_R</a> = very good catch, client is connected at 130Mbps &amp; 195Mbps which are 20Mhz connections
+But this is only informative in my case.</p>
+
+<p>Why don't I see no valid data packets from AP to client?</p></div>
+            <div class="comment-info" id="comment-42148-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 May '15, 10:39)</span>
+                <a class="comment-user userinfo" href="/users/16747/tomlabaude">TomLaBaude</a>
+                
+            </div>
+        </div>
+    
+        <a name="42156"></a>
+        <div class="comment not_top_scorer" id="comment-42156">
+            <div id="post-42156-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think what Amato_C wants to tell you is that you don´t need to confiure the channel 1+1 in the 2,4 GHz Band. You only need to configure Channel 1 because you use only the 20MHz Bandwidth.</p>
+
+<p>In the 5 GHz you use a 40 MHz Bandwith which is mostly common and you need to define the capture with 36+1.</p>
+
+<p><a href="/users/3386/amato_c"></a><a href="/users/3386/amato_c">@Amato_C</a> : Am I right so far?
+If I am not right, then I will delete this comment.</p></div>
+            <div class="comment-info" id="comment-42156-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 May '15, 15:01)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="42157"></a>
+        <div class="comment not_top_scorer" id="comment-42157">
+            <div id="post-42157-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually I started sniffing on 1+0 at 20Mhz, seeing all these packets.
+Then on 1+1 as all data packets were missing from AP, and I haven't seen any difference.</p>
+
+<p>I'd just need a confirmation from someone using AirPcap dongle as well that it might encounter problem to sniff 40Mhz in 2.4Ghz range.
+Or have to wait SharkFest to ask Riverbed's guys!</p></div>
+            <div class="comment-info" id="comment-42157-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 May '15, 15:07)</span>
+                <a class="comment-user userinfo" href="/users/16747/tomlabaude">TomLaBaude</a>
+                
+            </div>
+        </div>
+    
+        <a name="42162"></a>
+        <div class="comment not_top_scorer" id="comment-42162">
+            <div id="post-42162-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/16160/christian_r">@Christian_R</a> = Yes you are right.</p>
+
+<p><a href="/users/16747/tomlabaude">@TomLaBaude</a> = What if you connect the AirPcap NX adapter to an AP configured for 40MHz channel in 2.4GHz?  I am not sure if the AirPcap NX will act as a normal WiFi station.  The best scenario would be if you have another WiFi sniffer.  Then you could examine the Probe Requests and Association Request from the AirPcap NX and determine if it supports 40MHz channel in 2.4GHz range (refer to the HT Information Element).</p></div>
+            <div class="comment-info" id="comment-42162-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 May '15, 16:43)</span>
+                <a class="comment-user userinfo" href="/users/3386/amato_c">Amato_C</a>
+                
+            </div>
+        </div>
+    
+        <a name="42173"></a>
+        <div class="comment not_top_scorer" id="comment-42173">
+            <div id="post-42173-score" class="comment-score"></div>
+            <div class="comment-text"><p>The AirPcapNX adapter is only a sniffer dongle, you can't use it as a wireless client, it even doesn't appear as a valid network interface in your network preferences.</p></div>
+            <div class="comment-info" id="comment-42173-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '15, 04:05)</span>
+                <a class="comment-user userinfo" href="/users/16747/tomlabaude">TomLaBaude</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-42081" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 13
+        </span>
+        <a href="#" class="show-all-comments-link">show 8 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-42081-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/42081/airpcapnx-packet-capture-80211n-at-24ghz?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/42081/airpcapnx-packet-capture-80211n-at-24ghz?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/42081/airpcapnx-packet-capture-80211n-at-24ghz?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/42081/airpcapnx-packet-capture-80211n-at-24ghz?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="42390"></a>
+                    <div id="answer-container-42390" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-42390-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/42390/up/" rel="nofollow"> </a>
+<div id="post-42390-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-42390-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/42390/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="TomLaBaude has selected this answer as the correct answer"
+        href="/accept_answer/42390/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>This connection was made with 20Mhz bandwidth, without Short Guard Interval nor Greenfield (as the beacons says).</p>
+<p>But AirPcap only supports 2 spatial streams, and at 195Mbps the client is using 3 spatial streams, cf www.mcsindex.com</p>
+<p>This missing spatial stream is the best guess to explain those missing data packets for the moment.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/42390/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 May '15, 04:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/822be38630e1b9b5a1505f259322c63b?s=32&amp;d=identicon&amp;r=g" alt="TomLaBaude's gravatar image" />
+    <p><a href="/users/16747/tomlabaude">TomLaBaude</a><br/>
+    <span class="score" title="66 reputation points">66</span><span title="17 badges"><span class="badge1">&#9679;</span><span class="badgecount">17</span></span><span title="17 badges"><span class="silver">&#9679;</span><span class="badgecount">17</span></span><span title="24 badges"><span class="bronze">&#9679;</span><span class="badgecount">24</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="TomLaBaude has 2 accepted answers">66&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-42390">
+    
+        <a name="42397"></a>
+        <div class="comment" id="comment-42397">
+            <div id="post-42397-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thought about it two days ago and came to the same comclusion in my mind.</p></div>
+            <div class="comment-info" id="comment-42397-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 May '15, 10:43)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="42400"></a>
+        <div class="comment" id="comment-42400">
+            <div id="post-42400-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you are looking for a 3x3 WiFi adapter, check this out:
+<a href="http://www.sparklan.com/p2-products-detail.php?PKey=d5fd_dqbL2NKwu5b_JCPIM-ygiNu_Wl4Z7XxB9ot&amp;WPEA-128N">http://www.sparklan.com/p2-products-detail.php?PKey=d5fd_dqbL2NKwu5b_JCPIM-ygiNu_Wl4Z7XxB9ot&amp;WPEA-128N</a></p>
+
+<p>I use it to capture WiFi traffic</p></div>
+            <div class="comment-info" id="comment-42400-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 May '15, 12:35)</span>
+                <a class="comment-user userinfo" href="/users/3386/amato_c">Amato_C</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-42390" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-42390-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/42081/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='Au0QQA5RaVF8d39JTqB8uAfphJYLyv16' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/42081/airpcapnx-packet-capture-80211n-at-24ghz?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/42081/airpcapnx-packet-capture-80211n-at-24ghz?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+        <a href="/tags/wifi/"
+            class="tag-link-wifi"
+            title="see questions tagged'wifi'using tags"
+            rel="tag">wifi</a> <span class="tag-number">&#215;134</span><br/>
+        
+        <a href="/tags/airpcap/"
+            class="tag-link-airpcap"
+            title="see questions tagged'airpcap'using tags"
+            rel="tag">airpcap</a> <span class="tag-number">&#215;36</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 5, 2015, 7:22 a.m.">05 May '15, 07:22</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,880 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 14, 2015, 12:35 p.m.">14 May '15, 12:35</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/38717/wifi-sniffing-only-outgoing-packets">Wifi sniffing only outgoing packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7155/wireshark-wifi-http-packages-not-showing">Wireshark wifi http packages not showing</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31378/sniffing-packets-from-mobile-devices-what-wifi-card-to-use">Sniffing packets from mobile devices, what wifi card to use?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49177/can-i-see-all-traffic-on-wifi">Can i see all traffic on WIFi?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26672/capturing-packets-on-mobile">Capturing Packets on Mobile</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37625/how-to-capture-http-data-from-wifi-devices">How to capture HTTP data from WiFi devices?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41030/python-pcapng-cannot-understand-80211-data-frame-format-in-pcapng-file">python-pcapng: cannot understand 802.11 Data Frame format in PcapNG file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47338/my-system-only-capturing-the-probe-requests-but-its-not-showing-the-beacon-frames">My system only capturing the probe requests but its not showing the beacon frames.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39346/unable-to-detect-tcp-using-airpcap">Unable to detect TCP using Airpcap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3000/hey-im-a-super-super-noob-at-wireshark">hey im a super super noob at wireshark</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

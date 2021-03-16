@@ -1,0 +1,1195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Continuation or non-HTTP traffic won&#39;t produce HTTP - Wireshark Q&amp;A</title>
+        <meta name="description" content="EDIT2: I made another capture session and uploaded it to cloudshark.org The GET request for which there is no HTTP response is frame 364 http://cloudshark.org/captures/c36979d903e0 Then I rearranged the frames in this sequence: ...-364-367-365-368-371-369-372-... I removed frames 366 &amp;amp; 370. Here..." />
+        <meta name="keywords" content="continuation,google,non-http" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/23151/continuation-or-non-http-traffic-wont-produce-http" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/23151/continuation-or-non-http-traffic-wont-produce-http?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hTYbgm4Mx3st5uPnXVzqVevYkiMJog7u' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/23151/continuation-or-non-http-traffic-wont-produce-http">Continuation or non-HTTP traffic won&#39;t produce HTTP</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-23151-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23151/up/" rel="nofollow"> </a>
+<div id="post-23151-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-23151-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23151/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/23151/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p><strong>EDIT2:</strong><br>
+I made another capture session and uploaded it to cloudshark.org<br>
+The GET request for which there is no HTTP response is frame 364<br>
+<a href="http://cloudshark.org/captures/c36979d903e0">http://cloudshark.org/captures/c36979d903e0</a></p>
+<p>Then I rearranged the frames in this sequence: ...-364-367-365-368-371-369-372-...<br>
+I removed frames 366 &amp; 370. Here's the result:<br>
+<a href="http://cloudshark.org/captures/5003ae96ae6b">http://cloudshark.org/captures/5003ae96ae6b</a></p>
+<p>Both captures need SSL keys:<br>
+<a href="http://pastebin.com/DMcFKW2p">http://pastebin.com/DMcFKW2p</a>
+<br><br><br></p>
+<p><strong>EDIT1:</strong><br>
+Following up on SYN-bit's response, I rearranged the out-of-order packets using editcap and mergecap, but the "continuation" issue still persists.<br>
+<a href="http://imgur.com/NpiXqXw">http://imgur.com/NpiXqXw</a><br>
+Notice the 5 packets 365-369 are not in chronological order as the result of re-arranging.<br>
+I applied all Landi's suggestions to this new pcap file, to no avail.<br></p>
+<p>The "continuation" still continues to the end of the capture file. Before I interrupted the capture, the  last frame with "continuation" had TCP relative Seq. on 26024, which means there was roughly  26K worth of data from the server. And yet, no HTML was dissected. <br>
+<strong>END OF EDIT1</strong><br><br><br><br></p>
+<p>I'm doing a simple action:<br>
+With wireshark running,<br>
+I go to <a href="https://www.google.com">https://www.google.com</a> and then click "Blogger" in the upper bar.</p>
+<p>I'm expecting to see in wireshark: HTTP/1.1 200 OK (html/text) for the page that shows up in the browser when I press "Blogger".<br>
+But all I see in wireshark is that right after my GET request for that "Blogger page", I only get "Continuation or non-HTTP traffic".<br>
+After that wireshark shows that the browser starts GETing the PNGs and GIFs contained in the "Blogger page" and wireshark successfully recognizes them as PNGs and GIFs.<br>
+But wireshark <strong>won't dissect the very first HTML page</strong>. </p>
+<p>P.S.
+I'm using Firefox with SSLKEYLOGFILE and wireshark successfully decrypts SSL.</p>
+<p>P.P.S
+Here is the relevant screenshot:<br>
+<a href="http://imgur.com/plp6SRT">http://imgur.com/plp6SRT</a><br>
+Notice the GET request in frame 708 <br>
+And the GET request in frame 732, which is a PNG linked to from the HTML file that wireshark couldn't dissect </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/continuation/" class="post-tag tag-link-continuation"
+                                        title="see questions tagged 'continuation'" rel="tag">continuation</a>
+                                
+                                    <a href="/tags/google/" class="post-tag tag-link-google"
+                                        title="see questions tagged 'google'" rel="tag">google</a>
+                                
+                                    <a href="/tags/non-http/" class="post-tag tag-link-non-http"
+                                        title="see questions tagged 'non-http'" rel="tag">non-http</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>19 Jul '13, 07:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5539b49a6661453d168b03c047917c5a?s=32&amp;d=identicon&amp;r=g" alt="dansmith's gravatar image" />
+    <p><a href="/users/5314/dansmith">dansmith</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dansmith has one accepted answer">50&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/23151/">
+                edited
+                <strong>19 Jul '13, 13:19</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-23151">
+    
+</div>
+<div id="comment-tools-23151" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23151-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/23151/continuation-or-non-http-traffic-wont-produce-http?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/23151/continuation-or-non-http-traffic-wont-produce-http?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/23151/continuation-or-non-http-traffic-wont-produce-http?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/23151/continuation-or-non-http-traffic-wont-produce-http?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="23157"></a>
+                    <div id="answer-container-23157" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23157-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23157/up/" rel="nofollow"> </a>
+<div id="post-23157-score" class="post-score"
+    title="current number of votes">
+    3
+</div>
+<a id="post-23157-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23157/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="dansmith has selected this answer as the correct answer"
+        href="/accept_answer/23157/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>THe problem is that the first segment of the HTTP response is received out-of-order. Since re-assembly is being initiated in the first frame that wireshark sees, it is not able to determine how to re-assemble this response. There are a couple of related bug reports on bugzilla:</p>
+<ul>
+<li><a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=3389">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=3389</a></li>
+<li><a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=4727">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=4727</a></li>
+<li><a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=5971">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=5971</a></li>
+<li><a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=8694">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=8694</a></li>
+</ul>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23157/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Jul '13, 08:22</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23157">
+    
+        <a name="23161"></a>
+        <div class="comment" id="comment-23161">
+            <div id="post-23161-score" class="comment-score"></div>
+            <div class="comment-text"><p>SYN-bit, any ideas if the patch in Bug 5971 can be adapted to the current version of wireshark? I could do it myself. I just need a confirmation that the code hasn't changed too drastically since 2 years ago when the patch was submitted.</p></div>
+            <div class="comment-info" id="comment-23161-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 08:39)</span>
+                <a class="comment-user userinfo" href="/users/5314/dansmith">dansmith</a>
+                
+            </div>
+        </div>
+    
+        <a name="23166"></a>
+        <div class="comment" id="comment-23166">
+            <div id="post-23166-score" class="comment-score"></div>
+            <div class="comment-text"><p>You could just try to apply the patch and see what happens.</p></div>
+            <div class="comment-info" id="comment-23166-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 09:54)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23167"></a>
+        <div class="comment" id="comment-23167">
+            <div id="post-23167-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry to unmark your response as accepted, but I rearranged the packets and my initial issue persists</p></div>
+            <div class="comment-info" id="comment-23167-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 10:06)</span>
+                <a class="comment-user userinfo" href="/users/5314/dansmith">dansmith</a>
+                
+            </div>
+        </div>
+    
+        <a name="23171"></a>
+        <div class="comment" id="comment-23171">
+            <div id="post-23171-score" class="comment-score"></div>
+            <div class="comment-text"><p>No worries. Do the packets contain sensitive data? If not, could you upload the faulty session to www.cloudshark.org and post the link here (together with the SSL session key for that particular SSL session)?</p></div>
+            <div class="comment-info" id="comment-23171-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 11:43)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23181"></a>
+        <div class="comment" id="comment-23181">
+            <div id="post-23181-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks, I updated my OP with relevant cloudshark links.</p></div>
+            <div class="comment-info" id="comment-23181-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 13:21)</span>
+                <a class="comment-user userinfo" href="/users/5314/dansmith">dansmith</a>
+                
+            </div>
+        </div>
+    
+        <a name="23191"></a>
+        <div class="comment not_top_scorer" id="comment-23191">
+            <div id="post-23191-score" class="comment-score"></div>
+            <div class="comment-text"><p>see my edited answer</p></div>
+            <div class="comment-info" id="comment-23191-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jul '13, 04:21)</span>
+                <a class="comment-user userinfo" href="/users/146/landi">Landi</a>
+                
+            </div>
+        </div>
+    
+        <a name="23199"></a>
+        <div class="comment not_top_scorer" id="comment-23199">
+            <div id="post-23199-score" class="comment-score"></div>
+            <div class="comment-text"><p>In the rearranged capture file I can finally see my HTML in frame 406.</p></div>
+            <div class="comment-info" id="comment-23199-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jul '13, 09:43)</span>
+                <a class="comment-user userinfo" href="/users/5314/dansmith">dansmith</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23157" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23157-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="23152"></a>
+                    <div id="answer-container-23152" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23152-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23152/up/" rel="nofollow"> </a>
+<div id="post-23152-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-23152-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23152/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><strong>EDIT</strong></p>
+<p>I downloaded your newcap trace and I perfectly see the HTTP Response code like expected</p>
+<p>See <a href="http://imgur.com/Hnjhr6r">http://imgur.com/Hnjhr6r</a></p>
+<p>Like said - be sure to turn off Reassembly then you'll see the return code right after the GET in frame 365, otherwise it will appear in frame 406. Mind to EITHER turn reassambly completely ON (TCP plus both settings inside SSL prefs) of OFF (again TCP plus both settings in SSL Prefs)</p>
+<p>&lt;&lt;&lt; end of edit &gt;&gt;&gt;</p>
+<p>It does but you have TCP segment reassembly turned on by default which is why wireshark waits until the whole data block is successfully transmitted before dissecting it as a whole.</p>
+<p>Just turn of TCP stream reassembly in the TCP protocol prererences and you're fine.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23152/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>19 Jul '13, 07:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/36b41326bff63eb5ad73a0436914e05c?s=32&amp;d=identicon&amp;r=g" alt="Landi's gravatar image" />
+    <p><a href="/users/146/landi">Landi</a><br/>
+    <span class="score" title="2269 reputation points"><span class="">2.3k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="14 badges"><span class="silver">&#9679;</span><span class="badgecount">14</span></span><span title="42 badges"><span class="bronze">&#9679;</span><span class="badgecount">42</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Landi has 28 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/23152/">
+                edited
+                <strong>20 Jul '13, 04:21</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23152">
+    
+        <a name="23154"></a>
+        <div class="comment" id="comment-23154">
+            <div id="post-23154-score" class="comment-score"></div>
+            <div class="comment-text"><p>Unfortunately  your suggestion didn't work.
+Right clicking a TCP frame-&gt;Protocol Preferences-&gt; unchecking Allow subdissector to reassemble TCP streams followed by screen reload didn't produce new HTTP OK's</p></div>
+            <div class="comment-info" id="comment-23154-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 08:01)</span>
+                <a class="comment-user userinfo" href="/users/5314/dansmith">dansmith</a>
+                
+            </div>
+        </div>
+    
+        <a name="23155"></a>
+        <div class="comment" id="comment-23155">
+            <div id="post-23155-score" class="comment-score"></div>
+            <div class="comment-text"><p>could you please try filtering for a single TCP Session by right-clicking a GET request where you don't see the HTTP OK and then selecting Conversation Filter -&gt; TCP and check again</p></div>
+            <div class="comment-info" id="comment-23155-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 08:12)</span>
+                <a class="comment-user userinfo" href="/users/146/landi">Landi</a>
+                
+            </div>
+        </div>
+    
+        <a name="23159"></a>
+        <div class="comment" id="comment-23159">
+            <div id="post-23159-score" class="comment-score"></div>
+            <div class="comment-text"><p>Unfortunately, Conversation Filter didn't help either</p></div>
+            <div class="comment-info" id="comment-23159-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Jul '13, 08:36)</span>
+                <a class="comment-user userinfo" href="/users/5314/dansmith">dansmith</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23152" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23152-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="23195"></a>
+                    <div id="answer-container-23195" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23195-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23195/up/" rel="nofollow"> </a>
+<div id="post-23195-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-23195-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23195/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>After amalgamating SYN-bit's and Landi's answers, I realized that:</p>
+<p>We've got 3 relevant preferences:<br>
+1. Allow subdissector to reassemble TCP streams<br>
+2. Reassemble SSL records spanning multiple TCP segments<br>
+3. Reassemble SSL Application Data spanning multiple SSL records<br></p>
+<p>I tried multiple combination of the 3 switches. In order to see "HTTP/1.1 200 OK [Unreassembled Packet]" in frame 365 of the re-arranged capture, one only needs to disable 3 (whether 1 and/or 2 is on/off doesn't matter)</p>
+<p>But the issue remains - wireshark still won't dissect the HTML file from the chunked HTTP frames. I guess it is because wireshark expects a final chunk of size 0, but <strong>google never sends the chunk with size 0</strong>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23195/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 Jul '13, 06:12</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5539b49a6661453d168b03c047917c5a?s=32&amp;d=identicon&amp;r=g" alt="dansmith's gravatar image" />
+    <p><a href="/users/5314/dansmith">dansmith</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dansmith has one accepted answer">50&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23195">
+    
+        <a name="23196"></a>
+        <div class="comment" id="comment-23196">
+            <div id="post-23196-score" class="comment-score"></div>
+            <div class="comment-text"><p>what exactly do you mean by "won't dissect" what are you trying to accomplish?? Sorry I don't get it... like in my screen shot at my wireshark it dissects each single data packet as http</p></div>
+            <div class="comment-info" id="comment-23196-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jul '13, 06:29)</span>
+                <a class="comment-user userinfo" href="/users/146/landi">Landi</a>
+                
+            </div>
+        </div>
+    
+        <a name="23197"></a>
+        <div class="comment" id="comment-23197">
+            <div id="post-23197-score" class="comment-score"></div>
+            <div class="comment-text"><p>Stream 30 in the re-arranged capture file does have a final chunk of 0 in frame 406, with all re-assembly options enabled at the TCP, SSL and HTTP layer, I get a normal "HTTP/1.1 200 OK" response in frame 406.</p></div>
+            <div class="comment-info" id="comment-23197-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jul '13, 07:01)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23198"></a>
+        <div class="comment" id="comment-23198">
+            <div id="post-23198-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, the HTML part in frame 406 of the rearranged capture is what I wanted all along. I'm simply mystified how I wasted the whole day not seeing it.</p></div>
+            <div class="comment-info" id="comment-23198-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Jul '13, 09:40)</span>
+                <a class="comment-user userinfo" href="/users/5314/dansmith">dansmith</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23195" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23195-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/23151/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hTYbgm4Mx3st5uPnXVzqVevYkiMJog7u' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23151/continuation-or-non-http-traffic-wont-produce-http?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23151/continuation-or-non-http-traffic-wont-produce-http?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/google/"
+            class="tag-link-google"
+            title="see questions tagged'google'using tags"
+            rel="tag">google</a> <span class="tag-number">&#215;16</span><br/>
+        
+        <a href="/tags/continuation/"
+            class="tag-link-continuation"
+            title="see questions tagged'continuation'using tags"
+            rel="tag">continuation</a> <span class="tag-number">&#215;11</span><br/>
+        
+        <a href="/tags/non-http/"
+            class="tag-link-non-http"
+            title="see questions tagged'non-http'using tags"
+            rel="tag">non-http</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 19, 2013, 7:26 a.m.">19 Jul '13, 07:26</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,990 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 20, 2013, 9:43 a.m.">20 Jul '13, 09:43</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/337/where-did-the-google-ssl-video-go">Where did the Google SSL video go?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8565/how-to-find-out-passwords-in-continuation-or-non-http-traffic">how to find out passwords in continuation or non- http traffic?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3428/supporting-protocol-spdy">supporting protocol SPDY</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13973/1496-continuation">1496 continuation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4690/spdy-protocol">SPDY protocol</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17802/fuzzing-wireshark-continuation-or-non-http-traffic-regarding-buffer-overflow">Fuzzing - Wireshark Continuation or non-HTTP traffic (Regarding Buffer overflow)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13490/how-and-which-version-libprotobuf-to-install">How and which version libprotobuf to install ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19335/tcp-induced-continuation-question">TCP- induced “Continuation” question.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14082/weird-behavior-when-connecting-to-googlecom-tcp-previous-segment-not-captured">Weird behavior when connecting to google.com (TCP previous segment not captured)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22518/understanding-continuation-or-non-http-traffic">Understanding Continuation or non-HTTP traffic</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

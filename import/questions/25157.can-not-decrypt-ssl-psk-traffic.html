@@ -1,0 +1,907 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Can not decrypt SSL PSK traffic - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, in our project we use SSL PSK encryption with a 20 byte binary key. I hope we read all available documentation about that but we were not able to decrypt the traffic even when we have the complete traffic and the PSK key. The example works with a 16 byte text password. As said we use a 20 byte b..." />
+        <meta name="keywords" content="psk,encryption" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/25157/can-not-decrypt-ssl-psk-traffic" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/25157/can-not-decrypt-ssl-psk-traffic?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='FGmu9NeRbr3fToZe0BRNfc0SaHzhGBGT' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/25157/can-not-decrypt-ssl-psk-traffic">Can not decrypt SSL PSK traffic</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-25157-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25157/up/" rel="nofollow"> </a>
+<div id="post-25157-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-25157-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25157/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/25157/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,
+in our project we use SSL PSK encryption with a 20 byte binary key.
+I hope we read all available documentation about that but we were not able to decrypt the traffic even when we have the complete traffic and the PSK key.</p>
+<p>The example works with a 16 byte text password. As said we use a 20 byte binary password.</p>
+<p>Can anyone help?</p>
+<p>Thank you.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/psk/" class="post-tag tag-link-psk"
+                                        title="see questions tagged 'psk'" rel="tag">psk</a>
+                                
+                                    <a href="/tags/encryption/" class="post-tag tag-link-encryption"
+                                        title="see questions tagged 'encryption'" rel="tag">encryption</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 Sep '13, 06:20</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ea862b40e68a22cee6a65ea2f9a1c289?s=32&amp;d=identicon&amp;r=g" alt="trolly's gravatar image" />
+    <p><a href="/users/5731/trolly">trolly</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="trolly has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-25157">
+    
+</div>
+<div id="comment-tools-25157" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25157-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/25157/can-not-decrypt-ssl-psk-traffic?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/25157/can-not-decrypt-ssl-psk-traffic?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/25157/can-not-decrypt-ssl-psk-traffic?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/25157/can-not-decrypt-ssl-psk-traffic?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="25479"></a>
+                    <div id="answer-container-25479" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-25479-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25479/up/" rel="nofollow"> </a>
+<div id="post-25479-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-25479-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25479/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In Wireshark 1.10.2, there is currently a hard-coded limit of 16 bytes for the PSK.</p>
+<p>A fix was submitted at the wireshark bugtracker (<a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=9216">bug 9216</a>), so if you use a development snapshot of SVN revision 52335 or later, it should work. Otherwise you can try to apply the patch on <a href="https://gist.github.com/Lekensteyn/6781709">https://gist.github.com/Lekensteyn/6781709</a> yourself.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/25479/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Oct '13, 10:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/285b1f0f4caadc088a38c40aea22feba?s=32&amp;d=identicon&amp;r=g" alt="Lekensteyn's gravatar image" />
+    <p><a href="/users/5644/lekensteyn">Lekensteyn</a><br/>
+    <span class="score" title="2213 reputation points"><span class="">2.2k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="24 badges"><span class="bronze">&#9679;</span><span class="badgecount">24</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Lekensteyn has 32 accepted answers">30&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/25479/">
+                edited
+                <strong>14 Oct '13, 06:24</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-25479">
+    
+        <a name="25499"></a>
+        <div class="comment" id="comment-25499">
+            <div id="post-25499-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks.
+I will see if i can do that.</p></div>
+            <div class="comment-info" id="comment-25499-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Oct '13, 02:49)</span>
+                <a class="comment-user userinfo" href="/users/5731/trolly">trolly</a>
+                
+            </div>
+        </div>
+    
+        <a name="25553"></a>
+        <div class="comment" id="comment-25553">
+            <div id="post-25553-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/5731/trolly">@trolly</a> The patch has been accepted, if you did not succeed in compiling your own, try a snapshot from <a href="https://www.wireshark.org/download/automated/">https://www.wireshark.org/download/automated/</a></p></div>
+            <div class="comment-info" id="comment-25553-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Oct '13, 13:06)</span>
+                <a class="comment-user userinfo" href="/users/5644/lekensteyn">Lekensteyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="25961"></a>
+        <div class="comment" id="comment-25961">
+            <div id="post-25961-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks. We tried but it did not work. It will simply not output the decrypted data. Do you have an example with a 20 byte?</p></div>
+            <div class="comment-info" id="comment-25961-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Oct '13, 06:22)</span>
+                <a class="comment-user userinfo" href="/users/5731/trolly">trolly</a>
+                
+            </div>
+        </div>
+    
+        <a name="25962"></a>
+        <div class="comment" id="comment-25962">
+            <div id="post-25962-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/5731/trolly">@trolly</a>, you can find an example capture in the bug report. Be sure to add leading zeroes as needed (if your last octet is lower than 16 (0x0f and below)</p></div>
+            <div class="comment-info" id="comment-25962-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Oct '13, 06:26)</span>
+                <a class="comment-user userinfo" href="/users/5644/lekensteyn">Lekensteyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="25965"></a>
+        <div class="comment" id="comment-25965">
+            <div id="post-25965-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi, what should I see in the example when the decryption works? Looks strange here.</p></div>
+            <div class="comment-info" id="comment-25965-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Oct '13, 07:05)</span>
+                <a class="comment-user userinfo" href="/users/5731/trolly">trolly</a>
+                
+            </div>
+        </div>
+    
+        <a name="25967"></a>
+        <div class="comment not_top_scorer" id="comment-25967">
+            <div id="post-25967-score" class="comment-score"></div>
+            <div class="comment-text"><p>You should see HTTP traffic.</p></div>
+            <div class="comment-info" id="comment-25967-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Oct '13, 07:59)</span>
+                <a class="comment-user userinfo" href="/users/5644/lekensteyn">Lekensteyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="29266"></a>
+        <div class="comment not_top_scorer" id="comment-29266">
+            <div id="post-29266-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry for the long delay.
+We built wireshark with the suggested patch but it did not work, even with the provided sample.
+Is this bug already integrated?
+Are there some limitations for the key?</p>
+
+<p>Confused ...</p></div>
+            <div class="comment-info" id="comment-29266-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jan '14, 02:28)</span>
+                <a class="comment-user userinfo" href="/users/5731/trolly">trolly</a>
+                
+            </div>
+        </div>
+    
+        <a name="29346"></a>
+        <div class="comment not_top_scorer" id="comment-29346">
+            <div id="post-29346-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/5731/trolly">@trolly</a> Ensure that the key is the hexadecimal representation of the binary key (with an even length, so prepend a zero if the length is odd).</p></div>
+            <div class="comment-info" id="comment-29346-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Jan '14, 05:31)</span>
+                <a class="comment-user userinfo" href="/users/5644/lekensteyn">Lekensteyn</a>
+                
+            </div>
+        </div>
+    
+        <a name="31142"></a>
+        <div class="comment not_top_scorer" id="comment-31142">
+            <div id="post-31142-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi, in which wireshark release is this bug fixed? 1.10.x? Or will it be fixed in 1.11.x?</p></div>
+            <div class="comment-info" id="comment-31142-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '14, 01:47)</span>
+                <a class="comment-user userinfo" href="/users/5331/ws_user13">ws_user13</a>
+                
+            </div>
+        </div>
+    
+        <a name="31145"></a>
+        <div class="comment not_top_scorer" id="comment-31145">
+            <div id="post-31145-score" class="comment-score"></div>
+            <div class="comment-text"><p>This bug is already fixed in 1.11.x, it will probably not be fixed in 1.10.x.</p></div>
+            <div class="comment-info" id="comment-31145-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '14, 03:08)</span>
+                <a class="comment-user userinfo" href="/users/5644/lekensteyn">Lekensteyn</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25479" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25479-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/25157/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='FGmu9NeRbr3fToZe0BRNfc0SaHzhGBGT' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25157/can-not-decrypt-ssl-psk-traffic?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25157/can-not-decrypt-ssl-psk-traffic?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/encryption/"
+            class="tag-link-encryption"
+            title="see questions tagged'encryption'using tags"
+            rel="tag">encryption</a> <span class="tag-number">&#215;34</span><br/>
+        
+        <a href="/tags/psk/"
+            class="tag-link-psk"
+            title="see questions tagged'psk'using tags"
+            rel="tag">psk</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 24, 2013, 6:20 a.m.">24 Sep '13, 06:20</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,436 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 25, 2014, 3:08 a.m.">25 Mar '14, 03:08</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1397/mysql-password">Mysql Password</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42762/how-to-recognize-if-this-is-rtp-or-srtp-packet">how to recognize if this is RTP or SRTP packet ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60947/why-isnt-wireshark-decrypting-80211-traffic-in-my-capture-even-if-the-eapol-handshake-is-present">Why isn&#39;t Wireshark decrypting 802.11 traffic in my capture, even if the EAPOL handshake is present?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5552/handling-a-more-complex-ssl-session">Handling a more complex SSL session?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44434/decrypt-packets-with-wiresharktshark">Decrypt packets with wireshark/tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55487/decrypt-application-data-pending-dtls-abbreviated-handshake-using-psk">Decrypt application data pending DTLS abbreviated handshake using PSK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5584/email-attachment-filter-question">Email attachment filter question?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44581/how-do-i-handle-ethernet-payload-where-mpls-is-in-the-clear-and-the-rest-of-the-payload-is-encrypted">How do I handle ethernet payload where MPLS is in the clear and the rest of the payload is encrypted?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58182/difference-between-wpa-password-and-psk">Difference between WPA-password and PSK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5606/home-computer">Home computer</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

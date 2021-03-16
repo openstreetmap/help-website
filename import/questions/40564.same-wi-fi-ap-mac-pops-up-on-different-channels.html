@@ -1,0 +1,892 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Same Wi-Fi AP MAC pops up on different channels - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, I have two APs operating on different channels and I need to do some troubleshooting in my network. I&#39;m using Linux, capture with dumpcap and analyze with T-shark. So I have a script that scans first one channel to check a few things, then jumps to the other one and so on. The problem: I see the..." />
+        <meta name="keywords" content="wlan,tshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/40564/same-wi-fi-ap-mac-pops-up-on-different-channels" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/40564/same-wi-fi-ap-mac-pops-up-on-different-channels?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='FsQ1smmNiwsFQHrURBkZnWanL8Gt09BN' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/40564/same-wi-fi-ap-mac-pops-up-on-different-channels">Same Wi-Fi AP MAC pops up on different channels</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-40564-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40564/up/" rel="nofollow"> </a>
+<div id="post-40564-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-40564-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40564/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/40564/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,
+I have two APs operating on different channels and I need to do some troubleshooting in my network. I'm using Linux, capture with dumpcap and analyze with T-shark. So I have a script that scans first one channel to check a few things, then jumps to the other one and so on. The problem: I see the same AP MAC on both channels eventhough I know they're operating on different ones.</p>
+<p>So my question is if someone knows why this happens. If I lock the radio card to monitor on say channel 1 there is no chance a packet from channel 2 could slip in as the receiver is set to only listen for preambles at channel 1. Could it be that the cash somehow has stored old packets or the driver doesn't deliver them fast enough? For fun I tried to scan on more channels and the MAC from my APs are popping up on three-four each. I'm not much of a HW person and don't know the details of how a packet is received and handled by T-shark, maybe someone else knows?</p>
+<p>I remember that I've seen someone else having the same problem but can't find anything about it now.</p>
+<p>Cheers!
+Z</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/wlan/" class="post-tag tag-link-wlan"
+                                        title="see questions tagged 'wlan'" rel="tag">wlan</a>
+                                
+                                    <a href="/tags/tshark/" class="post-tag tag-link-tshark"
+                                        title="see questions tagged 'tshark'" rel="tag">tshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Mar '15, 12:23</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c19324dc35615378dc81ba8a3d71b0b5?s=32&amp;d=identicon&amp;r=g" alt="SamA's gravatar image" />
+    <p><a href="/users/14452/sama">SamA</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="13 badges"><span class="bronze">&#9679;</span><span class="badgecount">13</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SamA has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/40564/">
+                edited
+                <strong>14 Mar '15, 12:25</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-40564">
+    
+        <a name="40601"></a>
+        <div class="comment" id="comment-40601">
+            <div id="post-40601-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hey! I found other people with the same problem here. Does someone know what's going on or how I can solve it? <a href="https://www.wireshark.org/lists/wireshark-users/200710/msg00141.html">https://www.wireshark.org/lists/wireshark-users/200710/msg00141.html</a></p></div>
+            <div class="comment-info" id="comment-40601-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 19:51)</span>
+                <a class="comment-user userinfo" href="/users/14452/sama">SamA</a>
+                
+            </div>
+        </div>
+    
+        <a name="40695"></a>
+        <div class="comment" id="comment-40695">
+            <div id="post-40695-score" class="comment-score"></div>
+            <div class="comment-text"><p>The behaviour is normal for adjacent channels. But I would not expect to see an AP that is on channel 6 when you scan on channel 1.</p></div>
+            <div class="comment-info" id="comment-40695-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Mar '15, 14:04)</span>
+                <a class="comment-user userinfo" href="/users/6889/roland">Roland</a>
+                
+            </div>
+        </div>
+    
+        <a name="40725"></a>
+        <div class="comment" id="comment-40725">
+            <div id="post-40725-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi SamA,
+  Are the AP's configured to operate on non-overlapping channels?  If you are unsure, can you post what channels each AP is configured.</p></div>
+            <div class="comment-info" id="comment-40725-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Mar '15, 06:00)</span>
+                <a class="comment-user userinfo" href="/users/3386/amato_c">Amato_C</a>
+                
+            </div>
+        </div>
+    
+        <a name="40812"></a>
+        <div class="comment" id="comment-40812">
+            <div id="post-40812-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi,
+Thanks for your answers. My AP is configured to operate only on channel 11 with 802.11n. Could it be that beacons are sent on secondary channels for backwards compatibility reasons (with 802.11b)? Will hard code it on 802.11b tonight and check again.</p></div>
+            <div class="comment-info" id="comment-40812-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Mar '15, 12:29)</span>
+                <a class="comment-user userinfo" href="/users/14452/sama">SamA</a>
+                
+            </div>
+        </div>
+    
+        <a name="40869"></a>
+        <div class="comment" id="comment-40869">
+            <div id="post-40869-score" class="comment-score"></div>
+            <div class="comment-text"><p>Aha! Some testing done. When I configure my AP to run on 802.11g or 802.11n only, no SSIDs are popping up on a secondary channel. But when I'm in 11b/g/n mode a beacon pops up on the SECONDARY channel. I don't know what this channel refers to. Have to check. Some of  my neighbors APs have SSIDs on adjacent channels though. This is interesting. If someone has an 802.11ac AP in the building I would die for a capture. Those are occupying 80 or 160 MHz and operate on several sub-channels. Should be beacons everywhere. If anyone has the chance, please provide a trace. I will try to find the reason for the extra beacons and post the answer here in some point. Thanks for all help and suggestions.</p></div>
+            <div class="comment-info" id="comment-40869-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '15, 17:59)</span>
+                <a class="comment-user userinfo" href="/users/14452/sama">SamA</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40564" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40564-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/40564/same-wi-fi-ap-mac-pops-up-on-different-channels?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/40564/same-wi-fi-ap-mac-pops-up-on-different-channels?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/40564/same-wi-fi-ap-mac-pops-up-on-different-channels?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/40564/same-wi-fi-ap-mac-pops-up-on-different-channels?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="40813"></a>
+                    <div id="answer-container-40813" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-40813-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40813/up/" rel="nofollow"> </a>
+<div id="post-40813-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-40813-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40813/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The reason is, in 2.4Ghz, the channels are overlapping. Each channel is spaced at 5Mhz distance, but the bandwidth of transmitted signal is 20Mhz (for 11g/11n) or 22Mhz (11b). So there will be over lapping of 11Mhz each side from center frequency of current channel you are operating. Which will be a min of 2 channels each side. </p>
+<p>And theorically books will say, channels 1, 6 &amp; 11 are non-overlapping. But it isn't the case. You will see the packets coming in channel-1, even in channel-11, if the signal strength is very high. That's due to side lobes spanning across..... </p>
+<p>You will not see this problem typically in 5Ghz, as each channel is spaced at 20Mhz and bandwidth of each transmission is also 20Mhz. So the probability of overlap is very low, unless you keep both transmitted ans received very close to each other. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/40813/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Mar '15, 12:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5c59321a66976ba615e1a50b46a4d209?s=32&amp;d=identicon&amp;r=g" alt="Ramprasad's gravatar image" />
+    <p><a href="/users/82/ramprasad">Ramprasad</a><br/>
+    <span class="score" title="20 reputation points">20</span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="11 badges"><span class="silver">&#9679;</span><span class="badgecount">11</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Ramprasad has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-40813">
+    
+        <a name="40868"></a>
+        <div class="comment" id="comment-40868">
+            <div id="post-40868-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi,
+Thanks for your reply. I know what the channel overlap looks like, but being a radio guy means I know that the receiver only is set to listen to the center frequency of incoming signals. If your channel is 6, the energy that is captured goes through A/D conversion, filtering, decoding, demodulation, descrambling and a few other things. This means, if I transmit on channel 6 and you try to decode that signal on channel 5 you will only see noise. There is no chance you can decode the actual content and see the SSID.</p>
+
+<p>This is what makes it fishy. And in some of the other similar threads I have found you also find people having the same issue at 5GHz. I'm not an expert on how the beacons are sent out in Wi-Fi, but the only explanations I can come up with are that either the AP broadcasts on adjacent channels (for backwards compatibility reasons, i.e. to "warn" other systems about its presense, OR there is an error with either of dumpcap or the monitor mode of my wireless card. Need to figure out which one it is. :)</p></div>
+            <div class="comment-info" id="comment-40868-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Mar '15, 17:55)</span>
+                <a class="comment-user userinfo" href="/users/14452/sama">SamA</a>
+                
+            </div>
+        </div>
+    
+        <a name="40954"></a>
+        <div class="comment" id="comment-40954">
+            <div id="post-40954-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Your understanding in second paragraph is not correct. APs definitely won't beacon in overlapping/adjancent channels. It's not required at all.  When clients need to connect, they scan all channels and find out where the AP is present and make a connection request. </p>
+
+<p>Answer to your first paragraph point,  the frequency is overlapping between chanel-5 and channel-6 and thus you can see other channel packets. </p>
+
+<p>You can talk to any Wi-Fi expert and I'm sure this is the answer you will get :)</p></div>
+            <div class="comment-info" id="comment-40954-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '15, 07:52)</span>
+                <a class="comment-user userinfo" href="/users/82/ramprasad">Ramprasad</a>
+                
+            </div>
+        </div>
+    
+        <a name="51162"></a>
+        <div class="comment" id="comment-51162">
+            <div id="post-51162-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks. The only problems are:
+1. I still don't believe that a beacon at channel x should be visible on channel x+1 even if they overlap. If that was the case, I would expect many more beacons (plus, that's not how OFDM decoding works). Now the beacon count on channel x+1 is maybe 5-10% of the count on channel x. And sometimes it's zero.
+2. The beacons don't always pop up on the adjacent channel. Could also be that they come on a channel further away.</p>
+
+<p>Have asked numerous people but noone can provide a decent explanation. Kind of weird given how much experts there must be out there.</p></div>
+            <div class="comment-info" id="comment-51162-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Mar '16, 14:11)</span>
+                <a class="comment-user userinfo" href="/users/14452/sama">SamA</a>
+                
+            </div>
+        </div>
+    
+        <a name="51165"></a>
+        <div class="comment" id="comment-51165">
+            <div id="post-51165-score" class="comment-score"></div>
+            <div class="comment-text"><p>SamA: 1. is definitely <em>your</em> problem and you are the only one to correct it: A DSSS (802.11b) signal is 22 MHz wide. With each Channel having a width of 5 MHz [f(Ch)=(2407+Ch<em>5)MHz for channels 1-13] this means a 802.11b signal spans 4.4 Channels. With OFDM 20 MHz channels (802.11g/n) each signal spans slightly more than 20 Hz or 4 channels. So in both cases all the wireless traces I have created in the last 17 years in the 2.4 GHz band can see beacons from ch-2, ch-1, ch, ch+1 and ch+2. This is not about believing, it's about </em>technical understanding*, and that can be grained by e.g. reading up on the wikipedia articles on ieee802.11, the ieee standards themselves (not recommended for beginners) and last but not least: Try it. Put an AP on channel 5, then put your sniffer on channels 3-7 and you will see the beacons.</p></div>
+            <div class="comment-info" id="comment-51165-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Mar '16, 16:51)</span>
+                <a class="comment-user userinfo" href="/users/5586/jmayer">jmayer</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40813" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40813-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/40564/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='FsQ1smmNiwsFQHrURBkZnWanL8Gt09BN' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40564/same-wi-fi-ap-mac-pops-up-on-different-channels?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40564/same-wi-fi-ap-mac-pops-up-on-different-channels?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tshark/"
+            class="tag-link-tshark"
+            title="see questions tagged'tshark'using tags"
+            rel="tag">tshark</a> <span class="tag-number">&#215;832</span><br/>
+        
+        <a href="/tags/wlan/"
+            class="tag-link-wlan"
+            title="see questions tagged'wlan'using tags"
+            rel="tag">wlan</a> <span class="tag-number">&#215;76</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 14, 2015, 12:23 p.m.">14 Mar '15, 12:23</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,692 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 24, 2016, 4:51 p.m.">24 Mar '16, 16:51</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/48911/how-to-configure-the-output-of-tshark-psml-file">How to configure the output of Tshark .psml file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25223/tshark-cant-get-the-ipsrc-when-capture-packets-on-wlan">tshark can&#39;t get the ip.src when capture packets on wlan</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40315/wlan-fields-with-tshark">WLAN fields with tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41644/tshark-wont-display-ethaddr">tshark won&#39;t display eth.addr</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6090/tshark-wlan-conversation">tshark wlan conversation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49856/tsharkhow-to-get-the-wlan-management-frame-payload">tshark:How to get the wlan management frame payload</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62/static-tshark-builds-for-linux-andor-solaris-sparcx64">static tshark builds for linux and/or solaris sparc/x64</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1670/tshark-hex-dump">tshark hex dump</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3479/could-the-file-name-parameter-in-tshark-be-chinese-characters">could the file name parameter in tshark be chinese characters?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5132/write-gzip-encoded-http-as-inflated-in-pcap-file">Write Gzip Encoded HTTP as Inflated in PCAP File</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

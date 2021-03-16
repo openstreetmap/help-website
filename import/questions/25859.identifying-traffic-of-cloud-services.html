@@ -1,0 +1,855 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Identifying traffic of cloud-services - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi all, I&#39;m working on my master thesis about computer forensic and cloud-computing. Actually I&#39;m trying to identify cloud-related traffic in pcap-files, e.g. dropbox-sync or the usage of Google Drive. My first idea was to extract relevant information like Dest-IP, FQDN or ports out of the pcap-stre..." />
+        <meta name="keywords" content="dropbox,cloud" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/25859/identifying-traffic-of-cloud-services" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/25859/identifying-traffic-of-cloud-services?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='4th2cuJtMd7D4JT8hfJJfSVz93xkmxH7' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/25859/identifying-traffic-of-cloud-services">Identifying traffic of cloud-services</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-25859-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25859/up/" rel="nofollow"> </a>
+<div id="post-25859-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-25859-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25859/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/25859/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all,</p>
+<p>I'm working on my master thesis about computer forensic and cloud-computing. Actually I'm trying to identify cloud-related traffic in pcap-files, e.g. dropbox-sync or the usage of Google Drive. My first idea was to extract relevant information like Dest-IP, FQDN or ports out of the pcap-stream.
+Does anybody know other solutions?
+For forensic work the usage of encrypted traffic is not as good as it is for "normal" user...</p>
+<p>Regards</p>
+<p>Dan</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/dropbox/" class="post-tag tag-link-dropbox"
+                                        title="see questions tagged 'dropbox'" rel="tag">dropbox</a>
+                                
+                                    <a href="/tags/cloud/" class="post-tag tag-link-cloud"
+                                        title="see questions tagged 'cloud'" rel="tag">cloud</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Oct '13, 01:15</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4b1f2c39bcd57f1d5cacde5dce55528c?s=32&amp;d=identicon&amp;r=g" alt="dsp's gravatar image" />
+    <p><a href="/users/5849/dsp">dsp</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="dsp has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-25859">
+    
+        <a name="25872"></a>
+        <div class="comment" id="comment-25872">
+            <div id="post-25872-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I'm working on my master thesis about computer forensic and cloud-computing.</p>
+</blockquote>
+
+<p>what is the goal of the thesis? Based on your question, it sounds like you are trying to detect the use of a cloud service in a capture file? However I'm not quite sure.</p></div>
+            <div class="comment-info" id="comment-25872-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '13, 05:48)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25876"></a>
+        <div class="comment" id="comment-25876">
+            <div id="post-25876-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Kurt,</p>
+
+<p>you guess right, sorry for the dubiety. Sometimes you have not enough data fragments on your harddisk to guarantee the use of cloud services, which could be particularly important in digital evidence; e.g you can "hide" the presence of software like dropbox with tools like truecrypt. I try to figure out, if you can certainly detect some hints for the usage of these cloudsoftware in the capture file.
+I've found a link here to the blog of Jasper Bongertz, where he talked about the analysis of pcap-files with GeoIP. Seems to be worth a try.</p></div>
+            <div class="comment-info" id="comment-25876-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '13, 06:43)</span>
+                <a class="comment-user userinfo" href="/users/5849/dsp">dsp</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25859" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25859-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/25859/identifying-traffic-of-cloud-services?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/25859/identifying-traffic-of-cloud-services?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/25859/identifying-traffic-of-cloud-services?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/25859/identifying-traffic-of-cloud-services?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="25880"></a>
+                    <div id="answer-container-25880" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-25880-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25880/up/" rel="nofollow"> </a>
+<div id="post-25880-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-25880-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25880/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>which could be particularly important in digital evidence; e.g you can "hide" the presence of software like dropbox with tools like truecrypt.</p>
+</blockquote>
+<p>O.K. so, you really just need information if a cloud service has been used, <strong>without</strong> information <strong>what</strong> has been transmitted.</p>
+<p>Well, then your first approach is pretty straight forward. What you can extract from a capture file, given the fact that you captured enough data, is kind of limited to:</p>
+<ul>
+<li>IP addresses of the cloud service. GeoIP is nice, but not really necessary to map the IP address to the owner (see RIPE, ARIN, etc.)</li>
+<li>DNS names in queries and responses</li>
+<li>Certificates in HTTPS connections, which will (most certainly) contain the name of the service. </li>
+<li>If you're lucky and the cloud service client software (if there is one) tries to find updates via plain text HTTP, you can use that information as well (server/domain name from the HTTP request, etc.)</li>
+</ul>
+<p>That's basically it, because the rest of the communication is (most certainly) encrypted. So, yes you will know if a piece of software on the PC had a connection to a cloud service, but you will never be able to prove that the user itself started the connection (the software could have a periodic connection check to its home base) and <strong>what</strong> the user transferred to/from the cloud, as the data is encrypted. So, this will only be a small piece of information in the whole forensic investigation.</p>
+<p>Regards <br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/25880/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Oct '13, 07:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/25880/">
+                edited
+                <strong>10 Oct '13, 07:36</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-25880">
+    
+        <a name="25889"></a>
+        <div class="comment" id="comment-25889">
+            <div id="post-25889-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Kurt,</p>
+
+<p>thanks for your answer, I think, there are some good advices (especially the certificate-data looks interesting).
+I know that there is just a little chance to see all data, which is transferred between the client and server, but for me the first step is important. Perhaps the periodic updates and checks of client and server are a problem for me, but imho there could be a difference between a full communication for a data transfer and a "smaller", with less data, communication for an update or just checking. hypothetical I have to count the amount of transferred data between client and server, maybe this is the solution for some problems, e.g. does the client send the data to the cloud or is the client just downloading some data...
+And of course, digital investigation is more or less a combination of tools and tries, especially in the "new" world cloud-computing.</p>
+
+<p>Regards
+Dan</p></div>
+            <div class="comment-info" id="comment-25889-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Oct '13, 10:53)</span>
+                <a class="comment-user userinfo" href="/users/5849/dsp">dsp</a>
+                
+            </div>
+        </div>
+    
+        <a name="25908"></a>
+        <div class="comment" id="comment-25908">
+            <div id="post-25908-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>but imho there could be a difference between a full communication for a data transfer and a "smaller", with less data, communication for an update or just checking. </p>
+</blockquote>
+
+<p>Well, the amount of data and the 'connection pattern' might help to differentiate update checking and data up-/downloading.</p>
+
+<blockquote>
+<p>e.g. does the <strong>client send the data</strong> to the cloud or is the <strong>client just downloading</strong> some data.</p>
+</blockquote>
+
+<p>that's easy, as you can see the direction of data flow in Wireshark (src/dst IP).</p></div>
+            <div class="comment-info" id="comment-25908-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Oct '13, 01:33)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25973"></a>
+        <div class="comment" id="comment-25973">
+            <div id="post-25973-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Kurt,</p>
+
+<p>I tried that the last days and it works fine till now. Now I'm going to implement it with tshark and something like python or php. Just to get some code to automate the investigation. After that I have to identify some more cloud-providers.</p>
+
+<p>Thanks for your time
+Dan</p></div>
+            <div class="comment-info" id="comment-25973-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Oct '13, 10:20)</span>
+                <a class="comment-user userinfo" href="/users/5849/dsp">dsp</a>
+                
+            </div>
+        </div>
+    
+        <a name="25974"></a>
+        <div class="comment" id="comment-25974">
+            <div id="post-25974-score" class="comment-score"></div>
+            <div class="comment-text"><p>Good.</p>
+
+<p>Hint: If a supplied answer resolves your question can you please "accept" it by clicking the checkmark icon next to it. This highlights good answers for the benefit of subsequent users with the same or similar questions.</p></div>
+            <div class="comment-info" id="comment-25974-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Oct '13, 11:12)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25880" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25880-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/25859/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='4th2cuJtMd7D4JT8hfJJfSVz93xkmxH7' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25859/identifying-traffic-of-cloud-services?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25859/identifying-traffic-of-cloud-services?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/dropbox/"
+            class="tag-link-dropbox"
+            title="see questions tagged'dropbox'using tags"
+            rel="tag">dropbox</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/cloud/"
+            class="tag-link-cloud"
+            title="see questions tagged'cloud'using tags"
+            rel="tag">cloud</a> <span class="tag-number">&#215;4</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 10, 2013, 1:15 a.m.">10 Oct '13, 01:15</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,788 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 14, 2013, 11:12 a.m.">14 Oct '13, 11:12</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/23635/how-much-data-was-sent-by-cloud-webservice">How much data was sent by cloud webservice?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26314/wireshark-on-cloud-azure">WireShark on cloud -Azure</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57052/adobe-creative-cloud-error">Adobe Creative Cloud Error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27699/cant-decrypt-ssl-using-wireshark">Can&#39;t decrypt SSL using wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34047/my-dropbox-gets-into-loop-and-cannot-sync-and-i-find-lots-of-ignored-unknown-records-in-wireshark-trace-file-can-i-find-the-root-cause-from-the-trace">My Dropbox gets into loop and cannot sync, and I find lots of &quot;ignored unknown records&quot; in WireShark trace file. Can I find the root cause from the trace?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39393/dropbox-lan-sync">Dropbox LAN sync?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47528/dropbox-using-a-lot-of-bandwidth-even-when-fully-synced">Dropbox using a lot of bandwidth even when fully synced</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

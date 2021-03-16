@@ -1,0 +1,1699 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Packet with HTTP 302 Redirect decoded as TCP not HTTP - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi All, Having a weird issue: a packet with HTTP 302 Redirect is being decoded only as TCP with Info = [TCP segment of a reassembled PDU] (thus hinting at the fact it&#39;s just one of a few packets carrying a large PDU) and not as HTTP despite it seems to contain the whole HTTP message. Here&#39;s this pac..." />
+        <meta name="keywords" content="tcptrace" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/30352/packet-with-http-302-redirect-decoded-as-tcp-not-http" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/30352/packet-with-http-302-redirect-decoded-as-tcp-not-http?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='IHuUkCd3eTnHOCSj03lat2NVKOzoykEb' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/30352/packet-with-http-302-redirect-decoded-as-tcp-not-http">Packet with HTTP 302 Redirect decoded as TCP not HTTP</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-30352-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30352/up/" rel="nofollow"> </a>
+<div id="post-30352-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-30352-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30352/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/30352/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi All,</p>
+<p>Having a weird issue: a packet with HTTP 302 Redirect is being decoded only as TCP with Info = [TCP segment of a reassembled PDU] (thus hinting at the fact it's just one of a few packets carrying a large PDU) and not as HTTP despite it seems to contain the whole HTTP message. Here's this packet:</p>
+<pre>0A0D0D0A840000004D3C2B1A01000000FFFFFFFFFFFFFFFF03002B0033322D6269742057696E646F777320372053657276696365205061636B20312C206275696C6420373630310004002F0044756D7063617020312E31302E31202853564E205265762035303932362066726F6D202F7472756E6B2D312E313029000000000084000000010000008800000001000000FFFF0000020032005C4465766963655C4E50465F7B31383539424338342D303638392D344545342D394637462D3835443039334138463538427D000009000100060000000C002B0033322D6269742057696E646F777320372053657276696365205061636B20312C206275696C642037363031000000000088000000060000001C01000000000000B6F30400CFA841FFFC000000FC000000E41F13778F8FACF2C589043B0800450000EE00000000F706EC6FD43AF65B0A0002040050EC4EBDE3C4ECF68FFA3C5011FFFFC6720000485454502F312E312033303220466F756E640D0A4C6F636174696F6E3A2068747470733A2F2F686F7473706F742E696E6D61727361742E636F6D2F696E6465783F6F72696755726C3D687474702533412532462532467777772E6262632E636F2E756B2532460D0A436F6E74656E742D547970653A20746578742F68746D6C3B20636861727365743D69736F2D383835392D310D0A50726F78792D436F6E6E656374696F6E3A20636C6F73650D0A0D0A54686520646F63756D656E7420686173206D6F7665641C010000050000006C00000000000000B7F3040055E3000201001C00436F756E746572732070726F76696465642062792064756D7063617002000800B7F3040094E0720003000800B7F3040055E30002040008003001000000000000050008000000000000000000000000006C000000
+</pre>
+
+<p>Is anything wrong with encoding in this packet by chance?</p>
+<p>Many thanks in advance,</p>
+<p>Dmitriy</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tcptrace/" class="post-tag tag-link-tcptrace"
+                                        title="see questions tagged 'tcptrace'" rel="tag">tcptrace</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>03 Mar '14, 10:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4c43e04f0ef8eacb2a3173436cb432f0?s=32&amp;d=identicon&amp;r=g" alt="Dmitriy's gravatar image" />
+    <p><a href="/users/6823/dmitriy">Dmitriy</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="11 badges"><span class="bronze">&#9679;</span><span class="badgecount">11</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Dmitriy has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/30352/">
+                edited
+                <strong>03 Mar '14, 14:15</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+            <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+            <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-30352">
+    
+        <a name="30355"></a>
+        <div class="comment" id="comment-30355">
+            <div id="post-30355-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's much easier to help you, if you post the frame as a pcap file (on cloudshark, google drive or dropbox), instead the hex representation ;-)</p></div>
+            <div class="comment-info" id="comment-30355-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '14, 14:16)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30356"></a>
+        <div class="comment" id="comment-30356">
+            <div id="post-30356-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Kurt - indeed )  How about this?</p>
+
+<p><a href="https://drive.google.com/file/d/0B31e47Ucqt4BUnRNUVFQUmdsdU0/edit?usp=sharing">https://drive.google.com/file/d/0B31e47Ucqt4BUnRNUVFQUmdsdU0/edit?usp=sharing</a></p>
+
+<p>The packet in question is #10. Please note this is 100% raw trace - no filtering was used whatsoever to ensure no packets are missed; also this is the only interface at the end user PC used for this kind of traffic.</p>
+
+<p>The redirection works fine btw.</p>
+
+<p>Thanks in advance,</p>
+
+<p>Dmitriy</p></div>
+            <div class="comment-info" id="comment-30356-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '14, 14:23)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-30352" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30352-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/30352/packet-with-http-302-redirect-decoded-as-tcp-not-http?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/30352/packet-with-http-302-redirect-decoded-as-tcp-not-http?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/30352/packet-with-http-302-redirect-decoded-as-tcp-not-http?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/30352/packet-with-http-302-redirect-decoded-as-tcp-not-http?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="30358"></a>
+                    <div id="answer-container-30358" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-30358-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/30358/up/" rel="nofollow"> </a>
+<div id="post-30358-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-30358-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/30358/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>If you disable the following option, it shows as HTTP 302.</p>
+<blockquote>
+<p>Edit -&gt; Preferences -&gt; TCP -&gt; Allow subdissector to reassemble TCP streams</p>
+</blockquote>
+<p>I'll have to check why that happens, if you are interested.</p>
+<p>Regards <br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/30358/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Mar '14, 14:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-30358">
+    
+        <a name="30359"></a>
+        <div class="comment" id="comment-30359">
+            <div id="post-30359-score" class="comment-score"></div>
+            <div class="comment-text"><p>I definitely am as unsure what exactly in this packet misleads this Wireshark option so that it has to be disabled - thank you )</p>
+
+<p>Thanks &amp; Regards,</p>
+
+<p>D.</p></div>
+            <div class="comment-info" id="comment-30359-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '14, 14:44)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="30360"></a>
+        <div class="comment" id="comment-30360">
+            <div id="post-30360-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't know either. I'll check it tomorrow....</p></div>
+            <div class="comment-info" id="comment-30360-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '14, 14:45)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30361"></a>
+        <div class="comment" id="comment-30361">
+            <div id="post-30361-score" class="comment-score"></div>
+            <div class="comment-text"><p>Many thanks!</p></div>
+            <div class="comment-info" id="comment-30361-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '14, 14:51)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="30362"></a>
+        <div class="comment" id="comment-30362">
+            <div id="post-30362-score" class="comment-score"></div>
+            <div class="comment-text"><p>In the meantime, you can help yourself by disabling that option.</p></div>
+            <div class="comment-info" id="comment-30362-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '14, 14:53)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30369"></a>
+        <div class="comment" id="comment-30369">
+            <div id="post-30369-score" class="comment-score"></div>
+            <div class="comment-text"><p>I tried it straight away - works for me indeed.</p></div>
+            <div class="comment-info" id="comment-30369-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '14, 15:55)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="30527"></a>
+        <div class="comment not_top_scorer" id="comment-30527">
+            <div id="post-30527-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Kurt - sorry to disturb: have you had a chance to look into the root cause why it's not being decoded with that option enabled? If so any clues? Just curious now.</p>
+
+<p>Many thanks,</p>
+
+<p>D.</p></div>
+            <div class="comment-info" id="comment-30527-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 03:24)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="30528"></a>
+        <div class="comment not_top_scorer" id="comment-30528">
+            <div id="post-30528-score" class="comment-score"></div>
+            <div class="comment-text"><p>sorry, not time atm. Maybe next week.</p></div>
+            <div class="comment-info" id="comment-30528-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 04:25)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30530"></a>
+        <div class="comment not_top_scorer" id="comment-30530">
+            <div id="post-30530-score" class="comment-score"></div>
+            <div class="comment-text"><p>I think the reassembly code is not working properly; it should not consider the TCP segment in frame 10 as part of a larger payload, so it should be displayed as HTTP decoded content. Somehow the HTTP dissector seemt to tell the TCP dissector that there be should more content to reassemble while there isn't. Looks like a case for <a href="http://bugs.wireshark.org">http://bugs.wireshark.org</a> to me ;-)</p></div>
+            <div class="comment-info" id="comment-30530-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 05:00)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30535"></a>
+        <div class="comment not_top_scorer" id="comment-30535">
+            <div id="post-30535-score" class="comment-score"></div>
+            <div class="comment-text"><p>I believe there is a 0x0a and/or 0x0d missing at the end of the data, but I did not really check, as I mentioned: no time atm.</p></div>
+            <div class="comment-info" id="comment-30535-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 05:56)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30538"></a>
+        <div class="comment not_top_scorer" id="comment-30538">
+            <div id="post-30538-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Jasper,
+Hi Kurt,</p>
+
+<p>Thanks for looking into it. I've just uploaded the screenshots with packets 10 and 162 in the same trace resp for comparison (both carry HTTP 302 in a single packet):</p>
+
+<p><a href="https://drive.google.com/folderview?id=0B31e47Ucqt4BSEE5ci1HdlByQ00&amp;usp=sharing">https://drive.google.com/folderview?id=0B31e47Ucqt4BSEE5ci1HdlByQ00&amp;usp=sharing</a></p>
+
+<p>Packet 162 is decoded correctly no matter if that option is ON or OFF; packet 10 however is only decoded when that option is OFF. Perhaps it'll help one of you or someone else notice the critical difference between them as the ones I see look fine; \r\n is there in both of them. I'll file a bug on it then in the meantime - hope that's OK.</p>
+
+<p>Thanks &amp; Regards,</p>
+
+<p>D.</p></div>
+            <div class="comment-info" id="comment-30538-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 06:36)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="30539"></a>
+        <div class="comment not_top_scorer" id="comment-30539">
+            <div id="post-30539-score" class="comment-score"></div>
+            <div class="comment-text"><p>Packet 162 has the PSH flag set, which signals "this is the last packet of the payload".</p></div>
+            <div class="comment-info" id="comment-30539-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 06:45)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30540"></a>
+        <div class="comment not_top_scorer" id="comment-30540">
+            <div id="post-30540-score" class="comment-score"></div>
+            <div class="comment-text"><p>Oops, hence packet #10 encoding issue then? Well spotted )<br>
+</p>
+
+<p>I just filed it before I saw your comment:</p>
+
+<p><a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=9848">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=9848</a></p></div>
+            <div class="comment-info" id="comment-30540-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 06:52)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="30541"></a>
+        <div class="comment not_top_scorer" id="comment-30541">
+            <div id="post-30541-score" class="comment-score"></div>
+            <div class="comment-text"><p>No problem, Wireshark should still decode packet #10 correctly even though there is no PSH flag.</p></div>
+            <div class="comment-info" id="comment-30541-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 06:53)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30542"></a>
+        <div class="comment not_top_scorer" id="comment-30542">
+            <div id="post-30542-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ah so PSH isn't mandatory then... Please excuse my ignorance of such TCP basics but what's the right criteria to use when deciding whether to look for any more packets when reassembling? (either before or after the one in question)</p></div>
+            <div class="comment-info" id="comment-30542-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 07:03)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="30543"></a>
+        <div class="comment not_top_scorer" id="comment-30543">
+            <div id="post-30543-score" class="comment-score"></div>
+            <div class="comment-text"><p>Packet reassembly is dictated by the protocol on top of TCP. So the HTTP dissector has to tell the TCP dissector "there will be xyz payload bytes", and then the TCP dissector gathers them together (as far as my understanding goes). </p>
+
+<p>In case of packet #10 there is no reassembly required, but somehow the TCP dissector thinks there is. A push flag is a typical flag found in the last packet of a larger payload, signaling "process this right away". So there can't be more payload bytes after that and the TCP dissector decodes it.</p></div>
+            <div class="comment-info" id="comment-30543-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 07:16)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30546"></a>
+        <div class="comment not_top_scorer" id="comment-30546">
+            <div id="post-30546-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you - clear now. Just tried setting PSH - no difference, so PSH doesn't seem to be the criteria being used...</p></div>
+            <div class="comment-info" id="comment-30546-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 07:47)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="30547"></a>
+        <div class="comment not_top_scorer" id="comment-30547">
+            <div id="post-30547-score" class="comment-score"></div>
+            <div class="comment-text"><p>As http is "line-based" I think the http dissector is looking for a blank line with <code>\r\n</code> to determine the end of the http PDU.  The packet in frame 10 doesn't have such a terminator so the http dissector is waiting for more data to find the line terminator.  As the tcp stream is subsequently closed it never sees that final terminator so can't reassemble the PDU's.</p>
+
+<p>In fact, I think it won't be called again for that stream as there is no further data so it never gets a chance to complete the reassembly.  For whatever reason the capture doesn't show the FIN from the server to close the stream off, I suspect the <code>\r\n</code> and the FIN have been lost somewhere.</p>
+
+<p><strong>Update</strong>  As <a href="/users/145/jasper"></a><a href="/users/145/jasper">@Jasper</a> pointed out the FIN is in there with the data response.</p></div>
+            <div class="comment-info" id="comment-30547-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 07:49)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30549"></a>
+        <div class="comment not_top_scorer" id="comment-30549">
+            <div id="post-30549-score" class="comment-score"></div>
+            <div class="comment-text"><p>The FIN is piggy-packed in frame #10 ;-)</p>
+
+<p>If I disable Reassembly frame #10 shows this:</p>
+
+<pre>Hypertext Transfer Protocol
+    HTTP/1.1 302 Found\r\n
+    Location: <a href="https://hotspot.inmarsat.com/index?origUrl=http%3A%2F%2Fwww.bbc.co.uk%2F\r\n">https://hotspot.inmarsat.com/index?origUrl=http%3A%2F%2Fwww.bbc.co.uk%2F\r\n</a>
+    Content-Type: text/html; charset=iso-8859-1\r\n
+    Proxy-Connection: close\r\n
+    \r\n
+    [HTTP response 1/1]
+    [Time since request: 0.803409000 seconds]
+    [Request in frame: 7]
+</pre>
+
+<p>Looks like there are two \r\n with the second on a blank line.</p></div>
+            <div class="comment-info" id="comment-30549-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 07:55)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30550"></a>
+        <div class="comment not_top_scorer" id="comment-30550">
+            <div id="post-30550-score" class="comment-score"></div>
+            <div class="comment-text"><p>Oh yep, didn't look at the actual flags breakdown, I don't often see a data bearing packet with a FIN in my usual traffic.</p>
+
+<p>Possibly a non-conforming server then forgetting to add the line terminator, although I can't be bothered to go and check the http RFC's to confirm that.</p></div>
+            <div class="comment-info" id="comment-30550-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 08:00)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30551"></a>
+        <div class="comment not_top_scorer" id="comment-30551">
+            <div id="post-30551-score" class="comment-score"></div>
+            <div class="comment-text"><p>Same here, no fun looking thru RFCs for MUST, SHOULD, etc,. Let's have <a href="/users/2593/kurt-knochner">@Kurt</a> do this, he's our resident PEP ("pinpoint the exact problem") specialist :-)))</p></div>
+            <div class="comment-info" id="comment-30551-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 08:03)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30552"></a>
+        <div class="comment not_top_scorer" id="comment-30552">
+            <div id="post-30552-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Let's have <a href="/users/2593/kurt-knochner"></a><a href="/users/2593/kurt-knochner">@Kurt</a> do this,</p>
+</blockquote>
+
+<p>??? :-))</p></div>
+            <div class="comment-info" id="comment-30552-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 08:06)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30553"></a>
+        <div class="comment not_top_scorer" id="comment-30553">
+            <div id="post-30553-score" class="comment-score"></div>
+            <div class="comment-text"><ul>
+<li>packet #162 has \r\n right after Location</li>
+<li>packet #10 has \r\n further down, not right after Location</li>
+</ul>
+
+<p>Could that be why? Will try to move Location closer to \r\n now )</p></div>
+            <div class="comment-info" id="comment-30553-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 08:07)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="30554"></a>
+        <div class="comment not_top_scorer" id="comment-30554">
+            <div id="post-30554-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's the separator between the header and the body.  Look at the values in the hex bytes pane, no line terminator.</p>
+
+<p>It appears that disabling either HTTP header or body reassembly allows it to display, but that probably just makes the HTTP dissector work with whatever's in the segment and if it reaches the end of the tvb it says job done.</p></div>
+            <div class="comment-info" id="comment-30554-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 08:09)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30555"></a>
+        <div class="comment not_top_scorer" id="comment-30555">
+            <div id="post-30555-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/2593/kurt-knochner">@Kurt</a>: your answers are almost always going to extremes with lots of details and stuff... I'm too lazy for that kind of thing :-)))</p></div>
+            <div class="comment-info" id="comment-30555-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 08:09)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30556"></a>
+        <div class="comment not_top_scorer" id="comment-30556">
+            <div id="post-30556-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/145/jasper">@Jasper</a>, you're busy.  Not lazy :-)</p></div>
+            <div class="comment-info" id="comment-30556-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 08:10)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30557"></a>
+        <div class="comment not_top_scorer" id="comment-30557">
+            <div id="post-30557-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb">@grahamb</a>, true, working on TraceWrangler every free minute... Silly me offered a Sharkfest talk about new features, so I only have 3 month left to put cool stuff in to have something to show for... yikes :-)</p></div>
+            <div class="comment-info" id="comment-30557-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 08:12)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30558"></a>
+        <div class="comment not_top_scorer" id="comment-30558">
+            <div id="post-30558-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/6823/dmitriy">@dmitriy</a>: try and let us know if it changes anything. If it does, add the info to the bug as well please.</p></div>
+            <div class="comment-info" id="comment-30558-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 08:13)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30559"></a>
+        <div class="comment not_top_scorer" id="comment-30559">
+            <div id="post-30559-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/145/jasper"></a><a href="/users/145/jasper">@Jasper</a>:</p>
+
+<p>Just tried moving Location to the position just above \r\n - didn't help:</p>
+
+<p>Content-Type: text/html; charset=iso-8859-1\r\n</p>
+
+<p>Proxy-Connection: close\r\n</p>
+
+<p>Location: <a href="https://hotspot.inmarsat.com/index?origUrl=http%3A%2F%2Fwww.bbc.co.uk%2F\r\n">https://hotspot.inmarsat.com/index?origUrl=http%3A%2F%2Fwww.bbc.co.uk%2F\r\n</a></p>
+
+<p>\r\n</p></div>
+            <div class="comment-info" id="comment-30559-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 08:20)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="30562"></a>
+        <div class="comment not_top_scorer" id="comment-30562">
+            <div id="post-30562-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/6823/dmitriy"></a><a href="/users/6823/dmitriy">@Dmitriy</a>,</p>
+
+<p><strong>Edit:</strong> </p>
+
+<p>OK, so I read the RFC.  The body isn't terminated with a blank line, either the body length should be indicated in some way e.g. Content-Length header, or by the server closing the connection.</p>
+
+<p>In this case the server closes the connection, but I think that currently in Wireshark there are no means for the tcp dissector to indicate to the http dissector that there is no more data to come to allow the reassembly to terminate.</p></div>
+            <div class="comment-info" id="comment-30562-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 08:33)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30565"></a>
+        <div class="comment not_top_scorer" id="comment-30565">
+            <div id="post-30565-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb"></a><a href="/users/1225/grahamb">@Graham</a>:</p>
+
+<p>Ah that one... just tried moving \r\n just before the body to the end of it to keep the packet length same: no luck I'm afraid...</p>
+
+<p>Location: <a href="https://hotspot.inmarsat.com/index?origUrl=http%3A%2F%2Fwww.bbc.co.uk%2F\r\n">https://hotspot.inmarsat.com/index?origUrl=http%3A%2F%2Fwww.bbc.co.uk%2F\r\n</a></p>
+
+<p>Content-Type: text/html; charset=iso-8859-1\r\n</p>
+
+<p>Proxy-Connection: close\r\n</p>
+
+<p>The document has moved\r\n</p></div>
+            <div class="comment-info" id="comment-30565-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 08:44)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="30566"></a>
+        <div class="comment not_top_scorer" id="comment-30566">
+            <div id="post-30566-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/6823/dmitriy">@Dmitriy</a>, I've edited my comment after reading the RFC.</p></div>
+            <div class="comment-info" id="comment-30566-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 08:47)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30567"></a>
+        <div class="comment not_top_scorer" id="comment-30567">
+            <div id="post-30567-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb"></a><a href="/users/1225/grahamb">@Graham</a>:</p>
+
+<p>So if we remove the body completely thus making packet #10 similar to packet #162 it should work? Also what if the appropriate parsing logic is enhanced with checking for the FIN flag?</p></div>
+            <div class="comment-info" id="comment-30567-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 09:23)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="30569"></a>
+        <div class="comment not_top_scorer" id="comment-30569">
+            <div id="post-30569-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/6823/dmitriy">@Dmitriy</a></p>
+
+<p>Yep, removing the body should work.</p>
+
+<p>The latter case is more difficult, as the http dissector doesn't know, or need to know about the FIN flag.  A normal application, such as a browser will see the stream being closed and then use whatever body has been received, Wireshark isn't really like that as it doesn't "understand" the protocols, just how they should be formatted on their layer.</p></div>
+            <div class="comment-info" id="comment-30569-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 09:56)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30570"></a>
+        <div class="comment not_top_scorer" id="comment-30570">
+            <div id="post-30570-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb"></a><a href="/users/1225/grahamb">@Graham</a>:</p>
+
+<p>Removing the body alone isn't good enough: looks like Wireshark doesn't like something about Content-Type field (it parses the packet as HTTP after I removed that field completely)</p>
+
+<blockquote>
+<p>In this case the server closes the connection, but I think that currently in Wireshark there are no means for the tcp dissector to indicate to the http dissector that there is no more data to come to allow the reassembly to terminate.</p>
+</blockquote>
+
+<p>Based on this comment from earlier I thought it's TCP dissector that signals "that's it" to the http dissector? Is it the other way round then?</p>
+
+<p>Update: can further confirm that removing the body isn't necessary: removing Content-Type field is enough (after which the body is not decoded as ASCII text of course).</p></div>
+            <div class="comment-info" id="comment-30570-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 10:07)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="30571"></a>
+        <div class="comment not_top_scorer" id="comment-30571">
+            <div id="post-30571-score" class="comment-score"></div>
+            <div class="comment-text"><p>Each dissector for a layer, e.g. tcp, calls dissectors for layers above it when it has data for them.  It doesn't call them when it has no data, so the http dissector isn't called again for the tcp stream 0 after the data in packet 10.  There would need to be a mechanism on that last call in packet 10 to say this is it, no more.  I don't think that exists at the moment.</p></div>
+            <div class="comment-info" id="comment-30571-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 10:22)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30573"></a>
+        <div class="comment not_top_scorer" id="comment-30573">
+            <div id="post-30573-score" class="comment-score"></div>
+            <div class="comment-text"><p>I thought tcp dissector could do that (i.e. signal to http dissector "no more data for you" by looking at the FIN flag in this tcp stream... looks like it's impossible/complicated.</p>
+
+<p>Meanwhile as per my update above removing Content-Type field alone is sufficient. Not sure why though: perhaps because it just makes the body invisible w/o actually removing it?</p></div>
+            <div class="comment-info" id="comment-30573-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 10:28)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="30583"></a>
+        <div class="comment not_top_scorer" id="comment-30583">
+            <div id="post-30583-score" class="comment-score"></div>
+            <div class="comment-text"><p>Removing the body means the http dissector isn't waiting for more data.</p></div>
+            <div class="comment-info" id="comment-30583-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 14:30)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30593"></a>
+        <div class="comment not_top_scorer" id="comment-30593">
+            <div id="post-30593-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>going to extremes with lots of details and stuff... </p>
+</blockquote>
+
+<p><a href="/users/145/jasper">@Jasper</a>: extremes? Well, I guess that depends on the perspective ;-) what you see here is my regular mode of operation. It would look differently if I were to go into my own definition of 'extremes' ;-)) I like 'details and stuff' ...</p></div>
+            <div class="comment-info" id="comment-30593-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Mar '14, 22:24)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30597"></a>
+        <div class="comment not_top_scorer" id="comment-30597">
+            <div id="post-30597-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/2593/kurt-knochner">@Kurt</a>: it's extreme compared to my mode of operation. But I'm lazy ;-)</p></div>
+            <div class="comment-info" id="comment-30597-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Mar '14, 03:11)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="30598"></a>
+        <div class="comment not_top_scorer" id="comment-30598">
+            <div id="post-30598-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb"></a><a href="/users/1225/grahamb">@Graham</a>:</p>
+
+<blockquote>
+<p>Removing the body means the http dissector isn't waiting for more data.</p>
+</blockquote>
+
+<p>Interesting why the same doesn't apply to the header as well then: can, say, a URL in Location field not be as long as to exceed one packet? (at least when taken together with the rest of the packet contents)</p>
+
+<p>Anyway... would be great to see it fixed one day as this TCP segment reassembly option is apparently ON by default for a reason. The fix would save others time we lost trying to understand what's going on since our browser was successfully executing that redirection despite receiving no HTTP 302 packets whatsoever as it seemed initially )</p></div>
+            <div class="comment-info" id="comment-30598-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Mar '14, 04:43)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="52300"></a>
+        <div class="comment not_top_scorer" id="comment-52300">
+            <div id="post-52300-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi All,</p>
+
+<p>The original problem reported in this thread is now resolved using FIN flag:
+<a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=9848">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=9848</a></p>
+
+<p>I've just come across the same symptom in a different scenario where neither of the 2 successive TCP packets making up an HTTP POST request carry FIN flag - they both carry only PSH and ACK flags (packets ##4-5):
+<a href="https://drive.google.com/file/d/0B31e47Ucqt4BdmttaGRscjE3QkU/view?usp=sharing">https://drive.google.com/file/d/0B31e47Ucqt4BdmttaGRscjE3QkU/view?usp=sharing</a></p>
+
+<p>HTTP 200 OK response (packets ##9-10) is likewise affected.</p>
+
+<p>Wondering if anything can be done about these too by chance? Disabling TCP Reassembly every time is a bit of a nuisance.</p>
+
+<p>Many thanks in anticipation.</p></div>
+            <div class="comment-info" id="comment-52300-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '16, 16:19)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="52314"></a>
+        <div class="comment not_top_scorer" id="comment-52314">
+            <div id="post-52314-score" class="comment-score"></div>
+            <div class="comment-text"><p>The symptom I see with that comment is that frame 4 is marked as TCP ("TCP segment of a reassembled PDU") and frame 5 is marked as HTTP (because it's the second of the two segments containing the HTTP POST request in question).</p>
+
+<p>Disabling TCP reassembly causes frame 4 to be marked as HTTP but not to show the full POST request and frame 5 to be marked as TCP, because it's not the <em>first</em> part of an HTTP request.</p>
+
+<p>The underlying problem is that, when reassembly is enabled, all but the final segment of a message that spans multiple segments aren't marked with the protocol being reassembled.  Fixing that might be possible, but it'd require more work.  (I.e., mark frame 4 as HTTP, with the Info column saying it's part of a reassembled PDU, and frame 5 as HTTP, with the Info column saying it's a POST request.)</p></div>
+            <div class="comment-info" id="comment-52314-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '16, 11:44)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52321"></a>
+        <div class="comment not_top_scorer" id="comment-52321">
+            <div id="post-52321-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you: makes sense. Do I file a new enhancement request or reopening 9848 makes more sense assuming it's possible?</p></div>
+            <div class="comment-info" id="comment-52321-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '16, 14:47)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+        <a name="52322"></a>
+        <div class="comment not_top_scorer" id="comment-52322">
+            <div id="post-52322-score" class="comment-score"></div>
+            <div class="comment-text"><p>This isn't really the same issue as 9848, this is a separate one.  The current situation has been around for a long time and hasn't been discussed much if at all, but don't let that stop you raising an enhancement request.</p></div>
+            <div class="comment-info" id="comment-52322-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '16, 14:58)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52328"></a>
+        <div class="comment not_top_scorer" id="comment-52328">
+            <div id="post-52328-score" class="comment-score"></div>
+            <div class="comment-text"><p>Done:
+<a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=12411">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=12411</a></p></div>
+            <div class="comment-info" id="comment-52328-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '16, 15:58)</span>
+                <a class="comment-user userinfo" href="/users/6823/dmitriy">Dmitriy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-30358" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 45
+        </span>
+        <a href="#" class="show-all-comments-link">show 40 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-30358-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/30352/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='IHuUkCd3eTnHOCSj03lat2NVKOzoykEb' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/30352/packet-with-http-302-redirect-decoded-as-tcp-not-http?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/30352/packet-with-http-302-redirect-decoded-as-tcp-not-http?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tcptrace/"
+            class="tag-link-tcptrace"
+            title="see questions tagged'tcptrace'using tags"
+            rel="tag">tcptrace</a> <span class="tag-number">&#215;8</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 3, 2014, 10:48 a.m.">03 Mar '14, 10:48</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,909 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 8, 2016, 3:58 p.m.">08 May '16, 15:58</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/9180/strip-off-gtp-headers">Strip off GTP Headers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27336/how-are-re-transmission-and-sack-packets-displayed-in-tcptrace-graph">How are re-transmission and SACK packets displayed in tcptrace graph?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35347/how-to-interpret-the-second-grey-line-in-tcprace-graph">how to interpret the second grey line in tcprace graph?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47768/tcptrace-and-dupack-and-sacks-not-shown-anymore">tcptrace and dupack and sacks not shown anymore</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51606/tcptrace-line-colors">TCPTRACE line colors</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53054/time-in-tcptrace-graph-is-off-from-the-packet-in-pcap-file">time in tcptrace graph is off from the packet in pcap file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58036/how-to-check-dup-ack-in-the-tcptrace-of-wireshark-2xx">how to check DUP ACK in the tcptrace of wireshark 2.x.x</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

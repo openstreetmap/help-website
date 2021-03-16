@@ -1,0 +1,839 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Cygwin + WinPcap 4.1.3 - Wrong Timestamp in Microsecond - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, I am working on developing a customized packet sniffer for Windows 7 64 bit host system (NIC card is Realtek PCIe GBE Family Controller) and am using WinPcap 4.3.1 library using C programming and Cygwin development platform. I am able to read outgoing and incoming TCP and UDP packets through my ..." />
+        <meta name="keywords" content="winpcap,cygwin,microsecond,pcap_pkthdr,wrongtimestamp" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/51542/cygwin-winpcap-413-wrong-timestamp-in-microsecond" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/51542/cygwin-winpcap-413-wrong-timestamp-in-microsecond?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='qnFhEakE1TeAmUuKl6PO6jS5NDLnGxel' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/51542/cygwin-winpcap-413-wrong-timestamp-in-microsecond">Cygwin + WinPcap 4.1.3 - Wrong Timestamp in Microsecond</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-51542-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51542/up/" rel="nofollow"> </a>
+<div id="post-51542-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-51542-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51542/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/51542/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I am working on developing a customized packet sniffer for Windows 7 64 bit host system (NIC card is Realtek PCIe GBE Family Controller) and am using WinPcap 4.3.1 library using C programming and Cygwin development platform. I am able to read outgoing and incoming TCP and UDP packets through my program. However, I am stuck in a problem of not able to get correct timestamp in microsecond from the <strong>struct pcap_pkthdr</strong> structure. Following is the code snippet from the program where the problem exists:</p>
+<pre><code>...
+
+int getPacket; 
+struct pcap_pkthdr *header;  
+const u_char *pkt_data;  
+/* Sniff the packets */  
+while((getPacket= pcap_next_ex(handle, &amp;header, &amp;pkt_data)) &gt;= 0)   
+{      
+printf("\n 1) Epoch is: %ld",header-&gt;ts.tv_sec&amp;0x00000000ffffffff);     
+printf("\n 2) Microsecond is:  %ld",header-&gt;ts.tv_usec);
+
+...
+</code></pre>
+<p>Following is the <strong>console output</strong> that I got for these 2 printf() statements in a run:<br>
+</p>
+<p>1) Epoch is: 1460262399<br>
+2) Microsecond is: 1576252997999<br>
+</p>
+<p>Time in seconds (header-&gt;ts.tv_sec&amp;0x00000000ffffffff) is correct as it translates to 2016-04-09::23:26:39 (<strong>yy-mm-dd::hh-mm-ss</strong> format)<br>
+</p>
+<p>However, the Microsecond (header-&gt;ts.tv_usec) is not correct as the hex value of Microsecond is <strong>0x16F0000016F</strong> that always shows this kind of repeating pattern (with different values) at the low and high octet positions. I have analyzed memory dumps and found the same values that makes me believe that the <strong>header-&gt;ts.tv_usec</strong> is not filled correctly by the NPF driver.<br>
+</p>
+<p>I did a lot of search and could not find this issue reported anywhere. Also, I tested the code on separate AMD and Intel machines and the issue seems to linger.<br>
+</p>
+<p>Any suggestion(s) to solve this problem would be highly appreciated. </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/winpcap/" class="post-tag tag-link-winpcap"
+                                        title="see questions tagged 'winpcap'" rel="tag">winpcap</a>
+                                
+                                    <a href="/tags/cygwin/" class="post-tag tag-link-cygwin"
+                                        title="see questions tagged 'cygwin'" rel="tag">cygwin</a>
+                                
+                                    <a href="/tags/microsecond/" class="post-tag tag-link-microsecond"
+                                        title="see questions tagged 'microsecond'" rel="tag">microsecond</a>
+                                
+                                    <a href="/tags/pcap_pkthdr/" class="post-tag tag-link-pcap_pkthdr"
+                                        title="see questions tagged 'pcap_pkthdr'" rel="tag">pcap_pkthdr</a>
+                                
+                                    <a href="/tags/wrongtimestamp/" class="post-tag tag-link-wrongtimestamp"
+                                        title="see questions tagged 'wrongtimestamp'" rel="tag">wrongtimestamp</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Apr '16, 22:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/daadfa96cddb86e4d6cff5f022b0dd7a?s=32&amp;d=identicon&amp;r=g" alt="Han's gravatar image" />
+    <p><a href="/users/23840/han">Han</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Han has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/51542/">
+                edited
+                <strong>11 Apr '16, 15:48</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+            <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+            <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-51542">
+    
+        <a name="51543"></a>
+        <div class="comment" id="comment-51543">
+            <div id="post-51543-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Not really an Ask Wireshark question, but anyway.</p>
+
+<p>Presumably you mean WinPcap 4.1.3.  You say you're using Cygwin, I'm not sure mixing Cygwin and WinPcap works.</p>
+
+<p>Wireshark seems to be able to use WinPcap to retrieve packets with microsecond precision, unless it's just making them up, and it uses the same field in the packet header.</p>
+
+<p>dumpcap is the Wireshark process that interfaces with WinPcap, maybe looking at the code in <a href="https://code.wireshark.org/review/gitweb?p=wireshark.git;a=blob;f=dumpcap.c;h=a44d4f0d3627f1a39c659136e636fd4564704524;hb=HEAD">dumpcap.c</a> might help.</p></div>
+            <div class="comment-info" id="comment-51543-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(10 Apr '16, 04:39)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="51561"></a>
+        <div class="comment" id="comment-51561">
+            <div id="post-51561-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Grahamb. I posted this question because there is no help available on this behavior anywhere and as Wireshark is using WinPcap therefore, I though it might be a good idea to ask folks here. Sorry for the typo that is corrected. I am getting other fields correctly from Cygwin based C code so I believe it works fine with other packet data structures but microsecond field is not correct. I checked dumpcap.c but they seem to use the same functions which kind of perplexes me more. I need microsecond stamp for my task and still not sure how to debug it. NPF driver works fine for other data fields but somehow fills microseconds incorrectly (as I figured out).</p></div>
+            <div class="comment-info" id="comment-51561-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '16, 12:52)</span>
+                <a class="comment-user userinfo" href="/users/23840/han">Han</a>
+                
+            </div>
+        </div>
+    
+        <a name="51563"></a>
+        <div class="comment" id="comment-51563">
+            <div id="post-51563-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Not really an Ask Wireshark question</p>
+</blockquote>
+
+<p>Yes, it's more of a <a href="http://stackoverflow.com/questions/36526071/winpcap-4-1-3-timestamp-microsecond-issue-header-ts-tv-usec-not-correct-c">stackoverflow question</a>.</p>
+
+<blockquote>
+<p>I'm not sure mixing Cygwin and WinPcap works</p>
+</blockquote>
+
+<p>I'm not sure, either.  WinPcap expects <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms740560(v=vs.85).aspx">MSVC's definition of struct timeval</a>, and Cygwin's might be different.</p></div>
+            <div class="comment-info" id="comment-51563-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '16, 14:40)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-51542" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51542-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/51542/cygwin-winpcap-413-wrong-timestamp-in-microsecond?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/51542/cygwin-winpcap-413-wrong-timestamp-in-microsecond?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/51542/cygwin-winpcap-413-wrong-timestamp-in-microsecond?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/51542/cygwin-winpcap-413-wrong-timestamp-in-microsecond?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="51567"></a>
+                    <div id="answer-container-51567" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-51567-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/51567/up/" rel="nofollow"> </a>
+<div id="post-51567-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-51567-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/51567/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Han has selected this answer as the correct answer"
+        href="/accept_answer/51567/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="http://stackoverflow.com/questions/36526071/winpcap-4-1-3-timestamp-microsecond-issue-header-ts-tv-usec-not-correct-c">Cygwin issue</a>.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/51567/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Apr '16, 15:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-51567">
+    
+</div>
+<div id="comment-tools-51567" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-51567-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/51542/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='qnFhEakE1TeAmUuKl6PO6jS5NDLnGxel' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/51542/cygwin-winpcap-413-wrong-timestamp-in-microsecond?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/51542/cygwin-winpcap-413-wrong-timestamp-in-microsecond?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/winpcap/"
+            class="tag-link-winpcap"
+            title="see questions tagged'winpcap'using tags"
+            rel="tag">winpcap</a> <span class="tag-number">&#215;72</span><br/>
+        
+        <a href="/tags/cygwin/"
+            class="tag-link-cygwin"
+            title="see questions tagged'cygwin'using tags"
+            rel="tag">cygwin</a> <span class="tag-number">&#215;6</span><br/>
+        
+        <a href="/tags/wrongtimestamp/"
+            class="tag-link-wrongtimestamp"
+            title="see questions tagged'wrongtimestamp'using tags"
+            rel="tag">wrongtimestamp</a> <span class="tag-number">&#215;6</span><br/>
+        
+        <a href="/tags/microsecond/"
+            class="tag-link-microsecond"
+            title="see questions tagged'microsecond'using tags"
+            rel="tag">microsecond</a> <span class="tag-number">&#215;1</span><br/>
+        
+        <a href="/tags/pcap_pkthdr/"
+            class="tag-link-pcap_pkthdr"
+            title="see questions tagged'pcap_pkthdr'using tags"
+            rel="tag">pcap_pkthdr</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 9, 2016, 10:24 p.m.">09 Apr '16, 22:24</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,760 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 11, 2016, 3:49 p.m.">11 Apr '16, 15:49</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/4042/interface-list-is-incomplete">Interface list is incomplete</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12835/how-to-use-dumpcap-to-monitor-winpcap-on-a-remote-machine">how to use dumpcap to monitor winpcap on a remote machine</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28294/not-capturing-in-promiscuous-mode-in-windows-7-x64">Not capturing in promiscuous mode in Windows 7 x64</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46579/wireshark-does-not-see-npcap-loopback-interface">Wireshark does not see Npcap loopback interface</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56467/npf-driver">NPF driver</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59332/piping-remote-tcpdump-to-local-wireshark-no-longer-working">Piping remote tcpdump to local Wireshark no longer working</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4574/programming-winpcap">programming winPCAP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12956/install-on-windows-8-winpcap-issue">Install on Windows 8 (WinPCap issue)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28746/winpcap-crashes-on-windows-81">WinPCAP crashes on Windows 8.1</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48343/npf-driver-cant-start-system-error-31">NPF driver can&#39;t start &quot;System error 31&quot;</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

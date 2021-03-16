@@ -1,0 +1,1731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Bad Certificate - Wireshark Q&amp;A</title>
+        <meta name="description" content="I have a Wireshark trace of a client machine I have that when it tries to connect to the server, gets &quot;Bad Certificate&quot;. If I use any browser, it works fine and never gets the error. I&#39;m by no means an expert on certificates. Can anyone take a look and see why the certificate is being rejected? The ..." />
+        <meta name="keywords" content="bad,certificate" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/12248/bad-certificate" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/12248/bad-certificate?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='BsE0P6fP3Fl4GGrCdcTyjTWwmgKw3QsM' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/12248/bad-certificate">Bad Certificate</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-12248-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12248/up/" rel="nofollow"> </a>
+<div id="post-12248-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-12248-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12248/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/12248/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have a Wireshark trace of a client machine I have that when it tries to connect to the server, gets "Bad Certificate".  If I use any browser, it works fine and never gets the error. I'm by no means an expert on certificates. Can anyone take a look and see why the certificate is being rejected?</p>
+<p>The location of the trace is: <a href="http://cloudshark.org/captures/9af27d06ecb3?filter=tcp.port%20%3D%3D%20443">http://cloudshark.org/captures/9af27d06ecb3?filter=tcp.port%20%3D%3D%20443</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/bad/" class="post-tag tag-link-bad"
+                                        title="see questions tagged 'bad'" rel="tag">bad</a>
+                                
+                                    <a href="/tags/certificate/" class="post-tag tag-link-certificate"
+                                        title="see questions tagged 'certificate'" rel="tag">certificate</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>27 Jun '12, 15:56</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/90ace4ca58ca53e9c64e6713d5950cf2?s=32&amp;d=identicon&amp;r=g" alt="tcoder's gravatar image" />
+    <p><a href="/users/2913/tcoder">tcoder</a><br/>
+    <span class="score" title="0 reputation points">0</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="tcoder has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-12248">
+    
+</div>
+<div id="comment-tools-12248" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12248-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/12248/bad-certificate?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/12248/bad-certificate?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/12248/bad-certificate?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/12248/bad-certificate?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="12401"></a>
+                    <div id="answer-container-12401" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-12401-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12401/up/" rel="nofollow"> </a>
+<div id="post-12401-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-12401-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12401/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>(OK, a new answer instead of a new comment to threads that are large as they are. I believe this to be the final solution for you)</p>
+<p>I double checked your tracefiles and you kind of put us on the wrong foot with the following statement:</p>
+<pre><code>There are 3 certs in the file:
+
+Cert #1 subject=/C=US/O=GeoTrust Inc./CN=GeoTrust Global CA issuer=/C=US/O=GeoTrust Inc./CN=GeoTrust Global CA
+
+Cert #2 subject=/C=US/O=GeoTrust Inc./OU=Domain Validated SSL/CN=GeoTrust DV SSL CA issuer=/C=US/O=GeoTrust Inc./CN=GeoTrust Global CA
+
+Cert #3 subject=/serialNumber=kmWaloVmfmBbYPVRYDjZrMhK6hqymshv/OU=GT07032149/OU=<a href="http://www.geotrust.com/resources/cps/OU=Domain">www.geotrust.com/resources/cps/OU=Domain</a> Control Validated - GeoTrust(R) SSL Trial/CN=<a href="http://cden.chetest.com">cden.chetest.com</a> issuer=/C=US/O=GeoTrust Inc./OU=Domain Validated SSL/CN=GeoTrust DV SSL CA
+</code></pre>
+<p>If I open your initial capture file, the "Geotrust Global CA" certificate is in fact not a root certificate but it is signed by yet another CA, namely "Equifax Secure Certificate Authority". This can also be seen in the IBM trace that you uploaded.</p>
+<p>So to solve your issue, you should add the "GeoTrust Global CA" Certificate to your certificate chain configured in Apache. In short in your apache confige file:</p>
+<ul>
+<li><strong>SSLCertificateFile</strong> should point to file containing only cert #3 (as is configured now)</li>
+<li><strong>SSLCertificateKeyFile</strong> should point to the file containing the private key for cert #3 (as is configured now)</li>
+<li><strong>SSLCertificateChainFile</strong> should point to the file containing a concatenation of cert #2 and #1 (in that order)</li>
+</ul>
+<p>To make things easy for you (and since it is easier to do myself than to explain on how to do it), I created the concatenated file for you, so you can just copy &amp; paste the following to a file:</p>
+<pre><code>-----BEGIN CERTIFICATE-----
+MIID+jCCAuKgAwIBAgIDAjbSMA0GCSqGSIb3DQEBBQUAMEIxCzAJBgNVBAYTAlVT
+MRYwFAYDVQQKEw1HZW9UcnVzdCBJbmMuMRswGQYDVQQDExJHZW9UcnVzdCBHbG9i
+YWwgQ0EwHhcNMTAwMjI2MjEzMjMxWhcNMjAwMjI1MjEzMjMxWjBhMQswCQYDVQQG
+EwJVUzEWMBQGA1UEChMNR2VvVHJ1c3QgSW5jLjEdMBsGA1UECxMURG9tYWluIFZh
+bGlkYXRlZCBTU0wxGzAZBgNVBAMTEkdlb1RydXN0IERWIFNTTCBDQTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKa7jnrNpJxiV9RRMEJ7ixqy0ogGrTs8
+KRMMMbxp+Z9alNoGuqwkBJ7O1KrESGAA+DSuoZOv3gR+zfhcIlINVlPrqZTP+3RE
+60OUpJd6QFc1tqRi2tVI+Hrx7JC1Xzn+Y3JwyBKF0KUuhhNAbOtsTdJU/V8+Jh9m
+cajAuIWe9fV1j9qRTonjynh0MF8VCpmnyoM6djVI0NyLGiJOhaRO+kltK3C+jgwh
+w2LMpNGtFmuae8tk/426QsMmqhV4aJzs9mvIDFcN5TgH02pXA50gDkvEe4GwKhz1
+SupKmEn+Als9AxSQKH6a9HjQMYRX5Uw4ekIR4vUoUQNLIBW7Ihq28BUCAwEAAaOB
+2TCB1jAOBgNVHQ8BAf8EBAMCAQYwHQYDVR0OBBYEFIz02ZMKR7wAoErOS3VuoLaw
+sn78MB8GA1UdIwQYMBaAFMB6mGiNifurBWQMEX2qfWW4ysxOMBIGA1UdEwEB/wQI
+MAYBAf8CAQAwOgYDVR0fBDMwMTAvoC2gK4YpaHR0cDovL2NybC5nZW90cnVzdC5j
+b20vY3Jscy9ndGdsb2JhbC5jcmwwNAYIKwYBBQUHAQEEKDAmMCQGCCsGAQUFBzAB
+hhhodHRwOi8vb2NzcC5nZW90cnVzdC5jb20wDQYJKoZIhvcNAQEFBQADggEBADOR
+NxHbQPnejLICiHevYyHBrbAN+qB4VqOC/btJXxRtyNxflNoRZnwekcW22G1PqvK/
+ISh+UqKSeAhhaSH+LeyCGIT0043FiruKzF3mo7bMbq1vsw5h7onOEzRPSVX1ObuZ
+lvD16lo8nBa9AlPwKg5BbuvvnvdwNs2AKnbIh+PrI7OWLOYdlF8cpOLNJDErBjgy
+YWE5XIlMSB1CyWee0r9Y9/k3MbBn3Y0mNhp4GgkZPJMHcCrhfCn13mZXCxJeFu1e
+vTezMGnGkqX2Gdgd+DYSuUuVlZzQzmwwpxb79k1ktl8qFJymyFWOIPllByTMOAVM
+IIi0tWeUz12OYjf+xLQ=
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+MIIDfTCCAuagAwIBAgIDErvmMA0GCSqGSIb3DQEBBQUAME4xCzAJBgNVBAYTAlVT
+MRAwDgYDVQQKEwdFcXVpZmF4MS0wKwYDVQQLEyRFcXVpZmF4IFNlY3VyZSBDZXJ0
+aWZpY2F0ZSBBdXRob3JpdHkwHhcNMDIwNTIxMDQwMDAwWhcNMTgwODIxMDQwMDAw
+WjBCMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNR2VvVHJ1c3QgSW5jLjEbMBkGA1UE
+AxMSR2VvVHJ1c3QgR2xvYmFsIENBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+CgKCAQEA2swYYzD99BcjGlZ+W988bDjkcbd4kdS8odhM+KhDtgPpTSEHCIjaWC9m
+OSm9BXiLnTjoBbdqfnGk5sRgprDvgOSJKA+eJdbtg/OtppHHmMlCGDUUna2YRpIu
+T8rxh0PBFpVXLVDviS2Aelet8u5fa9IAjbkU+BQVNdnARqN7csiRv8lVK83Qlz6c
+JmTM386DGXHKTubU1XupGc1V3sjs0l44U+VcT4wt/lAjNvxm5suOpDkZALeVAjmR
+Cw7+OC7RHQWa9k0+bw8HHa8sHo9gOeL6NlMTOdReJivbPagUvTLrGAMoUgRx5asz
+PeE4uwc2hGKceeoWMPRfwCvocWvk+QIDAQABo4HwMIHtMB8GA1UdIwQYMBaAFEjm
+aPkr0rKV10fYIyAQTzOYkJ/UMB0GA1UdDgQWBBTAephojYn7qwVkDBF9qn1luMrM
+TjAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjA6BgNVHR8EMzAxMC+g
+LaArhilodHRwOi8vY3JsLmdlb3RydXN0LmNvbS9jcmxzL3NlY3VyZWNhLmNybDBO
+BgNVHSAERzBFMEMGBFUdIAAwOzA5BggrBgEFBQcCARYtaHR0cHM6Ly93d3cuZ2Vv
+dHJ1c3QuY29tL3Jlc291cmNlcy9yZXBvc2l0b3J5MA0GCSqGSIb3DQEBBQUAA4GB
+AHbhEm5OSxYShjAGsoEIz/AIx8dxfmbuwu3UOx//8PDITtZDOLC5MH0Y0FWDomrL
+NhGc6Ehmo21/uBPUR/6LWlxz/K7ZGzIZOKuXNBSqltLroxwUCEm2u+WR74M26x1W
+b8ravHNjkOR/ez4iyz0H7V84dJzjA1BOoa+Y7mHyhD8S
+-----END CERTIFICATE-----
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/12401/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>03 Jul '12, 08:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/12401/">
+                edited
+                <strong>03 Jul '12, 08:58</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-12401">
+    
+        <a name="12403"></a>
+        <div class="comment" id="comment-12403">
+            <div id="post-12403-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I believe this to be the final solution for you</p>
+</blockquote>
+
+<p>I hope so as well ;-)</p></div>
+            <div class="comment-info" id="comment-12403-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jul '12, 09:32)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12404"></a>
+        <div class="comment" id="comment-12404">
+            <div id="post-12404-score" class="comment-score"></div>
+            <div class="comment-text"><p>It looks like that fixed it! It got rid of the unknown CA error and went on to access the webpage with errors as I expected it would. I'm appreciative of everyones patience with my ignorance of SSL. Thanks for all of your help.</p>
+
+<p>Terry</p></div>
+            <div class="comment-info" id="comment-12404-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jul '12, 09:33)</span>
+                <a class="comment-user userinfo" href="/users/2913/tcoder">tcoder</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-12401" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12401-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="12250"></a>
+                    <div id="answer-container-12250" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-12250-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12250/up/" rel="nofollow"> </a>
+<div id="post-12250-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-12250-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12250/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>From <a href="http://www.ietf.org/rfc/rfc2246.txt">RFC 2246</a></p>
+<pre>bad_certificate
+       A certificate was corrupt, contained signatures that did not
+       verify correctly, etc.
+</pre>
+
+<p>The client notifies the server, that the certificate was 'corrupt'. In that case you should see an error in the browser!</p>
+<p><strong>HINT:</strong> Why do you get a certificate from one of your internal systems (192.168.5.104) with a subject of <strong>cn=<a href="http://cden.chetest.com">cden.chetest.com</a></strong>? That domain is parked by <a href="http://godaddy.com">godaddy.com</a>, so there should be no such certificate on your network, except you generated it! Did you?</p>
+<p>As I mentioned in my <a href="http://ask.wireshark.org/questions/12187/no-server-hello-certificate-but-works">other answer</a>, there are signs that 'something' is possibly tampering with your network traffic on the lan (including the SSL connection). </p>
+<p>However, without further information, this is just speculation, based on the data in the capture file.</p>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/12250/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Jun '12, 17:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/12250/">
+                edited
+                <strong>27 Jun '12, 17:38</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-12250">
+    
+        <a name="12254"></a>
+        <div class="comment" id="comment-12254">
+            <div id="post-12254-score" class="comment-score"></div>
+            <div class="comment-text"><p>We've got a special case such that we needed a signed certificate by a CA. The URL of <a href="http://cden.chetest.com">cden.chetest.com</a> is in the host file of the PC the Apache webserver is in.  The <a href="http://cden.chetest.com">cden.chetest.com</a> is actually 192.168.5.104. We had GeoTrust create the certificate from our CSR file. </p>
+
+<p>Anyway, when I take any browser and execute it on the server machine with <a href="https://cden.chetest.com">https://cden.chetest.com</a>, it brings up the webpage with no errors whatsoever. The certificate was originally purchased by GoDaddy and we own the domain name.</p>
+
+<p>I ran out of characters. I'll finish up in the next comment.</p>
+
+<p>Regards,
+Terry</p></div>
+            <div class="comment-info" id="comment-12254-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jun '12, 20:18)</span>
+                <a class="comment-user userinfo" href="/users/2913/tcoder">tcoder</a>
+                
+            </div>
+        </div>
+    
+        <a name="12255"></a>
+        <div class="comment" id="comment-12255">
+            <div id="post-12255-score" class="comment-score"></div>
+            <div class="comment-text"><p>You mentioned the two MAC addresses. One is the MAC of the router and the other is the MAC of the Ethernet card in the server. They are the two MACs between the router and the server.</p>
+
+<p>The cn of the certificate is <a href="http://cden.chetest.com">cden.chetest.com</a>. If it was possible, I would use the private IP address for the CN. I made a self-signed certificate with that but our client machine gets an unknown CA error.</p>
+
+<p>If you need anymore info, let me know.</p>
+
+<p>Regards,
+Terry</p></div>
+            <div class="comment-info" id="comment-12255-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 Jun '12, 20:19)</span>
+                <a class="comment-user userinfo" href="/users/2913/tcoder">tcoder</a>
+                
+            </div>
+        </div>
+    
+        <a name="12256"></a>
+        <div class="comment" id="comment-12256">
+            <div id="post-12256-score" class="comment-score"></div>
+            <div class="comment-text"><p>:-) It would have been easier, if you had given that information in the first place. Without that information, it really looks a bit strange ;-)</p>
+
+<p>O.K. So, it's your cert. What do you see if you load the page with curl?</p>
+
+<blockquote>
+<p><code>curl --trace <a href="http://trace.txt">trace.txt</a> --cacert ca-bundle.pem <a href="https://cden.chetest.com">https://cden.chetest.com</a></code><br>
+</p>
+</blockquote>
+
+<p>Put the public Key of the GoDaddy root CA into the file ca-bundle.pem. There is an explanation <a href="http://curl.haxx.se/docs/sslcerts.html">how to create the ca bundle file</a>. An automatically generated ca bundle file (based on Firefox trusted root ca list), can be downloaded here: </p>
+
+<blockquote>
+<p><code><a href="http://curl.haxx.se/docs/caextract.html">http://curl.haxx.se/docs/caextract.html</a></code><br>
+</p>
+</blockquote>
+
+<p>The root ca of GoDaddy should be in that file, but I did not check!</p>
+
+<p>curl will create a trace file with SSL protocol messages. Maybe that gives some further hints.
+Sniff the curl traffic with Wireshark and compare the results. If there is an Alert in Wireshark, but none in curl (as you mentioned the browsers), post the output of the trace file and the capture file. If there is no Alert message with curl, you need to have a closer look at your browser.</p></div>
+            <div class="comment-info" id="comment-12256-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jun '12, 00:35)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12258"></a>
+        <div class="comment" id="comment-12258">
+            <div id="post-12258-score" class="comment-score"></div>
+            <div class="comment-text"><p>comment moved to <a href="http://ask.wireshark.org/questions/12187/no-server-hello-certificate-but-works?page=1#12259">this question</a>, as it confuses the 'flow' here ;-)</p></div>
+            <div class="comment-info" id="comment-12258-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jun '12, 01:17)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12296"></a>
+        <div class="comment" id="comment-12296">
+            <div id="post-12296-score" class="comment-score"></div>
+            <div class="comment-text"><p>I don't understand this sentence:
+What do you see if you load the page with curl?</p>
+
+<p>I tried the curl command and here is what I got. I ran it from the server PC.</p>
+
+<p>C:\Program Files\Curl&gt;curl --trace <a href="http://trace.txt">trace.txt</a> --cacert ca-bundle.pem <a href="https://cden.chetest.com">https://cden.chetest.com</a></p>
+
+<p>curl: (77) error setting certificate verify locations:
+  CAfile: ca-bundle.pem
+  CApath: none</p></div>
+            <div class="comment-info" id="comment-12296-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jun '12, 16:34)</span>
+                <a class="comment-user userinfo" href="/users/2913/tcoder">tcoder</a>
+                
+            </div>
+        </div>
+    
+        <a name="12299"></a>
+        <div class="comment not_top_scorer" id="comment-12299">
+            <div id="post-12299-score" class="comment-score"></div>
+            <div class="comment-text"><p>The error means, that the specified file 'ca-bundle.pem' does not exist. Download this File <a href="http://curl.haxx.se/ca/cacert.pem">http://curl.haxx.se/ca/cacert.pem</a> and save it to C:\Program Files\Curl\ca-bundle.pem. Then run the command again and post the trace file in an answer, together with a capture file on <a href="http://cloudshark.org">cloudshark.org</a>.</p></div>
+            <div class="comment-info" id="comment-12299-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jun '12, 23:00)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12318"></a>
+        <div class="comment not_top_scorer" id="comment-12318">
+            <div id="post-12318-score" class="comment-score"></div>
+            <div class="comment-text"><p>I couldn't post the entire message as I ran out of characters.</p>
+
+<p>I did what you said and it got another error:</p>
+
+<p>curl: (60) SSL certificate problem: unable to get local issuer certificate More details here: <a href="http://curl.haxx.se/docs/sslcerts.html">http://curl.haxx.se/docs/sslcerts.html</a></p>
+
+<p>curl performs SSL certificate verification by default, using a "bundle" of Certificate Authority (CA) public keys (CA certs). If the default bundle file isn't adequate, you can specify an alternate file using the --cacert option.</p></div>
+            <div class="comment-info" id="comment-12318-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '12, 08:21)</span>
+                <a class="comment-user userinfo" href="/users/2913/tcoder">tcoder</a>
+                
+            </div>
+        </div>
+    
+        <a name="12321"></a>
+        <div class="comment not_top_scorer" id="comment-12321">
+            <div id="post-12321-score" class="comment-score"></div>
+            <div class="comment-text"><p>I stopped the server and got an error saying the host was unavailable. Then I restarted it. Therefore I know that it is getting to the server.</p></div>
+            <div class="comment-info" id="comment-12321-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '12, 08:48)</span>
+                <a class="comment-user userinfo" href="/users/2913/tcoder">tcoder</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-12250" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 8
+        </span>
+        <a href="#" class="show-all-comments-link">show 3 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12250-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="12313"></a>
+                    <div id="answer-container-12313" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-12313-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12313/up/" rel="nofollow"> </a>
+<div id="post-12313-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-12313-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12313/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The configured intermediate certificate is not correct. Your server certificate is signed by:</p>
+<pre><code>issuer: rdnSequence (0)
+    rdnSequence: 4 items (id-at-commonName=GeoTrust DV SSL CA,id-at-organizationalUnitName=Domain Validated SSL,id-at-organizationName=GeoTrust Inc.,id-at-countryName=US)
+        RDNSequence item: 1 item (id-at-countryName=US)
+        RDNSequence item: 1 item (id-at-organizationName=GeoTrust Inc.)
+        RDNSequence item: 1 item (id-at-organizationalUnitName=Domain Validated SSL)
+        RDNSequence item: 1 item (id-at-commonName=GeoTrust DV SSL CA)
+</code></pre>
+<p>While the Intermediate CA that you have configured in your webserver is:</p>
+<pre><code>subject: rdnSequence (0)
+    rdnSequence: 3 items (id-at-commonName=GeoTrust Global CA,id-at-organizationName=GeoTrust Inc.,id-at-countryName=US)
+        RDNSequence item: 1 item (id-at-countryName=US)
+        RDNSequence item: 1 item (id-at-organizationName=GeoTrust Inc.)
+        RDNSequence item: 1 item (id-at-commonName=GeoTrust Global CA)
+</code></pre>
+<p>You need to configure the intermediate for "GeoTrust DV SSL CA" (and maybe more intermediate CA's) for this to work.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/12313/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Jun '12, 07:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-12313">
+    
+        <a name="12314"></a>
+        <div class="comment" id="comment-12314">
+            <div id="post-12314-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>If I use any browser, it works fine and <strong>never gets the error</strong>. </p>
+</blockquote>
+
+<p>should'nt the brower bring up an error message if the intermediate CA is wrong?</p></div>
+            <div class="comment-info" id="comment-12314-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '12, 07:49)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12316"></a>
+        <div class="comment" id="comment-12316">
+            <div id="post-12316-score" class="comment-score"></div>
+            <div class="comment-text"><p>How do I get the formatting correct? It's all run together.</p>
+
+<p>I went back to where they sent me the certificates. What they sent me was:</p>
+
+<p>Issued To: <a href="http://cden.chetest.com">cden.chetest.com</a>
+Issued By: GeoTrust DV SSL CA</p>
+
+<p>Issued To: GeoTrust DV SSL CA
+Issued By: GeoTrust Global CA</p>
+
+<p>Issued To: GeoTrust Global CA
+Issued By: GeoTrust Global CA</p>
+
+<p>I don't know what to do now. What do I use as the Server Certificate if I make GeoTrust DV SSL CA an intermediate certificate?</p></div>
+            <div class="comment-info" id="comment-12316-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '12, 08:09)</span>
+                <a class="comment-user userinfo" href="/users/2913/tcoder">tcoder</a>
+                
+            </div>
+        </div>
+    
+        <a name="12323"></a>
+        <div class="comment" id="comment-12323">
+            <div id="post-12323-score" class="comment-score"></div>
+            <div class="comment-text"><p>They sent me a .p7s file with the 3 certificates above. I'm thnking that I extracted the certificates wrong. How should I have done it?</p></div>
+            <div class="comment-info" id="comment-12323-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '12, 09:16)</span>
+                <a class="comment-user userinfo" href="/users/2913/tcoder">tcoder</a>
+                
+            </div>
+        </div>
+    
+        <a name="12324"></a>
+        <div class="comment" id="comment-12324">
+            <div id="post-12324-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>What do I use as the Server Certificate</p>
+</blockquote>
+
+<p>The only one for which you have the private key, <a href="http://cden.chetest.com">cden.chetest.com</a>!</p>
+
+<p>Let's go back to the browsers. Do you really get NO error message at all? Look at the certificate chain. Connect to the server, then open the cert and look at the tab "certificate chain" (IE). Does the browser show all intermediate CAs?</p></div>
+            <div class="comment-info" id="comment-12324-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '12, 09:17)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12334"></a>
+        <div class="comment" id="comment-12334">
+            <div id="post-12334-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, if I use IE or Chrome and enter <a href="https://cden.chetest.com/index.html,">https://cden.chetest.com/index.html,</a> I don't get any errors on the browser screen as long as the browsers are on the server PC. If I use the same browsers on another PC, I get an error stating that it can't find the webpage. If I use the IP address instead, I get the error stating that the URL isn't the same as the common name.</p>
+
+<p>Concerning the certificates, from right bottom to top left I get <a href="http://cden.chetest.com">cden.chetest.com</a>, GeoTrust DV SSL CA, GeoTrust Global CA. The Certificate status, on the bottom of the form says "This certificate is OK".</p></div>
+            <div class="comment-info" id="comment-12334-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '12, 12:59)</span>
+                <a class="comment-user userinfo" href="/users/2913/tcoder">tcoder</a>
+                
+            </div>
+        </div>
+    
+        <a name="12337"></a>
+        <div class="comment not_top_scorer" id="comment-12337">
+            <div id="post-12337-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, My Firefox already has that Intermediate in it's trusted authority list. But if some browsers/clients only have root CA's, then you need to supply the Intermediate. And at least you need to not supply the wrong one.</p>
+
+<p>So, you would use the following:</p>
+
+<pre><code>Server certificate:
+    use the one Issued To: <a href="http://cden.chetest.com">cden.chetest.com</a> Issued By: GeoTrust DV SSL CA
+
+Intermediate certficate:
+    use the one Issued To: GeoTrust DV SSL CA Issued By: GeoTrust Global CA
+</code></pre>
+
+<p>The other certificate is the root CA and you don't need to configure that, it's already in all popular browsers.</p></div>
+            <div class="comment-info" id="comment-12337-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '12, 13:50)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12343"></a>
+        <div class="comment not_top_scorer" id="comment-12343">
+            <div id="post-12343-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Yes, if I use IE or Chrome and enter <a href="https://cden.chetest.com/index.html,">https://cden.chetest.com/index.html,</a> &gt;I don't get any errors on the browser screen as long as the browsers are &gt;on the server PC.<br>
+</p>
+</blockquote>
+
+<p>IE and Chrome use the Cert store of Windows. I assume, you have all required intermediate CAs in the store. </p>
+
+<blockquote>
+<p>If I use the same browsers on another PC, I get an error stating<br>
+that it can't find the webpage.<br>
+</p>
+</blockquote>
+
+<p>Did you add the hostname to the hosts file? If not, you would connect to the external address of <a href="http://cden.chetes.com">cden.chetes.com</a> (208.87.35.107) and there is no service listening on tcp/443!! </p>
+
+<blockquote>
+<p>If I use the IP address instead, I get the error stating that<br>
+the URL isn't the same as the common name. </p>
+</blockquote>
+
+<p>Is that is the only error? No error regarding "issuer cert"? </p>
+
+<blockquote>
+<p>The Certificate status, on the bottom of the form says<br>
+This certificate is OK". </p>
+</blockquote>
+
+<p>When do you see this? If you connect from the Server, any PC? Access with hostname or with ip address?<br>
+</p>
+
+<p>BTW: The capture file with the Alert relates to which connection attempt?</p></div>
+            <div class="comment-info" id="comment-12343-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jun '12, 00:52)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12374"></a>
+        <div class="comment not_top_scorer" id="comment-12374">
+            <div id="post-12374-score" class="comment-score"></div>
+            <div class="comment-text"><p>IE and Chrome use the Cert store of Windows. I assume, you have all required intermediate CAs in the store:</p>
+
+<pre><code>I had the IIS server not running. I would think it uses only the Apache webserver. If I turn Apache off, it says it can't find webpage. Therefore I assumed it only used Apache.
+</code></pre>
+
+<p>Did you add the hostname to the hosts file? If not, you would connect to the external address of <a href="http://cden.chetes.com">cden.chetes.com</a> (208.87.35.107) and there is no service listening on tcp/443!! </p>
+
+<pre><code>Hostname was only added to server PC. It was not added to other PCs on private network.
+</code></pre></div>
+            <div class="comment-info" id="comment-12374-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jul '12, 09:44)</span>
+                <a class="comment-user userinfo" href="/users/2913/tcoder">tcoder</a>
+                
+            </div>
+        </div>
+    
+        <a name="12379"></a>
+        <div class="comment not_top_scorer" id="comment-12379">
+            <div id="post-12379-score" class="comment-score"></div>
+            <div class="comment-text"><p>When do you see this? If you connect from the Server, any PC? Access with hostname or with ip address?</p>
+
+<pre><code> I got a file <a href="http://cden.chetest.com">cden.chetest.com</a> from GeoTrust. It had 3 certificates in it. I exported the first certificate which had <a href="http://cden.chetest.com">cden.chetest.com</a> as the server certificate to che.crt. If I couble dlick on that file afterwards, it shows a path of 3 certificates, with <a href="http://cden.chetest.com">cden.chetest.com</a> being the lowest.
+</code></pre>
+
+<p>BTW: The capture file with the Alert relates to which connection attempt?</p>
+
+<p>This is the capture file of the HMC (192.168.5.103) to the server (192.168.6.104).</p></div>
+            <div class="comment-info" id="comment-12379-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jul '12, 12:09)</span>
+                <a class="comment-user userinfo" href="/users/2913/tcoder">tcoder</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-12313" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12313-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="12330"></a>
+                    <div id="answer-container-12330" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-12330-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/12330/up/" rel="nofollow"> </a>
+<div id="post-12330-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-12330-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/12330/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>They sent me a .p7s file with the 3 certificates above. I'm thnking that I extracted the certificates wrong. How should I have done it?</p>
+</blockquote>
+<p>Try this:</p>
+<blockquote>
+<p><code>openssl pkcs7 -in input.p7s -print_certs -out intermediate.pem</code></p>
+</blockquote>
+<p>Check if the output looks O.K. (should be several certs in there). Remove the cert of <a href="http://cden.chetest.com">cden.chetest.com</a> if it was also in the p7s (should be).</p>
+<p>Then use the server cert and the intermediate CAs, as described here: </p>
+<blockquote>
+<p><code><a href="https://www.globalsign.com/support/install/install_apache.php">https://www.globalsign.com/support/install/install_apache.php</a></code><br>
+<code><a href="http://www.digicert.com/ssl-certificate-installation-apache.htm">http://www.digicert.com/ssl-certificate-installation-apache.htm</a></code> <br>
+</p>
+</blockquote>
+<p>If you prefer a GUI wrapper for openssl, I recommend XCA.</p>
+<blockquote>
+<p><code><a href="http://xca.sourceforge.net/">http://xca.sourceforge.net/</a></code></p>
+</blockquote>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/12330/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Jun '12, 09:35</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/12330/">
+                edited
+                <strong>30 Jun '12, 00:38</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-12330">
+    
+        <a name="12332"></a>
+        <div class="comment" id="comment-12332">
+            <div id="post-12332-score" class="comment-score"></div>
+            <div class="comment-text"><p>I tried the openssl command but it failed stating that "in" is an invalid commend.</p></div>
+            <div class="comment-info" id="comment-12332-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Jun '12, 12:23)</span>
+                <a class="comment-user userinfo" href="/users/2913/tcoder">tcoder</a>
+                
+            </div>
+        </div>
+    
+        <a name="12342"></a>
+        <div class="comment" id="comment-12342">
+            <div id="post-12342-score" class="comment-score"></div>
+            <div class="comment-text"><p>sorry,'pkcs7' was missing. Please try again.</p></div>
+            <div class="comment-info" id="comment-12342-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Jun '12, 00:38)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12373"></a>
+        <div class="comment" id="comment-12373">
+            <div id="post-12373-score" class="comment-score"></div>
+            <div class="comment-text"><p>There are 3 certs in the file:
+Cert #1
+subject=/C=US/O=GeoTrust Inc./CN=GeoTrust Global CA
+issuer=/C=US/O=GeoTrust Inc./CN=GeoTrust Global CA</p>
+
+<p>Cert #2
+subject=/C=US/O=GeoTrust Inc./OU=Domain Validated SSL/CN=GeoTrust DV SSL CA
+issuer=/C=US/O=GeoTrust Inc./CN=GeoTrust Global CA</p>
+
+<p>Cert #3
+subject=/serialNumber=kmWaloVmfmBbYPVRYDjZrMhK6hqymshv/OU=GT07032149/OU=<a href="http://www.geotrust.com/resources/cps/OU=Domain">www.geotrust.com/resources/cps/OU=Domain</a> Control Validated - GeoTrust(R) SSL Trial/CN=<a href="http://cden.chetest.com">cden.chetest.com</a>
+issuer=/C=US/O=GeoTrust Inc./OU=Domain Validated SSL/CN=GeoTrust DV SSL CA</p>
+
+<p>Which one do I remove and what do I do with the rest?</p></div>
+            <div class="comment-info" id="comment-12373-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jul '12, 09:21)</span>
+                <a class="comment-user userinfo" href="/users/2913/tcoder">tcoder</a>
+                
+            </div>
+        </div>
+    
+        <a name="12375"></a>
+        <div class="comment" id="comment-12375">
+            <div id="post-12375-score" class="comment-score"></div>
+            <div class="comment-text"><p>Cert #3 is for your server. Apache config file: SSLCertificateFile. The corresponding private key goes to SSLCertificateKeyFile.</p>
+
+<p>Cert #2 is the intermediate CA. Apache config file: SSLCertificateChainFile</p>
+
+<p>Cert #1 you don't need that on the server. Import that CA cert into your browser cert store, IF it is not already there (rather unlikely).</p>
+
+<p>If you don't get any SSL Alerts after that, please select the answer of SYN-Bit as the correct one, as he first pointed out the problem with the wrong intermediate CA!</p></div>
+            <div class="comment-info" id="comment-12375-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jul '12, 10:01)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="12380"></a>
+        <div class="comment" id="comment-12380">
+            <div id="post-12380-score" class="comment-score"></div>
+            <div class="comment-text"><p>I followed the previous instructions and kept getting an error stating that the keyfile didn't match the server certificate. </p>
+
+<p>I found a combination of server cert and intermediate cert that doesn't get "bad Certificate". Now I get "unknown CA". I uploaded the trace to Cloudshark.  Here is the trace:</p>
+
+<p><a href="http://cloudshark.org/captures/8e9dc27a2306?filter=tcp.port%20%3D%3D%20443">http://cloudshark.org/captures/8e9dc27a2306?filter=tcp.port%20%3D%3D%20443</a></p>
+
+<p>Just to make sure you know, this is the HMC (client) connecting with my Apache server on Windows XP.</p></div>
+            <div class="comment-info" id="comment-12380-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Jul '12, 17:01)</span>
+                <a class="comment-user userinfo" href="/users/2913/tcoder">tcoder</a>
+                
+            </div>
+        </div>
+    
+        <a name="12400"></a>
+        <div class="comment not_top_scorer" id="comment-12400">
+            <div id="post-12400-score" class="comment-score"></div>
+            <div class="comment-text"><p>I made another Wireshark trace on the server PC and got a cleaner result with no retries as before. I uploaded it to Cloudshark and the URL is: <a href="http://cloudshark.org/captures/1b67ed75d869?filter=tcp.port%20%3D%3D%20443">http://cloudshark.org/captures/1b67ed75d869?filter=tcp.port%20%3D%3D%20443</a>
+This is a trace of the HMC connecting to the Apache server getting an error of "unknown CA". </p>
+
+<p>The next trace is where the HMC contacts the IBM website with no failure.
+ <a href="http://cloudshark.org/captures/6a47effe6552?filter=ip.addr%20%3D%3D%20192.168.5.103">http://cloudshark.org/captures/6a47effe6552?filter=ip.addr%20%3D%3D%20192.168.5.103</a></p>
+
+<p>Can someone look at the two traces and help showing me what cert I should add to the "unknown CA" connection if possible?</p></div>
+            <div class="comment-info" id="comment-12400-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jul '12, 07:38)</span>
+                <a class="comment-user userinfo" href="/users/2913/tcoder">tcoder</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-12330" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-12330-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/12248/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='BsE0P6fP3Fl4GGrCdcTyjTWwmgKw3QsM' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12248/bad-certificate?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/12248/bad-certificate?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/certificate/"
+            class="tag-link-certificate"
+            title="see questions tagged'certificate'using tags"
+            rel="tag">certificate</a> <span class="tag-number">&#215;18</span><br/>
+        
+        <a href="/tags/bad/"
+            class="tag-link-bad"
+            title="see questions tagged'bad'using tags"
+            rel="tag">bad</a> <span class="tag-number">&#215;9</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 27, 2012, 3:56 p.m.">27 Jun '12, 15:56</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>21,187 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 3, 2012, 9:34 a.m.">03 Jul '12, 09:34</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/34969/ssl-bad-certificate">SSL Bad certificate</a>
+        </p>
+        
+        <p>
+            <a href="/questions/634/acc-to-wireshark-999-of-my-outgoing-packets-have-a-bad-checksum">Acc. to Wireshark, 99.9% of my outgoing packets have a bad checksum...</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40180/asn1-certificate-code-in-ssl">Asn.1 certificate code in SSL</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1747/explantion-of-wireshark-trace">Explantion of wireshark trace</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41464/device-sends-fin-ack-immediately-after-the-ssl-certificate-is-received">Device sends FIN, ACK immediately after the SSL certificate is received</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6430/analyze-per-ip">Analyze per IP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44527/extracting-ssl-certificate-with-tshark">Extracting SSL Certificate with tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52878/ssl-negotiation-errors">SSL negotiation errors</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48181/when-running-wireshark-i-came-across-what-seems-to-be-bad-tcp">when running wireshark i came across what seems to be Bad TCP.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/55306/tls-v1-record-layer-fatal-description-bad-certificate">TLS V1 Record Layer - Fatal, Description: Bad Certificate</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

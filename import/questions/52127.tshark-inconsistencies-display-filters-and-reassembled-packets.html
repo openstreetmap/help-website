@@ -1,0 +1,1109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TShark Inconsistencies - display filters and reassembled packets - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi guys Related to: https://ask.wireshark.org/questions/47999/mate-with-tshark-on-wireshark-20 I&#39;ve been trying to work out what&#39;s missing with our batch processing of files with TShark, and it looks like even when we use two pass filtering, I&#39;m still not picking up all the data that I would expect ..." />
+        <meta name="keywords" content="dissector,tshark,display-filter" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/52127/tshark-inconsistencies-display-filters-and-reassembled-packets" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/52127/tshark-inconsistencies-display-filters-and-reassembled-packets?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='OT4kogCZleQtyeVFBu7UaT0n5Z6Tx2XI' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/52127/tshark-inconsistencies-display-filters-and-reassembled-packets">TShark Inconsistencies - display filters and reassembled packets</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-52127-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52127/up/" rel="nofollow"> </a>
+<div id="post-52127-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-52127-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52127/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/52127/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi guys
+Related to: <a href="https://ask.wireshark.org/questions/47999/mate-with-tshark-on-wireshark-20">https://ask.wireshark.org/questions/47999/mate-with-tshark-on-wireshark-20</a></p>
+<p>I've been trying to work out what's missing with our batch processing of files with TShark, and it looks like even when we use two pass filtering, I'm still not picking up all the data that I would expect to see.</p>
+<p>I've got a batch file (details inline) where we can pass in a basic filter and get all the GIOP traffic back out again, but it drops all reassembled packets.
+Here's a screenshot of the raw capture filtered directly in Wireshark
+<img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/ISA_SBS_CAR2_00230_20160427115926.pcapng_2016-05-02_10-28-58.png"></p>
+<p>Typically I would want to batch filter the traffic to take only the CORBA traffic using a script like this:
+It doesn't actually matter what I pass in at this point, as a lot of the expected data gets dropped.
+<img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/__filter_merge_pcap.bat_-_Notepad2_2016-05-02_10-34-35.png"></p>
+<p>However, I've just noticed that after doing so, my traffic looks like this - we are dropping any reassembled packets which I (possibly erroneously) would have expected to be there:</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/ISA_SBS_CAR2_00230_20160427115926.pcapng_2016-05-02_10-31-58.png"></p>
+<p>Is there anything you think I can attempt to batch filter out non-corba traffic to reduce the size of the sample files that I'm looking at?</p>
+<p>Cheers 
+Scott</p>
+<p>Sample file is still relevant, but I've uploaded new, fresh sample files now, this one is filtered by TShark just on GIOP traffic - the best sensible examples are at 12.00.09</p>
+<p><a href="https://dl.dropboxusercontent.com/u/7916275/ISA_SBS_CAR2_00230_20160427115926_filtered.zip">https://dl.dropboxusercontent.com/u/7916275/ISA_SBS_CAR2_00230_20160427115926_filtered.zip</a></p>
+<p>This file is the unfiltered traffic.
+<a href="https://dl.dropboxusercontent.com/u/7916275/ISA_SBS_CAR2_00230_20160427115926.zip">https://dl.dropboxusercontent.com/u/7916275/ISA_SBS_CAR2_00230_20160427115926.zip</a></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/dissector/" class="post-tag tag-link-dissector"
+                                        title="see questions tagged 'dissector'" rel="tag">dissector</a>
+                                
+                                    <a href="/tags/tshark/" class="post-tag tag-link-tshark"
+                                        title="see questions tagged 'tshark'" rel="tag">tshark</a>
+                                
+                                    <a href="/tags/display-filter/" class="post-tag tag-link-display-filter"
+                                        title="see questions tagged 'display-filter'" rel="tag">display-filter</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>01 May '16, 17:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c4a59238ef906285e110fa429a9a94b9?s=32&amp;d=identicon&amp;r=g" alt="Scott%20Harman's gravatar image" />
+    <p><a href="/users/2648/scott-harman">Scott Harman</a><br/>
+    <span class="score" title="46 reputation points">46</span><span title="13 badges"><span class="badge1">&#9679;</span><span class="badgecount">13</span></span><span title="13 badges"><span class="silver">&#9679;</span><span class="badgecount">13</span></span><span title="19 badges"><span class="bronze">&#9679;</span><span class="badgecount">19</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Scott Harman has one accepted answer">50&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52127/">
+                edited
+                <strong>01 May '16, 18:39</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-52127">
+    
+</div>
+<div id="comment-tools-52127" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52127-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/52127/tshark-inconsistencies-display-filters-and-reassembled-packets?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/52127/tshark-inconsistencies-display-filters-and-reassembled-packets?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/52127/tshark-inconsistencies-display-filters-and-reassembled-packets?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/52127/tshark-inconsistencies-display-filters-and-reassembled-packets?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="52140"></a>
+                    <div id="answer-container-52140" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52140-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52140/up/" rel="nofollow"> </a>
+<div id="post-52140-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-52140-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52140/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="cmaynard has selected this answer as the correct answer"
+        href="/accept_answer/52140/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p><a href="/users/2648/scott-harman"><a href="/users/2648/scott-harman">@Scott Harman</a></a>, although <code>-R</code> and <code>-Y</code> use the same "display filter" syntax, their roles are different. So what you have to do is to activate the two-pass mode but still use <code>-Y</code>.</p>
+<p>What I did on your last "raw" file:</p>
+<ul>
+<li>first, I've used tshark to let through only first 50000 frames, because the complete file kills Wireshark 2.0.3: while Wireshark dies silently, tshark says:</li>
+</ul>
+<p><code>** (tshark.exe:1916): WARNING **: Dissector bug, protocol COSNAMING, in packet 51973: STATUS_ACCESS_VIOLATION: dissector accessed an invalid memory address</code></p>
+<ul>
+<li>then, I've ran the following:</li>
+</ul>
+<p><code>tshark.exe" -Y "giop.len == 131088" -r c:\Users\MyName\Downloads\ISA_SBS_modified.pcapng -w c:\Users\MyName\Downloads\isa_sbs_test.pcapng</code></p>
+<p>The resulting file contained only the last TCP packet of each giop PDU matching the condition.</p>
+<ul>
+<li>and then, I've added the <code>-2</code> to the above:</li>
+</ul>
+<p><code>tshark.exe" -Y "giop.len == 131088" -r c:\Users\MyName\Downloads\ISA_SBS_modified.pcapng -2 -w c:\Users\MyName\Downloads\isa_sbs_test_2pass.pcapng</code></p>
+<p>...et voilà, all contributing TCP packets are there.</p>
+<p>But beware of <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=12161">Bug 12161</a> - if you would attempt to filter by <code>mate</code> fields, things would go much worse (unless someone has silently fixed it in 2.0.3 without updating the bug information). I don't know, however, whether the MATE config may be used, and it is only the <strong>use of</strong> <code>mate</code> <strong>fields in filter expressions</strong> which causes the issue, or whether mere MATE <strong>processing</strong> of the frames is enough for things to go wrong.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52140/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 May '16, 01:10</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52140/">
+                edited
+                <strong>03 May '16, 03:05</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52140">
+    
+        <a name="52162"></a>
+        <div class="comment" id="comment-52162">
+            <div id="post-52162-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks <a href="/users/19586/sindy">@sindy</a>- on 2.1.0 (based on a build from about a week ago) using both -Y and -2 works successfully with no additional filtering, as our Q_Quentin plugin successfully parses the data.
+Can you convert your comment to an answer so I can accept it.
+I'm going to roll my own 2.0.3 (having some Qt silliness at present) and can supply our plugin to see if you get the same results as me if that sounds sensible?
+Once processed, I'm able to use MATE in the gui so I can do silly things like: (mate.giop_req.giop_request_op contains "Fragments" &amp;&amp; !mate.giop_req.giop_request_op contains "SubType")  || mate.giop_req.giop_request_op contains "Clip" so I can track all media movement from a single filter</p></div>
+            <div class="comment-info" id="comment-52162-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 May '16, 16:23)</span>
+                <a class="comment-user userinfo" href="/users/2648/scott-harman">Scott Harman</a>
+                
+            </div>
+        </div>
+    
+        <a name="52167"></a>
+        <div class="comment" id="comment-52167">
+            <div id="post-52167-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/402/cmaynard">@cmaynard</a> was faster than me in converting my Comment into an Answer (thank you, Christopher). I have an issue with the following sentence:</p>
+
+<blockquote>
+<p>I'm going to roll my own 2.0.3 (having some Qt silliness at present) and can supply our plugin to see if you get the same results as me if that sounds sensible?</p>
+</blockquote>
+
+<p>English is not my first language so I didn't get what exactly you mean by "rolling" the 2.0.3. But if you want me to test your plugin with an "off-the-shelf" 2.0.3, there is no problem on my side. Just bear in mind the COSNAMIG dissector issue mentioned in the Answer, i.e. I can only do any tests on the trimmed capture.</p></div>
+            <div class="comment-info" id="comment-52167-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '16, 03:19)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="52208"></a>
+        <div class="comment" id="comment-52208">
+            <div id="post-52208-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi <a href="/users/19586/sindy">@sindy</a>
+I built a version of 2.0.3 with our own custom giop plugin, so the COSNAMING error does not occur with our build, so the larger reassembled packets are correctly interpreted as Q_QUENTIN rather than COSNAMING or anything else.  As a result, filtering on just GIOP with both -Y and -2 does work entirely successfully.  Our build is available here if you want to verify my tests?  <a href="https://dl.dropboxusercontent.com/u/7916275/Wireshark-win32-2.0.3.exe">https://dl.dropboxusercontent.com/u/7916275/Wireshark-win32-2.0.3.exe</a></p></div>
+            <div class="comment-info" id="comment-52208-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '16, 18:06)</span>
+                <a class="comment-user userinfo" href="/users/2648/scott-harman">Scott Harman</a>
+                
+            </div>
+        </div>
+    
+        <a name="52236"></a>
+        <div class="comment" id="comment-52236">
+            <div id="post-52236-score" class="comment-score"></div>
+            <div class="comment-text"><p>Put this way I'm not sure I understand the purpose of such a test - after all, what matters is that it works for you :-)  Given that I know nothing about Q_QUENTIN, and that you haven't posted your MATE config (which could be another thing to verify), what additional information do you expect from my repetition of the test using your capture file and your customized version of Wireshark, i.e. the only difference would be the hardware used?</p>
+
+<p>To check whether MATE still behaves the same in tshark as reported in <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=12161">Bug 12161</a>, it is actually enough that I disable the COSNAMING dissector (and that I have you MATE config, of course).</p>
+
+<p>What bothers <em>me</em> is whether I may use a representative part of your capture to file a bug regarding the COSNAMING (whatever it is) dissector, as I principally don't like that any contents of a capture file would be enough to crash Wireshark.</p></div>
+            <div class="comment-info" id="comment-52236-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 May '16, 13:11)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="52377"></a>
+        <div class="comment" id="comment-52377">
+            <div id="post-52377-score" class="comment-score"></div>
+            <div class="comment-text"><p>Mate config is here: <a href="https://dl.dropboxusercontent.com/u/7916275/quantel.mate">https://dl.dropboxusercontent.com/u/7916275/quantel.mate</a>  and you can use my sample capture to file the bug.  I believe that the MATE issue I've seen are the same as what I was previously enquiring about.</p></div>
+            <div class="comment-info" id="comment-52377-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 May '16, 18:36)</span>
+                <a class="comment-user userinfo" href="/users/2648/scott-harman">Scott Harman</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52140" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52140-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="52128"></a>
+                    <div id="answer-container-52128" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52128-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52128/up/" rel="nofollow"> </a>
+<div id="post-52128-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-52128-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52128/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Did you try replacing <code>-2R %DFILTER%</code> with <code>-Y %DFILTER%</code>?</p>
+<p>Also, you might want to enclose <code>%DFILTER%</code> in quotes; otherwise more complicated filters will likely fail.</p>
+<p><strong>NOTE</strong>: For some strange reason I originally kept getting an error when attempting to post this answer with <code>DFILTER</code> enclosed in <code>%</code>'s, so I changed the format, but it seems to be working now after switching from Firefox (44.0.2) to IE (11.0.9600.18204).  Here was the weird error I was getting:</p>
+<pre><code>Error %SYSTEM-E-NOTWATCH, not on my watch.
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52128/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 May '16, 17:55</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" alt="cmaynard's gravatar image" />
+    <p><a href="/users/402/cmaynard">cmaynard ♦♦</a><br/>
+    <span class="score" title="9361 reputation points"><span class="">9.4k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">&#9679;</span><span class="badgecount">142</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cmaynard has 108 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/52128/">
+                edited
+                <strong>01 May '16, 17:58</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52128">
+    
+        <a name="52129"></a>
+        <div class="comment" id="comment-52129">
+            <div id="post-52129-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi <a href="/users/402/cmaynard">@cmaynard</a> - makes no difference - the resulting files are identical and still missing any reassembled packets.  I added the heuristic dissector, but suspecting i'm missing something fairly fundamental.</p></div>
+            <div class="comment-info" id="comment-52129-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 May '16, 18:04)</span>
+                <a class="comment-user userinfo" href="/users/2648/scott-harman">Scott Harman</a>
+                
+            </div>
+        </div>
+    
+        <a name="52130"></a>
+        <div class="comment" id="comment-52130">
+            <div id="post-52130-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is the same sample capture file posted to the other question relevant here as well?  If not, can you post one?</p></div>
+            <div class="comment-info" id="comment-52130-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 May '16, 18:11)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52131"></a>
+        <div class="comment" id="comment-52131">
+            <div id="post-52131-score" class="comment-score"></div>
+            <div class="comment-text"><p>A couple of more questions:</p>
+
+<ul>
+<li>What version of Wireshark are you using?</li>
+<li>What are your preferences set to, in particular IPv4, TCP and GIOP and especially with respect to reassembly?</li>
+</ul></div>
+            <div class="comment-info" id="comment-52131-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 May '16, 18:18)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52132"></a>
+        <div class="comment" id="comment-52132">
+            <div id="post-52132-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is there only a single TCP port for the giop traffic?  Perhaps a filter such as <code>"tcp.port eq &lt;port&gt;"</code> would work?</p></div>
+            <div class="comment-info" id="comment-52132-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 May '16, 18:35)</span>
+                <a class="comment-user userinfo" href="/users/402/cmaynard">cmaynard ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="52133"></a>
+        <div class="comment" id="comment-52133">
+            <div id="post-52133-score" class="comment-score"></div>
+            <div class="comment-text"><p>Reassembly is set on all protocols
+Currently running 2.0.1 but also testing the bleeding edge 2.1.0 development build
+I've updated the question with links to fresh sample files</p></div>
+            <div class="comment-info" id="comment-52133-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 May '16, 18:38)</span>
+                <a class="comment-user userinfo" href="/users/2648/scott-harman">Scott Harman</a>
+                
+            </div>
+        </div>
+    
+        <a name="52134"></a>
+        <div class="comment not_top_scorer" id="comment-52134">
+            <div id="post-52134-score" class="comment-score"></div>
+            <div class="comment-text"><p>I can give it a shot based on the large port range that we have defined - will try that now</p></div>
+            <div class="comment-info" id="comment-52134-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 May '16, 18:44)</span>
+                <a class="comment-user userinfo" href="/users/2648/scott-harman">Scott Harman</a>
+                
+            </div>
+        </div>
+    
+        <a name="52135"></a>
+        <div class="comment not_top_scorer" id="comment-52135">
+            <div id="post-52135-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yeah - sadly the range for traffic for our app is about 400 ports, so it's a little unwieldy - but will have another stab shortly.</p></div>
+            <div class="comment-info" id="comment-52135-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 May '16, 20:27)</span>
+                <a class="comment-user userinfo" href="/users/2648/scott-harman">Scott Harman</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52128" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 7
+        </span>
+        <a href="#" class="show-all-comments-link">show 2 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52128-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/52127/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='OT4kogCZleQtyeVFBu7UaT0n5Z6Tx2XI' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52127/tshark-inconsistencies-display-filters-and-reassembled-packets?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/52127/tshark-inconsistencies-display-filters-and-reassembled-packets?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tshark/"
+            class="tag-link-tshark"
+            title="see questions tagged'tshark'using tags"
+            rel="tag">tshark</a> <span class="tag-number">&#215;832</span><br/>
+        
+        <a href="/tags/dissector/"
+            class="tag-link-dissector"
+            title="see questions tagged'dissector'using tags"
+            rel="tag">dissector</a> <span class="tag-number">&#215;637</span><br/>
+        
+        <a href="/tags/display-filter/"
+            class="tag-link-display-filter"
+            title="see questions tagged'display-filter'using tags"
+            rel="tag">display-filter</a> <span class="tag-number">&#215;165</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 1, 2016, 5:37 p.m.">01 May '16, 17:37</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,294 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 9, 2016, 6:36 p.m.">09 May '16, 18:36</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/9303/how-to-retrieve-packet-information-using-wireshark-commands">how to retrieve packet information using wireshark commands</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40301/how-do-i-get-the-packet-detail-text-using-tshark">How do I get the packet detail text using tshark?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50095/how-to-generate-a-file-with-specific-attributes-from-a-pcap-file">How to generate a file with specific attributes from a .pcap file?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57865/filtering-by-mac-is-not-working">Filtering by mac is not working.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60902/localized-lua-dissector-tostring-in-tshark-output">Localized LUA Dissector tostring() in TShark Output</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3490/tshark-plugin-for-tunelled-ethernet-payload">tshark plugin for tunelled ethernet payload</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5241/tshark-display-filter-in-windows-command-line-seems-not-support-special-characters">tshark display filter in windows command-line seems not support special characters</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22282/throughput-calculation">Throughput calculation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59167/tshark-sshhost_keydata-display-filter">tshark ssh.host_key.data display filter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5344/tshark-output-and-ldapresponse_in">tshark output and ldap.response_in</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

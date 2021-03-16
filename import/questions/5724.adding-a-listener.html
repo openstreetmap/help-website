@@ -1,0 +1,864 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>adding a listener? - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, I am trying to customize a version of wireshark. I believe what I am trying to do is add a listener, but I&#39;m not sure. I want to be able to take certain packets, including packets with errors, and send them over a socket to another application. I will need to do some customized processing of the..." />
+        <meta name="keywords" content="listener,lua,development" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/5724/adding-a-listener" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/5724/adding-a-listener?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='mC4HIoFLLeDIyA9g3IO0jD1JHTv5Cx1r' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/5724/adding-a-listener">adding a listener?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-5724-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5724/up/" rel="nofollow"> </a>
+<div id="post-5724-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-5724-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5724/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/5724/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi, I am trying to customize a version of wireshark. I believe what I am trying to do is add a listener, but I'm not sure. I want to be able to take certain packets, including packets with errors, and send them over a socket to another application. I will need to do some customized processing of these packets, although I can either do that processing as part of wireshark, or I can do it on the other side of my socket.</p>
+<p>Does it sound like I need to add a "Listener"?</p>
+<p>If so, is adding a listener best done in a lua script, or by modifying the wireshark C code? In the lua documentation, I see information on adding a listener, but I did not see that in the wireshark development (C) documentation. I have used C/C++ for many years but have never used lua.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/listener/" class="post-tag tag-link-listener"
+                                        title="see questions tagged 'listener'" rel="tag">listener</a>
+                                
+                                    <a href="/tags/lua/" class="post-tag tag-link-lua"
+                                        title="see questions tagged 'lua'" rel="tag">lua</a>
+                                
+                                    <a href="/tags/development/" class="post-tag tag-link-development"
+                                        title="see questions tagged 'development'" rel="tag">development</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Aug '11, 11:49</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/851676df3c7a09999c0522099f40d6e1?s=32&amp;d=identicon&amp;r=g" alt="JVo's gravatar image" />
+    <p><a href="/users/1450/jvo">JVo</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="8 badges"><span class="bronze">&#9679;</span><span class="badgecount">8</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JVo has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-5724">
+    
+        <a name="5732"></a>
+        <div class="comment" id="comment-5732">
+            <div id="post-5732-score" class="comment-score"></div>
+            <div class="comment-text"><p>possible <a href="http://ask.wireshark.org/questions/5659/how-best-to-customize-wireshark">duplicate</a></p></div>
+            <div class="comment-info" id="comment-5732-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Aug '11, 22:08)</span>
+                <a class="comment-user userinfo" href="/users/817/helloworld">helloworld</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5724" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5724-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/5724/adding-a-listener?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/5724/adding-a-listener?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/5724/adding-a-listener?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/5724/adding-a-listener?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="5731"></a>
+                    <div id="answer-container-5731" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-5731-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/5731/up/" rel="nofollow"> </a>
+<div id="post-5731-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-5731-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/5731/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Yes, a Listener (aka "Tap") is appropriate for the task. I would pick Lua over C. Don't be afraid of Lua...it's easy to learn:</p>
+<ul>
+<li><a href="http://lua-users.org/wiki/LuaTutorial">Lua Tutorial</a></li>
+<li><a href="http://wiki.wireshark.org/LuaAPI">Wireshark Lua API Wiki</a></li>
+<li><a href="http://www.wireshark.org/docs/wsug_html_chunked/wsluarm.html">Wireshark Lua Manual</a></li>
+<li><a href="http://www.wireshark.org/docs/wsug_html_chunked/wslua_tap_example.html">Lua Listener Example</a></li>
+<li><a href="http://wiki.wireshark.org/Lua/Taps">More Lua Listener Examples</a></li>
+<li><a href="http://wiki.wireshark.org/Lua/Examples#dumping_to_multiple_files">Listener that extracts packets to multiple files</a></li>
+</ul>
+<h2>Lua vs C</h2>
+<p>Here are a few points:</p>
+<p><em>PROS</em></p>
+<ol>
+<li>
+<p>Bugs in Lua scripts are less likely to crash Wireshark. The few crashes I've seen are from bugs in underlying
+C code that the Lua API invokes.</p>
+</li>
+<li>
+<p>Lua scripts are compatible across multiple versions of Wireshark.
+On the other hand, it's recommended that C dissectors be re-compiled for the target Wireshark version to maintain compatibility.</p>
+</li>
+<li>
+<p>Lua development is faster than in C. Need to make a change? Edit the Lua script and restart Wireshark.
+(This ease of development is not seen for C dissectors.) A Wireshark installation, which includes a Lua
+interpreter, is all you need to run a Lua script. No need for compilers or specific versions of libraries.</p>
+</li>
+</ol>
+<p><em>CONS</em></p>
+<ol>
+<li>
+<p>Lua scripts can be difficult to debug with Wireshark (there are few tools). You'll have to rely on print-outs to the console.</p>
+</li>
+<li>
+<p>Lua can be less efficient (performance and memory) than C, but that's inherent in scripting languages. You might not even notice unless you
+open huge pcaps.</p>
+</li>
+<li>
+<p>Lua can be less powerful than C because only a subset of Wireshark's functions are available to the Lua API, but you can use <a href="https://github.com/LuaDist/alien">LuaAlien</a> to invoke
+functions from libwireshark.dll/.so (or any other library). You probably won't need the unavailable functions anyway.</p>
+</li>
+</ol>
+<h2>Sockets</h2>
+<p>See <a href="http://w3.impa.br/~diego/software/luasocket/">LuaSocket</a> (or you can use LuaAlien to call your own C library).</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/5731/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>17 Aug '11, 22:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/362ba1008ad9a075d1556d33e97dfed6?s=32&amp;d=identicon&amp;r=g" alt="helloworld's gravatar image" />
+    <p><a href="/users/817/helloworld">helloworld</a><br/>
+    <span class="score" title="3149 reputation points"><span class="">3.1k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="20 badges"><span class="silver">&#9679;</span><span class="badgecount">20</span></span><span title="41 badges"><span class="bronze">&#9679;</span><span class="badgecount">41</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="helloworld has 28 accepted answers">28&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-5731">
+    
+        <a name="5742"></a>
+        <div class="comment" id="comment-5742">
+            <div id="post-5742-score" class="comment-score"></div>
+            <div class="comment-text"><p>Wow, thanks for a very thorough response. I will go through everything you gave me, and let you know when I have more specific questions.</p>
+
+<p>I do like being able to debug C, and the fact that I already know C makes me think that for me, C development would be faster than Lua. But I also don't want to muck with something that might cause wireshark. So, I guess I'll explore my options for now. Okay, so a listener is a tap, huh? I still need to get a handle on the terminology I guess.</p></div>
+            <div class="comment-info" id="comment-5742-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Aug '11, 08:37)</span>
+                <a class="comment-user userinfo" href="/users/1450/jvo">JVo</a>
+                
+            </div>
+        </div>
+    
+        <a name="5749"></a>
+        <div class="comment" id="comment-5749">
+            <div id="post-5749-score" class="comment-score"></div>
+            <div class="comment-text"><p>So, I'm also looking at adding various dissectors and will need to determine whether to do those in C or lua. It looks like using C provides me with an easy way to reassemble TCP packets: http://www.wireshark.org/docs/wsdg_html_chunked/ChDissectReassemble.html. Can I get TCP reassembly with lua?</p></div>
+            <div class="comment-info" id="comment-5749-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Aug '11, 16:29)</span>
+                <a class="comment-user userinfo" href="/users/1450/jvo">JVo</a>
+                
+            </div>
+        </div>
+    
+        <a name="5751"></a>
+        <div class="comment" id="comment-5751">
+            <div id="post-5751-score" class="comment-score"></div>
+            <div class="comment-text"><p>When I said "Lua development is faster", I meant the time between making a change in code and seeing its effect in action (you simply restart Wireshark to see the change). This is opposed to the time it takes to re-compile a C dissector and re-deploy it. (Not to mention the time it takes to setup your dev environment for building Wireshark)</p>
+
+<p>Then again, faster or not, I certainly agree that you should go with the language you're most comfortable with.</p></div>
+            <div class="comment-info" id="comment-5751-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Aug '11, 17:57)</span>
+                <a class="comment-user userinfo" href="/users/817/helloworld">helloworld</a>
+                
+            </div>
+        </div>
+    
+        <a name="5752"></a>
+        <div class="comment" id="comment-5752">
+            <div id="post-5752-score" class="comment-score"></div>
+            <div class="comment-text"><p>Wireshark Lua does not expose the TCP reassembly function (namely <code>tcp_dissect_pdus</code>). However, you can use LuaAlien to invoke it.</p></div>
+            <div class="comment-info" id="comment-5752-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Aug '11, 18:02)</span>
+                <a class="comment-user userinfo" href="/users/817/helloworld">helloworld</a>
+                
+            </div>
+        </div>
+    
+        <a name="5763"></a>
+        <div class="comment" id="comment-5763">
+            <div id="post-5763-score" class="comment-score"></div>
+            <div class="comment-text"><p>Cool, thanks! Okay, I'm getting a better handle on my options. :o)</p></div>
+            <div class="comment-info" id="comment-5763-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Aug '11, 12:20)</span>
+                <a class="comment-user userinfo" href="/users/1450/jvo">JVo</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-5731" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-5731-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/5724/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='mC4HIoFLLeDIyA9g3IO0jD1JHTv5Cx1r' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5724/adding-a-listener?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/5724/adding-a-listener?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/lua/"
+            class="tag-link-lua"
+            title="see questions tagged'lua'using tags"
+            rel="tag">lua</a> <span class="tag-number">&#215;431</span><br/>
+        
+        <a href="/tags/development/"
+            class="tag-link-development"
+            title="see questions tagged'development'using tags"
+            rel="tag">development</a> <span class="tag-number">&#215;158</span><br/>
+        
+        <a href="/tags/listener/"
+            class="tag-link-listener"
+            title="see questions tagged'listener'using tags"
+            rel="tag">listener</a> <span class="tag-number">&#215;16</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 17, 2011, 11:49 a.m.">17 Aug '11, 11:49</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,583 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Aug. 19, 2011, 12:20 p.m.">19 Aug '11, 12:20</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/59192/listener-in-cc">Listener in C++/C</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8776/what-is-a-tap-and-how-do-i-use-one-with-the-lua-interface">What is a tap, and how do I use one with the Lua interface?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52453/filtering-packets-in-lua">Filtering packets in LUA</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59117/creating-a-listener">Creating a listener</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4678/lua-listener-dynamic-fields">Lua listener, dynamic fields</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4718/help-with-field-extractor-bad-argument-1-to-new">Help with field extractor - bad argument #1 to &#39;new&#39;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21387/a-field-extractor-must-be-defined-before-taps-or-dissectors-get-called-when-i-try-to-create-an-ssl-tap">&quot;A Field extractor must be defined before Taps or Dissectors get called&quot; when I try to create an SSL Tap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61289/is-it-possible-to-have-preferences-for-a-lua-listener">Is it possible to have preferences for a Lua listener?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27356/ask-about-lua-scripting">ask about lua scripting</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5397/exporting-multiple-audiompeg-packets">Exporting multiple audio/mpeg packets</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

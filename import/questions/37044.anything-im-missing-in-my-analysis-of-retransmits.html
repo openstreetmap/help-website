@@ -1,0 +1,1016 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Anything I&#39;m missing in my analysis of retransmits? - Wireshark Q&amp;A</title>
+        <meta name="description" content="We have a source server 10.235.3.53(local) transferring to 10.240.44.9(remote), and throughput is quite slow. All local links/devices have been vetted as clean so we moved to a capture. I see a lot of DUP ACKs followed by retransmits, which would be why we&#39;re seeing reduced performance. https://www...." />
+        <meta name="keywords" content="duplicate" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/37044/anything-im-missing-in-my-analysis-of-retransmits" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/37044/anything-im-missing-in-my-analysis-of-retransmits?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='sKsbeRP5sI5NXFtRXNFOfKYbnJRONMMP' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/37044/anything-im-missing-in-my-analysis-of-retransmits">Anything I&#39;m missing in my analysis of retransmits?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-37044-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/37044/up/" rel="nofollow"> </a>
+<div id="post-37044-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-37044-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/37044/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/37044/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>We have a source server 10.235.3.53(local) transferring to 10.240.44.9(remote), and throughput is quite slow. All local links/devices have been vetted as clean so we moved to a capture.</p>
+<p>I see a lot of DUP ACKs followed by retransmits, which would be why we're seeing reduced performance.</p>
+<p><a href="https://www.cloudshark.org/captures/00208d87b26d">https://www.cloudshark.org/captures/00208d87b26d</a>
+This particular capture is the inside interface of the local firewall.
+The dup ack I see are sourced from remote 10.240.44.9 to the local 10.235.3.53, so it would appear the packet is getting lost somewhere between our local firewall and local server. Then we see 10.235.2.53 do a fast retransmit since it never saw an ACK for the packet. Correct?</p>
+<p>Is there anything I'm missing from the capture which can give more details?</p>
+<p>Thanks all!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/duplicate/" class="post-tag tag-link-duplicate"
+                                        title="see questions tagged 'duplicate'" rel="tag">duplicate</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>14 Oct '14, 14:16</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e304c2551c490a018a9ccaef7a4d129f?s=32&amp;d=identicon&amp;r=g" alt="parsonsproject's gravatar image" />
+    <p><a href="/users/10773/parsonsproject">parsonsproject</a><br/>
+    <span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="parsonsproject has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/37044/">
+                edited
+                <strong>14 Oct '14, 14:23</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-37044">
+    
+        <a name="37075"></a>
+        <div class="comment" id="comment-37075">
+            <div id="post-37075-score" class="comment-score"></div>
+            <div class="comment-text"><p>Here is a capture of the 3 way handshake
+<a href="https://www.cloudshark.org/captures/55bd973d2a44">https://www.cloudshark.org/captures/55bd973d2a44</a></p>
+
+<p>If i read this correct, initial window size from src is 5840, and slowly scales up to 10880. The dst has a window size which scales to 69632.  So they are not settling on a nice window between the two?  I see line 365 a tcp window update from the far end to the local src, but it doesn't seem to do anything with the sender's window.</p></div>
+            <div class="comment-info" id="comment-37075-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '14, 09:03)</span>
+                <a class="comment-user userinfo" href="/users/10773/parsonsproject">parsonsproject</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-37044" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-37044-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/37044/anything-im-missing-in-my-analysis-of-retransmits?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/37044/anything-im-missing-in-my-analysis-of-retransmits?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/37044/anything-im-missing-in-my-analysis-of-retransmits?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/37044/anything-im-missing-in-my-analysis-of-retransmits?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="37045"></a>
+                    <div id="answer-container-37045" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-37045-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/37045/up/" rel="nofollow"> </a>
+<div id="post-37045-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-37045-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/37045/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="parsonsproject has selected this answer as the correct answer"
+        href="/accept_answer/37045/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Packets are being lost between your capture point and the receiver, 10.240.44.9, not between your capture point and the sender. To verify this, select any of the six packets that Wireshark has identified as retransmissions. Open the TCP portion of the packet, right-click on the sequence number, and select "Apply as filter &gt; Selected." You will see both the original packet and the retransmission, meaning that the original packet made it from the sender to your capture point; it was dropped somewhere downstream from your capture point.</p>
+<p>No, the Fast Retransmissions are not because the sender never got an ACK for the data packet. Fast Retransmissions are triggered when the sender gets three Duplicate ACKs from the receiver.</p>
+<p>When a packet is transmitted, the sender starts the Receive Time Out (RTO) timer. If the RTO timer counts down to zero and no ACK has been received for that packet, the sender will retransmit it. However, the sender will also retransmit the packet if it received three Duplicate ACKs from the receiver, and this happens more quickly than the RTO timer counts down, hence the name "<em>Fast</em> Retransmission."</p>
+<p>This communication was already underway when the capture started, so the TCP three-way handshake is missing. Whenever possible, try to start capturing before the TCP connection is established so that the three-way handshake will be in the capture file. There are certain things that are only seen in the three-way handshake. For example, it is very likely that window scaling is usesd on this connection, but without the handshake, we don't know what the window scaling factors are so we don't know what the true TCP window sizes are.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/37045/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Oct '14, 16:05</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/071fe61f64868d98bdf4eb060b63b6ca?s=32&amp;d=identicon&amp;r=g" alt="Jim%20Aragon's gravatar image" />
+    <p><a href="/users/527/jim-aragon">Jim Aragon</a><br/>
+    <span class="score" title="7187 reputation points"><span class="">7.2k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="33 badges"><span class="silver">&#9679;</span><span class="badgecount">33</span></span><span title="118 badges"><span class="bronze">&#9679;</span><span class="badgecount">118</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jim Aragon has 70 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/37045/">
+                edited
+                <strong>15 Oct '14, 05:03</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-37045">
+    
+        <a name="37064"></a>
+        <div class="comment" id="comment-37064">
+            <div id="post-37064-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thank you Jim that is helpful. </p>
+
+<p>I'll have to get another capture for the 3-way handshake, but I do have the traffic capture on the local firewall outside interface and the far firewall outside interface captured as well</p>
+
+<p>local firewall outside interface
+<a href="https://www.cloudshark.org/captures/c99c0a9518e2">https://www.cloudshark.org/captures/c99c0a9518e2</a></p>
+
+<p>remote firewall outside interface
+<a href="https://www.cloudshark.org/captures/fae08e88b12f">https://www.cloudshark.org/captures/fae08e88b12f</a></p>
+
+<p>remote firewall inside interface
+<a href="https://www.cloudshark.org/captures/ccfa5d77927f">https://www.cloudshark.org/captures/ccfa5d77927f</a></p>
+
+<p>Setting up the filter as you mentioned, I see the original encrypted packet go out the local fw outside interface, as well as the tcp fast retransmission packet, however on the far side we don't see the original packet get to the outside interface, just the follow-up re-transmit. So the drop is occurring somewhere between the firewalls then?</p>
+
+<p>Is there an easy way to follow tcp streams through interfaces? I'm having troubles aligning which packets on the inside capture correspond to which packets on the outside capture.</p>
+
+<p>Thanks again</p></div>
+            <div class="comment-info" id="comment-37064-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '14, 07:13)</span>
+                <a class="comment-user userinfo" href="/users/10773/parsonsproject">parsonsproject</a>
+                
+            </div>
+        </div>
+    
+        <a name="37103"></a>
+        <div class="comment" id="comment-37103">
+            <div id="post-37103-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, the packets are being dropped between the two firewalls.</p>
+
+<p>To correlate the two streams on different sides of the firewall, you need to look for some common value in each stream. You could try IP ID and/or TCP sequence numbers.</p></div>
+            <div class="comment-info" id="comment-37103-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Oct '14, 05:02)</span>
+                <a class="comment-user userinfo" href="/users/527/jim-aragon">Jim Aragon</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-37045" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-37045-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="37048"></a>
+                    <div id="answer-container-37048" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-37048-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/37048/up/" rel="nofollow"> </a>
+<div id="post-37048-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-37048-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/37048/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <pre><code>I think the slow performance is caused by the fact that the SSH server seems to be running in a virtual machine and doesn't get dispatched fast enough (at 28ms intervals).  
+The TSVAL at the server increments at 1ms intervals and jumps in the TSVAL go together with a high RTT, so the latency is imposed by the server itself.  
+For that high latency the number of bytes in flight is certainly not enough to achieve a satisfying throughput. This is probably due to the congestion window shrinking at the client because of the retransmissions. 
+My bet is that the missing packets are dropped in the VM itself and not in the network.
+</code></pre>
+<hr>
+<p>After looking at the traces in the Juniper I must correct my statement.<br>
+The packets are dropped in the Juniper()==VPN==()Juniper tunnel, obviously when there are more than 10-12 packets sent in a single batch (due to increasing windowsizes) <br>
+The delay of 28 ms is caused by the WAN latency between the 2 Junipers. <br>
+Notes to the example below:  <br>
+ ip.id==0x2752 didn't make it to the server in this timeframe.<br>
+ ip.id==0x2747 and ip.id==0x2753 are delayed by 28 ms</p>
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/Screenshot.png">
+I reduced the files based on ip_ids  and uploaded an example here:</p>
+<p><a href="https://www.cloudshark.org/captures/a43693daae83">https://www.cloudshark.org/captures/a43693daae83</a> </p>
+<p><a href="https://www.cloudshark.org/captures/cce154b812a1">https://www.cloudshark.org/captures/cce154b812a1</a></p>
+<p>Regards Matthias </p>
+<p><img alt="alt text" src="https://www.cloudshark.org/captures/cce154b812a1"> </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/37048/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Oct '14, 22:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5500bd1decb766660522dfb347eedc49?s=32&amp;d=identicon&amp;r=g" alt="mrEEde's gravatar image" />
+    <p><a href="/users/4668/mreede">mrEEde</a><br/>
+    <span class="score" title="3892 reputation points"><span class="">3.9k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="22 badges"><span class="silver">&#9679;</span><span class="badgecount">22</span></span><span title="70 badges"><span class="bronze">&#9679;</span><span class="badgecount">70</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mrEEde has 48 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/37048/">
+                edited
+                <strong>16 Oct '14, 04:17</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-37048">
+    
+        <a name="37066"></a>
+        <div class="comment" id="comment-37066">
+            <div id="post-37066-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the feedback Matthias, I have to dig into that a bit more. So the diagram above is the dst, so we are looking at timestamp values on return packets from the dst to the source?  Just to note the 10.235 source is in a different state than the 10.240. </p>
+
+<p>I also see tsval increases from the local src ranging from 1ms up to ~30ms and higher...</p>
+
+<p>25  2014-10-14 11:50:44.926938  10.235.3.53 203509526   10.240.44.9 SSH 1438    Client: Encrypted packet (len=1368)</p>
+
+<p>27  2014-10-14 11:50:44.955379  10.235.3.53 203509555   10.240.44.9 SSH 1438    Client: Encrypted packet (len=1368)</p>
+
+<p>Are we saying that the src sending machine simply isn't sending the data quick enough? </p>
+
+<p>Thanks, this is great discussion for me!</p></div>
+            <div class="comment-info" id="comment-37066-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '14, 07:45)</span>
+                <a class="comment-user userinfo" href="/users/10773/parsonsproject">parsonsproject</a>
+                
+            </div>
+        </div>
+    
+        <a name="37067"></a>
+        <div class="comment" id="comment-37067">
+            <div id="post-37067-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm trying to say that from the capture point's view the receiving node at 10.204.44.9 is not sending ACKs quickly enough,</p></div>
+            <div class="comment-info" id="comment-37067-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '14, 07:51)</span>
+                <a class="comment-user userinfo" href="/users/4668/mreede">mrEEde</a>
+                
+            </div>
+        </div>
+    
+        <a name="37077"></a>
+        <div class="comment" id="comment-37077">
+            <div id="post-37077-score" class="comment-score"></div>
+            <div class="comment-text"><p>What are you using for the tcp delta and RTT, in your custom column?</p></div>
+            <div class="comment-info" id="comment-37077-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '14, 09:37)</span>
+                <a class="comment-user userinfo" href="/users/10773/parsonsproject">parsonsproject</a>
+                
+            </div>
+        </div>
+    
+        <a name="37083"></a>
+        <div class="comment" id="comment-37083">
+            <div id="post-37083-score" class="comment-score"></div>
+            <div class="comment-text"><p>tcp.time_delta   and tcp.analysis.ack_rtt are the two custom fields.</p></div>
+            <div class="comment-info" id="comment-37083-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '14, 12:14)</span>
+                <a class="comment-user userinfo" href="/users/4668/mreede">mrEEde</a>
+                
+            </div>
+        </div>
+    
+        <a name="37152"></a>
+        <div class="comment" id="comment-37152">
+            <div id="post-37152-score" class="comment-score"></div>
+            <div class="comment-text"><p>I am refering to w-o.pcap(<a href="https://www.cloudshark.org/captures/c99c0a9518e2),Source">https://www.cloudshark.org/captures/c99c0a9518e2),Source</a> 10.235.3.53 sends 6 packets between 9-16 packet and received ack for each of them,slow start rule says we can increase our CWND by one MSS for each ack we received,if we follow this rule in next bunch source 10.235.3.53 should had sent the 12 packets but unfortunately it didn't.In next bunch source send only 7 packet 20-29.This pattern repeats itself.is it tcp or openssh application,who is restricting this ? I was looking at Hansang 2013 sharkfest presentation on slow ssh file transfer and there it was a problem with openssh application setting channel_session_windows_default.</p></div>
+            <div class="comment-info" id="comment-37152-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '14, 07:08)</span>
+                <a class="comment-user userinfo" href="/users/4851/kishan-pandey">kishan pandey</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-37048" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-37048-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/37044/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='sKsbeRP5sI5NXFtRXNFOfKYbnJRONMMP' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37044/anything-im-missing-in-my-analysis-of-retransmits?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/37044/anything-im-missing-in-my-analysis-of-retransmits?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/duplicate/"
+            class="tag-link-duplicate"
+            title="see questions tagged'duplicate'using tags"
+            rel="tag">duplicate</a> <span class="tag-number">&#215;41</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 14, 2014, 2:16 p.m.">14 Oct '14, 14:16</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,180 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 18, 2014, 7:08 a.m.">18 Oct '14, 07:08</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3250/filter-out-duplicate-snmp-request">Filter out duplicate SNMP Request</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20882/citrix-server-capture-showing-duplicate-acks-and-retransmits">Citrix server capture showing Duplicate Acks and Retransmits</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50170/tcp-dups-on-virtually-every-ssl-package-but-not-on-regular-tcp-where-to-look">TCP DUPs on virtually every SSL package, but not on regular TCP. Where to look?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8489/how-to-configure-router-and-port-mirroring-to-minimize-repeat-packets">How to configure router and port mirroring to minimize repeat packets?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21649/which-devicesetup-could-create-duplicate-tcp-acks">Which device/setup could create duplicate tcp acks ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50590/duplicate-packets-from-virtual-machine">duplicate packets from virtual machine</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8490/tcp-retransmission-is-detected-instead-of-a-duplicate-ip-packet">TCP Retransmission is detected instead of a duplicate ip packet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24054/duplicate-syn-same-source-port-and-same-destination-port">Duplicate SYN, same source port and same destination port</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50767/duplicate-packets">[closed] Duplicate Packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9032/filter-repeat-destination-ips-showing">Filter repeat destination IPs showing</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Formula to Calculate TCP throughput - Wireshark Q&amp;A</title>
+        <meta name="description" content="hi all, Throughput = TCP maximum receive window size / RTT I have some question regarding this. Throughput = amount of data transferred over a given period of time. so if more data transferred - higher throughput.  TCP maximum receive Window Size = what is result of the Bandwidth Delay Product = Ban..." />
+        <meta name="keywords" content="throughput" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/40569/formula-to-calculate-tcp-throughput" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/40569/formula-to-calculate-tcp-throughput?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='W60Ef4DA3p5HY3JQjfO0oc6lp1srsEjB' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/40569/formula-to-calculate-tcp-throughput">Formula to Calculate TCP throughput</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-40569-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40569/up/" rel="nofollow"> </a>
+<div id="post-40569-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-40569-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40569/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/40569/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>hi all,</p>
+<p>Throughput = TCP maximum receive window size / RTT</p>
+<p>I have some question regarding this.</p>
+<p>Throughput = amount of data transferred over a given period of time. so if more data transferred - higher throughput. </p>
+<p>TCP maximum receive Window Size = what is result of the Bandwidth Delay Product = Bandwith x RTT</p>
+<p>RTT = time to get to the destination and come back (can use ping).</p>
+<p>question number 1.</p>
+<p>when i calculate BDP, Bandwidth will represent the theoretical Throughput  of a given link. so if it's a 1 GigEthernet link i take this value convert to bits/bytes x RTT ? </p>
+<p>question number 2.</p>
+<p>RTT = yes i can ping the destination host and look at the results BUT isn't it like this that the RTT can fluctuate, i mean when on its way back it can take a different rout for any reason. which value should i put  under RTT the Min/Max/Average ? i also found some entries saying to use the One-Way-Delay but on the other hand many people wrote that this is not the correct way to calculate it. </p>
+<p>PS. i know this are probably very easy topics to most of you guys but  i someone could please spent few minutes to answer this , it would be awesome. </p>
+<p>thank you all and have a great rest of the weekend :)</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/throughput/" class="post-tag tag-link-throughput"
+                                        title="see questions tagged 'throughput'" rel="tag">throughput</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>15 Mar '15, 05:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2b3f26f3a24449776af62dd8cca7715a?s=32&amp;d=identicon&amp;r=g" alt="adasko's gravatar image" />
+    <p><a href="/users/13062/adasko">adasko</a><br/>
+    <span class="score" title="86 reputation points">86</span><span title="34 badges"><span class="badge1">&#9679;</span><span class="badgecount">34</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="42 badges"><span class="bronze">&#9679;</span><span class="badgecount">42</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="adasko has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-40569">
+    
+        <a name="40570"></a>
+        <div class="comment" id="comment-40570">
+            <div id="post-40570-score" class="comment-score"></div>
+            <div class="comment-text"><p>or do i use 65,535 bytes as the maximum window size when calculating the throughput:</p>
+
+<p>Throughput = TCP maximum receive window size / RTT</p></div>
+            <div class="comment-info" id="comment-40570-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 05:44)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="40571"></a>
+        <div class="comment" id="comment-40571">
+            <div id="post-40571-score" class="comment-score"></div>
+            <div class="comment-text"><p>also the BDP is the needed Window Size the fill up the pipe, so from my understanding it equals to the maximum TCP Window Size. so if i do max TCP WS x RTT = max throughput when the max WS would be use, right ? </p>
+
+<p>it's this the correct way to calculate it ? the formula i took from :</p>
+
+<p><a href="https://technet.microsoft.com/en-us/magazine/2007.01.cableguy.aspx">https://technet.microsoft.com/en-us/magazine/2007.01.cableguy.aspx</a></p>
+
+<p>"The size of the Window field in the TCP header is 16 bits, allowing a TCP peer to advertise a maximum receive window size of 65,535 bytes. You can calculate the approximate throughput for a given TCP window size from the following formula:
+Throughput = TCP maximum receive windowsize / RTT"</p>
+
+<p>what do they mean by " for a given TCP window size" do they mean the TCP MAX WS ?</p></div>
+            <div class="comment-info" id="comment-40571-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 06:25)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="40589"></a>
+        <div class="comment" id="comment-40589">
+            <div id="post-40589-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Please note that most systems use <a href="https://tools.ietf.org/html/rfc1323#page-8">window scaling</a> these days as a 16 bit value for the WS is not sufficient anymore. This means the WS can be (a lot ) higher than 65535.</p></div>
+            <div class="comment-info" id="comment-40589-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 12:09)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40591"></a>
+        <div class="comment" id="comment-40591">
+            <div id="post-40591-score" class="comment-score"></div>
+            <div class="comment-text"><p>SYN-bit as Jasper is away could you please look at me last question in this thread please please :) i will be not able to sleep until i know</p></div>
+            <div class="comment-info" id="comment-40591-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 12:20)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40569" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40569-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/40569/formula-to-calculate-tcp-throughput?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/40569/formula-to-calculate-tcp-throughput?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/40569/formula-to-calculate-tcp-throughput?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/40569/formula-to-calculate-tcp-throughput?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="40576"></a>
+                    <div id="answer-container-40576" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-40576-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/40576/up/" rel="nofollow"> </a>
+<div id="post-40576-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-40576-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/40576/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="adasko has selected this answer as the correct answer"
+        href="/accept_answer/40576/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>1) BDP = link speed in byte/s times RTT in seconds. E.g for a 1GBps link with 23ms delay the result is</p>
+<p>1,000,000,000 bits per second divided by 8 = 125,000,000 bytes/s. 23ms = 0.023 seconds. </p>
+<p>125,000,000 * 0.023 = 2,875,000 bytes, so your optimum Window size is 2.875 MByte, close to 3 MByte. This is only possible by leveraging Window scaling as described in RFC 1323.</p>
+<p>2) yes, RTT can fluctuate, but if you <a href="https://blog.packet-foo.com/2014/07/determining-tcp-initial-round-trip-time/">determine iRTT</a> by looking at the three way handshake it's almost always the best RTT you can get. It's not a problem if the BDP is a bit larger than you actually need, same as it isn't a problem if its a bit smaller. </p>
+<p>Keep in mind that BDP is just something that works for a single TCP session - so if your link is used by more than 1 concurrent session the BDP applies to their combined activity.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/40576/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Mar '15, 08:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" alt="Jasper's gravatar image" />
+    <p><a href="/users/145/jasper">Jasper ♦♦</a><br/>
+    <span class="score" title="23806 reputation points"><span class="">23.8k</span></span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">&#9679;</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">&#9679;</span><span class="badgecount">284</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jasper has 263 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-40576">
+    
+        <a name="40577"></a>
+        <div class="comment not_top_scorer" id="comment-40577">
+            <div id="post-40577-score" class="comment-score"></div>
+            <div class="comment-text"><p>wow thank's for the link. that helped me a lot. will definitely get back to it on a regular ! </p>
+
+<p>just to understand it completely , it says " Another point is that the handshake packets are handled by the TCP stack of the operating system, so there is no application interference/delay at all." what exactly do they mean by this sentence (that this packets are never gonna make it to the application layers ? ). </p>
+
+<p>also " Keep in mind that BDP is just something that works for a single TCP session - so if your link is used by more than 1 concurrent session the BDP applies to their combined activity." so you mean when BDP is calculated it will determine the max WS to completely utilize it for a single connection ( for example backup scenario), yes ? and if i have more thn one open connection i would have to divide the BDP with the number of connections , yes ?</p></div>
+            <div class="comment-info" id="comment-40577-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 09:06)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="40579"></a>
+        <div class="comment" id="comment-40579">
+            <div id="post-40579-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Yes, by that sentence I mean exactly that (it's my blog, btw ;-))</p>
+
+<p>The three way handshake does not reach the application layer. The application gets notified of a new connection after the three way handshake is complete.</p>
+
+<p>And yes, BDP is relevant to a single connection. And yes again, if you have more than one connection they all share the bandwidth - you could divide by the number of connection, but only if they're all doing pretty much the same kind of transfers.</p></div>
+            <div class="comment-info" id="comment-40579-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 09:24)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40580"></a>
+        <div class="comment not_top_scorer" id="comment-40580">
+            <div id="post-40580-score" class="comment-score"></div>
+            <div class="comment-text"><p>cool :-)</p>
+
+<p>but BDP will represent the max receiver and sender WS, yes ? </p>
+
+<p>also while calculating throughput :</p>
+
+<p>TCP-Window-Size-in-bits / Latency-in-seconds = Bits-per-second-throughput</p>
+
+<p>where do i get the TCP-Window-Size-in-bits from ? will this be BDP ? </p>
+
+<p>and last but not least, will the throughput value (similar as BDP) apply only to 1 connection ? </p>
+
+<p>thank you !</p></div>
+            <div class="comment-info" id="comment-40580-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 09:37)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="40581"></a>
+        <div class="comment" id="comment-40581">
+            <div id="post-40581-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I guess the window size would come from a sample connection that you've captured already - at least that's the only real number you can have, everything else would be made up. And that window size is BDP if it's from a single active connection that has reached maximum throughput (remember that most TCP stacks start slow and increase the window size as long as no packet loss occurs, so it takes a while until it's at the maximum)</p></div>
+            <div class="comment-info" id="comment-40581-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 09:42)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40583"></a>
+        <div class="comment not_top_scorer" id="comment-40583">
+            <div id="post-40583-score" class="comment-score"></div>
+            <div class="comment-text"><p>i see. so in a scenario i run a backup from host A to host B, the Window Size from advertised by host would be used for the calculation ( the one captured during the 3 way handshake - same where i take the RTT from, yes ? ). </p>
+
+<p>can you please answer me only this and i will not bother you anymore :)</p></div>
+            <div class="comment-info" id="comment-40583-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 10:06)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="40584"></a>
+        <div class="comment" id="comment-40584">
+            <div id="post-40584-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Unfortunately, it's not as simple as looking at the window size of the handshake, because that is usually only a temporary value. You should try to find the maximum window size of the transfer, or, even better, take an average of a couple of the largest values you find.</p></div>
+            <div class="comment-info" id="comment-40584-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 10:10)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40587"></a>
+        <div class="comment not_top_scorer" id="comment-40587">
+            <div id="post-40587-score" class="comment-score"></div>
+            <div class="comment-text"><p>i see, so it's really not that easy.</p>
+
+<p>so i run my backup (it's just an example) with wireshark enabled. i try to find the highest WS and try to calculate an average. if i have it and would like to calculate the throughput = WS (what i got from my calculations) x RTT ( actually the iRTT). but again, wouldn't this mean that i'm calculating the throughput same as i would use the the BDP value as the WS ? so to calculate the most accurate throughput between two nodes  i think i would have to look at ALL connections and try to compute the WS from all of them or am i wrrong ?</p></div>
+            <div class="comment-info" id="comment-40587-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 10:44)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="40592"></a>
+        <div class="comment not_top_scorer" id="comment-40592">
+            <div id="post-40592-score" class="comment-score"></div>
+            <div class="comment-text"><p>yes, you'd need to look at all of them.</p>
+
+<p>But may I ask why you're all doing this? I only think about BDP when some connection is slower than it should be, and even then, the first thing I do is to check if the window size is the problem. </p>
+
+<p>I do that by checking for "Window Full" messages and determine the recovery time from that (basically, the time between the full window and the next segment the server is allowed to send). Only if that happens often and/or accumulates to significant delays (meaning: a delay measured in at least seconds, not milliseconds or less) I'd think about BDP.</p></div>
+            <div class="comment-info" id="comment-40592-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 12:45)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40593"></a>
+        <div class="comment not_top_scorer" id="comment-40593">
+            <div id="post-40593-score" class="comment-score"></div>
+            <div class="comment-text"><p>thank you Jasper. why I'm doing all this? it's very interesting for me and I'm learning / trying to learn all this stuff to get a better understanding of how it works under the hood. many people i met that used to work in IT (even me i have to admit) didn't know that and i think this is totally  wrong.  maybe because of my lack of experience and expertise i tend to dig to much in something i don't know :/ </p>
+
+<p>i also found this :</p>
+
+<p><a href="http://bradhedlund.com/2008/12/19/how-to-calculate-tcp-throughput-for-long-distance-links/">http://bradhedlund.com/2008/12/19/how-to-calculate-tcp-throughput-for-long-distance-links/</a> </p>
+
+<p>so i started to think about it all. </p>
+
+<p>and as i work in support for a backup product i often have to deal with cases where customer complain about the low transfer rate (unfortunately and i have to say it i work with a bunch of idiots that pretend to know everything but they know nothing / nada / nichts - please apologies but it's a fact). </p>
+
+<p>so i have cases, for example: dedicated  10 Gig-Ethernet connection, backup going to disk and the customer is unhappy about the transfer rate. what they often do (customers) they do a Windows File copy backup from the source host to destination and compare it with the rate from the backup product. as far i know and understood it right a Windows File Copy is measuring the goodput  <br>
+not the throughput. so if they say it's a dedicated link for backup i think i could apply this BGP calculation and based on this calculate the max achievable possible throughput but again i might sound like a drunk monkey right now. but i'm not sure if the Windows Copy rate can be compared to the backups job rate (boh represent goodput ?). so you see, i have like billions of question in my head but to be honest only you guys out there so i really do appreciate any help.</p>
+
+<p>Edit: i don't demand from people to teach me everything from scratch without moving a**. NO, i spent hours even on weekends to learn, all i need is sometimes to clear my doubts to confirm something. But i think if I'm the Level 1 guy and not even the Level 3 guys can do it hmm, that's not as it supposed to be i guess.</p></div>
+            <div class="comment-info" id="comment-40593-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 13:05)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="40594"></a>
+        <div class="comment" id="comment-40594">
+            <div id="post-40594-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Okay, I see. So there is a real world problem behind all this. Calculating BDP is a theoretical thing, because it's rare that only a single TCP connection utilizes a link, but it may be an interesting number to know what the maximum Window size is. </p>
+
+<p>BDP was much more important with Windows XP and earlier, because starting with Vista, the TCP stack does Window Scaling automatically. With XP, it often happened that the Window size was too small without enabling RFC 1323 options in the registry. So if the OS version involved are Vista/Server 2008 or newer, you can assume that the TCP stack does Window scaling. </p>
+
+<p>There are two problems with Window sizes: one is when it's too small, forcing the sender to pause transmission. The other is when it's too big, leading to packet loss because the infrastructure gets overloaded. Both have specific symptoms you can observe in a capture. Window sizes too small result in "Window Full" messages and long delays. Window sizes too big result in massive packet loss and Duplicate ACKs that go up into hundreds or even thousands for the same sequence number.</p>
+
+<p>Windows file copies have improved with SMB2 and SMB3, but its hard to compare to another transfer when you don't know how it behaves. </p>
+
+<p>If I were you I'd try to get traces of the slow connections when a customer complains. With the actual packets it should be possible to determine where the problem is (Window size too big or too small). </p>
+
+<p>With a 10G connection it may also be the backup target, because if that connection is fully utilized you're talking about writing at a maximum speed of 1.3GByte per second to disk. Trouble is, it could be hard to actually capture a full speed 10GBps transaction, because that requires specialized capture hardware.</p></div>
+            <div class="comment-info" id="comment-40594-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 13:25)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40596"></a>
+        <div class="comment not_top_scorer" id="comment-40596">
+            <div id="post-40596-score" class="comment-score"></div>
+            <div class="comment-text"><p>not sure whether I'm allowed to take traces like Wireshark and as you wrote with a 10G network would need to have special hardware . may i ask you if this applies also for other standards like 1 G , FastEthernet  is this a Wireshark limitation ( i suspect that the capture hardware need sufficient CPU, RAM etc.) is there any official wireshark KB on this ?<br>
+</p>
+
+<p>"Windows file copies have improved with SMB2 and SMB3, but its hard to compare to another transfer when you don't know how it behaves."
+so if assume Windows File copy is using SMB2 and i would see based on the trace file that so is doing the backup application could i compare both rates ? </p>
+
+<p>where would you place  Wireshark in this case ? the sender or receiver or probably on both . . . </p>
+
+<p>"With a 10G connection it may also be the backup target, because if that connection is fully utilized you're talking about writing at a maximum speed of 1.3GByte per second to disk." you mean he speed at which we take he data from he buffer and the actual write to the HDD yes ?</p></div>
+            <div class="comment-info" id="comment-40596-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 14:07)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="40597"></a>
+        <div class="comment" id="comment-40597">
+            <div id="post-40597-score" class="comment-score">1</div>
+            <div class="comment-text"><p>It's not really a Wireshark limitation, it's more like that standard PC hardware is not suitable for high speeds. PC captures with normal NICs can probably do up to 200-300 MBit/s, even with fast SSDs to write to. There are no KB entries as far as I know, but you might want to take a look at some of the Sharkfest presentations on this, e.g. by Chris Greer: <a href="https://www.youtube.com/watch?v=_H7PjWqKV0Q">https://www.youtube.com/watch?v=_H7PjWqKV0Q</a></p>
+
+<p>If both backup and Windows File Copy use SMB2 you could compare them, yes. Capturing this at both locations would be best, but if you can't do this, do it on either side.</p>
+
+<p>And yes, write to HDD.</p></div>
+            <div class="comment-info" id="comment-40597-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 14:17)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40598"></a>
+        <div class="comment not_top_scorer" id="comment-40598">
+            <div id="post-40598-score" class="comment-score"></div>
+            <div class="comment-text"><p>hmm i like the video from the beginning "traffic generator" if i can't get a real trace maybe it will be at least something to run some simulations ;) </p>
+
+<p>thank you very very very much Jasper for all your answers . i really appreciate your time and knowledge sharing. looking forward to hear from you soon if new question will come up. btw your web page is already in my favorites :)</p></div>
+            <div class="comment-info" id="comment-40598-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 14:29)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="40599"></a>
+        <div class="comment not_top_scorer" id="comment-40599">
+            <div id="post-40599-score" class="comment-score"></div>
+            <div class="comment-text"><p>you're welcome :)</p></div>
+            <div class="comment-info" id="comment-40599-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Mar '15, 14:33)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40612"></a>
+        <div class="comment not_top_scorer" id="comment-40612">
+            <div id="post-40612-score" class="comment-score"></div>
+            <div class="comment-text"><p>Jasper, just on more.</p>
+
+<p>"BDP was much more important with Windows XP and earlier, because starting with Vista, the TCP stack does Window Scaling automatically. With XP, it often happened that the Window size was too small without enabling RFC 1323 options in the registry. So if the OS version involved are Vista/Server 2008 or newer, you can assume that the TCP stack does Window scaling."</p>
+
+<p>so with windows scaling i understand the Window Size can be more than 64 k (65,535 bytes) so why we still have to deal with Window Size to small / to big problems ? what could cause this  ?</p></div>
+            <div class="comment-info" id="comment-40612-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Mar '15, 03:41)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="40613"></a>
+        <div class="comment not_top_scorer" id="comment-40613">
+            <div id="post-40613-score" class="comment-score">1</div>
+            <div class="comment-text"><p>oh, lots of causes... e.g. badly written NIC drivers, embedded devices with rudimentary implemented TCP stacks, misconfiguration... most of these do not apply to modern stable desktop operating systems, but the driver issue can be a problem even there. I've had one customer where the 4G modem card driver on Windows would always force a 4MB window, which lead to overload on the infrastructure.</p></div>
+            <div class="comment-info" id="comment-40613-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Mar '15, 04:46)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="40622"></a>
+        <div class="comment not_top_scorer" id="comment-40622">
+            <div id="post-40622-score" class="comment-score"></div>
+            <div class="comment-text"><p>hmmm this created even more question in my head. </p>
+
+<p>so this is related to what you wrote about earlier Windows Version like XP, W2K3 :</p>
+
+<p>the maximum receive window size can be manually configured. The HKLM\System\CurrentControlSet\Services\Tcpip\Parameters\TCPWindowSize and HKLM\System\CurrentControlSet\Services\Tcpip\Parameters\Interface\InterfaceGUID\TCPWindowSize registry values can be set to a maximum of 65,535 bytes (without window scaling) or 1,073,741,823 (with window scaling).
+Third, the maximum receive window size can use window scaling. You can enable window scaling by setting the HKLM\System\CurrentControlSet\Services\Tcpip\Parameters\Tcp1323Opts registry value to 1 or 3. </p>
+
+<p>i cannot find any of those reg keys on Windows 7 and Windows 2008 r2 Server (you also mentioned this, so this is clear for me ). </p>
+
+<p>but </p>
+
+<p>"To optimize TCP throughput, especially for transmission paths with a high BDP, the Next Generation TCP/IP stack in Windows Vista and Windows Server 2008) supports Receive Window Auto-Tuning. "</p>
+
+<p>"The Next Generation TCP/IP stack no longer uses the TCPWindowSize registry value.
+Receive Window Auto-Tuning has a number of benefits. It automatically determines the optimal receive window size on a per-connection basis. In Windows XP, the TCPWindowSize registry value applies to all connections. Applications no longer need to specify TCP window sizes through Windows Sockets options. And IT administrators no longer need to manually configure a TCP receive window size for specific computers."</p>
+
+<p>source:</p>
+
+<p><a href="https://technet.microsoft.com/en-us/magazine/2007.01.cableguy.aspx">https://technet.microsoft.com/en-us/magazine/2007.01.cableguy.aspx</a></p>
+
+<p>so now i'm wondering ... if we are unable to set / modify the window size value on any OS above XP/2003 how the heck we can deal with for example a Window Size to small case. so based on a Wireshark capture i can tell that this is the reason but what about the cause . so like you wrote your example with the 4G modem card forcing a 4 MB Window. </p>
+
+<p>also "Applications no longer need to specify TCP window sizes through Windows Sockets options" so if i'm not wrrong we have no option to change the Window Size on the newer MS OS's because all what we could previous adjust manually this is handled right now by the new TCP/IP stack. </p>
+
+<p>also are you aware of any type of documentation describing the initial process of detreming the Window Size on both ends ? i found something related to Windows CE (what the heck is this ) but i think it's not valid</p></div>
+            <div class="comment-info" id="comment-40622-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(16 Mar '15, 13:59)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-40576" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 17
+        </span>
+        <a href="#" class="show-all-comments-link">show 12 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-40576-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="45857"></a>
+                    <div id="answer-container-45857" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-45857-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45857/up/" rel="nofollow"> </a>
+<div id="post-45857-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-45857-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45857/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>A more complex calculation with the serialisation time and a graphical overview is possible with the java-tool from <a href="http://www.aicalc.net">http://www.aicalc.net</a>
+(unfortunately the description is partially in German.)</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/45857/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>15 Sep '15, 09:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b36fcff67262d6e1f78a60f84d473b9a?s=32&amp;d=identicon&amp;r=g" alt="mgoerke's gravatar image" />
+    <p><a href="/users/19622/mgoerke">mgoerke</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="mgoerke has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-45857">
+    
+</div>
+<div id="comment-tools-45857" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45857-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/40569/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='W60Ef4DA3p5HY3JQjfO0oc6lp1srsEjB' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40569/formula-to-calculate-tcp-throughput?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/40569/formula-to-calculate-tcp-throughput?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/throughput/"
+            class="tag-link-throughput"
+            title="see questions tagged'throughput'using tags"
+            rel="tag">throughput</a> <span class="tag-number">&#215;35</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 15, 2015, 5:11 a.m.">15 Mar '15, 05:11</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>65,067 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 15, 2015, 9:13 a.m.">15 Sep '15, 09:13</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/1087/help-diagnosing-pptp-throughput-issue">Help diagnosing PPTP throughput issue.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30315/tcp-lab-question-12">TCP Lab question 12?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/51522/about-calculate-tcp-performance">about calculate TCP performance</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1267/sctp-throughput">SCTP Throughput</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17192/how-can-i-export-data-from-tcpstream-graph-and-calculate-the-throughput">How can I export data from TCPstream Graph and calculate the Throughput</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61087/calculate-throughput-and-packet-loss">Calculate throughput and packet loss?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2133/triple-duplicate-acks">Triple Duplicate ACKs</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31831/what-are-possible-reason-for-window-size-drop">What are possible reason for window size drop</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4458/high-throughput-captures-usb-better-than-onboard-nic">High throughput captures, USB better than onboard NIC?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31980/how-to-calculate-ul-throughput-on-the-mac-level">how to calculate UL throughput on the MAC level?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

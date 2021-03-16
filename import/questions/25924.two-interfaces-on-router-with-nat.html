@@ -1,0 +1,1068 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>two interfaces on router with NAT - Wireshark Q&amp;A</title>
+        <meta name="description" content="Dear friends, it seems to be simple problem but I cannot deal with it. I have captured packets on the Linux router with NAT on the two interfaces at the same time: tcpdump -i eth1 -w lan.pcap tcpdump -i eth0 -w wan.pcap during two sessions SSH and enter&amp;amp;stop commands almost simultaneously. I nee..." />
+        <meta name="keywords" content="nat" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/25924/two-interfaces-on-router-with-nat" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/25924/two-interfaces-on-router-with-nat?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='gT1TA5HKd04UNOh6kn0cAT6oMd3GZK2K' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/25924/two-interfaces-on-router-with-nat">two interfaces on router with NAT</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-25924-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25924/up/" rel="nofollow"> </a>
+<div id="post-25924-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-25924-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25924/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/25924/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Dear friends,
+it seems to be simple problem but I cannot deal with it. I have captured packets on the Linux router with NAT on the two interfaces at the same time:</p>
+<p>tcpdump -i eth1 -w lan.pcap</p>
+<p>tcpdump -i eth0 -w wan.pcap</p>
+<p>during two sessions SSH and enter&amp;stop commands almost simultaneously.
+I need to filter incoming packets to eth1 from 192.168.1.2 IP address and the same packets on the outcoming interface of router (eth0) from these files. First task is simple, because I can filter packets in based on MAC address of 192.168.1.2 host. But how can I filter the same packets on the second (wan.pcap) file (these packets have got different source IP address after NAT operation - IP address of eth0 interface)? I can filter every destination addresses but it is very long time process. Is there any simpler method?</p>
+<p>Please help me.</p>
+<p>edit: </p>
+<p>192.168.1.2 ------eth1_router_eth0--------wan</p>
+<p>One more question: if I send data from 192.168.1.2 host through the router, then I see the packet on the eth0 with time of leaving eth0 interface or entering eth0 interface? I need time of leaving eth0 interface by packet.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/nat/" class="post-tag tag-link-nat"
+                                        title="see questions tagged 'nat'" rel="tag">nat</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>11 Oct '13, 15:54</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/28071bd7cf93e424c03dec9086ffa60f?s=32&amp;d=identicon&amp;r=g" alt="net16's gravatar image" />
+    <p><a href="/users/5862/net16">net16</a><br/>
+    <span class="score" title="46 reputation points">46</span><span title="6 badges"><span class="badge1">&#9679;</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">&#9679;</span><span class="badgecount">7</span></span><span title="12 badges"><span class="bronze">&#9679;</span><span class="badgecount">12</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="net16 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/25924/">
+                edited
+                <strong>12 Oct '13, 10:33</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-25924">
+    
+        <a name="25925"></a>
+        <div class="comment" id="comment-25925">
+            <div id="post-25925-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do you mean a capture filter or a display filter?</p></div>
+            <div class="comment-info" id="comment-25925-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Oct '13, 17:29)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25927"></a>
+        <div class="comment" id="comment-25927">
+            <div id="post-25927-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I must be missing something.  Can you just capture all the traffic, then find out what the NAT table looks like?  MAC addresses are no good because all IPs sourced by your interface will have the same MAC.  Remember, MAC addresses are only relevant to Ethernet segments.  You won't see the MAC address of a remote system if there is a router in the middle.</p></div>
+            <div class="comment-info" id="comment-25927-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Oct '13, 18:29)</span>
+                <a class="comment-user userinfo" href="/users/255/hansangb">hansangb</a>
+                
+            </div>
+        </div>
+    
+        <a name="25935"></a>
+        <div class="comment" id="comment-25935">
+            <div id="post-25935-score" class="comment-score"></div>
+            <div class="comment-text"><p>Kurt, I mean a display filter. I would like to capture all traffic by tcpdump, then move captured .pcap file to Windows OS and filter different data by Wireshark. After filtering I will estimate different statistics on the filtered data.</p>
+
+<p>hansangb, thank you for your comment. In this example MAC address was associated with one IP - PC workstation. I will remember, thanks.</p></div>
+            <div class="comment-info" id="comment-25935-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '13, 07:55)</span>
+                <a class="comment-user userinfo" href="/users/5862/net16">net16</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25924" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25924-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/25924/two-interfaces-on-router-with-nat?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/25924/two-interfaces-on-router-with-nat?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/25924/two-interfaces-on-router-with-nat?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/25924/two-interfaces-on-router-with-nat?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="25938"></a>
+                    <div id="answer-container-25938" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-25938-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/25938/up/" rel="nofollow"> </a>
+<div id="post-25938-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-25938-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/25938/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="net16 has selected this answer as the correct answer"
+        href="/accept_answer/25938/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>Kurt , I mean a display filter. </p>
+</blockquote>
+<p>O.K. so, what do you have to build a filter? </p>
+<p>The source IP will be changed and source port <strong>might</strong> be changed by the NAT operation, so you can't use the source IP address, but the source port could work, unless your NAT devices changes that by default, which is not the case for Linux MASQUERADING.</p>
+<p>O.K. Then there is the IP ID and the TCP sequence numbers. Both are good candidates as well, although if some randomization features are enabled in the Linux kernel, they will change as well.</p>
+<p>I'd start with the source ports and if that does not work, I'd look for one of the other criteria (IP ID, TCP sequence number, TCP stream number - tcp.stream, etc.).</p>
+<blockquote>
+<p>then I see the packet on the eth0 with time of leaving eth0 interface or entering eth0 interface?</p>
+</blockquote>
+<p>The time when libpcap gets the packet from the kernel, which is <strong>'more to the side'</strong> of leaving eth0 than to the side of entering eth0.</p>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/25938/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Oct '13, 10:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/25938/">
+                edited
+                <strong>12 Oct '13, 10:37</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-25938">
+    
+        <a name="25940"></a>
+        <div class="comment" id="comment-25940">
+            <div id="post-25940-score" class="comment-score"></div>
+            <div class="comment-text"><p>Kurt, thank you very much for your answer. At the moment, it looks that I cannot use TCP sequence numbers because they are relative. But I will try to use range of source port numbers (I have no MASQUERADING). Although I am affraid that another workstations (sharing traffic) may use the same random numbers - it is possible. To the other parameter I have similar misgiving - it can be repeated in different flows. But I will try carefully.</p>
+
+<p>Second question: I understand that in this one direction - on the eth1 I have entering (receiving a whole packet) time and on the eth0 I have time of leaving packet on outcoming interface (eth0).</p></div>
+            <div class="comment-info" id="comment-25940-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '13, 11:07)</span>
+                <a class="comment-user userinfo" href="/users/5862/net16">net16</a>
+                
+            </div>
+        </div>
+    
+        <a name="25943"></a>
+        <div class="comment" id="comment-25943">
+            <div id="post-25943-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>it looks that I cannot use TCP sequence numbers because they are relative. </p>
+</blockquote>
+
+<p>That's just the default settings of Wireshark. You can change it here</p>
+
+<blockquote>
+<p>Edit -&gt; Preferences -&gt; Protocols -&gt; TCP -&gt; Relative Sequence Numbers</p>
+</blockquote>
+
+<p>Regarding your question regarding time stamps.</p>
+
+<p>It's more or less like this:</p>
+
+<p>The NIC receives the frame and hands it over to the kernel. In the kernel there is an API to capture traffic. Wireshark will get the frames via that API (from libpcap). So, the time stamp of the frame will be a few nanoseconds later than the frame really arrived, due to the handling in the kernel. On the sending side it is the same. So, there is a difference between the time stamps in the capture file and the 'real' time where the frames are being received/sent.</p>
+
+<p>For TCP conversations, you can also use the stream index (tcp.stream). However, to be able to use that, you need to 'sync' the two capture files. Here is how to do it.</p>
+
+<ul>
+<li>Find the first SYN frame in the internal pcap</li>
+<li>Find the corresponding SYN frame in the external pcap (look for source port, IP ID, TCP SEQ, etc.)</li>
+<li>Then 'sync' the two files, by removing everything before those two frames. The easiest way is by using a display filter and File -&gt; Export Specified Packets. Display Filter: Internal: frame.number &gt;= x  External: frame.number &gt;= y</li>
+<li>Then open the 'stipped' files and tcp.stream 1 should be the same in both files. Now, you just need to find the streams for your source IP and you should be able to identify the same TCP conversation in the external file. </li>
+</ul>
+
+<p>For this to work, you need to capture the same data internally and externally. If your Firewall drops some TCP connections, this will  not work, as the number of connections on the internal and external side is different.</p></div>
+            <div class="comment-info" id="comment-25943-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Oct '13, 16:21)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="25949"></a>
+        <div class="comment" id="comment-25949">
+            <div id="post-25949-score" class="comment-score"></div>
+            <div class="comment-text"><p>Dear Kurt, thank you for your time and explanations. I see few different tcp.stream indexes within transmission between 192.168.1.2 and 'chosen public address' hosts in my 30 seconds file. Do you think that it means such refreshing or re-quering page in new tab of web browser? Despite of this it is only SYN, SYN/ACK, ACK, FIN/ACK and "Continuation or non-HTTP traffic" (as it is traffic in one direction) - it is proper. I capture only headers. </p>
+
+<p>Moreover I measure traffic statistics during some interval, for example 1 min, therefore I do not know if I can remove traffic before suitable frame on wan.pcap because that frame is shifted in time. I need to capture this shifting on the graph of wan interface. I use Statistics-&gt;IO Graph with filter obviously. I will check if I get such difference (Wireshark should include shifting in Tick intervals).</p></div>
+            <div class="comment-info" id="comment-25949-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Oct '13, 11:18)</span>
+                <a class="comment-user userinfo" href="/users/5862/net16">net16</a>
+                
+            </div>
+        </div>
+    
+        <a name="25950"></a>
+        <div class="comment not_top_scorer" id="comment-25950">
+            <div id="post-25950-score" class="comment-score"></div>
+            <div class="comment-text"><p>After removing unnecessary packets I have to synchronize time in the both pcap files (with processing time of reference packet). I have used Edit-&gt;Set Time Reference, and Time Shift. I would like to shift with 0.000065 s. I use Shift all packets and write +0.000065 but error is appeared - Offset is zero. How can I do this?</p>
+
+<p>When I set value of "Time shift for this packet" (0.53968800), then times from input trace file is appeared again. Tommorow I will export displayed data to new files. Maybe it will help.</p></div>
+            <div class="comment-info" id="comment-25950-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Oct '13, 14:51)</span>
+                <a class="comment-user userinfo" href="/users/5862/net16">net16</a>
+                
+            </div>
+        </div>
+    
+        <a name="25963"></a>
+        <div class="comment not_top_scorer" id="comment-25963">
+            <div id="post-25963-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I see few different tcp.stream indexes within transmission between 192.168.1.2 and 'chosen public address' hosts in my 30 seconds file. <strong>Do you think that it means such refreshing or re-quering page in new tab of web browser?</strong></p>
+</blockquote>
+
+<p>I'm sorry, but without the capture files and some details of what you are trying to do, I can only speculate about the reasons.</p>
+
+<blockquote>
+<p>Moreover I measure traffic statistics during some interval, for example 1 min, </p>
+</blockquote>
+
+<p>Hm.. what are you actually trying to do and why do you need a capture of both interfaces for traffic statistics !?!</p></div>
+            <div class="comment-info" id="comment-25963-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Oct '13, 06:40)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="26024"></a>
+        <div class="comment not_top_scorer" id="comment-26024">
+            <div id="post-26024-score" class="comment-score"></div>
+            <div class="comment-text"><p>Kurt, sorry for my delay. I make some research work. I estimate times, retransmisions, packet lost, etc. The deeper subject we enter, the broader knowledge we need. I still look for something in my research work. Thank you for discuss and help.</p></div>
+            <div class="comment-info" id="comment-26024-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Oct '13, 14:44)</span>
+                <a class="comment-user userinfo" href="/users/5862/net16">net16</a>
+                
+            </div>
+        </div>
+    
+        <a name="27784"></a>
+        <div class="comment not_top_scorer" id="comment-27784">
+            <div id="post-27784-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have another idea. It is possible to display packets with the same SEQ numbers? During NAT operation router change IP addresses but SEQ numbers and IP ID leave the same. It would be great to find duplicated SEQ numbers. Then I will get all packets forwarded by the router with NAT. Some packets are lost and do not forward and I want to separate it.</p>
+
+<p>Or I can use tshark with "-e tcp.seq". I see twice packets one by one and single packets (without pair), but how can I filter it?</p></div>
+            <div class="comment-info" id="comment-27784-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '13, 14:52)</span>
+                <a class="comment-user userinfo" href="/users/5862/net16">net16</a>
+                
+            </div>
+        </div>
+    
+        <a name="27786"></a>
+        <div class="comment" id="comment-27786">
+            <div id="post-27786-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>Or I can use tshark with "-e tcp.seq". I see twice packets one by one and single packets (without pair), <strong>but how can I filter it?</strong></p>
+</blockquote>
+
+<p>Only with a script that pareses the tshark output and tries to find duplicates. There is no such functionality (find duplicates) in  tshark/Wireshark.</p></div>
+            <div class="comment-info" id="comment-27786-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '13, 15:03)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="27787"></a>
+        <div class="comment not_top_scorer" id="comment-27787">
+            <div id="post-27787-score" class="comment-score"></div>
+            <div class="comment-text"><p>Do you mean bash scripts? Awk, sed, etc. ? And later I have to count all statistics by scripts too?</p></div>
+            <div class="comment-info" id="comment-27787-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '13, 15:18)</span>
+                <a class="comment-user userinfo" href="/users/5862/net16">net16</a>
+                
+            </div>
+        </div>
+    
+        <a name="27788"></a>
+        <div class="comment" id="comment-27788">
+            <div id="post-27788-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Whatever scripting language you speak fluent ;-) I prefer Perl or Python. If you like bash or Awk, take that. sed would be too hard for this kind of task.</p>
+
+<blockquote>
+<p>And later I have to count statistics by scripts too?</p>
+</blockquote>
+
+<p>Sure, as soon as you have exported/extracted those values with tshark, it's up to you to do whatever you want/need with that data.</p></div>
+            <div class="comment-info" id="comment-27788-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '13, 15:20)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="27789"></a>
+        <div class="comment not_top_scorer" id="comment-27789">
+            <div id="post-27789-score" class="comment-score"></div>
+            <div class="comment-text"><p>Fluent not necessarily. But I used scripts for different task. I will spend some time and I'll do it. Thank you very much, Kurt. You are helpful as always :)</p></div>
+            <div class="comment-info" id="comment-27789-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '13, 15:33)</span>
+                <a class="comment-user userinfo" href="/users/5862/net16">net16</a>
+                
+            </div>
+        </div>
+    
+        <a name="27790"></a>
+        <div class="comment not_top_scorer" id="comment-27790">
+            <div id="post-27790-score" class="comment-score"></div>
+            <div class="comment-text"><p>Good luck.</p></div>
+            <div class="comment-info" id="comment-27790-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '13, 15:35)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-25938" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 12
+        </span>
+        <a href="#" class="show-all-comments-link">show 7 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-25938-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/25924/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='gT1TA5HKd04UNOh6kn0cAT6oMd3GZK2K' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25924/two-interfaces-on-router-with-nat?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/25924/two-interfaces-on-router-with-nat?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/nat/"
+            class="tag-link-nat"
+            title="see questions tagged'nat'using tags"
+            rel="tag">nat</a> <span class="tag-number">&#215;12</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 11, 2013, 3:54 p.m.">11 Oct '13, 15:54</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,266 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 4, 2013, 3:35 p.m.">04 Dec '13, 15:35</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/5084/how-to-capture-in-promiscuous-modebehind-nat">How to capture in promiscuous mode(behind NAT)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8394/does-packet-capture-work-inside-of-vmware">Does packet capture work inside of VMWare?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9047/hairpinning-static-nat">hairpinning static NAT</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17134/why-would-nat-cause-zerowindowprobeack">Why would NAT cause ZeroWindowProbeAck?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22157/reading-output-between-fw-and-router">Reading output between FW and router</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29366/windows-sends-rst-after-syn-ack-on-a-tcp-connection">Windows sends RST after SYN-ACK on a TCP connection</a>
+        </p>
+        
+        <p>
+            <a href="/questions/32596/ipsec-issue">IPSEC Issue</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39441/tcp-conversation-and-nat">TCP conversation and NAT</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47131/how-to-capture-traffic-from-behind-a-wireless-router">how to capture traffic from behind a wireless router ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49275/nat-breaks-relative-sequence-numbers">NAT breaks relative sequence numbers</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

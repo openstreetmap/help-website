@@ -1,0 +1,949 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Why chunked HTTP response is not decoded? - Wireshark Q&amp;A</title>
+        <meta name="description" content="I have captured opening of news web site main page with wireshark 2.0.1. pcap file download link GET request is parsed by wireshark but response is not. Wireshark shows the following output:  8 [TCP segment of a reassembled PDU]&quot; ... (many such lines) ...  28 [TCP Previous segment not captured] ... ..." />
+        <meta name="keywords" content="reassembly,chunk,chunked,http,data-chunk" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/49128/why-chunked-http-response-is-not-decoded" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/49128/why-chunked-http-response-is-not-decoded?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='AGQ3YYC4WiLQDwD3F9od7w98WbxdrhTT' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/49128/why-chunked-http-response-is-not-decoded">Why chunked HTTP response is not decoded?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-49128-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49128/up/" rel="nofollow"> </a>
+<div id="post-49128-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-49128-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49128/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/49128/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have captured opening of news web site main page with wireshark 2.0.1.</p>
+<p><a href="http://vrepin.org/studies/Wireshark/test.pcap">pcap file download link</a></p>
+<p>GET request is parsed by wireshark but response is not.</p>
+<p>Wireshark shows the following output:</p>
+<hr>
+<pre><code>8 [TCP segment of a reassembled PDU]" ... (many such lines)
+... 
+28 [TCP Previous segment not captured] ...
+29 [TCP ACKed unseen segment] ...
+</code></pre>
+<hr>
+<p>Then "TCP segment of reassembled PDU" appears again and again (same pattern as above).</p>
+<p>If I select "Follow TCP stream" wireshark decodes the conversation.  E.g.:</p>
+<hr>
+<pre><code>GET / HTTP/1.1
+User-Agent: Wget/1.13.4 (linux-gnu)
+Accept: */*
+Host: newsru.com
+Connection: Keep-Alive
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 10 Jan 2016 07:22:44 GMT
+Content-Type: text/html; charset=windows-1251
+Transfer-Encoding: chunked
+Connection: keep-alive
+Keep-Alive: timeout=25
+Expires: Sun, 10 Jan 2016 07:23:14 GMT
+Cache-Control: max-age=30
+Serv: ng5
+</code></pre>
+<p>...</p>
+<hr>
+<p>(Entire conversation is 163K)</p>
+<p>I am under impression that the problem is in "Transfer-Encoding: chunked" ( no length is given, <a href="http://en.wikipedia.org/wiki/Chunked_transfer_encoding">chunks</a> are used)</p>
+<p>Is it a bug in Wireshark or have I missed some settings to dissect chunked HTML?
+I've expected to see the settings which controls max length of the HTML payload being dissected but do not see any.</p>
+<p>"Resemble chunked transfer-coded bodies" is set.</p>
+<p>Thanks beforehand! </p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/reassembly/" class="post-tag tag-link-reassembly"
+                                        title="see questions tagged 'reassembly'" rel="tag">reassembly</a>
+                                
+                                    <a href="/tags/chunk/" class="post-tag tag-link-chunk"
+                                        title="see questions tagged 'chunk'" rel="tag">chunk</a>
+                                
+                                    <a href="/tags/chunked/" class="post-tag tag-link-chunked"
+                                        title="see questions tagged 'chunked'" rel="tag">chunked</a>
+                                
+                                    <a href="/tags/http/" class="post-tag tag-link-http"
+                                        title="see questions tagged 'http'" rel="tag">http</a>
+                                
+                                    <a href="/tags/data-chunk/" class="post-tag tag-link-data-chunk"
+                                        title="see questions tagged 'data-chunk'" rel="tag">data-chunk</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Jan '16, 07:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b509691f5c44d60a88a7e52336b6d686?s=32&amp;d=identicon&amp;r=g" alt="Vitaly%20R's gravatar image" />
+    <p><a href="/users/22380/vitaly-r">Vitaly R</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Vitaly R has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-49128">
+    
+</div>
+<div id="comment-tools-49128" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49128-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/49128/why-chunked-http-response-is-not-decoded?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/49128/why-chunked-http-response-is-not-decoded?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/49128/why-chunked-http-response-is-not-decoded?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/49128/why-chunked-http-response-is-not-decoded?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="49129"></a>
+                    <div id="answer-container-49129" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-49129-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49129/up/" rel="nofollow"> </a>
+<div id="post-49129-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-49129-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49129/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Possibly because your capture is missing some frames from the server?</p>
+<p>For example. see frames 27-29.  Frame 27 sends data setting the expected tcp sequence no. to 20380, but frame 28 sends data with a sequence number 26172.  There's 5792 bytes missing, likely to be 2 tcp segments given that some of the segments are transporting 2896 bytes of tcp data.  Frame 29 shows the client acking sequence no. 29068, that is all data including frame 28, so the client has seen the data, but you didn't capture it.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/49129/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Jan '16, 09:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+    <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+    <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grahamb has 274 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-49129">
+    
+        <a name="49135"></a>
+        <div class="comment" id="comment-49135">
+            <div id="post-49135-score" class="comment-score"></div>
+            <div class="comment-text"><p>This looks strange. I have just repeated the experiment.</p>
+
+<p>Now I've made measurements from different machine (and different country). And got similar results: <a href="http://vrepin.org/studies/Wireshark/tst1.pcap">see pcap file</a></p>
+
+<p>The commands I have used to capture it:</p>
+
+<pre><code>tshark -i eth0 -w tst1.pcap host newsru.com
+wget <a href="http://www.newsru.com">http://www.newsru.com</a>
+</code></pre>
+
+<p>How can it be that the client have seen the data but wireshark has not?</p>
+
+<p>I have also made a comparison of the index.html file I've got and the response which is shown in the "Follow TCP stream" window.  I do see that size of the conversation captured by wireshark is bigger that what wget saved. And meld does not show missed parts.</p></div>
+            <div class="comment-info" id="comment-49135-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '16, 10:33)</span>
+                <a class="comment-user userinfo" href="/users/22380/vitaly-r">Vitaly R</a>
+                
+            </div>
+        </div>
+    
+        <a name="49138"></a>
+        <div class="comment" id="comment-49138">
+            <div id="post-49138-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>How can it be that the client have seen the data but wireshark has not?</p>
+</blockquote>
+
+<p>The server response is (probably) not standard compliant. If you replace <strong>fc4</strong> with CRLFs, Wireshark is able to parse the response.</p>
+
+<pre>Serv: ng5
+
+fc4
+</pre>
+
+<p>Regards<br>
+Kurt</p></div>
+            <div class="comment-info" id="comment-49138-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '16, 10:42)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="49139"></a>
+        <div class="comment" id="comment-49139">
+            <div id="post-49139-score" class="comment-score">1</div>
+            <div class="comment-text"><p>The second capture still seems to be missing packets, see frame 92 where it  has a tcp sequence number of 56936, but the expected value was 55528.  Another 1408 bytes of payload missing.</p>
+
+<p>The client then acks subsequent frames, extending its window size to accommodate the new data until frame 113 where the client can no longer increase its window size.</p>
+
+<p>Then in frame 200 the server sends the missing segment.</p>
+
+<p>However things go wrong again in frame 230, the missing segment is sent in frame 272, and the server now resends a lot of the date it transmitted between 230 and 272.  In frame 307 the client finally acks the highest sequence number seen and closes the connection.</p>
+
+<p>See it seems that all the data is there, but due to the dropped and retransmitted frames Wireshark's tcp and\or http dechunking reassembly has got a bit confused.</p></div>
+            <div class="comment-info" id="comment-49139-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '16, 11:26)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="49143"></a>
+        <div class="comment" id="comment-49143">
+            <div id="post-49143-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb">@grahamb</a>:
+<br><code>Possibly because your capture is missing some frames from the server?</code>
+<br>The capture summary shows the follwing stats:</p>
+
+<pre><code>Interfaces
+Interface:              br0
+Dropped packets:        33 (3e+01 %)
+Capture filter:         port 80
+Link type:              Ethernet
+Packet size limit:      262144 bytes
+</code></pre>
+
+<p><strong>My side question is:</strong> What does this dropped packets statistic mean?<br>
+Does it mean the amount of packets dropped only for the capture (So that we are just not able to see them but there have been reached the system), 
+<br> or mean the number of dropped packets at this interface (so the system hasn´t seen this packets, too)?</p></div>
+            <div class="comment-info" id="comment-49143-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '16, 12:30)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="49152"></a>
+        <div class="comment" id="comment-49152">
+            <div id="post-49152-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Seems that I found the answer to my side question: <a href="https://ask.wireshark.org/questions/2095/what-does-packets-dropped-really-mean">https://ask.wireshark.org/questions/2095/what-does-packets-dropped-really-mean</a></p>
+
+<p>So if understand it right, this could be the explanation for the missing frames in the tracefile.</p></div>
+            <div class="comment-info" id="comment-49152-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Jan '16, 15:11)</span>
+                <a class="comment-user userinfo" href="/users/16160/christian_r">Christian_R</a>
+                
+            </div>
+        </div>
+    
+        <a name="49163"></a>
+        <div class="comment not_top_scorer" id="comment-49163">
+            <div id="post-49163-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yep. It looks like the root of the problem is in dissectors/packet-tcp.c:</p>
+
+<p><strong>desegment_tcp</strong> function:</p>
+
+<pre><code>msp = (struct tcp_multisegment_pdu*)wmem_tree_lookup32_le(tcpd-&gt;fwd-&gt;multisegment_pdus, seq-1);
+
+...
+
+if (msp &amp;&amp; msp-&gt;seq &lt;= seq &amp;&amp; msp-&gt;nxtpdu &gt; seq) {
+/* Continue to defragment the packet */
+...
+} else {
+  /* This segment was not found in our table, so it doesn't
+  * contain a continuation of a higher-level PDU.
+  * Call the normal subdissector.
+ */
+}
+</code></pre>
+
+<p>When one of the packets is not coming in a proper time, wireshark finds msp structure but it fails the test msp-&gt;nxtpdu &gt; seq. As a result, new dissection starts for the newly arrived packet and hence the whole logic breaks. The missed packet comes later but it is too late to process it.</p>
+
+<p>Failed part:</p>
+
+<pre><code>desegment_tcp: 3, msp = 0x7f7701617ea0
+desegment_tcp: msp-&gt;seq: 1, seq: 56936, msp-&gt;nxtpdu: 55529
+</code></pre></div>
+            <div class="comment-info" id="comment-49163-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jan '16, 04:34)</span>
+                <a class="comment-user userinfo" href="/users/22380/vitaly-r">Vitaly R</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-49129" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49129-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/49128/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='AGQ3YYC4WiLQDwD3F9od7w98WbxdrhTT' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49128/why-chunked-http-response-is-not-decoded?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49128/why-chunked-http-response-is-not-decoded?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/http/"
+            class="tag-link-http"
+            title="see questions tagged'http'using tags"
+            rel="tag">http</a> <span class="tag-number">&#215;293</span><br/>
+        
+        <a href="/tags/reassembly/"
+            class="tag-link-reassembly"
+            title="see questions tagged'reassembly'using tags"
+            rel="tag">reassembly</a> <span class="tag-number">&#215;78</span><br/>
+        
+        <a href="/tags/chunk/"
+            class="tag-link-chunk"
+            title="see questions tagged'chunk'using tags"
+            rel="tag">chunk</a> <span class="tag-number">&#215;4</span><br/>
+        
+        <a href="/tags/chunked/"
+            class="tag-link-chunked"
+            title="see questions tagged'chunked'using tags"
+            rel="tag">chunked</a> <span class="tag-number">&#215;2</span><br/>
+        
+        <a href="/tags/data-chunk/"
+            class="tag-link-data-chunk"
+            title="see questions tagged'data-chunk'using tags"
+            rel="tag">data-chunk</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 12, 2016, 7:48 a.m.">12 Jan '16, 07:48</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,483 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 13, 2016, 5:46 a.m.">13 Jan '16, 05:46</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/51129/http-de-chunk-not-working-on-202-linux-was-unable-to-view-decompressed-data">HTTP De-chunk not working on 2.0.2 Linux (was: Unable to view decompressed data)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62798/tcphttp-reassemble">TCP\HTTP reassemble</a>
+        </p>
+        
+        <p>
+            <a href="/questions/17805/why-doesnt-wireshark-reassemble-http-post-messages-in-my-converted-raw-ip-capture">Why doesn&#39;t Wireshark reassemble HTTP POST messages in my converted raw IP capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/57685/reassembly-not-working-with-a-chained-dissector-in-lua">Reassembly not working with a chained dissector in Lua</a>
+        </p>
+        
+        <p>
+            <a href="/questions/344/conditional-tcp-reassembly-based-on-dscp-bits">Conditional TCP reassembly based on DSCP bits</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18443/tshark-issues-with-ip-defragmentation-sip">tshark - Issues with IP Defragmentation - SIP</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33344/how-wireshark-reassembles-tcpsip-segments">How wireshark reassembles TCP/SIP segments</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44329/multiple-time-showing-same-message-name-for-gsm_map-message">Multiple time showing same message name for gsm_map message</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59151/how-to-reassemble-custom-protocols-with-lua">How to reassemble custom protocols with Lua?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1431/is-there-any-better-way-to-dump-data-http">Is there any better way to dump data? (http)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

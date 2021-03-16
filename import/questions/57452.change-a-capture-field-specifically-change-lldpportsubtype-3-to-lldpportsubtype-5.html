@@ -1,0 +1,1228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Change a capture field.  Specifically, change lldp.port.subtype == 3 to lldp.port.subtype == 5 - Wireshark Q&amp;A</title>
+        <meta name="description" content="Let me preface this by saying I am very new to Wireshark. That said what I want to do is to capture LLDP packets and display the name of the switchport interface. I believe I have narrowed it down to this field... lldp.port.subtype This field is defaulted in Wireshark to be... lldp.port.subtype == 3..." />
+        <meta name="keywords" content="lldp,capture,change,field" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/57452/change-a-capture-field-specifically-change-lldpportsubtype-3-to-lldpportsubtype-5" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/57452/change-a-capture-field-specifically-change-lldpportsubtype-3-to-lldpportsubtype-5?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='D7tFiU37H2llw9UpW9nsb1ETyZctklby' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/57452/change-a-capture-field-specifically-change-lldpportsubtype-3-to-lldpportsubtype-5">Change a capture field.  Specifically, change lldp.port.subtype == 3 to lldp.port.subtype == 5</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-57452-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57452/up/" rel="nofollow"> </a>
+<div id="post-57452-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-57452-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57452/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/57452/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Let me preface this by saying I am very new to Wireshark.  That said what I want to do is to capture LLDP packets and display the name of the switchport interface.  I believe I have narrowed it down to this field...</p>
+<p>lldp.port.subtype</p>
+<p>This field is defaulted in Wireshark to be...</p>
+<p>lldp.port.subtype == 3</p>
+<p>Which captures the MAC Address of the switchport.  I want to capture the Interface name of the switchport which would require changing the field to...</p>
+<p>lldp.port.subtype == 5</p>
+<p>Which would give me the Interface name.  How do I do this?  Any help would be much appreciated.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/lldp/" class="post-tag tag-link-lldp"
+                                        title="see questions tagged 'lldp'" rel="tag">lldp</a>
+                                
+                                    <a href="/tags/capture/" class="post-tag tag-link-capture"
+                                        title="see questions tagged 'capture'" rel="tag">capture</a>
+                                
+                                    <a href="/tags/change/" class="post-tag tag-link-change"
+                                        title="see questions tagged 'change'" rel="tag">change</a>
+                                
+                                    <a href="/tags/field/" class="post-tag tag-link-field"
+                                        title="see questions tagged 'field'" rel="tag">field</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>18 Nov '16, 10:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/468392a6e6783edc235108ac54ca1a5d?s=32&amp;d=identicon&amp;r=g" alt="BSB's gravatar image" />
+    <p><a href="/users/26537/bsb">BSB</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="BSB has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-57452">
+    
+        <a name="57575"></a>
+        <div class="comment" id="comment-57575">
+            <div id="post-57575-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok.  I did a 4 minute capture of the network with the capture filter "ether proto 0x88cc".
+I uploaded it to Cloudshark.  How do I attach it here?  I hope this gives you enough 
+information to figure out what is going on.  Thank you again for your help.</p></div>
+            <div class="comment-info" id="comment-57575-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Nov '16, 10:47)</span>
+                <a class="comment-user userinfo" href="/users/26537/bsb">BSB</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-57452" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57452-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/57452/change-a-capture-field-specifically-change-lldpportsubtype-3-to-lldpportsubtype-5?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/57452/change-a-capture-field-specifically-change-lldpportsubtype-3-to-lldpportsubtype-5?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/57452/change-a-capture-field-specifically-change-lldpportsubtype-3-to-lldpportsubtype-5?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/57452/change-a-capture-field-specifically-change-lldpportsubtype-3-to-lldpportsubtype-5?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="57453"></a>
+                    <div id="answer-container-57453" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-57453-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57453/up/" rel="nofollow"> </a>
+<div id="post-57453-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-57453-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57453/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>This field is defaulted in Wireshark to be...</p>
+</blockquote>
+<p>It is not any default setting of Wireshark, it is what is really sent over the wire. Wireshark has captured the frame, and found an internally structured field "Port ID" in it, and the "port ID subtype" inside bears a value of 3. So Wireshark accordingly dissects the remaining bytes of "Port ID" as MAC address.</p>
+<p>So to see a switch port name in the packet, the switch would have to populate the field that way.</p>
+<p>The information you seek may be available in some other field, such as "port description".</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/57453/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Nov '16, 10:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/57453/">
+                edited
+                <strong>18 Nov '16, 10:39</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-57453">
+    
+        <a name="57455"></a>
+        <div class="comment" id="comment-57455">
+            <div id="post-57455-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sindy,</p>
+
+<p>Thank you for your quick response.  All due respect but you are wrong.  I have two programs that can capture LLDP packets. <br>
+1. Wireshark obviously and<br> 
+2. lldp on the Linux OS, which I can query using lldpcli.  </p>
+
+<p>Wireshark gives me the below output...</p>
+
+<pre><code>Port Subtype = MAC address, Id: 2c:23:3a:3d:01:7a
+    0000 010. .... .... = TLV Type: Port Id (2)
+    .... ...0 0000 0111 = TLV Length: 7
+    Port Id Subtype: MAC address (3)
+    Port Id: HewlettP_3d:01:7a (2c:23:3a:3d:01:7a)
+Port Description = User-Phone
+    0000 100. .... .... = TLV Type: Port Description (4)
+    .... ...0 0000 1010 = TLV Length: 10
+     Port Description: User-Phone</code></pre>
+
+<p>lldpcli gives me this output...</p>
+
+<pre><code>Interface:    eth0, via: LLDP, RID: 1, Time: 0 day, 00:00:54
+  Chassis: 
+    ChassisID:    mac 2c:23:3a:3d:03:b1
+    SysName:      HQ-BLD2BCSW55IRF_01
+    SysDescr:     HP Comware Platform Software, Software Version 5.20.99 Release 5501P25
+                  HP 5500-48G-PoE+-4SFP HI Switch with 2 Interface Slots
+                  Copyright (c) 2010-2016 Hewlett Packard Enterprise Development LP
+    MgmtIP:       10.10.33.254
+    Capability:   Bridge, on
+    Capability:   Router, on
+  Port:
+    PortID:       ifname GigabitEthernet1/0/18
+    PortDescr:    User-Phone</code></pre>
+
+<p>If the switch only sent the LLDP packets one way then both programs would have to have<br>
+the same output.  As you can see Wireshark lists port id as...</p>
+
+<pre><code>Port Id Subtype: MAC address (3)
+    Port Id: HewlettP_3d:01:7a (2c:23:3a:3d:01:7a)</code></pre>
+
+<p>lldpcli lists port id as...</p>
+
+<pre><code>PortID:       ifname GigabitEthernet1/0/18
+PortDescr:    User-Phone</code></pre>
+
+<p>This is information collected by these two different software packages on the same Ethernet<br>
+cable going to the same port on the same switch.  Therefore there are 2 possibilities, one <br>
+Wireshark and lldpcli are asking the switch for different results, or the packet that is recieved<br>
+is decoded in one way by Wireshark and another way by lldpcli.  Which brings me back to the <br>
+orginal question.  How do I get Wireshark to ask or decode the packet for the Interface name<br>
+instead of the MAC address?  The switch is obviously supplying both pieces of information.</p></div>
+            <div class="comment-info" id="comment-57455-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Nov '16, 16:14)</span>
+                <a class="comment-user userinfo" href="/users/26537/bsb">BSB</a>
+                
+            </div>
+        </div>
+    
+        <a name="57456"></a>
+        <div class="comment" id="comment-57456">
+            <div id="post-57456-score" class="comment-score"></div>
+            <div class="comment-text"><p>We would have to see the capture file (the raw capture file, not Wireshark's dissection of it) in order to determine what the issue is here.</p></div>
+            <div class="comment-info" id="comment-57456-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Nov '16, 18:13)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="57459"></a>
+        <div class="comment" id="comment-57459">
+            <div id="post-57459-score" class="comment-score"></div>
+            <div class="comment-text"><p>As <a href="/users/79/guy-harris"></a><a href="/users/79/guy-harris">@Guy Harris</a> says, please capture according to the instruction below and then follow Step 3 of <a href="https://blog.packet-foo.com/2016/11/the-wireshark-qa-trace-file-sharing-tutorial/">this capture file publishing tutorial</a> so that we are all at the same page. For maximum possible privacy while preserving the information necessary for analysis, you can apply a display filter <code>lldp</code> and then use <code>File-&gt;Export Specified Packets</code>, choose <code>All packets</code> and <code>Displayed</code> to save only the LLDP frames. Or, instead, you may capture using a <strong>capture</strong> filter <code>ether[12:2] = 0x88cc</code> to avoid capturing any other kind of traffic.</p>
+
+<p>But first let me say more clearly what I said before: Wireshark is a passive listener, it does not <strong>send</strong> any packets on its own. So what was on the wire, regardless how it got there, has been captured and dissected. It would be hard for me to believe that there was an error in capturing, I would have much less problems to believe that there was an error in dissection. But as Wireshark shows <code>Port Id Subtype: MAC address (3)</code> and the following six bytes cannot be read as ASCII "Gigabi" or any other ASCII string making sense as port description (<code>,#:=</code> which is the ASCII representation of <code>2c:23:3a:3d</code> doesn't), while they do represent a valid MAC address whose beginning is similar to the device MAC shown by the lldpcli, I'd say both capturing and dissection work fine.</p>
+
+<p>So please try to capture for longer time and then (or already during capturing) use a <strong>display</strong> filter <code>lldp.port.subtype == 5</code> to show only LLDP frames which do contain port name in the Port ID field; there may be none, though.</p>
+
+<p>Then, start another capture, and while capturing, issue the <code>update</code> command of the lldpcli. Now the same display filter as above, <code>lldp.port.subtype == 5</code>, should definitely show some matching LLDP frames, as the lldpd cannot source the information about the port name from anywhere else but the incoming frames.</p></div>
+            <div class="comment-info" id="comment-57459-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Nov '16, 00:10)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="57461"></a>
+        <div class="comment" id="comment-57461">
+            <div id="post-57461-score" class="comment-score"></div>
+            <div class="comment-text"><p>BTW, what I could imagine would be that the frames actually matching <code>lldp.port.subtype == 5</code> are present in the capture but dissected wrong, causing the subfield <code>lldp.port.subtype</code> not to be added to the dissection tree. So instead of the display filter expression above, use another one to find such frames: <code>lldp and !(lldp.port.subtype == 3)</code>.</p></div>
+            <div class="comment-info" id="comment-57461-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Nov '16, 02:09)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="57535"></a>
+        <div class="comment" id="comment-57535">
+            <div id="post-57535-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ahh... That explains some things.  As I said I am new to Wireshark and therefore prone to many mistakes.  Let me attempt to make the scans you requested and then I will post them here.  And I see as you explain it Wireshark does not send any packets it just listens.  Ahh, so the problem must be what I called in "decoding" what you call "dissection" so dissection is the proper name for what is going on?  And your explaination makes sense.  Wireshark gets both pieces of information but only the MAC address is being dissected correctly.  At least that is your guess currently.  Let me capture some scans and post them so you can get a better look of what is going on.  Thank you for your help so far!</p></div>
+            <div class="comment-info" id="comment-57535-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Nov '16, 11:49)</span>
+                <a class="comment-user userinfo" href="/users/26537/bsb">BSB</a>
+                
+            </div>
+        </div>
+    
+        <a name="57555"></a>
+        <div class="comment not_top_scorer" id="comment-57555">
+            <div id="post-57555-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok.  I did a 4 minute capture of the network with the capture filter "ether proto 0x88cc".
+I uploaded it to Cloudshark.  How do I attach it here?  I hope this gives you enough 
+information to figure out what is going on.  Thank you again for your help.</p></div>
+            <div class="comment-info" id="comment-57555-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Nov '16, 13:58)</span>
+                <a class="comment-user userinfo" href="/users/26537/bsb">BSB</a>
+                
+            </div>
+        </div>
+    
+        <a name="57556"></a>
+        <div class="comment not_top_scorer" id="comment-57556">
+            <div id="post-57556-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/26537/bsb"></a><a href="/users/26537/bsb">@BSB</a>: Simply paste the publicly accessible link in a comment.</p></div>
+            <div class="comment-info" id="comment-57556-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Nov '16, 14:47)</span>
+                <a class="comment-user userinfo" href="/users/4/jaap">Jaap ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="57573"></a>
+        <div class="comment not_top_scorer" id="comment-57573">
+            <div id="post-57573-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok.  I did a 4 minute capture of the network with the capture filter "ether proto 0x88cc".
+I uploaded it to Cloudshark.  How do I attach it here?  I hope this gives you enough 
+information to figure out what is going on.  Thank you again for your help.</p></div>
+            <div class="comment-info" id="comment-57573-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Nov '16, 09:41)</span>
+                <a class="comment-user userinfo" href="/users/26537/bsb">BSB</a>
+                
+            </div>
+        </div>
+    
+        <a name="57574"></a>
+        <div class="comment not_top_scorer" id="comment-57574">
+            <div id="post-57574-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>How do I attach it here?</p>
+</blockquote>
+
+<p>You don't; this site doesn't support arbitrary attachments.  Instead, to quote <a href="/users/4/jaap">@Jaap</a>'s answer when you <em>previously</em> asked this question, you "simply paste the publicly accessible link in a comment."</p></div>
+            <div class="comment-info" id="comment-57574-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Nov '16, 10:43)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="57576"></a>
+        <div class="comment not_top_scorer" id="comment-57576">
+            <div id="post-57576-score" class="comment-score"></div>
+            <div class="comment-text"><p>Alright.  Sorry for the multiple postings.  Getting used to this website and I posted 3 
+copies of the same post by mistake.  Ok, post the publicly accessible link. <a href="https://www.cloudshark.org/captures/605e2e2b8105">@LLDP Scan</a>  If I did this correctly you should get to my scan.</p></div>
+            <div class="comment-info" id="comment-57576-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Nov '16, 11:00)</span>
+                <a class="comment-user userinfo" href="/users/26537/bsb">BSB</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-57453" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 10
+        </span>
+        <a href="#" class="show-all-comments-link">show 5 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57453-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="57579"></a>
+                    <div id="answer-container-57579" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-57579-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57579/up/" rel="nofollow"> </a>
+<div id="post-57579-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-57579-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57579/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>OK, so, in that capture, here's where the various lldpcli values come from:</p>
+<pre><code> ChassisID: mac 2c:23:3a:3d:03:b1:
+</code></pre>
+<p>That comes from the first TLV, "Chassis Subtype".</p>
+<pre><code> SysName: HQ-BLD2BCSW55IRF_01
+</code></pre>
+<p>That comes from the "System Name" TLV.</p>
+<pre><code> SysDescr: HP Comware Platform Software, Software Version 5.20.99 Release 5501P25
+                   HP 5500-48G-PoE+-4SFP HI Switch with 2 Interface Slots
+                   Copyright (c) 2010-2016 Hewlett Packard Enterprise Development LP
+</code></pre>
+<p>That comes from the "System Description" TLV.</p>
+<pre><code>MgmtIP:       10.10.33.254
+</code></pre>
+<p>That comes from the "Management Address" TLV.</p>
+<pre><code>Capability:   Bridge, on
+Capability:   Router, on
+</code></pre>
+<p>Those come from the "Capabilities" TLV.</p>
+<pre><code>Port:
+  PortID:       ifname GigabitEthernet1/0/18
+  PortDescr:    User-Phone
+</code></pre>
+<p>The PortID isn't in the capture; the PortDescr comes from the "Port Description" TLV.</p>
+<p>It appears that Wireshark is dissecting the packet entirely correctly, and "ifname GigabitEthernet1/0/18" simply does not appear in the packets <em>at all</em>.</p>
+<p>The lldpcli man page says</p>
+<pre><code>   configure [ports ethX [,...]] lldp portidsubtype local value
+   [description description]
+
+         Force port ID subtype. By default, lldpd will use the MAC address
+         as port identifier and the interface name as port description,
+         unless the interface has an alias. In this case, the interface 
+         name will be used as port identifier and the description will be 
+         the interface alias. With this command, you can force the port
+         identifier to be the interface name (with ifname), the MAC
+         address (with macaddress) or a local value (with value).  In the 
+         latest case, the local value should be provided.  Optionally, a
+         port description can also be provided after the local value.
+</code></pre>
+<p>so it may be that lldpcli is getting the port ID from a configuration file rather than from an LLDP packet.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/57579/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>23 Nov '16, 11:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-57579">
+    
+        <a name="57581"></a>
+        <div class="comment" id="comment-57581">
+            <div id="post-57581-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/79/guy-harris"></a><a href="/users/79/guy-harris">@Guy Harris</a>, are you sure that the lldpcli configure command affects the way how <strong>received</strong> LLDP frames are interpreted? I read it as choice of how the lldpd populates the LLDP frames it <strong>sends</strong>.</p>
+
+<p>Basically I cannot even see any purpose in configuring a translation of the received values.</p>
+
+<p>So <a href="/users/26537/bsb"></a><a href="/users/26537/bsb">@BSB</a>, I suspect that if you would capture again without a capture filter, you would find some SNMP GETs which the lldpd would send to the management address found in the LLDP frames, in order to fetch the port names from the MIB of the switch. And that you would find the port name in the SNMP response of the switch. And it may well be that such SNMP GET is not sent each time a LLDP frame is received but only at the first occurrence of a yet unseen (Chassis Id, Port Id) tuple, so you may have to disconnect the cable and re-connect it; ideally, you'd do that at the switch side and connect the cable to another port, so that the lldpd has a reason to fetch additional information.</p>
+
+<p>Quoting from lldpd's home page:</p>
+
+<pre><code>-x Enable SNMP subagent. With this option, lldpd will enable an
+   SNMP subagent using AgentX protocol. This allows you to get
+   information about local system and remote systems through SNMP.
+</code></pre></div>
+            <div class="comment-info" id="comment-57581-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Nov '16, 11:46)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="57582"></a>
+        <div class="comment" id="comment-57582">
+            <div id="post-57582-score" class="comment-score"></div>
+            <div class="comment-text"><p>WOW.  Not only do you give a fast response, that was very in depth and well written.  It 
+would have taken me months to figure that out.  Thank you for that very informative 
+response.  So Wireshark only listens, collects, dissects and then displays the information
+of the packet received.  Apparently lldpcli uses snmp to query the switch for the port 
+information which it then presents as part of the lldpcli display.  I see.  Hmm... Ok so 
+according to the rest of your explanation if I just run a capture without any capture 
+filter I "might" find the "port id" in a SNMP packet.  But definitely NOT in an LLDP 
+packet.  Am I correct in my read of your explanation?</p></div>
+            <div class="comment-info" id="comment-57582-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Nov '16, 12:09)</span>
+                <a class="comment-user userinfo" href="/users/26537/bsb">BSB</a>
+                
+            </div>
+        </div>
+    
+        <a name="57584"></a>
+        <div class="comment" id="comment-57584">
+            <div id="post-57584-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's what I had in mind, yes. As <a href="/users/79/guy-harris">@Guy Harris</a> has pointed out, and as a display filter <code>frame contains "GigabitEthernet"</code> confirms by <strong>not</strong> matching any of the frames in the capture you've published, the "human-readable" port name shown by the lldpcli has not arrived via LLDP.</p>
+
+<p>So it must have been obtained some other way, and the SNMP way is the most logical one, due to the intrinsically tight relationship between LLDP and SNMP.</p></div>
+            <div class="comment-info" id="comment-57584-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Nov '16, 13:01)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="57587"></a>
+        <div class="comment" id="comment-57587">
+            <div id="post-57587-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well I thank you both, Guy Harris and Sindy, for answering my question far faster than I 
+had imagined.  And for answering in a form I could understand.  I greatly appreciate your 
+time.  So to get my information I need to move on to finding a snmp software that I can use
+on windows 10 to query the switch for the port id.  Just taking a shot in the dark, you wouldn't happen to know of any good snmp software by chance would you?</p></div>
+            <div class="comment-info" id="comment-57587-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Nov '16, 13:48)</span>
+                <a class="comment-user userinfo" href="/users/26537/bsb">BSB</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-57579" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57579-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/57452/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='D7tFiU37H2llw9UpW9nsb1ETyZctklby' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/57452/change-a-capture-field-specifically-change-lldpportsubtype-3-to-lldpportsubtype-5?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/57452/change-a-capture-field-specifically-change-lldpportsubtype-3-to-lldpportsubtype-5?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/capture/"
+            class="tag-link-capture"
+            title="see questions tagged'capture'using tags"
+            rel="tag">capture</a> <span class="tag-number">&#215;549</span><br/>
+        
+        <a href="/tags/field/"
+            class="tag-link-field"
+            title="see questions tagged'field'using tags"
+            rel="tag">field</a> <span class="tag-number">&#215;34</span><br/>
+        
+        <a href="/tags/change/"
+            class="tag-link-change"
+            title="see questions tagged'change'using tags"
+            rel="tag">change</a> <span class="tag-number">&#215;5</span><br/>
+        
+        <a href="/tags/lldp/"
+            class="tag-link-lldp"
+            title="see questions tagged'lldp'using tags"
+            rel="tag">lldp</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 18, 2016, 10:08 a.m.">18 Nov '16, 10:08</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,822 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 24, 2016, 1:17 a.m.">24 Nov '16, 01:17</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/55/can-you-change-the-capture-format-to-support-the-diagnostic-process">Can you change the capture format to support the diagnostic process?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1515/capture-the-first-64bytes-of-a-packet">Capture the first 64bytes of a packet?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2507/start-time-for-a-packet-capture">Start time for a packet capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3842/capturing-on-wi-fi-nic-with-monitor-mode-off">Capturing on Wi-Fi NIC with monitor mode off</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5565/wireshark-17-display-filtering-on-multiple-capture-interfaces">Wireshark 1.7 display filtering on Multiple capture interfaces</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6637/sip-capture-filter">SIP capture filter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8075/missing-packets">Missing Packets?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9194/can-i-recover-a-discarded-capture">Can I recover a discarded capture?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10165/using-the-wireshark-pcap-file-capture-data-as-splunk-log-data">Using the wireshark pcap file capture data as Splunk Log Data</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11971/measuring-bandwidth-without-capture-all-data">Measuring bandwidth without capture all data</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

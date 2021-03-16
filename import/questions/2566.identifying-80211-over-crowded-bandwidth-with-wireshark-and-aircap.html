@@ -1,0 +1,918 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Identifying 802.11 Over-Crowded Bandwidth with Wireshark and Aircap. - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi all and thanks for reading my post. I have been using Wireshark and AirPcap (USB adapter) on and off, over the last 1-2 weeks, so excuse any ‘apparent’ questions I might ask. I will start by saying that my knowledge of the IEEE 802.11 standard is ‘starter-intermediate’, but I do have access to it..." />
+        <meta name="keywords" content="interference,airpcap,802.11,retransmissions,wireshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/2566/identifying-80211-over-crowded-bandwidth-with-wireshark-and-aircap" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/2566/identifying-80211-over-crowded-bandwidth-with-wireshark-and-aircap?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='gfNuCFUeT9LnjxNaip9pSkNVo7YrIK6Z' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/2566/identifying-80211-over-crowded-bandwidth-with-wireshark-and-aircap">Identifying 802.11 Over-Crowded Bandwidth with Wireshark and Aircap.</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-2566-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2566/up/" rel="nofollow"> </a>
+<div id="post-2566-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-2566-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2566/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/2566/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all and thanks for reading my post.</p>
+<p>I have been using Wireshark and AirPcap (USB adapter) on and off, over the last 1-2 weeks, so excuse any ‘apparent’ questions I might ask.</p>
+<p>I will start by saying that my knowledge of the IEEE 802.11 standard is ‘starter-intermediate’, but I do have access to it and I am more than willing to understand it fully. I am ‘fresh’ out of university (Electrical &amp; Electronic Engineering) with some basic knowledge (/modules) on my back, on Electromagnetics, Communication systems, HF and RF engineering and Communication protocols (tcp/ip, udp).</p>
+<p>Over the last week or so, I have been reading the book ‘802.11 Wireless Networks: The Definitive Guide’ by Matthew S. Gast. At the same time I have been ‘following up’, what I have been reading using Wireshark and AirPcap to identify (/verify) how the 802.11 protocol works in ‘real-time’ (i.e. I have been looking at the 802.11 control, management and data frames, etc…).</p>
+<p>I have designed a PCB with a microcontroller connected to a Lantronix Matchport 802.11 b/g transceiver. I am trying to wirelessly transmit 640kbps from the 802.11 transceiver module to an access point (and ultimately a PC). Also the combined onbarod memory of the microcontroller and 802.11 transceiver, used to buffer data waiting to be transmistted is at 14kB (or 112kb).</p>
+<p>http://www.lantronix.com/device-networking/embedded-device-servers/matchport.html</p>
+<p>What I am seeing is that the wireless transmission does not really go as I would have hoped. It has become apparent to me that it is IMPOSSIBLE to guarantee that this operation goes smoothly over at least a 10 minute period (i.e Continuous transmission of 640kbps over 10 min), unless some large onboard memory is available.</p>
+<p>It seems the myth of non-overlapping channels had me completely ‘blinded’. The moment another 802.11 device starts operating, the likely hood of a buffer over run is increased many orders of magnitude.</p>
+<p>What I am here to ask is this: <strong>Is it possible to guarantee a long term (more that 5 min) 802.11 transmission operation of 1Mbps and if yes, what buffers sizes should be used? Is there some ‘rule of thumb’ here with regards to transmission speed and onboard memory?</strong><br>
+</p>
+<p><strong>For a given wireless environment, how can I use Wireshark and the AirPcap adapter to measure (/predict) what kind of onboard memory I require for a given transmission speed, assuming that the wireless environment remains constant?</strong></p>
+<p>With regards to the above question, I (think I) have been plotting the data length of the retransmitted packets using wireshark filter (wlan.sa== xx:xx:xx:xx:xx:xx &amp;&amp; wlan.fc.retry == 1 &amp;&amp; data.len). This filter, I think is a ‘satisfactory’ (/initial) indicator of the degradation of the wireless transmission, due to adjacent channel interference. I should point out here, that I am also using a spectrum analyzer (Wispy 2.4x – Chanalyzer) to visualize the 2.4GHz spectrum and that I am causing (/initiating) at will, the adjacent channel interference. <strong>But is there a better wireshark filter that will indicate beyond doubt transmission degradation and maybe give me some sort of clue as to what maximum transmission speed I can sustain with a given onboard memory size?</strong></p>
+<p><strong>One quite general question would be what kind of onbarod memories do 802.11 chips have in commercial products (802.11 adapters, laptop, etc…)? I am unaware of the 802.11 chips driver operation. Are they able to ‘steal’ RAM (from the PC) when required?</strong></p>
+<p><strong>My last question would be relatively simple. Can a technology designed (/amended) to transmit at 27Mbps sustain a 1Mbps transmission over a period of time?</strong></p>
+<p>The obvious is answer will likely be, it depends on the wireless environment. My next question of course, will be give me some ‘metrics’ or specs as to ‘what’, ‘when’, ‘how’.</p>
+<p>I am aware of the overcrowded principle of all wireless technologies. <strong>How do I measure this and quantify how throughtput degrades with increase usage?</strong></p>
+<p>I realize some of my questions are broad, but I will appreciate any comment big or small. I am also in the process of going through the IEEE literature on 802.11 (adjacent channel interference, etc…), but this will take time.</p>
+<p>Thanks and regards</p>
+<p>Alex</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/interference/" class="post-tag tag-link-interference"
+                                        title="see questions tagged 'interference'" rel="tag">interference</a>
+                                
+                                    <a href="/tags/airpcap/" class="post-tag tag-link-airpcap"
+                                        title="see questions tagged 'airpcap'" rel="tag">airpcap</a>
+                                
+                                    <a href="/tags/802.11/" class="post-tag tag-link-802.11"
+                                        title="see questions tagged '802.11'" rel="tag">802.11</a>
+                                
+                                    <a href="/tags/retransmissions/" class="post-tag tag-link-retransmissions"
+                                        title="see questions tagged 'retransmissions'" rel="tag">retransmissions</a>
+                                
+                                    <a href="/tags/wireshark/" class="post-tag tag-link-wireshark"
+                                        title="see questions tagged 'wireshark'" rel="tag">wireshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>25 Feb '11, 11:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/18440914e73da9d5280d0404ad6cf9a1?s=32&amp;d=identicon&amp;r=g" alt="almost_linear's gravatar image" />
+    <p><a href="/users/766/almost_linear">almost_linear</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="almost_linear has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/2566/">
+                edited
+                <strong>27 Feb '11, 10:42</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-2566">
+    
+        <a name="2587"></a>
+        <div class="comment" id="comment-2587">
+            <div id="post-2587-score" class="comment-score">1</div>
+            <div class="comment-text"><p>To be sure to get your question correct: You wanna have 640 kbits / second but the problem is that your memory (with 112.000 bits) is not enough to buffer frames to be send over the wireless network ? For the buffer to fill, that would mean that the device cannot send data for a few seconds at all, am I right with that or did I get something wrong ?</p>
+
+<p>Did you have Retry Bits set when there is only the transciever module and no other wlan client active?</p>
+
+<p>What does "the other" device do, when becoming active and bringing your transciever connection down (buffer overrun) -&gt; what were you transmitting etc.</p></div>
+            <div class="comment-info" id="comment-2587-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Feb '11, 08:03)</span>
+                <a class="comment-user userinfo" href="/users/146/landi">Landi</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-2566" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2566-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/2566/identifying-80211-over-crowded-bandwidth-with-wireshark-and-aircap?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/2566/identifying-80211-over-crowded-bandwidth-with-wireshark-and-aircap?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/2566/identifying-80211-over-crowded-bandwidth-with-wireshark-and-aircap?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/2566/identifying-80211-over-crowded-bandwidth-with-wireshark-and-aircap?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="2589"></a>
+                    <div id="answer-container-2589" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-2589-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2589/up/" rel="nofollow"> </a>
+<div id="post-2589-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-2589-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2589/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi Landy and thanks for your reply.</p>
+<p>“<em>For the buffer to fill, that would mean that the device cannot send data for a few seconds at all, am I right with that or did I get something wrong?</em>”</p>
+<p>Yes you are right, but the magnitude is not seconds, but milli-seconds. Specifically 175ms. I have enough memory to buffer for 175ms worth of data.</p>
+<p>“<em>Did you have Retry Bits set when there is only the transceiver module and no other wlan client active?</em>”</p>
+<p>The university environment, in which I work, might or might not have a client working at any single time. Even when testing late at night (10pm) I still get a few retransmitted packets (retry bit set). During these late night tests, Airpcap-Wireshark did not show any data frames being transmitted (from other MACs) and the 2.4Ghz spectrum (monitored using Wispy-Chanalyzer) was ‘quite’, apart from the channel I was transmitting on. I should point out, a number of university access points in the vicinity of my ‘testing area’ will ALWAYS transmit beacon frames.</p>
+<p>“<em>What does "the other" device do, when becoming active and bringing your transceiver connection down (buffer overrun) -&gt; what were you transmitting etc.</em>”</p>
+<p>I use my laptop connected to the university network (which is on a non overlapping channel) and download a large file. This will generally create a buffer overrun. My laptop is situated about 5 meters away from the matchport WLAN transceiver.</p>
+<p>Hope my answers might help you, provide me with some insight into my ‘problems’.</p>
+<p>Thanks and regards</p>
+<p>Alex</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/2589/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Feb '11, 08:33</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/18440914e73da9d5280d0404ad6cf9a1?s=32&amp;d=identicon&amp;r=g" alt="almost_linear's gravatar image" />
+    <p><a href="/users/766/almost_linear">almost_linear</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="almost_linear has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/2589/">
+                edited
+                <strong>01 Mar '11, 08:09</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-2589">
+    
+</div>
+<div id="comment-tools-2589" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2589-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="2640"></a>
+                    <div id="answer-container-2640" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-2640-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/2640/up/" rel="nofollow"> </a>
+<div id="post-2640-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-2640-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/2640/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi all,</p>
+<p>I am trying to narrow down some of my questions, so I can possibly get some help from the members of this forum.</p>
+<p>An extract from ‘802.11 Wireless Networks: The Definitive Guide’ by Matthew S. Gast., on page196 says:
+“…
+Stations are responsible for maintaining sufficient memory to buffer frames, but the buffer size must be traded off against the use of that memory for other purposes. The standard allows a station in an independent network to discard frames that have been buffered for an "excessive" amount of time, but the algorithm used to make that determination is beyond the scope of the standard. <strong>The only requirement placed on any buffer management function is that it retain frames for at least one beacon period.</strong>”</p>
+<p>(also confirmed from page 136 of the ANSI/IEEE Std 802.11, 1999 Edition (R2003))</p>
+<p>The beacon interval in my Netgear access point is set, to the default value, of 102.4msec (As far as I can tell this value is standard across many access points).</p>
+<p>Given the 802.11 Matchport transceiver I am using has a maximum data transmission speed of 921,6kbps, I would except the onboard memory to be at least 92,160b (or 11,520kB). Lantronix, the manufacturer of the 802.11 transceiver only provides (6kB).</p>
+<p><strong>Is Lantronix providing too little onbarod memory, or is the trail of my thought wrong?</strong></p>
+<p>Thanks</p>
+<p>Alex</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/2640/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Mar '11, 13:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/18440914e73da9d5280d0404ad6cf9a1?s=32&amp;d=identicon&amp;r=g" alt="almost_linear's gravatar image" />
+    <p><a href="/users/766/almost_linear">almost_linear</a><br/>
+    <span class="score" title="31 reputation points">31</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="almost_linear has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/2640/">
+                edited
+                <strong>02 Mar '11, 13:52</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-2640">
+    
+        <a name="2645"></a>
+        <div class="comment" id="comment-2645">
+            <div id="post-2645-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I'm not the hardware guy - but as far as my thoughts were going when reading your post, I think it should be standard for a NIC to obtain some (maybe even kernel) memory to use as a buffer... But absolutely not sure 'bout that...</p></div>
+            <div class="comment-info" id="comment-2645-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Mar '11, 02:13)</span>
+                <a class="comment-user userinfo" href="/users/146/landi">Landi</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-2640" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-2640-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/2566/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='gfNuCFUeT9LnjxNaip9pSkNVo7YrIK6Z' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/2566/identifying-80211-over-crowded-bandwidth-with-wireshark-and-aircap?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/2566/identifying-80211-over-crowded-bandwidth-with-wireshark-and-aircap?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/wireshark/"
+            class="tag-link-wireshark"
+            title="see questions tagged'wireshark'using tags"
+            rel="tag">wireshark</a> <span class="tag-number">&#215;1,620</span><br/>
+        
+        <a href="/tags/802.11/"
+            class="tag-link-802.11"
+            title="see questions tagged'802.11'using tags"
+            rel="tag">802.11</a> <span class="tag-number">&#215;114</span><br/>
+        
+        <a href="/tags/retransmissions/"
+            class="tag-link-retransmissions"
+            title="see questions tagged'retransmissions'using tags"
+            rel="tag">retransmissions</a> <span class="tag-number">&#215;104</span><br/>
+        
+        <a href="/tags/airpcap/"
+            class="tag-link-airpcap"
+            title="see questions tagged'airpcap'using tags"
+            rel="tag">airpcap</a> <span class="tag-number">&#215;36</span><br/>
+        
+        <a href="/tags/interference/"
+            class="tag-link-interference"
+            title="see questions tagged'interference'using tags"
+            rel="tag">interference</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 25, 2011, 11:57 a.m.">25 Feb '11, 11:57</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>6,397 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 3, 2011, 2:13 a.m.">03 Mar '11, 02:13</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/5651/can-you-get-a-00mbs-80211-transmission-rate">Can you get a 0.0Mb/s 802.11 transmission rate?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13600/unexpected-tcp-retransmissions">Unexpected TCP retransmissions</a>
+        </p>
+        
+        <p>
+            <a href="/questions/64019/how-does-tcpanalysisretransmission-work">How does &quot;tcp.analysis.retransmission&quot; work?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1284/wireshark-showing-lot-of-tcp-retransmissions-is-it-real-retransmission-or-wireshark-showing-incorrectly">Wireshark showing lot of TCP retransmissions - Is it real Retransmission or Wireshark showing incorrectly</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41030/python-pcapng-cannot-understand-80211-data-frame-format-in-pcapng-file">python-pcapng: cannot understand 802.11 Data Frame format in PcapNG file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30131/dup-acks-even-though-no-packet-was-lost">DUP ACKs even though no packet was lost</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42081/airpcapnx-packet-capture-80211n-at-24ghz">AirPcapNX packet capture 802.11n at 2.4Ghz</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19729/editcap-improvement-for-duplicate-ie-retransmissions-of-80211-frames">editcap improvement for &quot;duplicate&quot; i.e retransmissions of 802.11 frames</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39346/unable-to-detect-tcp-using-airpcap">Unable to detect TCP using Airpcap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20845/why-wireshark-is-not-showing-high-layer-packets-like-icmpipudp">Why Wireshark is not showing high layer packets like ICMP/IP/UDP?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

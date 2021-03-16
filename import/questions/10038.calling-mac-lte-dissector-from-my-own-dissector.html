@@ -1,0 +1,1164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Calling MAC-LTE dissector from my own dissector - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi All  I am building a dissector that is my own.  After dissecting my past of the packet (which is successfully done) i would now also like to dissect the payload that it carries It carries LTE MAC payload. How should i start this. Is there any tutorial to do these kind of nested packet dissection...." />
+        <meta name="keywords" content="dissection,packet,nested" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/10038/calling-mac-lte-dissector-from-my-own-dissector" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/10038/calling-mac-lte-dissector-from-my-own-dissector?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='x3oeB1iK8jeLUhCCtsbPKnE2L731s5Fj' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/10038/calling-mac-lte-dissector-from-my-own-dissector">Calling MAC-LTE dissector from my own dissector</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-10038-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/10038/up/" rel="nofollow"> </a>
+<div id="post-10038-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-10038-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/10038/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/10038/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi All </p>
+<p>I am building a dissector that is my own. </p>
+<p>After dissecting my past of the packet (which is successfully done)
+i would now also like to dissect the payload that it carries</p>
+<p>It carries LTE MAC payload.</p>
+<p>How should i start this. Is there any tutorial to do these kind of nested packet dissection.</p>
+<p>Please suggest</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/dissection/" class="post-tag tag-link-dissection"
+                                        title="see questions tagged 'dissection'" rel="tag">dissection</a>
+                                
+                                    <a href="/tags/packet/" class="post-tag tag-link-packet"
+                                        title="see questions tagged 'packet'" rel="tag">packet</a>
+                                
+                                    <a href="/tags/nested/" class="post-tag tag-link-nested"
+                                        title="see questions tagged 'nested'" rel="tag">nested</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>10 Apr '12, 00:27</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/57acefbc36ec808420ca7e64e2306c66?s=32&amp;d=identicon&amp;r=g" alt="Nagu's gravatar image" />
+    <p><a href="/users/2498/nagu">Nagu</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Nagu has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/10038/">
+                edited
+                <strong>10 Apr '12, 07:21</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+            <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+            <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-10038">
+    
+</div>
+<div id="comment-tools-10038" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-10038-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/10038/calling-mac-lte-dissector-from-my-own-dissector?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/10038/calling-mac-lte-dissector-from-my-own-dissector?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/10038/calling-mac-lte-dissector-from-my-own-dissector?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/10038/calling-mac-lte-dissector-from-my-own-dissector?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="10041"></a>
+                    <div id="answer-container-10041" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-10041-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/10041/up/" rel="nofollow"> </a>
+<div id="post-10041-score" class="post-score"
+    title="current number of votes">
+    2
+</div>
+<a id="post-10041-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/10041/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I'd suggest you look at the existing places that call the MAC-LTE dissector (as described in <a href="http://wiki.wireshark.org/MAC-LTE">http://wiki.wireshark.org/MAC-LTE</a> ).  So, epan/dissectors/packet-mac-lte-framed.c and epan dissectors/packet-catapult-dct2000.c.  In epan/dissectors/pac-mac-lte.c itself, see the functions set_mac_lte_proto_data(), get_mac_lte_proto_data() and dissect_mac_lte_context_fields().</p>
+<p>Probably you'll want to call set_mac_lte_proto_data() and get_mac_lte_proto_data(), and if you don't use dissect_mac_lte_context_fields() I expect you'll have something similar that fills in the mac_lte_info struct.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/10041/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>10 Apr '12, 04:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4b31b42b2960269c605715bae6547459?s=32&amp;d=identicon&amp;r=g" alt="MartinM's gravatar image" />
+    <p><a href="/users/1551/martinm">MartinM</a><br/>
+    <span class="score" title="167 reputation points">167</span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="7 badges"><span class="bronze">&#9679;</span><span class="badgecount">7</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="MartinM has 3 accepted answers">33&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/10041/">
+                edited
+                <strong>20 Apr '12, 15:23</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-10041">
+    
+        <a name="10055"></a>
+        <div class="comment" id="comment-10055">
+            <div id="post-10055-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Martin</p>
+
+<p>Thanks for the useful suggestion </p>
+
+<p>I just had a look at the file packet-catapult-dct2000.c</p>
+
+<p>Now my question is is it mandatory that the pinfo needs to be populated with the mac_lte_info structure . </p>
+
+<p>The reason I am asking it here is that until I dissect some of the bytes inside the packet I will not be able to fill the mac_lte_info  structure with right value </p>
+
+<p>Is there any reason for having it there </p>
+
+<p>Regards
+nagu</p></div>
+            <div class="comment-info" id="comment-10055-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '12, 06:20)</span>
+                <a class="comment-user userinfo" href="/users/2498/nagu">Nagu</a>
+                
+            </div>
+        </div>
+    
+        <a name="10064"></a>
+        <div class="comment" id="comment-10064">
+            <div id="post-10064-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Yes, filling in the mac_lte_info structure is mandatory.  Some of the information is really needed, e.g.
+- the type of RNTI and direction are needed to know what format the data is
+- the length is used to how much padding might follow and to report better stats.  Know this length also helps in marking frames as malformed if they are.
+- the UEId isn't really needed, but is handy for status and following the same UE across temporary RNTIs, etc
+- the PHY attributes are for information only, you can mark them as not present, but I find them very useful</p>
+
+<p>Usually, I'd assume that you read the context information that you use to fill in the mac_lte_info from some header that you've stored in your overall frame before the PDU.  But if you were inferring some of the context information by looking at the PDU itself (is this what you mean?), you could still scan ahead, fill in the context, then build a tvb starting from the beginning of the PDU proper before calling the mac-lte dissector.</p></div>
+            <div class="comment-info" id="comment-10064-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Apr '12, 14:55)</span>
+                <a class="comment-user userinfo" href="/users/1551/martinm">MartinM</a>
+                
+            </div>
+        </div>
+    
+        <a name="10325"></a>
+        <div class="comment" id="comment-10325">
+            <div id="post-10325-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Martin</p>
+
+<p>After filling the context information , i am able to call MAC-LTE for dissection of Packets (MAC PDUs)</p>
+
+<p>But will MAC-LTE call Other dissectors like RLC PDCP etc by default ?</p>
+
+<p>Is There anything that I am supposed to do to get this achieved </p>
+
+<p>By the way I was not able to get the sample code that was posted above by you.</p>
+
+<p>One more observation that I observed was That I was not getting the MAC subheaders dissected and listed in the UI</p>
+
+<p>Any reason for this ?</p>
+
+<p>Thanks and regards,
+Nagu</p></div>
+            <div class="comment-info" id="comment-10325-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Apr '12, 23:53)</span>
+                <a class="comment-user userinfo" href="/users/2498/nagu">Nagu</a>
+                
+            </div>
+        </div>
+    
+        <a name="10361"></a>
+        <div class="comment" id="comment-10361">
+            <div id="post-10361-score" class="comment-score">1</div>
+            <div class="comment-text"><p>You need to configure MAC to call RLC, and RLC to call PDCP (and PDCP to call RRC for signalling-plane and IP for user-plane) using the preferences.  So you'll need to make sure LCID 1&amp;2 are treated as SRB1&amp;2.  And for DRBs, to add the appropriate entries to the table.  Then tell RLC to call PDCP for signalling and bearer channels (12-bit SN for DRBs for AM channels).</p>
+
+<p>The link in the earlier message included a trailing ')' character.  Oops!</p>
+
+<p>The MAC subheaders should have been dissected.  What did you see?
+Martin</p></div>
+            <div class="comment-info" id="comment-10361-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(20 Apr '12, 15:20)</span>
+                <a class="comment-user userinfo" href="/users/1551/martinm">MartinM</a>
+                
+            </div>
+        </div>
+    
+        <a name="10382"></a>
+        <div class="comment not_top_scorer" id="comment-10382">
+            <div id="post-10382-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Martin,</p>
+
+<p>Did you mean to set preferrences programatically or through the UI.</p>
+
+<p>I could see in files packet-mac-lte.c the preferrences were automatically set to TRUE for the dissection via lte-rlc etc by using the functions like prefs_register_bool_preferrence.</p>
+
+<p>What are heuristic dissectors.? Any tutorials that explain in details.</p>
+
+<p>I changed my code such that now I start my Buffer with a string for mac-lte and then append the same with TAGs.</p>
+
+<p>Can I call heuristic mac-lte dissector for this.</p>
+
+<p>Unfortunately, I am not able to access the sample program in your MAC-LTE page.</p>
+
+<p>Regards,
+Nagu</p></div>
+            <div class="comment-info" id="comment-10382-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Apr '12, 02:34)</span>
+                <a class="comment-user userinfo" href="/users/2498/nagu">Nagu</a>
+                
+            </div>
+        </div>
+    
+        <a name="10416"></a>
+        <div class="comment not_top_scorer" id="comment-10416">
+            <div id="post-10416-score" class="comment-score"></div>
+            <div class="comment-text"><p>I meant to set preferences through the UI.  In packet-mac-lte.c you will see the default values for the various preferences, but you can set them to what you need and they will persist when you next start wireshark.</p>
+
+<p>A heuristic dissector means that it isn't tied to a particular UDP port, but that for UDP payloads that don't match anything else, the various heuristic dissectors will get called to see if the payload matches that protocol.  When you turn on the heuristic dissector for MAC-LTE using the preference setting, it will look at 'unclaimed' UDP payloads and 'claim' them if they begin with that pattern.</p>
+
+<p>So no, you would not call the heuristic dissector.  You would either use it by sending frames over UDP in the format it understands, OR use your own dissector (as you say above), fill in the mac_lte_info structure and call the mac-lte dissector yourself (in which case you wouldn't need to include the string used by the heuristic dissector).</p>
+
+<p>I can't access the sample programs from the MAC-LTE page either at the moment, although the files are in my folder there.  It sounds as though you have your own framing format, and don't need the sample programs, but if you send me an email I could send them to you.</p></div>
+            <div class="comment-info" id="comment-10416-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(24 Apr '12, 03:11)</span>
+                <a class="comment-user userinfo" href="/users/1551/martinm">MartinM</a>
+                
+            </div>
+        </div>
+    
+        <a name="10576"></a>
+        <div class="comment not_top_scorer" id="comment-10576">
+            <div id="post-10576-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you are still interested, the sample programs are now again accessible.</p></div>
+            <div class="comment-info" id="comment-10576-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 May '12, 03:02)</span>
+                <a class="comment-user userinfo" href="/users/1551/martinm">MartinM</a>
+                
+            </div>
+        </div>
+    
+        <a name="10661"></a>
+        <div class="comment not_top_scorer" id="comment-10661">
+            <div id="post-10661-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Martin 
+I have two other question </p>
+
+<ol>
+<li>I am only seeing my protocol on the WIRESHARK UI If I login with a non root user</li>
+</ol>
+
+<p>Upon Logging with the root user, wireshark UI does not show the plugin that I have written</p>
+
+<p>What is the procedure to make this visible even at root</p>
+
+<p>I have run ./configure and made a clean build </p>
+
+<ol>
+<li>If I change to a non root user  and open wireshark 
+The UI does not open 
+It throws the error GTK Warning Cannot open display:</li>
+</ol>
+
+<p>I tried setting the DISPLAY=:0.0 and DISPLAY=0.0</p>
+
+<p>Did not work either</p>
+
+<p>Any solution for this </p>
+
+<p>--Nagu</p></div>
+            <div class="comment-info" id="comment-10661-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 May '12, 22:42)</span>
+                <a class="comment-user userinfo" href="/users/2498/nagu">Nagu</a>
+                
+            </div>
+        </div>
+    
+        <a name="10742"></a>
+        <div class="comment not_top_scorer" id="comment-10742">
+            <div id="post-10742-score" class="comment-score"></div>
+            <div class="comment-text"><p>Maybe you need to run 'make install' again?</p></div>
+            <div class="comment-info" id="comment-10742-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 May '12, 10:59)</span>
+                <a class="comment-user userinfo" href="/users/1551/martinm">MartinM</a>
+                
+            </div>
+        </div>
+    
+        <a name="10789"></a>
+        <div class="comment not_top_scorer" id="comment-10789">
+            <div id="post-10789-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Martin</p>
+
+<p>Shouldnt MAC update the info column upon calling the mac-lte Dissector</p>
+
+<p>Similarly if an RLC dissector gets called will it not get update automatically onto the info column</p>
+
+<p>I still see that the Info column is having what I intended it to be there and not what MAC is expected to put</p>
+
+<p>Is this the expected Behaviour</p>
+
+<p>Please suggest</p>
+
+<p>Regards, Nagu </p></div>
+            <div class="comment-info" id="comment-10789-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '12, 12:46)</span>
+                <a class="comment-user userinfo" href="/users/2498/nagu">Nagu</a>
+                
+            </div>
+        </div>
+    
+        <a name="10791"></a>
+        <div class="comment not_top_scorer" id="comment-10791">
+            <div id="post-10791-score" class="comment-score"></div>
+            <div class="comment-text"><p>Nagu,</p>
+
+<p>The MAC dissector clears the info column if it finds the mac_lte_info struct is set.  This should work unless you have set the column not to be writable in your own dissector.</p>
+
+<p>Note that there is a dissector preference to control which layer (PHY | MAC | RLC) that gets shown in the info column.  Most of the time 'RLC' is the most appropriate.  There is also a setting in PDCP to control whether the info column should show RLC | PDCP | Traffic, which I tend to change around depending upon which layer I am interested in.</p></div>
+            <div class="comment-info" id="comment-10791-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 May '12, 14:26)</span>
+                <a class="comment-user userinfo" href="/users/1551/martinm">MartinM</a>
+                
+            </div>
+        </div>
+    
+        <a name="11786"></a>
+        <div class="comment not_top_scorer" id="comment-11786">
+            <div id="post-11786-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Nagu,</p>
+
+<p>Can you please let me know which procedure you have followed to call the mac dissector.</p>
+
+<p>Regards,
+Ashish</p></div>
+            <div class="comment-info" id="comment-11786-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jun '12, 13:50)</span>
+                <a class="comment-user userinfo" href="/users/2813/ashish_175">ashish_175</a>
+                
+            </div>
+        </div>
+    
+        <a name="11787"></a>
+        <div class="comment not_top_scorer" id="comment-11787">
+            <div id="post-11787-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Martin/Nagu,</p>
+
+<p>Can i call dissect_mac_lte from plugin directly ?</p>
+
+<p>Regards,
+Ashish</p></div>
+            <div class="comment-info" id="comment-11787-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jun '12, 14:01)</span>
+                <a class="comment-user userinfo" href="/users/2813/ashish_175">ashish_175</a>
+                
+            </div>
+        </div>
+    
+        <a name="11788"></a>
+        <div class="comment" id="comment-11788">
+            <div id="post-11788-score" class="comment-score">2</div>
+            <div class="comment-text"><p>You don't call it directly, you look up the handle for the dissector and call it using call_dissector_only() with that handle and the subset of data that is the MAC PDU.  See packet-mac-lte-framed.c or packet-catapult-dct2000.c.</p>
+
+<p>You will also want to call get_mac_lte_proto_data() and set_mac_lte_proto_data() (see packet-mac-lte.h) - these are available from a plugin.</p></div>
+            <div class="comment-info" id="comment-11788-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jun '12, 15:42)</span>
+                <a class="comment-user userinfo" href="/users/1551/martinm">MartinM</a>
+                
+            </div>
+        </div>
+    
+        <a name="11790"></a>
+        <div class="comment not_top_scorer" id="comment-11790">
+            <div id="post-11790-score" class="comment-score"></div>
+            <div class="comment-text"><p>Martin,
+packet-mac-lte-framed.c i dont see in wireshark 1.6.7,is it available in some other wireshark version ?</p></div>
+            <div class="comment-info" id="comment-11790-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jun '12, 22:36)</span>
+                <a class="comment-user userinfo" href="/users/2813/ashish_175">ashish_175</a>
+                
+            </div>
+        </div>
+    
+        <a name="11792"></a>
+        <div class="comment not_top_scorer" id="comment-11792">
+            <div id="post-11792-score" class="comment-score"></div>
+            <div class="comment-text"><p>It is available in 1.6.5 . Which I had used </p></div>
+            <div class="comment-info" id="comment-11792-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jun '12, 23:40)</span>
+                <a class="comment-user userinfo" href="/users/2498/nagu">Nagu</a>
+                
+            </div>
+        </div>
+    
+        <a name="11793"></a>
+        <div class="comment not_top_scorer" id="comment-11793">
+            <div id="post-11793-score" class="comment-score"></div>
+            <div class="comment-text"><p>You can otherwise refer to packet_catapult. If you cant ind it still . Let me know if you want me to paste the code for that</p></div>
+            <div class="comment-info" id="comment-11793-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(09 Jun '12, 23:45)</span>
+                <a class="comment-user userinfo" href="/users/2498/nagu">Nagu</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-10041" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 17
+        </span>
+        <a href="#" class="show-all-comments-link">show 12 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-10041-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/10038/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='x3oeB1iK8jeLUhCCtsbPKnE2L731s5Fj' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/10038/calling-mac-lte-dissector-from-my-own-dissector?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/10038/calling-mac-lte-dissector-from-my-own-dissector?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/packet/"
+            class="tag-link-packet"
+            title="see questions tagged'packet'using tags"
+            rel="tag">packet</a> <span class="tag-number">&#215;248</span><br/>
+        
+        <a href="/tags/dissection/"
+            class="tag-link-dissection"
+            title="see questions tagged'dissection'using tags"
+            rel="tag">dissection</a> <span class="tag-number">&#215;31</span><br/>
+        
+        <a href="/tags/nested/"
+            class="tag-link-nested"
+            title="see questions tagged'nested'using tags"
+            rel="tag">nested</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="April 10, 2012, 12:27 a.m.">10 Apr '12, 00:27</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,527 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 10, 2012, 12:13 a.m.">10 Jun '12, 00:13</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/520/is-there-a-way-to-show-all-packet-captures-for-one-site-capture">Is there a way to show all packet captures for one site capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2255/separating-the-header-from-the-packet">separating the header from the packet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6547/how-to-scrape-packet-data">How to scrape packet data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10022/making-a-dissector-that-filters-packets">Making a dissector that filters packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14298/newb-question-viewing-capture-results">Newb question; viewing capture results</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18514/comparing-packets">Comparing Packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23987/search-within-the-current-packet">Search Within the Current Packet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28051/malformed-packets-with-using-encryption">Malformed packets with using encryption?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31660/how-to-understand-the-wireshark-captured-packet-problem">How to understand the wireshark captured packet problem?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35544/how-i-know-it-is-h264-packet-capture">How I know it is H.264 packet capture?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

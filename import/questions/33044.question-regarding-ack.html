@@ -1,0 +1,807 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>question regarding ACK ? - Wireshark Q&amp;A</title>
+        <meta name="description" content="Dear All, I have question regarding how to understand pcap capture by tcpdump and read by wireshark. Below are the listing between 2 ports and 2 ip. If I understand correctly 103.11.134.43 port 9091 receive 1460 byte of data and then reply to the sender that it has acknowledge the data (frame5) to b..." />
+        <meta name="keywords" content="ack,skip,frame" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/33044/question-regarding-ack" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/33044/question-regarding-ack?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='aHkyF5DXT6QN8OhOe9nrdz2dChKO1JnW' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/33044/question-regarding-ack">question regarding ACK ?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-33044-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33044/up/" rel="nofollow"> </a>
+<div id="post-33044-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-33044-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33044/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/33044/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Dear All,
+I have question regarding how to understand pcap capture by tcpdump and read by wireshark.
+Below are the listing between 2 ports and 2 ip. If I understand correctly 103.11.134.43 port 9091 receive 1460 byte of data and then reply to the sender that it has acknowledge the data (frame5) to be accepted. If my understanding is correct, then I should have been able to see the byte sent by frame5 in my Java Socket programming when I do socket.read(byte) - rhetorical question. I do get the next frame7 in my Java Socket programming when I do socket.read(byte). -- by right, I should have been able to read frame5 as it has been acknowledged. It seems there is a skipped (instead of reading frame5, it read frame7) -- this happens in non consistent basis - from time to time I get to read frame5 in my socket.read(byte). Why such inconsistency in TCP part? or in Java Socket part?</p>
+<p>In my program, I kept getting 0 byte in the server side - while tcpdump and wireshark showed that I actually get 1460 byte - do I get the concept correct?</p>
+<pre><code>5 0.027797    202.146.134.42        103.11.134.43         1514   4013 &gt; 9091 [PSH, ACK] Seq=39 Ack=1 Win=16384 Len=1460
+
+Frame 5: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits) Ethernet II, Src: Routerbo_f0:be:b1 (00:0c:42:f0:be:b1), Dst: AsustekC_e8:1a:4d (00:24:8c:e8:1a:4d) Internet Protocol Version 4, Src: 202.146.134.42 (202.146.134.42), Dst: 103.11.134.43 (103.11.134.43) Transmission Control Protocol, Src Port: 4013 (4013), Dst Port: 9091 (9091), Seq: 39, Ack: 1, Len: 1460
+    Source port: 4013 (4013)
+    Destination port: 9091 (9091)
+    [Stream index: 0]
+    Sequence number: 39    (relative sequence number)
+    [Next sequence number: 1499    (relative sequence number)]
+    Acknowledgment number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x018 (PSH, ACK)
+    Window size value: 64
+    [Calculated window size: 16384]
+    [Window size scaling factor: 256]
+    Checksum: 0x1f93 [validation disabled]
+    [SEQ/ACK analysis]
+        [Bytes in flight: 1498] Data (1460 bytes)
+</code></pre>
+<p>The next sequence of ACK for the byte 1498</p>
+<pre><code>6 0.027819    103.11.134.43         202.146.134.42        54     9091 &gt; 4013 [ACK] Seq=1 Ack=1499 Win=64192 Len=0
+
+Frame 6: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) Ethernet II, Src: AsustekC_e8:1a:4d (00:24:8c:e8:1a:4d), Dst: Routerbo_f0:be:b1 (00:0c:42:f0:be:b1) Internet Protocol Version 4, Src:
+103.11.134.43 (103.11.134.43), Dst: 202.146.134.42 (202.146.134.42) Transmission Control Protocol, Src Port: 9091 (9091), Dst Port: 4013 (4013), Seq: 1, Ack: 1499, Len: 0
+    Source port: 9091 (9091)
+    Destination port: 4013 (4013)
+    [Stream index: 0]
+    Sequence number: 1    (relative sequence number)
+    Acknowledgment number: 1499    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x010 (ACK)
+    Window size value: 1003
+    [Calculated window size: 64192]
+    [Window size scaling factor: 64]
+    Checksum: 0x3e0e [validation disabled]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 5]
+        [The RTT to ACK the segment was: 0.000022000 seconds]
+</code></pre>
+<p>The part that socket.read(byte) got to read is the following (frame7 got read instead of frame5)</p>
+<pre><code>7 0.027825    202.146.134.42    103.11.134.43         228    4013 &gt; 9091 [PSH, ACK] Seq=1499 Ack=1 Win=16384 Len=174
+
+Frame 7: 228 bytes on wire (1824 bits), 228 bytes captured (1824 bits) Ethernet II, Src: Routerbo_f0:be:b1 (00:0c:42:f0:be:b1), Dst: AsustekC_e8:1a:4d (00:24:8c:e8:1a:4d) Internet Protocol Version 4, Src:
+202.146.134.42 (202.146.134.42), Dst: 103.11.134.43 (103.11.134.43) Transmission Control Protocol, Src Port: 4013 (4013), Dst Port: 9091 (9091), Seq: 1499, Ack: 1, Len: 174
+    Source port: 4013 (4013)
+    Destination port: 9091 (9091)
+    [Stream index: 0]
+    Sequence number: 1499    (relative sequence number)
+    [Next sequence number: 1673    (relative sequence number)]
+    Acknowledgment number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x018 (PSH, ACK)
+    Window size value: 64
+    [Calculated window size: 16384]
+    [Window size scaling factor: 256]
+    Checksum: 0x4cfa [validation disabled]
+    [SEQ/ACK analysis]
+        [Bytes in flight: 174] Data (174 bytes)
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ack/" class="post-tag tag-link-ack"
+                                        title="see questions tagged 'ack'" rel="tag">ack</a>
+                                
+                                    <a href="/tags/skip/" class="post-tag tag-link-skip"
+                                        title="see questions tagged 'skip'" rel="tag">skip</a>
+                                
+                                    <a href="/tags/frame/" class="post-tag tag-link-frame"
+                                        title="see questions tagged 'frame'" rel="tag">frame</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>24 May '14, 21:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ba074f56389247e05c8afcd1d8f1440c?s=32&amp;d=identicon&amp;r=g" alt="edisonch's gravatar image" />
+    <p><a href="/users/7380/edisonch">edisonch</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="edisonch has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/33044/">
+                edited
+                <strong>25 May '14, 03:47</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+            <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+            <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-33044">
+    
+</div>
+<div id="comment-tools-33044" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33044-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/33044/question-regarding-ack?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/33044/question-regarding-ack?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/33044/question-regarding-ack?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/33044/question-regarding-ack?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="33045"></a>
+                    <div id="answer-container-33045" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-33045-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/33045/up/" rel="nofollow"> </a>
+<div id="post-33045-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-33045-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/33045/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Dear All,</p>
+<p>It seems I have solve the inconsistency of the problem above by changing the way my Java code do thing. I change the communication protocol.</p>
+<p>Original Protocol:</p>
+<p>client's side:
+ 1. send order (order for server including file name and file size - form of String)
+ 2. send the actual file
+ 3. receive server's acknowledgement (form of String)</p>
+<p>server's side:
+ 1. receive order from client
+ 2. receive the actual file
+ 3. send server's acknowledgement</p>
+<p>New Protocol</p>
+<p>client's side:
+ 1. send order
+ 2. receive confirmation
+ 3. send actual file
+ 4. receive server's acknowledgement</p>
+<p>server's side:
+ 1. receive order
+ 2. send confirmation
+ 3. receive actual file
+ 4. send server's acknowledgement</p>
+<p>With new protocol, the file consistently send and if there is a miss, the TCP's protocol re transmit the missing frame.</p>
+<p>Even though the problem is somehow solved, I still don't know what cause such inconsistent send/receive file in TCP's socket programming.</p>
+<p>Thanks. If anyone can explain the problem above, I would like to thank you in advance. </p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/33045/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 May '14, 00:07</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/ba074f56389247e05c8afcd1d8f1440c?s=32&amp;d=identicon&amp;r=g" alt="edisonch's gravatar image" />
+    <p><a href="/users/7380/edisonch">edisonch</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="edisonch has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-33045">
+    
+</div>
+<div id="comment-tools-33045" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-33045-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/33044/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='aHkyF5DXT6QN8OhOe9nrdz2dChKO1JnW' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33044/question-regarding-ack?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/33044/question-regarding-ack?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ack/"
+            class="tag-link-ack"
+            title="see questions tagged'ack'using tags"
+            rel="tag">ack</a> <span class="tag-number">&#215;139</span><br/>
+        
+        <a href="/tags/frame/"
+            class="tag-link-frame"
+            title="see questions tagged'frame'using tags"
+            rel="tag">frame</a> <span class="tag-number">&#215;41</span><br/>
+        
+        <a href="/tags/skip/"
+            class="tag-link-skip"
+            title="see questions tagged'skip'using tags"
+            rel="tag">skip</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 24, 2014, 9:51 p.m.">24 May '14, 21:51</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,250 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="May 25, 2014, 3:47 a.m.">25 May '14, 03:47</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/44086/frame-length-of-same-packet-differs-between-hosts">Frame Length of Same Packet Differs Between Hosts</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1017/bandwidth-parameters">Bandwidth parameters</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28844/how-to-see-the-e-dch-ul-data-frame">How to see the E-DCH UL DATA FRAME</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54500/encrypt-frame">Encrypt Frame</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6576/identify-syn-packets-without-synack">Identify SYN packets without SYN/ACK</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12016/tcp-analysis-interpertation-acks-and-lost-segments">TCP analysis / interpertation - ACKs and lost segments</a>
+        </p>
+        
+        <p>
+            <a href="/questions/16750/dup-acks-question">Dup ACKs question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23948/need-help-interpreting-extra-ack-package-from-win-8-to-sql-server">Need help interpreting extra ACK package from Win 8 to SQL Server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34478/duplicate-ack-causing-client-slowdown">Duplicate ACK Causing Client Slowdown?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40331/no-ack-before-http-ok">No ACK before HTTP ok</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

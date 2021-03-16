@@ -1,0 +1,1423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>iSCSI Format Failure from Windows Server 2012 - Wireshark Q&amp;A</title>
+        <meta name="description" content="I don&#39;t expect anyone to be able to help me with this, but I didn&#39;t expect any help last time I posted a message yet was pleasantly surpised to get a very spot-on answer. This one is a bit tougher though.  I&#39;ve been working on an iSCSI server, mostly just for fun. Been chipping away at it in my spar..." />
+        <meta name="keywords" content="windows,iscsi,format,scsi,2012" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/23261/iscsi-format-failure-from-windows-server-2012" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/23261/iscsi-format-failure-from-windows-server-2012?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='uJoHXrwCPR1ryTsMBPX1gbYDUSBtrmsu' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/23261/iscsi-format-failure-from-windows-server-2012">iSCSI Format Failure from Windows Server 2012</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-23261-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23261/up/" rel="nofollow"> </a>
+<div id="post-23261-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-23261-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23261/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/23261/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I don't expect anyone to be able to help me with this, but I didn't expect any help last time I posted a message yet was pleasantly surpised to get a very spot-on answer.</p>
+<p>This one is a bit tougher though.<br>
+</p>
+<p>I've been working on an iSCSI server, mostly just for fun.  Been chipping away at it in my spare time.  I've managed to get through a lot of things.  The Device is seen by Windows Server 2012.  I can connect to it.  I can initialize a disk.  I can create partitions on the disk as far as I can tell (windows's own cache could be lying to itself about some of those things).  But the actual formatting of the volume is where I run into trouble. <br>
+</p>
+<p>I've implemented all forms of ModeSense, ReadCapacity, Read, Write, Data-In, and Data-out.  Also implemented a task-management class which seems to be functioning as intended.... but by golly, I just have no idea why this is still failing.</p>
+<p>Some clues and relevant information:<br>
+1) For starters, <a href="http://files.digitaltundra.com/iscsi-bad-format.pcapng">here's the capture</a> </p>
+<p>2) Windows Server 2012 Successfully completes the "Gather information" step and the "Create new partition" step, but during the "Format Volume" Step reports "Failed to format volume - One or more parameter values passed to the method were invalid."</p>
+<p>3) The failure occurs immediately AFTER Packet Number 6384  which I verified with breakpoints.  <br>
+4) Packet 6384 is the longest Read operation during the process (128 blocks -- 65536 bytes).<br>
+5) This Read operation follows a write operation to the same LBA of the same length (128 blocks -- 65536 bytes)<br>
+6) The write operation is also the longest write operation of the entire process up to the point of failure.  It is the first write operation to be &gt;= 128 blocks.<br>
+7) There are other multi-block read and write operations that do not return errors, which to the best of my knowledge point the finger away from the Task-management system. I'll try to briefly and succinctly describe how the task management system works<br>
+7a).The long writes will send up to 8192 bytes in the first request, but the "Final" flag in the PDU will NOT be set.<br>
+7b). The Absense of the "Final" flag causes a task to be registered in a list, indexed by the "InitiatorTaskTag"<br>
+7c). "DataOut" PDUs follow the Write request and reference the InitiatorTAskTag which keeps information about the origin of the write request.  The data-out packets are written using an offset of the original Task.  <br>
+7d). If the DataOut packet has the "Final" flag set, the task is cleared at the end of its operation.<br><br></p>
+<p>All of that internal stuff kinda seems to be working, but the format still fails.  I've been looking at this problem for quite some time and I'm out of ideas and will need to shelve it for a while.  Unfortunately, I think that any one of these 6000+ packets could potentially be causing the problem.  I wish windows would just tell me WHICH parameter is incorrect.<br>
+</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/windows/" class="post-tag tag-link-windows"
+                                        title="see questions tagged 'windows'" rel="tag">windows</a>
+                                
+                                    <a href="/tags/iscsi/" class="post-tag tag-link-iscsi"
+                                        title="see questions tagged 'iscsi'" rel="tag">iscsi</a>
+                                
+                                    <a href="/tags/format/" class="post-tag tag-link-format"
+                                        title="see questions tagged 'format'" rel="tag">format</a>
+                                
+                                    <a href="/tags/scsi/" class="post-tag tag-link-scsi"
+                                        title="see questions tagged 'scsi'" rel="tag">scsi</a>
+                                
+                                    <a href="/tags/2012/" class="post-tag tag-link-2012"
+                                        title="see questions tagged '2012'" rel="tag">2012</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Jul '13, 15:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cfb47fa5874edfbcb04379b1c97a81d2?s=32&amp;d=identicon&amp;r=g" alt="ev1lr0b0t's gravatar image" />
+    <p><a href="/users/5337/ev1lr0b0t">ev1lr0b0t</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ev1lr0b0t has one accepted answer">50&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/23261/">
+                edited
+                <strong>22 Jul '13, 15:44</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-23261">
+    
+        <a name="23263"></a>
+        <div class="comment" id="comment-23263">
+            <div id="post-23263-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>The failure occurs immediately AFTER <strong>Packet Number 40943</strong></p>
+</blockquote>
+
+<p>The posted capture file ends at frame 6442</p>
+
+<blockquote>
+<p>but I didn't expect any help last time I posted a message</p>
+</blockquote>
+
+<p>BTW: What was your user name last time?</p></div>
+            <div class="comment-info" id="comment-23263-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '13, 15:43)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23265"></a>
+        <div class="comment" id="comment-23265">
+            <div id="post-23265-score" class="comment-score"></div>
+            <div class="comment-text"><p>I fixed the errant packet numbers in an edit. The exported packet numbers were different than what was displayed on my screen. I was unable to login with the account I used before for some reason. evilrobot.</p></div>
+            <div class="comment-info" id="comment-23265-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '13, 15:46)</span>
+                <a class="comment-user userinfo" href="/users/5337/ev1lr0b0t">ev1lr0b0t</a>
+                
+            </div>
+        </div>
+    
+        <a name="23266"></a>
+        <div class="comment" id="comment-23266">
+            <div id="post-23266-score" class="comment-score"></div>
+            <div class="comment-text"><p>BTW thanks for looking.  6384 is the last packet before the error (a reply to a Read(10) request that is 128 blocks.  --Jason</p></div>
+            <div class="comment-info" id="comment-23266-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '13, 15:50)</span>
+                <a class="comment-user userinfo" href="/users/5337/ev1lr0b0t">ev1lr0b0t</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23261" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23261-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    6 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/23261/iscsi-format-failure-from-windows-server-2012?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/23261/iscsi-format-failure-from-windows-server-2012?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/23261/iscsi-format-failure-from-windows-server-2012?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/23261/iscsi-format-failure-from-windows-server-2012?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="23337"></a>
+                    <div id="answer-container-23337" class="answer accepted-answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23337-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23337/up/" rel="nofollow"> </a>
+<div id="post-23337-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-23337-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23337/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="ev1lr0b0t has selected this answer as the correct answer"
+        href="/accept_answer/23337/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>The wireshark capture might not show it.  But after some prodding and poking and creating volumes of varying sizes, I determined that my WRITE operations were not writing the proper amount of data.  I discovered this by comparing the subsequent READ operation that followed the WRITE operation.  The fact is that the write operation would actually only write the first block to disk.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23337/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>24 Jul '13, 11:29</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/cfb47fa5874edfbcb04379b1c97a81d2?s=32&amp;d=identicon&amp;r=g" alt="ev1lr0b0t's gravatar image" />
+    <p><a href="/users/5337/ev1lr0b0t">ev1lr0b0t</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ev1lr0b0t has one accepted answer">50&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23337">
+    
+        <a name="23365"></a>
+        <div class="comment" id="comment-23365">
+            <div id="post-23365-score" class="comment-score"></div>
+            <div class="comment-text"><p>would you mind to post one capture file with a failure and one with a successful operation? </p>
+
+<p>I wonder if the problem would be visible in the capture file. This would be a good chance to learn something more about iSCSI (for me) ;-)</p></div>
+            <div class="comment-info" id="comment-23365-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '13, 11:28)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23366"></a>
+        <div class="comment" id="comment-23366">
+            <div id="post-23366-score" class="comment-score"></div>
+            <div class="comment-text"><p>I got sorta past that point, but unfortunately I don't yet have 100% success.  My current issue is as big of a pain in the butt as my previous issue.   Part of my problem is that I cannot find any sample captures that show Read() operations that exceed the MaxRecvDataLength value negotiated during login.  It kinda seems like that for some reason my login negotiation is being ignored by the client, even though it matches the sample I used practically byte for byte.  When talking to the Target that I reverse engineered, the client never requests more than 128 blocks of data per read (65536 bytes) which also matches the MacRecvDataLength negotiated during login.  However, when talking to MY target, it will request up to 256 blocks, and my response to this request causes the client to reset the connection with no warnings or messages logged.  I respond with Data-In followed by Data-In with the Final bit set.  (2 PDUs).  Maybe I need to try 3 PDUs sending a separate PDU for the status.... I dunno... running out of ideas.</p></div>
+            <div class="comment-info" id="comment-23366-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '13, 11:34)</span>
+                <a class="comment-user userinfo" href="/users/5337/ev1lr0b0t">ev1lr0b0t</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23337" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23337-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="23267"></a>
+                    <div id="answer-container-23267" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-23267-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/23267/up/" rel="nofollow"> </a>
+<div id="post-23267-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-23267-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/23267/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>In frame 6385 the 'client' (172.16.0.82) sends a SCSI Mode Sense. This packet is ACKed in the next frame. However, then the 'server' (172.16.0.33) does not react for 119 seconds!! Then it ACKs a packet that is not in the capture file (see frame 6387). This is totally different to previous behavior in the capture file. If we can assume that the capture file is complete (<strong>can we?</strong>), there seems to be a bug in the iSCSI server implementation. However, I don't think you will find the reason for the problem just by looking at the capture file, as neither the inactivity for 119 seconds can be explained with the observed behavior in the capture file nor the ACK for an unseen packet.</p>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/23267/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>22 Jul '13, 15:57</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/23267/">
+                edited
+                <strong>22 Jul '13, 16:04</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-23267">
+    
+        <a name="23269"></a>
+        <div class="comment" id="comment-23269">
+            <div id="post-23269-score" class="comment-score"></div>
+            <div class="comment-text"><p>The 119 second pause is the breakpoint.  I didn't notice the ACK issue, I'm not sure I ever handle them... I think they're handled at the TCP layer if I'm not mistaken, and therefore I have no control over them.  Whether I break on it for 119 seconds or not.. it fails in the same place in the same way.  So I'm not sure that'll help me.  Maybe I can find some insight with your help, however.  Thanks for looking.  -- Jason</p></div>
+            <div class="comment-info" id="comment-23269-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '13, 16:30)</span>
+                <a class="comment-user userinfo" href="/users/5337/ev1lr0b0t">ev1lr0b0t</a>
+                
+            </div>
+        </div>
+    
+        <a name="23271"></a>
+        <div class="comment" id="comment-23271">
+            <div id="post-23271-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>The 119 second pause is the breakpoint.</p>
+</blockquote>
+
+<p>Ah, that's O.K. then.</p>
+
+<blockquote>
+<p>I didn't notice the ACK issue, I'm not sure I ever handle them... I think they're handled at the TCP layer if I'm not mistaken, </p>
+</blockquote>
+
+<p>Yes, and the TCP layer should not ACK something it did not receive, if that was the case !?! Anyway, I'm not sure if this could be caused by a bug in your code as well.</p>
+
+<blockquote>
+<p>Whether I break on it for 119 seconds or not.. it fails in the same place in the same way. </p>
+</blockquote>
+
+<p>Can you please post a capture file without a breakpoint and 'add' some information about the frame where you think the problem shows up?</p></div>
+            <div class="comment-info" id="comment-23271-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '13, 16:38)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="23273"></a>
+        <div class="comment" id="comment-23273">
+            <div id="post-23273-score" class="comment-score"></div>
+            <div class="comment-text"><p>I will, but probably won't be able to get to it until tomorrow.  Thanks again.</p></div>
+            <div class="comment-info" id="comment-23273-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Jul '13, 17:35)</span>
+                <a class="comment-user userinfo" href="/users/5337/ev1lr0b0t">ev1lr0b0t</a>
+                
+            </div>
+        </div>
+    
+        <a name="57374"></a>
+        <div class="comment" id="comment-57374">
+            <div id="post-57374-score" class="comment-score"></div>
+            <div class="comment-text"><p>119 seconds delay would cause the initiator's upper layer timer to expire and it should perform some type of SCSI layer error recover if a frame was not received. </p>
+
+<p>However, if there there was some type of protocol error in the frame that was not captured then it would be normal of the initiator to close the TCP connection provided that the 2 devices were operating at error recovery level 0.<br>
+</p>
+
+<p>NOT the iSCSI standard requires devices that only support error level 0 to close the connection when a protocol error is encountered</p></div>
+            <div class="comment-info" id="comment-57374-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Nov '16, 03:10)</span>
+                <a class="comment-user userinfo" href="/users/26257/loud">LouD</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-23267" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-23267-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="42494"></a>
+                    <div id="answer-container-42494" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-42494-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/42494/up/" rel="nofollow"> </a>
+<div id="post-42494-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-42494-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/42494/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>We've run into the same issue when assigning SAS disks (LUN's) to a server.
+Turned out that when automount is disabled (which we had because we don't want to see all SAS disks as drive letters since they're mounted in directories) this happened.
+So enabling automount through diskpart fixed the issue immediately. After assigning the disks to the directories we disabled automount again and all was well.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/42494/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 May '15, 03:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/12b3fc9c44e4e2f966015984c01e541c?s=32&amp;d=identicon&amp;r=g" alt="binbash's gravatar image" />
+    <p><a href="/users/17180/binbash">binbash</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="binbash has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-42494">
+    
+</div>
+<div id="comment-tools-42494" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-42494-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="42652"></a>
+                    <div id="answer-container-42652" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-42652-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/42652/up/" rel="nofollow"> </a>
+<div id="post-42652-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-42652-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/42652/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>For what it's worth, there was a bug in version 1.0.37 (and presumably earlier) of "tgt" on linux that prevented Windows initiators from being able to format.</p>
+<p>(<a href="http://lists.wpkg.org/pipermail/stgt/2013-May/012368.html)">http://lists.wpkg.org/pipermail/stgt/2013-May/012368.html)</a></p>
+<p>This also seems to have caused problems with file contents for a CentOS 7 guest running with the iscsi device as a root disk in OpenStack.  Other guests seem to be fine.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/42652/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>25 May '15, 10:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/8c3d7f08e5189b2ec5041ddce8304fed?s=32&amp;d=identicon&amp;r=g" alt="cbf123's gravatar image" />
+    <p><a href="/users/17328/cbf123">cbf123</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="cbf123 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-42652">
+    
+</div>
+<div id="comment-tools-42652" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-42652-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="57361"></a>
+                    <div id="answer-container-57361" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-57361-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57361/up/" rel="nofollow"> </a>
+<div id="post-57361-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-57361-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57361/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Hi
+I faced the same issue and finally I found that using Microsoft bridged NIC was behind all issues, I removed all NIC from bridge and gave dedicated IPs, this reaolved it with immediate action.
+Regards,</p>
+<p>Ayed</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/57361/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Nov '16, 06:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dc73ada0c6f7a5e9c5cdba73b8edd9f3?s=32&amp;d=identicon&amp;r=g" alt="Ayed's gravatar image" />
+    <p><a href="/users/26372/ayed">Ayed</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Ayed has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-57361">
+    
+</div>
+<div id="comment-tools-57361" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57361-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="57377"></a>
+                    <div id="answer-container-57377" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-57377-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/57377/up/" rel="nofollow"> </a>
+<div id="post-57377-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-57377-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/57377/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Sorry, I am reposting this because I posted it in a wrong location</p>
+<p>119 seconds delay would cause the initiator's upper layer timer to expire and it should perform some type of SCSI layer error recover if a frame was not received. Since there is no SCSI layer error recovery I am guessing the frame was not sent. Unless there was some type of iSCSI protocol error in the frame - then it would be normal of the initiator to close the TCP connection provided that the 2 devices were operating at error recovery level 0.</p>
+<p>NOT the iSCSI standard requires devices that only support error level 0 to close the connection when a protocol error is encountered.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/57377/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>14 Nov '16, 04:48</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b2d0183529e31bcca9461e7348206c16?s=32&amp;d=identicon&amp;r=g" alt="LouD's gravatar image" />
+    <p><a href="/users/26257/loud">LouD</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="LouD has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/57377/">
+                edited
+                <strong>14 Nov '16, 06:34</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+            <p><a href="/users/19586/sindy">sindy</a><br/>
+            <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span></p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-57377">
+    
+</div>
+<div id="comment-tools-57377" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-57377-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/23261/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='uJoHXrwCPR1ryTsMBPX1gbYDUSBtrmsu' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23261/iscsi-format-failure-from-windows-server-2012?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/23261/iscsi-format-failure-from-windows-server-2012?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/windows/"
+            class="tag-link-windows"
+            title="see questions tagged'windows'using tags"
+            rel="tag">windows</a> <span class="tag-number">&#215;254</span><br/>
+        
+        <a href="/tags/format/"
+            class="tag-link-format"
+            title="see questions tagged'format'using tags"
+            rel="tag">format</a> <span class="tag-number">&#215;24</span><br/>
+        
+        <a href="/tags/iscsi/"
+            class="tag-link-iscsi"
+            title="see questions tagged'iscsi'using tags"
+            rel="tag">iscsi</a> <span class="tag-number">&#215;15</span><br/>
+        
+        <a href="/tags/2012/"
+            class="tag-link-2012"
+            title="see questions tagged'2012'using tags"
+            rel="tag">2012</a> <span class="tag-number">&#215;6</span><br/>
+        
+        <a href="/tags/scsi/"
+            class="tag-link-scsi"
+            title="see questions tagged'scsi'using tags"
+            rel="tag">scsi</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 22, 2013, 3:36 p.m.">22 Jul '13, 15:36</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,604 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 14, 2016, 6:34 a.m.">14 Nov '16, 06:34</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/24384/windows-server-2012-network-problems">Windows Server 2012 network problems</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22170/iscsi-from-windows-server-2012">iSCSI from Windows Server 2012</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31753/sync-ack-process-not-completing-on-windows-2012">sync-ack process not completing on windows 2012</a>
+        </p>
+        
+        <p>
+            <a href="/questions/978/how-to-convert-rtp-packets-with-ptisac-and-ptcn-to-wav-files">How to convert RTP packets with PT=ISAC and PT=CN to .wav files?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39660/can-i-extend-wireshark-to-capture-log-data">Can I extend wireshark to capture log data?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1832/windows-xp-and-bootp">Windows XP and bootp?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5241/tshark-display-filter-in-windows-command-line-seems-not-support-special-characters">tshark display filter in windows command-line seems not support special characters</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6646/no-gui-after-startup">no GUI after startup</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10008/no-interfaces-windows">No Interfaces - Windows</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12395/time-delayfrom-ack-to-http-get">Time delayfrom ACK to HTTP GET</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

@@ -1,0 +1,1110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>LUA Dissector is not run on retransmitted TCP segments - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi, I&#39;ve written a LUA dissector for a custom protocol which is working great, but I&#39;ve encountered an issue where if a packet is detected as a retransmission by Wireshark the dissector is not called, so these packets are not decoded and therefore missed when filtering for my protocol - despite the ..." />
+        <meta name="keywords" content="lua,dissector,retransmission" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/27374/lua-dissector-is-not-run-on-retransmitted-tcp-segments" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/27374/lua-dissector-is-not-run-on-retransmitted-tcp-segments?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='hVuY16sH6LniZrlUn3R2tQK5x9CGDP1O' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/27374/lua-dissector-is-not-run-on-retransmitted-tcp-segments">LUA Dissector is not run on retransmitted TCP segments</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-27374-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27374/up/" rel="nofollow"> </a>
+<div id="post-27374-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-27374-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27374/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/27374/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi,</p>
+<p>I've written a LUA dissector for a custom protocol which is working great, but I've encountered an issue where if a packet is detected as a retransmission by Wireshark the dissector is not called, so these packets are not decoded and therefore missed when filtering for my protocol - despite the fact that they have been transmitted.</p>
+<p>All the packets which are not decoded say "Retransmitted TCP segment data (## bytes)" in the packet details pane, I'm assuming that this means they're retransmissions.</p>
+<p>At the moment I'm adding my dissector to the dissector tables for "tcp.port" and "udp.port", is there another table I need to add to in order to support dissection on retransmitted packets? That doesn't seem right to me, as these retransmitted packets are still coming in on the same port.</p>
+<p>Does anyone know what I might be doing wrong? Unfortunately I'm not at liberty to share the source, but I will provide as much additional information as I can on request if more is required! :)</p>
+<p>TIA,
+RB</p>
+<p>Edit: After further investigation when using the "Analyze TCP Sequence Numbers" option, packets which have "[TCP Retransmission]" in the packet info column do react to the "Do not call subdissectors for error packets" setting.</p>
+<p>The packets which are not dissected are the ones which do <em>not</em> have an error notification in the "Info" column in the UI, but instead say "Retransmitted TCP segment data (# bytes)" in the packet details tree view. Interestingly, if I tick "Analyse TCP Sequence Numbers" <strong>and</strong> "Do not call subdissectors for error packets", these packets do decode! (But packets marked with "[TCP ZeroWindow]", "[TCP Out-Of-Order]" and "[TCP Retransmission]" in the "Info" column do <strong>not</strong>, which is a step back again).</p>
+<p>It does seem related to some combination of preferences but I can't seem to find one which lets me decode everything, all the time. :(</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/lua/" class="post-tag tag-link-lua"
+                                        title="see questions tagged 'lua'" rel="tag">lua</a>
+                                
+                                    <a href="/tags/dissector/" class="post-tag tag-link-dissector"
+                                        title="see questions tagged 'dissector'" rel="tag">dissector</a>
+                                
+                                    <a href="/tags/retransmission/" class="post-tag tag-link-retransmission"
+                                        title="see questions tagged 'retransmission'" rel="tag">retransmission</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>26 Nov '13, 01:18</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/73e9dedc0d2a6bc4f18a8a8d83da70a6?s=32&amp;d=identicon&amp;r=g" alt="rstb's gravatar image" />
+    <p><a href="/users/6156/rstb">rstb</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="rstb has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/27374/">
+                edited
+                <strong>28 Nov '13, 03:05</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-27374">
+    
+</div>
+<div id="comment-tools-27374" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27374-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/27374/lua-dissector-is-not-run-on-retransmitted-tcp-segments?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/27374/lua-dissector-is-not-run-on-retransmitted-tcp-segments?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/27374/lua-dissector-is-not-run-on-retransmitted-tcp-segments?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/27374/lua-dissector-is-not-run-on-retransmitted-tcp-segments?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="52057"></a>
+                    <div id="answer-container-52057" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-52057-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/52057/up/" rel="nofollow"> </a>
+<div id="post-52057-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-52057-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/52057/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I was experiencing this exact situation, and I tried several different combinations of TCP settings before landing one that was satisfactory. From the default settings, I unchecked "Allow subdissector to reassemble TCP stream", and it seems to have worked in my specific situation. </p>
+<p>After unchecking the aforementioned, the "Do not call subdissectors for error packets" works like I expect: Checked-doesn't call LUA, Unchecked-does call LUA.</p>
+<p>I would post a picture of my settings, but unfortunately, I don't have enough karma points... :(</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/52057/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Apr '16, 08:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/6acf3c1293dde7d08c204b9265e46764?s=32&amp;d=identicon&amp;r=g" alt="J_Turner's gravatar image" />
+    <p><a href="/users/16267/j_turner">J_Turner</a><br/>
+    <span class="score" title="71 reputation points">71</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="10 badges"><span class="bronze">&#9679;</span><span class="badgecount">10</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="J_Turner has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-52057">
+    
+        <a name="54223"></a>
+        <div class="comment" id="comment-54223">
+            <div id="post-54223-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi,
+I was running into the same issue. Apparently unchecking the  "Allow subdissector to reassemble TCP stream" and "Do not call subdissectors for error packets" worked for me. If I uncheck both of them in the Edit &gt;&gt; Preferences &gt;&gt; Protocols &gt;&gt; TCP, the re-transmission packets are dissected. If however, any of these two is checked, the packets are not dissected.
+Thanks.</p></div>
+            <div class="comment-info" id="comment-54223-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Jul '16, 07:33)</span>
+                <a class="comment-user userinfo" href="/users/24799/shobhit_garg91">shobhit_garg91</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-52057" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-52057-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="27424"></a>
+                    <div id="answer-container-27424" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27424-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27424/up/" rel="nofollow"> </a>
+<div id="post-27424-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-27424-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27424/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Do you have the TCP preference "Do not call subdissectors for error packets" set (yes retransmissions count as "errors")?  If so, this would be normal behavior.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27424/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>26 Nov '13, 06:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e0564001bb7deb960d5d9d9c1e0ba074?s=32&amp;d=identicon&amp;r=g" alt="JeffMorriss's gravatar image" />
+    <p><a href="/users/655/jeffmorriss">JeffMorriss ♦</a><br/>
+    <span class="score" title="6219 reputation points"><span class="">6.2k</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="72 badges"><span class="bronze">&#9679;</span><span class="badgecount">72</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="JeffMorriss has 103 accepted answers">27&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27424">
+    
+        <a name="27426"></a>
+        <div class="comment" id="comment-27426">
+            <div id="post-27426-score" class="comment-score"></div>
+            <div class="comment-text"><p>That option is unchecked in the TCP Preferences.</p>
+
+<p>I tried to toggle it on and off to see if it was lying to me, but that did not resolve it.</p></div>
+            <div class="comment-info" id="comment-27426-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Nov '13, 06:36)</span>
+                <a class="comment-user userinfo" href="/users/6156/rstb">rstb</a>
+                
+            </div>
+        </div>
+    
+        <a name="27429"></a>
+        <div class="comment" id="comment-27429">
+            <div id="post-27429-score" class="comment-score"></div>
+            <div class="comment-text"><p>is it possible to post parts of your Lua code here?</p></div>
+            <div class="comment-info" id="comment-27429-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Nov '13, 07:01)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="27433"></a>
+        <div class="comment" id="comment-27433">
+            <div id="post-27433-score" class="comment-score"></div>
+            <div class="comment-text"><p>Which parts would be of use? I can strip out any sensitive parts and post it. The dissector function itself isn't called at all when the problem occurs, which I've verified by calling the "debug()" function right at the start of it and trying to print a message to the debug console so I suppose that code is not useful. Very little code is run before that though.</p>
+
+<p>Before adding my custom dissector to the TCP and UDP tables I do the following:</p>
+
+<ul>
+<li>Check the Wireshark version string using get_version() to ensure API compatibility.</li>
+<li>Register a few preferences options in the UI.</li>
+<li>Set up some fields for my protocol header such as protocol version and packet size.</li>
+</ul>
+
+<p>My custom dissector is then registered as follows, where the tcp_port_range and udp_port_range variables are arrays of port range integers retrieved from the preferences registered above. This registers about 10 UDP ports and 1 TCP port.</p>
+
+<pre><code>-- Add the dissector for PROTO to the TCP dissectors table.
+local tcp_encap_table = DissectorTable.get("tcp.port")
+
+for port,available in pairs(tcp_port_range) do
+    tcp_encap_table:add(port, p_proto)
+end
+
+local udp_encap_table = DissectorTable.get("udp.port")
+
+for port,available in pairs(udp_port_range) do
+    udp_encap_table:add(port, p_proto)
+end</code></pre></div>
+            <div class="comment-info" id="comment-27433-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Nov '13, 07:26)</span>
+                <a class="comment-user userinfo" href="/users/6156/rstb">rstb</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-27424" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27424-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="27535"></a>
+                    <div id="answer-container-27535" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-27535-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/27535/up/" rel="nofollow"> </a>
+<div id="post-27535-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-27535-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/27535/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>It does seem related to some combination of preferences but I can't seem to find one which lets me decode everything, all the time. :(</p>
+</blockquote>
+<p>did you try to disable the following TCP preference</p>
+<blockquote>
+<p>'<code>Try heuristic sub-dissector first</code>' <br>
+</p>
+</blockquote>
+<p>What changes is you enable/disable that option (probably in conjunction with other preferences)?</p>
+<p>Regards <br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/27535/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Nov '13, 07:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/27535/">
+                edited
+                <strong>28 Nov '13, 07:48</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-27535">
+    
+        <a name="27548"></a>
+        <div class="comment" id="comment-27548">
+            <div id="post-27548-score" class="comment-score"></div>
+            <div class="comment-text"><p>I tried that in conjunction with the other two TCP preferences that change the behaviour, but it seems to have no effect.</p>
+
+<p>Could this be a bug in Wireshark where the code path which prints only to the tree view and not the info column is not obeying the "tcp.no_subdissector_on_error" preference?</p></div>
+            <div class="comment-info" id="comment-27548-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '13, 00:19)</span>
+                <a class="comment-user userinfo" href="/users/6156/rstb">rstb</a>
+                
+            </div>
+        </div>
+    
+        <a name="27563"></a>
+        <div class="comment" id="comment-27563">
+            <div id="post-27563-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Could this be a bug in Wireshark where the code</p>
+</blockquote>
+
+<p>Maybe. </p>
+
+<p>Is it possible to post the <strong>whole Lua code</strong> and a <strong>sample capture file</strong> somewhere (google drive, dropbox, mega.co.nz), so interested people can check it?</p>
+
+<p>You can also file a bug report at <a href="https://bugs.wireshark.org">https://bugs.wireshark.org</a> and attach everything there, plus an update here with the bug ID.</p>
+
+<p>If you don't want to post everything publicly, you can send it to me via e-mail (see my profile - click on my name). I'm interested in this problem and will have a look. However, no promises about results and time required to check ;-)</p></div>
+            <div class="comment-info" id="comment-27563-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Nov '13, 05:54)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="27746"></a>
+        <div class="comment" id="comment-27746">
+            <div id="post-27746-score" class="comment-score"></div>
+            <div class="comment-text"><p>The LUA sample dissectors from the wiki would probably work given the right port number, but I'm afraid I'm not able to share the capture which seems to be the important thing here.</p>
+
+<p>It seems in my case, the capture isn't generated by Wireshark and therefore  is missing quite a lot of information from the TCP and IP packet layers (timestamp resolution is awful, sequence numbers are fudged etc).</p>
+
+<p>I think this isn't actually a Wireshark problem though, I need to find out what tool generated this file instead - apologies for having wasted your time!</p></div>
+            <div class="comment-info" id="comment-27746-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '13, 01:03)</span>
+                <a class="comment-user userinfo" href="/users/6156/rstb">rstb</a>
+                
+            </div>
+        </div>
+    
+        <a name="27751"></a>
+        <div class="comment" id="comment-27751">
+            <div id="post-27751-score" class="comment-score"></div>
+            <div class="comment-text"><p>never mind. If you ever find the reason for the problem (related to Wireshark or not), please update here. Thanks!</p></div>
+            <div class="comment-info" id="comment-27751-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(04 Dec '13, 02:41)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-27535" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-27535-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/27374/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='hVuY16sH6LniZrlUn3R2tQK5x9CGDP1O' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/27374/lua-dissector-is-not-run-on-retransmitted-tcp-segments?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/27374/lua-dissector-is-not-run-on-retransmitted-tcp-segments?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/dissector/"
+            class="tag-link-dissector"
+            title="see questions tagged'dissector'using tags"
+            rel="tag">dissector</a> <span class="tag-number">&#215;637</span><br/>
+        
+        <a href="/tags/lua/"
+            class="tag-link-lua"
+            title="see questions tagged'lua'using tags"
+            rel="tag">lua</a> <span class="tag-number">&#215;431</span><br/>
+        
+        <a href="/tags/retransmission/"
+            class="tag-link-retransmission"
+            title="see questions tagged'retransmission'using tags"
+            rel="tag">retransmission</a> <span class="tag-number">&#215;56</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Nov. 26, 2013, 1:18 a.m.">26 Nov '13, 01:18</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>5,576 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 21, 2016, 8:33 a.m.">21 Jul '16, 08:33</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/8629/rtp-header-extension-in-lua">RTP Header extension in Lua</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23519/ipv6-dissecting-throws-lua-ft-not-yet-supported-error-why">IPv6 Dissecting throws Lua FT not yet supported error! Why?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27868/are-lua-dissector-fields-filterable">Are Lua dissector fields filterable?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29841/lua-dissectorget-cant-find-an-existing-dissector">Lua Dissector.get can&#39;t find an existing dissector.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40023/how-can-i-dump-fragmented-packets-to-multiple-files">How can I dump fragmented packets to multiple files?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41570/how-to-switch-protocol-on-the-same-conversation">how to switch protocol on the same conversation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/43484/calling-lua-from-c-dissector">Calling Lua from C Dissector</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54672/is-there-any-way-to-optimize-lua-dissectors">Is there any way to optimize lua dissectors</a>
+        </p>
+        
+        <p>
+            <a href="/questions/59326/custom-dissector-for-llc-payload-in-lua">Custom dissector for LLC Payload in Lua</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61381/can-i-export-rtt-graph-values-as-csv-format">Can I export RTT graph values as CSV format?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

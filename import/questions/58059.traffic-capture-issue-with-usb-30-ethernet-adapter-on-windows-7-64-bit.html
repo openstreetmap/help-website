@@ -1,0 +1,920 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Traffic capture issue with USB 3.0 Ethernet adapter on Windows 7 64-bit - Wireshark Q&amp;A</title>
+        <meta name="description" content="I have difficulty to see all the traffic on Wireshark app when I use USB 3.0 to ethernet adapter on my windows 7 64bit machine. I am using usb 3.0 with Realteck RTL8153-VB chipset. My usb winpcap version is 4.1.3 and Wireshark version of 2.2.2. I have USBPcapCMD.exe plugin also. The issue is when I ..." />
+        <meta name="keywords" content="ethernet" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/58059/traffic-capture-issue-with-usb-30-ethernet-adapter-on-windows-7-64-bit" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/58059/traffic-capture-issue-with-usb-30-ethernet-adapter-on-windows-7-64-bit?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='FPeXevo9NkLwXbXyzbscY1MEyq0ukvN5' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/58059/traffic-capture-issue-with-usb-30-ethernet-adapter-on-windows-7-64-bit">Traffic capture issue with USB 3.0 Ethernet adapter on Windows 7 64-bit</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-58059-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58059/up/" rel="nofollow"> </a>
+<div id="post-58059-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-58059-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58059/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/58059/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have difficulty to see all the traffic on Wireshark app when I use USB 3.0 to ethernet adapter on my windows 7 64bit machine. I am using usb 3.0 with Realteck RTL8153-VB chipset. My usb winpcap version is 4.1.3 and Wireshark version of 2.2.2. I have USBPcapCMD.exe plugin also. The issue is when I do traffic capture I see some of the traffic that I am expected to see but not all of the protocols. For instance; I do traffic capture on a VOIP device (IP phone), I am expecting to see SIP &amp; RTP protocols traffic, but I don't see those. I see TCP, UDP, ICMP, some others but not the one I have mentioned. To rule out if the OS has nothing to do with my issue, when I switch to my on-board NIC I can see all the traffic that I am expected see but not using USB NIC. I have contacted the USB chipset manufactor (Realtek) regarding this issue and they instructed me on how to add a piece in their chipset driver files to manually enable promiscuous mode which I did. In fact, that I see some TCP, UDP traffic on my capture it tells me the chipset does what it needs to do, but it looks like there is another piece that I am missing on my whole set up. Would you please help me with this issue?</p>
+<p>thanks,
+Robert M.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ethernet/" class="post-tag tag-link-ethernet"
+                                        title="see questions tagged 'ethernet'" rel="tag">ethernet</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>13 Dec '16, 18:11</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/9717c2b8c36ec52a6855f4d6addb9d9f?s=32&amp;d=identicon&amp;r=g" alt="robertmi's gravatar image" />
+    <p><a href="/users/26944/robertmi">robertmi</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="robertmi has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/58059/">
+                edited
+                <strong>14 Dec '16, 13:14</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+            <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+            <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-58059">
+    
+        <a name="58060"></a>
+        <div class="comment" id="comment-58060">
+            <div id="post-58060-score" class="comment-score"></div>
+            <div class="comment-text"><p>So are you using USBPcap to capture raw traffic on your USB bus, or are you just capturing on an Ethernet adapter that <em>happens</em> to be attached to your machine via USB?  The latter doesn't involve USBPcap - it's no different from capturing on a network adapter on the machine's motherboard, for example.</p>
+
+<p>If you're just capturing on the USB Ethernet adapter as a regular network adapter, are you plugging the USB Ethernet adapter into the same port as the one into which you're plugging the onboard Ethernet NIC?</p></div>
+            <div class="comment-info" id="comment-58060-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Dec '16, 19:16)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58101"></a>
+        <div class="comment" id="comment-58101">
+            <div id="post-58101-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Guy Harris,
+I don't use USBPcap to do the traffic capture, I use USB Ethernet adapter that is attached to my machine via USB. When I run Wireshark application I choose the USB Ethernet adapter NIC as the source of traffic and then start the capture. Regarding you next question; if you meant that I connect the USB adapter to the same network switch port where I connect my on-board Ethernet NIC, the answer is "yes". So basically, there is no issue on the network switch port configuration side for sure because I use the same port, the issue is on my machine.
+I don't know if anybody has tried yet to do traffic capture using USB 3.0 Ethernet adapter on a Windows machine and what was the outcome.</p>
+
+<p>Thanks,
+Robert M.</p></div>
+            <div class="comment-info" id="comment-58101-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 12:26)</span>
+                <a class="comment-user userinfo" href="/users/26944/robertmi">robertmi</a>
+                
+            </div>
+        </div>
+    
+        <a name="58106"></a>
+        <div class="comment" id="comment-58106">
+            <div id="post-58106-score" class="comment-score"></div>
+            <div class="comment-text"><p>When you capture with the USB Ethernet adapter, do you see any traffic that's not broadcast or multicast traffic and that's not being sent to or from the machine doing the capturing?</p></div>
+            <div class="comment-info" id="comment-58106-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 13:16)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58109"></a>
+        <div class="comment" id="comment-58109">
+            <div id="post-58109-score" class="comment-score"></div>
+            <div class="comment-text"><p>when I do traffic capture I see traffic sourcing and destining from my test IP phone (the switch port that my IP phone is connected is monitored by the switch and mirrored to my mirror port), but not the traffic that I am expecting to see which are SIP &amp; RTP protocols. My machine can't talk to the outside network due to switch limitation.</p></div>
+            <div class="comment-info" id="comment-58109-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 14:25)</span>
+                <a class="comment-user userinfo" href="/users/26944/robertmi">robertmi</a>
+                
+            </div>
+        </div>
+    
+        <a name="58110"></a>
+        <div class="comment" id="comment-58110">
+            <div id="post-58110-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, so:</p>
+
+<ol>
+<li>if you plug the USB Ethernet adapter into the mirror port on the switch, and capture in promiscuous mode, you see unicast (non-broadcast and non-multicast - TCP pretty much implies "unicast") traffic to and from the test IP phone, but you're not seeing SIP and RTP traffic to or from the phone;</li>
+<li>if you plug the onboard Ethernet adapter into the mirror port on the switch, and capture in promiscuous mode, you see unicast traffic to and from the test IP phone, <em>including</em> SIP and RTP traffic to or from the phone?</li>
+</ol></div>
+            <div class="comment-info" id="comment-58110-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 14:31)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58112"></a>
+        <div class="comment not_top_scorer" id="comment-58112">
+            <div id="post-58112-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, you are correct.</p></div>
+            <div class="comment-info" id="comment-58112-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 14:33)</span>
+                <a class="comment-user userinfo" href="/users/26944/robertmi">robertmi</a>
+                
+            </div>
+        </div>
+    
+        <a name="58114"></a>
+        <div class="comment not_top_scorer" id="comment-58114">
+            <div id="post-58114-score" class="comment-score"></div>
+            <div class="comment-text"><p>I assume  you're doing the same thing with the phone in both cases, making a call.</p>
+
+<p>Could you put short captures from both scenarios up on some Web site (Cloudshark, Dropbox, etc.) and post links to both of them in a comment (not an answer - answers are for actual answers to questions, not for replies to questions asked in a comment)?  Perhaps the USB adapter is somehow mangling the SIP and RTP packets in ways that make them unrecognizable as SIP or RTP.</p></div>
+            <div class="comment-info" id="comment-58114-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 14:40)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58119"></a>
+        <div class="comment not_top_scorer" id="comment-58119">
+            <div id="post-58119-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, I do.
+Yes, I can do short capture of both cases and put them on Dropbox and provide you with the links.</p></div>
+            <div class="comment-info" id="comment-58119-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 14:58)</span>
+                <a class="comment-user userinfo" href="/users/26944/robertmi">robertmi</a>
+                
+            </div>
+        </div>
+    
+        <a name="58122"></a>
+        <div class="comment not_top_scorer" id="comment-58122">
+            <div id="post-58122-score" class="comment-score"></div>
+            <div class="comment-text"><p>I just put the link to both traffic capture on my previous post for your review.</p>
+
+<p><a href="https://www.dropbox.com/s/uizsg0z935o9eyl/traffic%20capture%20using%20on%20board%20Ethernet%20NIC.pcapng?dl=0">https://www.dropbox.com/s/uizsg0z935o9eyl/traffic%20capture%20using%20on%20board%20Ethernet%20NIC.pcapng?dl=0</a></p>
+
+<p><a href="https://www.dropbox.com/s/6jhi3qkq6rbv1ss/traffic%20capture%20using%20USB%20Ethernet%20adapter.pcapng?dl=0">https://www.dropbox.com/s/6jhi3qkq6rbv1ss/traffic%20capture%20using%20USB%20Ethernet%20adapter.pcapng?dl=0</a></p></div>
+            <div class="comment-info" id="comment-58122-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 15:29)</span>
+                <a class="comment-user userinfo" href="/users/26944/robertmi">robertmi</a>
+                
+            </div>
+        </div>
+    
+        <a name="58125"></a>
+        <div class="comment not_top_scorer" id="comment-58125">
+            <div id="post-58125-score" class="comment-score"></div>
+            <div class="comment-text"><p>Well, that's odd.  Some traffic to and from the phone (IP address 172.16.200.30) shows up only in the USB Ethernet capture and some shows up only in the onboard Ethernet capture.  The additional packets in the USB Ethernet capture may be there because that capture ran for a longer period of time (2 minutes 45 seconds, rather than 33 seconds).</p>
+
+<p>So the phone works regardless of whether the machine on which you're capturing the traffic is plugged into the switch or not - or whether it's plugged into any network at all or not - and on whether, if it is plugged in, you plug the on-board or the USB Ethernet in?</p></div>
+            <div class="comment-info" id="comment-58125-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 17:59)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58127"></a>
+        <div class="comment not_top_scorer" id="comment-58127">
+            <div id="post-58127-score" class="comment-score"></div>
+            <div class="comment-text"><p>The capture with USB adapter is bigger because the phone contacted our provisioning servers; so has more traffic, but when you filter by SIP you don't see a packet. Versus, when you look at the other capture which is done with on-board NIC you see all SIP &amp; RTP and also TCP from phone to our provisioning servers (208.75.8.28 &amp; 64.47.12.15) and also some ICMP packet and some DNS, NTP.</p>
+
+<p>Yes, the phone works just fine and I don't have a problem with the IP phone. I use my machine in our lab environment where I need to do traffic capture with my USB adapter and get all the traffic in/out of the IP phone which I can't. You might ask why I don't use my on-board NIC to do the capture. The answer is that since this is a lab environment I have multiple VLANs set up on our network switch which only my on-board NIC (Intel brand) is capable to be set up with multiple VLAN, but not with the USB adapter. And on other hand the machine is a "Intel NUC" which is one of the smallest machine on the market which comes with one on-board NIC, so I forced to use USB adapter as my second NIC to do only traffic capture which I face this problem.
+I hope all make sense to you. I know that my last option is to replace the Intel NUC machine with a desktop that has multiple on-board NIC, but I want to first find out if I can fix the issue with the USB adapter before I move to the option of replacing my machine.</p>
+
+<p>Thanks,
+Robert M.</p></div>
+            <div class="comment-info" id="comment-58127-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 18:33)</span>
+                <a class="comment-user userinfo" href="/users/26944/robertmi">robertmi</a>
+                
+            </div>
+        </div>
+    
+        <a name="58128"></a>
+        <div class="comment not_top_scorer" id="comment-58128">
+            <div id="post-58128-score" class="comment-score"></div>
+            <div class="comment-text"><p>So is the phone on a VLAN, or is it just sending raw Ethernet packets?</p>
+
+<p>If it's on a VLAN, can the USB adapter be configured <em>not</em> to be on a VLAN at all, and to capture all packets on all VLANs as well as non-VLAN packets, with packets on a VLAN captured with the VLAN headers left on rather than being stripped off?</p></div>
+            <div class="comment-info" id="comment-58128-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Dec '16, 19:33)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58143"></a>
+        <div class="comment not_top_scorer" id="comment-58143">
+            <div id="post-58143-score" class="comment-score"></div>
+            <div class="comment-text"><p>The IP phone is on a VLAN (voice vlan).
+Regarding USB adapter, when the USB is connected to the mirror port of the switch, the switch dumps everything from the monitor port (traffic from all VLANs on that port) and the mirror port on the switch can't be member of any VLAN.
+The USB has the feature to be set on a specific VLAN (I guess as tagged, I don't know I need to test this). But please note, in the traffic capture using USB adapter I see my IP phone talks to our provisioning servers (using TCP protocol https, tlsv1, so this it telling me that it is not a problem with the VLAN, if it was it wouldn't show any traffic in/out of my IP phone, right?
+I will test with setting up the USB adapter with the voice vlan to see what the outcome will be.</p>
+
+<p>Thanks, Robert M.</p></div>
+            <div class="comment-info" id="comment-58143-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '16, 11:52)</span>
+                <a class="comment-user userinfo" href="/users/26944/robertmi">robertmi</a>
+                
+            </div>
+        </div>
+    
+        <a name="58144"></a>
+        <div class="comment not_top_scorer" id="comment-58144">
+            <div id="post-58144-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have set the voice VLAN ID on the USB adapter setting but with no luck, still I can't see SIP &amp; RTP traffic. I have actually played with all of the USB adapter's advance settings with no luck.
+At this point something is either with the USB adapter itself or the Windows OS setting to the regards to USB adapter settings on my machine. Do you can think of a way to see what the USB adapter is sending to the Windows OS before the OS passes it to the Wireshark application? If there is way, then we can narrow down if the issue is indeed with the USB adapter or with Windows OS.</p>
+
+<p>Thanks, Robert M.</p></div>
+            <div class="comment-info" id="comment-58144-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '16, 12:26)</span>
+                <a class="comment-user userinfo" href="/users/26944/robertmi">robertmi</a>
+                
+            </div>
+        </div>
+    
+        <a name="58145"></a>
+        <div class="comment not_top_scorer" id="comment-58145">
+            <div id="post-58145-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Do you can think of a way to see what the USB adapter is sending to the Windows OS before the OS passes it to the Wireshark application?</p>
+</blockquote>
+
+<p>You could try capturing on the USB bus with USBPcap and see what USB traffic goes between the adapter and the host.</p></div>
+            <div class="comment-info" id="comment-58145-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(15 Dec '16, 12:51)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58059" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 15
+        </span>
+        <a href="#" class="show-all-comments-link">show 10 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58059-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/58059/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='FPeXevo9NkLwXbXyzbscY1MEyq0ukvN5' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/58059/traffic-capture-issue-with-usb-30-ethernet-adapter-on-windows-7-64-bit?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/58059/traffic-capture-issue-with-usb-30-ethernet-adapter-on-windows-7-64-bit?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/ethernet/"
+            class="tag-link-ethernet"
+            title="see questions tagged'ethernet'using tags"
+            rel="tag">ethernet</a> <span class="tag-number">&#215;87</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 13, 2016, 6:11 p.m.">13 Dec '16, 18:11</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,772 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 19, 2016, 12:20 p.m.">19 Dec '16, 12:20</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/253/offset-into-ethernet-packets">Offset into ethernet packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13663/is-there-a-capture-filter-for-a-mac-address-range">Is there a capture filter for a MAC address range?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24169/ethernet-and-my-raspberry-pi">Ethernet and my Raspberry Pi</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36294/how-to-test-if-promiscuous-mode-is-supported-and-enabled-on-my-adapter-windows">How to test if promiscuous mode is supported and enabled on my adapter? (Windows)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/49352/what-is-the-difference-between-pcap-file-the-same-file-opened-by-wireshark-saved-as-txt-file">What is the difference between pcap file &amp; the same file opened by wireshark &amp; saved as .txt file ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61207/lua-dissector-for-the-whole-frame">Lua Dissector for the whole Frame</a>
+        </p>
+        
+        <p>
+            <a href="/questions/865/can-i-use-wireshark-to-monitor-bandwidth-of-computers-over-my-network">Can I use wireshark to monitor bandwidth of computers over my network</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14587/total-length-of-packets">Total length of packets</a>
+        </p>
+        
+        <p>
+            <a href="/questions/26970/see-protocols-other-than-http">See protocols other than http</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36599/confusion-about-when-wireshark-actually-captures-a-frame-in-connection-to-lso">Confusion about when Wireshark actually captures a frame in connection to LSO</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

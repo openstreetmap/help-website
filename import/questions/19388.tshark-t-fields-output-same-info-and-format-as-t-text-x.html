@@ -1,0 +1,803 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>tshark -T fields output same info and format as -T text -x - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello, I am trying to write a script that will remove duplicate packets (layer 3 and above) by comparing the data in two consecutive packets (or along a sliding window) and if they are identical, it will throw out the duplicates. The packets are not 100% duplicates since the MACs and TTLs are differ..." />
+        <meta name="keywords" content="duplicates,fields,frame,tshark,text" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/19388/tshark-t-fields-output-same-info-and-format-as-t-text-x" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/19388/tshark-t-fields-output-same-info-and-format-as-t-text-x?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='sYQUK8QlTOl3gxzN9uM8GAZRiI4TEETD' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/19388/tshark-t-fields-output-same-info-and-format-as-t-text-x">tshark -T fields output same info and format as -T text -x</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-19388-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/19388/up/" rel="nofollow"> </a>
+<div id="post-19388-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-19388-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/19388/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/19388/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   1
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I am trying to write a script that will remove duplicate packets (layer 3 and above) by comparing the data in two consecutive packets (or along a sliding window) and if they are identical, it will throw out the duplicates.  The packets are not 100% duplicates since the MACs and TTLs are different, but from layer 3 and above they are identical.  Therefore, editcap -d won't work, as it requires the MD5 hash to be the same.</p>
+<p>The way I would like to do this is to output the data like this:</p>
+<p><code>Mar  5, 2013 19:34:39.738281000
+0000  00 15 f1 9c f8 00 00 01 fc 0d 68 c0 81 00 0c 90   ..........h.....
+0010  08 10 46 a0 04 62 00 00 00 00 6e 11 05 c5 ac 10   ..E..c....~.....
+0020  57 c6 ac 10 82 3e 13 c4 1a 0a 04 4f de 41 52 45   W....&gt;.....O.ARE
+0030  47 49 53 54 45 52 20 73 69 70 3a 66 61 70 2e 61   GISTER sip:data.
+...
+0460  36 2e 31 43 30 2e 36 32 3a 37 36 22 36 3b 6c 63   6.120.62:3626;fd
+0470  3e 0d 0a 0d 0a                                    &gt;....</code></p>
+<p>Then I can use a script to check the data for duplicates and use the timestamp at the beginning of the packet to read it back into a pcap file.</p>
+<p>The command below summarizes what I have so far.  What I need is the <code>MAGIC_FIELDS_THAT_WORK_LIKE_-Ttext_-x</code> part.  The fields should give the offset, hex output in the middle like the above example, and ascii output on the right like the above example.</p>
+<p><code>$ tshark -r $input_file -T fields -e frame.time -e MAGIC_FIELDS_THAT_WORK_LIKE_-Ttext_-x | awk -f remove_duplicates.awk | text2pcap -t "%b  %d, %Y %H:%M:%S." -q - $output_file</code></p>
+<p>Please note that the -t argument to text2pcap didn't actually work for me.  I had to reformat the time a little before it worked.  Also, I realize that the packets aren't 100% identical, since the layer 2 information is changed with different MAC's and TTL's.  But I want to look only at layer 3 and above for my filtering.</p>
+<p>Thanks for any help you can provide!</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/duplicates/" class="post-tag tag-link-duplicates"
+                                        title="see questions tagged 'duplicates'" rel="tag">duplicates</a>
+                                
+                                    <a href="/tags/fields/" class="post-tag tag-link-fields"
+                                        title="see questions tagged 'fields'" rel="tag">fields</a>
+                                
+                                    <a href="/tags/frame/" class="post-tag tag-link-frame"
+                                        title="see questions tagged 'frame'" rel="tag">frame</a>
+                                
+                                    <a href="/tags/tshark/" class="post-tag tag-link-tshark"
+                                        title="see questions tagged 'tshark'" rel="tag">tshark</a>
+                                
+                                    <a href="/tags/text/" class="post-tag tag-link-text"
+                                        title="see questions tagged 'text'" rel="tag">text</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Mar '13, 08:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/e96b0196e8e968b1a2d8f6ddfda87ab1?s=32&amp;d=identicon&amp;r=g" alt="Lemurshark's gravatar image" />
+    <p><a href="/users/4549/lemurshark">Lemurshark</a><br/>
+    <span class="score" title="26 reputation points">26</span><span title="5 badges"><span class="badge1">&#9679;</span><span class="badgecount">5</span></span><span title="6 badges"><span class="silver">&#9679;</span><span class="badgecount">6</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Lemurshark has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/19388/">
+                edited
+                <strong>12 Mar '13, 09:03</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-19388">
+    
+</div>
+<div id="comment-tools-19388" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-19388-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/19388/tshark-t-fields-output-same-info-and-format-as-t-text-x?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/19388/tshark-t-fields-output-same-info-and-format-as-t-text-x?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/19388/tshark-t-fields-output-same-info-and-format-as-t-text-x?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/19388/tshark-t-fields-output-same-info-and-format-as-t-text-x?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="19389"></a>
+                    <div id="answer-container-19389" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-19389-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/19389/up/" rel="nofollow"> </a>
+<div id="post-19389-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-19389-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/19389/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Does editcap with the -d option (along with the -D and -w options that set the frame window and time window for dups respectively) not meet your needs?  Editcap should be installed along with Wireshark.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/19389/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>12 Mar '13, 08:13</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+    <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+    <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grahamb has 274 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-19389">
+    
+        <a name="19390"></a>
+        <div class="comment" id="comment-19390">
+            <div id="post-19390-score" class="comment-score"></div>
+            <div class="comment-text"><p>I believe that editcap with -d requires 100% duplicate packets, down to layer 2 even.  What I'm capturing is (for instance) a packet coming into a node and the same packet getting forwarded on to another node.  So the packet data and layer 3 and above is the same, but the MACs are different and the TTL is different, which I think threw off editcap earlier.  I'm also often capturing the same packets on different nodes and merging those capture files together.  Again in that case the layer 3 and above is the same, but layer 2 is different.</p></div>
+            <div class="comment-info" id="comment-19390-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Mar '13, 08:27)</span>
+                <a class="comment-user userinfo" href="/users/4549/lemurshark">Lemurshark</a>
+                
+            </div>
+        </div>
+    
+        <a name="19391"></a>
+        <div class="comment" id="comment-19391">
+            <div id="post-19391-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ok.  I failed on reading comprehension of your question.</p></div>
+            <div class="comment-info" id="comment-19391-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Mar '13, 09:00)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="19392"></a>
+        <div class="comment" id="comment-19392">
+            <div id="post-19392-score" class="comment-score"></div>
+            <div class="comment-text"><p>I updated the text of the original post to reflect the nature of the duplicate packets.  Thanks for your suggestion</p></div>
+            <div class="comment-info" id="comment-19392-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Mar '13, 09:00)</span>
+                <a class="comment-user userinfo" href="/users/4549/lemurshark">Lemurshark</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-19389" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-19389-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/19388/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='sYQUK8QlTOl3gxzN9uM8GAZRiI4TEETD' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/19388/tshark-t-fields-output-same-info-and-format-as-t-text-x?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/19388/tshark-t-fields-output-same-info-and-format-as-t-text-x?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tshark/"
+            class="tag-link-tshark"
+            title="see questions tagged'tshark'using tags"
+            rel="tag">tshark</a> <span class="tag-number">&#215;832</span><br/>
+        
+        <a href="/tags/frame/"
+            class="tag-link-frame"
+            title="see questions tagged'frame'using tags"
+            rel="tag">frame</a> <span class="tag-number">&#215;41</span><br/>
+        
+        <a href="/tags/fields/"
+            class="tag-link-fields"
+            title="see questions tagged'fields'using tags"
+            rel="tag">fields</a> <span class="tag-number">&#215;33</span><br/>
+        
+        <a href="/tags/text/"
+            class="tag-link-text"
+            title="see questions tagged'text'using tags"
+            rel="tag">text</a> <span class="tag-number">&#215;31</span><br/>
+        
+        <a href="/tags/duplicates/"
+            class="tag-link-duplicates"
+            title="see questions tagged'duplicates'using tags"
+            rel="tag">duplicates</a> <span class="tag-number">&#215;6</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 12, 2013, 8:08 a.m.">12 Mar '13, 08:08</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,223 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 12, 2013, 9:03 a.m.">12 Mar '13, 09:03</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/37082/tshark-using-filter-expression-as-field">tshark: Using filter expression as field ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18527/number-of-fields-to-output">Number of fields to output</a>
+        </p>
+        
+        <p>
+            <a href="/questions/60928/how-to-output-info-column-as-text-for-amqp-protocol">How to output Info Column as text for AMQP protocol?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29903/is-it-possible-in-wireshark-and-t-shark-to-capture-only-data-frame-in-monitor-mode-for-wireless-network">Is it possible in wireshark and t-shark to capture only data frame ( in monitor mode) for WIRELESS network?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/38727/extract-wiresharks-information-column-from-a-post-capture-to-a-text-file-using-tshark">Extract Wireshark&#39;s information column from a post capture to a text file using tshark?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41439/tshark-fields">tshark fields</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3900/truncated-fields-in-tshark">truncated fields in tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21428/tshark-e-output-how-to-bind-value-to-a-protocol-container">tshark -e output - how to bind value to a protocol container?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53825/defining-a-value-type-for-a-specific-field">Defining a value type for a specific field</a>
+        </p>
+        
+        <p>
+            <a href="/questions/58483/tshark-t-fields-need-the-field-for-rssi-or-tx-power">tshark -T fields (need the field for rssi or tx-power)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

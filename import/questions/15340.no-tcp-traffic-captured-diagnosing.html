@@ -1,0 +1,1155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>No TCP traffic captured?  Diagnosing? - Wireshark Q&amp;A</title>
+        <meta name="description" content="All I want to do is capture an ftp transaction on a private system. Strictly debug. I have a very straightforward setup: laptop -&amp;gt; laptop&#39;s ethernet -&amp;gt; hub device running ftp client -&amp;gt; same hub device running the ftp server -&amp;gt; same hub. My laptop is a Dell XPS1530 running Windows 7 64bit..." />
+        <meta name="keywords" content="ftp,tcp" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/15340/no-tcp-traffic-captured-diagnosing" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/15340/no-tcp-traffic-captured-diagnosing?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='irczSg2zUev7mcGTyn9q2WYG9IvOMqNI' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/15340/no-tcp-traffic-captured-diagnosing">No TCP traffic captured?  Diagnosing?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-15340-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15340/up/" rel="nofollow"> </a>
+<div id="post-15340-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-15340-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15340/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/15340/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>All I want to do is capture an ftp transaction on a private system.  Strictly debug.  I have a very straightforward setup:</p>
+<p>laptop -&gt; laptop's ethernet -&gt; hub
+device running ftp client -&gt; same hub
+device running the ftp server -&gt; same hub.</p>
+<p>My laptop is a Dell XPS1530 running Windows 7 64bit, Wireshark 1.8.2.  I'm using the built in ethernet port as well as another usb to ethernet adaptor (connected to another network).  I've also disabled the laptop firewall completely.</p>
+<p>The device running the ftp server transmits a periodic udp packet - these I see.  However, nothing I do generates any other ethernet traffic.  I would expect to see something when my windows ce device attempts to access the server.  And I <em>know</em> it's generating tcp traffic.</p>
+<p>Nothing.</p>
+<p>Any hints as to what I'm doing wrong?  I'm using the default setup, and I've used wireshark when it was ethereal with good and expected behavior.  Not this time...</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ftp/" class="post-tag tag-link-ftp"
+                                        title="see questions tagged 'ftp'" rel="tag">ftp</a>
+                                
+                                    <a href="/tags/tcp/" class="post-tag tag-link-tcp"
+                                        title="see questions tagged 'tcp'" rel="tag">tcp</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>29 Oct '12, 11:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3e7d713b41640a0764d40936b579650d?s=32&amp;d=identicon&amp;r=g" alt="Charles%20G's gravatar image" />
+    <p><a href="/users/3400/charles-g">Charles G</a><br/>
+    <span class="score" title="5 reputation points">5</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">&#9679;</span><span class="badgecount">2</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Charles G has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-15340">
+    
+        <a name="15342"></a>
+        <div class="comment" id="comment-15342">
+            <div id="post-15342-score" class="comment-score"></div>
+            <div class="comment-text"><p>Does this also happen when you only use the built in ethernet port and disconnect the USB adapter? Windows sometimes has a funny way of using network adapters you would not expect to be used...</p></div>
+            <div class="comment-info" id="comment-15342-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '12, 11:49)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="15343"></a>
+        <div class="comment" id="comment-15343">
+            <div id="post-15343-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's a great suggestion, never underestimate Windows to help you.
+I removed the USB, still nothing.</p>
+
+<p>Now I did notice that somehow I had accumulated a number of entries in the capture filter.  Removed them, still nothing.  I need to do some more reading.</p></div>
+            <div class="comment-info" id="comment-15343-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(29 Oct '12, 13:31)</span>
+                <a class="comment-user userinfo" href="/users/3400/charles-g">Charles G</a>
+                
+            </div>
+        </div>
+    
+        <a name="15501"></a>
+        <div class="comment" id="comment-15501">
+            <div id="post-15501-score" class="comment-score"></div>
+            <div class="comment-text"><p>Okay, ebay to the rescue.  I now have an OFFICIAL hub from netgear.  Those suckers are hard to find.  Lo and behold, I see TCP traffic now.</p>
+
+<p>Thanks for all the help.</p></div>
+            <div class="comment-info" id="comment-15501-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Nov '12, 07:23)</span>
+                <a class="comment-user userinfo" href="/users/3400/charles-g">Charles G</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15340" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15340-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    3 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/15340/no-tcp-traffic-captured-diagnosing?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/15340/no-tcp-traffic-captured-diagnosing?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/15340/no-tcp-traffic-captured-diagnosing?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/15340/no-tcp-traffic-captured-diagnosing?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="15346"></a>
+                    <div id="answer-container-15346" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15346-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15346/up/" rel="nofollow"> </a>
+<div id="post-15346-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-15346-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15346/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Charles G has selected this answer as the correct answer"
+        href="/accept_answer/15346/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>So I'm assuming your setup has a hub into which:</p>
+<ul>
+<li>your laptop's Ethernet adapter;</li>
+<li>the FTP client machine;</li>
+<li>the FTP server machine</li>
+</ul>
+<p>are all plugged?  If so, are you certain the hub really is a dumb hub rather than a switch?  See, for example, the <a href="http://wiki.wireshark.org/HubReference">hub reference</a> on the Wireshark Wiki - and note also its note about dual-speed hubs.  This sounds suspiciously like a switch - the periodic UDP packets might be broadcasts, which would be sent to all ports on a switch, but unicast packets, such as TCP segments, would only be sent to the port corresponding to the destination MAC address of the packet.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15346/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>29 Oct '12, 16:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+    <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+    <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Guy Harris has 216 accepted answers">19&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15346">
+    
+        <a name="15361"></a>
+        <div class="comment" id="comment-15361">
+            <div id="post-15361-score" class="comment-score"></div>
+            <div class="comment-text"><p>Guy,</p>
+
+<p>All good points, yes, they are all plugged in.  All network connections have IP addresses from the dhcp server.  The hub comment is a good point - the ethernet chip is in an embedded system, so I'll have to check with the h/w engineer.  We're not dealing with an external device.</p>
+
+<p>Dual speed - they are all at 100, but I had not been aware of this.</p>
+
+<p>thanks</p></div>
+            <div class="comment-info" id="comment-15361-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '12, 04:57)</span>
+                <a class="comment-user userinfo" href="/users/3400/charles-g">Charles G</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15346" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15346-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="15350"></a>
+                    <div id="answer-container-15350" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15350-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15350/up/" rel="nofollow"> </a>
+<div id="post-15350-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-15350-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15350/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Assuming that you can connect to the FTP server that sounds like a problem with the capture side of Wireshark.</p>
+<p>A few ideas:</p>
+<ol>
+<li>Are you capturing in promiscous mode? (Verify with Capture -&gt; Options -&gt;  [interface])</li>
+<li>Is the WinPcap Driver properly installed and running with admin/system rights? Try <strong>sc query npf</strong> on the command line.</li>
+<li>Do you have enough disk space? (I know, it sounds stupid. Apologies if the question offends you. Please check anyway)</li>
+<li>Are the TCP packets recorded if you run dumpcap on the command line?</li>
+</ol>
+<p>Good hunting!</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15350/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Oct '12, 01:34</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3b60e92020a427bb24332efc0b560943?s=32&amp;d=identicon&amp;r=g" alt="packethunter's gravatar image" />
+    <p><a href="/users/416/packethunter">packethunter</a><br/>
+    <span class="score" title="2137 reputation points"><span class="">2.1k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="15 badges"><span class="silver">&#9679;</span><span class="badgecount">15</span></span><span title="48 badges"><span class="bronze">&#9679;</span><span class="badgecount">48</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="packethunter has 8 accepted answers">8&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15350">
+    
+        <a name="15362"></a>
+        <div class="comment" id="comment-15362">
+            <div id="post-15362-score" class="comment-score"></div>
+            <div class="comment-text"><p>packethunter - my thoughts as well.</p>
+
+<p>1) promiscuous - yes
+2) sc query npf comes back with info, no errors.
+3) disk space - no offense taken.  Yes, plenty.
+4) dumpcap - that I will have to try.</p></div>
+            <div class="comment-info" id="comment-15362-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '12, 05:01)</span>
+                <a class="comment-user userinfo" href="/users/3400/charles-g">Charles G</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15350" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15350-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="15365"></a>
+                    <div id="answer-container-15365" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-15365-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/15365/up/" rel="nofollow"> </a>
+<div id="post-15365-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-15365-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/15365/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>hub device running ftp client </p>
+</blockquote>
+<p>'hub device'? </p>
+<p>Are you sure this is a 'true' hub and not a 'switching hub (often printed on the backside of the product)? If it's a switching hub (actually a switch), you will only see broadcast traffic, unless you configure port mirroring.</p>
+<p>What kind of traffic do you see, if you capture on that 'hub'?<br>
+</p>
+<p>Is it just ARP traffic and traffic to the broadcast addresses (ethernet broadcast: FF:FF:FF:FF:FF:FF and/or IP broadcast: x.x.x.255/24 or x.x.255.255/16)?</p>
+<p>If so, the 'hub' is actually a switch and you need to replace it with a managed switch, that is able to do port mirroring (or with a real hub, or with a TAP).</p>
+<blockquote>
+<p><code><a href="http://wiki.wireshark.org/CaptureSetup/Ethernet">http://wiki.wireshark.org/CaptureSetup/Ethernet</a></code> <br>
+</p>
+</blockquote>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/15365/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>30 Oct '12, 05:31</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/15365/">
+                edited
+                <strong>30 Oct '12, 05:35</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-15365">
+    
+        <a name="15366"></a>
+        <div class="comment" id="comment-15366">
+            <div id="post-15366-score" class="comment-score">2</div>
+            <div class="comment-text"><p>And the answer is... after working with it for 7 years... wait for it... and being told again and again and again it's a hub... yes folks, it's a switch.  doh!</p>
+
+<p>Okay off to learn about mirroring.</p></div>
+            <div class="comment-info" id="comment-15366-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '12, 06:45)</span>
+                <a class="comment-user userinfo" href="/users/3400/charles-g">Charles G</a>
+                
+            </div>
+        </div>
+    
+        <a name="15379"></a>
+        <div class="comment" id="comment-15379">
+            <div id="post-15379-score" class="comment-score">1</div>
+            <div class="comment-text"><blockquote>
+<p>yes folks, it's a switch. doh!</p>
+</blockquote>
+
+<p>;-)</p></div>
+            <div class="comment-info" id="comment-15379-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '12, 09:46)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="15381"></a>
+        <div class="comment" id="comment-15381">
+            <div id="post-15381-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Don't feel bad, it can happen... but you might want to accept Guy's answer because he was the first to hint about this :-)</p></div>
+            <div class="comment-info" id="comment-15381-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '12, 09:57)</span>
+                <a class="comment-user userinfo" href="/users/145/jasper">Jasper ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="15387"></a>
+        <div class="comment" id="comment-15387">
+            <div id="post-15387-score" class="comment-score"></div>
+            <div class="comment-text"><p>yeah, but the h/w guy has been calling it a hub for a long time.  Even when I said, "Is it a hub or a switch?"</p></div>
+            <div class="comment-info" id="comment-15387-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '12, 11:24)</span>
+                <a class="comment-user userinfo" href="/users/3400/charles-g">Charles G</a>
+                
+            </div>
+        </div>
+    
+        <a name="15389"></a>
+        <div class="comment" id="comment-15389">
+            <div id="post-15389-score" class="comment-score"></div>
+            <div class="comment-text"><p>Plenty of people use "hub" for small switches - after all, a "switch" is one of those big boxes that fits in a rack in the machine room, this is just a small box with 4 ports that you can put on a desk, so it's a hub, right? :-)  You should tell the HW person that, <em>even if the manufacturer of the box calls it a hub</em>, it's really a switch, and explain what the distinction between a hub and a switch really is and why it's important in some cases (such as this case).  Perhaps he'll tell his friends and co-workers, and eventually people will start using the terms more clearly....</p></div>
+            <div class="comment-info" id="comment-15389-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '12, 11:53)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="15392"></a>
+        <div class="comment not_top_scorer" id="comment-15392">
+            <div id="post-15392-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>yeah, but the h/w guy has been calling it a hub for a long time. Even when I said, "Is it a hub or a switch?"</p>
+</blockquote>
+
+<p><strong>&lt;fun&gt;</strong><br>
+If that's the case, your HW guy might need an update training on the latest network technologies ;-) Please ask him to follow this Q&amp;A site. There is a lot to learn.<br>
+<strong>&lt;/fun&gt;</strong></p></div>
+            <div class="comment-info" id="comment-15392-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(30 Oct '12, 12:10)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-15365" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-15365-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/15340/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='irczSg2zUev7mcGTyn9q2WYG9IvOMqNI' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15340/no-tcp-traffic-captured-diagnosing?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/15340/no-tcp-traffic-captured-diagnosing?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tcp/"
+            class="tag-link-tcp"
+            title="see questions tagged'tcp'using tags"
+            rel="tag">tcp</a> <span class="tag-number">&#215;752</span><br/>
+        
+        <a href="/tags/ftp/"
+            class="tag-link-ftp"
+            title="see questions tagged'ftp'using tags"
+            rel="tag">ftp</a> <span class="tag-number">&#215;56</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 29, 2012, 11:39 a.m.">29 Oct '12, 11:39</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>10,596 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Nov. 2, 2012, 7:23 a.m.">02 Nov '12, 07:23</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/46428/troubleshooting-slow-ftp-speed">Troubleshooting slow FTP speed</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42691/mss-value-negotiated-during-ftp-data-session-establishment-but-wireshark-shows-larger-blocks-sent-by-server">MSS value negotiated during ftp-data session establishment but wireshark shows larger blocks sent by server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18454/tcpftp-performance">tcp/ftp performance</a>
+        </p>
+        
+        <p>
+            <a href="/questions/37992/ack-packets-are-getting-dropped-causing-a-ftp-session-reset">Ack packets are getting dropped, causing a FTP session reset</a>
+        </p>
+        
+        <p>
+            <a href="/questions/39179/packet-reassemble-ftp-data-dissector-ftp-export-object">Packet reassemble - FTP-DATA Dissector - FTP - Export Object</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44930/unstable-internet-question">[closed] Unstable Internet Question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46203/howt-to-distinguish-multiple-conversations-with-the-same-addr1port1-and-addr2port2-pair">Howt to distinguish multiple conversations with the same addr1/port1 and addr2/port2 pair</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47690/no-tcp-packets">NO TCP PACKETS</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48640/connection-reset-and-connection-time-out-for-specific-websites">Connection Reset and Connection time out for specific websites</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50086/tcp-retransmission-identify-both-original-and-retransmission">TCP retransmission: identify both original and retransmission</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

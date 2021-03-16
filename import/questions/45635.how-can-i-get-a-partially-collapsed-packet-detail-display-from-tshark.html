@@ -1,0 +1,897 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How can I get a partially-collapsed packet detail display from TShark? - Wireshark Q&amp;A</title>
+        <meta name="description" content="I&#39;m using tshark protocol filter as I need to parse the contents of the SIP Packets. tshark -r df32c2248fe646a6793ce9a63b124b34@0.0.0.0.pcap -O sip  I get this: Frame 14: 553 bytes on wire (4424 bits), 553 bytes captured (4424 bits) Linux cooked capture Internet Protocol Version 4, Src: 4.4.4.4 (4.4..." />
+        <meta name="keywords" content="details,collapse,tshark" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/45635/how-can-i-get-a-partially-collapsed-packet-detail-display-from-tshark" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/45635/how-can-i-get-a-partially-collapsed-packet-detail-display-from-tshark?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='307o9wMF3Su9oUCyuN3hBY2wjOoEUH7B' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/45635/how-can-i-get-a-partially-collapsed-packet-detail-display-from-tshark">How can I get a partially-collapsed packet detail display from TShark?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-45635-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45635/up/" rel="nofollow"> </a>
+<div id="post-45635-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-45635-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45635/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/45635/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I'm using tshark protocol filter as I need to parse the contents of the SIP Packets.</p>
+<pre><code>tshark -r <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7410124746174646404c12114240421542434d4717114d1542471645464016474034445a445a445a445a04171504">[email&#160;protected]</a> -O sip
+</code></pre>
+<p>I get this:</p>
+<pre><code>Frame 14: 553 bytes on wire (4424 bits), 553 bytes captured (4424 bits)
+Linux cooked capture
+Internet Protocol Version 4, Src: 4.4.4.4 (4.4.4.4), Dst: 3.3.3.3 (3.3.3.3)
+User Datagram Protocol, Src Port: 5060 (5060), Dst Port: 5060 (5060)
+Session Initiation Protocol (200)
+    Status-Line: SIP/2.0 200 OK
+        Status-Code: 200
+        [Resent Packet: False]
+        [Request Frame: 11]
+        [Response Time (ms): 115]
+        [Release Time (ms): 115]
+    Message Header
+        Via: SIP/2.0/UDP 2.2.2.2:5060;received=3.3.3.3;branch=z9hG4bK18f6609d-1c76-4a8b-a96b-2cf7d8036d36_6772d868_3067109296759172
+            Transport: UDP
+            Sent-by Address: 2.2.2.2
+            Sent-by port: 5060
+            Received: 3.3.3.3
+            Branch: z9hG4bK18f6609d-1c76-4a8b-a96b-2cf7d8036d36_6772d868_3067109296759172
+        Contact: &lt;sip:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c0d080c040e0d040a090c0c7c0d120d120d120d">[email&#160;protected]</a>:17060&gt;
+            Contact URI: sip:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e9d8ddd9d1dbd8d1dfdcd9d9a9d8c7d8c7d8c7d8">[email&#160;protected]</a>:17060
+                Contact URI User Part: 14082186500
+                Contact URI Host Part: 1.1.1.1
+                Contact URI Host Port: 17060
+        To: &lt;sip:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="18292c28202a29202e2d2828586b68717b616a79757d76367168687a60367b7775">[email&#160;protected]</a>;user=phone&gt;;tag=83174026
+            SIP to address: sip:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eddcd9ddd5dfdcd5dbd8ddddad9e9d848e949f8c808883c3849d9d8f95c38e8280">[email&#160;protected]</a>;user=phone
+                SIP to address User Part: 14082186500
+                SIP to address Host Part: spicyramen.ippbx.com
+                SIP To URI parameter: user=phone
+            SIP to tag: 83174026
+        From: &lt;sip:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="55343b3a3b2c383a202615263c257b3c30647b263c2525273a233c3130277b363a38">[email&#160;protected]</a>&gt;;tag=87638703_6772d868_18f6609d-1c76-4a8b-a96b-2cf7d8036d36
+            SIP from address: sip:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4a2b2425243327253f390a39233a64232f7b6439233a3a38253c232e2f3864292527">[email&#160;protected]</a>
+                SIP from address User Part: anonymous
+                SIP from address Host Part: sip.ie1.sipprovider.com
+            SIP from tag: 87638703_6772d868_18f6609d-1c76-4a8b-a96b-2cf7d8036d36
+        Call-ID: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bedad88d8cdd8c8c8a86d8db888a88df8889878ddddb87df888ddc8f8c8adc8d8afe8e908e908e908e">[email&#160;protected]</a>
+        CSeq: 44365 BYE
+            Sequence Number: 44365
+            Method: BYE
+        User-Agent: 3CXPhoneSystem 14.0.44198.522 (44097)
+        Content-Length: 0
+</code></pre>
+<p>As you can see output is not collapsed. I want to see something like this:</p>
+<pre><code>Frame 14: 553 bytes on wire (4424 bits), 553 bytes captured (4424 bits)
+Linux cooked capture
+Internet Protocol Version 4, Src: 4.4.4.4 (4.4.4.4), Dst: 3.3.3.3 (3.3.3.3)
+User Datagram Protocol, Src Port: 5060 (5060), Dst Port: 5060 (5060)
+Session Initiation Protocol (200)
+    Status-Line: SIP/2.0 200 OK
+    Message Header
+        Via: SIP/2.0/UDP 2.2.2.2:5060;received=3.3.3.3;branch=z9hG4bK18f6609d-1c76-4a8b-a96b-2cf7d8036d36_6772d868_3067109296759172
+        Contact: &lt;sip:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="be8f8a8e868c8f86888b8e8efe8f908f908f908f">[email&#160;protected]</a>:17060&gt;
+        To: &lt;sip:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="98a9aca8a0aaa9a0aeada8a8d8ebe8f1fbe1eaf9f5fdf6b6f1e8e8fae0b6fbf7f5">[email&#160;protected]</a>;user=phone&gt;;tag=83174026
+        From: &lt;sip:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a3c2cdcccddaceccd6d0e3d0cad38dcac6928dd0cad3d3d1ccd5cac7c6d18dc0ccce">[email&#160;protected]</a>&gt;;tag=87638703_6772d868_18f6609d-1c76-4a8b-a96b-2cf7d8036d36
+        Call-ID: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a9cdcf9a9bca9b9b9d91cfcc9f9d9fc89f9e909acacc90c89f9acb989b9dcb9a9de999879987998799">[email&#160;protected]</a>
+        CSeq: 44365 BYE
+        User-Agent: 3CXPhoneSystem 14.0.44198.522 (44097)
+        Content-Length: 0
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/details/" class="post-tag tag-link-details"
+                                        title="see questions tagged 'details'" rel="tag">details</a>
+                                
+                                    <a href="/tags/collapse/" class="post-tag tag-link-collapse"
+                                        title="see questions tagged 'collapse'" rel="tag">collapse</a>
+                                
+                                    <a href="/tags/tshark/" class="post-tag tag-link-tshark"
+                                        title="see questions tagged 'tshark'" rel="tag">tshark</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>04 Sep '15, 08:58</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/5a2d6a17424a997970d7a1caebdc5aa5?s=32&amp;d=identicon&amp;r=g" alt="spicyramen's gravatar image" />
+    <p><a href="/users/19454/spicyramen">spicyramen</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">&#9679;</span><span class="badgecount">1</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="spicyramen has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/45635/">
+                edited
+                <strong>05 Sep '15, 19:58</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" alt="Guy%20Harris's gravatar image" />
+            <p><a href="/users/79/guy-harris">Guy Harris ♦♦</a><br/>
+            <span class="score" title="17443 reputation points"><span class="">17.4k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">&#9679;</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">&#9679;</span><span class="badgecount">196</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-45635">
+    
+</div>
+<div id="comment-tools-45635" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45635-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/45635/how-can-i-get-a-partially-collapsed-packet-detail-display-from-tshark?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/45635/how-can-i-get-a-partially-collapsed-packet-detail-display-from-tshark?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/45635/how-can-i-get-a-partially-collapsed-packet-detail-display-from-tshark?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/45635/how-can-i-get-a-partially-collapsed-packet-detail-display-from-tshark?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="45644"></a>
+                    <div id="answer-container-45644" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-45644-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45644/up/" rel="nofollow"> </a>
+<div id="post-45644-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-45644-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45644/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Nothing that you can do from tshark, but you could remove the lines that you don't want with grep e.g.</p>
+<p><code>tshark -r file.pcap -O sip | grep -v -e "Contact URI" -e "SIP from" -e "SIP to" <code></code></code></p><code><code>
+<p>or use a file if there are too many patterns.</p></code></code>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/45644/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Sep '15, 04:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/721b9692d2a30fc3b386b7fae9a44220?s=32&amp;d=identicon&amp;r=g" alt="Roland's gravatar image" />
+    <p><a href="/users/6889/roland">Roland</a><br/>
+    <span class="score" title="764 reputation points">764</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="silver">&#9679;</span><span class="badgecount">4</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Roland has 9 accepted answers">13&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/45644/">
+                edited
+                <strong>06 Sep '15, 06:30</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-45644">
+    
+</div>
+<div id="comment-tools-45644" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45644-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="45646"></a>
+                    <div id="answer-container-45646" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-45646-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/45646/up/" rel="nofollow"> </a>
+<div id="post-45646-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-45646-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/45646/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Wireshark<br>You can use Wireshark to do the job.<br>
+Apply a <a href="https://wiki.wireshark.org/DisplayFilters">display filter</a>:<br>
+sip</p>
+<p>Go to the the <a href="https://www.wireshark.org/docs/wsug_html_chunked/ChUsePacketDetailsPaneSection.html">Packet Details</a> pane.<br>
+Expand "Session Initiation Protocol"<br>
+Expand Request-Line, Message Header and Message Body* (do not Expand Subtrees)<br>
+Go to File - Export - Export Packet Dissections... - As "Plain Text" File...<br>
+Packet Format section: select "Packet Summery Line" and "Packet Details: As Displayed"<br>
+Add a file name and save the file<br></p>
+<p>*Note<br>
+I have used <a href="https://wiki.wireshark.org/SampleCaptures#SIP_and_RTP">sample file</a>: aaa.pcap<br>
+Message Body: see packet 223</p>
+<p><a href="https://www.wireshark.org/docs/man-pages/tshark.html">TShark</a><br>
+You can use -T Fields and add all the <a href="https://www.wireshark.org/docs/dfref/s/sip.html">fields</a> you need.<br>
+For example: <br>
+tshark -r aaa.pcap -Y sip -E header=y -E separator="?" -T fields -e frame.number -e sip.Request-Line -e sip.r-uri  -e sip.Via -e sip.From -e sip.To -e sip.Call-ID -e sip.Contact -e sip.Expires -e sip.CSeq -e sip.User-Agent -e sip.Content-Length  &gt; aaa.csv</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/45646/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>06 Sep '15, 09:28</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fac200552b0c24be2bc93a740bd54d0d?s=32&amp;d=identicon&amp;r=g" alt="joke's gravatar image" />
+    <p><a href="/users/100/joke">joke</a><br/>
+    <span class="score" title="1278 reputation points"><span class="">1.3k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="34 badges"><span class="bronze">&#9679;</span><span class="badgecount">34</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="joke has 6 accepted answers">9&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-45646">
+    
+</div>
+<div id="comment-tools-45646" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-45646-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/45635/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='307o9wMF3Su9oUCyuN3hBY2wjOoEUH7B' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/45635/how-can-i-get-a-partially-collapsed-packet-detail-display-from-tshark?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/45635/how-can-i-get-a-partially-collapsed-packet-detail-display-from-tshark?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tshark/"
+            class="tag-link-tshark"
+            title="see questions tagged'tshark'using tags"
+            rel="tag">tshark</a> <span class="tag-number">&#215;832</span><br/>
+        
+        <a href="/tags/details/"
+            class="tag-link-details"
+            title="see questions tagged'details'using tags"
+            rel="tag">details</a> <span class="tag-number">&#215;9</span><br/>
+        
+        <a href="/tags/collapse/"
+            class="tag-link-collapse"
+            title="see questions tagged'collapse'using tags"
+            rel="tag">collapse</a> <span class="tag-number">&#215;1</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 4, 2015, 8:58 a.m.">04 Sep '15, 08:58</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,439 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 6, 2015, 9:28 a.m.">06 Sep '15, 09:28</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/62/static-tshark-builds-for-linux-andor-solaris-sparcx64">static tshark builds for linux and/or solaris sparc/x64</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1670/tshark-hex-dump">tshark hex dump</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3479/could-the-file-name-parameter-in-tshark-be-chinese-characters">could the file name parameter in tshark be chinese characters?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5132/write-gzip-encoded-http-as-inflated-in-pcap-file">Write Gzip Encoded HTTP as Inflated in PCAP File</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6488/use-tshark-to-analyze-source-and-destination-ips-from-dumpfile">Use tshark to analyze source and destination IPs from dumpfile?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8324/difference-tshark-wireshark-when-load-a-pcap">Difference TShark / Wireshark when load a pcap</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9303/how-to-retrieve-packet-information-using-wireshark-commands">how to retrieve packet information using wireshark commands</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10173/covert-the-pcap-file-to-a-csv-file-using-tshark">Covert the .pcap file to a .csv file using tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10605/tshark-commands-e-and-t">tshark commands -e and -T</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12348/how-to-calculate-the-total-network-traffic-pass-though-a-gigabit-nic-with-high-precision">How to calculate the total network traffic pass though a Gigabit NIC with high precision?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

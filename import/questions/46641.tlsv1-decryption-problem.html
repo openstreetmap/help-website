@@ -1,0 +1,1575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TLSv1 Decryption Problem - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hello, I&#39;m having problems decrypting HTTPS TLSv1 traffic. I&#39;ve set up a Windows Server 2012 VM with IIS and I&#39;ve only allowed RSA cipher suites. I start the capture, open the browser and the page and then stop the capture. Then I configure the private key on Wireshark but the traffic does not get d..." />
+        <meta name="keywords" content="tlsv1,decryption" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/46641/tlsv1-decryption-problem" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/46641/tlsv1-decryption-problem?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='JCyEBlPFLGx8I7Wzd8XjICtdo7nkwVLs' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/46641/tlsv1-decryption-problem">TLSv1 Decryption Problem</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-46641-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46641/up/" rel="nofollow"> </a>
+<div id="post-46641-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-46641-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46641/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/46641/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hello,</p>
+<p>I'm having problems decrypting HTTPS TLSv1 traffic. I've set up a Windows Server 2012 VM with IIS and I've only allowed RSA cipher suites.</p>
+<p>I start the capture, open the browser and the page and then stop the capture.</p>
+<p>Then I configure the private key on Wireshark but the traffic does not get decrypted.</p>
+<p>I found an error regarding the Pre Master Secret but I'm sure that this is the correct private key and certificate.</p>
+<p>At the end of the post you'll find the contents of the SSL log file.</p>
+<p>Regards,</p>
+<p>Chris</p>
+<p>Wireshark SSL debug log </p>
+<pre><code>ssl_association_remove removing TCP 443 - http handle 0000000004453240
+Private key imported: KeyID 75:a5:a6:2c:01:a5:7c:34:a5:4a:a0:e9:c3:74:4f:18:...
+ssl_load_key: swapping p and q parameters and recomputing u
+ssl_init IPv4 addr '192.168.0.9' (192.168.0.9) port '443' filename 'C:\Users\chris_000\Desktop\key.pem' password(only for p12 file) ''
+ssl_init private key file C:\Users\chris_000\Desktop\key.pem successfully loaded.
+association_add TCP port 443 protocol http handle 0000000004453240
+
+dissect_ssl enter frame #8 (first time)
+ssl_session_init: initializing ptr 000000000A5D1790 size 712
+association_find: TCP port 60866 found 0000000000000000
+packet_from_server: is from server - FALSE
+  conversation = 0000000005771098, ssl_session = 000000000A5D1790
+  record: offset = 0, reported_length_remaining = 223
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 218, ssl state 0x00
+association_find: TCP port 60866 found 0000000000000000
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 214 bytes, remaining 223 
+packet_from_server: is from server - FALSE
+ssl_find_private_key server 192.168.0.9:443
+ssl_find_private_key: testing 1 keys
+dissect_ssl3_hnd_hello_common found CLIENT RANDOM -&gt; state 0x01
+
+dissect_ssl enter frame #13 (first time)
+ssl_session_init: initializing ptr 000000000A5D2280 size 712
+association_find: TCP port 60867 found 0000000000000000
+packet_from_server: is from server - FALSE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 175
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 170, ssl state 0x00
+association_find: TCP port 60867 found 0000000000000000
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 166 bytes, remaining 175 
+packet_from_server: is from server - FALSE
+ssl_find_private_key server 192.168.0.9:443
+ssl_find_private_key: testing 1 keys
+dissect_ssl3_hnd_hello_common found CLIENT RANDOM -&gt; state 0x01
+
+dissect_ssl enter frame #14 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 965
+dissect_ssl3_record found version 0x0301(TLS 1.0) -&gt; state 0x11
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 960, ssl state 0x11
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 77 bytes, remaining 965 
+dissect_ssl3_hnd_hello_common found SERVER RANDOM -&gt; state 0x13
+dissect_ssl3_hnd_srv_hello found CIPHER 0x0005 -&gt; state 0x17
+dissect_ssl3_hnd_srv_hello trying to generate keys
+ssl_generate_keyring_material not enough data to generate key (0x17 required 0x37 or 0x57)
+dissect_ssl3_hnd_srv_hello can't generate keyring material
+dissect_ssl3_handshake iteration 0 type 11 offset 86 length 871 bytes, remaining 965 
+dissect_ssl3_handshake iteration 0 type 14 offset 961 length 0 bytes, remaining 965
+
+dissect_ssl enter frame #16 (first time)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 314
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 262, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 16 offset 5 length 258 bytes, remaining 267 
+ssl_generate_pre_master_secret: found SSL_HND_CLIENT_KEY_EXCHG, state 17
+pre master encrypted[256]:
+| 07 6a 72 cb 03 09 9c 0e 23 c6 23 7f 2c 3d 85 6b |.jr.....#.#.,=.k|
+| 67 cf 4b eb 2a 4d 9d 06 2a 7c 75 b5 d5 bf fc 47 |g.K.*M..*|u....G|
+| 5e d0 5b cd 86 0e 77 03 58 1d 49 a7 a5 fb 22 a7 |^.[...w.X.I...".|
+| e0 b0 1d 3b 90 7d cb 61 35 24 9a f2 3d 3d 14 49 |...;.}.a5$..==.I|
+| 25 8a 05 2e da 0c ee f7 01 8d 9c 1f 63 75 49 ba |%...........cuI.|
+| b7 ea 43 1e b7 75 53 a7 40 6b d7 45 d9 65 4a ef |..C..uS.<a href="/users/600/k0jkj">@k</a>.E.eJ.|
+| 2c b8 7a a5 88 b6 21 ce f9 3e a2 c1 70 b4 2a a1 |,.z...!..&gt;..p.*.|
+| e5 38 59 52 88 48 ee 0f e6 8a 60 65 37 d9 76 3b |.8YR.H....`e7.v;|
+| fb e6 f0 5d c0 5b 93 e7 8d 27 dd d0 7c 6c 4b 99 |...].[...'..|lK.|
+| 0e 3f e2 fd da ba d4 1d c7 87 19 28 30 40 24 c2 |.?.........(<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3e0e7e">[email&#160;protected]</a>$.|
+| 00 e3 96 13 68 20 8c 85 9d ab 9e 61 7b b8 f1 15 |....h .....a{...|
+| 5b e5 cd a5 d0 19 bf 4b f9 56 3f 80 a6 a2 f6 37 |[......K.V?....7|
+| 69 14 b6 e2 28 97 2c 6b fc 16 19 0e 67 75 eb b2 |i...(.,k....gu..|
+| f3 85 3e 06 bd 76 10 73 95 e7 bf bf 73 f3 c7 57 |..&gt;..v.s....s..W|
+| 35 09 d9 e0 34 59 97 b6 40 af fd 64 5e dd e2 7a |<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a79289898993fe8989e78989c3">[email&#160;protected]</a>^..z|
+| cd 81 7f 7b e0 8a 51 3c cc a9 93 9e ef 0b 64 5a |...{..Q&lt;......dZ|
+ssl_decrypt_pre_master_secret:RSA_private_decrypt
+decrypted_unstrip_pre_master[256]:
+| 07 f9 03 9c 86 87 14 37 b8 47 54 e2 b4 d8 45 04 |.......7.GT...E.|
+| 73 28 ca b0 c0 14 7e 48 6b fb c1 01 9f 2e 4d ac |s(....~Hk.....M.|
+| 16 b8 a0 b5 22 8b 47 9a f9 4f 81 b6 fb c6 c8 c6 |....".G..O......|
+| ab af 11 8d c8 4c 6b 74 96 2c 9c f0 ef bb cf 3e |.....Lkt.,.....&gt;|
+| fd 3d 65 67 87 c9 ed 63 9d 1e 69 df 0f 48 86 47 |.=eg...c..i..H.G|
+| f5 d7 9f ad 2e c4 46 39 68 b3 cf a8 83 8b 1f 6e |......F9h......n|
+| f9 23 9b 7a f9 10 ff f2 0f 84 63 6c a9 25 0a 1f |.#.z......cl.%..|
+| 48 7b 63 55 7b ab 3e 66 85 fd b7 71 9e eb 4f 8f |H{cU{.&gt;f...q..O.|
+| b9 af 94 13 98 75 52 1e 85 67 fc bd ba e5 f0 05 |.....uR..g......|
+| 28 7d da e3 06 38 21 4b f1 7d 50 c3 9d 86 bd 83 |(}...8!K.}P.....|
+| 3c 03 10 38 5a cf 3e 9d d8 73 b7 aa b5 f2 48 4b |&lt;..8Z.&gt;..s....HK|
+| 74 af 39 4a fb e5 ce 33 27 e6 a6 08 a9 99 71 d1 |t.9J...3'.....q.|
+| 80 a7 44 89 7e f4 9c 43 ac 57 2a ad fd ca 02 18 |..D.~..C.W*.....|
+| 2a a4 a7 3c 5d d8 32 dc fa e6 1e 30 14 53 7a a8 |*..&lt;].2....0.Sz.|
+| bb 5c f0 75 18 52 74 6e 3c 86 40 7d b4 af 2b 08 |.\.u.Rtn&lt;<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f2dcb2">[email&#160;protected]</a>}..+.|
+| d9 5f 75 cf 87 59 b8 88 6e dd a3 4f 27 ff ff ff |._u..Y..n..O'...|
+pcry_private_decrypt: stripping 0 bytes, decr_len 256
+ssl_decrypt_pre_master_secret wrong pre_master_secret length (256, expected 48)
+ssl_generate_pre_master_secret: can't decrypt pre master secret
+trying to use SSL keylog in c:\sslkeylogfile.log
+failed to open SSL keylog
+dissect_ssl3_handshake can't generate pre master secret
+  record: offset = 267, reported_length_remaining = 47
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - FALSE
+ssl_change_cipher CLIENT
+  record: offset = 273, reported_length_remaining = 41
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 36, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 32 offset 278 length 3561692 bytes, remaining 314
+
+dissect_ssl enter frame #17 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 47
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+packet_from_server: is from server - TRUE
+ssl_change_cipher SERVER
+  record: offset = 6, reported_length_remaining = 41
+dissect_ssl3_record: content_type 22 Handshake
+decrypt_ssl3_record: app_data len 36, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+dissect_ssl3_handshake iteration 1 type 84 offset 11 length 1500765 bytes, remaining 47
+
+dissect_ssl enter frame #19 (first time)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 318
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 313, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 60867 found 0000000000000000
+association_find: TCP port 443 found 0000000004D24240
+
+dissect_ssl enter frame #20 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 948
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 943, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 0000000004D24240
+
+dissect_ssl enter frame #22 (first time)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 393
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 388, ssl state 0x17
+packet_from_server: is from server - FALSE
+decrypt_ssl3_record: using client decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 60867 found 0000000000000000
+association_find: TCP port 443 found 0000000004D24240
+
+dissect_ssl enter frame #23 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #35 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 16409
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 16404, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 0000000004D24240
+
+dissect_ssl enter frame #35 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 1111
+  need_desegmentation: offset = 0, reported_length_remaining = 1111
+
+dissect_ssl enter frame #47 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 16409
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 16404, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 0000000004D24240
+
+dissect_ssl enter frame #47 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 762
+  need_desegmentation: offset = 0, reported_length_remaining = 762
+
+dissect_ssl enter frame #59 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 16409
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 16404, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 0000000004D24240
+
+dissect_ssl enter frame #59 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 413
+  need_desegmentation: offset = 0, reported_length_remaining = 413
+
+dissect_ssl enter frame #71 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 16409
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 16404, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 0000000004D24240
+
+dissect_ssl enter frame #71 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 64
+  need_desegmentation: offset = 0, reported_length_remaining = 64
+
+dissect_ssl enter frame #72 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 250
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 245, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 0000000004D24240
+
+dissect_ssl enter frame #74 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 1460
+  need_desegmentation: offset = 0, reported_length_remaining = 1460
+
+dissect_ssl enter frame #85 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 16409
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 16404, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 0000000004D24240
+
+dissect_ssl enter frame #85 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 1111
+  need_desegmentation: offset = 0, reported_length_remaining = 1111
+
+dissect_ssl enter frame #97 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 16409
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 16404, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 0000000004D24240
+
+dissect_ssl enter frame #97 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 762
+  need_desegmentation: offset = 0, reported_length_remaining = 762
+
+dissect_ssl enter frame #98 (first time)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 000000000A5D2280
+  record: offset = 0, reported_length_remaining = 1431
+dissect_ssl3_record: content_type 23 Application Data
+decrypt_ssl3_record: app_data len 1426, ssl state 0x17
+packet_from_server: is from server - TRUE
+decrypt_ssl3_record: using server decoder
+decrypt_ssl3_record: no decoder available
+association_find: TCP port 443 found 0000000004D24240
+
+dissect_ssl enter frame #8 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005771098, ssl_session = 0000000000000000
+  record: offset = 0, reported_length_remaining = 223
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 214 bytes, remaining 223
+
+dissect_ssl enter frame #13 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005771240, ssl_session = 0000000000000000
+  record: offset = 0, reported_length_remaining = 175
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 166 bytes, remaining 175
+
+dissect_ssl enter frame #14 (already visited)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 0000000000000000
+  record: offset = 0, reported_length_remaining = 965
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 77 bytes, remaining 965 
+dissect_ssl3_handshake iteration 0 type 11 offset 86 length 871 bytes, remaining 965 
+dissect_ssl3_handshake iteration 0 type 14 offset 961 length 0 bytes, remaining 965
+
+dissect_ssl enter frame #16 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005771240, ssl_session = 0000000000000000
+  record: offset = 0, reported_length_remaining = 314
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 16 offset 5 length 258 bytes, remaining 267 
+  record: offset = 267, reported_length_remaining = 47
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 273, reported_length_remaining = 41
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 32 offset 278 length 3561692 bytes, remaining 314
+
+dissect_ssl enter frame #17 (already visited)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 0000000000000000
+  record: offset = 0, reported_length_remaining = 47
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 6, reported_length_remaining = 41
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 84 offset 11 length 1500765 bytes, remaining 47
+
+dissect_ssl enter frame #19 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005771240, ssl_session = 0000000000000000
+  record: offset = 0, reported_length_remaining = 318
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 60867 found 0000000000000000
+association_find: TCP port 443 found 0000000004D24240
+
+dissect_ssl enter frame #20 (already visited)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 0000000000000000
+  record: offset = 0, reported_length_remaining = 948
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 443 found 0000000004D24240
+
+dissect_ssl enter frame #22 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005771240, ssl_session = 0000000000000000
+  record: offset = 0, reported_length_remaining = 393
+dissect_ssl3_record: content_type 23 Application Data
+association_find: TCP port 60867 found 0000000000000000
+association_find: TCP port 443 found 0000000004D24240
+
+dissect_ssl enter frame #13 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005771240, ssl_session = 0000000000000000
+  record: offset = 0, reported_length_remaining = 175
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 1 offset 5 length 166 bytes, remaining 175
+
+dissect_ssl enter frame #14 (already visited)
+packet_from_server: is from server - TRUE
+  conversation = 0000000005771240, ssl_session = 0000000000000000
+  record: offset = 0, reported_length_remaining = 965
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 2 offset 5 length 77 bytes, remaining 965 
+dissect_ssl3_handshake iteration 0 type 11 offset 86 length 871 bytes, remaining 965 
+dissect_ssl3_handshake iteration 0 type 14 offset 961 length 0 bytes, remaining 965
+
+dissect_ssl enter frame #16 (already visited)
+packet_from_server: is from server - FALSE
+  conversation = 0000000005771240, ssl_session = 0000000000000000
+  record: offset = 0, reported_length_remaining = 314
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 16 offset 5 length 258 bytes, remaining 267 
+  record: offset = 267, reported_length_remaining = 47
+dissect_ssl3_record: content_type 20 Change Cipher Spec
+dissect_ssl3_change_cipher_spec
+  record: offset = 273, reported_length_remaining = 41
+dissect_ssl3_record: content_type 22 Handshake
+dissect_ssl3_handshake iteration 1 type 32 offset 278 length 3561692 bytes, remaining 314
+</code></pre>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/tlsv1/" class="post-tag tag-link-tlsv1"
+                                        title="see questions tagged 'tlsv1'" rel="tag">tlsv1</a>
+                                
+                                    <a href="/tags/decryption/" class="post-tag tag-link-decryption"
+                                        title="see questions tagged 'decryption'" rel="tag">decryption</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Oct '15, 10:06</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d9ee5622062195b1b9c37f37bd0cddae?s=32&amp;d=identicon&amp;r=g" alt="CPolydorou's gravatar image" />
+    <p><a href="/users/20300/cpolydorou">CPolydorou</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="CPolydorou has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/46641/">
+                edited
+                <strong>18 Oct '15, 14:22</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+            <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+            <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-46641">
+    
+</div>
+<div id="comment-tools-46641" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46641-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/46641/tlsv1-decryption-problem?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/46641/tlsv1-decryption-problem?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/46641/tlsv1-decryption-problem?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/46641/tlsv1-decryption-problem?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="46648"></a>
+                    <div id="answer-container-46648" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-46648-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/46648/up/" rel="nofollow"> </a>
+<div id="post-46648-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-46648-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/46648/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Please try first to use the snakeoil2 sample capture. 
+<a href="https://wiki.wireshark.org/SampleCaptures?action=AttachFile&amp;do=get&amp;target=snakeoil2_070531.tgz">https://wiki.wireshark.org/SampleCaptures?action=AttachFile&amp;do=get&amp;target=snakeoil2_070531.tgz</a></p>
+<p>Are you able to decrypt it ? </p>
+<p>If you can, please upload the key.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/46648/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>18 Oct '15, 02:26</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2b3f26f3a24449776af62dd8cca7715a?s=32&amp;d=identicon&amp;r=g" alt="adasko's gravatar image" />
+    <p><a href="/users/13062/adasko">adasko</a><br/>
+    <span class="score" title="86 reputation points">86</span><span title="34 badges"><span class="badge1">&#9679;</span><span class="badgecount">34</span></span><span title="38 badges"><span class="silver">&#9679;</span><span class="badgecount">38</span></span><span title="42 badges"><span class="bronze">&#9679;</span><span class="badgecount">42</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="adasko has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/46648/">
+                edited
+                <strong>19 Oct '15, 05:51</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-46648">
+    
+        <a name="46649"></a>
+        <div class="comment" id="comment-46649">
+            <div id="post-46649-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi,</p>
+
+<p>I tried to open the file in the tar archive but there are not packets. The private key is missing also.</p>
+
+<p>I'm using Wireshark 1.12.8 on Windows.</p></div>
+            <div class="comment-info" id="comment-46649-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 03:27)</span>
+                <a class="comment-user userinfo" href="/users/20300/cpolydorou">CPolydorou</a>
+                
+            </div>
+        </div>
+    
+        <a name="46650"></a>
+        <div class="comment" id="comment-46650">
+            <div id="post-46650-score" class="comment-score"></div>
+            <div class="comment-text"><p>there is a .cap file and the private key inside:</p>
+
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/capture.jpg"></p></div>
+            <div class="comment-info" id="comment-46650-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 03:36)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="46651"></a>
+        <div class="comment" id="comment-46651">
+            <div id="post-46651-score" class="comment-score"></div>
+            <div class="comment-text"><p>Never mind, the extension of the file in the archive is missing, that confused me a little bit.</p>
+
+<p>I can decrypt the sample traffic.</p>
+
+<p>I run the browser on another VM, where Wireshark is installed.</p>
+
+<p>Thanks</p></div>
+            <div class="comment-info" id="comment-46651-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 03:37)</span>
+                <a class="comment-user userinfo" href="/users/20300/cpolydorou">CPolydorou</a>
+                
+            </div>
+        </div>
+    
+        <a name="46652"></a>
+        <div class="comment" id="comment-46652">
+            <div id="post-46652-score" class="comment-score"></div>
+            <div class="comment-text"><p>The Private Key uploaded to Wireshark is the one from the VM running IIS, right ? </p></div>
+            <div class="comment-info" id="comment-46652-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 03:38)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="46653"></a>
+        <div class="comment" id="comment-46653">
+            <div id="post-46653-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes. I've uploaded the files <a href="http://1drv.ms/1GMP3oL">here</a></p></div>
+            <div class="comment-info" id="comment-46653-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 03:42)</span>
+                <a class="comment-user userinfo" href="/users/20300/cpolydorou">CPolydorou</a>
+                
+            </div>
+        </div>
+    
+        <a name="46654"></a>
+        <div class="comment not_top_scorer" id="comment-46654">
+            <div id="post-46654-score" class="comment-score"></div>
+            <div class="comment-text"><p>the .pfx is password protected, can you send it as a pm it to me ? </p></div>
+            <div class="comment-info" id="comment-46654-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 03:50)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="46655"></a>
+        <div class="comment not_top_scorer" id="comment-46655">
+            <div id="post-46655-score" class="comment-score"></div>
+            <div class="comment-text"><p>The password is PasswordForCertificate.</p>
+
+<p>Sorry, I forgot that.</p>
+
+<p>I've also updated the file with the certificate in PEM format converted using openssl.</p></div>
+            <div class="comment-info" id="comment-46655-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 03:56)</span>
+                <a class="comment-user userinfo" href="/users/20300/cpolydorou">CPolydorou</a>
+                
+            </div>
+        </div>
+    
+        <a name="46656"></a>
+        <div class="comment not_top_scorer" id="comment-46656">
+            <div id="post-46656-score" class="comment-score"></div>
+            <div class="comment-text"><p>did you select any other other options beside the default ones ? <img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/option.jpg"></p></div>
+            <div class="comment-info" id="comment-46656-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 04:32)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="46657"></a>
+        <div class="comment not_top_scorer" id="comment-46657">
+            <div id="post-46657-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes the first and the last ones.</p></div>
+            <div class="comment-info" id="comment-46657-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 04:56)</span>
+                <a class="comment-user userinfo" href="/users/20300/cpolydorou">CPolydorou</a>
+                
+            </div>
+        </div>
+    
+        <a name="46658"></a>
+        <div class="comment not_top_scorer" id="comment-46658">
+            <div id="post-46658-score" class="comment-score"></div>
+            <div class="comment-text"><p>try to export it the same options selected as on my screenshot. 
+next convert the private key file in PKCS12 format to PEM format:</p>
+
+<p>openssl pkcs12 -nodes -in your.pfx -out key.pem -nocerts -nodes</p>
+
+<p>c:\OpenSSL-Win32\bin&gt; openssl rsa -in key.pem -out keyout.pem</p>
+
+<p>let me know if that works</p></div>
+            <div class="comment-info" id="comment-46658-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 05:02)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="46659"></a>
+        <div class="comment not_top_scorer" id="comment-46659">
+            <div id="post-46659-score" class="comment-score"></div>
+            <div class="comment-text"><p>I didn't work...</p></div>
+            <div class="comment-info" id="comment-46659-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 05:14)</span>
+                <a class="comment-user userinfo" href="/users/20300/cpolydorou">CPolydorou</a>
+                
+            </div>
+        </div>
+    
+        <a name="46660"></a>
+        <div class="comment not_top_scorer" id="comment-46660">
+            <div id="post-46660-score" class="comment-score"></div>
+            <div class="comment-text"><p>can you please upload the new  files...</p></div>
+            <div class="comment-info" id="comment-46660-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 05:16)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="46663"></a>
+        <div class="comment not_top_scorer" id="comment-46663">
+            <div id="post-46663-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm trying to post the link but I get invalid captcha...</p>
+
+<p>I can't post it here because of SPAM filtering.</p></div>
+            <div class="comment-info" id="comment-46663-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 05:35)</span>
+                <a class="comment-user userinfo" href="/users/20300/cpolydorou">CPolydorou</a>
+                
+            </div>
+        </div>
+    
+        <a name="46664"></a>
+        <div class="comment not_top_scorer" id="comment-46664">
+            <div id="post-46664-score" class="comment-score"></div>
+            <div class="comment-text"><p>when you open the "keyout.pem" do you see it in the following format:</p>
+
+<p>-----BEGIN RSA PRIVATE KEY-----</p>
+
+<p>blablalablablalbalalbalbalbb
+blablalblalblablalbblblalba..</p>
+
+<p>-----END RSA PRIVATE KEY-----</p></div>
+            <div class="comment-info" id="comment-46664-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 05:36)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="46665"></a>
+        <div class="comment not_top_scorer" id="comment-46665">
+            <div id="post-46665-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes. I've updated the contents of the first file I've shared with the new files.</p>
+
+<p>Have you tested these files?</p></div>
+            <div class="comment-info" id="comment-46665-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 05:39)</span>
+                <a class="comment-user userinfo" href="/users/20300/cpolydorou">CPolydorou</a>
+                
+            </div>
+        </div>
+    
+        <a name="46668"></a>
+        <div class="comment not_top_scorer" id="comment-46668">
+            <div id="post-46668-score" class="comment-score"></div>
+            <div class="comment-text"><p>well, I'm still not able to decrypt it. Just to double check, you did the export on the server NOT the client, right ? and you are sure that it's the correct one ? </p></div>
+            <div class="comment-info" id="comment-46668-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 07:36)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="46669"></a>
+        <div class="comment not_top_scorer" id="comment-46669">
+            <div id="post-46669-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes. I do not have any other certificates on the server. I also tried with other cipher suites without any luck.</p></div>
+            <div class="comment-info" id="comment-46669-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 08:47)</span>
+                <a class="comment-user userinfo" href="/users/20300/cpolydorou">CPolydorou</a>
+                
+            </div>
+        </div>
+    
+        <a name="46670"></a>
+        <div class="comment not_top_scorer" id="comment-46670">
+            <div id="post-46670-score" class="comment-score"></div>
+            <div class="comment-text"><p>From <a href="https://wiki.wireshark.org/SSL">https://wiki.wireshark.org/SSL</a></p>
+
+<p>"The RSA key file can either be a PEM format private key or a PKCS#12 keystore. If the file is a PKCS#12 keystore (typically a file with a .pfx or .p12 extension), the password for the keystore must be specified in the Password field."</p>
+
+<p>Tried with the .pfx you provided, still no luck. I'm puzzled. </p>
+
+<p>Will try to reproduce it tomorrow.</p></div>
+            <div class="comment-info" id="comment-46670-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 09:13)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="46671"></a>
+        <div class="comment not_top_scorer" id="comment-46671">
+            <div id="post-46671-score" class="comment-score"></div>
+            <div class="comment-text"><p>I've tried that also.</p>
+
+<p>Just tried with Wireshark 2.0.0.rc1 with the same results.</p></div>
+            <div class="comment-info" id="comment-46671-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 09:15)</span>
+                <a class="comment-user userinfo" href="/users/20300/cpolydorou">CPolydorou</a>
+                
+            </div>
+        </div>
+    
+        <a name="46673"></a>
+        <div class="comment not_top_scorer" id="comment-46673">
+            <div id="post-46673-score" class="comment-score"></div>
+            <div class="comment-text"><p>one note, the certificate and Private Key match (it was mentioned in other posts that a mismatch can cause issues) but this is not the case ...
+<img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/Capture.JPG.jpg"></p></div>
+            <div class="comment-info" id="comment-46673-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 10:04)</span>
+                <a class="comment-user userinfo" href="/users/13062/adasko">adasko</a>
+                
+            </div>
+        </div>
+    
+        <a name="46676"></a>
+        <div class="comment not_top_scorer" id="comment-46676">
+            <div id="post-46676-score" class="comment-score"></div>
+            <div class="comment-text"><p>guys, please post comments as comments not "answers".  I've just spent several minutes of my spare time cleaning up your "answers".</p>
+
+<p>Please read the FAQ for more information.</p></div>
+            <div class="comment-info" id="comment-46676-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Oct '15, 14:28)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-46648" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 21
+        </span>
+        <a href="#" class="show-all-comments-link">show 16 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-46648-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/46641/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='JCyEBlPFLGx8I7Wzd8XjICtdo7nkwVLs' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46641/tlsv1-decryption-problem?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/46641/tlsv1-decryption-problem?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/decryption/"
+            class="tag-link-decryption"
+            title="see questions tagged'decryption'using tags"
+            rel="tag">decryption</a> <span class="tag-number">&#215;165</span><br/>
+        
+        <a href="/tags/tlsv1/"
+            class="tag-link-tlsv1"
+            title="see questions tagged'tlsv1'using tags"
+            rel="tag">tlsv1</a> <span class="tag-number">&#215;23</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Oct. 17, 2015, 10:06 a.m.">17 Oct '15, 10:06</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>2,087 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Oct. 19, 2015, 5:51 a.m.">19 Oct '15, 05:51</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/5232/decrypting-your-own-tlsv1-packets">Decrypting your own Tlsv1 packets?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1038/decrypting-ssl-packets-on-chromium-or-opera-does-not-work">decrypting SSL packets on Chromium or Opera does not work?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/7886/ssl-decrypting-problem">SSL decrypting problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14805/ssl-decryption-error">SSL Decryption Error</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21341/cant-save-the-decrypted-data-in-wireshark">Can&#39;t save the decrypted data in wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/25156/ldap-ssl-decrypt-issue">LDAP SSL decrypt issue</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34803/filtering-tshark-output-to-only-capture-decrypted-hexadecimal">Filtering TShark output to only capture decrypted hexadecimal</a>
+        </p>
+        
+        <p>
+            <a href="/questions/40565/trying-to-decrypt-messages-to-and-from-my-chat-client">Trying to decrypt messages to and from my chat client</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47508/tshark-command-syntax-for-decrypting-tls-traffic-from-2-or-more-servers">tshark: command syntax for decrypting TLS traffic from 2 or more servers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53562/wireshark-isnt-decrypting-my-80211-traffic">Wireshark isn&#39;t decrypting my 802.11 traffic</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

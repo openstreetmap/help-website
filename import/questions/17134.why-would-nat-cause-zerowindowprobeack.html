@@ -1,0 +1,1182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Why would NAT cause ZeroWindowProbeAck? - Wireshark Q&amp;A</title>
+        <meta name="description" content="I have an embedded device that is running an http server that returns [TCP ZeroWindowProbeAck] packets if and only if the gateway/router that the server lives on has NAT turned on. More details: The embedded device is using Z-World Rabbit Web Server and the router is a Digi ConnectPort - the Connect..." />
+        <meta name="keywords" content="probe,zero-window,nat" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/17134/why-would-nat-cause-zerowindowprobeack" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/17134/why-would-nat-cause-zerowindowprobeack?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='srYhKjScqoUIzwLZ0Lyx9TDQq44wuaMp' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/17134/why-would-nat-cause-zerowindowprobeack">Why would NAT cause ZeroWindowProbeAck?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-17134-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17134/up/" rel="nofollow"> </a>
+<div id="post-17134-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-17134-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17134/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/17134/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have an embedded device that is running an http server that returns [TCP ZeroWindowProbeAck] packets if and only if the gateway/router that the server lives on has NAT turned on.</p>
+<p>More details:</p>
+<p>The embedded device is using Z-World Rabbit Web Server and the router is a Digi ConnectPort - the ConnectPort LAN lives on 10.10.6.1.</p>
+<p>In the ConnectPort there is a setting called <em>Enable Network Address Translation (NAT)</em>. When NAT is turned off, the browser session between my PC and the embedded device is fine and normal. However, when I turn NAT on (in the ConnectPort), the web server response to the PC slows to a crawl.</p>
+<p>Using Wireshark I realized that when NAT is turned on, the session between my PC and the embedded web server is is returning many packets that contain [TCP ZeroWindowProbe] and [TCP ZeroWindowProbeAck] info. Here's a c/p of just a few of those packets (within a span of a few minutes I will notice hundreds of these zero window packets).</p>
+<p><em>Note: 10.10.6.100 is my PC and 10.10.6.106 is the web server.</em></p>
+<pre><code>589 100.690826  10.10.6.100 10.10.6.106 TCP [TCP ZeroWindowProbe] 51294 &gt; http [ACK] Seq=1 Ack=1 Win=64240 Len=1
+
+590 100.692413  10.10.6.106 10.10.6.100 TCP [TCP ZeroWindowProbeAck] [TCP ZeroWindow] http &gt; 51294 [ACK] Seq=1 Ack=1 Win=0 Len=0 MSS=1460
+
+591 100.811036  10.10.6.100 10.10.6.106 TCP [TCP ZeroWindowProbe] 51295 &gt; http [ACK] Seq=1 Ack=1 Win=64240 Len=1
+
+592 100.812883  10.10.6.106 10.10.6.100 TCP [TCP ZeroWindowProbeAck] [TCP ZeroWindow] http &gt; 51295 [ACK] Seq=1 Ack=1 Win=0 Len=0 MSS=1460
+</code></pre>
+<p>When I turn off NAT in the ConnectPort the zero window probe packets stop completely.</p>
+<p>I'm fishing for insight on how the NAT setting in the ConnectPort would cause the web server to send zero window probe acknowledgments to the PC client.</p>
+<p><strong>Update</strong> (response to Kurt)</p>
+<ul>
+<li>The Wireshark capture above was taken from the PC (10.10.6.100)</li>
+<li>I am implementing port forwarding to allow remote access to the embedded device at 10.10.6.106. To set up port forwarding, the ConnectPort device requires that NAT is enabled.</li>
+<li>I am unable to do a Wireshark capture from the embedded device (server). Or rather, I don't know how to go about doing a capture for the server since the server is an embedded device (there's no way to install Wireshark on the server).</li>
+<li>I'm unable to get those four captures that you speak of as I am away from the devices today</li>
+</ul>
+<p>Here's more details on the network setup:</p>
+<ul>
+<li>The Digi ConnectPort is the Gateway with a LAN IP of 10.10.6.1 and a Subnet of 255.255.255.0</li>
+<li>The PC and embedded device are hub-connected to the ConnectPort both with static IP's of 10.10.6.100 and 10.10.6.106 respectively. </li>
+<li>The ConnectPort is connected wirelessly to the Internet via a Sim card and has a Public Static IP Address of, let's just say, 2.2.2.2</li>
+<li>The ConnectPort is configured to allow remote access to the embedded device (10.10.6.106) via IP Port Forwarding. The port forwarding is configured as: External Port: 81; Internal Port: 80; IP Address: 10.10.6.106</li>
+</ul>
+<p><strong>Update 2</strong></p>
+<p>If and only if NAT is enabled do I get the ZeroWindowProbeAck from the server. Strangely enough, the ZeroWindowProbeAck will occur whether or not the NAT is being hit. In other words, the ZWPA messages occur even when I am connected to the server locally (via LAN) (eg. A web browser on 10.10.6.100 connects directly to the HTTP port at 10.10.6.106).</p>
+<p>The embedded device, the PC, and the ConnectPort are connected via a simple hub (no smart switch involved). </p>
+<p><strong>Update 3</strong></p>
+<p>I have uploaded a Wireshark capture to <a href="http://www.cloudshark.org/captures/937f5b4667cf">http://www.cloudshark.org/captures/937f5b4667cf</a> (My original capture was greater than 10MB, so I had to remove a few thousand packets. But this truncated version should be enough to show the ZeroWindowProbeAck packets that I am referring to).</p>
+<p><em>Note: I wasn't able to get a capture with the problematic devices while they were connected to the Digi ConnectPort. However, using the Cradlepoint CTR35 I was able to reproduce the problem.</em></p>
+<p>IP Assignments</p>
+<ul>
+<li>Router: 10.10.6.19</li>
+<li>T42 Laptop: 10.10.6.111 (computer running Wireshark)</li>
+<li>A031: 10.10.6.106 (This is one of devices that are reporting ZeroWindowProbeAck packets)</li>
+<li>A041: 10.10.6.107 (This is another device (with different firmware version) that is reporting ZeroWindowProbeAck packets)</li>
+<li>iMac: 96.229.53.113 (computer making remote connections via Internet to the devices)</li>
+</ul>
+<p>Here is the list of events that I did during the Wireshark session:</p>
+<pre><code>Connect to A013 (166.156.159.196:8585 / 10.10.6.106) from iMac via Google Chrome
+Connect to A041 (166.156.159.196:8586 / 10.10.6.107) from iMac via Google Chrome
+At around Packet Number 9496, I logged into A013
+At around Packet Number 11700, I logged into A041
+At around Packet Number 14452, I close the browser connections on the iMac
+I open up Firefox on T42 laptop 
+From T42 I connect to A013. The connection is successful
+At around Packet Number 15500, I login to A013 from T42
+At around Packet Number 16172, I connect to A041 from T42. Connection is successful
+At around Packet Number 18207, I login to A041 from T42. Login successful
+At around Packet Number 19709, I clicked the Inhibitor_1 (Relay 1) link on A031. Successful
+At around Packet Number 20906, I clicked on the PowerRelay_1 (Relay 1) link on A041. Successful.
+At around Packet Number 22150, I closed the browsers on T42.
+At around Packet Number 22164, I open up browser connections to A031 and A042 from iMac
+At around Packet Number 28000, I closed the browser connections from the iMac
+At around Packet Number 28083, I open browser connections to A031 and A042 from T42
+At around 29600, I connect to the Cradlepoint router (at 10.10.6.19) from T42
+At around 31550, I remove the Firewall rules that allow remote connections to A013 and A041 via the Cradlepoint
+At around 34805, I re-added the Firewall rule to allow remote connections to A013
+At around 36008, I closed the browser that was connected to A013 (10.10.6.106)
+At around 36683, I opened a browser WAN connection from iMac to A013
+At around 41454, I turned off the power to the A013 controller
+At around 41801, I turned on the power to the A013 controller
+At around 43129, I logged in to A013 from iMac. Successful.
+At around 44741, I closed the browser on T42 that was connected to A041 
+At around 46016, I tried to open a connection from iMac to A042 (via WAN), but it failed. Reason: I forgot to add the Firewall rule to allow WAN access. 
+Via the Cradlepoint admin interface, I re-added the Firewall rule to allow WAN access to 10.10.6.107 (A041)
+At around 47812, I connected from iMac to A041 (via WAN). Successful.
+At around 51300, I closed both WAN connections to the A041 and A013 controllers (from iMac).
+At around 51516, I made a LAN connection from T42 to A013
+At around 52278, I made a LAN connection from T42 to A041
+At around 54111, I closed the browser connections to both A041 and A013 from T42.
+END WIRESHARK CAPTURE
+</code></pre>
+<p>Here is how the nodes are connected
+<img alt="Here is the network setup" src="http://img51.imageshack.us/img51/415/networksetupforwireshar.png"></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/probe/" class="post-tag tag-link-probe"
+                                        title="see questions tagged 'probe'" rel="tag">probe</a>
+                                
+                                    <a href="/tags/zero-window/" class="post-tag tag-link-zero-window"
+                                        title="see questions tagged 'zero-window'" rel="tag">zero-window</a>
+                                
+                                    <a href="/tags/nat/" class="post-tag tag-link-nat"
+                                        title="see questions tagged 'nat'" rel="tag">nat</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>21 Dec '12, 07:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/1259897b9b42059302967b55c0dc2228?s=32&amp;d=identicon&amp;r=g" alt="KTM's gravatar image" />
+    <p><a href="/users/4100/ktm">KTM</a><br/>
+    <span class="score" title="76 reputation points">76</span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="13 badges"><span class="silver">&#9679;</span><span class="badgecount">13</span></span><span title="14 badges"><span class="bronze">&#9679;</span><span class="badgecount">14</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="KTM has one accepted answer">100&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/17134/">
+                edited
+                <strong>17 Jan '13, 09:13</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-17134">
+    
+        <a name="17139"></a>
+        <div class="comment" id="comment-17139">
+            <div id="post-17139-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>10.10.6.100 10.10.6.106</p>
+</blockquote>
+
+<p>the same subnet? How is NAT involved? </p>
+
+<ul>
+<li>Where did you capture? At the client? Then 10.10.6.106 would be the NATed address of the server, right?<br>
+</li>
+<li>Can you please add more details about your network (client IP, router IP, NAT address, real server IP).</li>
+<li>Is it possible to capture at the client and in front of the server in parallel?</li>
+<li>is it possible to upload those 4 capture files (No Nat: client, server, NAT: client, server) somewhere?</li>
+</ul></div>
+            <div class="comment-info" id="comment-17139-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '12, 09:38)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="17145"></a>
+        <div class="comment" id="comment-17145">
+            <div id="post-17145-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just to clarify.</p>
+
+<p>After you enable NAT on the router you get ZeroWindowProbe while you connect to the server <strong>internally</strong> (not through the NAT device)? And you don't see those ZeroWindowProbe <strong>internally</strong> when you disable NAT?</p>
+
+<p>If so: Do you have an internal switch, or are your internal systems (client and server) connected to the router via a port of that router (internal switch of the router)?</p></div>
+            <div class="comment-info" id="comment-17145-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '12, 12:40)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="17148"></a>
+        <div class="comment" id="comment-17148">
+            <div id="post-17148-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/2593/kurt">@Kurt</a> - see Update 2. Thx</p></div>
+            <div class="comment-info" id="comment-17148-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '12, 13:19)</span>
+                <a class="comment-user userinfo" href="/users/4100/ktm">KTM</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17134" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17134-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/17134/why-would-nat-cause-zerowindowprobeack?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/17134/why-would-nat-cause-zerowindowprobeack?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/17134/why-would-nat-cause-zerowindowprobeack?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/17134/why-would-nat-cause-zerowindowprobeack?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="17147"></a>
+                    <div id="answer-container-17147" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-17147-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17147/up/" rel="nofollow"> </a>
+<div id="post-17147-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-17147-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17147/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Enabling NAT on the router will not influence the connection between the client and the embedded device, as they are directly connected. So something else must be of influence here. </p>
+<p>Since the seq and ack in the packets are both 1, I assume that these are packets following the TCP three-way handshake. This means the server accepts a connection, but says it has no buffer to receive any data. What happens when you do enable the NAT, but don't create the port forwarder? Maybe your embedded device gets swamped with traffic from the internet?</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/17147/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Dec '12, 12:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-17147">
+    
+        <a name="17149"></a>
+        <div class="comment" id="comment-17149">
+            <div id="post-17149-score" class="comment-score"></div>
+            <div class="comment-text"><p>I haven't tried to see what happens when I remove the port forwarder - good idea. Thanks for that.</p>
+
+<p>I'm confident that the device isn't getting swamped from the Internet (only certain IP's are allow to access the LAN from the WAN).</p></div>
+            <div class="comment-info" id="comment-17149-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '12, 13:25)</span>
+                <a class="comment-user userinfo" href="/users/4100/ktm">KTM</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17147" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17147-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="17150"></a>
+                    <div id="answer-container-17150" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-17150-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/17150/up/" rel="nofollow"> </a>
+<div id="post-17150-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-17150-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/17150/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>answering to your update #2.</p>
+<p>I don't see how NAT will have an influence here, especially if the NAT 'rule' is not being used. </p>
+<p>What I could imagine: As soon as you enable 'incoming' NAT (port forwarding) for the server, the router also (silently) enables outgoing NAT (masquerading, hide nat, you name it) for the server. As soon as that is enabled, the server might start downloading data from the internet (firmware updates, etc.). While is it busy, it might not have enough resources to answer your internal requests appropriately (full buffer -&gt; zero window).</p>
+<p>However, without a full trace (pcap file), it's hard to tell what's going on. Can you post the two pcap files (with/without NAT enabled) captured at the client somewhere (one click file hoster, <a href="http://cloudshark.org">cloudshark.org</a>, etc. BEWARE of the privacy issues in doing so!).</p>
+<p>Can you also try to capture the traffic in front of the server (maybe using a second PC/laptop)?</p>
+<p>BTW: Are you sure your 'hub' is a real hub. If so, you should see the traffic from the server to the internet while capturing on the client. Do you? If yes, capturing at the client should be sufficient. Then, please capture the traffic with/without NAT by using the following capture filter:</p>
+<blockquote>
+<p><code>host 10.10.6.106</code><br>
+</p>
+</blockquote>
+<p>Regards <br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/17150/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>21 Dec '12, 13:39</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/17150/">
+                edited
+                <strong>21 Dec '12, 14:00</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-17150">
+    
+        <a name="17152"></a>
+        <div class="comment" id="comment-17152">
+            <div id="post-17152-score" class="comment-score"></div>
+            <div class="comment-text"><p>I didn't/wouldn't think NAT would have an influence, either. </p>
+
+<p>I wonder if when NAT is enabled, it will continually update its NAT Table (even if a request hasn't been made from the outside)... if so, could it be that that NAT traffic is causing the 10.10.6.106 server to fill up its buffer.</p>
+
+<p>I'll look into posting the pcap file and the pre-server-traffic capture. Thanks for the offer to look.</p>
+
+<p>@hub - I don't know what you mean by "real". It looks and works like a hub.</p></div>
+            <div class="comment-info" id="comment-17152-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '12, 13:59)</span>
+                <a class="comment-user userinfo" href="/users/4100/ktm">KTM</a>
+                
+            </div>
+        </div>
+    
+        <a name="17153"></a>
+        <div class="comment" id="comment-17153">
+            <div id="post-17153-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>@hub - I don't know what you mean by "real". It looks and works like a hub.</p>
+</blockquote>
+
+<p>well, nowadays switches are sometimes labeled as 'switching' <strong>hubs</strong> whereas they are really (unmanaged) switches. However, people often just read the <strong>hub</strong> part ;-) So, it's actually hard to buy a 'real' hub, as they are no longer needed (cheap switch alternatives available) and therefore they are no longer produced in masses.</p></div>
+            <div class="comment-info" id="comment-17153-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '12, 14:04)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="17154"></a>
+        <div class="comment" id="comment-17154">
+            <div id="post-17154-score" class="comment-score"></div>
+            <div class="comment-text"><p>Most devices these days are switches, even though they don't say switch on the box. A switch works much differently from a hub and that has a great impact on what you do and don't see on your capturing system.</p>
+
+<p>Re-reading your update, you state that the embedded system and the PC are "hub-connected" do you mean they are attached to a "hub" and the "hub" is connected to the ConnectPort? Or do you mean they are both connected to the LAN ports of the ConnectPort?</p></div>
+            <div class="comment-info" id="comment-17154-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '12, 14:07)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="17155"></a>
+        <div class="comment" id="comment-17155">
+            <div id="post-17155-score" class="comment-score"></div>
+            <div class="comment-text"><p>I interpreted his update #2 to my question as a separate hub. However, now I'm no longer sure..</p></div>
+            <div class="comment-info" id="comment-17155-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 Dec '12, 14:11)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="17163"></a>
+        <div class="comment" id="comment-17163">
+            <div id="post-17163-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/2593/kurt"></a><a href="/users/2593/kurt">@Kurt</a> - Sorry, I didn't think your question through regarding "real" hub. You are correct, I'm using an unmanaged switch (Netgear FS605 (<a href="http://goo.gl/6pJ4c)">http://goo.gl/6pJ4c)</a> .. on the box it was labeled as a "Switch/Hub").</p>
+
+<p>The PC, the embedded device, and the ConnectPort all connect to the switch/hub. So, in total, there are four devices involved - PC, embedded device, switch/hub, and the ConnectPort.</p></div>
+            <div class="comment-info" id="comment-17163-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '12, 08:02)</span>
+                <a class="comment-user userinfo" href="/users/4100/ktm">KTM</a>
+                
+            </div>
+        </div>
+    
+        <a name="17167"></a>
+        <div class="comment not_top_scorer" id="comment-17167">
+            <div id="post-17167-score" class="comment-score"></div>
+            <div class="comment-text"><p>O.K. then a capture in front of the embedded server might help. But let's start with the client captures with/without NAT. Can you upload those somewhere?</p></div>
+            <div class="comment-info" id="comment-17167-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '12, 09:15)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="17175"></a>
+        <div class="comment not_top_scorer" id="comment-17175">
+            <div id="post-17175-score" class="comment-score"></div>
+            <div class="comment-text"><p>One other thing to check is the arp entry for the embedded server on your PC, does it point to the embedded device or to the Connectport? And the traffic coming back from the embedded device, what src-mac address does it have in Wireshark.</p>
+
+<p>So, with all 4 devices connected and NAT being enabled, it is slow. What happens immediately after you disconnect the Connectport (after verifying that it was slow when the Connectport is connected)?</p>
+
+<p>I agree with <a href="/users/2593/kurt">@Kurt</a>, traces traces, we want to look at traces :-)</p></div>
+            <div class="comment-info" id="comment-17175-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '12, 12:36)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="17185"></a>
+        <div class="comment not_top_scorer" id="comment-17185">
+            <div id="post-17185-score" class="comment-score"></div>
+            <div class="comment-text"><p>The holiday's will keep me from gathering more data and doing more tests. Hopefully you gents will still be interested in this topic to start off the new year :). Thanks, again.</p></div>
+            <div class="comment-info" id="comment-17185-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 Dec '12, 17:22)</span>
+                <a class="comment-user userinfo" href="/users/4100/ktm">KTM</a>
+                
+            </div>
+        </div>
+    
+        <a name="17189"></a>
+        <div class="comment not_top_scorer" id="comment-17189">
+            <div id="post-17189-score" class="comment-score"></div>
+            <div class="comment-text"><p>Usually the questioners loose interest in their question/project ;-)) Anyway, I'm looking forward to your updates.</p></div>
+            <div class="comment-info" id="comment-17189-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Dec '12, 02:18)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-17150" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 9
+        </span>
+        <a href="#" class="show-all-comments-link">show 4 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-17150-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/17134/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='srYhKjScqoUIzwLZ0Lyx9TDQq44wuaMp' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17134/why-would-nat-cause-zerowindowprobeack?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/17134/why-would-nat-cause-zerowindowprobeack?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/zero-window/"
+            class="tag-link-zero-window"
+            title="see questions tagged'zero-window'using tags"
+            rel="tag">zero-window</a> <span class="tag-number">&#215;19</span><br/>
+        
+        <a href="/tags/nat/"
+            class="tag-link-nat"
+            title="see questions tagged'nat'using tags"
+            rel="tag">nat</a> <span class="tag-number">&#215;12</span><br/>
+        
+        <a href="/tags/probe/"
+            class="tag-link-probe"
+            title="see questions tagged'probe'using tags"
+            rel="tag">probe</a> <span class="tag-number">&#215;5</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 21, 2012, 7:19 a.m.">21 Dec '12, 07:19</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,094 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 17, 2013, 9:13 a.m.">17 Jan '13, 09:13</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3101/communication-between-two-servers-fails-with-large-data-not-too-large">communication between two servers fails with large data (not too large)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53190/why-am-i-seeing-so-many-of-these-zero-window-flags">Why am i seeing so many Of these Zero Window flags?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/62462/catch-probe-request-with-wireshark">Catch Probe Request with Wireshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8799/routers-changing-the-packet-window-size">Routers changing the packet window size?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61632/window-size-0-in-tcp-syn">Window Size = 0 in TCP SYN</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6872/zero-window-and-rst">Zero window and RST</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5084/how-to-capture-in-promiscuous-modebehind-nat">How to capture in promiscuous mode(behind NAT)?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8412/tcp-zerowindow-loop">TCP ZeroWindow loop</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8394/does-packet-capture-work-inside-of-vmware">Does packet capture work inside of VMWare?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/14967/zero-window-error">Zero window error</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

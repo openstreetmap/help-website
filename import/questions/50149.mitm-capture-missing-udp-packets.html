@@ -1,0 +1,673 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>MITM capture missing UDP packets - Wireshark Q&amp;A</title>
+        <meta name="description" content="We are a development environment. Our application sends UDP data packets to NICs on embedded third party hardware (i.e., can&#39;t run WS on that end). In wanting to validate the transmission of the data as close to the destination as possible I placed an inline tap device (Ethernet ComProbe from FTE) n..." />
+        <meta name="keywords" content="capture,udp,missing" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/50149/mitm-capture-missing-udp-packets" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/50149/mitm-capture-missing-udp-packets?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='zyvAn5m3BmXibjSRLf7UbI5mTMnBMKrd' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/50149/mitm-capture-missing-udp-packets">MITM capture missing UDP packets</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-50149-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/50149/up/" rel="nofollow"> </a>
+<div id="post-50149-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-50149-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/50149/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/50149/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>We are a development environment. Our application sends UDP data packets to NICs on embedded third party hardware (i.e., can't run WS on that end). In wanting to validate the transmission of the data as close to the destination as possible I placed an inline tap device (Ethernet ComProbe from FTE) next to the device. On the source machine, I can run WS and see the UDP data being sent and received. From the tap, I do not see our UDP packets. I see other data. When I filter on "udp", I see other UDP packets that are wrapped in higher protocols (e.g., NBNS). I tried other configurations to rule our hardware. I tried three hubs from three different manufactures. If I ping the device, I see the ICMP messages. But, still I do not see the UDP data packets.
+Any thoughts on why the simple UDP packets are not displayed?
+Thanks,
+Ed.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/capture/" class="post-tag tag-link-capture"
+                                        title="see questions tagged 'capture'" rel="tag">capture</a>
+                                
+                                    <a href="/tags/udp/" class="post-tag tag-link-udp"
+                                        title="see questions tagged 'udp'" rel="tag">udp</a>
+                                
+                                    <a href="/tags/missing/" class="post-tag tag-link-missing"
+                                        title="see questions tagged 'missing'" rel="tag">missing</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Feb '16, 07:24</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3445770e50fe863101eea5c5d4813e66?s=32&amp;d=identicon&amp;r=g" alt="ejhellertc's gravatar image" />
+    <p><a href="/users/23092/ejhellertc">ejhellertc</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="ejhellertc has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-50149">
+    
+        <a name="50156"></a>
+        <div class="comment" id="comment-50156">
+            <div id="post-50156-score" class="comment-score"></div>
+            <div class="comment-text"><p>MITM is usually understood in a very specific meaning which doesn't match what you do.</p>
+
+<p>If I get you right, you can see the UDP responses of those embedded boards to your UDP requests so you are 100% sure that the boards do receive your UDP packets and you only need to find out why the tap does not show them to you? Or the boards send their UDP packets regardless whether they receive any from you? Because in this case, something between your PC and the hub could filter out your UDP packets so that they would really never reach the embedded device.</p></div>
+            <div class="comment-info" id="comment-50156-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Feb '16, 07:59)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="51132"></a>
+        <div class="comment" id="comment-51132">
+            <div id="post-51132-score" class="comment-score"></div>
+            <div class="comment-text"><p>For some reason, when I checked back later to see if there was an answer, this did not show up. I guess it is a comment, not an answer.
+In any event. My setup is as follows:
+ServerA communicates with DeviceB using simple UDP data packets.
+From ServerA, I can run WireShark and see the packets out and the packets in.
+If I place a hub in between the server and device, I do not see the packets. I do see ICMP packets between the server and the device. At the same time, I still see the UDP packets when running WS on the server.</p></div>
+            <div class="comment-info" id="comment-51132-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Mar '16, 11:13)</span>
+                <a class="comment-user userinfo" href="/users/23092/ejhellertc">ejhellertc</a>
+                
+            </div>
+        </div>
+    
+        <a name="51135"></a>
+        <div class="comment" id="comment-51135">
+            <div id="post-51135-score" class="comment-score"></div>
+            <div class="comment-text"><p>The way you put it it sounds really weird, but it is a known fact that some firewall, antivirus, or even VPN software may prevent Wireshark (actually, WinPcap) from seeing some packets (see related Questions at this site) and the logic determining which packets get through and which don't differs case by case. So I could imagine that e.g. too small UDP packets or UDP packets carrying a specific contents would be blocked. </p>
+
+<p>So as you say that Wireshark running on the Server doesn't have problems to show those packets, can you connect the ComProbe to the Server and capture simultaneously on both its "real" network interface and the one representing the ComProbe, in order to exclude that the other machine, which you supposedly use to capture "on the wire", suffers from that kind of issue?</p>
+
+<p>If not, can you use another machine without any kind of firewall, antivirus etc. software to capture on the hub? For some kinds of such software, it is enough to disable them, others must be uninstalled. Or use linux machine and tcpdump (if you don't want to install Wireshark on it) to save the capture to a file and then open the file somewhere else using Wireshark.</p>
+
+<p>As you can see the icmp traffic, I suppose you do capture in promiscuous mode.</p></div>
+            <div class="comment-info" id="comment-51135-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Mar '16, 14:34)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-50149" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-50149-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/50149/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='zyvAn5m3BmXibjSRLf7UbI5mTMnBMKrd' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/50149/mitm-capture-missing-udp-packets?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/50149/mitm-capture-missing-udp-packets?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/capture/"
+            class="tag-link-capture"
+            title="see questions tagged'capture'using tags"
+            rel="tag">capture</a> <span class="tag-number">&#215;549</span><br/>
+        
+        <a href="/tags/udp/"
+            class="tag-link-udp"
+            title="see questions tagged'udp'using tags"
+            rel="tag">udp</a> <span class="tag-number">&#215;166</span><br/>
+        
+        <a href="/tags/missing/"
+            class="tag-link-missing"
+            title="see questions tagged'missing'using tags"
+            rel="tag">missing</a> <span class="tag-number">&#215;42</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Feb. 12, 2016, 7:24 a.m.">12 Feb '16, 07:24</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,351 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="March 23, 2016, 2:34 p.m.">23 Mar '16, 14:34</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/40225/unable-to-capture-remote-ip-on-omegle-please-help">Unable to capture remote IP on Omegle, please help</a>
+        </p>
+        
+        <p>
+            <a href="/questions/42304/udp-packets-not-received">[closed] UDP packets not received</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8942/wireshark-capture-question">Wireshark capture question</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15146/bytes-missing-in-capture-file">bytes missing in capture file</a>
+        </p>
+        
+        <p>
+            <a href="/questions/63519/udp-packet-are-duplicated-in-capture">Udp packet are duplicated  in capture</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6717/capturing-on-gige-headend-network">Capturing on GigE Headend Network</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23766/rtcdc-filter">RTCDC filter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20139/capturing-udp-packets-sent-from-my-own-app">Capturing UDP packets sent from my own app</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48159/decode-rtp-outside-of-conversations-ws-20">Decode RTP outside of conversations (WS 2.0)</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21715/how-to-display-some-udp-missing-packets">How to display some UDP missing packets?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

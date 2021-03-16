@@ -1,0 +1,1158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Delay in client&#39;s response to 302 redirect - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi All i am trying to figure out as to why the client after receiving 302 is delaying to close the connection and initiate new one for the url in Location header. Basically the traffic to the Web App (via load balancer is as follows): 1) the client posts with a HTTP POST containing their login detai..." />
+        <meta name="keywords" content="redirect,302,delayed" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/13442/delay-in-clients-response-to-302-redirect" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/13442/delay-in-clients-response-to-302-redirect?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='4nWjDw4h4F7PWi5hLdu5xgqWjOf3Oy48' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/13442/delay-in-clients-response-to-302-redirect">Delay in client&#39;s response to 302 redirect</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-13442-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13442/up/" rel="nofollow"> </a>
+<div id="post-13442-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-13442-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13442/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/13442/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi All
+i am trying to figure out as to why the client after receiving 302 is delaying to close the connection and initiate new one for the url in Location header.</p>
+<p>Basically the traffic to the Web App (via load balancer is as follows):</p>
+<p>1) the client posts with a HTTP POST containing their login details</p>
+<p>2) the server accepts that message, commits it, and responds to the
+client by sending a HTTP 302 redirect to a page called ....</p>
+<p>3) The client when receiving the 302 would close its TCP session, and 
+reestablish a new one and send a HTTP GET for the new URL provided in the 302 redirect.</p>
+<p>4) Client confirms receiving 302 and :</p>
+<pre><code>a) in working scenario closes existing TCP session almost immediately and opens new new for the URL provided in 302
+
+b) in slowdown scenario - the load balancer sends RST (due to the session timeout) and forces to close this TCP session
+</code></pre>
+<p>The main question is as to why after client's receiving 302 is not terminating existing connection ...?</p>
+<p>Any ideas ?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/redirect/" class="post-tag tag-link-redirect"
+                                        title="see questions tagged 'redirect'" rel="tag">redirect</a>
+                                
+                                    <a href="/tags/302/" class="post-tag tag-link-302"
+                                        title="see questions tagged '302'" rel="tag">302</a>
+                                
+                                    <a href="/tags/delayed/" class="post-tag tag-link-delayed"
+                                        title="see questions tagged 'delayed'" rel="tag">delayed</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>07 Aug '12, 15:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/89941aca50bd896f00def88cf664f9de?s=32&amp;d=identicon&amp;r=g" alt="andrus's gravatar image" />
+    <p><a href="/users/3217/andrus">andrus</a><br/>
+    <span class="score" title="1 reputation points">1</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="andrus has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-13442">
+    
+        <a name="17246"></a>
+        <div class="comment" id="comment-17246">
+            <div id="post-17246-score" class="comment-score"></div>
+            <div class="comment-text"><p>Did you ever find an answer on this?  I'm having pretty much the same exact issue and I'm using Citrix Netscalers.  I'm having 3-5 minute delays when moving between tabs in one of our lotus apps.  Let me know please!</p></div>
+            <div class="comment-info" id="comment-17246-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(26 Dec '12, 13:05)</span>
+                <a class="comment-user userinfo" href="/users/4123/zmiller013">zmiller013</a>
+                
+            </div>
+        </div>
+    
+        <a name="17409"></a>
+        <div class="comment" id="comment-17409">
+            <div id="post-17409-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, I did - it was eventually looked at by the engineering team of the LB vendor and there was some issue with the web application firewall found, later fixed in the next firmware release :) 
+so make sure first you are using the latest build just in case :)</p></div>
+            <div class="comment-info" id="comment-17409-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jan '13, 01:10)</span>
+                <a class="comment-user userinfo" href="/users/3217/andrus">andrus</a>
+                
+            </div>
+        </div>
+    
+        <a name="17491"></a>
+        <div class="comment" id="comment-17491">
+            <div id="post-17491-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for the reply.  I eventually found my problem as well.  With the Citrix Netscaler's in the code I was running they forgot to include a piece of code that sent the Close Notify for SSL sessions.  Without this close notify my session stayed open until the timeout and then would reset and work.  They verified this was missing and is in the latest code of the Netscaler.</p></div>
+            <div class="comment-info" id="comment-17491-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(07 Jan '13, 05:44)</span>
+                <a class="comment-user userinfo" href="/users/4123/zmiller013">zmiller013</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-13442" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13442-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/13442/delay-in-clients-response-to-302-redirect?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/13442/delay-in-clients-response-to-302-redirect?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/13442/delay-in-clients-response-to-302-redirect?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/13442/delay-in-clients-response-to-302-redirect?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="13443"></a>
+                    <div id="answer-container-13443" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-13443-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13443/up/" rel="nofollow"> </a>
+<div id="post-13443-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-13443-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13443/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<p>The main question is as to why after client's receiving 302 is not terminating existing connection ...?</p>
+</blockquote>
+<p>well, hard to say without any information about the client beeing used... Please add this:</p>
+<ul>
+<li>OS / OS version of the system running the client application</li>
+<li>the client application (browser, browser version, own application, etc.</li>
+<li>if the client is a browser: does your application use Javascript? If so, the code in the browser might check the response and thus add some delay</li>
+<li>a capture file that shows the behaviour of the client</li>
+</ul>
+<p>Regards<br>
+Kurt</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/13443/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>07 Aug '12, 17:00</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" alt="Kurt%20Knochner's gravatar image" />
+    <p><a href="/users/2593/kurt-knochner">Kurt Knochner ♦</a><br/>
+    <span class="score" title="24767 reputation points"><span class="">24.8k</span></span><span title="10 badges"><span class="badge1">&#9679;</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">&#9679;</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">&#9679;</span><span class="badgecount">237</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Kurt Knochner has 344 accepted answers">15&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/13443/">
+                edited
+                <strong>07 Aug '12, 17:00</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-13443">
+    
+        <a name="13450"></a>
+        <div class="comment" id="comment-13450">
+            <div id="post-13450-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks for checking this Kurt,
+Here is more info for this:
+ - OS is Windows 7
+ - Browser is Firefox 14 (has been tested using IE 8
+ - There is no Javascript in the page code</p>
+
+<p>The flow is a follows:
+  (Client,win7) &lt;-&gt; (Load balancer) &lt;-&gt; (backend IIS,win2008)
+have traces from all 3 machines, I narrowed it down to the issue with the client not responding to 302 in timely fashion manner</p>
+
+<p>NOTE: both traces were taken using the same client machine and same browser, the change is that in Working scenario we have older version of firmware on Load balancer and in the SLOW working scenario we has newest version</p>
+
+<p>Here is the properly working trace:( clients IP 192.168.1.37)
+<img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/Capture-ok-resized_1.png"></p>
+
+<p>and here is the delay in clients response (not closing connection after receiving 302)
+ * RST seen in 19404 packet is the Load Balancer forcing to reset this CP stream due to the timeout</p>
+
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/capture-slow-res_1.png"></p></div>
+            <div class="comment-info" id="comment-13450-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Aug '12, 00:33)</span>
+                <a class="comment-user userinfo" href="/users/3217/andrus">andrus</a>
+                
+            </div>
+        </div>
+    
+        <a name="13451"></a>
+        <div class="comment" id="comment-13451">
+            <div id="post-13451-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>the change is that in <strong>Working scenario</strong> we have <strong>older version of firmware</strong> on Load balancer</p>
+</blockquote>
+
+<p>Look at who is closing the connection. The first FIN comes from x.251.21.95. It is the loadbalancer that is closing the connection not the client (first screenshot). </p>
+
+<p>So, the reason for the different behaviour is clearly the firmware upgrade on the loadbalancer. Maybe there is a new feature in the new firmare that keeps the connection open to the client.</p>
+
+<p>Unfortunately the new client request (to the redirected URL) is not part of the capture screenshot. </p>
+
+<p>Do you have any performance issues with this behaviour, or do you just want to know why it happens (firmware upgrade)?</p></div>
+            <div class="comment-info" id="comment-13451-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Aug '12, 01:20)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="13454"></a>
+        <div class="comment" id="comment-13454">
+            <div id="post-13454-score" class="comment-score"></div>
+            <div class="comment-text"><p>Spot on Kurt, I have no idea how could I missed that !</p>
+
+<p>I will move away from the client toward the load balancer checking for any differences in TCP/HTTP profiles in the new version.</p>
+
+<p>Yes it is performance issue. Basically after upgrading LB the login process takes 2-3 min longer when going thought upgraded LB.</p>
+
+<p>Here is trace taken on the LB directly (filtered for the front-end communication for this client)
+ -  192.168.1.172 is the LB VIP ip address
+ - clients POST was toggled as a time 0</p>
+
+<ol>
+<li>Old version of firmware (trace taken directly on the LB)</li>
+</ol>
+
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/CaptureLB.png"></p>
+
+<ol>
+<li>New version of firmware (trace taken directly on the LB) - as can be seen 188sec of delay in client coming back to the 302</li>
+</ol>
+
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/CaptureLB_1.png"></p>
+
+<p>I would have though that if the client received 302 with "Connection:Close" header - it should terminate the existing TCP stream and initiate new TCP connection for the URL given in the "Location:" header  - it's that the case ??</p>
+
+<p><strong>HTTP/1.1 302 Found 
+Server: My Own
+Date: Fri, 03 Aug 2012 10:00:02 GMT 
+Connection: close 
+Location: <a href="http://www.xxxxxx.xx/mail/testuser.nsf">http://www.xxxxxx.xx/mail/testuser.nsf</a></strong></p>
+
+<p>Tanks for you help
+Andrzej</p></div>
+            <div class="comment-info" id="comment-13454-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Aug '12, 02:22)</span>
+                <a class="comment-user userinfo" href="/users/3217/andrus">andrus</a>
+                
+            </div>
+        </div>
+    
+        <a name="13456"></a>
+        <div class="comment" id="comment-13456">
+            <div id="post-13456-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Spot on Kurt, I have no idea how could I missed that !</p>
+</blockquote>
+
+<p>Never mind. You know, sometimes ...</p>
+
+<blockquote>
+<p>I will move away from the client toward the load balancer 
+checking for any differences in TCP/HTTP profiles in the new version.</p>
+</blockquote>
+
+<p>yes, please check that.</p>
+
+<blockquote>
+<p>Yes it is performance issue. Basically after upgrading LB the login process takes 2-3 min longer when going thought upgraded LB.</p>
+</blockquote>
+
+<p>Look at both POST requests with "Follow TCP stream" and compare anything in both connections. Is there any difference at HTTP protocol level? If there is none, the loadbalancer behaves just different. If there is a difference, check if the LB answer (new firmware) is HTTP compliant. If it is not, the client might just wait for more data within the open connection, until it gets closed by the LB. The 186 seconds to the connection close, sounds like your delay of 2-3 minutes.</p></div>
+            <div class="comment-info" id="comment-13456-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Aug '12, 02:35)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="13458"></a>
+        <div class="comment" id="comment-13458">
+            <div id="post-13458-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>I would have though that if the client received 302 with "Connection:Close" header - it should terminate the existing TCP stream </p>
+</blockquote>
+
+<p>well, yes and no ;-) Take a look at the HTTP 1.1 RFC. It states:</p>
+
+<blockquote>
+<p><code>HTTP/1.1 defines the "close" connection option for the sender to</code><br>
+<code>signal that the connection will be closed after completion of the</code>  <br>
+<code>response.</code><br>
+<code>For example,</code><br>
+<code>`       Connection: close`</code><br>
+<code>in either the request or the response header fields indicates that</code><br>
+<code>the connection SHOULD NOT be considered</code>persistent' (section 8.1)<code></code>   after the current request/response is complete.`<br>
+</p>
+</blockquote>
+
+<p>The server can close the connection when it finished sending all data. </p>
+
+<p>The client however, can only close the connection when it received all data. If the "Content-Length" header contains the wrong length, the client might just wait for the rest of the data until the LB closes the connection.</p>
+
+<p>As the problem only occurs after the LB upgrade, there must be some change in behavior or a bug with the LB.</p></div>
+            <div class="comment-info" id="comment-13458-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Aug '12, 02:47)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-13443" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13443-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="13453"></a>
+                    <div id="answer-container-13453" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-13453-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/13453/up/" rel="nofollow"> </a>
+<div id="post-13453-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-13453-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/13453/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>My guess would be that the 302 response is not correct. Is there a Content-Length header? And does it correctly state the length of the 302 response? Is Keep-Alive used by any chance? It's pretty hard to analyze this issue based on just a screenshot, that's why we all love to use Wireshark :-)</p>
+<p>As you obfuscated some of the info, I assume you are not able to share the tracefiles? Are you able to send them privately to one or two persons? I'd be willing to have a quick look at them if you'd like.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/13453/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>08 Aug '12, 02:21</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" alt="SYN-bit's gravatar image" />
+    <p><a href="/users/5/syn-bit">SYN-bit ♦♦</a><br/>
+    <span class="score" title="17094 reputation points"><span class="">17.1k</span></span><span title="9 badges"><span class="badge1">&#9679;</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">&#9679;</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">&#9679;</span><span class="badgecount">245</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="SYN-bit has 174 accepted answers">20&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-13453">
+    
+        <a name="13455"></a>
+        <div class="comment" id="comment-13455">
+            <div id="post-13455-score" class="comment-score"></div>
+            <div class="comment-text"><p>If:</p>
+
+<pre><code>HTTP/1.1 302 Found 
+Server: My Own
+Date: Fri, 03 Aug 2012 10:00:02 GMT 
+Connection: close 
+Location: <a href="http://www.xxxxxx.xx/mail/testuser.nsf">http://www.xxxxxx.xx/mail/testuser.nsf</a>
+</code></pre>
+
+<p>Are all the headers that the client receives, it will indeed wait. As there is no "Content-Length" header. This means the client does not know when the object has been sent completely, so it needs to wait for the FIN from the server (which it normally sends when "Connection: close" is being used.</p>
+
+<p>You might want to take a look at the server side to see whether the server indeed closes the connection and then check the settings on the LB why it is not closing the connection. If it wants to keep the connection open, it should add a "Content-Length: 0" header to the client.</p></div>
+            <div class="comment-info" id="comment-13455-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Aug '12, 02:33)</span>
+                <a class="comment-user userinfo" href="/users/5/syn-bit">SYN-bit ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="13457"></a>
+        <div class="comment" id="comment-13457">
+            <div id="post-13457-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks a mil for your input on this.</p>
+
+<p>302 looks like this (there is no Content-Lenght header)</p>
+
+<h2>This is the 302 given to the client:</h2>
+
+<p>HTTP/1.1 302 Found
+Server: My Own
+Date: Fri, 03 Aug 2012 09:51:13 GMT
+Connection: close
+Location: <a href="http://www.xxxxxx.xx/mail/testuser.nsf">http://www.xxxxxx.xx/mail/testuser.nsf</a>
+Set-Cookie: LtpaToken=AHDER7LK9kHknb8MJHGRT876KNJGTFD0KHJSUJNBGTc2aL6c8v0XQ35wDW14B8z85Gv; domain=.xxxxxx.xx; path=/</p>
+
+<hr></div>
+            <div class="comment-info" id="comment-13457-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Aug '12, 02:44)</span>
+                <a class="comment-user userinfo" href="/users/3217/andrus">andrus</a>
+                
+            </div>
+        </div>
+    
+        <a name="13459"></a>
+        <div class="comment" id="comment-13459">
+            <div id="post-13459-score" class="comment-score"></div>
+            <div class="comment-text"><p>I have now checked the in the traces taken on the back-end server and can confirm in both scenarios that the back-end after responding with 302 to the initial POST is closing the existing connection</p>
+
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/CaptureBackend.PNG"></p>
+
+<p>I will check on the LB why there is hold up for so long in terminating this connection after 302 is passed to the client...</p>
+
+<p>Thank you all for looking into this.
+Andrzej</p></div>
+            <div class="comment-info" id="comment-13459-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(08 Aug '12, 03:15)</span>
+                <a class="comment-user userinfo" href="/users/3217/andrus">andrus</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-13453" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-13453-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/13442/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='4nWjDw4h4F7PWi5hLdu5xgqWjOf3Oy48' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/13442/delay-in-clients-response-to-302-redirect?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/13442/delay-in-clients-response-to-302-redirect?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/delayed/"
+            class="tag-link-delayed"
+            title="see questions tagged'delayed'using tags"
+            rel="tag">delayed</a> <span class="tag-number">&#215;7</span><br/>
+        
+        <a href="/tags/redirect/"
+            class="tag-link-redirect"
+            title="see questions tagged'redirect'using tags"
+            rel="tag">redirect</a> <span class="tag-number">&#215;7</span><br/>
+        
+        <a href="/tags/302/"
+            class="tag-link-302"
+            title="see questions tagged'302'using tags"
+            rel="tag">302</a> <span class="tag-number">&#215;2</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Aug. 7, 2012, 3:21 p.m.">07 Aug '12, 15:21</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>11,270 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 7, 2013, 6:15 a.m.">07 Jan '13, 06:15</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3961/weird-icmp-traffic-redirect-for-network">Weird icmp traffic - redirect for network</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19629/pc-randomly-responds-to-other-devices-packets-with-an-icmp-redirect">PC randomly responds to other devices packets with an &quot;ICMP redirect&quot;</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19988/malformed-packet-for-icmpv6-redirect-message">Malformed Packet for ICMPv6 Redirect Message</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27647/a-question-regarding-weird-duplicate-icmp-response">A Question regarding weird Duplicate ICMP response</a>
+        </p>
+        
+        <p>
+            <a href="/questions/29938/follow-related-connections">Follow related connections</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35826/what-does-icmp-redirect-redirect-for-host-mean">What does ICMP | Redirect | (redirect for host) mean?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4798/when-does-delayed-ack-start">When does delayed ack start?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9000/30-seconds-delays-in-server-response">30 seconds delays in server response</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13191/delayed-ack-requirements-for-server">Delayed ack requirements for server</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53163/videoconference-our-voice-not-comming-through">Videoconference our voice not comming through</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

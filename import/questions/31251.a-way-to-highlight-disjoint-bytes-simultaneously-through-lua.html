@@ -1,0 +1,1356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>A way to highlight disjoint bytes simultaneously through Lua? - Wireshark Q&amp;A</title>
+        <meta name="description" content="I&#39;ve asked this before, but didn&#39;t get any answers. This might be impossible to do. For my dissector, some tree items have the corresponding value stored in two, not continuous parts. For example, I have this chunk of a buffer: 1a2b3c4d. The first and last byte combined is the value I need, so 1a4d...." />
+        <meta name="keywords" content="lua" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/31251/a-way-to-highlight-disjoint-bytes-simultaneously-through-lua" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/31251/a-way-to-highlight-disjoint-bytes-simultaneously-through-lua?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='CyNMvMG2zsgotkW3kBb9sARYafQEAqQu' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/31251/a-way-to-highlight-disjoint-bytes-simultaneously-through-lua">A way to highlight disjoint bytes simultaneously through Lua?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-31251-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31251/up/" rel="nofollow"> </a>
+<div id="post-31251-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31251-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31251/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/31251/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I've asked this before, but didn't get any answers.  This might be impossible to do.</p>
+<p>For my dissector, some tree items have the corresponding value stored in two, not continuous parts.</p>
+<p>For example, I have this chunk of a buffer: 1a2b3c4d.  The first and last byte combined is the value I need, so 1a4d.  I can calculate this value and add a tree item to represent it.  But I don't know how to get only the bytes 1a and 4d highlighted, and leaving the middle two bytes alone, when clicking on this tree item.</p>
+<p>Any ideas?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/lua/" class="post-tag tag-link-lua"
+                                        title="see questions tagged 'lua'" rel="tag">lua</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>28 Mar '14, 12:41</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/b18cada3e3589f311e24f5ffbd1737bc?s=32&amp;d=identicon&amp;r=g" alt="YXI's gravatar image" />
+    <p><a href="/users/6804/yxi">YXI</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="18 badges"><span class="badge1">&#9679;</span><span class="badgecount">18</span></span><span title="20 badges"><span class="silver">&#9679;</span><span class="badgecount">20</span></span><span title="23 badges"><span class="bronze">&#9679;</span><span class="badgecount">23</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="YXI has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/31251/">
+                edited
+                <strong>28 Mar '14, 16:00</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d02f20c18a7742ec73a666f1974bf6dc?s=32&amp;d=identicon&amp;r=g" alt="Hadriel's gravatar image" />
+            <p><a href="/users/4318/hadriel">Hadriel</a><br/>
+            <span class="score" title="2652 reputation points"><span class="">2.7k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="39 badges"><span class="bronze">&#9679;</span><span class="badgecount">39</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-31251">
+    
+</div>
+<div id="comment-tools-31251" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31251-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    4 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/31251/a-way-to-highlight-disjoint-bytes-simultaneously-through-lua?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/31251/a-way-to-highlight-disjoint-bytes-simultaneously-through-lua?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/31251/a-way-to-highlight-disjoint-bytes-simultaneously-through-lua?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/31251/a-way-to-highlight-disjoint-bytes-simultaneously-through-lua?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="31255"></a>
+                    <div id="answer-container-31255" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31255-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31255/up/" rel="nofollow"> </a>
+<div id="post-31255-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31255-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31255/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You should be able to use <code>proto_tree_add_uint</code> for this, since you can already compute your value.<br>
+Using your example, you'd make a header field such as this:
+</p><pre><code>{&amp;hf_myfield, {"My Field", "myproto.myfield", FT_UINT32, BASE_HEX, NULL, 0xFF0000FF, "My Field", HFILL}}</code></pre>
+Then, in your <code>dissect_myproto</code>...
+<pre><code>   //...
+   value = compute_myfield_value(tvb, offset); //or however you want to do this
+   proto_tree_add_uint(tree, hf_myfield, tvb, offset, 4, value);
+   //...</code></pre><p></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31255/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Mar '14, 13:53</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/fe1cf996b30e896dc95ca3cd47ac7406?s=32&amp;d=identicon&amp;r=g" alt="multipleinterfaces's gravatar image" />
+    <p><a href="/users/730/multipleinterfaces">multipleinte...</a><br/>
+    <span class="score" title="1321 reputation points"><span class="">1.3k</span></span><span title="15 badges"><span class="badge1">&#9679;</span><span class="badgecount">15</span></span><span title="23 badges"><span class="silver">&#9679;</span><span class="badgecount">23</span></span><span title="40 badges"><span class="bronze">&#9679;</span><span class="badgecount">40</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="multipleinterfaces has 9 accepted answers">12&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31255">
+    
+        <a name="31256"></a>
+        <div class="comment" id="comment-31256">
+            <div id="post-31256-score" class="comment-score"></div>
+            <div class="comment-text"><p>Is this a C function?  I have to use Lua.  Also, my value is a 64 bit int.</p></div>
+            <div class="comment-info" id="comment-31256-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '14, 14:26)</span>
+                <a class="comment-user userinfo" href="/users/6804/yxi">YXI</a>
+                
+            </div>
+        </div>
+    
+        <a name="31264"></a>
+        <div class="comment" id="comment-31264">
+            <div id="post-31264-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, it is part of the C interface. I don't think this functionality is exposed through the Lua interface right now, but I'm not as familiar with the Lua API.</p></div>
+            <div class="comment-info" id="comment-31264-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '14, 15:17)</span>
+                <a class="comment-user userinfo" href="/users/730/multipleinterfaces">multipleinte...</a>
+                
+            </div>
+        </div>
+    
+        <a name="31265"></a>
+        <div class="comment" id="comment-31265">
+            <div id="post-31265-score" class="comment-score"></div>
+            <div class="comment-text"><p>According to the docs, the <strong>mask</strong> option (0xFF0000FF in the example) should be available (optional parameter)</p>
+
+<blockquote>
+<p><a href="http://www.wireshark.org/docs/wsug_html_chunked/lua_module_Proto.html#lua_class_ProtoField">http://www.wireshark.org/docs/wsug_html_chunked/lua_module_Proto.html#lua_class_ProtoField</a></p>
+</blockquote></div>
+            <div class="comment-info" id="comment-31265-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '14, 15:24)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="31266"></a>
+        <div class="comment" id="comment-31266">
+            <div id="post-31266-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Also, my value is a <strong>64 bit int</strong>.</p>
+</blockquote>
+
+<p>64 bit is a second story. (usable) Lua 64 bit support was only added recently. What is your Wireshark version?</p></div>
+            <div class="comment-info" id="comment-31266-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '14, 15:26)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="31269"></a>
+        <div class="comment" id="comment-31269">
+            <div id="post-31269-score" class="comment-score"></div>
+            <div class="comment-text"><p>Using masks for ProtoFields is supported, and is shown in the <code>dissector.lua</code> example script found <a href="http://wiki.wireshark.org/Lua/Examples">here</a>. Using a 64-bit mask isn't though, both because Lua itself would lose precision in such a big number, but also because the current code gets it as a 32-bit integer. I'd argue the latter is a bug, but the former requires accepting a <code>UInt64</code> mask type anyway to actually work right. So I think you should submit a bug.</p></div>
+            <div class="comment-info" id="comment-31269-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '14, 16:09)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="31270"></a>
+        <div class="comment not_top_scorer" id="comment-31270">
+            <div id="post-31270-score" class="comment-score"></div>
+            <div class="comment-text"><p>Apparently the internal C-code for fields only supports a 32-bit mask to begin with. I grep'ed the code, and sure enough not a single 64-bit field uses a mask. The one I found that should have, cheated and pretended it was a 32-bit field because only the lower 32-bits were being used. That will make this tricky to support. :(</p></div>
+            <div class="comment-info" id="comment-31270-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '14, 16:35)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31255" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31255-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="31272"></a>
+                    <div id="answer-container-31272" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31272-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31272/up/" rel="nofollow"> </a>
+<div id="post-31272-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31272-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31272/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>You could try "cheating": create your current 64-bit ProtoField without a mask, and also create two 32-bit ProtoField for each 32-bit portion of the 64-bit with the appropriate mask for each portion. When you add the 64-bit one to the tree use the <code>TvbRange</code> of the whole 64-bits, and save the child tree returned from the <code>tree:add()</code> call; then add the two 32-bit ones to the child tree, giving each of them the <code>TvbRange</code> half they each represents.  That way the user sees the 64-bit one and if they select it the whole 64-bits are highlighted, with a expandable arrow thing to see the two 32-bit ones under it for each 32-bit half, and clicking those will show the appropriately masked portions.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31272/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>28 Mar '14, 16:44</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d02f20c18a7742ec73a666f1974bf6dc?s=32&amp;d=identicon&amp;r=g" alt="Hadriel's gravatar image" />
+    <p><a href="/users/4318/hadriel">Hadriel</a><br/>
+    <span class="score" title="2652 reputation points"><span class="">2.7k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="39 badges"><span class="bronze">&#9679;</span><span class="badgecount">39</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hadriel has 30 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31272">
+    
+        <a name="31273"></a>
+        <div class="comment" id="comment-31273">
+            <div id="post-31273-score" class="comment-score"></div>
+            <div class="comment-text"><p>"When you add the 64-bit one to the tree use the TvbRange of the whole 64-bits"...  I think this opens a new tab in the bytes pane, because it is not a TvbRange that actually exists in the stream.  I don't want to have to have so many new tabs open(they don't auto close when you are done looking at them).  Also, ideally, the users can see where the disjoint bytes are located in relation to each other with just open click.  Oh, am I picky?</p></div>
+            <div class="comment-info" id="comment-31273-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '14, 19:28)</span>
+                <a class="comment-user userinfo" href="/users/6804/yxi">YXI</a>
+                
+            </div>
+        </div>
+    
+        <a name="31275"></a>
+        <div class="comment" id="comment-31275">
+            <div id="post-31275-score" class="comment-score"></div>
+            <div class="comment-text"><p>I'm not sure we're using the same words. A "tab" usually means a new window pane, and no adding a tree item does not create a new window. It does create a new branch in the tree, and if you add elements under that branch (i.e., under that child node) then the user will see an expansion icon (an arrow in GTK, or a plus in windows I think) next to that tree item, which they can click to expand to view what's under it if they want to.  But it doesn't usually show in expanded form automatically so it shouldn't bother them.</p>
+
+<p>These things are already done all over the place and most people don't notice it.  For example, if you have a capture with TCP/IPv4 traffic, you'll see the Frame, Ethernet (or wifi), IP, and TCP in the details pane. If you expand the IP one, you'll see a DSCP field, which itself can be expanded, as well as the flags field, etc.  Those aren't really one field each - they're multiple fields each: a parent one that you see without expanding it, and then the child ones under it when you expand them.</p></div>
+            <div class="comment-info" id="comment-31275-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Mar '14, 19:41)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="31327"></a>
+        <div class="comment" id="comment-31327">
+            <div id="post-31327-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry I have to use "Your answer" instead of comment, as I have two images.<br>
+</p>
+
+<p>You will see what I mean by "tab" by looking at the images.  Toward the very bottom, there are two tabs, one for frame (79 bytes) and another for myTvb (4 bytes).  myTvb is created from disjoint bytes in the payload.  Wireshark automatically created the myTvb tab to show this new buffer that does not exist in the original payload.</p>
+
+<p>The code that corresponds to this is as follows:</p>
+
+<p>subtree:add(buffer(0,2),"The first value: " .. buffer(0,2):uint())</p>
+
+<pre><code>local allBytes = ByteArray.new()
+
+local nextByte = buffer(3, 1):bytes()
+
+allBytes:append(nextByte)
+
+nextByte = buffer(4, 1):bytes()
+
+allBytes:append(nextByte)
+
+nextByte = buffer(9, 1):bytes()
+
+allBytes:append(nextByte)
+
+nextByte = buffer(10, 1):bytes()
+
+allBytes:append(nextByte)
+
+debug("bytes are " .. tostring(allBytes))
+
+local myTvb = ByteArray.tvb(allBytes, "My Tvb")
+
+local subtreeNext = subtree:add(myTvb(0,0),"The next value:"..myTvb(0,4):uint())
+
+    subtreeNext:add(buffer(3,2), "The first part location" )
+
+    subtreeNext:add(buffer(9,2), "The second part location" )
+</code></pre>
+
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/Screen_Shot_2014-03-31_at_5.10.37_PM_1.png"></p>
+
+<p><img alt="alt text" src="https://osqa-ask.wireshark.org/upfiles/Screen_Shot_2014-03-31_at_5.11.28_PM_1.png"></p></div>
+            <div class="comment-info" id="comment-31327-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(31 Mar '14, 15:25)</span>
+                <a class="comment-user userinfo" href="/users/6804/yxi">YXI</a>
+                
+            </div>
+        </div>
+    
+        <a name="31360"></a>
+        <div class="comment" id="comment-31360">
+            <div id="post-31360-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's because you're creating a new <code>Tvb</code>, and adding it to the tree.  There's no need to do that.  The idea was to use the original <code>Tvb</code> that came in the packet, and to display portions of it using the masking strategy.</p></div>
+            <div class="comment-info" id="comment-31360-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(01 Apr '14, 14:58)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31272" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31272-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="31338"></a>
+                    <div id="answer-container-31338" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31338-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31338/up/" rel="nofollow"> </a>
+<div id="post-31338-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31338-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31338/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>I don't think what you want is possible, either in Lua or C.  The bytes pane highlight only does continuous ranges and the creation of a new tvb for data from discontinuous bytes creates the new tab as you have seen.</p>
+<p>You would need to make some (possibly) extensive changes in the core Wireshark code to allow highlighting of discontinuous ranges.  You can try adding an enhancement request on the Wireshark bugzilla, but I don't know if you'll get any one to take it on.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31338/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>01 Apr '14, 02:42</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+    <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+    <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grahamb has 274 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31338">
+    
+        <a name="31391"></a>
+        <div class="comment" id="comment-31391">
+            <div id="post-31391-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks.  That's what I think.</p></div>
+            <div class="comment-info" id="comment-31391-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Apr '14, 07:34)</span>
+                <a class="comment-user userinfo" href="/users/6804/yxi">YXI</a>
+                
+            </div>
+        </div>
+    
+        <a name="31403"></a>
+        <div class="comment" id="comment-31403">
+            <div id="post-31403-score" class="comment-score"></div>
+            <div class="comment-text"><p>That's because you're creating a new Tvb, and adding it to the tree. There's no need to do that. The idea was to use the original Tvb that came in the packet, and to display portions of it using the masking strategy.</p></div>
+            <div class="comment-info" id="comment-31403-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Apr '14, 09:41)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="31404"></a>
+        <div class="comment" id="comment-31404">
+            <div id="post-31404-score" class="comment-score"></div>
+            <div class="comment-text"><p>That doesn't fix the OP's original issue in that they want discontiguous bytes highlighted in the bytes pane.</p></div>
+            <div class="comment-info" id="comment-31404-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Apr '14, 09:49)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="31413"></a>
+        <div class="comment" id="comment-31413">
+            <div id="post-31413-score" class="comment-score"></div>
+            <div class="comment-text"><p>Right, but this was in the context of the "cheating" proposal I made. His response was that would create a new tab, and my point is it only creates a new tab if you create a new Tvb.</p></div>
+            <div class="comment-info" id="comment-31413-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Apr '14, 10:53)</span>
+                <a class="comment-user userinfo" href="/users/4318/hadriel">Hadriel</a>
+                
+            </div>
+        </div>
+    
+        <a name="31414"></a>
+        <div class="comment" id="comment-31414">
+            <div id="post-31414-score" class="comment-score"></div>
+            <div class="comment-text"><p>In your cheating advice you said, "When you add the 64-bit one to the tree use the TvbRange of the whole 64-bits".  How do you get the TvbRange?  Code please.</p></div>
+            <div class="comment-info" id="comment-31414-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(02 Apr '14, 11:31)</span>
+                <a class="comment-user userinfo" href="/users/6804/yxi">YXI</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31338" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31338-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="31434"></a>
+                    <div id="answer-container-31434" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-31434-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/31434/up/" rel="nofollow"> </a>
+<div id="post-31434-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-31434-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/31434/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>Do something like this <em>outside</em> of the dissector function:</p>
+<pre><code>local f_value = ProtoField.uint32("myproto.value", "The value")
+local f_whole = ProtoField.bytes("myproto.value.hex", "The whole range")
+local f_part1 = ProtoField.uint16("myproto.value.part1", "The first part", base.HEX)
+local f_part2 = ProtoField.uint16("myproto.value.part2", "The second part", base.HEX)
+-- register the above fields to your proto
+myproto.fields = { f_value, f_whole, f_part1, f_part2 }
+</code></pre>
+<p>Now for the part <em>inside</em> the dissector function... the following assumes "<code>buffer</code>" is the name of the <code>Tvb</code> given to the <code>dissector()</code> function, and that your bytes start at offset <code>3</code> for <code>8</code> bytes long, since that's what it looks like from your code earlier; and the following assumes "<code>myval</code>" is the true/real/parsed Lua number value of your disparate fields - there are a couple different ways to achieve that without creating a new <code>Tvb</code>, but I assume you already have a way to do that; for example using the <code>Struct</code> class. If not, let me know and I can show that too.</p>
+<pre><code>-- add your value to the tree, without highlighting
+local subtree:add(f_value, myval)
+-- and add the field for the bytes next, saving the returned child tree
+local subtreeNext = subtree:add(f_whole, buffer:range(3,8))
+-- add the children
+subtreeNext:add(f_part1, buffer:range(3,2))
+subtreeNext:add(f_part2, buffer:range(9,2))
+</code></pre>
+<p>Alternatively, you could do this instead, depending on what look you like:</p>
+<pre><code>-- add your value to the tree, highlighting all the bytes
+local subtreeNext = subtree:add(f_value, buffer:range(3,8), myval)
+-- add the children
+subtreeNext:add(f_part1, buffer:range(3,2))
+subtreeNext:add(f_part2, buffer:range(9,2))
+</code></pre>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/31434/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>02 Apr '14, 13:47</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d02f20c18a7742ec73a666f1974bf6dc?s=32&amp;d=identicon&amp;r=g" alt="Hadriel's gravatar image" />
+    <p><a href="/users/4318/hadriel">Hadriel</a><br/>
+    <span class="score" title="2652 reputation points"><span class="">2.7k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">&#9679;</span><span class="badgecount">9</span></span><span title="39 badges"><span class="bronze">&#9679;</span><span class="badgecount">39</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Hadriel has 30 accepted answers">18&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/31434/">
+                edited
+                <strong>02 Apr '14, 13:48</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-31434">
+    
+        <a name="31488"></a>
+        <div class="comment" id="comment-31488">
+            <div id="post-31488-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks Hadriel.<br>
+This helps, but I don't like the fact that when "The whole range" is selected, everything, including bytes that should be omitted are highlighted.  Ideally I want the bytes at the two ends of the range which I actually use highlighted but the ones in the middle not highlighted.  I guess that is impossible to do.
+Your code does help me build my tree though.  Much appreciated.</p></div>
+            <div class="comment-info" id="comment-31488-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Apr '14, 09:07)</span>
+                <a class="comment-user userinfo" href="/users/6804/yxi">YXI</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-31434" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-31434-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/31251/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='CyNMvMG2zsgotkW3kBb9sARYafQEAqQu' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31251/a-way-to-highlight-disjoint-bytes-simultaneously-through-lua?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/31251/a-way-to-highlight-disjoint-bytes-simultaneously-through-lua?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/lua/"
+            class="tag-link-lua"
+            title="see questions tagged'lua'using tags"
+            rel="tag">lua</a> <span class="tag-number">&#215;431</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="March 28, 2014, 12:41 p.m.">28 Mar '14, 12:41</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>7,810 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="April 3, 2014, 9:07 a.m.">03 Apr '14, 09:07</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/570/crashing-issue-when-running-lua-dissector-after-upgrading-from-wireshark-100">Crashing issue when running Lua dissector after upgrading from wireshark 1.0.0</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4410/create-my-own-dissector">Create my own dissector</a>
+        </p>
+        
+        <p>
+            <a href="/questions/5868/how-do-i-setup-wireshark-to-run-luas-clrpackage">How do I setup Wireshark to run Lua&#39;s CLRPackage</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8328/order-of-entries-in-dissector-tables-at-startup-and-lua">Order of entries in dissector tables at startup and lua</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9353/wireshark-lua-wireshark-version-problem">Wireshark Lua - Wireshark Version problem</a>
+        </p>
+        
+        <p>
+            <a href="/questions/11330/lua-binding-integration-documentation">Lua binding / integration - documentation</a>
+        </p>
+        
+        <p>
+            <a href="/questions/15776/check-sequentiality-in-destination-addresses-from-a-specific-source-address">check sequentiality in destination addresses from a specific source address</a>
+        </p>
+        
+        <p>
+            <a href="/questions/19340/tcpdstat-for-wireshark">TCPdSTAT for Wireshark?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/23622/my-lua-dissector-isnt-finding-the-crc32-module">My Lua dissector isn&#39;t finding the CRC32 module</a>
+        </p>
+        
+        <p>
+            <a href="/questions/28076/pdu-reassembly-over-udp-within-a-lua-dissector">PDU reassembly over UDP within a lua dissector</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

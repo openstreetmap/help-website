@@ -1,0 +1,877 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>How to show ssl decrypted packet content - Wireshark Q&amp;A</title>
+        <meta name="description" content="I have tried: tshark n -o ssl.keylog_file:/tmp/master.txt -Y ip.src==xxx.yyy.nnn.mmm -d tcp.port==0-999999,ssl I see this Capturing on &#39;eth0&#39;   6540 56.156992382 xxx.yyy.nnn.mmm -&amp;gt; 192.168.1.2 TCP 74 7072 → 49188 [SYN, ACK] Seq=0 Ack=1 Win=8192 Len=0 MSS=1380 WS=256 SACK_PERM=1 TSval=603635523 TS..." />
+        <meta name="keywords" content="ssl,parameters,tshark,dump" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/49141/how-to-show-ssl-decrypted-packet-content" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/49141/how-to-show-ssl-decrypted-packet-content?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='r6IED4VnO3jA7Y0Kf2cWYjSe24qRuZuh' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/49141/how-to-show-ssl-decrypted-packet-content">How to show ssl decrypted packet content</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-49141-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49141/up/" rel="nofollow"> </a>
+<div id="post-49141-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-49141-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49141/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/49141/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I have tried:
+tshark n -o ssl.keylog_file:/tmp/master.txt -Y ip.src==xxx.yyy.nnn.mmm -d tcp.port==0-999999,ssl I see this Capturing on 'eth0'       <br>
+</p>
+<pre><code>6540 56.156992382 xxx.yyy.nnn.mmm -&gt; 192.168.1.2  TCP 74 7072 → 49188 [SYN, ACK] Seq=0 Ack=1 Win=8192 Len=0 MSS=1380 WS=256 SACK_PERM=1 TSval=603635523 TSecr=10839353                                              
+6546 56.291147285 xxx.yyy.nnn.mmm -&gt; 192.168.1.2  TCP 1434 [TCP segment of a reassembled PDU]              
+6548 56.293045394 xxx.yyy.nnn.mmm -&gt; 192.168.1.2  TCP 1434 [TCP segment of a reassembled PDU]              
+6550 56.294313103 xxx.yyy.nnn.mmm -&gt; 192.168.1.2  TLSv1 1300 Server Hello, Certificate, Server Hello Done  
+6560 56.343469786 xxx.yyy.nnn.mmm -&gt; 192.168.1.2  TLSv1 125 Change Cipher Spec, Encrypted Handshake Message
+6575 56.785954188 xxx.yyy.nnn.mmm -&gt; 192.168.1.2  TLSv1 231 Application Data
+</code></pre>
+<p>How can I dump the packet content as "follow tcp streamm" in wireshark already does ?</p>
+<p>Is it possible to use something like as described in <a href="https://isc.sans.edu/forums/diary/Psst+Your+Browser+Knows+All+Your+Secrets/16415/">https://isc.sans.edu/forums/diary/Psst+Your+Browser+Knows+All+Your+Secrets/16415/</a> in such a way as to have a file decrypted packets in real time ?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/ssl/" class="post-tag tag-link-ssl"
+                                        title="see questions tagged 'ssl'" rel="tag">ssl</a>
+                                
+                                    <a href="/tags/parameters/" class="post-tag tag-link-parameters"
+                                        title="see questions tagged 'parameters'" rel="tag">parameters</a>
+                                
+                                    <a href="/tags/tshark/" class="post-tag tag-link-tshark"
+                                        title="see questions tagged 'tshark'" rel="tag">tshark</a>
+                                
+                                    <a href="/tags/dump/" class="post-tag tag-link-dump"
+                                        title="see questions tagged 'dump'" rel="tag">dump</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+<div class="community-wiki">
+        This question is marked "community wiki".
+        
+    </div>
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>12 Jan '16, 11:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/306d7986d36750697c633864525d3775?s=32&amp;d=identicon&amp;r=g" alt="famedoro's gravatar image" />
+    <p><a href="/users/22109/famedoro">famedoro</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="famedoro has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/49141/">
+                edited
+                <strong>14 Jan '16, 00:01</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-49141">
+    
+        <a name="49189"></a>
+        <div class="comment" id="comment-49189">
+            <div id="post-49189-score" class="comment-score"></div>
+            <div class="comment-text"><p>Lacking your capture and the keys, I cannot answer you, I can only give a hint. I've tried with https sample capture, where you need to set a link to a file containing the RSA decryption key to get the payload decrypted, and I am not sure whether the keylog file is used the same way.</p>
+
+<p>As the mappings between IP, port, payload protocol and RSA key file are not stored in the preferences file but in a separate one, they cannot (to my knowledge) be handed over to tshark using the <code>-o</code> parameter. But if you define these mappings using Wireshark, they get stored and tshark will use them too, without any options telling it to do so.</p>
+
+<p>Now another point, the dissector to be used to the decrypted payload is not chosen automatically based on the tcp port of the encrypted packet; instead, you define it together with the mapping between ip,port, and rsa key. If you set it to "http", you'll have no single protocol field to output. So I'd recommend to set the payload "protocol" to <code>data</code>, and if you do so, you can use tshark options <code>-T fields -e data</code>. This way, you'll get the decrypted payload as hex stream without any separators. I.e. an <code>Abc</code> string in the decrypted payload will be output as <code>416263</code>.</p></div>
+            <div class="comment-info" id="comment-49189-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jan '16, 13:13)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="49200"></a>
+        <div class="comment" id="comment-49200">
+            <div id="post-49200-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/19586/sindy">@sindy</a> I have already shark n -o ssl.keylog_file:/tmp/master.txt -Y ip.src==xxx.yyy.nnn.mmm -d tcp.port==0-999999,ssl -T fields -e data and in this case does not show any information. Is it possible to use something like as described in <a href="https://isc.sans.edu/forums/diary/Psst+Your+Browser+Knows+All+Your+Secrets/16415/">https://isc.sans.edu/forums/diary/Psst+Your+Browser+Knows+All+Your+Secrets/16415/</a> in such a way as to have a file decrypted packets in real time ?</p></div>
+            <div class="comment-info" id="comment-49200-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '16, 00:03)</span>
+                <a class="comment-user userinfo" href="/users/22109/famedoro">famedoro</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-49141" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49141-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/49141/how-to-show-ssl-decrypted-packet-content?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/49141/how-to-show-ssl-decrypted-packet-content?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/49141/how-to-show-ssl-decrypted-packet-content?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/49141/how-to-show-ssl-decrypted-packet-content?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="49193"></a>
+                    <div id="answer-container-49193" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-49193-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/49193/up/" rel="nofollow"> </a>
+<div id="post-49193-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-49193-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/49193/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>To decrypt, as mentioned by <a href="/users/19586/sindy">@sindy</a>, you must enter the key info into the SSL RSA Keys list  preference in Wireshark.  This will create a ssl_keys file in your preferences directory.  Once this has been set up tshark will decrypt the SSL data.</p>
+<p>For example, using the <a href="https://wiki.wireshark.org/SampleCaptures#SSL_with_decryption_keys">snakeoil sample capture</a> you must enter the following into the SSL RSA Keys List preferences:</p>
+<ul>
+<li>IP address - 127.0.0.1</li>
+<li>Port - 443</li>
+<li>Protocol - http</li>
+<li>Key File - path to rsasnakeoil2.key</li>
+<li>Password - leave blank</li>
+</ul>
+<p>Loading the rsasnakeoil2.cap file into Wireshark should show the decrypted HTTP traffic.  If successful, tshark can then be used to dump the stream using the <code>-z follow, ...</code> argument, e.g. to dump the hex and ascii of ssl stream 1:</p>
+<pre><code>tshark -r -rsasnakeoil2.cap -q -z follow,ssl,hex,1
+
+===================================================================          
+Follow: ssl,hex                                                              
+Filter: tcp.stream eq 1                                                      
+Node 0: 127.0.0.1:38714                                                      
+Node 1: 127.0.0.1:443                                                        
+00000000  47 45 54 20 2f 69 63 6f  6e 73 2f 64 65 62 69 61  GET /ico ns/debia
+00000010  6e 2f 6f 70 65 6e 6c 6f  67 6f 2d 32 35 2e 6a 70  n/openlo go-25.jp
+...
+</code></pre>
+<p>If you just want the raw hex without the offsets and ascii, use <code>raw</code> instead of <code>hex</code> in the <code>-z argument</code></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/49193/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>13 Jan '16, 15:59</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+    <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+    <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="grahamb has 274 accepted answers">22&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-49193">
+    
+        <a name="49199"></a>
+        <div class="comment" id="comment-49199">
+            <div id="post-49199-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb">@grahamb</a> Is it possible to use something like as described in <a href="https://isc.sans.edu/forums/diary/Psst+Your+Browser+Knows+All+Your+Secrets/16415/">https://isc.sans.edu/forums/diary/Psst+Your+Browser+Knows+All+Your+Secrets/16415/</a> in such a way as to have a file decrypted packets in real time ?</p></div>
+            <div class="comment-info" id="comment-49199-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(13 Jan '16, 23:59)</span>
+                <a class="comment-user userinfo" href="/users/22109/famedoro">famedoro</a>
+                
+            </div>
+        </div>
+    
+        <a name="49201"></a>
+        <div class="comment" id="comment-49201">
+            <div id="post-49201-score" class="comment-score"></div>
+            <div class="comment-text"><p>Not easily as you need to somehow retrigger Wireshark that the contents of the SSL key log file has changed, and then select the appropriate ssl stream.</p></div>
+            <div class="comment-info" id="comment-49201-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '16, 00:30)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="49204"></a>
+        <div class="comment" id="comment-49204">
+            <div id="post-49204-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb">@grahamb</a> Must I use wireshark ? Is it possible to have a decrypted real time data stream using only tshark ?</p></div>
+            <div class="comment-info" id="comment-49204-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '16, 01:02)</span>
+                <a class="comment-user userinfo" href="/users/22109/famedoro">famedoro</a>
+                
+            </div>
+        </div>
+    
+        <a name="49209"></a>
+        <div class="comment" id="comment-49209">
+            <div id="post-49209-score" class="comment-score"></div>
+            <div class="comment-text"><p>The issue is not whether you use tshark or Wireshark, the issue is the dynamic nature of the session keys. *shark doesn't read the key log file each time it needs a value from it but only once when starting, that's why <a href="/users/1225/grahamb"></a><a href="/users/1225/grahamb">@grahamb</a> wrote that you'd have to tell *shark that the contents of the file has changed (and choose the right tcp stream id).</p>
+
+<p>As far as I know, there is currently no "input point for asynchronous events" allowing to tell a running *shark that it should do something, nor any "watch for changes" functionality of the *shark itself.</p>
+
+<p>Normally you only need to decrypt ongoing communication in real time in order to take urgent measures based on its contents, and this is an activity which a typical *shark user doesn't perform too often. Those who need it usually work with an appropriate budget.</p></div>
+            <div class="comment-info" id="comment-49209-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(14 Jan '16, 03:03)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-49193" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-49193-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/49141/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='r6IED4VnO3jA7Y0Kf2cWYjSe24qRuZuh' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49141/how-to-show-ssl-decrypted-packet-content?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/49141/how-to-show-ssl-decrypted-packet-content?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/tshark/"
+            class="tag-link-tshark"
+            title="see questions tagged'tshark'using tags"
+            rel="tag">tshark</a> <span class="tag-number">&#215;832</span><br/>
+        
+        <a href="/tags/ssl/"
+            class="tag-link-ssl"
+            title="see questions tagged'ssl'using tags"
+            rel="tag">ssl</a> <span class="tag-number">&#215;319</span><br/>
+        
+        <a href="/tags/dump/"
+            class="tag-link-dump"
+            title="see questions tagged'dump'using tags"
+            rel="tag">dump</a> <span class="tag-number">&#215;22</span><br/>
+        
+        <a href="/tags/parameters/"
+            class="tag-link-parameters"
+            title="see questions tagged'parameters'using tags"
+            rel="tag">parameters</a> <span class="tag-number">&#215;11</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Jan. 12, 2016, 11:51 a.m.">12 Jan '16, 11:51</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>11,519 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Jan. 14, 2016, 3:04 a.m.">14 Jan '16, 03:04</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/39372/capture-filter-with-ssl-hex-output-from-tshark">Capture filter with SSL hex output from tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/48767/tshark-parameter-for-filtering-by-given-ip-and-decode-it-using-ssl">Tshark parameter for filtering by given ip and decode it using ssl</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20974/tshark-tfields-identify-ssl-record-types-accurately">tshark -Tfields, identify SSL record types accurately</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22576/unhandled-exception-group1-code6-in-wireshark-106">Unhandled exception (group=1, code=6) in Wireshark 1.0.6</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12645/giop-filter-tshark">GIOP filter - tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/44527/extracting-ssl-certificate-with-tshark">Extracting SSL Certificate with tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46699/how-to-use-pre-master-secret-log-file-with-tshark">How to use (pre)-master-secret log file with tshark</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18908/how-do-you-use-tshark-with-multiple-ssl-keys">How do you use tshark with multiple ssl keys?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/20538/can-we-get-a-decrypted-pcap-from-an-encrypted-pcap-file-through-some-command-if-i-have-private-key">Can we get a decrypted .pcap from an encrypted .pcap file through some command if i have private key</a>
+        </p>
+        
+        <p>
+            <a href="/questions/61153/how-to-decrypt-ssl-packet-with-tshark-18">How to decrypt ssl packet with tshark 1.8</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

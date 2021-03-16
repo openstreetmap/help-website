@@ -1,0 +1,1049 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Missing data when displaying dumpcap output on Wireshark - Wireshark Q&amp;A</title>
+        <meta name="description" content="I am using dumpcap (v1.12.1) on a Raspberry Pi 3 Model B to monitor incoming logging information over a full speed USB link attached to an embedded project. Input data rate is approximately 70KB/sec. The packet protocol is rather simple - a single byte of command (identifying the log source), a 16-b..." />
+        <meta name="keywords" content="dumpcap,usbmon,usb" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/58194/missing-data-when-displaying-dumpcap-output-on-wireshark" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/58194/missing-data-when-displaying-dumpcap-output-on-wireshark?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='bfyg9zFVs8cw8Q5K5u2ONDRrBtTfwazU' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/58194/missing-data-when-displaying-dumpcap-output-on-wireshark">Missing data when displaying dumpcap output on Wireshark</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-58194-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/58194/up/" rel="nofollow"> </a>
+<div id="post-58194-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-58194-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/58194/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/58194/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>I am using dumpcap (v1.12.1) on a Raspberry Pi 3 Model B to monitor incoming logging information over a full speed USB link attached to an embedded project.  Input data rate is approximately 70KB/sec.  The packet protocol is rather simple - a single byte of command (identifying the log source), a 16-bit byte count followed by some number of bytes of data.  This is being sent over a Bulk Endpoint connection and byte counts are exactly 0x3000 for one log source and anywhere in the range 0x200-0x230 for the other.  On the Pi I am using the command "dumpcap -i 8 -b filesize:10000 -b files:20 -w /mnt/Tap/logServer/LOGs/Wireshark/capt.pcap" to create a rolling list of 20 10MB files before the oldest is overwritten.  When I compare the Wireshark display of a pcap file to the binary file of logged data, I'm seeing the first 32 bytes of data following the protocol header, followed by 96 bytes of data that shows up in the log file but not on the Wireshark display.  This repeats through the end of each log packet - 32 bytes displayed, 96 bytes missing.  I have checked dozens of packets and it's never more or less - always the same 32/96 mix.  While I've used Wireshark for a number of years, I am relatively new to using it for USB and I am very new to using dumpcap, so I suspect I have something messed up in the configuration.  I've been through the dumpcap manpage but don't see anything that might lead to what I'm seeing.</p>
+<p>I'd be grateful if anyone has any ideas on what I'm doing wrong.</p>
+<p>Thanks,
+Dave</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/dumpcap/" class="post-tag tag-link-dumpcap"
+                                        title="see questions tagged 'dumpcap'" rel="tag">dumpcap</a>
+                                
+                                    <a href="/tags/usbmon/" class="post-tag tag-link-usbmon"
+                                        title="see questions tagged 'usbmon'" rel="tag">usbmon</a>
+                                
+                                    <a href="/tags/usb/" class="post-tag tag-link-usb"
+                                        title="see questions tagged 'usb'" rel="tag">usb</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>17 Dec '16, 11:36</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/7deed2ab3c5a75d2a421b07804baa5d0?s=32&amp;d=identicon&amp;r=g" alt="DaveHarper's gravatar image" />
+    <p><a href="/users/26976/daveharper">DaveHarper</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">&#9679;</span><span class="badgecount">3</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="DaveHarper has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-58194">
+    
+        <a name="58195"></a>
+        <div class="comment" id="comment-58195">
+            <div id="post-58195-score" class="comment-score"></div>
+            <div class="comment-text"><p>Can you share a capture in a publicly accessible spot, e.g. <a href="http://cloudshark.org">CloudShark</a>, Google Drive, Dropbox etc.?</p></div>
+            <div class="comment-info" id="comment-58195-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Dec '16, 13:40)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58196"></a>
+        <div class="comment" id="comment-58196">
+            <div id="post-58196-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb">@grahamb</a>: Will do - let me get a pcap file, along with a log file and a README together and I will post as to where when all is in place.  May take a few minutes.</p></div>
+            <div class="comment-info" id="comment-58196-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Dec '16, 13:43)</span>
+                <a class="comment-user userinfo" href="/users/26976/daveharper">DaveHarper</a>
+                
+            </div>
+        </div>
+    
+        <a name="58199"></a>
+        <div class="comment" id="comment-58199">
+            <div id="post-58199-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="/users/1225/grahamb">@grahamb</a>: If I've done everything right the files are now available on:
+<a href="https://drive.google.com/drive/folders/0B_96KgN-BZm4T2tQbGRMWXN4TkE">https://drive.google.com/drive/folders/0B_96KgN-BZm4T2tQbGRMWXN4TkE</a></p>
+
+<p>Please let me know if you can/can't access them okay and if it's what you need.</p></div>
+            <div class="comment-info" id="comment-58199-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(17 Dec '16, 14:53)</span>
+                <a class="comment-user userinfo" href="/users/26976/daveharper">DaveHarper</a>
+                
+            </div>
+        </div>
+    
+        <a name="58207"></a>
+        <div class="comment" id="comment-58207">
+            <div id="post-58207-score" class="comment-score"></div>
+            <div class="comment-text"><p>The files require permission to download.  Try cloudshark?</p></div>
+            <div class="comment-info" id="comment-58207-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '16, 05:37)</span>
+                <a class="comment-user userinfo" href="/users/112/bob-jones">Bob Jones</a>
+                
+            </div>
+        </div>
+    
+        <a name="58208"></a>
+        <div class="comment" id="comment-58208">
+            <div id="post-58208-score" class="comment-score"></div>
+            <div class="comment-text"><p>Cloudshark was the first thing I tried but there was a 2MB limit and the pcap file is around 10MB.  Let me try working on the permissions or find another site.</p></div>
+            <div class="comment-info" id="comment-58208-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '16, 05:43)</span>
+                <a class="comment-user userinfo" href="/users/26976/daveharper">DaveHarper</a>
+                
+            </div>
+        </div>
+    
+        <a name="58209"></a>
+        <div class="comment not_top_scorer" id="comment-58209">
+            <div id="post-58209-score" class="comment-score"></div>
+            <div class="comment-text"><p>Found a site that is not password protected that will keep the files for a week.  There are separate download links for the three files:
+<a href="https://www.sendspace.com/file/m4lv8l">https://www.sendspace.com/file/m4lv8l</a>
+<a href="https://www.sendspace.com/file/84v05b">https://www.sendspace.com/file/84v05b</a>
+<a href="https://www.sendspace.com/file/dx3a2m">https://www.sendspace.com/file/dx3a2m</a></p></div>
+            <div class="comment-info" id="comment-58209-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '16, 06:13)</span>
+                <a class="comment-user userinfo" href="/users/26976/daveharper">DaveHarper</a>
+                
+            </div>
+        </div>
+    
+        <a name="58214"></a>
+        <div class="comment not_top_scorer" id="comment-58214">
+            <div id="post-58214-score" class="comment-score"></div>
+            <div class="comment-text"><p>Google Drive is OK but you have to set the sharing permissions to "Anyone with the link".</p></div>
+            <div class="comment-info" id="comment-58214-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '16, 09:26)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58215"></a>
+        <div class="comment not_top_scorer" id="comment-58215">
+            <div id="post-58215-score" class="comment-score"></div>
+            <div class="comment-text"><p>Thanks - found where to do this and changed the permissions on the folder.  Should be open now.</p></div>
+            <div class="comment-info" id="comment-58215-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(18 Dec '16, 09:34)</span>
+                <a class="comment-user userinfo" href="/users/26976/daveharper">DaveHarper</a>
+                
+            </div>
+        </div>
+    
+        <a name="58226"></a>
+        <div class="comment not_top_scorer" id="comment-58226">
+            <div id="post-58226-score" class="comment-score"></div>
+            <div class="comment-text"><p>I agree with your findings.</p>
+
+<p>A further confirmation is the frame 10400 has the data (32 bytes) starting at offset 70C3D1, but the next incoming data frame 10402 has data at offset 70C451, so 128 bytes on, but there were only 32 bytes in frame 10400 so 96 missing again.</p>
+
+<p>As to where the bytes have gone, I would suspect the capture library, either dropping frames, or truncating the data as it doesn't seem to be in the capture.</p></div>
+            <div class="comment-info" id="comment-58226-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 06:52)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58228"></a>
+        <div class="comment not_top_scorer" id="comment-58228">
+            <div id="post-58228-score" class="comment-score"></div>
+            <div class="comment-text"><p>First, thank you for taking the time to go through a rather massive amount of data to confirm what I'm seeing.  I am a bit surprised at your conclusions - I was sure it was something I was doing wrong, otherwise I would have thought this would have been seen before.  I assume this should be reported so if you will respond as such, I'll mark it as the answer and file a bug report.</p></div>
+            <div class="comment-info" id="comment-58228-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 07:52)</span>
+                <a class="comment-user userinfo" href="/users/26976/daveharper">DaveHarper</a>
+                
+            </div>
+        </div>
+    
+        <a name="58229"></a>
+        <div class="comment not_top_scorer" id="comment-58229">
+            <div id="post-58229-score" class="comment-score"></div>
+            <div class="comment-text"><p>This issue is against what component to file the bug report.  I guess it's possible that it's in dumpcap which is part of the Wireshark project, but I think it's more likely to be in your capture library whatever that is.</p></div>
+            <div class="comment-info" id="comment-58229-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 07:59)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58230"></a>
+        <div class="comment not_top_scorer" id="comment-58230">
+            <div id="post-58230-score" class="comment-score"></div>
+            <div class="comment-text"><p>I also used a display filter such as <code>usb.capdata contains aa:bb:cc:dd:ee:ff</code> to search for the binary bytes 0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff.  There's is no limit (as far as I can tell) to the number of bytes you can search for.</p></div>
+            <div class="comment-info" id="comment-58230-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 08:02)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58232"></a>
+        <div class="comment not_top_scorer" id="comment-58232">
+            <div id="post-58232-score" class="comment-score"></div>
+            <div class="comment-text"><p>"This issue is against what component to file the bug report".  I'm basically a hardware guy trying to use to the tools to track down an issue that occurs every few days or so.  Any tips on how to determine what to check next?  The dumpcap application is running under a Debian version of Linux on the Raspberry Pi and I need to run the command "modprobe usbmon" to be able to run the tools.  Is "usbmon" the capture library you're referring to?  Unfortunately, I'm pretty ignorant of what is actually happening "under the covers" so I don't really know where to start.  While I will likely eventually capture what I need to track down my problem, that might not be the case for someone else.  So I'd like to do what I can to help resolve things, especially since I seem to have a repeatable test case that shows the problem.</p></div>
+            <div class="comment-info" id="comment-58232-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 08:54)</span>
+                <a class="comment-user userinfo" href="/users/26976/daveharper">DaveHarper</a>
+                
+            </div>
+        </div>
+    
+        <a name="58233"></a>
+        <div class="comment not_top_scorer" id="comment-58233">
+            <div id="post-58233-score" class="comment-score"></div>
+            <div class="comment-text"><p>We're at the stage now where I only know enough about Linux capturing and usb capturing to be dangerous, not helpful.</p>
+
+<p>Hopefully someone else might chip in.</p></div>
+            <div class="comment-info" id="comment-58233-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 10:14)</span>
+                <a class="comment-user userinfo" href="/users/1225/grahamb">grahamb ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58237"></a>
+        <div class="comment not_top_scorer" id="comment-58237">
+            <div id="post-58237-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>Any tips on how to determine what to check next? The dumpcap application is running under a Debian version of Linux on the Raspberry Pi and I need to run the command "modprobe usbmon" to be able to run the tools. Is "usbmon" the capture library you're referring to?</p>
+</blockquote>
+
+<p>The capture library is libpcap.  It captures atop many different capture mechanisms, including Linux's "usbmon" USB traffic capture mechanism; "usbmon" is a Linux kernel module.</p>
+
+<p>If a Linux USB capture is chopping off packet data at 96 bytes or so, that might be because only the "text mode" usbmon mechanism is working.  What is the version of the kernel on the Raspberry Pi?  If it's older than 2.6.21, the kernel doesn't support the "binary mode" usbmon mechanism, and you won't be able to get the full data.  What does <code>ls -l /dev/usbmon*</code> print on the Raspberry Pi?</p></div>
+            <div class="comment-info" id="comment-58237-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 12:29)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58238"></a>
+        <div class="comment not_top_scorer" id="comment-58238">
+            <div id="post-58238-score" class="comment-score"></div>
+            <div class="comment-text"><p>The ls -l /dev/usbmon* prints:</p>
+
+<pre><code>crw------- 1 root root 243, 0 Dec 15 11:16 /dev/usbmon0
+crw------- 1 root root 243, 1 Dec 15 11:16 /dev/usbmon1
+</code></pre>
+
+<p>I also checked the kernel version with uname -r and it printed: 4.4.13-v7+ which should be fairly recent (it was installed within the last six months and I've updated it since then).</p></div>
+            <div class="comment-info" id="comment-58238-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 12:34)</span>
+                <a class="comment-user userinfo" href="/users/26976/daveharper">DaveHarper</a>
+                
+            </div>
+        </div>
+    
+        <a name="58239"></a>
+        <div class="comment not_top_scorer" id="comment-58239">
+            <div id="post-58239-score" class="comment-score"></div>
+            <div class="comment-text"><p>What does <code>dumpcap -D</code> print on the RPi?</p></div>
+            <div class="comment-info" id="comment-58239-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 12:39)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58240"></a>
+        <div class="comment not_top_scorer" id="comment-58240">
+            <div id="post-58240-score" class="comment-score"></div>
+            <div class="comment-text"><p>The dumpcap -D prints out 8 lines.  The first seven are other interfaces (eth0, etc.).  The last line is usbmon1.</p></div>
+            <div class="comment-info" id="comment-58240-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 12:43)</span>
+                <a class="comment-user userinfo" href="/users/26976/daveharper">DaveHarper</a>
+                
+            </div>
+        </div>
+    
+        <a name="58241"></a>
+        <div class="comment not_top_scorer" id="comment-58241">
+            <div id="post-58241-score" class="comment-score"></div>
+            <div class="comment-text"><p>If you have tcpdump on the RPi, what happens if you 1) run <code>tcpdump -h</code>, 2) run <code>tcpdump -D</code> and 3) try to capture with <code>tcpdump -i usbmon1 -c 500 -w /mnt/Tap/logServer/LOGs/Wireshark/tcpdump-capt.pcap</code>?  Does the file tcpdump writes have the same problem?</p></div>
+            <div class="comment-info" id="comment-58241-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 12:50)</span>
+                <a class="comment-user userinfo" href="/users/79/guy-harris">Guy Harris ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="58242"></a>
+        <div class="comment not_top_scorer" id="comment-58242">
+            <div id="post-58242-score" class="comment-score"></div>
+            <div class="comment-text"><p>Installing now...</p></div>
+            <div class="comment-info" id="comment-58242-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 12:51)</span>
+                <a class="comment-user userinfo" href="/users/26976/daveharper">DaveHarper</a>
+                
+            </div>
+        </div>
+    
+        <a name="58243"></a>
+        <div class="comment not_top_scorer" id="comment-58243">
+            <div id="post-58243-score" class="comment-score"></div>
+            <div class="comment-text"><p>Okay - tcpdump -h prints:
+tcpdump version 4.6.2
+libpcap version 1.6.2
+OpenSSL 1.0.1t  3 May 2016</p>
+
+<p>along with the usage information.</p>
+
+<p>tcpdump -D prints:
+1.eth0 [Up, Running]
+2.any (Pseudo-device that captures on all interfaces) [Up, Running]
+3.lo [Up, Running, Loopback]
+4.wlan0 [Up]
+5.bluetooth0 (Bluetooth adapter number 0)
+6.nflog (Linux netfilter log (NFLOG) interface)
+7.nfqueue (Linux netfilter queue (NFQUEUE) interface)
+8.usbmon1 (USB bus number 1)</p>
+
+<p>As for doing a capture, that's going to take a few minutes to get another run set configured and started.  I will post as soon as I have run it and checked the result.</p></div>
+            <div class="comment-info" id="comment-58243-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 12:56)</span>
+                <a class="comment-user userinfo" href="/users/26976/daveharper">DaveHarper</a>
+                
+            </div>
+        </div>
+    
+        <a name="58244"></a>
+        <div class="comment not_top_scorer" id="comment-58244">
+            <div id="post-58244-score" class="comment-score"></div>
+            <div class="comment-text"><p>I just finished the test and I am seeing the same thing in tcpdump that I saw with dumpcap.</p></div>
+            <div class="comment-info" id="comment-58244-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(19 Dec '16, 13:32)</span>
+                <a class="comment-user userinfo" href="/users/26976/daveharper">DaveHarper</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-58194" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 22
+        </span>
+        <a href="#" class="show-all-comments-link">show 17 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-58194-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+        <form id="fmanswer" action="/questions/58194/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='bfyg9zFVs8cw8Q5K5u2ONDRrBtTfwazU' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Be the first one to answer this question!
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/58194/missing-data-when-displaying-dumpcap-output-on-wireshark?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/58194/missing-data-when-displaying-dumpcap-output-on-wireshark?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/dumpcap/"
+            class="tag-link-dumpcap"
+            title="see questions tagged'dumpcap'using tags"
+            rel="tag">dumpcap</a> <span class="tag-number">&#215;89</span><br/>
+        
+        <a href="/tags/usb/"
+            class="tag-link-usb"
+            title="see questions tagged'usb'using tags"
+            rel="tag">usb</a> <span class="tag-number">&#215;69</span><br/>
+        
+        <a href="/tags/usbmon/"
+            class="tag-link-usbmon"
+            title="see questions tagged'usbmon'using tags"
+            rel="tag">usbmon</a> <span class="tag-number">&#215;15</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Dec. 17, 2016, 11:36 a.m.">17 Dec '16, 11:36</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,120 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Dec. 19, 2016, 1:32 p.m.">19 Dec '16, 13:32</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/44612/usb-capture-on-linux-are-these-packets-raw">USB capture on Linux: Are these packets raw?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45944/decode-usb-interface-class-correctly">Decode USB Interface Class correctly</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35593/usb-capture-explanation-difference-interface-vs-port-vs-endpoint">USB Capture Explanation: Difference Interface vs. Port vs. Endpoint</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35660/determine-physical-usb-port-in-wireshark-dump">Determine Physical USB Port in Wireshark Dump</a>
+        </p>
+        
+        <p>
+            <a href="/questions/36116/what-does-port-1-mean-in-a-usb-capture">What does [Port 1] mean in a USB capture?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/2801/usbmon-captures">usbmon captures</a>
+        </p>
+        
+        <p>
+            <a href="/questions/3196/dissecting-keyboard-and-ccid-from-usbmon">Dissecting keyboard and CCID from usbmon</a>
+        </p>
+        
+        <p>
+            <a href="/questions/302/initd-scipt-for-dumpcap-on-fedora-linux">init.d scipt for dumpcap on Fedora Linux?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/12835/how-to-use-dumpcap-to-monitor-winpcap-on-a-remote-machine">how to use dumpcap to monitor winpcap on a remote machine</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24224/is-it-possible-to-filter-out-specific-fields-of-specific-packet-types-in-a-live-capture">Is it possible to filter out specific fields of specific packet types in a live capture?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

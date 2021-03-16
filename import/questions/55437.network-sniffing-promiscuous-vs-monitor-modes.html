@@ -1,0 +1,914 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Network sniffing - promiscuous vs. monitor modes - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi all, Here is what I want to do, and the solutions I considered. Project : Sniff packets from my local network to identify DNS queries, store them in a plain database with host IP, timestamp and URL as attributes. Solution 1 - Promiscuous mode : I want to sniff only one network at a time, and sinc..." />
+        <meta name="keywords" content="sniffing,capture,capture-filter,sniff,decryption" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/55437/network-sniffing-promiscuous-vs-monitor-modes" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/55437/network-sniffing-promiscuous-vs-monitor-modes?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='MNeqSyhEuhY63eMHDIumf4KLEA7f9FHM' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/55437/network-sniffing-promiscuous-vs-monitor-modes">Network sniffing - promiscuous vs. monitor modes</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-55437-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55437/up/" rel="nofollow"> </a>
+<div id="post-55437-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55437-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55437/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/55437/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi all,</p><p>
+Here is what I want to do, and the solutions I considered.</p>
+<p><b>Project :</b>
+Sniff packets from my local network to identify DNS queries, store them in a plain database with host IP, timestamp and URL as attributes.</p>
+<p><b>Solution 1 - Promiscuous mode :</b>
+I want to sniff only one network at a time, and since it is my own, the ideal solution would be to be connected to the network but capture every packet even if directed to some other IP. As far as I understand, this is called <em>promiscuous mode</em>, but it does not seem to work with my adapter (internal wifi card or external dongle). For instance, when starting a <em>Wireshark</em>/<em>tshark</em> capture, I am not able to sniff packets from/to different IP than mine (except broadcast). Obviously, everything directed from/to is captured.</p>
+<p><b>Solution 2 - Monitor mode :</b>
+My wifi adapters can be switched to <em>monitor mode</em> (scan everything on the channel). Then, if I can sniff every packet on the channel (if possible with wlan capture filter to get rid off packets which do not belong to my network) and decrypt them on the fly, it would do the trick. But I am struggling with the decryption part... Of course I followed the wiki steps (<a href="https://wiki.wireshark.org/HowToDecrypt802.11">https://wiki.wireshark.org/HowToDecrypt802.11</a>), tried with <em>wpa-psk</em> and <em>wpa-pwd</em>, without success. My first thought was that, since I sniff a whole channel, packets may not be decrypted correctly, and Wireshark would think it is better not to apply decryption. Is this behaviour normal ? However, I am able to decrypt the traffic from the pcap file of this tutorial : <a href="http://www.lovemytool.com/blog/2010/05/wireshark-and-tshark-decrypt-sample-capture-file-by-joke-snelders.html">http://www.lovemytool.com/blog/2010/05/wireshark-and-tshark-decrypt-sample-capture-file-by-joke-snelders.html</a>. Thus, I am sure that <em>Wireshark</em> is able to decrypt and that I do the right thing. Then, either it is the wifi adapter fault (is it possible ?) or the way I proceed to filter my packets...</p>
+<p>Every suggestion is appreciated. And, by the way, I am more likely to use <em>tshark</em> than <em>Wireshark</em>, so command lines are welcome.</p>
+<p>C.</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/sniffing/" class="post-tag tag-link-sniffing"
+                                        title="see questions tagged 'sniffing'" rel="tag">sniffing</a>
+                                
+                                    <a href="/tags/capture/" class="post-tag tag-link-capture"
+                                        title="see questions tagged 'capture'" rel="tag">capture</a>
+                                
+                                    <a href="/tags/capture-filter/" class="post-tag tag-link-capture-filter"
+                                        title="see questions tagged 'capture-filter'" rel="tag">capture-filter</a>
+                                
+                                    <a href="/tags/sniff/" class="post-tag tag-link-sniff"
+                                        title="see questions tagged 'sniff'" rel="tag">sniff</a>
+                                
+                                    <a href="/tags/decryption/" class="post-tag tag-link-decryption"
+                                        title="see questions tagged 'decryption'" rel="tag">decryption</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>09 Sep '16, 08:30</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dab41ea1672caeca62b75b631c59123a?s=32&amp;d=identicon&amp;r=g" alt="thefiercerabbit's gravatar image" />
+    <p><a href="/users/25317/thefiercerabbit">thefiercerabbit</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="thefiercerabbit has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/55437/">
+                edited
+                <strong>09 Sep '16, 08:36</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-55437">
+    
+</div>
+<div id="comment-tools-55437" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55437-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    2 Answers:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/55437/network-sniffing-promiscuous-vs-monitor-modes?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/55437/network-sniffing-promiscuous-vs-monitor-modes?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/55437/network-sniffing-promiscuous-vs-monitor-modes?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/55437/network-sniffing-promiscuous-vs-monitor-modes?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="55438"></a>
+                    <div id="answer-container-55438" class="answer answered-by-owner">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55438-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55438/up/" rel="nofollow"> </a>
+<div id="post-55438-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55438-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55438/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>It's like when you take an appointment to your doctor because you're sick, and before you can get there you are already healed ! I should have been more careful. Quoting from <a href="https://wiki.wireshark.org/HowToDecrypt802.11">https://wiki.wireshark.org/HowToDecrypt802.11</a>.</p>
+
+<p><em>WPA and WPA2 use keys derived from an EAPOL handshake, which occurs when a machine joins a Wi-Fi network, to encrypt traffic. Unless all four handshake packets are present for the session you're trying to decrypt, Wireshark won't be able to decrypt the traffic. You can use the display filter eapol to locate EAPOL packets in your capture.
+In order to capture the handshake for a machine, you will need to force the machine to (re-)join the network while the capture is in progress. One way to do this is to put the machine to sleep (for smartphones and tablets, "turning off" the machine puts it to sleep) before you start the capture, start the capture, and then wake the machine up. You will need to do this for all machines whose traffic you want to see.
+WPA and WPA2 use individual keys for each device. Older versions of Wireshark may only be able to use the most recently calculated session key to decrypt all packets. Therefore, when several devices have attached to the network while the trace was running, the packet overview shows all packets decoded, but in the detailed packet view, only packets of the last device that activated ciphering are properly deciphered. Newer Wireshark versions are able to handle up to 256 associations and should be able to decode any packets all the time. Nevertheless decoding can still fail if there are too many associations. Filtering out only the relevant packets (e.g. with "wlan.addr") and saving into a new file should get decryption working in all cases. Wireshark only frees used associations when editing keys or when it's closed. So you may try that when decoding fails for unknown reasons. This also allows you to decode files without any eapol packets in it, as long as Wireshark did see the eapol packets for this communication in another capture after the last start and key edit. If decoding suddenly stops working make sure the needed eapol packetes are still in it.</em></p>
+
+<p>I guess both solutions 1 and 2 are affected by the fact I did not capture <em>EAPOL</em> handshake first. Then, even if the promiscuous mode works, I have to wait the handshake for each host.</p>
+
+<p>Some more tests are now necessary to know if this is enough to decrypt DNS queries...</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55438/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>09 Sep '16, 08:51</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/dab41ea1672caeca62b75b631c59123a?s=32&amp;d=identicon&amp;r=g" alt="thefiercerabbit's gravatar image" />
+    <p><a href="/users/25317/thefiercerabbit">thefiercerabbit</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">&#9679;</span><span class="badgecount">2</span></span><span title="6 badges"><span class="bronze">&#9679;</span><span class="badgecount">6</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="thefiercerabbit has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55438">
+    
+        <a name="55468"></a>
+        <div class="comment" id="comment-55468">
+            <div id="post-55468-score" class="comment-score"></div>
+            <div class="comment-text"><p>Okay, now that I've finally finished my project, here is a link to the code.</p>
+
+<p>This version only print the sniffed DNS traffic and the DHCP packets (to figure out when a client has joined to the network, etc...). The traffic can only be decrypted if the EAPOL packets have been captured before.</p>
+
+<p>Remember to be in <em>monitor mode</em> and to have correctly set the channel.</p>
+
+<p>Link : <a href="https://github.com/thefiercerabbit/dns-sniffer">https://github.com/thefiercerabbit/dns-sniffer</a></p></div>
+            <div class="comment-info" id="comment-55468-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '16, 04:26)</span>
+                <a class="comment-user userinfo" href="/users/25317/thefiercerabbit">thefiercerabbit</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55438" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55438-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <a name="55469"></a>
+                    <div id="answer-container-55469" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-55469-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/55469/up/" rel="nofollow"> </a>
+<div id="post-55469-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-55469-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/55469/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>To collect frames for wireless diagnostics at application layer (e.g. DNS, per your specific case) requires several things:</p>
+<ol>
+<li>Wireless hardware capable of monitor mode.  This will usually pass up CONTROL and MGMT traffic to the stack for capture.  It will also usually leave the 802.11 header intact and add some sort of header with hardware info, such as radiotap, PPI, etc.  This mode is very driver hardware/specific, i.e. with Windows it can be difficult to get this mode.  With Mac laptops, they support it out of the box.  Linux has many drivers that support it as well.</li>
+<li>Wireless hardware capable of promiscuous mode.  This happens sometimes with monitor mode, but definitely not always.  It's hardware and driver specific.  This removes the hardware/driver filter which would drop frames not intended for this host.<br>
+</li>
+<li>Ability to decrypt, which as you found, requires the 4-way EAPOL handshake and either the pre-shared passphrase for WPA2 &amp; SSID or the PMK if using Enterprise (can be difficult to get this).</li>
+</ol>
+<p>Don't assume monitor mode == promiscuous mode in the wifi world.  Sounds as if your adapter supports both, so you are all set.  I would argue there is only one solution if using wireless sniffing for what you need and that is to have both of these features.</p>
+<p>As an alternative, could you have just grab wired traffic at the router or DNS server?  No need to decrypt then, and less overhead handling all the CONTROL and MGMT frames.  Perhaps you don't have wired access.<br>
+</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/55469/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>11 Sep '16, 06:09</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/0a47ef51dd9c9996d194a4983295f5a4?s=32&amp;d=identicon&amp;r=g" alt="Bob%20Jones's gravatar image" />
+    <p><a href="/users/112/bob-jones">Bob Jones</a><br/>
+    <span class="score" title="1014 reputation points"><span class="">1.0k</span></span><span title="2 badges"><span class="badge1">&#9679;</span><span class="badgecount">2</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="15 badges"><span class="bronze">&#9679;</span><span class="badgecount">15</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Bob Jones has 19 accepted answers">21&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-55469">
+    
+        <a name="55475"></a>
+        <div class="comment" id="comment-55475">
+            <div id="post-55475-score" class="comment-score"></div>
+            <div class="comment-text"><blockquote>
+<p>As an alternative, could you have just grab wired traffic at the router or DNS server? No need to decrypt then, and less overhead handling all the CONTROL and MGMT frames. Perhaps you don't have wired access.</p>
+</blockquote>
+
+<p>Actually I have wired access, but I want my script to be able to do without it.
+However, if I believe my previous tests, packets sent over WiFi are not <em>repeated</em> on the wire. Then, a DNS query would reach the router by the air, and my machine would not see any of it since it is only connected via the wire. I guess I should grab the traffic after the router, which is not possible in my case.</p></div>
+            <div class="comment-info" id="comment-55475-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(11 Sep '16, 13:46)</span>
+                <a class="comment-user userinfo" href="/users/25317/thefiercerabbit">thefiercerabbit</a>
+                
+            </div>
+        </div>
+    
+        <a name="55480"></a>
+        <div class="comment" id="comment-55480">
+            <div id="post-55480-score" class="comment-score"></div>
+            <div class="comment-text"><p>I guess Bob's idea was that since you are interested specifically in DNS requests, these have to be sent to an external DNS server in the internet over the WAN, so he didn't come even close to an idea that WLAN frames should be mirrored on a LAN interface bridged with the WLAN one. But as you say you have no possibility to capture at the WAN side of your access point, you have to continue your way.</p>
+
+<p>In an environment you administer yourself, using any wireless AP which supports bridge mode gives you a chance to capture DNS traffic of clients at an Ethernet wire if you insert the capturing PC between the AP and the router, which would simplify the task a lot; in an environment administered by someone else, you are not likely to get access to the WPA passphrases so even the WLAN monitoring mode won't help you much.</p></div>
+            <div class="comment-info" id="comment-55480-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(12 Sep '16, 02:24)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-55469" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-55469-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/55437/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='MNeqSyhEuhY63eMHDIumf4KLEA7f9FHM' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55437/network-sniffing-promiscuous-vs-monitor-modes?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/55437/network-sniffing-promiscuous-vs-monitor-modes?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/capture/"
+            class="tag-link-capture"
+            title="see questions tagged'capture'using tags"
+            rel="tag">capture</a> <span class="tag-number">&#215;549</span><br/>
+        
+        <a href="/tags/capture-filter/"
+            class="tag-link-capture-filter"
+            title="see questions tagged'capture-filter'using tags"
+            rel="tag">capture-filter</a> <span class="tag-number">&#215;184</span><br/>
+        
+        <a href="/tags/decryption/"
+            class="tag-link-decryption"
+            title="see questions tagged'decryption'using tags"
+            rel="tag">decryption</a> <span class="tag-number">&#215;165</span><br/>
+        
+        <a href="/tags/sniffing/"
+            class="tag-link-sniffing"
+            title="see questions tagged'sniffing'using tags"
+            rel="tag">sniffing</a> <span class="tag-number">&#215;73</span><br/>
+        
+        <a href="/tags/sniff/"
+            class="tag-link-sniff"
+            title="see questions tagged'sniff'using tags"
+            rel="tag">sniff</a> <span class="tag-number">&#215;19</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="Sept. 9, 2016, 8:30 a.m.">09 Sep '16, 08:30</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>19,838 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="Sept. 12, 2016, 2:24 a.m.">12 Sep '16, 02:24</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/25901/wireshark-capture-filter-syntax">wireshark capture filter syntax</a>
+        </p>
+        
+        <p>
+            <a href="/questions/52826/capture-filter-which-is-similar-to-cflowtemplateid-display-filter">Capture filter which is similar to cflow.templateid display filter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/30222/issue-viewing-traffic-in-wpa-encrypted-network">Issue viewing traffic in WPA Encrypted network</a>
+        </p>
+        
+        <p>
+            <a href="/questions/53238/how-to-capture-my-usb-to-lan-and-network-card-in-the-new-version-203">How to capture my Usb to lan and network card in the new version 2.0.3</a>
+        </p>
+        
+        <p>
+            <a href="/questions/13982/80211-decryption-not-working-properly">802.11 decryption not working properly</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31676/how-to-deauthenticate-and-capture-the-eapol">How to deauthenticate and capture the eapol?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/27436/foundry-fdp-capture-filter">Foundry FDP Capture Filter</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54074/capture-5ghz-wifi-traffic-for-a-40mhz-width-channel">Capture 5GHz WiFi traffic for a 40MHz width channel.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/50322/weird-capture-issue-seem-to-be-missing-traffic">Weird capture issue - seem to be missing traffic</a>
+        </p>
+        
+        <p>
+            <a href="/questions/46907/help-decrypt-wireshark-capture-so-many-protocols">Help! Decrypt wireshark capture, so many protocols</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

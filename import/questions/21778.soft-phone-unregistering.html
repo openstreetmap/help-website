@@ -1,0 +1,893 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Soft Phone Unregistering - Wireshark Q&amp;A</title>
+        <meta name="description" content="Hi Experts, I am hoping to get some advice on what I am seeing in the trace: http://www.cloudshark.org/captures/b519beceeb7a We have a soft phone that keeps getting disconnected and hence a wireshark capture was attempted. I am trying to understand the significance of packets 93-96 with regards to i..." />
+        <meta name="keywords" content="prev_seg_lost,unseen_segment,h323" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/21778/soft-phone-unregistering" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/21778/soft-phone-unregistering?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='lfmSvh9q6ZaJDlEBm8242C1CIkjr0viM' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/21778/soft-phone-unregistering">Soft Phone Unregistering</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-21778-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/21778/up/" rel="nofollow"> </a>
+<div id="post-21778-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-21778-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/21778/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/21778/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Hi Experts,</p>
+<p>I am hoping to get some advice on what I am seeing in the trace:</p>
+<p><a href="http://www.cloudshark.org/captures/b519beceeb7a">http://www.cloudshark.org/captures/b519beceeb7a</a></p>
+<p>We have a soft phone that keeps getting disconnected and hence a wireshark capture was attempted.</p>
+<p>I am trying to understand the significance of packets 93-96 with regards to it being unseen segments/uncaptured segments.</p>
+<p>For packet 93, the sequence number is 2161 with the len as 54. I guess I would expect to see the ACK to be 2215 and not 2259 in packet 94.</p>
+<p>Packet 95 is kinda confusing me as it states the ACK is for a packet with a sequence number of 254 but it matches the sequence number stated in packet 94. However, I guess, the length of the packet in packet 94 should be 44 giving rise to 2303. I am getting confused at this stage so I apologise if I got the wrong end of the stick with that.</p>
+<p>Then in packet 96, I think that matches packet 95 but it says TCP ACKed unseen segment when I think the segment it ACKs is packet 95.</p>
+<p>I think the above is correct but would appreciate some advice if anyone has a moment.</p>
+<p>Regards,</p>
+<p>R</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/prev_seg_lost/" class="post-tag tag-link-prev_seg_lost"
+                                        title="see questions tagged 'prev_seg_lost'" rel="tag">prev_seg_lost</a>
+                                
+                                    <a href="/tags/unseen_segment/" class="post-tag tag-link-unseen_segment"
+                                        title="see questions tagged 'unseen_segment'" rel="tag">unseen_segment</a>
+                                
+                                    <a href="/tags/h323/" class="post-tag tag-link-h323"
+                                        title="see questions tagged 'h323'" rel="tag">h323</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>05 Jun '13, 13:19</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/3c8b64f172d1e701ca7539332b54a0ae?s=32&amp;d=identicon&amp;r=g" alt="Rhodium's gravatar image" />
+    <p><a href="/users/5073/rhodium">Rhodium</a><br/>
+    <span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">&#9679;</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">&#9679;</span><span class="badgecount">4</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Rhodium has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/21778/">
+                edited
+                <strong>06 Jun '13, 04:59</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" alt="grahamb's gravatar image" />
+            <p><a href="/users/1225/grahamb">grahamb ♦</a><br/>
+            <span class="score" title="19834 reputation points"><span class="">19.8k</span></span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">&#9679;</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">&#9679;</span><span class="badgecount">206</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-21778">
+    
+</div>
+<div id="comment-tools-21778" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-21778-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/21778/soft-phone-unregistering?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/21778/soft-phone-unregistering?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/21778/soft-phone-unregistering?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/21778/soft-phone-unregistering?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="21779"></a>
+                    <div id="answer-container-21779" class="answer accepted-answer">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-21779-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/21779/up/" rel="nofollow"> </a>
+<div id="post-21779-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-21779-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/21779/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+      <a class="accept-answer on"
+        title="Rhodium has selected this answer as the correct answer"
+        href="/accept_answer/21779/" rel="nofollow">
+      </a>
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+For packet 93, the sequence number is 2161 with the len as 54. I guess I would expect to see the ACK to be 2215 and not 2259 in packet 94.
+</blockquote>
+
+<p>That's correct. There are 44 bytes missing from the capture file. That's why packet 94 says "TCP ACKed unseen segment" and packet 95 says "TCP Previous segment not captured." We know from the ACK in packet 94 that the missing bytes were received, but Wireshark did not capture them.
+</p><blockquote>
+Packet 95 is kinda confusing me as it states the ACK is for a packet with a sequence number of 254 but it matches the sequence number stated in packet 94. However, I guess, the length of the packet in packet 94 should be 44 giving rise to 2303. I am getting confused at this stage so I apologise if I got the wrong end of the stick with that
+</blockquote>
+An ACK does not correspond to the sequence number of the packet it's acknowledging; it corresponds to the <em>next expected sequence number</em>. So packet 95 is acknowledging packet 92. The sequence number of packet 92 is 212 and there are 42 bytes of data, so the next expected sequence number is 254.
+<blockquote>
+Then in packet 96, I think that matches packet 95 but it says TCP ACKed unseen segment when I think the segment it ACKs is packet 95.
+</blockquote>
+Again, an ACK matches the next expected sequence number, so packet 95 with sequence number 2303 is the one <em>after</em> the packet that is being acknowledged by packet 96 with an ACK number of 2303. So we already know from the ACK number of 2259 in packet 94 that there are 44 bytes missing; now the ACK number of 2303 in packet 96 tells us that there are another 44 bytes missing, for a total of 88 bytes, and again Wireshark confirms this with the "TCP ACKed unseen segment" message.<p></p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/21779/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>05 Jun '13, 14:37</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/071fe61f64868d98bdf4eb060b63b6ca?s=32&amp;d=identicon&amp;r=g" alt="Jim%20Aragon's gravatar image" />
+    <p><a href="/users/527/jim-aragon">Jim Aragon</a><br/>
+    <span class="score" title="7187 reputation points"><span class="">7.2k</span></span><span title="7 badges"><span class="badge1">&#9679;</span><span class="badgecount">7</span></span><span title="33 badges"><span class="silver">&#9679;</span><span class="badgecount">33</span></span><span title="118 badges"><span class="bronze">&#9679;</span><span class="badgecount">118</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Jim Aragon has 70 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-21779">
+    
+        <a name="21780"></a>
+        <div class="comment" id="comment-21780">
+            <div id="post-21780-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi Jim, thank you for taking the time to respond to my query and for clearing my confusion somewhat.</p>
+
+<p>"We know from the ACK in packet 94 that the missing bytes were received, but Wireshark did not capture them."</p>
+
+<p>We know that because the ACK states 2254 and if we did not receive it, we would never proceed to increase the ACK to 2254. Is that a fair deduction.</p>
+
+<p>"so packet 95 with sequence number 2303 is the one after the packet that is being acknowledged by packet 96 with an ACK number of 2303"</p>
+
+<p>That makes sense somewhat but then it raises a question as to the order of packets being captured and how does this happen? </p>
+
+<p>Finally, it seems that there are no packets missing at all as implied by the tool, it was just as you stated, they were not captured for some reason or other?</p></div>
+            <div class="comment-info" id="comment-21780-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jun '13, 15:36)</span>
+                <a class="comment-user userinfo" href="/users/5073/rhodium">Rhodium</a>
+                
+            </div>
+        </div>
+    
+        <a name="21783"></a>
+        <div class="comment" id="comment-21783">
+            <div id="post-21783-score" class="comment-score">1</div>
+            <div class="comment-text"><p>Yes, that's a fair deduction. A device will not acknowledge data that it did not receive. An ACK of 2259 means "I've received bytes 1 through 2258, and I expect 2259 next."</p>
+
+<p>I'm not sure what you're asking about the order of packets being captured. I do not see any evidence of actual packet loss between the two hosts, but there are clearly packets that weren't captured.</p></div>
+            <div class="comment-info" id="comment-21783-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jun '13, 19:07)</span>
+                <a class="comment-user userinfo" href="/users/527/jim-aragon">Jim Aragon</a>
+                
+            </div>
+        </div>
+    
+        <a name="21784"></a>
+        <div class="comment" id="comment-21784">
+            <div id="post-21784-score" class="comment-score">1</div>
+            <div class="comment-text"><p>I don't think this is a TCP problem. That session looks ok until a FIN at packet 98 though there are no indicators that either side is missing any data.</p>
+
+<p>I'm not an expert in H.323 or H.225, but looks like three seconds after the TCP warnings in question we see an H.225 message over that session on packet 97, which is ack'd in packet 98, but packet 98 also has a TCP FIN. So, at the TCP layer the data was received and was acknowledged, but something (possibly the application layer in response to packet 98) decided the TCP session should be ended. Also see that the corresponding UDP stream has an H.225 unregistration request at the same microsecond as the TCP session's FIN.</p></div>
+            <div class="comment-info" id="comment-21784-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(05 Jun '13, 20:42)</span>
+                <a class="comment-user userinfo" href="/users/4985/quadratic">Quadratic</a>
+                
+            </div>
+        </div>
+    
+        <a name="21789"></a>
+        <div class="comment" id="comment-21789">
+            <div id="post-21789-score" class="comment-score"></div>
+            <div class="comment-text"><p>As the signaling is done using "non standard parameters" and oid:S
+it's impossible to understand the call flow without having the interpretation of the OID:s. Does codecs match between caller and callee for instance?</p></div>
+            <div class="comment-info" id="comment-21789-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '13, 00:28)</span>
+                <a class="comment-user userinfo" href="/users/42/anders">Anders ♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="21795"></a>
+        <div class="comment" id="comment-21795">
+            <div id="post-21795-score" class="comment-score"></div>
+            <div class="comment-text"><p>Hi all,</p>
+
+<p>Thank you for the very informative and enlightening answers.</p>
+
+<p>Jim, you advised that:</p>
+
+<p>"so packet 95 with sequence number 2303 is the one after the packet that is being acknowledged by packet 96 with an ACK number of 2303"</p>
+
+<p>So I am inferring that packet 95 should be after packet 96 and thus the order of the packets is a bit disordered or did I misunderstand?</p>
+
+<p>Quadratic, it does seem to be an "application" issue as you stated because the TCP communication, seems to be fine.</p>
+
+<p>Anders, this is for a soft phone and I agree that it uses proprietary information in the parameters but the client complains about loss of comms with their CM when attempting to pickup a call with the error message "network problem" which is patently untrue.</p>
+
+<p>Thank you once again for your insight, it is much appreciated.</p></div>
+            <div class="comment-info" id="comment-21795-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '13, 04:40)</span>
+                <a class="comment-user userinfo" href="/users/5073/rhodium">Rhodium</a>
+                
+            </div>
+        </div>
+    
+        <a name="21807"></a>
+        <div class="comment not_top_scorer" id="comment-21807">
+            <div id="post-21807-score" class="comment-score"></div>
+            <div class="comment-text"><p>"So I am inferring that packet 95 should be after packet 96 and thus the order of the packets is a bit disordered or did I misunderstand?"</p>
+
+<p>This has to do with where you captured the data and the round trip time between the two systems. The transmitting system does not stop and wait for a packet to get all the way  to the receiver and for the ACK to come back, it keeps transmitting. Because of this, an ACK will not always be in the trace file immediately after the packet that it is acknowledging. The sender is often able to get several more packets on the wire before the ACK makes its way back.</p></div>
+            <div class="comment-info" id="comment-21807-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(06 Jun '13, 13:42)</span>
+                <a class="comment-user userinfo" href="/users/527/jim-aragon">Jim Aragon</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-21779" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-21779-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/21778/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='lfmSvh9q6ZaJDlEBm8242C1CIkjr0viM' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/21778/soft-phone-unregistering?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/21778/soft-phone-unregistering?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/unseen_segment/"
+            class="tag-link-unseen_segment"
+            title="see questions tagged'unseen_segment'using tags"
+            rel="tag">unseen_segment</a> <span class="tag-number">&#215;14</span><br/>
+        
+        <a href="/tags/h323/"
+            class="tag-link-h323"
+            title="see questions tagged'h323'using tags"
+            rel="tag">h323</a> <span class="tag-number">&#215;11</span><br/>
+        
+        <a href="/tags/prev_seg_lost/"
+            class="tag-link-prev_seg_lost"
+            title="see questions tagged'prev_seg_lost'using tags"
+            rel="tag">prev_seg_lost</a> <span class="tag-number">&#215;7</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="June 5, 2013, 1:19 p.m.">05 Jun '13, 13:19</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>1,874 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 6, 2013, 1:42 p.m.">06 Jun '13, 13:42</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/3013/wireshark-consumes-100-percent-cpu-while-feed-h323-protocol-data-using-pipe-when-only-single-one-cpu-on-client">Wireshark consumes 100 percent CPU while feed H323 protocol data using pipe when Only single one CPU on client</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18190/utility-to-sort-pcap-or-pcapng-capture-file-based-on-timestamp">Utility to sort pcap or pcapng capture file based on timestamp?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/4225/lua-how-to-get-multiple-values-from-faststart-items-h225-h245">LUA how to get multiple values from faststart items H225, H245</a>
+        </p>
+        
+        <p>
+            <a href="/questions/18877/wireshark-error-with-tcp-acked-unseen-segment">Wireshark error with &quot;TCP Acked unseen segment&quot;?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/6048/problem-with-h225-bad-asn1-file">problem with H225. Bad asn1 file ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21230/tcp-acked-unseen-segment-wireshark-bug">TCP ACKed unseen segment - wireshark bug?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8612/srtp-over-h323">SRTP over H323</a>
+        </p>
+        
+        <p>
+            <a href="/questions/24980/lots-of-retransmissions-unseen-segments-and-out-of-order-segments">Lots of retransmissions, unseen segments and out of order segments</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9997/as-a-full-call-filter-h323">as a full call filter h323</a>
+        </p>
+        
+        <p>
+            <a href="/questions/34602/when-is-tcp-acked-unseen-not-a-bug">When is TCP ACKed Unseen NOT a bug?</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

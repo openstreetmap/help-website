@@ -1,0 +1,944 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Can identical initial sequence Numbers cause issues? - Wireshark Q&amp;A</title>
+        <meta name="description" content="After chasing this issue with a ARM device only connecting to an email server sometimes finally the people who wrote the TCP/IP stack mentioned that if there is not random delay in between email sends the device would generate identical sequence numbers upon restart (since it uses up-time to seed th..." />
+        <meta name="keywords" content="smtp,number,sequence" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/32932/can-identical-initial-sequence-numbers-cause-issues" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/32932/can-identical-initial-sequence-numbers-cause-issues?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='zhQvubgOtGqEXAxtfytYREBv1q7NY7Yc' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/32932/can-identical-initial-sequence-numbers-cause-issues">Can identical initial sequence Numbers cause issues?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-32932-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32932/up/" rel="nofollow"> </a>
+<div id="post-32932-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-32932-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32932/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/32932/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>After chasing this issue with a ARM device only connecting to an email server sometimes finally the people who wrote the TCP/IP stack mentioned that if there is not random delay in between email sends the device would generate identical sequence numbers upon restart (since it uses up-time to seed the pseudo random number generator).</p>
+<p>I checked in Wireshark and sure enough I had identical sequence numbers in between restarts and the first one always would work and all consecutive tries with the same sequence number failed.</p>
+<p>Unless I walked away for a minute or two and returned and then restarted the device at which point the sequence number would work the first time and then not work all consecutive times.</p>
+<p>So is there some timeout period after which the same sequence number can be used on an SMTP server? And consequently is there some period for which the server ignores any connect requests from sequence numbers it has already seen? How long would that period be?</p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/smtp/" class="post-tag tag-link-smtp"
+                                        title="see questions tagged 'smtp'" rel="tag">smtp</a>
+                                
+                                    <a href="/tags/number/" class="post-tag tag-link-number"
+                                        title="see questions tagged 'number'" rel="tag">number</a>
+                                
+                                    <a href="/tags/sequence/" class="post-tag tag-link-sequence"
+                                        title="see questions tagged 'sequence'" rel="tag">sequence</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>20 May '14, 11:32</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/d10b4a16cda08123bdeafd8686342d41?s=32&amp;d=identicon&amp;r=g" alt="wes000000's gravatar image" />
+    <p><a href="/users/7231/wes000000">wes000000</a><br/>
+    <span class="score" title="21 reputation points">21</span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">&#9679;</span><span class="badgecount">5</span></span><span title="9 badges"><span class="bronze">&#9679;</span><span class="badgecount">9</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="wes000000 has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-32932">
+    
+</div>
+<div id="comment-tools-32932" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32932-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/32932/can-identical-initial-sequence-numbers-cause-issues?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/32932/can-identical-initial-sequence-numbers-cause-issues?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/32932/can-identical-initial-sequence-numbers-cause-issues?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/32932/can-identical-initial-sequence-numbers-cause-issues?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="32944"></a>
+                    <div id="answer-container-32944" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-32944-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/32944/up/" rel="nofollow"> </a>
+<div id="post-32944-score" class="post-score"
+    title="current number of votes">
+    1
+</div>
+<a id="post-32944-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/32944/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <blockquote>
+<blockquote>
+<p>Can identical initial sequence Numbers cause issues?</p>
+</blockquote>
+</blockquote>
+<p>Not exactly, see below.</p>
+<p>(Notes: </p>
+<ol>
+<li>I'm assuming that by "sequence numbers" you mean "TCP sequence numbers").</li>
+<li>Wireshark (default configuration) shows TCP sequence numbers as "relative sequence numbers".
+    Change the TCP preference to see actual TCP sequence numbers. I'm assuming that you
+    are referring to the 'actual' TCP sequence numbers when you indicate that you see "identical
+    sequence numbers".
+)</li>
+</ol>
+<blockquote>
+<blockquote>
+<p>So is there some timeout period after which the same sequence number can be used on an SMTP server?
+And consequently is there some period for which the server ignores any connect requests from sequence
+numbers it has already seen? How long would that period be?
+</p>
+</blockquote>
+</blockquote>
+<p>I expect that the issue has to do with how TCP works (and nothing to do with SMTP) but is related to a timeout.</p>
+<p>I'm not an expert on all of this, but I think the following gives the gist:</p>
+<p>TCP has a concept of "time-wait" being a timeout after a TCP connection "completes" during which a new connection (with the same IP-address/TCP-port endpoints) will not be accepted by a server.</p>
+<p>So: A question: Are the multiple connection requests using the same source port so that the two IP-address/TCP-port endpoints are identical for each connection ? </p>
+<p>If so, the "time-wait" timeout is the reason you have to wait a while before a new connection to the server can be established. I believe the default "time-wait" timeout is 2 minutes.</p>
+<p>Normally a client will increment the TCP source port for each new connection to a server so that this issue is avoided.</p>
+<p>In your case, you seem to indicate that the client restarts (often ?) and it seems that after a restart that the initial conditions are the same.</p>
+<p>There's more detail and subtlety to all of this; A web search will provide the gory details.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/32944/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>20 May '14, 22:40</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/bfb20acfe44690473b10c7963b5d4a18?s=32&amp;d=identicon&amp;r=g" alt="Bill%20Meier's gravatar image" />
+    <p><a href="/users/22/bill-meier">Bill Meier ♦♦</a><br/>
+    <span class="score" title="3180 reputation points"><span class="">3.2k</span></span><span title="1 badges"><span class="badge1">&#9679;</span><span class="badgecount">1</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="50 badges"><span class="bronze">&#9679;</span><span class="badgecount">50</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Bill Meier has 31 accepted answers">17&#37;</span>
+    </p>
+</div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-32944">
+    
+        <a name="32952"></a>
+        <div class="comment" id="comment-32952">
+            <div id="post-32952-score" class="comment-score"></div>
+            <div class="comment-text"><p>Both your assumptions are correct: I did turn off relative TCP sequence numbers in Wireshark and I was referring to TCP sequence numbers.</p>
+
+<p>The client does use the same ports each time and the same IP. And the "time-wait" may be a large part of my problem as yes I am intentionally restarting the client often and after each restart everything goes back to a default condition.</p>
+
+<p>But I am thinking there must be something to do with the sequence numbers too, because if I wait several minutes and turn on the device both emails will send (two different port numbers and two different sequence numbers). But if I restart the device again the first email fails to send (identical port and sequence number to first try) but the second email succeeds (also identical port # but a different sequence number).</p>
+
+<p>Maybe the server only ignores the request if it is the same IP, same port, and the same sequence #...</p></div>
+            <div class="comment-info" id="comment-32952-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(21 May '14, 06:33)</span>
+                <a class="comment-user userinfo" href="/users/7231/wes000000">wes000000</a>
+                
+            </div>
+        </div>
+    
+        <a name="32988"></a>
+        <div class="comment" id="comment-32988">
+            <div id="post-32988-score" class="comment-score"></div>
+            <div class="comment-text"><p>It's certainly possible. (As I said I'm not an expert on all the details of TCP).</p>
+
+<p>I'm a little confused, however.</p>
+
+<p>I'm understanding you to say that "waiting several minutes before turning on the device" (after sending EMails ?) gives different results than "restarting the device" (not waiting ?).</p>
+
+<p>Based upon your description, I got the impression that the same ports &amp; sequence numbers were used each time after a restart.</p>
+
+<p>Would you be able to share a capture (along with some info about when the device is reset, etc) ?</p>
+
+<p>See <a href="http://ask.wireshark.org/questions/1221/standard-way-people-should-attach-capture-files-to-questions-in-this-forum">standard way people should attach capture fles</a></p></div>
+            <div class="comment-info" id="comment-32988-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 May '14, 06:16)</span>
+                <a class="comment-user userinfo" href="/users/22/bill-meier">Bill Meier ♦♦</a>
+                
+            </div>
+        </div>
+    
+        <a name="33009"></a>
+        <div class="comment" id="comment-33009">
+            <div id="post-33009-score" class="comment-score"></div>
+            <div class="comment-text"><p>You are understanding what I am saying correctly. A device 'turn on' is the same a 'reset' the only difference is whether I reset the device back to back or wait several minutes and then reset (turn off and on) the device.</p>
+
+<p>The same ports are being used after each restart, it always starts at 1024 for the first email and increments up to 1025 for the second email.</p>
+
+<p>The sequence numbers are always the same after each restart as well. If I wait several minutes before resetting I get the same two sequence numbers and port # I do every time, but it works. Form that point forward any requests with the same port, same IP, and same sequence # fail. But requests with the same port # and IP but different sequence #'s succeed.</p>
+
+<p>Here are the before and after reset capture files on Google Drive:</p>
+
+<p><a href="https://drive.google.com/file/d/0B-pYPAmyNVqbTWpLaWNpeWx5MjQ/edit?usp=sharing">https://drive.google.com/file/d/0B-pYPAmyNVqbTWpLaWNpeWx5MjQ/edit?usp=sharing</a></p>
+
+<p><a href="https://drive.google.com/file/d/0B-pYPAmyNVqbUHQwMkpZQjNZMk0/edit?usp=sharing">https://drive.google.com/file/d/0B-pYPAmyNVqbUHQwMkpZQjNZMk0/edit?usp=sharing</a></p></div>
+            <div class="comment-info" id="comment-33009-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(22 May '14, 13:45)</span>
+                <a class="comment-user userinfo" href="/users/7231/wes000000">wes000000</a>
+                
+            </div>
+        </div>
+    
+        <a name="33028"></a>
+        <div class="comment" id="comment-33028">
+            <div id="post-33028-score" class="comment-score"></div>
+            <div class="comment-text"><p>If a server has a connection in the TIME_WAIT state, and
+it receives a new connection request (SYN) using the same
+client and server ports, it should drop the old
+connection
+and respond to the new connection with a SYN|ACK if the
+packet sequence number of the new request is higher
+than that of the old connection.</p>
+
+<p>However, if the sequence of the new connection request
+is much higher than that of the old connection, the
+server may respond with an ACK for the previous
+connection.</p>
+
+<p>An iptrace taken during the proper interaction will show:</p>
+
+<p>TCP:    &lt;source port="32869," destination="" port="2050"&gt;
+  TCP:    th_seq=f548ee61, th_ack=e24dabe0
+  TCP:    th_off=5, flags&lt;fin |="" ack=""&gt;</p>
+
+<p>TCP:    &lt;source port="2050," destination="" port="32869"&gt;
+  TCP:    th_seq=e24dabe0, th_ack=f548ee62
+  TCP:    th_off=5, flags&lt;ack&gt;</p>
+
+<p>TCP:    &lt;source port="32869," destination="" port="2050"&gt;
+  TCP:    th_seq=f54bdc5d, th_ack=0
+  TCP:    th_off=10, flags&lt;syn&gt;</p>
+
+<p>TCP:    &lt;source port="2050," destination="" port="32869"&gt;
+  TCP:    th_seq=f54ae262, th_ack=f54bdc5e
+  TCP:    th_off=6, flags&lt;syn |="" ack=""&gt;</p>
+
+<p>When the difference in the packet sequence number
+of the new connection request and that of the previous
+connection is greater than 2147483647, the server does
+not drop the old connection.</p>
+
+<p>The following iptrace was taken when the packet
+sequence number (4074992888) of the new connection
+request (SYN) is 2233732218 higher than that of the
+previous connection (1841260670).  Here, the server
+does not drop the old connection:</p>
+
+<p>TCP:    &lt;source port="2212," destination="" port="8970"&gt;
+  TCP:    th_seq=1841260670, th_ack=200941090
+  TCP:    th_off=5, flags&lt;fin |="" ack=""&gt;</p>
+
+<p>TCP:    &lt;source port="8970," destination="" port="2212"&gt;
+  TCP:    th_seq=200941090, th_ack=1841260671
+  TCP:    th_off=5, flags&lt;ack&gt;</p>
+
+<p>TCP:    &lt;source port="2212," destination="" port="8970"&gt;
+  TCP:    th_seq=4074992888, th_ack=0
+  TCP:    th_off=7, flags&lt;syn&gt;</p>
+
+<p>TCP:    &lt;source port="8970," destination="" port="2212"&gt;
+  TCP:    th_seq=200941090, th_ack=1841260671
+  TCP:    th_off=5, flags&lt;ack&gt;</p>
+
+<p>Local fix</p></div>
+            <div class="comment-info" id="comment-33028-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 May '14, 22:18)</span>
+                <a class="comment-user userinfo" href="/users/4851/kishan-pandey">kishan pandey</a>
+                
+            </div>
+        </div>
+    
+        <a name="33105"></a>
+        <div class="comment" id="comment-33105">
+            <div id="post-33105-score" class="comment-score"></div>
+            <div class="comment-text"><p>If the device were to send a "SYN with source port, destination port, and sequence # all identical" or a "SYN packet with same source and destination port but a seq # greater then 2233732218 from the previous" all the same would the server respond with anything or does it simply ignore the request and send nothing back?</p>
+
+<p>And so from what I'm understanding (correct me if I'm wrong) to get away with using the same ports everytime the new sequence # needs to be greater than the previous # but less than (2233732218 + previous). And if those conditions are true it will work every time?</p></div>
+            <div class="comment-info" id="comment-33105-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(27 May '14, 06:25)</span>
+                <a class="comment-user userinfo" href="/users/7231/wes000000">wes000000</a>
+                
+            </div>
+        </div>
+    
+        <a name="33361"></a>
+        <div class="comment not_top_scorer" id="comment-33361">
+            <div id="post-33361-score" class="comment-score"></div>
+            <div class="comment-text"><p>This problem has been explained and 'solved' in another question:</p>
+
+<blockquote>
+<p><a href="http://ask.wireshark.org/questions/33286/sequence-number-differential-greater-than-2-billion-causing-issues">http://ask.wireshark.org/questions/33286/sequence-number-differential-greater-than-2-billion-causing-issues</a></p>
+</blockquote></div>
+            <div class="comment-info" id="comment-33361-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(03 Jun '14, 14:45)</span>
+                <a class="comment-user userinfo" href="/users/2593/kurt-knochner">Kurt Knochner ♦</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-32944" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 6
+        </span>
+        <a href="#" class="show-all-comments-link">show 1 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-32944-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/32932/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='zhQvubgOtGqEXAxtfytYREBv1q7NY7Yc' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32932/can-identical-initial-sequence-numbers-cause-issues?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/32932/can-identical-initial-sequence-numbers-cause-issues?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/sequence/"
+            class="tag-link-sequence"
+            title="see questions tagged'sequence'using tags"
+            rel="tag">sequence</a> <span class="tag-number">&#215;39</span><br/>
+        
+        <a href="/tags/smtp/"
+            class="tag-link-smtp"
+            title="see questions tagged'smtp'using tags"
+            rel="tag">smtp</a> <span class="tag-number">&#215;25</span><br/>
+        
+        <a href="/tags/number/"
+            class="tag-link-number"
+            title="see questions tagged'number'using tags"
+            rel="tag">number</a> <span class="tag-number">&#215;16</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="May 20, 2014, 11:32 a.m.">20 May '14, 11:32</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>4,309 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="June 3, 2014, 2:45 p.m.">03 Jun '14, 14:45</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/49275/nat-breaks-relative-sequence-numbers">NAT breaks relative sequence numbers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31791/filter-for-duplicate-sequence-numbers">Filter for duplicate sequence numbers</a>
+        </p>
+        
+        <p>
+            <a href="/questions/33286/sequence-number-differential-greater-than-2-billion-causing-issues">Sequence number differential greater than 2 billion causing issues?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/9209/sequence-number-are-all-the-same125-throughout-the-capture-why">Sequence number are all the same(125) throughout the capture why?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35642/syn-packet-and-sequence-number">Syn packet and Sequence Number</a>
+        </p>
+        
+        <p>
+            <a href="/questions/41653/tcp-and-fin-packet">TCP and FIN packet</a>
+        </p>
+        
+        <p>
+            <a href="/questions/792/esp-sequence-check-for-lost-packets">ESP sequence check for lost packets ?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/22052/how-to-filter-for-out-of-sequence-packets-based-on-ip-identification-number">How to filter for Out of Sequence packets based on IP Identification number?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/47016/ack-seq-number-and-number-of-retransmission">ACK seq number and number of retransmission</a>
+        </p>
+        
+        <p>
+            <a href="/questions/8729/missing-smtp-traffic">missing SMTP traffic</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->

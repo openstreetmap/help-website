@@ -1,0 +1,1356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- base_content.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>ISUP IAM Malformed? - Wireshark Q&amp;A</title>
+        <meta name="description" content="Can someone please take a look at this IAM decode and give me your opinion if it is correct or malformed please? What I am suspecting to be incorrect is the optional fields, specifically the Generic Name. When this call leaves the originating MSS it is leaving with calling, called and jip but it arr..." />
+        <meta name="keywords" content="decode,ansi,isup,malformed" />
+        
+        <link rel="canonical" href="https://osqa-ask.wireshark.org/questions/54244/isup-iam-malformed" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/questions/54244/isup-iam-malformed?type=rss">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <meta name="google-site-verification" content="dqzpAlfsUDYClyC-7mNVrF11yfwuCZ0-uF7C4HApzkU" />
+        
+        <link rel="shortcut icon" href="/upfiles/favicon-ask_1.ico" />
+        <link href="/m/default/media/style/style.css" rel="stylesheet" type="text/css" />
+        
+        <link href="/cstyle.css" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!--[if IE 6]>
+        <style type="text/css">
+        img, div, a { behavior: url(/m/default/media/iepngfix/iepngfix.htc) }
+        </style>
+        <![endif]-->
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            
+            
+
+            var i18nLang = 'en';
+            var appUrl = 'https://osqa-ask.wireshark.org'
+            var scriptUrl = '/'
+            var osqaSkin = 'default';
+
+            var messages = {
+                username: '',
+                confirm: "Are you sure?",
+                yes: "Yes",
+                no: "No",
+                message: "Message:",
+                cancel: "Cancel",
+                close: "Close",
+                ok: "Ok",
+                matching_tags_url: "/matching_tags/",
+                word: "word",
+                words: "words",
+                character: "character",
+                characters: "characters"
+            }
+        /*]]>*/
+        </script>
+        <script type="text/javascript" src="/m/default/media/js/osqa.main.js"></script>
+        
+        <style type="text/css">
+            body { margin-top:2.4em; }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var element = $('#validate_email_alert');
+                element.click(function(){notify.close(true);})
+                notify.show();
+            });
+        </script>
+        
+        
+            <META name="y_key" content="af3ab95b28a8b14e">
+<meta name="msvalidate.01" content="9EAF899765C0DD43A19EEF6EAFFA6A77" />
+        
+        
+        
+        <script type='text/javascript' src='/m/default/media/js/osqa.question.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/jquery.caret.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/showdown.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/wmd/wmd.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/html_sanitizer.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/wmd/wmd.css" />
+
+        
+        <script type='text/javascript' src='/m/default/media/js/viewbox_min.js'></script>
+        <script type='text/javascript' src='/m/default/media/js/youtube.js'></script>
+        <link rel="stylesheet" type="text/css" href="/m/default/media/js/viewbox.css" />
+        
+        
+
+        <script type="text/javascript">
+        $().ready(function(){
+            $("#nav_questions").attr('className',"on");
+            var answer_sort_tab = "";
+
+            if (answer_sort_tab) {
+                $("#" + answer_sort_tab).attr('className',"on");
+            }
+
+            $('#editor').TextAreaResizer();
+
+            //toggle preview of editor
+            var display = true;
+            var txt = "[hide preview]";
+            $('#pre-collapse').text(txt);
+            $('#pre-collapse').bind('click', function(){
+                txt = display ? "[show preview]" : "[hide preview]";
+                display = !display;
+                $('#previewer').toggle();
+                $('#pre-collapse').text(txt);
+            });
+        });
+
+        function submitClicked(e, f) {
+            if(!(browserTester('chrome') || browserTester('safari'))) {
+                $("input.submit")[0].disabled=true;
+            }
+            window.removeEventListener('beforeunload', beforeUnload, true);
+            if (f) {
+                f.submit();
+            }
+        }
+
+        function beforeUnload(e) {
+
+            if($("textarea#editor")[0].value != "") {
+                return yourWorkWillBeLost(e);
+            }
+
+            var commentBoxes = $("textarea.commentBox");
+            for(var index = 0; index < commentBoxes.length; index++) {
+                if(commentBoxes[index].value != "") {
+                    return yourWorkWillBeLost(e);
+                }
+            }
+        }
+        window.addEventListener('beforeunload', beforeUnload, true);
+        </script>
+        <noscript>
+            <style>
+                .comment.not_top_scorer {
+                    display: block;
+                }
+                .comment-form-container {
+                    display: block;
+                }
+                .div.comment-tools {
+                    display: none;
+                }
+            </style>
+        </noscript>
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Wireshark Q&amp;A Search" />
+        
+    </head>
+    <body>
+        <div class="wrapper">
+        
+        <!-- template header.html -->
+
+
+	<div id="roof">
+	  
+		<div id="logo">
+			<a href="/">
+				<img src="/upfiles/wsbadge@186x57.png" title="back to home page" alt="Wireshark Q&amp;A logo"/>
+			</a>
+		</div>
+	  
+		<div id="top">
+		     <a href="/account/signin/" >login</a>  <a href="/about/" >about</a>  <a href="/faq/" >faq</a> 
+		</div>
+
+    <div id="nav">
+        <a id="nav_questions" class="on" href="/questions/" >questions</a><a id="nav_tags" href="/tags/" >tags</a><a id="nav_users" href="/users/" >users</a><a id="nav_badges" href="/badges/" >badges</a><a id="nav_unanswered" href="/questions/unanswered/" >unanswered</a>
+        
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  
+	<div id="searchBar">
+    <form action="/search/" method="get">
+        <input type='hidden' name='csrfmiddlewaretoken' value='7Iab7m7kv95C03JW8nLDu1rO96BUJLJc' />
+        <div>
+            <input type="text" class="searchInput" value="" name="q" id="keywords" />
+            <input type="submit" name="Submit" value="search" class="searchBtn" />
+        </div>
+        <div class="options">
+            <input id="type-question" type="radio" value="question" name="t" 
+                checked="checked" /><label for="type-question">questions</label>
+            <input id="type-tag" type="radio" value="tag" name="t" /><label for="type-tag">tags</label>
+            <input id="type-user" type="radio" value="user" name="t" /><label for="type-user">users</label>
+        </div>
+    </form>	
+	</div>
+
+	
+  <div id="announcement">
+      <div style="padding: 1em; margin-top: 5px; border-radius: 5px; border: 1px solid rgb(107, 43, 40); background: rgb(243, 227, 225);">
+This is our old Q&amp;A Site. Please post any new questions and answers at <a href="https://ask.wireshark.org/">ask.wireshark.org</a>.
+</div>
+  </div>
+  
+
+<!-- end template header.html -->
+
+        
+
+
+
+<div id="wrapper">
+    
+    
+    <div id="room">
+        <div id="CALeft">
+            
+<div class="headNormal">
+    <h1><a href="/questions/54244/isup-iam-malformed">ISUP IAM Malformed?</a></h1>
+</div>
+<div id="main-body" class="">
+    <div id="askform">
+            <table style="width:100%;" id="question-table" >
+                <tr>
+                    <td style="width:30px;vertical-align:top">
+                        <div class="vote-buttons">
+                            
+
+<a id="post-54244-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54244/up/" rel="nofollow"> </a>
+<div id="post-54244-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54244-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54244/down/" rel="nofollow"> </a>
+
+                            
+
+<a id="favorite-mark" title="mark/unmark this question as favorite (click again to cancel)"
+    class="ajax-command favorite-mark "
+    href="/mark_favorite/54244/" rel="nofollow"> </a>
+<div id="favorite-count" class="favorite-count">
+   
+</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div id="item-right">
+                            <div class="question-body">
+                                <p>Can someone please take a look at this IAM decode and give me your opinion if it is correct or malformed please?</p>
+<p>What I am suspecting to be incorrect is the optional fields, specifically the Generic Name. When this call leaves the originating MSS it is leaving with calling, called and jip but it arrives with calling, called, AN II, Carrier ID and Generic Name... This is failing and any help I can get is greatly appreciated.
+</p><pre>ISDN User Part
+    CIC: 430
+    Message type: Initial address (1)
+    Nature of Connection Indicators: 0x0
+        Mandatory Parameter: Nature of connection indicators (6)
+        .... ..00 = Satellite Indicator: No Satellite circuit in connection (0x00)
+        .... 00.. = Continuity Check Indicator: Continuity check not required (0x00)
+        ...0 .... = Echo Control Device Indicator: Echo control device not included
+    Forward Call Indicators: 0x6010
+        Mandatory Parameter: Forward call indicators (7)
+        .... ...0 .... .... = National/international call indicator: Call to be treated as national call
+        .... .00. .... .... = End-to-end method indicator: No End-to-end method available (only link-by-link method available) (0x0000)
+        .... 0... .... .... = Interworking indicator: no interworking encountered (No.7 signalling all the way)
+        ...0 .... .... .... = End-to-end information indicator: no end-to-end information available
+        ..1. .... .... .... = ISDN user part indicator: ISDN user part used all the way
+        01.. .... .... .... = ISDN user part preference indicator: ISDN user part not required all the way (0x0001)
+        .... .... .... ...0 = ISDN access indicator: originating access non-ISDN
+        .... .... .... .00. = SCCP method indicator: No indication (0x0000)
+        .... .... ...1 .... = Ported number translation indicator: number translated
+        .... .... ..0. .... = Query on Release attempt indicator: no QoR routing attempt in progress
+    Calling Party's category: 0xa (ordinary calling subscriber)
+        Mandatory Parameter: Calling party's category (9)
+        Calling Party's category: ordinary calling subscriber (0x0a)
+    User service information, (3 bytes length)
+        Mandatory Parameter: User service information (29)
+        Pointer to Parameter: 3
+        Parameter Length: 3
+        User service information (-&gt; Q.931 Bearer_capability): 9090a2
+        1... .... = Extension indicator: last octet
+        .00. .... = Coding standard: ITU-T standardized coding (0x00)
+        ...1 0000 = Information transfer capability: 3.1 kHz audio (0x10)
+        1... .... = Extension indicator: last octet
+        .00. .... = Transfer mode: Circuit mode (0x00)
+        ...1 0000 = Information transfer rate: 64 kbit/s (0x10)
+        1... .... = Extension indicator: last octet
+        .01. .... = Layer identification: Layer 1 identifier (0x01)
+        ...0 0010 = User information layer 1 protocol: Recommendation G.711 u-law (0x02)
+    Called Party Number: 2175041116
+        Mandatory Parameter: Called party number (4)
+        Pointer to Parameter: 6
+        Parameter Length: 7
+        0... .... = Odd/even indicator: even number of address signals
+        .000 0011 = Nature of address indicator: national (significant) number (3)
+        0... .... = INN indicator: routing to internal network number allowed 
+        .001 .... = Numbering plan indicator: ISDN (Telephony) numbering plan (1)
+        Called Party Number: 2175041116
+            .... 0010 = Address signal digit: 2 (2)
+            0001 .... = Address signal digit: 1 (1)
+            .... 0111 = Address signal digit: 7 (7)
+            0101 .... = Address signal digit: 5 (5)
+            .... 0000 = Address signal digit: 0 (0)
+            0100 .... = Address signal digit: 4 (4)
+            .... 0001 = Address signal digit: 1 (1)
+            0001 .... = Address signal digit: 1 (1)
+            .... 0001 = Address signal digit: 1 (1)
+            0110 .... = Address signal digit: 6 (6)
+            E.164 Called party number digits: 2175041116
+    Pointer to start of optional part: 13
+    Calling Party Number: 2174972872
+        Optional Parameter: Calling party number (10)
+        Parameter Length: 7
+        0... .... = Odd/even indicator: even number of address signals
+        .000 0011 = Nature of address indicator: national (significant) number (3)
+        0... .... = NI indicator: complete
+        .001 .... = Numbering plan indicator: ISDN (Telephony) numbering plan (1)
+        .... 00.. = Address presentation restricted indicator: presentation allowed (0)
+        .... ..11 = Screening indicator: network provided (3)
+        Calling Party Number: 2174972872
+            .... 0010 = Address signal digit: 2 (2)
+            0001 .... = Address signal digit: 1 (1)
+            .... 0111 = Address signal digit: 7 (7)
+            0100 .... = Address signal digit: 4 (4)
+            .... 1001 = Address signal digit: 9 (9)
+            0111 .... = Address signal digit: 7 (7)
+            .... 0010 = Address signal digit: 2 (2)
+            1000 .... = Address signal digit: 8 (8)
+            .... 0111 = Address signal digit: 7 (7)
+            0010 .... = Address signal digit: 2 (2)
+            E.164 Calling party number digits: 2174972872
+    Originating line info: 0 (ANI II if &lt; 51, reserved otherwise)
+        Optional Parameter: Originating line information (234)
+        Parameter Length: 1
+        Originating line info: 0
+    Parameter Type unknown/reserved (3 Bytes)
+        Optional Parameter: Carrier identification (197)
+        Parameter Length: 3
+    Generic name: 
+        Optional Parameter: Generic name (199)
+        Parameter Length: 1
+        .... ..00 = Presentation indicator: presentation allowed (0)
+        ...0 .... = Availability indicator: name available/unknown
+        001. .... = Type indicator: calling name (1)
+        Generic Name: 
+    End of optional parameters (0)</pre><p></p>
+                            </div>
+                            <div id="question-tags" class="tags-container tags">
+                                
+                                    <a href="/tags/decode/" class="post-tag tag-link-decode"
+                                        title="see questions tagged 'decode'" rel="tag">decode</a>
+                                
+                                    <a href="/tags/ansi/" class="post-tag tag-link-ansi"
+                                        title="see questions tagged 'ansi'" rel="tag">ansi</a>
+                                
+                                    <a href="/tags/isup/" class="post-tag tag-link-isup"
+                                        title="see questions tagged 'isup'" rel="tag">isup</a>
+                                
+                                    <a href="/tags/malformed/" class="post-tag tag-link-malformed"
+                                        title="see questions tagged 'malformed'" rel="tag">malformed</a>
+                                
+                            </div>
+                            <div id="question-controls" class="post-controls">
+                                
+
+                                
+
+                            </div>
+                            <div class="post-update-info-container">
+                                    
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        asked
+        <strong>22 Jul '16, 13:08</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/4bc0fe37a8150f1e564b5943078ed660?s=32&amp;d=identicon&amp;r=g" alt="Michael%20Pierotti's gravatar image" />
+    <p><a href="/users/24843/michael-pierotti">Michael Pier...</a><br/>
+    <span class="score" title="6 reputation points">6</span><span title="3 badges"><span class="badge1">&#9679;</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">&#9679;</span><span class="badgecount">3</span></span><span title="5 badges"><span class="bronze">&#9679;</span><span class="badgecount">5</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="Michael Pierotti has no accepted answers">0&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54244/">
+                edited
+                <strong>22 Jul '16, 14:29</strong>
+            </a>
+        </p>
+        
+            <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/2337f0406681e5c72ea0e6f1f0d6c0b0?s=32&amp;d=identicon&amp;r=g" alt="Jaap's gravatar image" />
+            <p><a href="/users/4/jaap">Jaap ♦</a><br/>
+            <span class="score" title="11680 reputation points"><span class="">11.7k</span></span><span title="16 badges"><span class="silver">&#9679;</span><span class="badgecount">16</span></span><span title="101 badges"><span class="bronze">&#9679;</span><span class="badgecount">101</span></span></p>
+        
+    </div>
+
+
+                            </div>
+                            
+
+
+
+
+<div class="comments-container" id="comments-container-54244">
+    
+        <a name="54247"></a>
+        <div class="comment" id="comment-54247">
+            <div id="post-54247-score" class="comment-score"></div>
+            <div class="comment-text"><p>Without seeing the original message bytes it is hard to tell whether the message has actually been malformed in transit or whether the Wireshark dissector has just chosen to interpret the i.e. "name" value as Originating Line Info Parameter instead of Jurisdiction Identification Parameter (causing the other bytes of the JIP to be misinterpreted). So can you please post the hex dump of the complete message? To do so, you have to choose the message in the packet list, right-click the first line (<code>Frame n: ...</code>), choose <code>Copy -&gt; ...as Hex Dump</code> from the drop-down menu, and paste the result into the text of your Question after clicking "edit" below the Question? Then, click open the Frame subtree and state the <code>Encapsulation type:</code> value (such as <code>Ethernet (1)</code>).</p>
+
+<p>For a single message this may be less annoying than exporting a single message into a new capture file, uploading that file to a login-free file sharing service, and editing the Question with a link to it. But you may think otherwise, so feel free to do it this way. Cloudshark would be the best place for the file in such case.</p>
+
+<p>As I'm not based in the North American region, I'd also like to have the i.e. "names" (codes identifying the information element) specified for JIP and OLIP in the Telcordia GR-317-CORE.</p>
+
+<p>If you cannot find these codes either, please state at least the expected JIP contents (which should be a 6-character ASCII string or 6 digits encoded into three bytes according to different sources).</p>
+
+<p>Another question is where you have taken the capture. Is there any ISUP-aware equipment (like another voice exchange or an STP) between the originating MSS and the capturing point, or is it just transport equipment which is not supposed to tamper with the message contents?</p></div>
+            <div class="comment-info" id="comment-54247-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jul '16, 04:00)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54248"></a>
+        <div class="comment" id="comment-54248">
+            <div id="post-54248-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just an afterthought, the ISUP dissector, like some others, does not show in the dissection pane the contents of parameters it does not know. So the lines</p>
+
+<pre><code>Parameter Type unknown/reserved (3 Bytes)
+    Optional Parameter: Carrier identification (197)
+    Parameter Length: 3
+</code></pre>
+
+<p>in your dissection may actually represent a non-dissected JIP. The variant setting in Wireshark's ISUP preferences does not offer ANSI ISUP (at least in 2.0.4), so the 197 which represents Carrier identification in the ITU variant may represent the ANSI-specific JIP, and that would explain the whole mystery.</p>
+
+<p>If you left-click at the first line (<code>Parameter Type unknown/reserved (3 Bytes)</code>), you should see five bytes highlighted in the lower, "packet bytes" pane. The first two should be <code>c5 03</code>, the remaining three would be the JIP value in 6 BCD format (4 bits/digit), probably with swapped order of digits - in ISUP and SS7 in general, the lower nibble has to be read first. So bytes <code>32 54 76</code> would represent a JIP value of <code>234-567</code>.</p></div>
+            <div class="comment-info" id="comment-54248-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jul '16, 05:25)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54249"></a>
+        <div class="comment" id="comment-54249">
+            <div id="post-54249-score" class="comment-score"></div>
+            <div class="comment-text"><p>And an afterthought No. 2: thanks to <a href="https://www.dialogic.com/webhelp/MSP1010/10.2.3/WebHelp/MSP_DG/ISUP/Message_Parameters.htm">Dialogic's WebHelp</a>, I've discovered that the JIP parameter code is 196, not 197, and that Wireshark's ISUP dissector can recognize it properly. So it decodes a <code>c4 03 32 54 76</code> byte sequence like this:</p>
+
+<pre><code>Jurisdiction: 234567
+    Optional Parameter: Jurisdiction (196)
+    Parameter Length: 3
+    Jurisdiction: 234567
+        .... 0010 = Address signal digit: 2 (2)
+        0011 .... = Address signal digit: 3 (3)
+        .... 0100 = Address signal digit: 4 (4)
+        0101 .... = Address signal digit: 5 (5)
+        .... 0110 = Address signal digit: 6 (6)
+        0111 .... = Address signal digit: 7 (7)
+</code></pre>
+
+<p>Now it is up to you to check whether the mistake is at the sending MSS side or somewhere else (I assume that guys at Dialogic would not publish rubbish).</p></div>
+            <div class="comment-info" id="comment-54249-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(23 Jul '16, 06:05)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54293"></a>
+        <div class="comment" id="comment-54293">
+            <div id="post-54293-score" class="comment-score"></div>
+            <div class="comment-text"><p><code>000000  00 0c 00 04 6d 33 75 61 00 14 00 04 c0 a8 7d 44
+000010  00 15 00 04 c0 a8 7b 24 00 18 00 04 00 00 00 01
+000020  00 19 00 04 00 00 6e 29 00 1a 00 04 00 00 0b 5a
+000030  00 1e 00 04 00 00 4d 81 00 00 00 00 01 00 01 01
+000040  00 00 00 4c 02 00 00 08 00 00 00 08 02 10 00 3b
+000050  00 fa 84 01 00 05 5c 2e 05 02 00 0b 92 01 01 00
+000060  60 10 0a 03 06 0d 03 90 90 a2 07 03 10 12 57 40
+000070  01 86 0a 07 03 13 12 47 79 82 27 ea 01 00 c5 03
+000080  22 40 23 c7 01 20 00 00</code></p>
+
+<p>Encapsulation type: <code>Wireshark upper PDU export</code></p></div>
+            <div class="comment-info" id="comment-54293-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 06:23)</span>
+                <a class="comment-user userinfo" href="/users/24843/michael-pierotti">Michael Pier...</a>
+                
+            </div>
+        </div>
+    
+        <a name="54297"></a>
+        <div class="comment" id="comment-54297">
+            <div id="post-54297-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://drive.google.com/open?id=0BxQ87I-IfPX3TVRfT2dRQmVBTHc">https://drive.google.com/open?id=0BxQ87I-IfPX3TVRfT2dRQmVBTHc</a></p>
+
+<p>This work ?</p></div>
+            <div class="comment-info" id="comment-54297-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 06:43)</span>
+                <a class="comment-user userinfo" href="/users/24843/michael-pierotti">Michael Pier...</a>
+                
+            </div>
+        </div>
+    
+        <a name="54298"></a>
+        <div class="comment not_top_scorer" id="comment-54298">
+            <div id="post-54298-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes, this worked, asking nothing at all :-)</p></div>
+            <div class="comment-info" id="comment-54298-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 06:46)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54299"></a>
+        <div class="comment not_top_scorer" id="comment-54299">
+            <div id="post-54299-score" class="comment-score"></div>
+            <div class="comment-text"><p>Ohhh forgot about this. This is a snip from the outgoing MSS. They sent me a word doc text decode and not the hex, but you can see if is going out C4 (196) </p>
+
+<pre><code>139       | 1100 0100 | Jurisdiction Information Identifier: c4                                 
+140       | 0000 0011 |   Length: 3 octet(s)                                                    
+141       | 0001 0010 |   Address Signal: 217497                                                
+142       | 0100 0111 |   Address Signal:                                                       
+143       | 0111 1001 |   Address Signal:                                                       
+144       | 0000 0000 | End of Optional Parameters: 0                                           
+          |           | IETF.M3UA                                                               
+145       | 0000 0000 |   Padding: 0000(hex)                                                    
+146       | 0000 0000 |   Padding:
+</code></pre></div>
+            <div class="comment-info" id="comment-54299-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 06:47)</span>
+                <a class="comment-user userinfo" href="/users/24843/michael-pierotti">Michael Pier...</a>
+                
+            </div>
+        </div>
+    
+        <a name="54300"></a>
+        <div class="comment not_top_scorer" id="comment-54300">
+            <div id="post-54300-score" class="comment-score"></div>
+            <div class="comment-text"><p>OK, so if the Jurisdiction ID is actually <code>220432</code>, then some equipment along the path malforms the parameter name from <code>c4</code> to <code>c5</code> and that's it.</p>
+
+<p>As <code>c5</code> is not a standardized name of any ISUP parameter (well, at least according to the friend at Dialogic, maybe something in GR-317-CORE has changed since they've published that list?), I would suspect the last exchange in the chain to be guilty, as a non-standard parameter should normally be accompanied by a PCI parameter so if it has been malformed by some machine mid-stream, the sender of the <code>IAM</code> should have got at least an upstream <code>CFN</code> by the first recipient of the malformed version.</p></div>
+            <div class="comment-info" id="comment-54300-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 06:55)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54301"></a>
+        <div class="comment not_top_scorer" id="comment-54301">
+            <div id="post-54301-score" class="comment-score"></div>
+            <div class="comment-text"><p>Actually I think we may already know who the culprit is, as this wouldn't be the first time they have screwed up something for us. Last time it was they were not sending the GAP for a LNP</p></div>
+            <div class="comment-info" id="comment-54301-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 06:57)</span>
+                <a class="comment-user userinfo" href="/users/24843/michael-pierotti">Michael Pier...</a>
+                
+            </div>
+        </div>
+    
+        <a name="54302"></a>
+        <div class="comment not_top_scorer" id="comment-54302">
+            <div id="post-54302-score" class="comment-score"></div>
+            <div class="comment-text"><p>We were writing against each other (simultaneously) :-)</p>
+
+<p>I assume the text from the originator is from another call? Because your IAM at CIC 402 says <code>220432</code> (as <code>c5</code>), while their text says <code>217497</code>... If it is the same call, the evil ghost does much more damage.</p></div>
+            <div class="comment-info" id="comment-54302-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 07:00)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54303"></a>
+        <div class="comment not_top_scorer" id="comment-54303">
+            <div id="post-54303-score" class="comment-score"></div>
+            <div class="comment-text"><p>I will know better here shortly as I have some end to end testing scheduled.</p></div>
+            <div class="comment-info" id="comment-54303-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 07:01)</span>
+                <a class="comment-user userinfo" href="/users/24843/michael-pierotti">Michael Pier...</a>
+                
+            </div>
+        </div>
+    
+        <a name="54307"></a>
+        <div class="comment not_top_scorer" id="comment-54307">
+            <div id="post-54307-score" class="comment-score"></div>
+            <div class="comment-text"><p>Just added a new file. Outgoing_IAM.txt where you can see the outgoing JIP is 217304, and a wireshark cap where there is no JIP that I can find.</p></div>
+            <div class="comment-info" id="comment-54307-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 10:02)</span>
+                <a class="comment-user userinfo" href="/users/24843/michael-pierotti">Michael Pier...</a>
+                
+            </div>
+        </div>
+    
+        <a name="54308"></a>
+        <div class="comment not_top_scorer" id="comment-54308">
+            <div id="post-54308-score" class="comment-score"></div>
+            <div class="comment-text"><p><a href="https://www.dialogic.com/~/media/manuals/ss7/cd/GenericInfo/ProtocolDocumentation/U04SSS-ISUP-PM.pdf">https://www.dialogic.com/~/media/manuals/ss7/cd/GenericInfo/ProtocolDocumentation/U04SSS-ISUP-PM.pdf</a></p>
+
+<p>Found the 199 in this</p></div>
+            <div class="comment-info" id="comment-54308-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 10:13)</span>
+                <a class="comment-user userinfo" href="/users/24843/michael-pierotti">Michael Pier...</a>
+                
+            </div>
+        </div>
+    
+        <a name="54309"></a>
+        <div class="comment not_top_scorer" id="comment-54309">
+            <div id="post-54309-score" class="comment-score"></div>
+            <div class="comment-text"><p>Weird enough, I can see only iam_issue.pcapng (plus the original isup_cap.pcapng) in the Google drive directory, but no text file.</p>
+
+<p>But that's not important, I guess you are sure enough that the four IAMs which have arrived are reincarnations of the one the calling MSS has sent.</p>
+
+<p>And as there is a JIP in the source IAM, with a value of 217304, and what arrives through the jungle is an IAM with a <code>c5</code> parameter of same length but different contents (220432 in all 4 IAMs in your capture), you may be sure that "something" in the chain affects the IAM contents.</p>
+
+<p>As you get this <code>c5 03 22 40 23</code> in all 4 IAMs, one more question - was there just a single call attempt at the calling side? If yes, I'd expect that</p>
+
+<ul>
+<li>
+<p>either the <code>c5 03 22 40 23</code> has been put to the IAM before the exchanges which attempted to deliver the IAM to you using several distinct routes,</p>
+</li>
+<li>
+<p>or it has been put there between the point where these routes join again and the place where you capture.</p>
+</li>
+</ul>
+
+<p>As nothing has survived from the original value, we cannot exclude that one exchange has erased the JIP and another one has inserted the <code>c5 03 22 40 23</code>.</p>
+
+<p>As for the 199 (0xc7), I could imagine some exchanges to insert an empty Generic Name parameter to an egress IAM if none was available at ingress. Same case for the empty Originating Line Information.</p>
+
+<p>Are you sure that the whole call path passes through North American operators?</p></div>
+            <div class="comment-info" id="comment-54309-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 10:26)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54310"></a>
+        <div class="comment not_top_scorer" id="comment-54310">
+            <div id="post-54310-score" class="comment-score"></div>
+            <div class="comment-text"><p>Yes this is a single call. Because our MSS doesn't like this IAM it is not sending an ACM so the Tandem tries it on a different CIC. And yes it is a call originating in US and terminating in US. I filtered on a few other calls for the Generic Name parameter and I do see calls which are successful IF the Generic Name actually has something included.</p></div>
+            <div class="comment-info" id="comment-54310-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 10:36)</span>
+                <a class="comment-user userinfo" href="/users/24843/michael-pierotti">Michael Pier...</a>
+                
+            </div>
+        </div>
+    
+        <a name="54311"></a>
+        <div class="comment not_top_scorer" id="comment-54311">
+            <div id="post-54311-score" class="comment-score"></div>
+            <div class="comment-text"><p>I uploaded generic_name.pcapng where there is actually information in there.</p></div>
+            <div class="comment-info" id="comment-54311-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 10:39)</span>
+                <a class="comment-user userinfo" href="/users/24843/michael-pierotti">Michael Pier...</a>
+                
+            </div>
+        </div>
+    
+        <a name="54312"></a>
+        <div class="comment not_top_scorer" id="comment-54312">
+            <div id="post-54312-score" class="comment-score"></div>
+            <div class="comment-text"><p>Wow... in the Dialogic document in which you've found the 199, there is also 197 = 0xc5, called "Carrier Identification". So maybe it has been added to the specification since the Dialogic document I was referring to was published? In any case, the Wireshark dissector does not like something about its contents (because it states the proper name and because the size of the parameter value is correct, 3 octets), or there is a bug in the dissector. Can you check T1.113 Section 3.8A to find out whether the <code>22 40 23</code> is a legal contents of this parameter? If it is, it would be best to file a bug at Wireshark bugzilla, attaching the full relevant description from T1.113.</p>
+
+<p>But in any case, as the Carrier Identification legally exists, I would dare to conclude that its addition to the IAM and the disappearance of the JIP from it are not related to each other.</p>
+
+<p>As for the call path, I understand that the origin and destination are in the US, I was asking whether you can be sure it doesn't run via e.g. LatAm which uses the ETSI ISUP flavors, so the JIP may not be supported there.</p>
+
+<p>Does your receiving switch complain about something about the IAM to its logs, if any?</p></div>
+            <div class="comment-info" id="comment-54312-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 10:53)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+        <a name="54314"></a>
+        <div class="comment not_top_scorer" id="comment-54314">
+            <div id="post-54314-score" class="comment-score"></div>
+            <div class="comment-text"><p>3.20C Generic Name Parameter<br>
+The format of the generic name parameter field shall be as shown in Figure 18C/T1.113.3.<br>
+The following codes are used in the subfields of the generic name parameter field:<br>
+</p>
+
+<pre><code>(1) Presentation (Pres.)
+0 0 presentation allowed
+0 1 presentation restricted
+1 0 blocking toggle
+1 1 no indication
+(2) Availability (Avail.)
+0 name available/unknown
+1 name not available
+(3) Type of name
+0 0 0 spare
+0 0 1 calling name
+0 1 0 original called name
+0 1 1 redirecting name
+1 0 0 connected name
+1 0 1 }
+   to } spare
+1 1 1 }
+</code></pre>
+
+<p>Up to 15 characters of name information are coded in IA5 format.</p></div>
+            <div class="comment-info" id="comment-54314-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 12:30)</span>
+                <a class="comment-user userinfo" href="/users/24843/michael-pierotti">Michael Pier...</a>
+                
+            </div>
+        </div>
+    
+        <a name="54315"></a>
+        <div class="comment not_top_scorer" id="comment-54315">
+            <div id="post-54315-score" class="comment-score"></div>
+            <div class="comment-text"><p>That didn't paste right so I added some new text files to that shared folder.</p></div>
+            <div class="comment-info" id="comment-54315-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 12:38)</span>
+                <a class="comment-user userinfo" href="/users/24843/michael-pierotti">Michael Pier...</a>
+                
+            </div>
+        </div>
+    
+        <a name="54316"></a>
+        <div class="comment not_top_scorer" id="comment-54316">
+            <div id="post-54316-score" class="comment-score"></div>
+            <div class="comment-text"><p>Seems we are slightly mistuned :-)</p>
+
+<ul>
+<li>
+<p>I wanted a description of the Carrier Identfication parameter (197 = 0xc5), but in the meantime I've discovered that T1.113 can be downloaded from the 3GPP archive. Using the description from there, I conclude that the Carrier Identifier data in your IAMs have a proper contents, so there is a bug in Wireshark dissector which can be filed.</p>
+</li>
+<li>
+<p>you have instead provided a description of Generic Name (199 = 0xc7) which Wireshark dissects properly; as the whole parameter wasn't available in the original IAM, it seems fine to me that one of the exchanges along the path has added that parameter with zero size and "presentation alowed, name available or unknown, calling name" properties.</p>
+</li>
+</ul>
+
+<p>Off topic: once you are through with this issue, please have a look at the formatting possibilities of this site. They can be used not only for Questions and Answers but also for Comments. Hint: use the form field intended for writing an Answer so that you would see the result in the preview, then cut the text from there and paste it to the form field which opens after you press the Comment button.</p></div>
+            <div class="comment-info" id="comment-54316-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(25 Jul '16, 12:55)</span>
+                <a class="comment-user userinfo" href="/users/19586/sindy">sindy</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54244" class="comment-tools">
+    
+        <span class="comments-showing">
+            showing 5 of 20
+        </span>
+        <a href="#" class="show-all-comments-link">show 15 more comments</a>
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54244-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+            
+            
+                <hr/>
+                <div class="tabBar">
+                    <a name="sort-top"></a>
+                    <div class="headQuestions">
+                    One Answer:
+                    </div>
+                    
+<div class="tabsA"><a href="/questions/54244/isup-iam-malformed?sort=active" title="most recently updated answers/comments will be shown first">active answers</a><a href="/questions/54244/isup-iam-malformed?sort=oldest" title="oldest answers will be shown first">oldest answers</a><a href="/questions/54244/isup-iam-malformed?sort=newest" title="newest answers will be shown first">newest answers</a><a href="/questions/54244/isup-iam-malformed?sort=votes" class="on" title="most voted answers will be shown first">popular answers</a></div>
+
+                </div>
+                
+
+                
+                    <a name="54367"></a>
+                    <div id="answer-container-54367" class="answer ">
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:30px;vertical-align:top">
+                                    <div class="vote-buttons">
+                                        
+
+<a id="post-54367-upvote" title="I like this post (click again to cancel)"
+    class="ajax-command post-vote up "
+     href="/vote/54367/up/" rel="nofollow"> </a>
+<div id="post-54367-score" class="post-score"
+    title="current number of votes">
+    0
+</div>
+<a id="post-54367-downvote" title="I dont like this post (click again to cancel)"
+    class="ajax-command post-vote down"
+     href="/vote/54367/down/" rel="nofollow"> </a>
+
+                                        
+
+
+    
+
+
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="item-right">
+                                        <div class="answer-body">
+                                            <p>So to wrap the chain of comments up into a proper Answer to the original Question:</p>
+<p>(1) from the <strong>protocol</strong> point of view, the IAM in the example is <strong>not</strong> malformed - all parameters it contains are properly formatted, although their values may be unusual.</p>
+<p>(2) from the <strong>service</strong> point of view, the contents of the IAM has changed in transit to an extent which may cause interworking or even legal issues, although from the protocol point of view alone, all the affected parameters are optional:</p>
+<ul>
+<li>
+<p>some parameters from the original IAM have been lost in transit (in particular, the Jurisdiction Information),<br>
+</p>
+</li>
+<li>
+<p>others have been added (the Generic Name, the Carrier Identification),<br>
+</p>
+</li>
+<li>
+<p>the contents of some others has changed in transit (the Originating Line Info which was 63 at the source but 00 at the point of capture).</p>
+</li>
+</ul>
+<p>(3) from <strong>Wireshark</strong> point of view, the ISUP dissector doesn't handle the Carrier Identification parameter properly. <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=12674">An enhancement bug</a> has been filed on that.</p>
+                                        </div>
+                                        <div class="answer-controls post-controls">
+                                            
+<span class="action-link"><a rel="nofollow" title="answer permanent link" class="ajax-command withprompt  copy" href="/answer_link/54367/">permanent link</a></span>
+                                            
+
+                                        </div>
+                                        <div class="post-update-info-container">
+                                            
+<div class='post-update-info post-update-info-user'>
+    <p style="line-height:12px;">
+        answered
+        <strong>27 Jul '16, 05:43</strong>
+    </p>
+    <img class="gravatar" width="32" height="32" src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" alt="sindy's gravatar image" />
+    <p><a href="/users/19586/sindy">sindy</a><br/>
+    <span class="score" title="6049 reputation points"><span class="">6.0k</span></span><span title="4 badges"><span class="badge1">&#9679;</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">&#9679;</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">&#9679;</span><span class="badgecount">51</span></span><br />
+    
+    <span title="Rate of the user's accepted answers" class="accept_rate">accept rate:</span>
+    <span title="sindy has 110 accepted answers">24&#37;</span>
+    </p>
+</div>
+
+    <div class='post-update-info post-update-info-edited'>
+        <p style="line-height:12px;">
+            <a href="/revisions/54367/">
+                edited
+                <strong>27 Jul '16, 05:45</strong>
+            </a>
+        </p>
+        
+    </div>
+
+
+                                        </div>
+                                        
+
+
+
+
+<div class="comments-container" id="comments-container-54367">
+    
+        <a name="54402"></a>
+        <div class="comment" id="comment-54402">
+            <div id="post-54402-score" class="comment-score"></div>
+            <div class="comment-text"><p>Sorry it took me so long to get back on this. Yes I would say that you are accurate and I appreciate the assistance. On a side note the issue was resolved by a LEC routing change</p></div>
+            <div class="comment-info" id="comment-54402-info">
+                
+                
+                
+                
+
+                
+
+                <span class="comment-age">(28 Jul '16, 08:12)</span>
+                <a class="comment-user userinfo" href="/users/24843/michael-pierotti">Michael Pier...</a>
+                
+            </div>
+        </div>
+    
+</div>
+<div id="comment-tools-54367" class="comment-tools">
+    
+    
+</div>
+
+
+
+
+<div class="clear"></div>
+<div id="comment-54367-form-container" class="comment-form-container">
+    
+</div>
+<div class="clear"></div>
+
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                <div class="paginator-container-left">
+                    
+                </div>
+            
+        <form id="fmanswer" action="/questions/54244/answer/" method="post">
+            <input type='hidden' name='csrfmiddlewaretoken' value='7Iab7m7kv95C03JW8nLDu1rO96BUJLJc' />
+            <div style="clear:both">
+            </div>
+
+            
+                <div style="padding:10px 0 0 0;">
+                    <div class="headNormal">
+                        
+                            Your answer
+                        
+                    </div>
+                </div>
+                
+
+                <div id="description" class="" >
+                    <div id="wmd-button-bar" class="wmd-panel"></div>
+                    <textarea cols="40" id="editor" name="text" rows="10"></textarea>
+                    <div class="preview-toggle">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <span id="pre-collapse" 
+                                        title="Toggle the real time Markdown editor preview">
+                                            toggle preview
+                                    </span>
+                                </td>
+                                <td style="text-align: right;" id="editor-metrics"></td>
+                                
+                                <td style="text-align:right;">
+                                    <input id="id_wiki" name="wiki" type="checkbox" /> 
+                                    <span style="font-weight:normal;cursor:help" 
+                                        title="if you choose community wiki option, the question and answer do not generate points and name of author will not be shown">
+                                            <label for="id_wiki">community wiki:</label> 
+                                    </span>
+                                </td>
+                                
+                            </tr>
+
+                        </table>
+                    </div>
+                    
+                    <div id="previewer" class="wmd-preview"></div>
+                </div>
+
+                
+
+                <p><span class="form-error"></span></p>
+                <input type="button"
+                    
+                        value="Login/Signup to Post Your Answer" 
+                    
+                    class="submit" style="float:left" onclick="submitClicked(event, this.form)"/>
+            
+        </form>
+    </div>
+</div>
+
+
+        </div>
+        <div id="CARight">
+            
+<div class="boxC" id="subscription_box">
+    <h3 class="subtitle">Follow this question</h3><strong>By Email:</strong><p>Once you sign in you will be able to subscribe for any updates here</p><strong>By RSS:</strong><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54244/isup-iam-malformed?type=rss" title="subscribe to answers"></a>
+    Answers
+</p><p><a class="feed-icon" style="background-image:url('/m/default/media/images/feed-icon-small.png');"
+        href="/questions/54244/isup-iam-malformed?type=rss&comments=yes" title="subscribe to comments and answers"></a>
+    Answers and Comments
+</p>
+
+</div>
+
+
+<div class="boxC" id="editor_side_bar">
+    <p class="subtitle darkred">Markdown Basics</p>
+    <ul class="list-item">
+        <li>
+            *italic* or _italic_
+        </li>
+        <li>
+			**bold** or __bold__
+        </li>
+        <li>
+            <b>link</b>:[text](http://url.com/ "title")
+
+        </li>
+
+        <li>
+            <b>image</b>?![alt text](/path/img.jpg "title")
+
+        </li>
+        <li>
+			numbered list:
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+			to add a line break simply add two spaces to where you would like the new line to be.
+        </li>
+        <li>
+			basic HTML tags are also supported
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+        <a href="/markdown_help/" target="_blank">learn more about Markdown </a>
+    </p>
+</div>
+
+
+
+<div id="sidebar-upper" class="boxC">
+    <div class="body">
+        <h2>You have a trillion packets.</h2>
+<h3>You need to see four of them.</h3>
+<p><a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed Technology</a> lets you seamlessly move between packets and flows for comprehensive monitoring, analysis and troubleshooting.</p>
+<p><a href="http://www.riverbed.com/us/products/cascade/wireshark_enhancements/"><img style="margin-left: 39px;" src="https://www.wireshark.org/image/logo_riverbed_150.png"></a></p>
+<p>Riverbed is Wireshark's primary sponsor and provides our funding.</p>
+     </div>
+</div>
+
+
+
+
+<div class="boxC">
+    <p>
+        Question tags:
+    </p>
+    <p class="tags" >
+        
+        <a href="/tags/decode/"
+            class="tag-link-decode"
+            title="see questions tagged'decode'using tags"
+            rel="tag">decode</a> <span class="tag-number">&#215;89</span><br/>
+        
+        <a href="/tags/malformed/"
+            class="tag-link-malformed"
+            title="see questions tagged'malformed'using tags"
+            rel="tag">malformed</a> <span class="tag-number">&#215;47</span><br/>
+        
+        <a href="/tags/isup/"
+            class="tag-link-isup"
+            title="see questions tagged'isup'using tags"
+            rel="tag">isup</a> <span class="tag-number">&#215;8</span><br/>
+        
+        <a href="/tags/ansi/"
+            class="tag-link-ansi"
+            title="see questions tagged'ansi'using tags"
+            rel="tag">ansi</a> <span class="tag-number">&#215;3</span><br/>
+        
+    </p>
+    <p>
+        question asked: <strong title="July 22, 2016, 1:08 p.m.">22 Jul '16, 13:08</strong>
+    </p>
+    <p> 
+     	question was seen: <strong>3,044 times</strong>
+    </p>
+    <p> 
+        last updated: <strong title="July 28, 2016, 11:30 a.m.">28 Jul '16, 11:30</strong>
+    </p>
+</div>
+
+
+<div id="sidebar-lower" class="boxC">
+    <div class="body">
+        <h2>Don't have Wireshark?</h2>
+<p>What are you waiting for? It's free! Wireshark documentation and downloads can be found at the <a href="https://www.wireshark.org/"><strong>Wireshark web site</strong></a>.</p>
+     </div>
+</div>
+
+
+<div class="boxC">
+    <h3 class="subtitle">Related questions</h3>
+    <div class="questions-related">
+
+        
+        <p>
+            <a href="/questions/28735/decode-sms-bearer-data-hex-string">Decode SMS Bearer Data Hex String</a>
+        </p>
+        
+        <p>
+            <a href="/questions/54136/us-number-portability-decode">US Number Portability decode</a>
+        </p>
+        
+        <p>
+            <a href="/questions/1046/how-to-decode-private-protocol">How to decode private protocol?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10046/cant-decode-tcap-ansi-over-mtp-2-frame">Can&#39;t decode TCAP ANSI over MTP-2 frame.</a>
+        </p>
+        
+        <p>
+            <a href="/questions/21148/pc-and-ssn-in-sccp-message-decode-wrong">PC AND SSN IN SCCP message decode wrong</a>
+        </p>
+        
+        <p>
+            <a href="/questions/35230/decode-rpc-net_logon">decode RPC net_logon</a>
+        </p>
+        
+        <p>
+            <a href="/questions/45616/how-to-decode-traces-from-shark-android-app">How to decode traces from Shark Android app</a>
+        </p>
+        
+        <p>
+            <a href="/questions/56656/decode-as-wrong-box-please-help">decode as wrong box? please help</a>
+        </p>
+        
+        <p>
+            <a href="/questions/10199/parser-error">Parser Error?</a>
+        </p>
+        
+        <p>
+            <a href="/questions/31320/malformed-packet-sna-malformed-packet-exception-ocurred">Malformed Packet: SNA; Malformed Packet (Exception ocurred)</a>
+        </p>
+        
+
+    </div>
+</div>
+
+
+
+        </div>
+        <div id="tail" style="clear:both;">
+            
+            
+        </div>
+    </div>
+    <div class="spacer3"></div>
+</div>
+
+        
+            <div id="ground">
+                
+
+
+<div>
+    <div class="footerLinks" >
+         <a href="/about/" >about</a> <span class="link-separator"> |</span> <a href="/faq/" >faq</a> <span class="link-separator"> |</span> <a href="/privacy/" >privacy</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" target="_blank">support</a> <span class="link-separator"> |</span> <a href="https://bugs.wireshark.org/" >contact</a> 
+    </div>
+  <p>
+        p&#8203;o&#8203;w&#8203;e&#8203;r&#8203;e&#8203;d by &#79;&#8203;&#83;&#8203;&#81;&#8203;&#65;
+  </p>
+</div>
+ <div id="licenseLogo">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+            <img src="/m/default/media/images/by-sa-88x31.png" title="Creative Commons: Attribution - Share Alike" alt="cc-by-sa" width="88" height="31" />
+  </a>
+ </div>
+
+
+            </div>
+        
+        
+
+        
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-605389-6']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        
+        </div>
+
+        <!-- Put all elements with fixed position here, IE6 fixed position fix: http://ryanfait.com/position-fixed-ie6/ -->
+        <div class="notify" style="display:none">
+            
+                
+                    
+                          <p class="darkred">First time here? Check out the <a href="/faq/">FAQ</a>!</p>
+                    
+                
+            
+            <a id="close-notify" onclick="notify.close(true)">&#215;</a>
+        </div>
+    </body>
+</html>
+<!-- end template base_content.html -->
