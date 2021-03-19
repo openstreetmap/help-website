@@ -77,6 +77,8 @@ def fetch_question(question, questions_dir):
     return False
 
 def main():
+    exit_err('This script is no longer relevant.')
+
     top_dir = os.path.join(os.path.dirname(__file__), '..')
 
     parser = argparse.ArgumentParser(description='OSQA question import')
