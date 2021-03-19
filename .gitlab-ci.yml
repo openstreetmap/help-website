@@ -1,0 +1,19 @@
+variables:
+  GIT_DEPTH: "1"
+  HUGO_VERSION: "0.81.0"
+
+site:
+  stage: build
+  image: debian:stable-slim
+  before_script:
+    - apt-get -y update
+    - apt-get -y install pandoc python3-bs4 wget
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.81.0/hugo_${HUGO_VERSION}_Linux-64bit.deb
+    - dpkg -i hugo_${HUGO_VERSION}_Linux-64bit.deb
+  script:
+    - cd site
+    - hugo
+  artifacts:
+    paths:
+      - site/public
+    expire_in: 3 days
