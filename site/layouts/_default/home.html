@@ -1,0 +1,131 @@
+{{ define "main" }}
+
+{{ $paginator := .Paginate (where .Site.Pages "Type" "question").Reverse }}
+{{ range $paginator.Pages }}
+{{ $q_status := "unanswered" }}
+{{ if gt .Params.osqa_answers 0 }}
+  {{ $q_status = "answered" }}
+  {{ if .Params.osqa_accepted }}
+    {{ $q_status = "answered-accepted answered" }}
+  {{ end }}
+{{ end }}
+{{ $a_plurality := "answers" }}
+{{ if eq .Params.osqa_answers 1 }}
+  {{ $a_plurality = "answer" }}
+{{ end }}
+<div class="short-summary">
+    <div class="counts">
+        <div class="status {{ $q_status }}">
+            <div class="item-count">{{ .Params.osqa_answers }}</div>
+            <div>{{ $a_plurality }}</div>
+        </div>
+    </div>
+    <div class="question-summary-wrapper">
+        <h2><a title="{{ .Description | safeHTML }}" href="{{ .Permalink }}">{{ .Title | safeHTML }}</a></h2>
+        {{range $k := .Keywords -}}
+        <span class="tag">{{ $k }}</span>
+        {{end}}
+        <div class="userinfo">
+            <span class="relativetime">{{ .Lastmod.Format "2006-01-02 15:04" }}</span>
+        </div>
+    </div>
+</div>
+{{ end }}
+
+{{/*
+  Pagination.
+  Adapted from https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/
+*/}}
+
+{{ $paginator := .Paginator }}
+
+{{ $adjacent_links := 2 }}
+
+{{ $max_links := (add (mul $adjacent_links 2) 1) }}
+
+{{ $lower_limit := (add $adjacent_links 1) }}
+
+{{ $upper_limit := (sub $paginator.TotalPages $adjacent_links) }}
+
+{{/* if gt $paginator.TotalPages 1 */}}
+
+<div class="pager">
+
+  <p class="paginator">
+
+    {{ if $paginator.HasPrev }}
+    <span class="prev">
+      <a title="previous page" href="{{ $paginator.Prev.URL }}">« previous</a>
+    </span>
+    {{ end }}
+
+    {{ if ge $paginator.PageNumber ( sub $max_links 1 ) }}
+    <a class="page" href="{{ $paginator.First.URL }}">1</a>
+    {{ end }}
+    {{ if gt $paginator.PageNumber ( sub $max_links 1 ) }}
+    …
+    {{ end }}
+
+    {{ range $paginator.Pagers }}
+
+      {{ $.Scratch.Set "page_number_flag" false }}
+
+      {{ if gt $paginator.TotalPages $max_links }}
+
+        {{ if le $paginator.PageNumber $lower_limit }}
+
+          {{ if le .PageNumber $max_links }}
+            {{ $.Scratch.Set "page_number_flag" true }}
+          {{ end }}
+
+        <!-- Upper limit pages. -->
+        <!-- If the user is on a page which is in the upper limit. -->
+        {{ else if ge $paginator.PageNumber $upper_limit }}
+
+          <!-- If the current loop page is greater than total pages minus $max_links -->
+          {{ if gt .PageNumber (sub $paginator.TotalPages $max_links) }}
+            {{ $.Scratch.Set "page_number_flag" true }}
+          {{ end }}
+
+        <!-- Middle pages. -->
+        {{ else }}
+
+          {{ if and ( ge .PageNumber (sub $paginator.PageNumber $adjacent_links) ) ( le .PageNumber (add $paginator.PageNumber $adjacent_links) ) }}
+            {{ $.Scratch.Set "page_number_flag" true }}
+          {{ end }}
+
+        {{ end }}
+
+      <!-- Simple page numbers. -->
+      {{ else }}
+
+        {{ $.Scratch.Set "page_number_flag" true }}
+
+      {{ end }}
+
+      <!-- Output page numbers. -->
+      {{ if eq ($.Scratch.Get "page_number_flag") true }}
+        <a href="{{ .URL }}" class="page{{ if eq . $paginator }} curr this_page{{ end }}">{{ .PageNumber }}</a>
+      {{ end }}
+
+    {{ end }}
+
+    {{ if lt $paginator.PageNumber ( sub $paginator.TotalPages ( sub $max_links $adjacent_links ) ) }}
+    …
+    {{ end }}
+    {{ if le $paginator.PageNumber ( sub $paginator.TotalPages ( sub $max_links $adjacent_links ) ) }}
+    <a class="page" href="{{ $paginator.Last.URL }}">{{ $paginator.TotalPages }}</a>
+    {{ end }}
+
+
+    {{ if $paginator.HasNext }}
+    <span class="next">
+        <a title="next page" href="{{ $paginator.Next.URL }}">next »</a>
+    </span>
+    {{ end }}
+
+    </p>{{/* pager */}}
+</div>{{/* paginator */}}
+{{ end }}
+
+{{/* end */}}
