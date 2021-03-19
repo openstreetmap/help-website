@@ -66,7 +66,9 @@ It runs on Python 2, which is deprecated.
 This makes maintenance and infrastructure upgrades more difficult as time goes on, and any security flaws that might turn up probably won't be fixed.
 
 Q: Why not just get rid of the old site?
+
 A: It's nice to have around as a historical reference.
 
 Q: Why Hugo?
+
 A: It's well-supported, easy to install, doesn't enforce a particular layout, and supports pagination.
