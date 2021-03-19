@@ -57,12 +57,8 @@ def convert_question(question, questions_dir, content_dir):
     q_content = soup.find('div', id='CALeft')
 
     # Number of answers
-    answers_content = q_content.find('div', class_='headQuestions')
-    if answers_content:
-        m = re.search('(\d+) Answers:', answers_content.decode_contents())
-        if m:
-            question.answers = int(m.group(1))
-
+    question.answers = len(q_content.find_all('div', class_='answer-body'))
+    # Accepted?
     if q_content.find('div', class_='answer accepted-answer'):
         question.accepted = True
 
@@ -76,7 +72,11 @@ def convert_question(question, questions_dir, content_dir):
             question.date = timeval
         if question.lastmod is None or question.lastmod < timeval:
             question.lastmod = timeval
-
+    for ca_el in q_content.find_all('span', class_='comment-age'):
+        m = re.search('\((.*)\)', ca_el.get_text(strip=True))
+        timeval = time.strptime(m.group(1), "%d %b '%y, %H:%M")
+        if question.lastmod is None or question.lastmod < timeval:
+            question.lastmod = timeval
 
     # Remove things we don't want.
     # active / oldest / newest / popular answers buttons
@@ -88,12 +88,12 @@ def convert_question(question, questions_dir, content_dir):
     # "Your answer" form
     for form_el in q_content.find_all('form'):
         form_el.decompose()
-    # Dynamic links
+    # Neutralize non-quesiton links, e.g. /tags/foo
     for dl_el in q_content.find_all('a', href=re.compile('^/.*')):
         if dl_el['href'].startswith('/questions/'):
             continue
-        dl_text = dl_el.get_text(' ')
-        dl_el.replace_with(dl_text)
+        del dl_el['href']
+        dl_el.name = 'span'
 
     # https://pandoc.org/MANUAL.html#markdown-variants
     pd_proc = subprocess.run([
