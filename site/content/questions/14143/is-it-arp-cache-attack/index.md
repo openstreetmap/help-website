@@ -1,0 +1,72 @@
++++
+type = "question"
+title = "Is it Arp Cache Attack ?"
+description = '''Don&#x27;t know that Am I really under this attack or not, eSet (ESS 5.0) several times is reporting this to me. What I should mention are :   Here are using a Wireless  point-to-point to get Internet to  our tower, Then with a DSLAM the  internet is provided to our room.   Some times I&#x27;m using a VPN. Th...'''
+date = "2012-09-09T03:38:00Z"
+lastmod = "2012-09-10T14:21:00Z"
+weight = 14143
+keywords = [ "arp", "detection", "wireshark" ]
+aliases = [ "/questions/14143" ]
+osqa_answers = 2
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [Is it Arp Cache Attack ?](/questions/14143/is-it-arp-cache-attack)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-14143-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Don't know that Am I really under this attack or not, eSet (ESS 5.0) several times is reporting this to me.</p><p>What I should mention are :</p><ol><li><p>Here are using a Wireless point-to-point to get Internet to our tower, Then with a DSLAM the internet is provided to our room.</p></li><li><p>Some times I'm using a VPN.</p><pre><code>The reported IPs are similar to 192.168.1.1 - 192.168.1.4</code></pre></li><li><p>There are 2-3 home devices Using this wireless internet and and pc using it from a LAN (Don't know how could I get their mac addresses to check)</p></li><li><p>There is a wireless printer which is one of the things I have doubt causes the problem.</p></li><li><p>Here the room is using a TP-Link 8901G ( Whireless ADSL 2+ Router, Modem &amp; Accesspoint )</p></li></ol><p>Q) Am I under attack or this could be just some IP conflicts ? If so How to Prevent or resolve this issue ?</p><p>*** Which logs is needed tell me to upload and provide a link</p><p><em>please help me resolving this</em></p><hr /><p><strong>Logs :</strong></p><p><strong>Eset Logs :</strong></p><pre><code>http://pastebin.com/STRwdLzF</code></pre><p><strong>WireShark Logs : ( Just a piece )</strong></p><pre><code>http://pastebin.com/6e6YER7s</code></pre></div><div id="question-tags" class="tags-container tags">arp detection wireshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>09 Sep '12, 03:38</strong></p><img src="https://secure.gravatar.com/avatar/434d703a226755714aed72a0c4cbed7d?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="SkyGator&#39;s gravatar image" /><p>SkyGator<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="SkyGator has no accepted answers">0%</span></p></div></div><div id="comments-container-14143" class="comments-container"><span id="14145"></span><div id="comment-14145" class="comment"><div id="post-14145-score" class="comment-score"></div><div class="comment-text"><p>It's easier if you post the actual pcap files. But looking at this, I don't think I'd be too worried. It looks like you may have two devices trying to use 192.168.1.2.</p><p>But if you post the pcap file, more people will look at it for you. It's a pain looking at txt output of a trace file.</p></div><div id="comment-14145-info" class="comment-info"><span class="comment-age">(09 Sep '12, 09:32)</span> hansangb</div></div><span id="14157"></span><div id="comment-14157" class="comment"><div id="post-14157-score" class="comment-score"></div><div class="comment-text"><p>Thanks hasan, Where is this pcap file you said ? which piece of it is needed ?</p></div><div id="comment-14157-info" class="comment-info"><span class="comment-age">(10 Sep '12, 03:39)</span> SkyGator</div></div></div><div id="comment-tools-14143" class="comment-tools"></div><div class="clear"></div><div id="comment-14143-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="14147"></span>
+
+<div id="answer-container-14147" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-14147-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>@hansangb, you are right. The ESET message is just a false positive, triggered by two devices using the same IP address (192.168.1.2).</p><p>@SkyGator: If it was an ARP cache attack, the attacker would try to spoof the MAC address of your router (192.168.1.1). However, there is no such sign in the capture file. To be sure: Double check, that the MAC address of the router in the capture file, is the real one ;-)</p><blockquote><p>If so How to Prevent or resolve this issue</p></blockquote><p>Stop using 192.168.1.2 on two different computers. If they got their address by DHCP from the router, you may experience that problem if you switch off (or reboot) the router. After it reboots, it may hand out the same IP address to a different MAC address. I would consider this a firmware bug, as the DHCP server should write a log for the current leases and reuse that log after the reboot.</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>09 Sep '12, 15:48</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div></div><div id="comments-container-14147" class="comments-container"><span id="14158"></span><div id="comment-14158" class="comment"><div id="post-14158-score" class="comment-score"></div><div class="comment-text"><p>Good to know, fortunately I tested it and got some clues and I believe this answer is right. but there is 2 relative small questions on this : 1. How to "Double check, that the MAC address of the router in the capture file, is the real one" ? Do you mean the default IP taken by the router ? it is 192.168.1.2, Should I check anything else ?</p></div><div id="comment-14158-info" class="comment-info"><span class="comment-age">(10 Sep '12, 03:45)</span> SkyGator</div></div><span id="14159"></span><div id="comment-14159" class="comment"><div id="post-14159-score" class="comment-score"></div><div class="comment-text"><p>2nd : What is the sign when someone is spoofing "the attacker would try to spoof the MAC address of your router (192.168.1.1)" ? could you give a simple 1-2 line example of a log showing this, want to know how it could be differ from what I have posted ? really thanks for your help ;)</p></div><div id="comment-14159-info" class="comment-info"><span class="comment-age">(10 Sep '12, 03:45)</span> SkyGator</div></div><span id="14163"></span><div id="comment-14163" class="comment"><div id="post-14163-score" class="comment-score"></div><div class="comment-text"><p>1.) Look at the back of your router. Usually you will find its MAC address there. Compare that address with the one in the capture file. If it's the same, it's O.K. If it's different, someone might have used ARP spoofing.</p><p>2.) I'm sorry, I don't have a capture file with ARP spoofing at hand and I have not time to create one right now. But it's easy to do that yourself. Grab a copy of "cain &amp; able" or "ettercap" and learn how it works.</p></div><div id="comment-14163-info" class="comment-info"><span class="comment-age">(10 Sep '12, 04:28)</span> Kurt Knochner ♦</div></div></div><div id="comment-tools-14147" class="comment-tools"></div><div class="clear"></div><div id="comment-14147-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="14177"></span>
+
+<div id="answer-container-14177" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-14177-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>Skygator, I just assumed you used Wireshark to capture your packets. That's the file I was referring to. But if you used tcpdump or snoop, it will output the "trace file" to stdout (screen) in a text format. But you can use "-w foo.pcap" in tcpdump or "-o foo.pcap" in snoop to save the trace file in binary PCAP format. This way, everyone can open it in Wireshark and make it easier to analyze the file.</p><p>Look here (among many many many other sites) for how arp cache poisoning works: <a href="http://bittwist.sourceforge.net/doc.html">http://bittwist.sourceforge.net/doc.html</a></p><p>Keep in mind that Ethernet MAC addresses are link local. That is, it is only unique to each subnet. So if you capture from subnet1, for a traffic that originated from subnet2, the MAC address will be the router's MAC address. For example</p><p>PC1 (MAC addr A) ------ (MAC addr B) ROUTER (MAC addr C) ------- (MAC addr D) PC2</p><p>PC1 has a mac address of A. PC2 has a mac address of D.</p><p>If you capture the traffic from PC1, you will see your MAC addr A and MAC addr B (router's mac) for PC2.</p><p>If you capture the traffic from PC2, you will see your MAC addr D, and MAC addr C for PC1.</p><p>To check what the MAC addresses are on the router, you can do (assuming Cisco routers) "sho interface Fa1/0" and look for the BIA (burned in address) address. You'll see it in 0000.0C12.1234 format.</p><p>If you have two routers, there may be another MAC address (HSRP), but that's not germane to this conversation for now. If you have HSRP running, let me know. If you don't know what HSRP is, chances are good that you are not running it. But again, if you have the binary PCAP file, you can see if HSRP is running or not (but that's for another time)</p><p>Good luck!</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>10 Sep '12, 14:21</strong></p><img src="https://secure.gravatar.com/avatar/63805f079ac429902641cad9d7cd69e8?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="hansangb&#39;s gravatar image" /><p>hansangb<br />
+<span class="score" title="791 reputation points">791</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="6 badges"><span class="silver">●</span><span class="badgecount">6</span></span><span title="19 badges"><span class="bronze">●</span><span class="badgecount">19</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="hansangb has 7 accepted answers">12%</span></p></div></div><div id="comments-container-14177" class="comments-container"></div><div id="comment-tools-14177" class="comment-tools"></div><div class="clear"></div><div id="comment-14177-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</hr>
+
+</div>
+
+</div>
+

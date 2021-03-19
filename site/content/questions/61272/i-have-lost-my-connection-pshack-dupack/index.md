@@ -1,0 +1,31 @@
++++
+type = "question"
+title = "I have lost my connection PSH+ACK DUP+ACK"
+description = '''Hi, I have a device(ARM micro-controller) that send and transmit data each 100ms (maybe in sometimes it send and receive simultaneously but not always) with PC. After 4hours I lost my connection and I see this output:(Device IP:150 , PC IP:101) http://obrazki.elektroda.pl/7212488200_1494096051.png h...'''
+date = "2017-05-06T23:18:00Z"
+lastmod = "2017-05-06T23:18:00Z"
+weight = 61272
+keywords = [ "push", "dup-ack" ]
+aliases = [ "/questions/61272" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [I have lost my connection PSH+ACK DUP+ACK](/questions/61272/i-have-lost-my-connection-pshack-dupack)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-61272-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi, I have a device(ARM micro-controller) that send and transmit data each 100ms (maybe in sometimes it send and receive simultaneously but not always) with PC. After 4hours I lost my connection and I see this output:(Device IP:150 , PC IP:101)</p><p><a href="http://obrazki.elektroda.pl/7212488200_1494096051.png">http://obrazki.elektroda.pl/7212488200_1494096051.png</a> <a href="http://obrazki.elektroda.pl/5960091300_1494096051.png">http://obrazki.elektroda.pl/5960091300_1494096051.png</a></p><p>I want to know why did I lost my connection? it is related to my PC or Device ? and How can fix this problem during the connection?</p><p>Thanks</p></div><div id="question-tags" class="tags-container tags">push dup-ack</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>06 May '17, 23:18</strong></p><img src="https://secure.gravatar.com/avatar/383a70dc421037707b4b069d56e157cb?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="baby_1&#39;s gravatar image" /><p>baby_1<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="baby_1 has no accepted answers">0%</span></p></div></div><div id="comments-container-61272" class="comments-container"><span id="61274"></span><div id="comment-61274" class="comment"><div id="post-61274-score" class="comment-score"></div><div class="comment-text"><p>Can you share a capture in a publicly accessible spot, e.g. <a href="http://cloudshark.org">CloudShark</a>?</p></div><div id="comment-61274-info" class="comment-info"><span class="comment-age">(07 May '17, 02:10)</span> Jaap ♦</div></div><span id="61278"></span><div id="comment-61278" class="comment"><div id="post-61278-score" class="comment-score"></div><div class="comment-text"><p>Thanks for your comment.The file size is approximately 96mb and unfortunately I don't know how can select some part of capture file.if there is no problem I can upload all file?</p></div><div id="comment-61278-info" class="comment-info"><span class="comment-age">(07 May '17, 12:11)</span> baby_1</div></div><span id="61285"></span><div id="comment-61285" class="comment"><div id="post-61285-score" class="comment-score"></div><div class="comment-text"><p>Cloudshark Preview imposes a 2MB max upload size limit, so a 96 MB is too big. Some possible options:</p><ul><li>Sign up for Cloudshark for Business or Cloudshark Enterprise, which give you a 150 MB and 4 GB limit on capture files, respectively</li><li>Try to post it elsewhere, such as to dropbox, pastebin, etc.</li><li>Filter the data you have so it's smaller and <em>"postable"</em></li><li>Take another capture with capture options set that cause a smaller capture file to be generated, such as by setting an appropriate value for the snaplen (maybe <code>tcpdump</code>'s old default value of 96 bytes, for example), and/or applying a capture filter to only capture traffic of interest (e.g. tcp port 4050).</li></ul></div><div id="comment-61285-info" class="comment-info"><span class="comment-age">(08 May '17, 08:10)</span> cmaynard ♦♦</div></div><span id="61295"></span><div id="comment-61295" class="comment"><div id="post-61295-score" class="comment-score"></div><div class="comment-text"><p>Thanks for your reply and explanation,</p><p><a href="https://www.4shared.com/file/qH0OfnVlca/2_online.html">https://www.4shared.com/file/qH0OfnVlca/2_online.html</a></p><p>user:[email protected] pwd:stm32forum</p></div><div id="comment-61295-info" class="comment-info"><span class="comment-age">(08 May '17, 21:20)</span> baby_1</div></div></div><div id="comment-tools-61272" class="comment-tools"></div><div class="clear"></div><div id="comment-61272-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

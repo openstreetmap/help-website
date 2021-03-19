@@ -1,0 +1,73 @@
++++
+type = "question"
+title = "Tshark is not able to display the capture-packet for VPN interface"
+description = '''Hi, When i capture the packet on vpn interface ,it is capturing the packet but i have to use -w .pcap command and then i need to use wireshark to see the packet . output when i run tshark -i vpn_interfacename Running as user &quot;root&quot; and group &quot;root&quot;. This could be dangerous. Capturing on tun0  0.0000...'''
+date = "2014-06-09T03:54:00Z"
+lastmod = "2014-06-10T11:05:00Z"
+weight = 33569
+keywords = [ "vpn", "tshark" ]
+aliases = [ "/questions/33569" ]
+osqa_answers = 2
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Tshark is not able to display the capture-packet for VPN interface](/questions/33569/tshark-is-not-able-to-display-the-capture-packet-for-vpn-interface)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-33569-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi, When i capture the packet on vpn interface ,it is capturing the packet but i have to use -w .pcap command and then i need to use wireshark to see the packet .</p><p>output when i run tshark -i vpn_interfacename</p><p><code>Running as user "root" and group "root". This could be dangerous. Capturing on tun0   0.000000              -&gt;              UNKNOWN WTAP_ENCAP = 7   0.000763              -&gt;              UNKNOWN WTAP_ENCAP = 7   1.003662              -&gt;              UNKNOWN WTAP_ENCAP = 7   1.004461              -&gt;              UNKNOWN WTAP_ENCAP = 7</code></p><p>... i looked into the source code ../epan/dissectors/... but i could not get any proper solution</p><p>Please help me out .</p><p>Thanks , Deepak</p></div><div id="question-tags" class="tags-container tags">vpn tshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>09 Jun '14, 03:54</strong></p><img src="https://secure.gravatar.com/avatar/2efb52ebce8c778f71e8970779679aab?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="deepak660d&#39;s gravatar image" /><p>deepak660d<br />
+<span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="deepak660d has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 09 Jun '14, 04:30</p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span></p></div></div><div id="comments-container-33569" class="comments-container"><span id="33586"></span><div id="comment-33586" class="comment"><div id="post-33586-score" class="comment-score"></div><div class="comment-text"><p>What is your</p><ul><li>OS and OS version</li><li>tshark version (tshark -v)</li><li>Wireshark version (wireshark -v)</li></ul></div><div id="comment-33586-info" class="comment-info"><span class="comment-age">(09 Jun '14, 10:22)</span> Kurt Knochner ♦</div></div><span id="33600"></span><div id="comment-33600" class="comment"><div id="post-33600-score" class="comment-score"></div><div class="comment-text"><p>Hi ,</p><p>tshark -v</p><p>TShark 1.4.3 Compiled (32-bit) with GLib 2.12.3, with libpcap 0.9.4, without libz, with POSIX capabilities (Linux), with libpcre (version unknown), without SMI, without c-ares, without ADNS, without Lua, without Python, without GnuTLS, with Gcrypt 1.4.4, without Kerberos, without GeoIP. Running on Linux 2.6.32.10, with libpcap version 0.9.4. Built using gcc 4.1.2 20080704 (Red Hat 4.1.2-46).</p><p>wireshark -v</p><p>-bash: wireshark: command not found</p></div><div id="comment-33600-info" class="comment-info"><span class="comment-age">(09 Jun '14, 21:21)</span> deepak660d</div></div><span id="33601"></span><div id="comment-33601" class="comment"><div id="post-33601-score" class="comment-score"></div><div class="comment-text"><p>Hi , Before this problem this error was coming tshark: arptype 65534 not supported by libpcap - falling back to cooked socket. so i just made some changes inside the function map_arphdr_to_dlt for ARPHRD_NONE(65534) and give the linktype to DLT_RAW .</p><p>But after this its not able to display on the console .</p><p>Thanks .</p></div><div id="comment-33601-info" class="comment-info"><span class="comment-age">(09 Jun '14, 21:29)</span> deepak660d</div></div></div><div id="comment-tools-33569" class="comment-tools"></div><div class="clear"></div><div id="comment-33569-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="33610"></span>
+
+<div id="answer-container-33610" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-33610-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>TShark 1.4.3 Compiled<br />
+and <strong>then i need to use wireshark</strong> to see the packet .<br />
+-bash: <strong>wireshark: command not found</strong></p></blockquote><p>Apparently you are capturing on one system and you are doing the analysis with Wireshark on another system, right?</p><p>So, I guess, the tshark version on that system is unable to interpret the encapsulation type (as it shows a UNKNOWN WTAP_ENCAP error), but the Wireshark version you are using to do the analysis does support it.</p><p>Solution for you: Either upgrade the tshark version on that system, or if that is not possible, do what you already did: Capture on the system with tshark -w or tcpdump and do the analysis on another system.</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>10 Jun '14, 03:36</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></br></p></div><div class="post-update-info post-update-info-edited"><p>edited 10 Jun '14, 03:37</p></div></div><div id="comments-container-33610" class="comments-container"><span id="33622"></span><div id="comment-33622" class="comment"><div id="post-33622-score" class="comment-score"></div><div class="comment-text"><p>Yup, i am using wireshark for further analysis . and wireshark version is 1.6.7( in windows) .</p><p>Thanks</p></div><div id="comment-33622-info" class="comment-info"><span class="comment-age">(10 Jun '14, 10:05)</span> deepak660d</div></div><span id="33624"></span><div id="comment-33624" class="comment"><div id="post-33624-score" class="comment-score"></div><div class="comment-text"><p>I have the source code for wireshark 1.4.3 and i am building the tshark for my own linux system only . I just checked with wireshark 1.4.3(in windows) ,its display the capture packet properly . So the problem as i am getting for tshark only not wireshark with the same version which is part of wireshark with some configuration . So could you please check whats things i am missing in my source code ?</p><p>Thanks, Deepak</p></div><div id="comment-33624-info" class="comment-info"><span class="comment-age">(10 Jun '14, 10:23)</span> deepak660d</div></div></div><div id="comment-tools-33610" class="comment-tools"></div><div class="clear"></div><div id="comment-33610-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="33625"></span>
+
+<div id="answer-container-33625" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-33625-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Your version of TShark either has a bug or was somehow incorrectly built; normal Wireshark/TShark 1.4.3 can handle <code>LINKTYPE_RAW</code>/<code>DLT_RAW</code> captures (<code>LINKTYPE_RAW</code> maps to <code>WTAP_ENCAP_RAW_IP</code>, which has a value of 7).</p><p>I don't know why it was incorrectly built; you will have to figure that out yourself, or try running a pre-built version of Wireshark/TShark for your Linux system.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>10 Jun '14, 11:05</strong></p><img src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Guy%20Harris&#39;s gravatar image" /><p>Guy Harris ♦♦<br />
+<span class="score" title="17443 reputation points"><span>17.4k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">●</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">●</span><span class="badgecount">196</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Guy Harris has 216 accepted answers">19%</span> </br></p></div></div><div id="comments-container-33625" class="comments-container"><span id="33634"></span><div id="comment-33634" class="comment"><div id="post-33634-score" class="comment-score"></div><div class="comment-text"><p>As i have given the info that previous problem arptype 65534 not supported by libpcap - falling back to cooked socket. so i just made some changes inside the function map_arphdr_to_dlt for ARPHRD_NONE(65534) and give the linktype to DLT_RAW ,its capturing the file . So libpcap is now OK . But why tshark is saying unknown wtap_encap .It means i am missing something .</p></div><div id="comment-33634-info" class="comment-info"><span class="comment-age">(10 Jun '14, 21:06)</span> deepak660d</div></div><span id="33643"></span><div id="comment-33643" class="comment"><div id="post-33643-score" class="comment-score"></div><div class="comment-text"><p>Hi, When i am running on any interface then</p><p>tshark -i any</p><p>Running as user "root" and group "root". This could be dangerous. Capturing on Pseudo-device that captures on all interfaces tshark: Promiscuous mode not supported on the "any" device.</p><p>0.000000 -&gt; UNKNOWN WTAP_ENCAP = 25</p><p>0.000022 -&gt; UNKNOWN WTAP_ENCAP = 25</p><p>0.000030 -&gt; UNKNOWN WTAP_ENCAP = 25</p><p>0.000037 -&gt; UNKNOWN WTAP_ENCAP = 25</p></div><div id="comment-33643-info" class="comment-info"><span class="comment-age">(11 Jun '14, 06:42)</span> deepak660d</div></div><span id="33644"></span><div id="comment-33644" class="comment"><div id="post-33644-score" class="comment-score"></div><div class="comment-text"><p>@deepak660d</p><p>Your "answer" have been converted to comments as that's how this site works. Please read the FAQ for more information.</p></div><div id="comment-33644-info" class="comment-info"><span class="comment-age">(11 Jun '14, 06:57)</span> grahamb ♦</div></div><span id="33653"></span><div id="comment-33653" class="comment"><div id="post-33653-score" class="comment-score"></div><div class="comment-text"><blockquote><p>But why tshark is saying unknown wtap_encap .It means i am missing something .</p></blockquote><p>You're missing a version of Wireshark in which the dissector for "raw IP" captures registers itself. That is not the case with the standard versions of Wireshark that we provide, so whoever built the version of Wireshark you're doing has made a mistake of some sort.</p><p>And, apparently, you're also missing a version of Wireshark in which the dissector for Linux cooked captures registers itself; that's why you're getting "UNKNOWN WTAP_ENCAP = 25".</p><p>Please try <strong><em>NOT</em></strong> building your own version of Wireshark, and try just running a pre-built version.</p><p>(No, this is not a TShark vs. Wireshark issue; they use the same code to dissect packets, and if you've built Wireshark as well as TShark, both of them will have the same problem on your Linux box.)</p></div><div id="comment-33653-info" class="comment-info"><span class="comment-age">(11 Jun '14, 09:44)</span> Guy Harris ♦♦</div></div></div><div id="comment-tools-33625" class="comment-tools"></div><div class="clear"></div><div id="comment-33625-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

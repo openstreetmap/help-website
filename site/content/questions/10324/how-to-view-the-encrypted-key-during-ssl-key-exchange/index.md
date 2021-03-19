@@ -1,0 +1,84 @@
++++
+type = "question"
+title = "How to view the encrypted key during ssl key exchange?"
+description = '''I am trying to view the excrypted key during ssl key exchange process. But I am not able to view the encrypted keys. Surely it must be possible to view the keys ni their encrypted form, but how?'''
+date = "2012-04-19T23:45:00Z"
+lastmod = "2012-04-20T03:50:00Z"
+weight = 10324
+keywords = [ "ssl", "key", "wireshark" ]
+aliases = [ "/questions/10324" ]
+osqa_answers = 2
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [How to view the encrypted key during ssl key exchange?](/questions/10324/how-to-view-the-encrypted-key-during-ssl-key-exchange)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-10324-score" class="post-score" title="current number of votes">1</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I am trying to view the excrypted key during ssl key exchange process. But I am not able to view the <strong>encrypted keys</strong>. Surely it must be possible to view the keys ni their encrypted form, but how?</p></div><div id="question-tags" class="tags-container tags">ssl key wireshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>19 Apr '12, 23:45</strong></p><img src="https://secure.gravatar.com/avatar/7e720df07b8a3ef623cf6a7587f21ab8?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Ashwin&#39;s gravatar image" /><p>Ashwin<br />
+<span class="score" title="31 reputation points">31</span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">●</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">●</span><span class="badgecount">7</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Ashwin has no accepted answers">0%</span></p></div></div><div id="comments-container-10324" class="comments-container"></div><div id="comment-tools-10324" class="comment-tools"></div><div class="clear"></div><div id="comment-10324-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="10342"></span>
+
+<div id="answer-container-10342" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-10342-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>If all is well, you should see a "ClientKeyExchange" SSL handshake message. If you are using a DH cipher, you should also see a "ServerKeyExchange" SSL handshake message.</p><p>If you don't see those, you might not have the right protocol preferences. FIrst of all, check in the TCP protocol preferences that you have "Allow subdissector to reassembly TCP streams" enabled. Then check in the SSL protocol preferences if all reassembly options are enabled.</p><p>BTW, I assume you are seeing your SSL conversations dissected as SSL...</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>20 Apr '12, 03:50</strong></p><img src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="SYN-bit&#39;s gravatar image" /><p>SYN-bit ♦♦<br />
+<span class="score" title="17094 reputation points"><span>17.1k</span></span><span title="9 badges"><span class="badge1">●</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">●</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">●</span><span class="badgecount">245</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="SYN-bit has 174 accepted answers">20%</span></p></div></div><div id="comments-container-10342" class="comments-container"><span id="10343"></span><div id="comment-10343" class="comment"><div id="post-10343-score" class="comment-score"></div><div class="comment-text"><p>@SYN-bit ♦♦ : I don't see the "server key exchange" BUT I see the "ClientKeyExchange". But there is not encrypted key in that packet.</p></div><div id="comment-10343-info" class="comment-info"><span class="comment-age">(20 Apr '12, 04:12)</span> Ashwin</div></div><span id="10345"></span><div id="comment-10345" class="comment"><div id="post-10345-score" class="comment-score">1</div><div class="comment-text"><p>Until recently the dissection of the ClientKeyExchange was like this:</p><pre><code>TLSv1 Record Layer: Handshake Protocol: Client Key Exchange
+    Content Type: Handshake (22)
+    Version: TLS 1.0 (0x0301)
+    Length: 134
+    Handshake Protocol: Client Key Exchange
+        Handshake Type: Client Key Exchange (16)
+        Length: 130</code></pre></div><div id="comment-10345-info" class="comment-info"><span class="comment-age">(20 Apr '12, 04:35)</span> SYN-bit ♦♦</div></div><span id="10346"></span><div id="comment-10346" class="comment"><div id="post-10346-score" class="comment-score">1</div><div class="comment-text"><p>In version 1.8 it will be like this:</p><pre><code>TLSv1 Record Layer: Handshake Protocol: Client Key Exchange
+    Content Type: Handshake (22)
+    Version: TLS 1.0 (0x0301)
+    Length: 134
+    Handshake Protocol: Client Key Exchange
+        Handshake Type: Client Key Exchange (16)
+        Length: 130
+        RSA Encrypted PreMaster Secret
+            Encrypted PreMaster length: 128
+            Encrypted PreMaster: 761b1beac35e59de9a3bb9f74ebf9109b738e8ad346</code></pre></div><div id="comment-10346-info" class="comment-info"><span class="comment-age">(20 Apr '12, 04:36)</span> SYN-bit ♦♦</div></div><span id="10347"></span><div id="comment-10347" class="comment"><div id="post-10347-score" class="comment-score">1</div><div class="comment-text"><p>So if you might want to download an automated build from: <a href="http://www.wireshark.org/download/automated/">http://www.wireshark.org/download/automated/</a></p></div><div id="comment-10347-info" class="comment-info"><span class="comment-age">(20 Apr '12, 04:37)</span> SYN-bit ♦♦</div></div><span id="10364"></span><div id="comment-10364" class="comment not_top_scorer"><div id="post-10364-score" class="comment-score"></div><div class="comment-text"><p>@SYN-bit ♦♦ : That explains it. I am geting the version 1.6 output. But why is that so? Doesn't 1.6 capture the encrypted master key at all?</p></div><div id="comment-10364-info" class="comment-info"><span class="comment-age">(20 Apr '12, 21:13)</span> Ashwin</div></div><span id="10365"></span><div id="comment-10365" class="comment not_top_scorer"><div id="post-10365-score" class="comment-score"></div><div class="comment-text"><p>@SYN-bit ♦♦ : The link contains only version 1.7.2 .I downloaded that. But it shows the same output as version 1.6(Cannot view the encrypted pre-master key).</p></div><div id="comment-10365-info" class="comment-info"><span class="comment-age">(20 Apr '12, 21:28)</span> Ashwin</div></div><span id="10374"></span><div id="comment-10374" class="comment not_top_scorer"><div id="post-10374-score" class="comment-score"></div><div class="comment-text"><p>1.8 will be the next release, which will come out in a month or two. The enhanced KeyExchange dissecting is added in SVN 40748 on Jan 28:</p><p>r40748 | etxrab | 2012-01-28 16:50:59 +0100 (za, 28 jan 2012) | 4 lines</p><p>From Michael: Enhance SSL Key Exchange dissection.</p><p><a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=6716">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=6716</a></p><p>So, any version downloaded from the automated build section should have the enhanced dissection.</p><p>Can you post your tracefile to <a href="http://www.cloudshark.org">www.cloudshark.org</a> and post the link here so I can check?</p></div><div id="comment-10374-info" class="comment-info"><span class="comment-age">(21 Apr '12, 03:41)</span> SYN-bit ♦♦</div></div><span id="10387"></span><div id="comment-10387" class="comment not_top_scorer"><div id="post-10387-score" class="comment-score"></div><div class="comment-text"><p>@SYN-bit ♦♦ : My mistake. You are right it works. It shows the dissected key exchange packet. But is dissecting so complicated that, it was not inclluded in version 1.6. What is the reason why it was not included in version 1.6. I am asking this because version 1.6 is abl to dissect application data. Then what is the problem with dissecting key exchange.</p></div><div id="comment-10387-info" class="comment-info"><span class="comment-age">(22 Apr '12, 22:12)</span> Ashwin</div></div><span id="10395"></span><div id="comment-10395" class="comment"><div id="post-10395-score" class="comment-score">1</div><div class="comment-text"><p>Well, my guess is that the initial writer of the SSL dissector did not find the info in the KeyExchange messages very interesting, so the code to dissect it was not written until recently someone did find the interest to dissect the KeyExchanges.</p></div><div id="comment-10395-info" class="comment-info"><span class="comment-age">(23 Apr '12, 01:53)</span> SYN-bit ♦♦</div></div></div><div id="comment-tools-10342" class="comment-tools"><span class="comments-showing"> showing 5 of 9 </span> <a href="#" class="show-all-comments-link">show 4 more comments</a></div><div class="clear"></div><div id="comment-10342-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="10330"></span>
+
+<div id="answer-container-10330" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-10330-score" class="post-score" title="current number of votes">2</div></div></td><td><div class="item-right"><div class="answer-body"><p>Unlike the simple PKI-based encryption process which uses a symmetric key which is transmitted along with the document, encrypted with the recipients public key, SSL/TLS encryption uses a more complicated process.</p><p>Instead of one participant making up a symmetric key and sending in encrypted form in a packet the handshake process will implement an algorithm by which the two ends agree on a "master secret" which is then used by both ends to independently construct the same symmetric session key. Parts of the pre-master secret are sent encrypted, but never the entire symmetric key. The exact details will vary depending on whether SSLv2, SSLv3 or TLS is used and will also vary basedd on the encryption suite which client and server agree upon.</p><p>Wireshark can calculate the same symmetric key if it sees both sides of the handshake and knows the private key of the server certificate.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>20 Apr '12, 01:19</strong></p><img src="https://secure.gravatar.com/avatar/b64129b7a3bf2a9f1760fbdee1b3b74c?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="inetdog&#39;s gravatar image" /><p>inetdog<br />
+<span class="score" title="167 reputation points">167</span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="7 badges"><span class="bronze">●</span><span class="badgecount">7</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="inetdog has 3 accepted answers">14%</span></p></div></div><div id="comments-container-10330" class="comments-container"><span id="10336"></span><div id="comment-10336" class="comment"><div id="post-10336-score" class="comment-score"></div><div class="comment-text"><p>@inetdog : I don't expect to see the symmetric key. I just wish to see the encrypted symmetric key. I think that wireshark can do, but how?</p></div><div id="comment-10336-info" class="comment-info"><span class="comment-age">(20 Apr '12, 02:15)</span> Ashwin</div></div><span id="10337"></span><div id="comment-10337" class="comment"><div id="post-10337-score" class="comment-score"></div><div class="comment-text"><p>The encrypted symmetric key is never transmitted over the wire. It is just constructed independently at both ends based on other encrypted information exchanged during the handshake. So wireshark cannot show you the encrypted session key.</p><p>As a result the best wireshark can show you without knowing the server private key is the encrypted information which was used to create the session key.</p></div><div id="comment-10337-info" class="comment-info"><span class="comment-age">(20 Apr '12, 02:22)</span> inetdog</div></div><span id="10340"></span><div id="comment-10340" class="comment"><div id="post-10340-score" class="comment-score"></div><div class="comment-text"><p>@inetdog But I am not able to see that also. How to see "Parts of encrypted master key"?</p></div><div id="comment-10340-info" class="comment-info"><span class="comment-age">(20 Apr '12, 03:29)</span> Ashwin</div></div><span id="10341"></span><div id="comment-10341" class="comment"><div id="post-10341-score" class="comment-score"></div><div class="comment-text"><p>@inetdog What does your name mean? Asking just out of curiosity? No offence meant</p></div><div id="comment-10341-info" class="comment-info"><span class="comment-age">(20 Apr '12, 03:33)</span> suraj</div></div><span id="10344"></span><div id="comment-10344" class="comment"><div id="post-10344-score" class="comment-score"></div><div class="comment-text"><p>@inetdog : One more update. after the user SYN-bit answered, I checked my packets, there is no server key exchange. Only client key exchange is there. So I think, the client is directly sending the encrypted key. Now I want ot view the "encrypted key". But on opening the client key exchange packet, there is no field showing the encrypted key. what is the problem?</p></div><div id="comment-10344-info" class="comment-info"><span class="comment-age">(20 Apr '12, 04:21)</span> Ashwin</div></div><span id="10356"></span><div id="comment-10356" class="comment not_top_scorer"><div id="post-10356-score" class="comment-score"></div><div class="comment-text"><p>@Ashwin: "On the Internet, nobody knows you're a dog." Google it. No offense taken! Depending on the type of key used in the server certificate (DH or RSA), the ciphersuite selected, and whether the protocol is SSL or TLS, the number and type of messages in the handshake will differ, as SYN-bit implied.</p></div><div id="comment-10356-info" class="comment-info"><span class="comment-age">(20 Apr '12, 11:51)</span> inetdog</div></div><span id="10366"></span><div id="comment-10366" class="comment not_top_scorer"><div id="post-10366-score" class="comment-score"></div><div class="comment-text"><p>@inetdog : that question about "inetdog" was asked by @suraj</p></div><div id="comment-10366-info" class="comment-info"><span class="comment-age">(20 Apr '12, 22:17)</span> Ashwin</div></div></div><div id="comment-tools-10330" class="comment-tools"><span class="comments-showing"> showing 5 of 7 </span> <a href="#" class="show-all-comments-link">show 2 more comments</a></div><div class="clear"></div><div id="comment-10330-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

@@ -1,0 +1,82 @@
++++
+type = "question"
+title = "use Wireshark&#x27;s Lua interpreter stand alone"
+description = '''When I just want to quickly test some bits of Lua code that doesn&#x27;t involve capturing traffic or analyzing a pcap, is there a way I can evoke the Lua interpreter embedded in Wireshark? I know I can down load Lua itself, but it doesn&#x27;t have all the Wireshark specific stuff like the new UInt64 objects...'''
+date = "2014-03-06T15:05:00Z"
+lastmod = "2014-03-06T21:59:00Z"
+weight = 30507
+keywords = [ "alone", "lua", "stand", "interpreter" ]
+aliases = [ "/questions/30507" ]
+osqa_answers = 3
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [use Wireshark's Lua interpreter stand alone](/questions/30507/use-wiresharks-lua-interpreter-stand-alone)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-30507-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>When I just want to quickly test some bits of Lua code that doesn't involve capturing traffic or analyzing a pcap, is there a way I can evoke the Lua interpreter embedded in Wireshark?</p><p>I know I can down load Lua itself, but it doesn't have all the Wireshark specific stuff like the new UInt64 objects. It doesn't even have bit op.<br />
+</p><p>When I use the Lua "evaluate" option under tools, it doesn't print out anything even if I have a print statement. And I can't even find Lua in the menu anymore in the new Wireshark 1.11.3.</p><p>So far I've been trying out my code bits by doing the command tshark -X lua_script: myScriptname</p><p>I will see the output from my script and then I quickly end the command as I'm not interested in the capturing on Ethernet that happens right afterwards.</p><p>Is there an easier way?<br />
+</p><p>And I assume the answer may be different on what OS you use. I use both Mac and Windows.</p><p>Thanks so much.</p></div><div id="question-tags" class="tags-container tags">alone lua stand interpreter</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>06 Mar '14, 15:05</strong></p><img src="https://secure.gravatar.com/avatar/b18cada3e3589f311e24f5ffbd1737bc?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="YXI&#39;s gravatar image" /><p>YXI<br />
+<span class="score" title="21 reputation points">21</span><span title="18 badges"><span class="badge1">●</span><span class="badgecount">18</span></span><span title="20 badges"><span class="silver">●</span><span class="badgecount">20</span></span><span title="23 badges"><span class="bronze">●</span><span class="badgecount">23</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="YXI has no accepted answers">0%</span> </br></br></p></div></div><div id="comments-container-30507" class="comments-container"></div><div id="comment-tools-30507" class="comment-tools"></div><div class="clear"></div><div id="comment-30507-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+3 Answers:
+
+</div>
+
+</div>
+
+<span id="30508"></span>
+
+<div id="answer-container-30508" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-30508-score" class="post-score" title="current number of votes">2</div></div></td><td><div class="item-right"><div class="answer-body"><p>It's technically possible to achieve it, by writing a Lua script that creates a console window, accepts user input, and calls loadstring() on the strings/chunks the user inputs. In fact my guess is someone's written a Lua "interpreter" as a Lua script somewhere, that you could use as a baseline to write such a console app.</p><p>But I don't do that personally - I just mostly use tshark with the <code>-X lua_script:</code> command switch. Basically I just keep a file open in my text editor called "test.lua", and use: <code>tshark -r empty.pcap -X lua_script:test.lua</code> to run my test script. Then all I have to do is up-arrow and run that command again and again, as I modify+save my test.lua file in my editor. And I use an empty pcap file so I don't have to ctrl-c to stop tshark, but instead just tell it to read that empty one in (using the <code>-r</code> switch), which keeps it silent.</p><p>In the more recent 1.11 nightly builds you can also pass arguments to your Lua script through the commandline, which was mostly added to help create some testsuites to test the Lua functions. But I rarely use that feature other than for those testsuites.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>06 Mar '14, 15:18</strong></p><img src="https://secure.gravatar.com/avatar/d02f20c18a7742ec73a666f1974bf6dc?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Hadriel&#39;s gravatar image" /><p>Hadriel<br />
+<span class="score" title="2652 reputation points"><span>2.7k</span></span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">●</span><span class="badgecount">9</span></span><span title="39 badges"><span class="bronze">●</span><span class="badgecount">39</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Hadriel has 30 accepted answers">18%</span></p></div></div><div id="comments-container-30508" class="comments-container"><span id="30515"></span><div id="comment-30515" class="comment"><div id="post-30515-score" class="comment-score"></div><div class="comment-text"><p>Thanks. The empty pcap file is a great idea!</p></div><div id="comment-30515-info" class="comment-info"><span class="comment-age">(06 Mar '14, 20:02)</span> YXI</div></div></div><div id="comment-tools-30508" class="comment-tools"></div><div class="clear"></div><div id="comment-30508-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="30509"></span>
+
+<div id="answer-container-30509" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-30509-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Oh, and I suppose I should point out, lest someone go try and write a Lua interpreter-window script, that you wouldn't be able to do some things in it anyway... because some things are only allowed by wireshark when it's loading scripts itself.</p><p>For example creating new protocol dissectors (ie, the <code>Proto</code> class/object), or creating protocol field extractors, or creating menus, etc. Those things have to happen at a specific time, and they happen right after Wireshark loads the Lua scripts but before anything else, and never again.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>06 Mar '14, 15:42</strong></p><img src="https://secure.gravatar.com/avatar/d02f20c18a7742ec73a666f1974bf6dc?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Hadriel&#39;s gravatar image" /><p>Hadriel<br />
+<span class="score" title="2652 reputation points"><span>2.7k</span></span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">●</span><span class="badgecount">9</span></span><span title="39 badges"><span class="bronze">●</span><span class="badgecount">39</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Hadriel has 30 accepted answers">18%</span></p></div></div><div id="comments-container-30509" class="comments-container"></div><div id="comment-tools-30509" class="comment-tools"></div><div class="clear"></div><div id="comment-30509-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="30521"></span>
+
+<div id="answer-container-30521" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-30521-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Heh, you actually answered this question yourself in another topic - the "Evaluate" menu item under Tools-&gt;Lua appears to do what you want. For example, you can have it print to your shell using:</p><pre><code>print(&quot;hello world&quot;)</code></pre><p>Or have it print to the Console dialog window created by Tools-&gt;Lua-&gt;Console using the logging facilities, such as:</p><pre><code>message(&quot;hello world&quot;)</code></pre></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>06 Mar '14, 21:59</strong></p><img src="https://secure.gravatar.com/avatar/d02f20c18a7742ec73a666f1974bf6dc?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Hadriel&#39;s gravatar image" /><p>Hadriel<br />
+<span class="score" title="2652 reputation points"><span>2.7k</span></span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">●</span><span class="badgecount">9</span></span><span title="39 badges"><span class="bronze">●</span><span class="badgecount">39</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Hadriel has 30 accepted answers">18%</span></p></div></div><div id="comments-container-30521" class="comments-container"><span id="30578"></span><div id="comment-30578" class="comment"><div id="post-30578-score" class="comment-score"></div><div class="comment-text"><p>For Windows, message() works. print() still doesn't work, even when I have a console window open, or start Wireshark from a shell.<br />
+For some reason, I got the QT version on my mac and the GTK+ version on my windows. So can't try this on the mac.</p></div><div id="comment-30578-info" class="comment-info"><span class="comment-age">(07 Mar '14, 13:14)</span> YXI</div></div><span id="30585"></span><div id="comment-30585" class="comment"><div id="post-30585-score" class="comment-score"></div><div class="comment-text"><p>On the Mac, it should be in <code>/usr/local/bin</code>, so you can start the GTK version from a terminal shell using <code>/usr/local/bin/wireshark</code>, vs. the Qt version using <code>/usr/local/bin/wireshark-qt</code>. Or at least that's how it is on my Mac. If it put it somewhere else, do a <code>which wireshark</code>.</p></div><div id="comment-30585-info" class="comment-info"><span class="comment-age">(07 Mar '14, 14:34)</span> Hadriel</div></div><span id="30772"></span><div id="comment-30772" class="comment"><div id="post-30772-score" class="comment-score"></div><div class="comment-text"><p>From the nightly build a couple of weeks ago, I got:</p><p>Windows: Both wireshark(GTK+) and qtshark under C:\Program Files\wireshark</p><p>Mac: Only wireshark under /usr/local/bin, and it is the qt version. I guess Mac download didn't come with the GTK+ version.</p></div><div id="comment-30772-info" class="comment-info"><span class="comment-age">(13 Mar '14, 10:01)</span> YXI</div></div><span id="30773"></span><div id="comment-30773" class="comment"><div id="post-30773-score" class="comment-score"></div><div class="comment-text"><p>Huh, yeah it looks like you're right - I just tried the latest nightly build and it only installed the Qt one, and in its package file it only has the Qt one. Hmmm... might be a bug.</p></div><div id="comment-30773-info" class="comment-info"><span class="comment-age">(13 Mar '14, 10:19)</span> Hadriel</div></div><span id="30774"></span><div id="comment-30774" class="comment"><div id="post-30774-score" class="comment-score"></div><div class="comment-text"><p>Filed bug 9881 - we'll see if it's really a bug or by design.</p></div><div id="comment-30774-info" class="comment-info"><span class="comment-age">(13 Mar '14, 10:23)</span> Hadriel</div></div><span id="30775"></span><div id="comment-30775" class="comment not_top_scorer"><div id="post-30775-score" class="comment-score"></div><div class="comment-text"><p>Wasn't it all those Mac users complaining about how ugly the GTK build looked that was one of the reasons for the switch to QT :-)</p><p>They get to live the new life first.</p></div><div id="comment-30775-info" class="comment-info"><span class="comment-age">(13 Mar '14, 10:27)</span> grahamb ♦</div></div><span id="30777"></span><div id="comment-30777" class="comment not_top_scorer"><div id="post-30777-score" class="comment-score"></div><div class="comment-text"><p>Well the GTK one really <em>is</em> ugly on a Mac (and doesn't use normal Mac keyboard shortcuts, etc.). The Qt one is a breath of fresh air. :)</p><p>Unfortunately, the Qt one is still very limited - it's missing tons of stuff, and some stuff it appears to have doesn't work yet. So as a Mac user I feel like a second class citizen if 1.11 Windows builds have all the features, whereas Mac builds don't.</p><p>Since the nightly 1.11 builds are meant to be the bleeding edge development builds eventually leading to 1.12... maybe <em>all</em> 1.11 builds should be Qt-only?</p></div><div id="comment-30777-info" class="comment-info"><span class="comment-age">(13 Mar '14, 12:00)</span> Hadriel</div></div></div><div id="comment-tools-30521" class="comment-tools"><span class="comments-showing"> showing 5 of 7 </span> <a href="#" class="show-all-comments-link">show 2 more comments</a></div><div class="clear"></div><div id="comment-30521-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

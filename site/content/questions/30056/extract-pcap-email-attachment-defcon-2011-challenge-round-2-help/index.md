@@ -1,0 +1,69 @@
++++
+type = "question"
+title = "Extract pcap email attachment - Defcon 2011 Challenge Round 2 help"
+description = '''Hi All, Before everyone tells me to Google, I have. I have seen write-ups with solutions that say &quot;extract the pcap&quot; and I have seen search results on how to extract word docs etc over smtp. I am still struggling to follow the solution to Round 2 of this challenge(http://forensicscontest.com/contest...'''
+date = "2014-02-20T13:47:00Z"
+lastmod = "2015-06-29T07:13:00Z"
+weight = 30056
+keywords = [ "extract", "export", "follow.tcp.stream", "pcap", "defcon" ]
+aliases = [ "/questions/30056" ]
+osqa_answers = 2
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Extract pcap email attachment - Defcon 2011 Challenge Round 2 help](/questions/30056/extract-pcap-email-attachment-defcon-2011-challenge-round-2-help)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-30056-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count">1</div></div></td><td><div id="item-right"><div class="question-body"><p>Hi All,</p><p>Before everyone tells me to Google, I have. I have seen write-ups with solutions that say "extract the pcap" and I have seen search results on how to extract word docs etc over smtp. I am still struggling to follow the solution to Round 2 of this challenge(<a href="http://forensicscontest.com/contest0...011-Contest.tc).">http://forensicscontest.com/contest0...011-Contest.tc).</a> I am new to packet analysis so bear with me please.</p><p>First of all, some tutorials I have come across indicate if I follow the TCP stream I should see the contents of the email(AOL) message. I've read that Wireshark will not display the uncompressed data if I follow the TCP stream but this tutorial (<a href="http://www.garage4hackers.com/printthread.php?s=2f786d5eda83dd42b36476dbeeaf51b8&amp;t=1419&amp;pp=10&amp;page=1)">http://www.garage4hackers.com/printthread.php?s=2f786d5eda83dd42b36476dbeeaf51b8&amp;t=1419&amp;pp=10&amp;page=1)</a> says it will. I'm at a lost what I am doing wrong here.</p><p>Secondly, I had to do a "find" to locate the packet frame with the email message body (something I couldn't have done had the answer not been published which frustrates me..:( ) I do see the name of the file attachment in this packet 6752. I have tried File-Export Objects - HTTP to try and locate the file, and I have tried using NetworkMiner. The file name does not show up in either. Can someone kindly explain what I am doing wrong or what I am missing? When I follow the TCP stream, should I see the email contents even with all the URL encoding etc? What if I had 100 POST frames, instead of 6 to look at, what is the methodology to finding email messages that are compressed if they do not show in the TCP stream? Yes I realize these may be dumb questions, but I am really new to this and trying to grasp what I'm missing.</p><p>Any help is appreciated, Thanks!!!</p></div><div id="question-tags" class="tags-container tags">extract export follow.tcp.stream pcap defcon</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>20 Feb '14, 13:47</strong></p><img src="https://secure.gravatar.com/avatar/09f5e4a1660d0a547662a4faf34edaec?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="RittleRi&#39;s gravatar image" /><p>RittleRi<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="RittleRi has no accepted answers">0%</span></p></div></div><div id="comments-container-30056" class="comments-container"><span id="30058"></span><div id="comment-30058" class="comment"><div id="post-30058-score" class="comment-score"></div><div class="comment-text"><p>It would help if we could see the challenge information, but the link does not work.</p></div><div id="comment-30058-info" class="comment-info"><span class="comment-age">(20 Feb '14, 14:15)</span> Jim Aragon</div></div><span id="30059"></span><div id="comment-30059" class="comment"><div id="post-30059-score" class="comment-score"></div><div class="comment-text"><p>Sorry about that. I grabbed the link from somewhere else. Here is the link with the challenge downloads <a href="http://forensicscontest.com/2011/08/16/puzzle-9-anns-deception-defcon-2011#comments">http://forensicscontest.com/2011/08/16/puzzle-9-anns-deception-defcon-2011#comments</a></p><p>For Round 2 specifically: <a href="http://forensicscontest.com/contest09/spoilers/2011-Defcon-Contest-Round2/defcon2011contest-round2.html">http://forensicscontest.com/contest09/spoilers/2011-Defcon-Contest-Round2/defcon2011contest-round2.html</a></p><p>and here is the link with the summary of questions/answers: <a href="http://forensicscontest.com/2011/08/16/puzzle-9-answers">http://forensicscontest.com/2011/08/16/puzzle-9-answers</a></p></div><div id="comment-30059-info" class="comment-info"><span class="comment-age">(20 Feb '14, 15:41)</span> RittleRi</div></div></div><div id="comment-tools-30056" class="comment-tools"></div><div class="clear"></div><div id="comment-30056-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="30134"></span>
+
+<div id="answer-container-30134" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-30134-score" class="post-score" title="current number of votes">4</div></div></td><td><div class="item-right"><div class="answer-body"><p><em>Secondly, I had to do a "find" to locate the packet frame with the email message body (something I couldn't have done had the answer not been published which frustrates me..:( ) I do see the name of the file attachment in this packet 6752.</em></p><p>You know the sender's name is "Ann", so "frame contains Ann" gives you 1 patching packet, namely frame 6752. The packet details for this frame indicates a MIME Multipart Encapsulation. Expanding it, you can see the first one is: "Encapsulation multipart part: (application/cap). Expanding this again, you can see the filname is "Help.pcap".</p><p><em>I have tried File-Export Objects - HTTP to try and locate the file, and I have tried using NetworkMiner. The file name does not show up in either. Can someone kindly explain what I am doing wrong or what I am missing? When I follow the TCP stream, should I see the email contents even with all the URL encoding etc? What if I had 100 POST frames, instead of 6 to look at, what is the methodology to finding email messages that are compressed if they do not show in the TCP stream? Yes I realize these may be dumb questions, but I am really new to this and trying to grasp what I'm missing.</em></p><p>If you've followed along above, then you have already identified the "Help.pcap" file. Expanding the Media Type and selecting "Media Type: application/cap (2638123 bytes)" will highlight all the raw bytes. Notice that the 1st 4 bytes are "<code>d4 c3 b2 a1</code>". This is the pcap file's so-called magic number. Refer to the Wireshark <a href="http://wiki.wireshark.org/Development/LibpcapFileFormat">Libpcap File Format</a> wiki page for more information on the format. If you now right-click, you can choose, "Export Selected Packet Bytes...". Name the file, "Help.pcap" and then load that newly extracted file back into Wireshark.</p><p>With "Help.pcap" loaded, <code>File -&gt; Export Objects -&gt; HTTP</code> and then open the speaking schedule, <strong>schedule.html</strong>, to find the date.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>24 Feb '14, 08:46</strong></p><img src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="cmaynard&#39;s gravatar image" /><p>cmaynard ♦♦<br />
+<span class="score" title="9361 reputation points"><span>9.4k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">●</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">●</span><span class="badgecount">142</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="cmaynard has 108 accepted answers">20%</span></p></div></div><div id="comments-container-30134" class="comments-container"><span id="30143"></span><div id="comment-30143" class="comment"><div id="post-30143-score" class="comment-score"></div><div class="comment-text"><p>Oh I see! Thank you for the wiki page link and detailed response! Very much appreciated.</p></div><div id="comment-30143-info" class="comment-info"><span class="comment-age">(24 Feb '14, 10:48)</span> RittleRi</div></div><span id="30144"></span><div id="comment-30144" class="comment"><div id="post-30144-score" class="comment-score"></div><div class="comment-text"><p>Hint: If a supplied answer resolves your question can you please "accept" it by clicking the checkmark icon next to it. This highlights good answers for the benefit of subsequent users with the same or similar questions. For extra points you can up vote the answer (thumb up).</p></div><div id="comment-30144-info" class="comment-info"><span class="comment-age">(24 Feb '14, 10:54)</span> Kurt Knochner ♦</div></div></div><div id="comment-tools-30134" class="comment-tools"></div><div class="clear"></div><div id="comment-30134-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="43663"></span>
+
+<div id="answer-container-43663" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-43663-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Hi,</p><p>I wrote a script to do help doing this automatically. This is very simple and was developed in order to decode malicious attachments we were receiving at high pace.</p><p>Any pull request welcome, I'll re-write a more complete tool in python soon</p><p><a href="https://github.com/Ibrahimous/Miscellaneous/blob/master/bash/extract_and_decode_from_pcap/extract_and_decode_from_pcap.sh">https://github.com/Ibrahimous/Miscellaneous/blob/master/bash/extract_and_decode_from_pcap/extract_and_decode_from_pcap.sh</a></p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>29 Jun '15, 07:13</strong></p><img src="https://secure.gravatar.com/avatar/07496cfb36476e826252f544e43761e3?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="charlou&#39;s gravatar image" /><p>charlou<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="charlou has no accepted answers">0%</span></p></div></div><div id="comments-container-43663" class="comments-container"></div><div id="comment-tools-43663" class="comment-tools"></div><div class="clear"></div><div id="comment-43663-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

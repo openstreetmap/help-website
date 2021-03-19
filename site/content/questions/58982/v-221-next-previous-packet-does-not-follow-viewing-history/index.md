@@ -1,0 +1,59 @@
++++
+type = "question"
+title = "V 2.2.1 Next Previous packet does not follow viewing history"
+description = '''I am a newbie with Wireshark using V2.2.1 on Windows x64. I am taking a CBT Nuggets course and cover the GUI section right now. The session shows the &quot;Go to the previous packet&quot; and &quot;Go to the next packet&quot; arrows icons following the history of packets examined during a session. But select packets 1,...'''
+date = "2017-01-23T07:57:00Z"
+lastmod = "2017-01-23T09:20:00Z"
+weight = 58982
+keywords = [ "previous", "next", "packet", "browsing" ]
+aliases = [ "/questions/58982" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [V 2.2.1 Next Previous packet does not follow viewing history](/questions/58982/v-221-next-previous-packet-does-not-follow-viewing-history)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-58982-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I am a newbie with Wireshark using V2.2.1 on Windows x64. I am taking a CBT Nuggets course and cover the GUI section right now. The session shows the "Go to the previous packet" and "Go to the next packet" arrows icons following the history of packets examined during a session. But select packets 1, 10, 20, 30 and then using "Go to the previous packet" simply takes me from 30 to 29 instead of 20 the last packet I was viewing. Likewise next just takes me to 'packet+1'. I also tried the "next/previous packet in conversation" with the same result, though I expect that is for something other than simple browsing the packet list.</p><p>Any help would be appreciated.</p><p>BR, -Scott</p></div><div id="question-tags" class="tags-container tags">previous next packet browsing</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>23 Jan '17, 07:57</strong></p><img src="https://secure.gravatar.com/avatar/5aeb2216f3b1152c2e1e048efec95563?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="spkay31&#39;s gravatar image" /><p>spkay31<br />
+<span class="score" title="6 reputation points">6</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="spkay31 has no accepted answers">0%</span></p></div></div><div id="comments-container-58982" class="comments-container"></div><div id="comment-tools-58982" class="comment-tools"></div><div class="clear"></div><div id="comment-58982-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="58984"></span>
+
+<div id="answer-container-58984" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-58984-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>This is to be expected <strong>for the QT version</strong>, that's exactly what those buttons do, move to the next or previous packet in the packet list.</p><p>If you have a display filter enabled then the buttons move to the next\previous displayed packet.</p><p>The next\previous conversation buttons are useful for some protocols that have "conversations" between the two endpoints and allow navigation between the packets in the conversation without having to set a display filter.</p><p>I think that a lot of the existing Wireshark courses and tutorials that are written around the legacy GTK interface might need to be updated as there are differences, mostly intentional.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>23 Jan '17, 09:20</strong></p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="grahamb has 274 accepted answers">22%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 24 Jan '17, 04:12</p></div></div><div id="comments-container-58984" class="comments-container"><span id="58989"></span><div id="comment-58989" class="comment"><div id="post-58989-score" class="comment-score"></div><div class="comment-text"><p>Thanks for the help. I was asking specifically because the course I am taking is demonstrating GUI usage with an earlier version (I think 1.8.5) and the instructor was covering the utility of the "next" "previous" packet button when browsing manually through a large set of packets. So for instance he is showing looking at packet 1 then jumping to packet 15 and then 30 and using the "previous" "next" to hop back and forth between those three, indicating the packet viewing history is maintained (showing that in the course demo). I was assuming this must be a behavior that was either removed in the newer version or needs to be enabled via some properties settings in the GUI. Based on your reply this is simply how the "previous" "next" buttons work and no browsing history is remembered.</p></div><div id="comment-58989-info" class="comment-info"><span class="comment-age">(23 Jan '17, 12:33)</span> spkay31</div></div><span id="59003"></span><div id="comment-59003" class="comment"><div id="post-59003-score" class="comment-score">1</div><div class="comment-text"><p>@grahamb: I'm not sure this is correct - in Legacy GTK Wireshark, the next/previous behave exactly as @spkay31 says, jumping to the next/previously selected packet, not adjacent packets in the list.</p><p>Nobody needs an equivalent of up/down keys, but jumping in a "history list" of viewed packets makes sense. So I think this functionality is either broken (compared to GTK), or implemented differently (meaning, it's inconsistent to GTK)</p></div><div id="comment-59003-info" class="comment-info"><span class="comment-age">(24 Jan '17, 01:35)</span> Jasper ♦♦</div></div><span id="59008"></span><div id="comment-59008" class="comment"><div id="post-59008-score" class="comment-score">1</div><div class="comment-text"><p>So it does. The tooltips on the GTK buttons also refer to packet history, so not only is the functionality different, the labelling is as well, leading me to think the change was possibly intentional.</p><p>We also have buttons that go to the first and last packets that replicate "Home" and "End" functionality so toolbar button replication of functions also bound to keys isn't odd in itself.</p><p>I don't have time to look into the code at the moment, but the difference would imply the GTK version is maintaining a history list of packets visited, along with a pointer into the list that is moved when the buttons are clicked. This may be explicit code, or a property of the GTK list view, the latter is a more likely explanation of the differences.</p><p>If users would like to see the Qt version changed to replicate the GTK behaviour, then raising a bug on the <a href="https://bugs.wireshark.org">Wireshark Bugzilla</a> is the appropriate place if there isn't one already there.</p><p>I'll add an edit to my answer noting that I only tested the Qt version.</p></div><div id="comment-59008-info" class="comment-info"><span class="comment-age">(24 Jan '17, 04:10)</span> grahamb ♦</div></div><span id="59047"></span><div id="comment-59047" class="comment"><div id="post-59047-score" class="comment-score"></div><div class="comment-text"><p>Thanks for following up with this reply. Good to know I didn't waste my time posting this question. I thought the functionality was both useful and probably involved enough code that I would be surprised if it was intentionally removed in a later version. When you are referring to GTK are you talking about earlier Wireshark implementation that was based on another toolkit (GTK) and later versions are now based on Qt? Do some people prefer to use to old GTK version due to changes introduced in the new GTK version?</p></div><div id="comment-59047-info" class="comment-info"><span class="comment-age">(25 Jan '17, 08:22)</span> spkay31</div></div><span id="59050"></span><div id="comment-59050" class="comment"><div id="post-59050-score" class="comment-score">1</div><div class="comment-text"><p>The original GUI for Wireshark was GTK for all platforms, for various reasons it was decided to move to Qt as blogged <a href="https://blog.wireshark.org/2013/10/switching-to-qt/">here</a>.</p><p>The current status of work is that the Qt version is mostly complete, there are some bugs and things that haven't been implemented yet, and there are quite a few things that have been done differently (hopefully for the better). The Qt version will be the only version distributed on macOS and Windows for the next release (2.4), although you should still be able to build the GTK version if you wish. Some current development work for new UI features is likely to be only in the Qt version.</p><p>It would help enormously if every one who can tries the Qt version and reports any bugs found at the Wireshark Bugzilla.</p></div><div id="comment-59050-info" class="comment-info"><span class="comment-age">(25 Jan '17, 09:47)</span> grahamb ♦</div></div></div><div id="comment-tools-58984" class="comment-tools"></div><div class="clear"></div><div id="comment-58984-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

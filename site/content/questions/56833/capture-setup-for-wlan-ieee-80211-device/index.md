@@ -1,0 +1,80 @@
++++
+type = "question"
+title = "capture setup for WLAN (IEEE 802.11)  device"
+description = '''Hello Everybody, I recently installed Wireshark, when I open wireshark it shows &quot;No interface found&quot; while I have a TP-LINK&#x27;s TL-WN823N(USB wireless adapter) connected. How do I setup or add the interface to the wireshark interface list. Help is greatly appreciated :)'''
+date = "2016-10-30T09:33:00Z"
+lastmod = "2016-10-31T18:46:00Z"
+weight = 56833
+keywords = [ "wireless", "interface", "usb" ]
+aliases = [ "/questions/56833" ]
+osqa_answers = 3
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [capture setup for WLAN (IEEE 802.11) device](/questions/56833/capture-setup-for-wlan-ieee-80211-device)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-56833-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hello Everybody,</p><p>I recently installed Wireshark, when I open wireshark it shows "No interface found" while I have a TP-LINK's TL-WN823N(USB wireless adapter) connected.</p><p>How do I setup or add the interface to the wireshark interface list. Help is greatly appreciated :)</p></div><div id="question-tags" class="tags-container tags">wireless interface usb</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>30 Oct '16, 09:33</strong></p><img src="https://secure.gravatar.com/avatar/9253cf3eb98218d5b8c442737219e7a9?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="wireshark_abdular7&#39;s gravatar image" /><p>wireshark_ab...<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="wireshark_abdular7 has no accepted answers">0%</span></p></div></div><div id="comments-container-56833" class="comments-container"><span id="56836"></span><div id="comment-56836" class="comment"><div id="post-56836-score" class="comment-score"></div><div class="comment-text"><p>What operating system are you running Wireshark on?</p></div><div id="comment-56836-info" class="comment-info"><span class="comment-age">(30 Oct '16, 14:13)</span> Guy Harris ♦♦</div></div><span id="56847"></span><div id="comment-56847" class="comment"><div id="post-56847-score" class="comment-score"></div><div class="comment-text"><p>Windows7 32bit</p></div><div id="comment-56847-info" class="comment-info"><span class="comment-age">(31 Oct '16, 00:07)</span> wireshark_ab...</div></div><span id="56848"></span><div id="comment-56848" class="comment"><div id="post-56848-score" class="comment-score">1</div><div class="comment-text"><p>What does the Help -&gt; About window in Wireshark report? (Please copy and paste the text, rather than trying to post a screenshot.)</p></div><div id="comment-56848-info" class="comment-info"><span class="comment-age">(31 Oct '16, 00:22)</span> Guy Harris ♦♦</div></div><span id="56849"></span><div id="comment-56849" class="comment"><div id="post-56849-score" class="comment-score"></div><div class="comment-text"><p>Version 2.2.1 (v2.2.1-0-ga6fbd27 from master-2.2)</p><p>Copyright 1998-2016 Gerald Combs [email protected] and contributors. License GPLv2+: GNU GPL version 2 or later <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p><p>Compiled (32-bit) with GTK+ 2.24.23, with Cairo 1.10.2, with Pango 1.34.0, with WinPcap (4_1_3), with GLib 2.38.0, with zlib 1.2.8, with SMI 0.4.8, with c-ares 1.12.0, with Lua 5.2.4, with GnuTLS 3.2.15, with Gcrypt 1.6.2, with MIT Kerberos, with GeoIP, with PortAudio V19-devel (built Oct 4 2016), with AirPcap.</p><p>Running on 32-bit Windows 7, build 7600, with locale English_United States.1252, with WinPcap version 4.1.3 (packet.dll version 0.10 r12), based on libpcap version 1.0 branch 1_0_rel0b (20091008), with GnuTLS 3.2.15, with Gcrypt 1.6.2, without AirPcap. Intel(R) Core(TM) i3-2120 CPU @ 3.30GHz (with SSE4.2), with 3240MB of physical memory.</p><p>Built using Microsoft Visual C++ 12.0 build 40629</p><p>Wireshark is Open Source Software released under the GNU General Public License.</p><p>Check the man page and <a href="http://www.wireshark.org">http://www.wireshark.org</a> for more information.</p></div><div id="comment-56849-info" class="comment-info"><span class="comment-age">(31 Oct '16, 00:43)</span> wireshark_ab...</div></div><span id="56850"></span><div id="comment-56850" class="comment"><div id="post-56850-score" class="comment-score"></div><div class="comment-text"><p>I executed the command C:\Windows\system32&gt;sc start npf</p><p>and it returned me(text below)</p><p>[SC] StartService FAILED 31:</p><p>A device attached to the system is not functioning.</p></div><div id="comment-56850-info" class="comment-info"><span class="comment-age">(31 Oct '16, 00:45)</span> wireshark_ab...</div></div><span id="56851"></span><div id="comment-56851" class="comment not_top_scorer"><div id="post-56851-score" class="comment-score"></div><div class="comment-text"><p>Was the USB adapter plugged into the machine at the time it was booted? If not, what happens if you reboot the machine while it's plugged in and then try to run Wireshark?</p></div><div id="comment-56851-info" class="comment-info"><span class="comment-age">(31 Oct '16, 01:08)</span> Guy Harris ♦♦</div></div><span id="56867"></span><div id="comment-56867" class="comment not_top_scorer"><div id="post-56867-score" class="comment-score"></div><div class="comment-text"><p>Yes Harris...adapter was connected! rebooting is not fixing the issue :(</p></div><div id="comment-56867-info" class="comment-info"><span class="comment-age">(31 Oct '16, 07:29)</span> wireshark_ab...</div></div></div><div id="comment-tools-56833" class="comment-tools"><span class="comments-showing"> showing 5 of 7 </span> <a href="#" class="show-all-comments-link">show 2 more comments</a></div><div class="clear"></div><div id="comment-56833-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+3 Answers:
+
+</div>
+
+</div>
+
+<span id="56834"></span>
+
+<div id="answer-container-56834" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-56834-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>Suggest to start here</p><p><a href="https://wiki.wireshark.org/CaptureSetup/WLAN">https://wiki.wireshark.org/CaptureSetup/WLAN</a></p><p>Depends on os and many other factors. Reboot, as well.<br />
+</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>30 Oct '16, 10:52</strong></p><img src="https://secure.gravatar.com/avatar/0a47ef51dd9c9996d194a4983295f5a4?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Bob%20Jones&#39;s gravatar image" /><p>Bob Jones<br />
+<span class="score" title="1014 reputation points"><span>1.0k</span></span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="5 badges"><span class="silver">●</span><span class="badgecount">5</span></span><span title="15 badges"><span class="bronze">●</span><span class="badgecount">15</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Bob Jones has 19 accepted answers">21%</span> </br></p></div></div><div id="comments-container-56834" class="comments-container"></div><div id="comment-tools-56834" class="comment-tools"></div><div class="clear"></div><div id="comment-56834-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="56886"></span>
+
+<div id="answer-container-56886" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-56886-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><blockquote><p>with WinPcap version 4.1.3 (packet.dll version 0.10 r12), based on libpcap version 1.0 branch 1_0_rel0b (20091008)</p></blockquote></blockquote><p>This indicates that you are using a very old version Npcap's wpcap.dll and the latest version (0.10 r12) Npcap's Packet.dll. I can't tell what's the driver's version. In another word, your Npcap installation is broken. A possible cause is that you uninstalled Npcap with Wireshark still opened. So an old wpcap.dll is still in use by Wireshark and not deleted.</p><p>I suggest you close all Wireshark windows. And reinstall Npcap's latest version again, if there's still issue, then send the DiagReport to: <a href="https://github.com/nmap/nmap/issues">https://github.com/nmap/nmap/issues</a></p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>31 Oct '16, 18:46</strong></p><img src="https://secure.gravatar.com/avatar/0f8ec58f46e4af3a67f768675c20aac8?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Yang%20Luo&#39;s gravatar image" /><p>Yang Luo<br />
+<span class="score" title="91 reputation points">91</span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="7 badges"><span class="bronze">●</span><span class="badgecount">7</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Yang Luo has one accepted answer">4%</span></p></div></div><div id="comments-container-56886" class="comments-container"></div><div id="comment-tools-56886" class="comment-tools"></div><div class="clear"></div><div id="comment-56886-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="56858"></span>
+
+<div id="answer-container-56858" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-56858-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>Running on 32-bit Windows 7, build 7600, with locale English_United States.1252, with WinPcap version 4.1.3 (packet.dll version 0.10 r12), based on libpcap version 1.0 branch 1_0_rel0b (20091008)</p></blockquote><p>You seem to be running npcap which is currently considered experimental for use with Wireshark. npcap may have been installed directly by yourself, or as part of another installation e.g. nmap beta.</p><p>If you wish to continue with npcap, you'll need to get support via the <a href="https://github.com/nmap/nmap/issues">npcap Github issues page</a>.</p><p>If you don't require npcap, please uninstall it, reboot, and re-install Wireshark allowing it to install WinPcap 4.1.3, and then post back here with the result.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>31 Oct '16, 03:58</strong></p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="grahamb has 274 accepted answers">22%</span></p></div></div><div id="comments-container-56858" class="comments-container"><span id="56882"></span><div id="comment-56882" class="comment"><div id="post-56882-score" class="comment-score"></div><div class="comment-text"><p>So what indicates that it's Npcap? It says it's "libpcap version 1.0", which sounds more like WinPcap (based on an older libpcap) than Npcap (based on a more recent libpcap).</p></div><div id="comment-56882-info" class="comment-info"><span class="comment-age">(31 Oct '16, 14:22)</span> Guy Harris ♦♦</div></div><span id="56895"></span><div id="comment-56895" class="comment"><div id="post-56895-score" class="comment-score"></div><div class="comment-text"><blockquote>packet.dll version 0.10 r12</blockquote></div><div id="comment-56895-info" class="comment-info"><span class="comment-age">(01 Nov '16, 04:54)</span> grahamb ♦</div></div></div><div id="comment-tools-56858" class="comment-tools"></div><div class="clear"></div><div id="comment-56858-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

@@ -1,0 +1,84 @@
++++
+type = "question"
+title = "SMB2 Long Deltatime - Applications Crash"
+description = '''I am a newbee using Wireshark, so hope for a little help :-) I have an issue with an SQL DB application which craches. I my tracefile I see very high Delta Time on SMB2 and a max SRT(s) of 625.347497 on Notify on SMB2 Service Response Time. Where should I start to look? Is it the network, server or ...'''
+date = "2017-01-04T23:55:00Z"
+lastmod = "2017-01-05T10:32:00Z"
+weight = 58528
+keywords = [ "smb2", "database" ]
+aliases = [ "/questions/58528" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [SMB2 Long Deltatime - Applications Crash](/questions/58528/smb2-long-deltatime-applications-crash)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-58528-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I am a newbee using Wireshark, so hope for a little help :-) I have an issue with an SQL DB application which craches. I my tracefile I see very high Delta Time on SMB2 and a max SRT(s) of 625.347497 on Notify on SMB2 Service Response Time.</p><p>Where should I start to look? Is it the network, server or Client?</p><pre><code>===========================================================================
+SMB2 Service Response Time Statistics - sql-db-issue_00001_20170103094009_00006_20170103145622_00001_20170104090747:
+Index  Procedure  Calls  Min SRT (s)  Max SRT (s)  Avg SRT (s)  Sum SRT (s)
+
+SMB2            
+
+Close                       6    361     0.000291     0.146918     0.001722     0.621558
+Create                      5    371     0.000331     1.787312     0.009587     3.556769
+Find                       14    271     0.000600     0.194669     0.005546     1.502843
+Flush                       7      1     0.165415     0.165415     0.165415     0.165415
+GetInfo                    16     58     0.000330     0.009854     0.002310     0.133973
+Ioctl                      11     51     0.000420     0.182926     0.010477     0.534342
+Negotiate Protocol          0      3     0.000743     0.000900     0.000814     0.002442
+Notify                     15     18     0.000661   625.347497    71.007926  1278.142673
+Read                        8    601     0.000328     0.302919     0.028557    17.163042
+Session Logoff              2      3     0.000797     0.004081     0.001950     0.005849
+Session Setup               1      4     0.000784     0.007014     0.002552     0.010209
+SetInfo                    17      9     0.000598     0.000858     0.000745     0.006704
+Tree Connect                3      5     0.000346     0.001530     0.000663     0.003313
+Tree Disconnect             4      5     0.000816     0.009827     0.004345     0.021723
+Write                       9     13     0.000331     0.008499     0.002117     0.027518
+
+13686   4.777025    10.34.80.11 10.34.80.165    SMB2    162 29.962738000        256 Notify Response</code></pre>Thanks in advance.</div><div id="question-tags" class="tags-container tags">smb2 database</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>04 Jan '17, 23:55</strong></p><img src="https://secure.gravatar.com/avatar/7b3030eb06fbd7c1b53adf865d3964e1?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="bachsec&#39;s gravatar image" /><p>bachsec<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="bachsec has no accepted answers">0%</span> </br></p></div><div class="post-update-info post-update-info-edited"><p>edited 07 Jan '17, 11:04</p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span></p></div></div><div id="comments-container-58528" class="comments-container"><span id="58581"></span><div id="comment-58581" class="comment"><div id="post-58581-score" class="comment-score"></div><div class="comment-text"><p>Could you explain the topology of the system a little? Is it:</p><p>Client PC ---- Database Server ---- SMB File Server</p><p>or</p><p>Client PC / Access ---- SMB File Server</p><p>or</p><p>????</p></div><div id="comment-58581-info" class="comment-info"><span class="comment-age">(07 Jan '17, 10:49)</span> PaulOfford</div></div><span id="58590"></span><div id="comment-58590" class="comment"><div id="post-58590-score" class="comment-score"></div><div class="comment-text"><p>Hi PaulOfford</p><p>It is Client(with developed frontend) ----&gt; SMB Server with SQL Express as DB for the frontend Application</p><p>The application connects to the SQL express instance in the SMB server.</p></div><div id="comment-58590-info" class="comment-info"><span class="comment-age">(08 Jan '17, 00:11)</span> bachsec</div></div><span id="58592"></span><div id="comment-58592" class="comment"><div id="post-58592-score" class="comment-score">1</div><div class="comment-text"><p>There are two ways to connect to a Microsoft SQL database; named pipes or TDS over TCP. You could be using named pipes but Find and Notify are SMB2 commands that I wouldn't expect to see.</p><p>By the way, Notify response times might be long as Notify is used to notify a client if a change has been made to a file or directory. See <a href="https://wiki.wireshark.org/SMB2/Notify">https://wiki.wireshark.org/SMB2/Notify</a></p><p>Can you confirm that the client application connects to the database using named pipes? If you are not sure, check to see if there is any traffic in your trace between the client and port 1433 on your server with the filter expression:</p><p>ip.addr==<em>the_client_ip_address</em> and tcp.port=1433</p><p>TCP port 1433 is the default port number for Microsoft SQL Server. Although it can be set to a different value and so you might want to check with whoever supports the database.</p><p>Sorry to keep asking dumb questions but I don't want to send you off on a wild goose chase.</p></div><div id="comment-58592-info" class="comment-info"><span class="comment-age">(08 Jan '17, 01:57)</span> PaulOfford</div></div><span id="58598"></span><div id="comment-58598" class="comment"><div id="post-58598-score" class="comment-score"></div><div class="comment-text"><p>Hi PaulOfford</p><p>In the tracefile I see at lot of traffic between the client and the serve on port 1433. 80% of the packages in the trace is that, when I filter with the filet you wrote.</p></div><div id="comment-58598-info" class="comment-info"><span class="comment-age">(08 Jan '17, 12:04)</span> bachsec</div></div><span id="58599"></span><div id="comment-58599" class="comment"><div id="post-58599-score" class="comment-score"></div><div class="comment-text"><p><img src="https://osqa-ask.wireshark.org/upfiles/grahp.jpg" width="600" /></p><p>Does this graph say anything.</p></div><div id="comment-58599-info" class="comment-info"><span class="comment-age">(08 Jan '17, 12:21)</span> bachsec</div></div><span id="58600"></span><div id="comment-58600" class="comment not_top_scorer"><div id="post-58600-score" class="comment-score"></div><div class="comment-text"><p>no. sorry.</p></div><div id="comment-58600-info" class="comment-info"><span class="comment-age">(08 Jan '17, 13:16)</span> packethunter</div></div><span id="58602"></span><div id="comment-58602" class="comment not_top_scorer"><div id="post-58602-score" class="comment-score"></div><div class="comment-text"><p>It has answered the question I had. So, although your client application may use SMB file services, the connection to the database is via TDS/TCP.</p><p>You say in the title that the application crashes. Do you literally mean that? Does it throw an exception, dump and then exit? Or do you get an error message? If so, what's the message and have you determined what it means?</p></div><div id="comment-58602-info" class="comment-info"><span class="comment-age">(08 Jan '17, 14:29)</span> PaulOfford</div></div></div><div id="comment-tools-58528" class="comment-tools"><span class="comments-showing"> showing 5 of 7 </span> <a href="#" class="show-all-comments-link">show 2 more comments</a></div><div class="clear"></div><div id="comment-58528-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="58541"></span>
+
+<div id="answer-container-58541" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-58541-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>Hello bachsec, and welcome to ask.wireshark</p><p>Application errors like missing access rights or lock conflicts are easily spotted with this display filter: <strong><code>smb2.flags.response == 1 and not smb2.nt_status == 0</code></strong></p><p>Looking at the Service Response Time Statistics can be helpful. Alas, in this case we only get marginal info.</p><p>The most remarkable part in the statistics from your trace file is one instance of a long time for the Create command. The Create function is called to obtain a file handle. This can be used to either create a file or to open an existing file. 1.7 seconds is considered "long" for most cases. However, a a virus scanner checking a 4 GB ISO image in 1.7 seconds would be impressive. So we have a number, but no unit to measure against. The delay could also be caused a TCP retransmissions or other network issues. The long response times for the notify request are usually not a problem, as this an asynchronous message from the server like "Hey client, a time stamp on a file has changed".</p><p>A trace file would help a lot. Depending on the configuration (DFS, Branch Cache etc.) a full network trace from the client view would be the best option. Certain problems might require two traces taken simultaneously with client and server.</p><p>Please bear in mind, that SMB traffic usually reveals the file contents and (depending on the configuration of workstation and server) could also reveal users passwords. To investigate that problem we need at least the SMB or SMB2 headers with the return codes. I am not aware of a tool that sanitizes SMB traffic as one might desire.</p><p>If you can not share the trace file with the general public a network consultant might be your best option.</p><p>Good hunting</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>05 Jan '17, 10:32</strong></p><img src="https://secure.gravatar.com/avatar/3b60e92020a427bb24332efc0b560943?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="packethunter&#39;s gravatar image" /><p>packethunter<br />
+<span class="score" title="2137 reputation points"><span>2.1k</span></span><span title="7 badges"><span class="badge1">●</span><span class="badgecount">7</span></span><span title="15 badges"><span class="silver">●</span><span class="badgecount">15</span></span><span title="48 badges"><span class="bronze">●</span><span class="badgecount">48</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="packethunter has 8 accepted answers">8%</span></p></img></div></div><div id="comments-container-58541" class="comments-container"><span id="58591"></span><div id="comment-58591" class="comment"><div id="post-58591-score" class="comment-score"></div><div class="comment-text"><p>Hi Packethunter</p><p>With the filter you gave me, I can see something is that errors E.G. Error: STATUS_BUFFER_TOO_SMALL</p></div><div id="comment-58591-info" class="comment-info"><span class="comment-age">(08 Jan '17, 00:14)</span> bachsec</div></div><span id="58595"></span><div id="comment-58595" class="comment"><div id="post-58595-score" class="comment-score"></div><div class="comment-text"><p>Hmmmm. "Buffer too small" is a regular message for certain protocols, that use named pipes. The client sends a request and a default buffer size, say 1kByte. If the server's response exceeds 1 kB the response will have the return code "Buffer too small". Another field will hold the required buffer size for the response.</p><p>Here are a few root causes for performance problems, that I have encountered during various analysis projects:</p><ul><li>Missing index or too many indices (like, 300+ fields for a single row)</li><li>Disk errors or other hardware problems -&gt; Check the System event log</li><li>A virus scanner interfering with the application -&gt; Try to put the DB file on an exclusion list. Remove the DB-file(s) from the list if the virus scanner is not involved</li><li>Bad application design no 1: Too many greedy locks (like exclusive write lock, if a shared read would do)</li><li>Bad application design no 2: Keep on reading the same data within milliseconds (in the magnitude of 5'000 unnecessary reads per transaction)</li><li>Bad application design no 3: Using a file share, when a database would be preferable</li><li>Bad system design no 1: Use RAID-5 storage for files or databases that are written frequently.</li><li>Bad system design no 2: Too little memory, CPU too weak, (time-) critical data on a USB-2 attached device, other hardware bottleneck</li><li>Poor system maintenance: Backup application has consumed 12 days of CPU time (guess, when the problem started; then guess who got blamed)</li><li>Wrong video adapter for the client (on-board Graphics adapter work no so well for CAD applications)</li><li>Poor network design (round trip times exceeding 10 msec when 100 microseconds are easy to achieve without investment)</li><li>Half-duplex / full-duplex mismatch (manifests itself in serious retransmissions, easy to spot with wireshark)</li></ul><p>After a day at the Sharkfest conference you will certainly have a list that is five times this long. The majority of these issues is best found with diagnostic tools on the server, like the Performance Monitor. Wireshark will help you in many situations to identify the culprit (server, client, network ...). Getting to the root cause requires other tools, once you have arrived at the server.</p><p>I am not sure, if I can help you further without a trace file.</p><p>Good hunting</p></div><div id="comment-58595-info" class="comment-info"><span class="comment-age">(08 Jan '17, 09:16)</span> packethunter</div></div></div><div id="comment-tools-58541" class="comment-tools"></div><div class="clear"></div><div id="comment-58541-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</hr>
+
+</div>
+
+</div>
+

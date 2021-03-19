@@ -1,0 +1,136 @@
++++
+type = "question"
+title = "Trying to decrypt KryoNet TCP Data from mobile game API"
+description = '''Hi I am trying to decipher data that a received from a mobile game application. Firstly, there is traffic going through port 443 which contains JSON data which is all well and fine. However in that data it tells the client application to connect to another server over TCP ports (5000, 5001 or 5002)....'''
+date = "2016-06-14T15:13:00Z"
+lastmod = "2016-06-14T15:13:00Z"
+weight = 53444
+keywords = [ "decode", "decryption", "decrypt", "tcp", "kryonet" ]
+aliases = [ "/questions/53444" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Trying to decrypt KryoNet TCP Data from mobile game API](/questions/53444/trying-to-decrypt-kryonet-tcp-data-from-mobile-game-api)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-53444-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi</p><p>I am trying to decipher data that a received from a mobile game application. Firstly, there is traffic going through port 443 which contains JSON data which is all well and fine. However in that data it tells the client application to connect to another server over TCP ports (5000, 5001 or 5002). Once connected the server sends some data which is unreadable. The client application then sends some class data to the server. The server then sends what i believe to be object data but it is unreadable (possibly encrypted??). I want to know if this is encrypted data or if perhaps there is some compression algorithm or decoding issue. The game client and server uses KryoNet to communicate over TCP. The data is as below:</p><p>Data received from server right after connecting:</p><pre><code>0000   00 00 00 30 78 9c ab 56 4a ce 49 2c 2e 56 b2 52  ...0x..VJ.I,.V.R
+0010   2a 4a 4d cf 2c 2e 49 2d 0a 71 0e 50 d2 51 4a ce  *JM.,.I-.q.P.QJ.
+0020   cf cb 4b 4d 2e c9 cc cf f3 74 51 b2 32 ac 05 00  ..KM.....tQ.2...
+0030   1d 1b 0d b5                                      ....</code></pre><p>Data send to server from client application</p><pre><code>0000   00 00 ae 7b 22 63 6c 61 73 73 22 3a 22 6c 6f 67  ...{&quot;class&quot;:&quot;log
+0010   69 6e 4d 65 73 73 61 67 65 22 2c 22 63 6c 69 65  inMessage&quot;,&quot;clie
+0020   6e 74 49 64 22 3a 6e 75 6c 6c 2c 22 73 65 73 73  ntId&quot;:null,&quot;sess
+0030   69 6f 6e 4b 65 79 22 3a 22 57 56 47 4a 35 6a 44  ionKey&quot;:&quot;WVGJ5jD
+0040   6a 76 74 4c 43 34 74 46 32 78 32 78 33 41 67 22  jvtLC4tF2x2x3Ag&quot;
+0050   2c 22 6c 6f 63 61 74 69 6f 6e 22 3a 5b 33 30 2e  ,&quot;location&quot;:[30.
+0060   35 2c 30 2e 30 2c 36 35 2e 35 5d 2c 22 72 6f 6f  5,0.0,65.5],&quot;roo
+0070   6d 49 64 22 3a 22 35 34 2d 31 39 36 2d 32 31 30  mId&quot;:&quot;54-196-210
+0080   2d 38 31 5f 35 30 30 31 5f 74 65 6d 70 6c 65 67  -81_5001_templeg
+0090   61 74 65 63 61 6d 70 5f 31 5f 6d 6f 6e 73 74 65  atecamp_1_monste
+00a0   72 22 2c 22 6c 6f 63 61 6c 65 22 3a 22 65 6e 22  r&quot;,&quot;locale&quot;:&quot;en&quot;
+00b0   7d                                               }</code></pre><p>Data received from server after above request</p><pre><code>0000   00 00 94 bf 78 9c ec bd e9 72 e2 c8 d6 36 7a 2b  ....x....r...6z+
+0010   7c 8e 78 63 ff d8 2e 3e a5 66 f9 1f b6 31 60 83  |.xc...&gt;.f...1`.
+0020   c1 80 c1 f6 1b 1d 0e 21 04 c8 08 09 34 30 ed e8  .......!....40..
+0030   88 73 1b e7 f6 ce 95 9c cc 94 04 a9 01 21 30 b8  .s...........!0.
+0040   5c bd 5d d1 5d 05 42 53 66 ae 5c cf 9a d7 7f 2e  \.].].BSf.\.....
+0050   14 5d b6 ed 8b ab 0b c5 34 0c 55 71 d4 7e 4d b5  .]......4.Uq.~M.
+0060   6d 79 a8 5e 5c c2 9f 34 d5 70 2e ae fe 73 a1 f5  my.^\..4.p...s..
+0070   e1 19 e2 ea f9 f1 65 a6 f2 45 fd e6 6d a2 55 c7  ......e..E..m.U.
+0080   d7 d4 23 db 7c 82 e7 0d 55 a3 af 5a f0 8c 9a ac  ..#.|...U..Z....
+0090   a3 eb 74 73 a8 19 f0 ab ba d4 fa ea 1a 1e b0 1d  ..ts............
+00a0   d9 51 e1 01 c3 34 d0 ef 53 d3 d6 1c cd 34 d0 9d  .Q...4..S....4..
+00b0   97 17 57 0c 95 e7 2e 2f 56 17 57 d4 e5 c5 fa e2  ..W..../V.W.....
+00c0   8a e7 f2 dc df 97 17 9a 31 87 0f 37 2d 78 fc 7f  ........1..7-x..
+00d0   e1 0b 38 ea e4 1d bf 45 cf ec af 7e 0d 74 d5 1e  ..8....E...~.t..
+00e0   c1 3b a9 33 57 9b 4e 55 78 dc b1 5c f5 f2 42 56  .;.3W.NUx..\..BV
+00f0   1c 6d ae be 4f e1 7b 38 e8 89 e0 ef 4b f2 5a 75  .m..O.{8....K.Zu
+0100   a5 fe 9a bc 33 54 2f c3 a5 42 ec d2 9e 65 2e 7e  ....3T/..B...e.~
+0110   19 ef 14 9f e1 6a 2a 7c b5 61 da 2a ba 94 79 cf  .....j*|.a.*..y.
+0120   f2 e8 c8 c5 13 d3 75 46 f0 6a 40 1d 7e ad 3d 32  [email protected]~.=2
+0130   55 1b 5e 6b 2b f0 26 3d d3 74 ec 23 5e 5e 55 c6  U.^k+.&amp;=.t.#^^U.
+0140   ba ac a8 47 bf 82 66 39 70 da 47 ae e1 a8 d6 5c  ...G..f9p.G....\
+0150   b5 9d c3 ef 31 95 0d c7 86 f7 c0 c3 c0 5f 0e bf  ....1........_..
+0160   c7 48 d6 ac f7 81 65 1a e8 65 d8 2c 03 a1 13 6e  .H....e..e.,...n
+0170   d0 93 95 31 bc 3e d3 44 44 ae 1f a2 9d 86 57 23  ...1.&gt;.DD.....W#
+0180   e3 34 fe 05 b7 a0 3c b5 d1 36 e9 99 bd 1e dc 5b  .4....&lt;..6.....[
+0190   57 86 ab eb 70 73 38 ab 29 da 4f f2 5c 76 64 0b  W...ps8.).O.\vd.
+01a0   de 6b 62 1a b6 83 b6 e0 7f c8 7d f3 9f e0 b8 8d  .kb.......}.....
+01b0   f7 90 21 4f d0 45 05 7d ae 5a 32 7a 01 5d 9d e0  ..!O.E.}.Z2z.]..
+01c0   fd cd 5e 7a 1b 7c a1 19 fd 29 3c dd bc 20 b6 9f  ..^z.|...)&lt;.. ..
+01d0   f7 ee 7d b9 75 dd af 14 4a 95 72 c3 7a 79 73 9f  ..}.u...J.r.zys.
+01e0   ef 6f a6 e6 60 08 cf 93 1d 07 ce 08 1c 2b 45 c3  .o..`........+E.
+01f0   d7 90 97 ef a3 29 fc 22 b1 fc e5 85 a5 2a 26 7c  .....).&quot;.....*&amp;|
+0200   14 7c 11 9a 86 5b 7b 2a 5b 0e bc 1b 64 15 70 cf  .|...[{*[...d.p.
+0210   ff 02 f0 80 a6 2a 2a 7a 35 3c 7e fc 17 1a 5e e4  .....**z5&lt;~...^.
+0220   2f 38 09 ee b4 0f f9 47 ff 5d 86 ef 7a 41 53 80  /8.....G.]..zAS.
+0230   ff 45 01 f8 5f 8e a6 af 68 fe 8a e2 73 cf ed 1b  .E.._...h...s...
+0240   c4 65 e0 f3 8c be fd ee 98 ef 8a 39 99 c2 69 54  .e.........9..iT
+0250   31 4f d1 d5 b9 aa c3 97 b8 bc 58 a2 77 03 e8 df  1O........X.w...
+0260   77 43 5d c2 bb 01 20 e1 6f 8a 6b 59 78 2a d0 af  wC]... .o.kYx*..
+0270   b6 aa eb ef 53 4b 53 10 03 81 d7 0f 5c 5b 85 77  ....SKS.....\[.w
+0280   b4 1d ef eb 08 9e bb f2 bf 53 de 98 97 de 98 05  .........S......
+0290   ce ff ee 3f 11 7d 55 e7 26 9c 6f fc ea 34 b7 f9  ...?.}U.&amp;.o..4..
+02a0   ea 5d cd 51 14 62 79 66 5f 93 15 44 e4 9a 8d e6  .].Q.byf_..D....
+02b0   03 be 80 82 f8 e8 15 c8 33 1c 9a 36 db 86 74 81  ........3..6..t.
+02c0   56 13 b2 51 b4 94 cc 65 b0 94 b7 ea 40 35 f0 af  [email protected]
+02d0   97 17 7d d5 56 2c 6d ea f1 d5 8b ee 48 35 72 43  ..}.V,m.....H5rC
+02e0   cb 74 21 81 e5 16 9a 33 ca 39 0b 33 67 3a 23 d5  .t!....3.9.3g:#.
+02f0   ca 35 f0 73 2e 73 ce 48 b3 73 3e 85 e4 86 b2 66  .5.s.s.H.s&gt;....f
+0300   d8 39 8e fa 9f 9c 66 28 96 2a db f0 3a ef f6 6a  .9....f(.*..:..j
+0310   1e d1 ca 60 00 c1 c1 a3 23 9f f8 fa de af 5b 42  ...`....#.....[B
+0320   42 bf 52 97 f4 25 7b 09 2e 19 b8 6c 13 57 77 b4  B.R..%{....l.Ww.
+0330   29 c4 10 48 97 98 c5 7b 23 7d ef 99 86 6b fb f4  )..H...{#}...k..
+0340   ad 29 f8 75 db b2 31 be d8 ac 14 08 cd 22 d8 5e  .).u..1......&quot;.^
+0350   69 a9 33 bc ab 2e ec b1 a6 eb de db 78 2c 32 78  i.3.........x,2x
+0360   54 ff bd 2f 4f 20 7a bd 37 2f 36 b3 d4 72 2d 0c  T../O z.7/6..r-.
+0370   67 72 4f d3 35 67 95 74 7a 68 84 74 9e fa 2b f8  grO.5g.tzh.t..+.
+0380   fe 4e 8c 0d c0 a3 70 05 86 2a fa 06 82 cf e4 19  .N....p..*......
+0390   ec 25 75 c9 c0 d1 d3 97 3c 3c b7 ef 5a b2 b7 1c  .%u.....&lt;&lt;..Z...
+03a0   54 1e ae b3 62 9a 7a df 5c c0 af 2c fa aa 19 10  T...b.z.\..,....
+03b0   03 65 fd 7d 7b 98 46 87 37 9b 12 44 97 f4 56 95  .e.}{.F.7..D..V.
+03c0   f5 1c 4d c1 15 6a 9a ca 38 e7 bd 78 ce 31 73 de  ..M..j..8..x.1s.
+03d0   7b e4 2f d0 7c 22 fa 72 03 6c 85 d3 85 de 2a b4  {./.|&quot;.r.l....*.
+03e0   af 6d 48 11 96 3d 55 15 f8 6c f8 15 fd c4 c5 fe  .mH..=U..l......
+03f0   fd 2b fb be 86 8b 31 92 1d 65 14 70 31 cc d5 d0  .+....1..e.p1...
+0400   08 de 6d dd 0c 13 8c 7f 4b b8 9f 0d 1d 8e 60 bb  ..m.....K.....`.
+0410   be 88 4d fa e7 8c e0 20 9d 51 d2 39 f0 9d 6c 59  ..M.... .Q.9..lY
+0420   9f a3 c5 42 5b c1 fb e8 6f 5c 05 2d aa ed 40 e9  ...B[...o\[email protected]
+0430   02 6f 9f e0 37 bc c9 68 b4 ed 2c 75 21 5b fd d0  .o..7..h..,u![..
+0440   db 20 be 7c e1 33 3e 3c 29 ef 50 ee 81 b7 c2 94  . .|.3&gt;&lt;).P.....
+0450   02 21 d7 5f 03 ef e3 bb 39 18 d8 2a 3c c2 13 54  .!._....9..*&lt;..T
+0460   05 af c9 15 fd 6b fe fe eb ef 60 ce 02 fa 66 d8  .....k....`...f.
+0470   3c 9e 2e 6f f2 82 a3 ac c8 e7 29 89 da fe 61 b6  &lt;..o......)...a.
+0480   13 ba b9 92 cf 33 14 f9 87 45 33 e4 3f b7 aa 62  .....3...E3.?..b
+0490   4e 4f 50 0a e5 8f a2 af 4d 54 c7 32 21 3c aa 71  NOP.....MT.2!&lt;.q
+04a0   06 2e 96 26 a5 ea f2 b5 49 7f 38 c2 cb 53 fb de  ...&amp;....I.8..S..
+04b0   16 1e 9e ed a7 10 03 67 89 85 16 58 2a b4 d0 20  .......g...X*.. 
+04c0   23 03 8f fc b5 9b 81 d3 bf 00 9d 03 12 e4 81 57  #..............W
+04d0   40 cc c6 c0 81 c7 c0 29 82 7f fb cc 7c c3 be a9  @......)....|...
+04e0   08 f7 a6 43 dc 9b 0b 33 6f 70 52 ee 3d 54 27 70  ...C...3opR.=T&#39;p
+04f0   4b 1f c2 bd 1b 96 e6 09 43 e1 7d de 4e 60 cb 1c  K.......C.}.N`..
+0500   dc f4 fe 62 e4 16 88 b5 3b 23 4b 55 7d 7e 1e 80  ...b....;#KU}~..
+0510   7c 6e 82 36 62 88 ad ff 7f ff cf ff 6b e7 de f0  |n.6b.......k...
+0520   2b ee e0 e2 9b 35 ce c4 c6 41 9e 4b e5 e3 65 15  +....5...A.K..e.
+0530   73 95 4c 7c 9c 49 e0 e3 3d d7 b2 9d 77 fa fd 6e  s.L|.I..=...w..n
+0540   cb bd af a1 d4 e4 84 b8 f7 40 5b 1e c6 b8 29 92  [email protected][...).
+0550   71 73 9f 60 dc 74 16 c6 4d 25 32 ee 3b cd 52 03  qs.`.t..M%2.;.R.
+0560   9e 0d 79 24 3c 02 39 37 e6 e6 05 bc 01 d1 57 59  ..y$&lt;.97......WY
+0570   d7 73 aa 01 e9 48 b5 53 b8 79 78 9b 47 f8 f9 00  .s...H.S.yx.G...
+0580   3e 86 8b fd fb 57 f6 6d fe c3 cf 77 f1 73 90 e7  &gt;....W.m...w.s..
+0590   19 9a e4 ca 20 ca db 31 b5 44 99 39 3c 48 70 ef  .... ..1.D.9&lt;Hp.
+05a0   1b 5d 33 1c 92 79 33 c1 2b 3b ea d0 74 e0 a6 8e  .]3..y3.+;..t...
+05b0   b3 6e a7 d9                                      .n..</code></pre><p>There are more data packets from the server after this request.</p><p>Anyone got any pointers as to how to read this data?</p></div><div id="question-tags" class="tags-container tags">decode decryption decrypt tcp kryonet</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>14 Jun '16, 15:13</strong></p><img src="https://secure.gravatar.com/avatar/ccf6dceea8ec23b7d34fea6d24f0ec09?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="encrypt&#39;s gravatar image" /><p>encrypt<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="encrypt has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 16 Jun '16, 18:48</p></div></div><div id="comments-container-53444" class="comments-container"><span id="53513"></span><div id="comment-53513" class="comment"><div id="post-53513-score" class="comment-score"></div><div class="comment-text"><p>I want to add to this now that i have thought about it. I suspect this is encrypted with a "session key" in the initial JSON data over SSL (before connecting to the server on 500x). However the "session key" is sent in plain text over this TCP connection. Which kind of defeats the purpose of encryption.</p><p>Is there something about this I am not getting? The initial data from the server after connecting is encrypted but there is not key anywhere is the messaged beofore hand. Also the data is exactly the same no matter who connect.</p></div><div id="comment-53513-info" class="comment-info"><span class="comment-age">(16 Jun '16, 18:47)</span> encrypt</div></div><span id="53518"></span><div id="comment-53518" class="comment"><div id="post-53518-score" class="comment-score"></div><div class="comment-text"><p>Your answer has been converted to a comment as that's how this site works. Please read the FAQ for more information.</p></div><div id="comment-53518-info" class="comment-info"><span class="comment-age">(16 Jun '16, 23:06)</span> Jaap ♦</div></div></div><div id="comment-tools-53444" class="comment-tools"></div><div class="clear"></div><div id="comment-53444-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

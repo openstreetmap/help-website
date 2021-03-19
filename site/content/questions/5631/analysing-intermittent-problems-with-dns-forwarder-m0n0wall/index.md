@@ -1,0 +1,108 @@
++++
+type = "question"
+title = "analysing intermittent problems with DNS forwarder m0n0wall"
+description = '''Hi, i&#x27;ve setup a &#x27;private subnet&#x27; in my home network. I have a &#x27;server&#x27; which has two nic&#x27;s eth0 is connected to the ADSL modem/router and eth1 is connected to a switch connecting all pc&#x27;s on the subnet. The server runs vmware server and runs 3 VM&#x27;s:  - ubuntu bridged to eth0  - ubuntu bridged to et...'''
+date = "2011-08-10T14:13:00Z"
+lastmod = "2011-08-11T12:13:00Z"
+weight = 5631
+keywords = [ "firewall" ]
+aliases = [ "/questions/5631" ]
+osqa_answers = 2
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [analysing intermittent problems with DNS forwarder m0n0wall](/questions/5631/analysing-intermittent-problems-with-dns-forwarder-m0n0wall)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-5631-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi, i've setup a 'private subnet' in my home network. I have a 'server' which has two nic's eth0 is connected to the ADSL modem/router and eth1 is connected to a switch connecting all pc's on the subnet.</p><p>The server runs vmware server and runs 3 VM's: - ubuntu bridged to eth0 - ubuntu bridged to eth1 - m0n0wall which acts as the firewall/gateway/dhcp server for the subnet. the "WAN" interface is bridged to eth0 and the "LAN" interface to eth1</p><p>At this stage only the dhcp server is enabled and dns forwarding so that machines on the subnet can access the internet.</p><p>The setup works DNS names are resolved and 'most' websites work fine. ping to various hosts returns the same values via the m0n0wall as directly through the modem/router gateway.</p><p>However, some sites take ages to load, or don't load at all. But not always. www.bbc.co.uk is one example.</p><p>I'm using wireshark to get to the bottom of the problem but so far i've only found that the times the request fails the server (bbc) sends an window-update as a response to the packet with the GET request. After that the client retransmits two more times and the server finally responds with 'bad tcp'.</p><p>What i'm trying to find out is whether i've got a config problem in the m0n0wall or whether its more fundamental e.g packets getting mangled etc.</p><p>any pointers would be appreciated.</p><p>cheers, Michael</p></div><div id="question-tags" class="tags-container tags">firewall</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>10 Aug '11, 14:13</strong></p><img src="https://secure.gravatar.com/avatar/c3cd54a3622322dbeef48d98008bbe06?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="mmalaprop&#39;s gravatar image" /><p>mmalaprop<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="mmalaprop has no accepted answers">0%</span></p></div></div><div id="comments-container-5631" class="comments-container"></div><div id="comment-tools-5631" class="comment-tools"></div><div class="clear"></div><div id="comment-5631-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="5643"></span>
+
+<div id="answer-container-5643" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-5643-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>If some sites work directly, but not over the m0n0wall firewall, then I would make traces on both sides of the m0n0wall and compare them. Look at the TCP options for things like:</p><ul><li>Window scale adjustments (or deletion)</li><li>SACK option deletion</li><li>Incorrect SACK translations</li></ul><p>What exactly do you mean with "the server responds with 'bad tcp'"? Is that an HTTP message? Or is it wireshark reporting a packet as bad tcp?</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>11 Aug '11, 00:08</strong></p><img src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="SYN-bit&#39;s gravatar image" /><p>SYN-bit ♦♦<br />
+<span class="score" title="17094 reputation points"><span>17.1k</span></span><span title="9 badges"><span class="badge1">●</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">●</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">●</span><span class="badgecount">245</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="SYN-bit has 174 accepted answers">20%</span></p></div></div><div id="comments-container-5643" class="comments-container"><span id="5649"></span><div id="comment-5649" class="comment"><div id="post-5649-score" class="comment-score"></div><div class="comment-text"><p>thanks for your response.</p><p>"bad tcp" was what wireshark called the packet. the way i saw it was the server sent a window-update and that was marked by wireshark as a bad tcp and coloured red. also, the two subsequent retrnasmitts were marked red (bad tcp). the final packet was an RST - reset. i guess that was the end of the communication.</p><p>the successfull transmitts also had some retransmits and window-update just a lot less.</p></div><div id="comment-5649-info" class="comment-info"><span class="comment-age">(11 Aug '11, 08:11)</span> mmalaprop</div></div></div><div id="comment-tools-5643" class="comment-tools"></div><div class="clear"></div><div id="comment-5643-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="5655"></span>
+
+<div id="answer-container-5655" class="answer answered-by-owner">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-5655-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>I used tcpdump to monitor both physical interfaces. and imported the results into wireshark. There i used "follow tcp stream".</p><p>On the eth0 side there are more packets being sent, i was kind of expecting them to be one-to-one. I looked at the packets (not all ) and they don't seem to be corrupted or have their options reset.</p><p>eth1:</p><pre><code>No.     Time        Source                Destination           Protocol Length Info
+      7 6.001700    192.168.2.2           212.58.244.66         TCP      78     dyna-lm &gt; http [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=2 TSval=0 TSecr=0 SACK_PERM=1
+      8 6.048679    212.58.244.66         192.168.2.2           TCP      66     http &gt; dyna-lm [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 SACK_PERM=1 WS=128
+      9 6.048698    212.58.244.66         192.168.2.2           TCP      66     http &gt; dyna-lm [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 SACK_PERM=1 WS=128
+     10 6.049136    192.168.2.2           212.58.244.66         TCP      60     dyna-lm &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=0
+     11 6.049460    192.168.2.2           212.58.244.66         TCP      1514   [TCP segment of a reassembled PDU]
+     12 6.049483    192.168.2.2           212.58.244.66         HTTP     70     GET / HTTP/1.1 
+     13 6.095471    212.58.244.66         192.168.2.2           TCP      66     [TCP Window Update] http &gt; dyna-lm [ACK] Seq=1 Ack=1 Win=5888 Len=0 SLE=1461 SRE=1477
+     14 6.095490    212.58.244.66         192.168.2.2           TCP      66     [TCP Dup ACK 13#1] http &gt; dyna-lm [ACK] Seq=1 Ack=1 Win=5888 Len=0 SLE=1461 SRE=1477
+     15 8.952247    192.168.2.2           212.58.244.66         TCP      1514   [TCP Retransmission] dyna-lm &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=1460
+     16 14.987273   192.168.2.2           212.58.244.66         TCP      1514   [TCP Retransmission] dyna-lm &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=1460
+     17 17.573181   212.58.244.66         192.168.2.2           TCP      66     http &gt; dyna-lm [FIN, ACK] Seq=1 Ack=1 Win=5888 Len=0 SLE=1461 SRE=1477
+     18 17.573203   212.58.244.66         192.168.2.2           TCP      66     http &gt; dyna-lm [FIN, ACK] Seq=1 Ack=1 Win=5888 Len=0 SLE=1461 SRE=1477
+     19 17.573729   192.168.2.2           212.58.244.66         TCP      60     dyna-lm &gt; http [ACK] Seq=1461 Ack=2 Win=128000 Len=0
+     20 17.573833   192.168.2.2           212.58.244.66         TCP      70     [TCP Retransmission] [TCP segment of a reassembled PDU]
+     21 17.619934   212.58.244.66         192.168.2.2           TCP      60     http &gt; dyna-lm [RST] Seq=2 Win=0 Len=0
+     22 17.619952   212.58.244.66         192.168.2.2           TCP      60     http &gt; dyna-lm [RST] Seq=2 Win=0 Len=0</code></pre><p>eth0:</p><pre><code>No.     Time        Source                Destination           Protocol Length Info
+     19 2.887053    192.168.1.95          212.58.244.66         TCP      78     11277 &gt; http [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=2 TSval=0 TSecr=0 SACK_PERM=1
+     20 2.887073    192.168.1.95          212.58.244.66         TCP      78     11277 &gt; http [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=2 TSval=0 TSecr=0 SACK_PERM=1
+     21 2.933395    212.58.244.66         192.168.1.95          TCP      66     http &gt; 11277 [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 SACK_PERM=1 WS=128
+     22 2.934360    192.168.1.95          212.58.244.66         TCP      60     11277 &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=0
+     23 2.934376    192.168.1.95          212.58.244.66         TCP      60     [TCP Dup ACK 22#1] 11277 &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=0
+     24 2.934717    192.168.1.95          212.58.244.66         TCP      1514   [TCP segment of a reassembled PDU]
+     25 2.934731    192.168.1.95          212.58.244.66         TCP      1514   [TCP Retransmission] 11277 &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=1460
+     26 2.934798    192.168.1.95          212.58.244.66         HTTP     70     GET / HTTP/1.1 
+     27 2.934805    192.168.1.95          212.58.244.66         TCP      70     [TCP Retransmission] [TCP segment of a reassembled PDU]
+     28 2.935617    192.168.1.1           192.168.1.95          ICMP     590    Destination unreachable (Fragmentation needed)
+     29 2.980166    212.58.244.66         192.168.1.95          TCP      66     [TCP Window Update] http &gt; 11277 [ACK] Seq=1 Ack=1 Win=5888 Len=0 SLE=1461 SRE=1477
+     48 5.837664    192.168.1.95          212.58.244.66         TCP      1514   [TCP Retransmission] 11277 &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=1460
+     49 5.837685    192.168.1.95          212.58.244.66         TCP      1514   [TCP Retransmission] 11277 &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=1460
+     50 5.838493    192.168.1.1           192.168.1.95          ICMP     590    Destination unreachable (Fragmentation needed)
+     87 11.872608   192.168.1.95          212.58.244.66         TCP      1514   [TCP Retransmission] 11277 &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=1460
+     88 11.872630   192.168.1.95          212.58.244.66         TCP      1514   [TCP Retransmission] 11277 &gt; http [ACK] Seq=1 Ack=1 Win=128000 Len=1460
+     89 11.873432   192.168.1.1           192.168.1.95          ICMP     590    Destination unreachable (Fragmentation needed)
+    108 14.457945   212.58.244.66         192.168.1.95          TCP      66     http &gt; 11277 [FIN, ACK] Seq=1 Ack=1 Win=5888 Len=0 SLE=1461 SRE=1477
+    109 14.459048   192.168.1.95          212.58.244.66         TCP      60     11277 &gt; http [ACK] Seq=1461 Ack=2 Win=128000 Len=0
+    110 14.459062   192.168.1.95          212.58.244.66         TCP      60     11277 &gt; http [ACK] Seq=1461 Ack=2 Win=128000 Len=0
+    111 14.459128   192.168.1.95          212.58.244.66         TCP      70     [TCP Retransmission] [TCP segment of a reassembled PDU]
+    112 14.459139   192.168.1.95          212.58.244.66         TCP      70     [TCP Out-Of-Order] [TCP segment of a reassembled PDU]
+    113 14.504728   212.58.244.66         192.168.1.95          TCP      60     http &gt; 11277 [RST] Seq=2 Win=0 Len=0</code></pre><p>thanks, michael</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>11 Aug '11, 12:13</strong></p><img src="https://secure.gravatar.com/avatar/c3cd54a3622322dbeef48d98008bbe06?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="mmalaprop&#39;s gravatar image" /><p>mmalaprop<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="mmalaprop has no accepted answers">0%</span></p></div></div><div id="comments-container-5655" class="comments-container"><span id="5657"></span><div id="comment-5657" class="comment"><div id="post-5657-score" class="comment-score">3</div><div class="comment-text"><p>Ah... these traces explain things. Your ADSL modem/router (192.168.1.1) it telling your client (192.168.1.95 after nat, 192.168.2.2 before nat) that it needs to fragment the IP datagram to forward it (see frames 28, 50, 89). However the m0n0wall does not seem to forward these ICMP packets. So your client does not learn that it needs to send smaller packets.</p><p>You can solve this by looking at the ICMP packet in frame 28 and extract the MTU of the next hop. You can then change the MTU size on both sides of the m0n0wall FW accordingly.</p></div><div id="comment-5657-info" class="comment-info"><span class="comment-age">(11 Aug '11, 12:29)</span> SYN-bit ♦♦</div></div><span id="5658"></span><div id="comment-5658" class="comment"><div id="post-5658-score" class="comment-score"></div><div class="comment-text"><p>That did it! thanks. Just so this is clear in my head... the client (192.168.1.95) sent a packet (frame 24 say, 1514 bytes). this had the DF flag set and the router dropped that packet and sent a 'this is to big for me to forward - please fragment'.</p><p>what i don't quite understand:</p><ol><li>why wasn't the monowall passing the ICMP packet back as its only 590bytes. . . i only changed the mtu on the client winXP side to match the router...</li><li>why was a 1514 size packet generated the default on windows is 1500</li></ol></div><div id="comment-5658-info" class="comment-info"><span class="comment-age">(11 Aug '11, 15:51)</span> mmalaprop</div></div><span id="5669"></span><div id="comment-5669" class="comment"><div id="post-5669-score" class="comment-score">1</div><div class="comment-text"><p>Actually, to be precies, the meaning of the ICMP paket is:</p><p>"You want me to forward a IP packet without fragmenting, however, it is too big for the link towards the next hop. I can only send IP datagrams of size XXX, so I dropped the packet"</p><p>Then it's up to the sending host to determine what to do. In TCP, the sending host will just start to use smaller segments so that they will fit.</p></div><div id="comment-5669-info" class="comment-info"><span class="comment-age">(11 Aug '11, 23:23)</span> SYN-bit ♦♦</div></div><span id="5670"></span><div id="comment-5670" class="comment"><div id="post-5670-score" class="comment-score">1</div><div class="comment-text"><p>I would have expected the m0n0wall to forward the ICMP messages, so you might want to report this as a bug (or feature request, depending how you look at it).</p><p>A 1500 byte MTU means that a 1500 byte datagram can be transported over the link, which on ethernet means there will be a 6 byte destination, a 6 byte source and a 2 byte ethertype prepended and a 4 byte FCS appended to the datagram. In total 1518 (although you usually see 1514 in Wireshark because the FCS is already stripped before Wireshark gets to see the packet).</p></div><div id="comment-5670-info" class="comment-info"><span class="comment-age">(11 Aug '11, 23:25)</span> SYN-bit ♦♦</div></div><span id="5679"></span><div id="comment-5679" class="comment"><div id="post-5679-score" class="comment-score"></div><div class="comment-text"><p>I think m0n0wall drops all incoming communications, including ICMP (which is sort of belonging to the TCP session but has no entry in its firewall state table since it's a new communication flow). I would advise to configure m0n0wall to drop all ICMP packets except "fragmentation needed" (if that's possible).</p></div><div id="comment-5679-info" class="comment-info"><span class="comment-age">(12 Aug '11, 05:59)</span> Jasper ♦♦</div></div><span id="5680"></span><div id="comment-5680" class="comment not_top_scorer"><div id="post-5680-score" class="comment-score"></div><div class="comment-text"><p>@Jasper, just letting the "ICMP fragmentation needed" packets through is not enough, these packets need to be properly natted (at the IP layer as well as at the IP layer inside the ICMP payload).</p><p>m0n0wall needs to bind these ICMP packets to the outgoing TCP flow to be able to do so. I have seen this being a problem with loadbalancers in the past as well.</p></div><div id="comment-5680-info" class="comment-info"><span class="comment-age">(12 Aug '11, 06:28)</span> SYN-bit ♦♦</div></div><span id="5701"></span><div id="comment-5701" class="comment not_top_scorer"><div id="post-5701-score" class="comment-score"></div><div class="comment-text"><p>the m0n0wall comes with a setting 'block private networks' on its WAN interface. i did disable that earlier and assumed it would include ICMP packet. it didn't. i allowed ICMP traffic to pass through but still the 'fragmentation needed' packets didn't pass. i'll see if the m0n0wall folks know anything more.</p></div><div id="comment-5701-info" class="comment-info"><span class="comment-age">(13 Aug '11, 14:49)</span> mmalaprop</div></div><span id="5702"></span><div id="comment-5702" class="comment not_top_scorer"><div id="post-5702-score" class="comment-score"></div><div class="comment-text"><p>Just one more thing on this issue:-) the IP 192.168.1.95 is that of the m0n0wall, which must NAT that to 192.168.2.2 (the client is in the subnet). But that makes sense right? the m0n0wall is acting as a gateway from the .1.0 network to the .2.0 network.</p></div><div id="comment-5702-info" class="comment-info"><span class="comment-age">(14 Aug '11, 11:54)</span> mmalaprop</div></div></div><div id="comment-tools-5655" class="comment-tools"><span class="comments-showing"> showing 5 of 8 </span> <a href="#" class="show-all-comments-link">show 3 more comments</a></div><div class="clear"></div><div id="comment-5655-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

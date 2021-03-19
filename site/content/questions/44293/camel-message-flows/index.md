@@ -1,0 +1,32 @@
++++
+type = "question"
+title = "Camel message flows"
+description = '''Can you please let me know camel IN flows. I have access to pcap files from telecom operators and Im able to see various eventTypeBCSM in one camel frame. for example: oAnswer, oDisconnect, oDisconnect, routeSelectFailure, oCalledPartyBusy and oAbandon are all in a sequence in one camel frame. Is it...'''
+date = "2015-07-19T05:32:00Z"
+lastmod = "2015-07-19T05:32:00Z"
+weight = 44293
+keywords = [ "camel" ]
+aliases = [ "/questions/44293" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Camel message flows](/questions/44293/camel-message-flows)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-44293-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Can you please let me know camel IN flows.</p><p>I have access to pcap files from telecom operators and Im able to see various eventTypeBCSM in one camel frame. for example: oAnswer, oDisconnect, oDisconnect, routeSelectFailure, oCalledPartyBusy and oAbandon are all in a sequence in one camel frame. Is it possible? can you please point me to other such scenarios?</p><p>Also I need to extract the calling and called party numbers from the same. Im using wireshark/tshark to parse the file. Eventually I need to use Tshark continously on IN servers on live traffic. Your help will really give a kick start.</p></div><div id="question-tags" class="tags-container tags">camel</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>19 Jul '15, 05:32</strong></p><img src="https://secure.gravatar.com/avatar/80d70be65afb9b6b3bbeda33fb06e824?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Karan%20Grover&#39;s gravatar image" /><p>Karan Grover<br />
+<span class="score" title="6 reputation points">6</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Karan Grover has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>converted to question 19 Jul '15, 12:19</p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span></p></div></div><div id="comments-container-44293" class="comments-container"><span id="44294"></span><div id="comment-44294" class="comment"><div id="post-44294-score" class="comment-score"></div><div class="comment-text"><p>Karan, please ask your question in a new thread rather than posting a question inside a question thread that is a few years old. It helps keep the Q&amp;A board more organized.</p></div><div id="comment-44294-info" class="comment-info"><span class="comment-age">(19 Jul '15, 08:26)</span> Quadratic</div></div><span id="44297"></span><div id="comment-44297" class="comment"><div id="post-44297-score" class="comment-score"></div><div class="comment-text"><p>I converted the item to a new question.</p></div><div id="comment-44297-info" class="comment-info"><span class="comment-age">(19 Jul '15, 12:20)</span> grahamb ♦</div></div><span id="44762"></span><div id="comment-44762" class="comment"><div id="post-44762-score" class="comment-score"></div><div class="comment-text"><p>Hi guys,</p><p>Any help will be useful here. Im able to understand the camel flow however I still need to understand that If I can use tshark continously reading from the network card? There are 2 questions here:</p><p>1) Will tshark die after sometime due to memory problems? Although I read few topics here that said for some users tshark ran for months especially on TCAP and CAMEL protocols because tshark doesnt create any maps in memory for these protocols.</p><p>2) Will tshark be fast enough to read all packets from network card? There will be very high traffic on my application server because all call data for the operator are mirrored on this server.</p><p>Im using the following command to capture data, with input file (-r) its too slow so Im worried about the performance when using with ehternet card.</p><p>tshark -Tpdml -Y "camel.InitialDPArg || (camel.EventReportBCSMArg &amp;&amp; (camel.eventTypeBCSM==4||camel.eventTypeBCSM==5))" -r "\home\usr0121\hcm.dump"</p></div><div id="comment-44762-info" class="comment-info"><span class="comment-age">(03 Aug '15, 03:49)</span> Karan Grover</div></div></div><div id="comment-tools-44293" class="comment-tools"></div><div class="clear"></div><div id="comment-44293-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

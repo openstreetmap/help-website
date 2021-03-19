@@ -1,0 +1,68 @@
++++
+type = "question"
+title = "Cannot capture l2tp packets using wireshark on windows 7 PC"
+description = '''Hi all, I have one problem, I cannot capture l2tp packets using wireshark on a Windows 7 machine. Can you please help me ? Kind regards, Christos'''
+date = "2013-09-23T06:51:00Z"
+lastmod = "2013-09-26T00:22:00Z"
+weight = 25115
+keywords = [ "windows", "7", "l2tp", "wireshark" ]
+aliases = [ "/questions/25115" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Cannot capture l2tp packets using wireshark on windows 7 PC](/questions/25115/cannot-capture-l2tp-packets-using-wireshark-on-windows-7-pc)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-25115-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi all,</p><p>I have one problem, I cannot capture l2tp packets using wireshark on a Windows 7 machine.</p><p>Can you please help me ?</p><p>Kind regards, Christos</p></div><div id="question-tags" class="tags-container tags">windows 7 l2tp wireshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>23 Sep '13, 06:51</strong></p><img src="https://secure.gravatar.com/avatar/c961ed99b9b1d5bc5234215cf38a2d9b?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="ctsalidis&#39;s gravatar image" /><p>ctsalidis<br />
+<span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="ctsalidis has no accepted answers">0%</span></p></div></div><div id="comments-container-25115" class="comments-container"><span id="25118"></span><div id="comment-25118" class="comment"><div id="post-25118-score" class="comment-score"></div><div class="comment-text"><p>There shopuld be no diffrebce between Win7 and any other OS Wireshark runs on with regards to L2TP, it may be a problem with your capture setup or the farmes recived. Can you elaborate on your problem?</p></div><div id="comment-25118-info" class="comment-info"><span class="comment-age">(23 Sep '13, 08:42)</span> Anders ♦</div></div><span id="25121"></span><div id="comment-25121" class="comment"><div id="post-25121-score" class="comment-score"></div><div class="comment-text"><p>Maybe he tried to capture on the virtual adapter created by the l2tp client on Windows, which would not work due to WinPcap limitations.</p></div><div id="comment-25121-info" class="comment-info"><span class="comment-age">(23 Sep '13, 09:28)</span> Kurt Knochner ♦</div></div><span id="25123"></span><div id="comment-25123" class="comment not_top_scorer"><div id="post-25123-score" class="comment-score"></div><div class="comment-text"><p>Actually what I am doing is the following, I use mirroring to forward all the inbound and outbound packets of the router appliance to a specific port where my computer is connected, although I can receive a lot of packets, as BGP, LDP and others I cannot receive l2tp traffic. It makes sense that these packets somehow are discarded on my ethernet interface but I do not know why. I have additionally configured jumbo frames for my interface but nothing.</p><p>Any idea ? I am thinking to install a linux OS and give it a try.<br />
+</p></div><div id="comment-25123-info" class="comment-info"><span class="comment-age">(23 Sep '13, 12:10)</span> ctsalidis</div></div><span id="25125"></span><div id="comment-25125" class="comment not_top_scorer"><div id="post-25125-score" class="comment-score"></div><div class="comment-text"><p>Can you please add more details about the infrastructure?</p><p>Does it look like this?</p><pre><code>L2TP Client --- Internet ---- Router ----- Switch ----- L2TP Server
+                                             |
+                                             |
+                                        Wireshark</code></pre><p>If so, I wonder why you see BGP (on the internal side). If the infrastructure is different, please correct my ASCII art.</p></div><div id="comment-25125-info" class="comment-info"><span class="comment-age">(23 Sep '13, 13:58)</span> Kurt Knochner ♦</div></div><span id="25126"></span><div id="comment-25126" class="comment not_top_scorer"><div id="post-25126-score" class="comment-score"></div><div class="comment-text"><pre><code>        LNS ..... Router ....... LAC......L2TP Client
+         .
+         .
+        Laptop</code></pre></div><div id="comment-25126-info" class="comment-info"><span class="comment-age">(23 Sep '13, 14:19)</span> ctsalidis</div></div><span id="25131"></span><div id="comment-25131" class="comment not_top_scorer"><div id="post-25131-score" class="comment-score"></div><div class="comment-text"><blockquote><p>I <strong>use mirroring</strong> to <strong>forward</strong> all the inbound and outbound <strong>packets of the router appliance</strong> to a specific port where my computer is connected</p></blockquote><p>The image above does not match your statement. So, what exactly are you mirroring and where?</p></div><div id="comment-25131-info" class="comment-info"><span class="comment-age">(23 Sep '13, 14:58)</span> Kurt Knochner ♦</div></div><span id="25132"></span><div id="comment-25132" class="comment not_top_scorer"><div id="post-25132-score" class="comment-score"></div><div class="comment-text"><p>I mirror the LNS towards the Router interface to the port where my laptop is connected.</p></div><div id="comment-25132-info" class="comment-info"><span class="comment-age">(23 Sep '13, 15:01)</span> ctsalidis</div></div><span id="25133"></span><div id="comment-25133" class="comment not_top_scorer"><div id="post-25133-score" class="comment-score"></div><div class="comment-text"><p>I cannot see mpls and l2tp packets. Only IP, TCP, LDP, BGP and maybe some more.</p></div><div id="comment-25133-info" class="comment-info"><span class="comment-age">(23 Sep '13, 15:02)</span> ctsalidis</div></div><span id="25135"></span><div id="comment-25135" class="comment"><div id="post-25135-score" class="comment-score">1</div><div class="comment-text"><blockquote><p>Only IP, TCP, BGP</p></blockquote><p>O.K. some questions:</p><ol><li>Any idea why you see BGP on your internal network?</li><li>the IP/TCP traffic you see, is that full conversations of other systems or just broacast/multicast?</li><li>the traffic you see, is that bidirectional (traffic in both directions)?</li></ol></div><div id="comment-25135-info" class="comment-info"><span class="comment-age">(23 Sep '13, 15:42)</span> Kurt Knochner ♦</div></div><span id="25136"></span><div id="comment-25136" class="comment not_top_scorer"><div id="post-25136-score" class="comment-score"></div><div class="comment-text"><p>Hi Kurt, to answer your questions.<br />
+</p><ol><li><p>The above network is a testing network where, where we run BGP as well.</p></li><li><p>The TCP traffic are always full conversations</p></li><li>And I can see it is on both directions.</li></ol><p>I suspect that it should be something on my interface card, can it be the drivers ?</p></div><div id="comment-25136-info" class="comment-info"><span class="comment-age">(23 Sep '13, 15:56)</span> ctsalidis</div></div><span id="25137"></span><div id="comment-25137" class="comment"><div id="post-25137-score" class="comment-score">1</div><div class="comment-text"><blockquote><p>I suspect that it should be something on my interface card, can it be the drivers ?</p></blockquote><p>well, I don't think so. Why should the system drop l2tp traffic that is not directed to itself.</p><p>Anyway, just to rule that out, please remove the IPV4 binding of the sniffer interface on the PC - don't do that via RDP ;-)</p><blockquote><p>Control Panel\Network and Internet\Network Connections<br />
+</p><p>Interface Properties -&gt; Remove the checkmark for TCP/IPv4</p></blockquote><p>Then capture another session and check the results.</p></div><div id="comment-25137-info" class="comment-info"><span class="comment-age">(23 Sep '13, 16:17)</span> Kurt Knochner ♦</div></div><span id="25138"></span><div id="comment-25138" class="comment not_top_scorer"><div id="post-25138-score" class="comment-score"></div><div class="comment-text"><p>Ok I will give it a try at the morning and then I will let you know! Anyway I would like to thank you for your time and effort :)</p></div><div id="comment-25138-info" class="comment-info"><span class="comment-age">(23 Sep '13, 16:20)</span> ctsalidis</div></div><span id="25159"></span><div id="comment-25159" class="comment"><div id="post-25159-score" class="comment-score">1</div><div class="comment-text"><blockquote><p>Ok I will give it a try at the morning and then I will let you know!</p></blockquote><p>any difference?</p></div><div id="comment-25159-info" class="comment-info"><span class="comment-age">(24 Sep '13, 08:20)</span> Kurt Knochner ♦</div></div><span id="25177"></span><div id="comment-25177" class="comment not_top_scorer"><div id="post-25177-score" class="comment-score"></div><div class="comment-text"><p>I hadn't the chance to do the testing today however I will try to do it tomorrow in case I will some free time :D I will let you know as soon as I will do it!</p></div><div id="comment-25177-info" class="comment-info"><span class="comment-age">(24 Sep '13, 15:28)</span> ctsalidis</div></div></div><div id="comment-tools-25115" class="comment-tools"><span class="comments-showing"> showing 5 of 14 </span> <a href="#" class="show-all-comments-link">show 9 more comments</a></div><div class="clear"></div><div id="comment-25115-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="25260"></span>
+
+<div id="answer-container-25260" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-25260-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>I use mirroring to forward all the inbound and outbound packets of the router appliance to a specific port where my computer is connected</p></blockquote><p>I suspect your mirroring configuration is not working as you expect (instead of the capture laptop dropping the L2TP frames). On which device do you do the mirroring of the traffic? On the LNS? On the router? On a switch in between the LNS and the router?</p><p>Could you provide details on the mirroring setup and the brand/type of the device on which you do the mirroring?</p><p>Assuming you are not using a switch between the LNS and the router (as it was not in your drawing), are you able to insert a switch in between the LNS and the router and perform the mirroring on the switch?</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>26 Sep '13, 00:22</strong></p><img src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="SYN-bit&#39;s gravatar image" /><p>SYN-bit ♦♦<br />
+<span class="score" title="17094 reputation points"><span>17.1k</span></span><span title="9 badges"><span class="badge1">●</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">●</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">●</span><span class="badgecount">245</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="SYN-bit has 174 accepted answers">20%</span> </br></br></p></div></div><div id="comments-container-25260" class="comments-container"></div><div id="comment-tools-25260" class="comment-tools"></div><div class="clear"></div><div id="comment-25260-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

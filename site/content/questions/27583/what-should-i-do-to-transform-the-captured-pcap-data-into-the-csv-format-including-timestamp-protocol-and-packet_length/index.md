@@ -1,0 +1,59 @@
++++
+type = "question"
+title = "What should I do to transform the captured pcap data into the CSV format including Timestamp, protocol and packet_length?"
+description = '''Please help me. Thanks in advance!!!'''
+date = "2013-11-29T22:58:00Z"
+lastmod = "2013-11-30T11:13:00Z"
+weight = 27583
+keywords = [ "tshark" ]
+aliases = [ "/questions/27583" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [What should I do to transform the captured pcap data into the CSV format including Timestamp, protocol and packet\_length?](/questions/27583/what-should-i-do-to-transform-the-captured-pcap-data-into-the-csv-format-including-timestamp-protocol-and-packet_length)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-27583-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Please help me. Thanks in advance!!!</p></div><div id="question-tags" class="tags-container tags">tshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>29 Nov '13, 22:58</strong></p><img src="https://secure.gravatar.com/avatar/f6794f3ef18ab7a1ad2e4f56711db6f2?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Eliza%20Rana&#39;s gravatar image" /><p>Eliza Rana<br />
+<span class="score" title="11 reputation points">11</span><span title="4 badges"><span class="badge1">●</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">●</span><span class="badgecount">5</span></span><span title="8 badges"><span class="bronze">●</span><span class="badgecount">8</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Eliza Rana has no accepted answers">0%</span></p></div></div><div id="comments-container-27583" class="comments-container"></div><div id="comment-tools-27583" class="comment-tools"></div><div class="clear"></div><div id="comment-27583-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="27588"></span>
+
+<div id="answer-container-27588" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-27588-score" class="post-score" title="current number of votes">2</div></div></td><td><div class="item-right"><div class="answer-body"><p>If you only want the timestamp, protocol and packet length, then one way would be to first configure your columns so that only those columns of interest are shown (done via <code>Edit -&gt; Preferences -&gt; Columns</code>), and then use <code>File -&gt; Export Packet Dissections -&gt; as "CSV" (Comma Separated Values packet summary) file...</code></p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>30 Nov '13, 11:13</strong></p><img src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="cmaynard&#39;s gravatar image" /><p>cmaynard ♦♦<br />
+<span class="score" title="9361 reputation points"><span>9.4k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">●</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">●</span><span class="badgecount">142</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="cmaynard has 108 accepted answers">20%</span></p></div></div><div id="comments-container-27588" class="comments-container"><span id="27594"></span><div id="comment-27594" class="comment"><div id="post-27594-score" class="comment-score"></div><div class="comment-text"><p>Thank so much for ur answer. Anyway, I am trying to transform my file "test.pcap" to "test.csv" by using command prompt. Here is what i wrote:</p><blockquote><p>tshark -r "d:\test.pcap" -T fields -e frame.time -e ip.proto -e frame.len -E header=y -E separator=, &gt; "d:\file.csv"</p></blockquote><p>And when i press enter, it said "Access is denied".</p><p>So what should i do with this?</p></div><div id="comment-27594-info" class="comment-info"><span class="comment-age">(30 Nov '13, 20:50)</span> Eliza Rana</div></div><span id="27605"></span><div id="comment-27605" class="comment"><div id="post-27605-score" class="comment-score">2</div><div class="comment-text"><p>It would appear that you don't have write access to <code>d:\</code>. Try it first without redirecting the output to a file to see if the rest of the command works. If so, then you may have to write the file to another location.</p><p>By the way, you may need to quote the fields via <code>-E quote=d</code>, since the <code>frame.time</code> field will contain a comma.</p></div><div id="comment-27605-info" class="comment-info"><span class="comment-age">(01 Dec '13, 07:06)</span> cmaynard ♦♦</div></div><span id="27622"></span><div id="comment-27622" class="comment"><div id="post-27622-score" class="comment-score"></div><div class="comment-text"><p>Really thanks for your help, cmaynard. I will try like you told me.</p></div><div id="comment-27622-info" class="comment-info"><span class="comment-age">(01 Dec '13, 18:17)</span> Eliza Rana</div></div><span id="27623"></span><div id="comment-27623" class="comment"><div id="post-27623-score" class="comment-score"></div><div class="comment-text"><p>Hi cmaynard. I had followed you and the other commands really work. But, when I changed the location file to drive C, it still says Access is denied. So what should I do in order to create this csv file? Please help me...Now I am using Windows 7.</p></div><div id="comment-27623-info" class="comment-info"><span class="comment-age">(01 Dec '13, 18:26)</span> Eliza Rana</div></div><span id="27624"></span><div id="comment-27624" class="comment not_top_scorer"><div id="post-27624-score" class="comment-score"></div><div class="comment-text"><p>if you're getting the correct output but just can't redirect it to a file due to the "Access is denied" problem, then it would seem that you don't have write access to that location either. Find a drive/directory location where <code>echo "Hello World!" &gt; hello.txt</code> works and likely the redirection of the <code>tshark</code> output will work as well.</p></div><div id="comment-27624-info" class="comment-info"><span class="comment-age">(01 Dec '13, 18:56)</span> cmaynard ♦♦</div></div><span id="27626"></span><div id="comment-27626" class="comment not_top_scorer"><div id="post-27626-score" class="comment-score"></div><div class="comment-text"><p>I don't really understand this. Could you explain in more details please?</p></div><div id="comment-27626-info" class="comment-info"><span class="comment-age">(01 Dec '13, 19:15)</span> Eliza Rana</div></div><span id="27627"></span><div id="comment-27627" class="comment not_top_scorer"><div id="post-27627-score" class="comment-score"></div><div class="comment-text"><p>I think maybe I had a problem with using cmd command prompt. When I first opened it, It appears: C:\Users\Teang</p></div><div id="comment-27627-info" class="comment-info"><span class="comment-age">(01 Dec '13, 19:20)</span> Eliza Rana</div></div><span id="27629"></span><div id="comment-27629" class="comment"><div id="post-27629-score" class="comment-score">1</div><div class="comment-text"><p>So then the installation directory where <code>tshark.exe</code> resides, most likely <code>C:\Program Files\Wireshark</code> apparently isn't in your <code>PATH</code>. This means you'll have to specify the full path yourself or add the location to the <code>PATH</code> if you want to run <code>tshark.exe</code> without specifying the full path. Either that, or you'll have to change to that directory but then you'll still have to remember to redirect output to a directory in which you have write access.</p></div><div id="comment-27629-info" class="comment-info"><span class="comment-age">(01 Dec '13, 19:26)</span> cmaynard ♦♦</div></div><span id="27630"></span><div id="comment-27630" class="comment not_top_scorer"><div id="post-27630-score" class="comment-score"></div><div class="comment-text"><p>So you mean I must use tshark command by running the tshark.exe?</p></div><div id="comment-27630-info" class="comment-info"><span class="comment-age">(01 Dec '13, 19:33)</span> Eliza Rana</div></div><span id="27631"></span><div id="comment-27631" class="comment not_top_scorer"><div id="post-27631-score" class="comment-score"></div><div class="comment-text"><p>Could you please tell me how to do this cmaynard? I am really new to Wireshark, and I really need your help right now.</p></div><div id="comment-27631-info" class="comment-info"><span class="comment-age">(01 Dec '13, 19:38)</span> Eliza Rana</div></div><span id="27632"></span><div id="comment-27632" class="comment not_top_scorer"><div id="post-27632-score" class="comment-score"></div><div class="comment-text"><p>Either <code>tshark</code> or <code>tshark.exe</code> will work, but on Windows, the executable is <code>tshark.exe</code>, so that's how I document/describe it. You can type <code>tshark</code> if you want though.</p></div><div id="comment-27632-info" class="comment-info"><span class="comment-age">(01 Dec '13, 19:39)</span> cmaynard ♦♦</div></div><span id="27633"></span><div id="comment-27633" class="comment not_top_scorer"><div id="post-27633-score" class="comment-score"></div><div class="comment-text"><p>Thanks cmaynard. Now I can get the csv file...:)</p></div><div id="comment-27633-info" class="comment-info"><span class="comment-age">(01 Dec '13, 19:44)</span> Eliza Rana</div></div></div><div id="comment-tools-27588" class="comment-tools"><span class="comments-showing"> showing 5 of 12 </span> <a href="#" class="show-all-comments-link">show 7 more comments</a></div><div class="clear"></div><div id="comment-27588-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

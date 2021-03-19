@@ -1,0 +1,31 @@
++++
+type = "question"
+title = "How to monitor internet usage over a network?"
+description = '''Hi, I&#x27;m a newbie of using WireShark, just told by our network provider to use it in order to check internal usage of bandwidth as they are saying, it&#x27;s perfectly fine but we are experiencing very slow internet connection as we have many tenants who are using same internet.  It was working perfectly ...'''
+date = "2012-09-17T11:22:00Z"
+lastmod = "2012-09-17T11:22:00Z"
+weight = 14328
+keywords = [ "abusing", "monitering", "internet" ]
+aliases = [ "/questions/14328" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [How to monitor internet usage over a network?](/questions/14328/how-to-monitor-internet-usage-over-a-network)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-14328-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi,</p><p>I'm a newbie of using WireShark, just told by our network provider to use it in order to check internal usage of bandwidth as they are saying, it's perfectly fine but we are experiencing very slow internet connection as we have many tenants who are using same internet. It was working perfectly fine about 2 weeks ago but there's something ambiguous activities going on, so, I would like to check which IP or who is using infact abusing the internet.</p><p>Early reply should be really appreciated from the seniors or moderator. Thanks, Nadeem</p></div><div id="question-tags" class="tags-container tags">abusing monitering internet</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>17 Sep '12, 11:22</strong></p><img src="https://secure.gravatar.com/avatar/3c1d7b7a3eead3060ab3451870b51b9a?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Nadeem55&#39;s gravatar image" /><p>Nadeem55<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Nadeem55 has no accepted answers">0%</span></p></div></div><div id="comments-container-14328" class="comments-container"></div><div id="comment-tools-14328" class="comment-tools"></div><div class="clear"></div><div id="comment-14328-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

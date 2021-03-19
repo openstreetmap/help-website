@@ -1,0 +1,59 @@
++++
+type = "question"
+title = "RANAP HandOver procedure"
+description = '''Hi, I have some problem with decoding a RANAP packet when I perform a HandOver. Some RANAP packets are malformed in this case. (I&#x27;m using 1.6.1 version of Wireshark) I have opened the problem report agains our developers, but they claim that this is a bug of Wireshark and not their protocol stack. S...'''
+date = "2011-07-21T02:22:00Z"
+lastmod = "2011-07-21T04:53:00Z"
+weight = 5151
+keywords = [ "ranap" ]
+aliases = [ "/questions/5151" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [RANAP HandOver procedure](/questions/5151/ranap-handover-procedure)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-5151-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi, I have some problem with decoding a RANAP packet when I perform a HandOver. Some RANAP packets are malformed in this case. (I'm using 1.6.1 version of Wireshark) I have opened the problem report agains our developers, but they claim that this is a bug of Wireshark and not their protocol stack. See below the description of a problem. ======================================= When HO procedure is performed (intra Freq HO), some RANAP packets are malformed: 1. id-RelocationPreparation (source HNB --&gt; GW) toTargetRNC-Container: interRATHandoverInfo interRATHandoverInfo: criticalExtensions RANAP part is malformed</p><ol><li><p>id-RelocationResourceAllocation (target HNB --&gt; GW) HandoverToUTRANCommand: criticalExtensions RRC packet malformed</p></li><li><p>id-RelocationPreparation (GW --&gt; source HNB) RANAP packet malformed ================================== Thanks</p></li></ol></div><div id="question-tags" class="tags-container tags">ranap</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>21 Jul '11, 02:22</strong></p><img src="https://secure.gravatar.com/avatar/76458cd367fd51342961088ffb0d1cf7?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="RADWIN&#39;s gravatar image" /><p>RADWIN<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="RADWIN has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 21 Jul '11, 02:27</p></div></div><div id="comments-container-5151" class="comments-container"></div><div id="comment-tools-5151" class="comment-tools"></div><div class="clear"></div><div id="comment-5151-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="5154"></span>
+
+<div id="answer-container-5154" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-5154-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Feel free to file a bug report at <a href="https://bugs.wireshark.org/bugzilla/">bugs.wireshark.org</a>. Be sure to include: Wireshark build/version information, a sample capture file, the problem description based on this capture and possible reference to relevant standards.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>21 Jul '11, 04:53</strong></p><img src="https://secure.gravatar.com/avatar/2337f0406681e5c72ea0e6f1f0d6c0b0?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jaap&#39;s gravatar image" /><p>Jaap ♦<br />
+<span class="score" title="11680 reputation points"><span>11.7k</span></span><span title="16 badges"><span class="silver">●</span><span class="badgecount">16</span></span><span title="101 badges"><span class="bronze">●</span><span class="badgecount">101</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Jaap has 155 accepted answers">14%</span></p></div></div><div id="comments-container-5154" class="comments-container"></div><div id="comment-tools-5154" class="comment-tools"></div><div class="clear"></div><div id="comment-5154-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

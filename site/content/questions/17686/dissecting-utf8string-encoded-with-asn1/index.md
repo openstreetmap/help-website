@@ -1,0 +1,64 @@
++++
+type = "question"
+title = "Dissecting UTF8String encoded with ASN.1"
+description = '''Hello, community. In the ASN.1 definition I work with there is a value defined as an UTF8String. ~/epan/dissectors/packet-per.c does not contain any function dissecting it. Thus, I suppose I have to write my own one and to add it to packet-per.c How can I do that? I looked to other string dissectors...'''
+date = "2013-01-15T00:17:00Z"
+lastmod = "2013-01-15T07:08:00Z"
+weight = 17686
+keywords = [ "utf8", "dissect", "utf8string", "string", "asn1" ]
+aliases = [ "/questions/17686" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Dissecting UTF8String encoded with ASN.1](/questions/17686/dissecting-utf8string-encoded-with-asn1)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-17686-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hello, community. In the ASN.1 definition I work with there is a value defined as an UTF8String. ~/epan/dissectors/packet-per.c does not contain any function dissecting it. Thus, I suppose I have to write my own one and to add it to packet-per.c</p><p>How can I do that? I looked to other string dissectors. In many of them function "dissect_per_restricted_character_string_sorted" is used with differences in the last three parameters. Is it about supplying correct parameters to that function only?</p><p>Thank you in advance</p><p>Ewgenij</p></div><div id="question-tags" class="tags-container tags">utf8 dissect utf8string string asn1</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>15 Jan '13, 00:17</strong></p><img src="https://secure.gravatar.com/avatar/74ba4ba7a26d5efda01b6ae18bbe48e4?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Ewgenijkkg&#39;s gravatar image" /><p>Ewgenijkkg<br />
+<span class="score" title="66 reputation points">66</span><span title="8 badges"><span class="badge1">●</span><span class="badgecount">8</span></span><span title="9 badges"><span class="silver">●</span><span class="badgecount">9</span></span><span title="15 badges"><span class="bronze">●</span><span class="badgecount">15</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Ewgenijkkg has 3 accepted answers">60%</span></p></div></div><div id="comments-container-17686" class="comments-container"><span id="17687"></span><div id="comment-17687" class="comment"><div id="post-17687-score" class="comment-score"></div><div class="comment-text"><p>What does asn2wrs generate now?</p></div><div id="comment-17687-info" class="comment-info"><span class="comment-age">(15 Jan '13, 01:02)</span> Anders ♦</div></div><span id="17688"></span><div id="comment-17688" class="comment"><div id="post-17688-score" class="comment-score"></div><div class="comment-text"><p>Hello, it creates a call to "dissect_per_UTF8String(tvb, offset, actx, tree, hf_index, NO_BOUND, NO_BOUND, FALSE)". But as I mentioned the function is absent in packet-per.c</p></div><div id="comment-17688-info" class="comment-info"><span class="comment-age">(15 Jan '13, 01:26)</span> Ewgenijkkg</div></div><span id="17689"></span><div id="comment-17689" class="comment"><div id="post-17689-score" class="comment-score"></div><div class="comment-text"><p>Its not clear to me if it should be 27 Encoding the restricted character string types : Or 28 Encoding the unrestricted character string type : If it's the later I presume its actually an OCTET STRING filled with the UTF-8 characters?</p></div><div id="comment-17689-info" class="comment-info"><span class="comment-age">(15 Jan '13, 01:46)</span> Anders ♦</div></div><span id="17690"></span><div id="comment-17690" class="comment"><div id="post-17690-score" class="comment-score"></div><div class="comment-text"><p>Hmm, the only thing I know is that it's the UTF8String data type of ASN.1 That's the value type in my ASN.1 definition. How could I find out the rest?</p></div><div id="comment-17690-info" class="comment-info"><span class="comment-age">(15 Jan '13, 01:55)</span> Ewgenijkkg</div></div><span id="17692"></span><div id="comment-17692" class="comment"><div id="post-17692-score" class="comment-score">1</div><div class="comment-text"><p>Hi, I would start by defining dissect_per_UTF8String() in packet-per.[ch] then in that function call dissect_per_octet_string() then see if the length and content comes out right.</p></div><div id="comment-17692-info" class="comment-info"><span class="comment-age">(15 Jan '13, 03:46)</span> Anders ♦</div></div><span id="17693"></span><div id="comment-17693" class="comment not_top_scorer"><div id="post-17693-score" class="comment-score"></div><div class="comment-text"><p>Hmm I would try mimicing dissect_per_IA5String() and do required changes as I go, I'm guessing the alphbet_lenght is 2^32-1. If you have a trace to work with and know what the encoded string is it should be possible to work it out. In dissect_per_restricted_character_string_sorted() the for loop fetching bit by bit can probably be replacet by tvb_get_bits...</p></div><div id="comment-17693-info" class="comment-info"><span class="comment-age">(15 Jan '13, 04:36)</span> Anders ♦</div></div><span id="17694"></span><div id="comment-17694" class="comment not_top_scorer"><div id="post-17694-score" class="comment-score"></div><div class="comment-text"><p>OK, it worked out! However, I set the last parameter of "call dissect_per_octet_string" - "tvbuff_t **value_tvb" to NULL. What is that parameter for, when would I need it?</p><p>BR</p><p>Ewgenij</p><p>P.S. I mean your first suggestion with dissect_per_octet_string() worked out :)</p></div><div id="comment-17694-info" class="comment-info"><span class="comment-age">(15 Jan '13, 04:39)</span> Ewgenijkkg</div></div><span id="17702"></span><div id="comment-17702" class="comment not_top_scorer"><div id="post-17702-score" class="comment-score"></div><div class="comment-text"><p>That parameter is used when you want to have the OCTET STRING returned in a new tvb for further dissection.</p></div><div id="comment-17702-info" class="comment-info"><span class="comment-age">(15 Jan '13, 08:17)</span> Anders ♦</div></div></div><div id="comment-tools-17686" class="comment-tools"><span class="comments-showing"> showing 5 of 8 </span> <a href="#" class="show-all-comments-link">show 3 more comments</a></div><div class="clear"></div><div id="comment-17686-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="17697"></span>
+
+<div id="answer-container-17697" class="answer accepted-answer answered-by-owner">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-17697-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>So, I wrote my UTF8String dissection function in packet-per.c and packet-per.h according to the comments above:</p><pre><code>guint32
+dissect_per_UTF8String(tvbuff_t *tvb, guint32 offset, asn1_ctx_t *actx, proto_tree *tree, int hf_index, int min_len, int max_len, gboolean has_extension)
+{
+    offset=dissect_per_octet_string(tvb, offset, actx, tree, hf_index, min_len, max_len, has_extension, NULL);
+    return offset;
+}</code></pre><p>That worked out then.</p><p>Great thanks for your help, Anders!</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>15 Jan '13, 07:08</strong></p><img src="https://secure.gravatar.com/avatar/74ba4ba7a26d5efda01b6ae18bbe48e4?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Ewgenijkkg&#39;s gravatar image" /><p>Ewgenijkkg<br />
+<span class="score" title="66 reputation points">66</span><span title="8 badges"><span class="badge1">●</span><span class="badgecount">8</span></span><span title="9 badges"><span class="silver">●</span><span class="badgecount">9</span></span><span title="15 badges"><span class="bronze">●</span><span class="badgecount">15</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Ewgenijkkg has 3 accepted answers">60%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 15 Jan '13, 07:13</p></div></div><div id="comments-container-17697" class="comments-container"><span id="17700"></span><div id="comment-17700" class="comment"><div id="post-17700-score" class="comment-score"></div><div class="comment-text"><p>If the code is correct, then maybe it would be worth to add it to the Wireshark distribution?</p></div><div id="comment-17700-info" class="comment-info"><span class="comment-age">(15 Jan '13, 07:56)</span> Ewgenijkkg</div></div><span id="17701"></span><div id="comment-17701" class="comment"><div id="post-17701-score" class="comment-score"></div><div class="comment-text"><p>Please open a bug report (enhancement)and include a patch/diff. It would be great if it would be possible to try it with a trace as well, if you are not willing to submit/share your dissector perhaps it's possible to design a dummy dissector and a dummy frame to test with?</p></div><div id="comment-17701-info" class="comment-info"><span class="comment-age">(15 Jan '13, 08:14)</span> Anders ♦</div></div><span id="17715"></span><div id="comment-17715" class="comment"><div id="post-17715-score" class="comment-score"></div><div class="comment-text"><p>OK, I submitted the enhancement request with my patch.</p></div><div id="comment-17715-info" class="comment-info"><span class="comment-age">(16 Jan '13, 02:11)</span> Ewgenijkkg</div></div><span id="17920"></span><div id="comment-17920" class="comment"><div id="post-17920-score" class="comment-score"></div><div class="comment-text"><p>The feature request was implemented in the current code version, however not with dissect_per_octet_string but with dissect_per_restricted_character_string_sorted.</p></div><div id="comment-17920-info" class="comment-info"><span class="comment-age">(24 Jan '13, 01:58)</span> Ewgenijkkg</div></div></div><div id="comment-tools-17697" class="comment-tools"></div><div class="clear"></div><div id="comment-17697-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

@@ -1,0 +1,33 @@
++++
+type = "question"
+title = "why wireshark can&#x27;t sniff scapy modify packet?"
+description = '''on my linux, i wrote this rule for change all udp destination ip address to 8.8.8.8 when dport is 53: iptables -t nat -A OUTPUT -p udp -m udp --dport 53 -j DNAT --to-destination 8.8.8.8  this rule worked when i use: dig +short iranled.com @4.2.2.4  tcpdump and wireshark output is: 04:42:38.023348 IP...'''
+date = "2014-07-16T12:05:00Z"
+lastmod = "2014-07-16T12:05:00Z"
+weight = 34710
+keywords = [ "iptables", "wireshark" ]
+aliases = [ "/questions/34710" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [why wireshark can't sniff scapy modify packet?](/questions/34710/why-wireshark-cant-sniff-scapy-modify-packet)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-34710-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>on my linux, i wrote this rule for change all <code>udp</code> destination ip address to <code>8.8.8.8</code> when <code>dport</code> is 53:</p><pre><code>iptables -t nat -A OUTPUT -p udp -m udp --dport 53 -j DNAT --to-destination 8.8.8.8</code></pre><p>this rule worked when i use:</p><pre><code>dig +short iranled.com @4.2.2.4</code></pre><p><code>tcpdump</code> and <code>wireshark</code> output is:</p><pre><code>04:42:38.023348 IP 192.168.1.2.48984 &gt; 8.8.8.8.53: UDP, length 29
+04:42:38.242241 IP 8.8.8.8.53 &gt; 192.168.1.2.48984: UDP, length 45</code></pre><p>it is ok.</p><p>but when i create this packet from <code>scapy</code>, <code>iptables</code> modify this packet but <code>wireshark</code> can not see them:</p><pre><code>sr1(IP(dst=&quot;4.2.2.4&quot;)/UDP()/DNS(rd=1,qd=DNSQR(qname=&quot;iranled.com&quot;)))</code></pre><p><code>tcpdump</code> and <code>wireshark</code> output is:</p><pre><code>04:43:00.442453 IP 192.168.1.2.53 &gt; 4.2.2.4.53: UDP, length 29
+04:43:00.855930 IP 4.2.2.4.53 &gt; 192.168.1.2.53: UDP, length 45</code></pre><p>why <code>wireshark</code> can't see <code>scapy</code> packet after changed by <code>iptables</code>?</p></div><div id="question-tags" class="tags-container tags">iptables wireshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>16 Jul '14, 12:05</strong></p><img src="https://secure.gravatar.com/avatar/1cb87595461ed35a34557221c8805759?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Babyy&#39;s gravatar image" /><p>Babyy<br />
+<span class="score" title="476 reputation points">476</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="3 badges"><span class="silver">●</span><span class="badgecount">3</span></span><span title="6 badges"><span class="bronze">●</span><span class="badgecount">6</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Babyy has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 16 Jul '14, 12:16</p></div></div><div id="comments-container-34710" class="comments-container"><span id="34711"></span><div id="comment-34711" class="comment"><div id="post-34711-score" class="comment-score"></div><div class="comment-text"><blockquote><p>why wireshark can't see scapy packet <strong>after changed by iptables</strong>?</p></blockquote><p>how do you <strong>know</strong> the packet <strong>was changed</strong> by iptables in the test with scapy?</p></div><div id="comment-34711-info" class="comment-info"><span class="comment-age">(16 Jul '14, 13:03)</span> Kurt Knochner ♦</div></div><span id="34712"></span><div id="comment-34712" class="comment"><div id="post-34712-score" class="comment-score"></div><div class="comment-text"><p>@Kurt Knochner: yeah! packet no changed !!!!</p></div><div id="comment-34712-info" class="comment-info"><span class="comment-age">(16 Jul '14, 13:46)</span> Babyy</div></div><span id="34714"></span><div id="comment-34714" class="comment"><div id="post-34714-score" class="comment-score"></div><div class="comment-text"><p>and that means what exactly?</p></div><div id="comment-34714-info" class="comment-info"><span class="comment-age">(16 Jul '14, 14:53)</span> Kurt Knochner ♦</div></div><span id="34724"></span><div id="comment-34724" class="comment"><div id="post-34724-score" class="comment-score"></div><div class="comment-text"><p>@Kurt Knochner: that means iptables cannot change scapy packets! is correct?</p></div><div id="comment-34724-info" class="comment-info"><span class="comment-age">(17 Jul '14, 05:06)</span> Babyy</div></div><span id="34725"></span><div id="comment-34725" class="comment not_top_scorer"><div id="post-34725-score" class="comment-score"></div><div class="comment-text"><blockquote><p>that means iptables cannot change scapy packets! is correct?</p></blockquote><p>I don't know. That was not a statement of mine. It was a question.</p><p>I was asking <strong>how do you know</strong> that iptables did change the scapy packet or not. The only way: Don't sniff on the system. Instead sniff on a mirror port of the switch.</p><p>Only then you will get more information if it is a problem with iptables or with libpcap (tcpdump/Wireshark) and (possibly) the fact that scapy is using RAW sockets.</p></div><div id="comment-34725-info" class="comment-info"><span class="comment-age">(17 Jul '14, 05:27)</span> Kurt Knochner ♦</div></div><span id="34792"></span><div id="comment-34792" class="comment"><div id="post-34792-score" class="comment-score">1</div><div class="comment-text"><p>scapy use raw socket and iptables is unable to block or modify those packets .. <a href="http://diablohorn.wordpress.com/2013/11/28/qp-raw-sockets-iptables/">http://diablohorn.wordpress.com/2013/11/28/qp-raw-sockets-iptables/</a></p></div><div id="comment-34792-info" class="comment-info"><span class="comment-age">(20 Jul '14, 12:51)</span> Babyy</div></div></div><div id="comment-tools-34710" class="comment-tools"><span class="comments-showing"> showing 5 of 6 </span> <a href="#" class="show-all-comments-link">show 1 more comments</a></div><div class="clear"></div><div id="comment-34710-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

@@ -1,0 +1,80 @@
++++
+type = "question"
+title = "&quot;Previous Segment Lost&quot; seems to be inaccurate"
+description = '''Hi. I have a packet capture that has lots of &quot;Previous Segment Lost&quot; diagnoses in Wireshark&#x27;s Info field. But, when I examine a few instances, I don&#x27;t see evidence that a previous segment was indeed lost. But perhaps my analysis is flawed. Here is what I&#x27;m looking at... Packet &quot;n&quot; has Sequence numbe...'''
+date = "2011-04-15T07:59:00Z"
+lastmod = "2011-04-18T04:33:00Z"
+weight = 3509
+keywords = [ "prev_seg_lost" ]
+aliases = [ "/questions/3509" ]
+osqa_answers = 3
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# ["Previous Segment Lost" seems to be inaccurate](/questions/3509/previous-segment-lost-seems-to-be-inaccurate)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-3509-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi. I have a packet capture that has lots of "Previous Segment Lost" diagnoses in Wireshark's Info field.</p><p>But, when I examine a few instances, I don't see evidence that a previous segment was indeed lost. But perhaps my analysis is flawed. Here is what I'm looking at...</p><p>Packet "n" has Sequence number: 2080052452, a Length of 1460 Bytes, and Next sequence number: 2080053912. This makes sense.</p><p>Packet "n+1" has Sequence number: 2080053912, exactly what was expected. But, it also has an Info field that says, "[TCP Previous segment lost] C: DATA fragment, 1460 bytes"</p><p>Can anyone explain why this packet is flagged with this diagnosis? Am I missing completely what "Previous segment lost" is intended to describe? (Always a possibility!! :-)</p><p>Thanx all!</p></div><div id="question-tags" class="tags-container tags">prev_seg_lost</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>15 Apr '11, 07:59</strong></p><img src="https://secure.gravatar.com/avatar/ba0791e3a82c059268b46a45ae90989f?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="feenyman99&#39;s gravatar image" /><p>feenyman99<br />
+<span class="score" title="96 reputation points">96</span><span title="22 badges"><span class="badge1">●</span><span class="badgecount">22</span></span><span title="22 badges"><span class="silver">●</span><span class="badgecount">22</span></span><span title="26 badges"><span class="bronze">●</span><span class="badgecount">26</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="feenyman99 has one accepted answer">25%</span></p></div></div><div id="comments-container-3509" class="comments-container"><span id="3512"></span><div id="comment-3512" class="comment"><div id="post-3512-score" class="comment-score"></div><div class="comment-text"><p>Just realized that I did not include the Wireshark Version:</p><p>Version 1.4.4 (SVN Rev 36110 from /trunk-1.4)</p></div><div id="comment-3512-info" class="comment-info"><span class="comment-age">(15 Apr '11, 09:45)</span> feenyman99</div></div></div><div id="comment-tools-3509" class="comment-tools"></div><div class="clear"></div><div id="comment-3509-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+3 Answers:
+
+</div>
+
+</div>
+
+<span id="3554"></span>
+
+<div id="answer-container-3554" class="answer accepted-answer answered-by-owner">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-3554-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>As it turns out, after working with Sake (thx!!), it appears that something in my Preferences is causing this mis-diagnosis to happen. When I Apply the Default preference, the mis-diagnoses disappear. By the same token, Sake was unable to reproduce the behavior, even when he loaded my Preference file.</p><p>So, I guess we will have to leave this as an Unsolved Mystery.</p><p>If it happens again, perhaps enlightenment will occur.</p><p>If it never happens again, that's OK too!</p><p>thx, Feenyman99</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>18 Apr '11, 04:33</strong></p><img src="https://secure.gravatar.com/avatar/ba0791e3a82c059268b46a45ae90989f?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="feenyman99&#39;s gravatar image" /><p>feenyman99<br />
+<span class="score" title="96 reputation points">96</span><span title="22 badges"><span class="badge1">●</span><span class="badgecount">22</span></span><span title="22 badges"><span class="silver">●</span><span class="badgecount">22</span></span><span title="26 badges"><span class="bronze">●</span><span class="badgecount">26</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="feenyman99 has one accepted answer">25%</span></p></div></div><div id="comments-container-3554" class="comments-container"></div><div id="comment-tools-3554" class="comment-tools"></div><div class="clear"></div><div id="comment-3554-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="3511"></span>
+
+<div id="answer-container-3511" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-3511-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Hmm... it looks like Wireshark shouldn't have given the "Previous Segment Lost" message. What version of Wireshark are you using? Are you able to share (part of) your capture file for analysis?</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>15 Apr '11, 09:45</strong></p><img src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="SYN-bit&#39;s gravatar image" /><p>SYN-bit ♦♦<br />
+<span class="score" title="17094 reputation points"><span>17.1k</span></span><span title="9 badges"><span class="badge1">●</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">●</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">●</span><span class="badgecount">245</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="SYN-bit has 174 accepted answers">20%</span></p></div></div><div id="comments-container-3511" class="comments-container"><span id="3514"></span><div id="comment-3514" class="comment"><div id="post-3514-score" class="comment-score"></div><div class="comment-text"><p>Version 1.4.4 (SVN Rev 36110 from /trunk-1.4)</p><p>Yes I can share part of my capture file. Pls tell me how to send / upload it.</p><p>thx!</p></div><div id="comment-3514-info" class="comment-info"><span class="comment-age">(15 Apr '11, 11:21)</span> feenyman99</div></div><span id="3517"></span><div id="comment-3517" class="comment"><div id="post-3517-score" class="comment-score"></div><div class="comment-text"><p>You could post it on www.pcapr.net or http://www.cloudshark.org/</p><p>(make sure you check if you agree to their terms, since it's network packets that you're posting)</p></div><div id="comment-3517-info" class="comment-info"><span class="comment-age">(15 Apr '11, 11:53)</span> SYN-bit ♦♦</div></div><span id="3518"></span><div id="comment-3518" class="comment"><div id="post-3518-score" class="comment-score"></div><div class="comment-text"><p>Here is some additional, INTERESTING information...</p><p>To prepare to send a snippet of the trace for your analysis, I went into the trace file and removed the first 28 packets, as there were some actual names and email addresses in there.</p><p>Once I did that and re-imported the capture into Wireshark, Voila - the "Previous segment lost" diagnoses disappeared from the same packets that had previously had these diagnoses. Hmmm...</p></div><div id="comment-3518-info" class="comment-info"><span class="comment-age">(15 Apr '11, 11:53)</span> feenyman99</div></div><span id="3519"></span><div id="comment-3519" class="comment"><div id="post-3519-score" class="comment-score"></div><div class="comment-text"><p>Instead of deleting frames, you can also strip the upper layers as it is the TCP layer that is interesting in this case. You can use editcap to do so (editcap -s 68 infile.cap outfile.cap)</p></div><div id="comment-3519-info" class="comment-info"><span class="comment-age">(15 Apr '11, 12:00)</span> SYN-bit ♦♦</div></div><span id="3520"></span><div id="comment-3520" class="comment"><div id="post-3520-score" class="comment-score"></div><div class="comment-text"><p>That I will do sir! How do I send you the resultant file? (It's small - ~40KB).</p><p>thx!</p></div><div id="comment-3520-info" class="comment-info"><span class="comment-age">(15 Apr '11, 12:01)</span> feenyman99</div></div><span id="3521"></span><div id="comment-3521" class="comment not_top_scorer"><div id="post-3521-score" class="comment-score"></div><div class="comment-text"><p>Sorry - I missed your instructions for posting my trace file until now. I will strip out the upper layers and post it and let you now when done.</p><p>thx.</p></div><div id="comment-3521-info" class="comment-info"><span class="comment-age">(15 Apr '11, 12:03)</span> feenyman99</div></div><span id="3522"></span><div id="comment-3522" class="comment not_top_scorer"><div id="post-3522-score" class="comment-score"></div><div class="comment-text"><p>You can either post it on one of the sites I mentioned or send it to me personally if you prefer (my mail address is on my profile description when you click on my name)</p></div><div id="comment-3522-info" class="comment-info"><span class="comment-age">(15 Apr '11, 12:04)</span> SYN-bit ♦♦</div></div></div><div id="comment-tools-3511" class="comment-tools"><span class="comments-showing"> showing 5 of 7 </span> <a href="#" class="show-all-comments-link">show 2 more comments</a></div><div class="clear"></div><div id="comment-3511-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="3524"></span>
+
+<div id="answer-container-3524" class="answer answered-by-owner">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-3524-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>OK - the fog is clearing... I believe I have a corrupted or compromised trace file.<br />
+</p><p>It turns out that, each time I had wireshark (or editcap) create a new trace file from the initial trace file, the 'Previous Segment Lost' diagnoses completely disappeared. This was true even if I didn't remove any frames, or didn't strip out any upper layers.</p><p>Another piece of info... The trace with the 'Previous Segment Lost' diagnoses, it turns out, is in "NA Sniffer (Windows) 2.00x (<em>.cap)" format. When I saved it in "Wireshark/tcpdump/... -libpcap (</em>..pcap, *.cap)" format, WITHOUT CHANGING ANYTHING ELSE, the "Previous Segment Lost' diagnoses disappeared.</p><p>So... What to take away from this exercise???</p><ul><li>Are "NA Sniffer (Windows) 2.00x (*.cap)" trace files known to have problems?</li><li>Should I always convert them into "Wireshark/tcpdump/" format as a matter of best practice?</li><li>Or did I just happen to get an anomaly, with no obvious conclusions to be drawn?</li><li>Any other suggestions or conclusions?</li></ul><p>As much as this has been interesting, I regret that I spent a lot of time chasing my tail on this. If anyone suggests what I might have done differently, to avoid this, I am all ears.</p><p>Thx again.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>15 Apr '11, 15:03</strong></p><img src="https://secure.gravatar.com/avatar/ba0791e3a82c059268b46a45ae90989f?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="feenyman99&#39;s gravatar image" /><p>feenyman99<br />
+<span class="score" title="96 reputation points">96</span><span title="22 badges"><span class="badge1">●</span><span class="badgecount">22</span></span><span title="22 badges"><span class="silver">●</span><span class="badgecount">22</span></span><span title="26 badges"><span class="bronze">●</span><span class="badgecount">26</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="feenyman99 has one accepted answer">25%</span> </br></p></div></div><div id="comments-container-3524" class="comments-container"><span id="3527"></span><div id="comment-3527" class="comment"><div id="post-3527-score" class="comment-score"></div><div class="comment-text"><p>I'm glad you were able to workaround the issue by converting the file format. It would be interesting though to find out why it is failing when reading the sniffer format. I'm not sure whether you are allowed to share the file under NDA so I can have a look at it.</p></div><div id="comment-3527-info" class="comment-info"><span class="comment-age">(15 Apr '11, 17:42)</span> SYN-bit ♦♦</div></div><span id="3540"></span><div id="comment-3540" class="comment"><div id="post-3540-score" class="comment-score"></div><div class="comment-text"><p>Sake,</p><p>I just emailed you the file - I hope that is OK. That seemed safer than posting it on the web.</p><p>thx, feenyman99</p></div><div id="comment-3540-info" class="comment-info"><span class="comment-age">(17 Apr '11, 15:08)</span> feenyman99</div></div></div><div id="comment-tools-3524" class="comment-tools"></div><div class="clear"></div><div id="comment-3524-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

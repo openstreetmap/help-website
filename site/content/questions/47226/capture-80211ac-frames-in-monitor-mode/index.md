@@ -1,0 +1,59 @@
++++
+type = "question"
+title = "Capture 802.11ac frames in monitor mode"
+description = '''Hi I have 2 USB adapters - 802.11ac enabled, it supports monitor mode operation. I have wireshark version 1.10. I enable one of the USB adapters in monitor mode and connect the other adapter to 802.11ac AP. I want to capture the traffic generated between AP and client (802.11ac). However, the monito...'''
+date = "2015-11-04T04:12:00Z"
+lastmod = "2015-11-05T11:13:00Z"
+weight = 47226
+keywords = [ "802.11ac" ]
+aliases = [ "/questions/47226" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Capture 802.11ac frames in monitor mode](/questions/47226/capture-80211ac-frames-in-monitor-mode)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-47226-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi</p><p>I have 2 USB adapters - 802.11ac enabled, it supports monitor mode operation. I have wireshark version 1.10. I enable one of the USB adapters in monitor mode and connect the other adapter to 802.11ac AP. I want to capture the traffic generated between AP and client (802.11ac). However, the monitor mode interface is capture nothing at all.</p><p>Please guide me where am I wrong.</p><p>Thanks.</p></div><div id="question-tags" class="tags-container tags">802.11ac</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>04 Nov '15, 04:12</strong></p><img src="https://secure.gravatar.com/avatar/32e1f189aa62f1787379b67ea3542959?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="dheryta&#39;s gravatar image" /><p>dheryta<br />
+<span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">●</span><span class="badgecount">5</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="dheryta has no accepted answers">0%</span></p></div></div><div id="comments-container-47226" class="comments-container"><span id="47227"></span><div id="comment-47227" class="comment"><div id="post-47227-score" class="comment-score"></div><div class="comment-text"><p>What OS do you use?</p></div><div id="comment-47227-info" class="comment-info"><span class="comment-age">(04 Nov '15, 04:21)</span> Christian_R</div></div><span id="47228"></span><div id="comment-47228" class="comment"><div id="post-47228-score" class="comment-score"></div><div class="comment-text"><p>I am using Ubuntu 14.04</p></div><div id="comment-47228-info" class="comment-info"><span class="comment-age">(04 Nov '15, 04:24)</span> dheryta</div></div><span id="47258"></span><div id="comment-47258" class="comment"><div id="post-47258-score" class="comment-score"></div><div class="comment-text"><p>Are both USB adapters connected to the same PC/laptop?</p></div><div id="comment-47258-info" class="comment-info"><span class="comment-age">(04 Nov '15, 11:40)</span> Amato_C</div></div><span id="47264"></span><div id="comment-47264" class="comment"><div id="post-47264-score" class="comment-score"></div><div class="comment-text"><p>"Capturing nothing" meaning "you try to capture and there are <em>no packets at all</em>" or "capturing nothing" as in "just a whole bunch of packets identified as '802.11' but nothing that looks like regular network traffic"?</p></div><div id="comment-47264-info" class="comment-info"><span class="comment-age">(04 Nov '15, 14:32)</span> Guy Harris ♦♦</div></div><span id="47272"></span><div id="comment-47272" class="comment"><div id="post-47272-score" class="comment-score"></div><div class="comment-text"><p>@Amato_C: no both adapters are connected to different laptops, connected to same AP in infrastructure mode.</p><p>@Guy Harris: Its the former one, 'no packets at all'. The adapter is Edimax AC1200 and it supports monitor mode operation.</p></div><div id="comment-47272-info" class="comment-info"><span class="comment-age">(04 Nov '15, 19:54)</span> dheryta</div></div><span id="47304"></span><div id="comment-47304" class="comment not_top_scorer"><div id="post-47304-score" class="comment-score"></div><div class="comment-text"><p>In the question, you say " I enable one of the USB adapters in monitor mode and connect the other adapter to 802.11ac AP." In a comment, you say "no both adapters are connected to different laptops, connected to same AP in infrastructure mode." Are both adapters connected to the AP, or is only one of them connected?</p></div><div id="comment-47304-info" class="comment-info"><span class="comment-age">(05 Nov '15, 09:59)</span> Guy Harris ♦♦</div></div><span id="47305"></span><div id="comment-47305" class="comment not_top_scorer"><div id="post-47305-score" class="comment-score"></div><div class="comment-text"><p>@Guy Harris: Sorry, that was an error. One of the adapters is connected to AP in infrastructure mode and the other is enabled as a monitor mode interface (not associated to AP) to capture WiFi traffic between AP and Client.</p></div><div id="comment-47305-info" class="comment-info"><span class="comment-age">(05 Nov '15, 10:04)</span> dheryta</div></div><span id="47306"></span><div id="comment-47306" class="comment not_top_scorer"><div id="post-47306-score" class="comment-score"></div><div class="comment-text"><p>And they're both set to the same channel?</p></div><div id="comment-47306-info" class="comment-info"><span class="comment-age">(05 Nov '15, 10:08)</span> Guy Harris ♦♦</div></div><span id="47307"></span><div id="comment-47307" class="comment not_top_scorer"><div id="post-47307-score" class="comment-score"></div><div class="comment-text"><p>As per my understanding, in monitor mode an interface listens to all channels in round-robin fashion, so no need to set a particular channel. I have done this with Atheros card to capture WiFi traffic in 2.4GHz. Thus, I did not set any channel for monitor mode interface as well.</p></div><div id="comment-47307-info" class="comment-info"><span class="comment-age">(05 Nov '15, 10:11)</span> dheryta</div></div><span id="47308"></span><div id="comment-47308" class="comment not_top_scorer"><div id="post-47308-score" class="comment-score"></div><div class="comment-text"><blockquote><p>As per my understanding, in monitor mode an interface listens to all channels in round-robin fashion</p></blockquote><p>Not necessarily. That might be done by <em>some</em> adapters in <em>some</em> modes, but it's not done by <em>all</em> adapters in <em>all</em> modes - if channel scanning is being done, some traffic might be missed, as you won't be listening on any particular channel all the time, so it's not what you always want to do in monitor mode.</p><p>It's not done in software by Wireshark.</p></div><div id="comment-47308-info" class="comment-info"><span class="comment-age">(05 Nov '15, 10:15)</span> Guy Harris ♦♦</div></div><span id="47309"></span><div id="comment-47309" class="comment not_top_scorer"><div id="post-47309-score" class="comment-score"></div><div class="comment-text"><p>I added monitor mode interface in Linux with following command sudo iw dev wlan1 interface add mon1 type monitor sudo ifconfig mon1 up</p><p>Then, I try to listen on mon1 with Wireshark.</p></div><div id="comment-47309-info" class="comment-info"><span class="comment-age">(05 Nov '15, 10:18)</span> dheryta</div></div></div><div id="comment-tools-47226" class="comment-tools"><span class="comments-showing"> showing 5 of 11 </span> <a href="#" class="show-all-comments-link">show 6 more comments</a></div><div class="clear"></div><div id="comment-47226-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="47311"></span>
+
+<div id="answer-container-47311" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-47311-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Try this:</p><p>In all these commands, my WiFi adapter was named wlan1 in Ubuntu.</p><ol><li>Connect the adapter that will be used for capturing WiFi traffic to the WLAN.</li><li>Issue command: iw wlan1 info</li><li>Make note of the following: Channel frequency, Channel bandwidth, Center 1 frequency</li><li>Disassociate the adapter from the WLAN</li><li><p>Issue the following commands:</p><p>ifconfig wlan1 down</p><p>iw dev wlan1 set type monitor</p><p>ifconfig wlan1 up</p><p>iw dev wlan1 set freq (channel-freq) (channel-BW) (center-1-freq)</p></li></ol><p>For example: iw deb wlan1 set freq 5180 80 5210</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>05 Nov '15, 11:13</strong></p><img src="https://secure.gravatar.com/avatar/d9cf592a79eafbc3b2a8b3f38cf38362?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Amato_C&#39;s gravatar image" /><p>Amato_C<br />
+<span class="score" title="1098 reputation points"><span>1.1k</span></span><span title="14 badges"><span class="badge1">●</span><span class="badgecount">14</span></span><span title="20 badges"><span class="silver">●</span><span class="badgecount">20</span></span><span title="32 badges"><span class="bronze">●</span><span class="badgecount">32</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Amato_C has 15 accepted answers">14%</span></p></div></div><div id="comments-container-47311" class="comments-container"></div><div id="comment-tools-47311" class="comment-tools"></div><div class="clear"></div><div id="comment-47311-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

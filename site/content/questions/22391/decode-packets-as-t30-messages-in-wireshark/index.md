@@ -1,0 +1,32 @@
++++
+type = "question"
+title = "Decode packets as T.30 messages in wireshark"
+description = '''I need to decode a pcap file as T.30 using wireshark. In supported formats, wireshark has listed T.30. So it should be possible to decode the packets as T.30 messages. Could anybody please help me out how?'''
+date = "2013-06-26T23:31:00Z"
+lastmod = "2013-06-26T23:31:00Z"
+weight = 22391
+keywords = [ "t.30" ]
+aliases = [ "/questions/22391" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Decode packets as T.30 messages in wireshark](/questions/22391/decode-packets-as-t30-messages-in-wireshark)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-22391-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I need to decode a pcap file as T.30 using wireshark. In supported formats, wireshark has listed T.30. So it should be possible to decode the packets as T.30 messages. Could anybody please help me out how?</p></div><div id="question-tags" class="tags-container tags">t.30</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>26 Jun '13, 23:31</strong></p><img src="https://secure.gravatar.com/avatar/be4e0aac3f177de28a131ad0bedbaac9?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="narasimha&#39;s gravatar image" /><p>narasimha<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="narasimha has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 27 Jun '13, 13:38</p><img src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Guy%20Harris&#39;s gravatar image" /><p>Guy Harris ♦♦<br />
+<span class="score" title="17443 reputation points"><span>17.4k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">●</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">●</span><span class="badgecount">196</span></span></p></div></div><div id="comments-container-22391" class="comments-container"><span id="22423"></span><div id="comment-22423" class="comment"><div id="post-22423-score" class="comment-score"></div><div class="comment-text"><blockquote><p>In supported formats, wireshark has listed T.30. So it should be possible to decode the packets as T.30 messages.</p></blockquote><p>No, the first of those statements does not imply the second. Wireshark only supports T.30 messages when encapsulated in <a href="http://en.wikipedia.org/wiki/T.38">T.38 fax-over-IP</a> packets. Does your pcap file contain regular networking traffic, including T.38, or does it contain some form of raw T.30 messages?</p></div><div id="comment-22423-info" class="comment-info"><span class="comment-age">(27 Jun '13, 13:41)</span> Guy Harris ♦♦</div></div><span id="22539"></span><div id="comment-22539" class="comment"><div id="post-22539-score" class="comment-score"></div><div class="comment-text"><p>My pcap has only T30 fax messages.. Could you tell me how to decode the T30 messages when its encapsulated in T.38 fax-over-IP packets?</p></div><div id="comment-22539-info" class="comment-info"><span class="comment-age">(01 Jul '13, 23:57)</span> narasimha</div></div><span id="22542"></span><div id="comment-22542" class="comment"><div id="post-22542-score" class="comment-score"></div><div class="comment-text"><p>Are those:</p><ul><li>T.30 messages with no encapsulation;</li><li>T.30 encapsulated in T.38;</li><li>T.30 encapsulated in T.38 encapsulated in TPKT/TCP;</li><li>T.30 encapsulated in T.38 encapsulated in TPKT/TCP encapsulated in IP;</li><li>T.30 encapsulated in T.38 encapsulated in TPKT/TCP encapsulated in IP encapsulated in some link layer (Ethernet, 802.11, etc.);</li><li>something else?</li></ul></div><div id="comment-22542-info" class="comment-info"><span class="comment-age">(02 Jul '13, 00:23)</span> Guy Harris ♦♦</div></div><span id="22549"></span><div id="comment-22549" class="comment"><div id="post-22549-score" class="comment-score"></div><div class="comment-text"><p>T.30 messages encapsulated in UDP..</p></div><div id="comment-22549-info" class="comment-info"><span class="comment-age">(02 Jul '13, 01:23)</span> narasimha</div></div><span id="22550"></span><div id="comment-22550" class="comment"><div id="post-22550-score" class="comment-score"></div><div class="comment-text"><p>sorry. those t30 messages are sent in an rtp stream. And i need to decode those..</p></div><div id="comment-22550-info" class="comment-info"><span class="comment-age">(02 Jul '13, 01:25)</span> narasimha</div></div></div><div id="comment-tools-22391" class="comment-tools"></div><div class="clear"></div><div id="comment-22391-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

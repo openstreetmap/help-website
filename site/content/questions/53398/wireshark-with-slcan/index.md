@@ -1,0 +1,79 @@
++++
+type = "question"
+title = "Wireshark with SLCAN"
+description = '''Im using Wireshark in Manjaro and i am testing a device with SLCAN protocol. If i am unsing candump from can-utils everything is fine. But if i want to monitor my data in wireshark the CAN identifieres are in wrong order like this: Wireshark: Ext RTR Err Byte7 | Byte6 | Byte5 | Byte4 | Byte3 | Byte2...'''
+date = "2016-06-13T06:51:00Z"
+lastmod = "2016-08-19T16:46:00Z"
+weight = 53398
+keywords = [ "socketcan", "slcan" ]
+aliases = [ "/questions/53398" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Wireshark with SLCAN](/questions/53398/wireshark-with-slcan)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-53398-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Im using Wireshark in Manjaro and i am testing a device with SLCAN protocol. If i am unsing candump from can-utils everything is fine. But if i want to monitor my data in wireshark the CAN identifieres are in wrong order like this:</p><p>Wireshark: Ext RTR Err Byte7 | Byte6 | Byte5 | Byte4 | Byte3 | Byte2 | Byte1 | Byte0</p><p>CAN-Frame: Byte1 | Byte0 | Byte3 | Byte2 | Byte5 | Byte4 | EXT RTR ERR Byte7 | Byte6</p><p>Has anyone an idea if this is a wireshark slcan or socketCAN issue?</p><p><img src="https://osqa-ask.wireshark.org/upfiles/slcan_screenshot_4JQyoF7.PNG" alt="alt text" /></p></div><div id="question-tags" class="tags-container tags">socketcan slcan</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>13 Jun '16, 06:51</strong></p><img src="https://secure.gravatar.com/avatar/6f97a1a0ec1865501e328a8bfcd92f41?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="casartar&#39;s gravatar image" /><p>casartar<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="casartar has no accepted answers">0%</span></p></img></div><div class="post-update-info post-update-info-edited"><p>edited 14 Jun '16, 00:10</p></div></div><div id="comments-container-53398" class="comments-container"><span id="53400"></span><div id="comment-53400" class="comment"><div id="post-53400-score" class="comment-score"></div><div class="comment-text"><p>Ideas come much better with a capture file open in front of you :-)</p><p>So unless it is a top secret, please publish (login-free) an example of such a captured file somewhere (Cloudshark is the place preferred by the community here but any file sharing service will do) and edit your question with a link to it.</p></div><div id="comment-53400-info" class="comment-info"><span class="comment-age">(13 Jun '16, 08:19)</span> sindy</div></div><span id="53425"></span><div id="comment-53425" class="comment"><div id="post-53425-score" class="comment-score"></div><div class="comment-text"><p>It's not a capture, it is a screenshot, but if I understand it right there is an issue not with the order of bytes inside a CAN packet (which would be a dissector-related question) but with the order of the packets themselves, which is a capturing method related question. So what hardware &amp; driver do you use to capture the CAN communication and how is it interfaced to Wireshark?</p></div><div id="comment-53425-info" class="comment-info"><span class="comment-age">(14 Jun '16, 00:47)</span> sindy</div></div><span id="53431"></span><div id="comment-53431" class="comment"><div id="post-53431-score" class="comment-score"></div><div class="comment-text"><p>No its not a problem of the order of packets. Thats perfectly fine. The problem is the order of nibbles in the CAN Identifier. In Wireshark it seems the Identifier is represented by a 32-bit variable. A CAN Identifier has 11 or 29 bits. Bit 31 in the wireshark representation contain the additional information if it is an extended identifier (29 bit) or a standard identifier (11 bit). Bit 30 contains the information if its a remote frame. Bit 29 contains the information if its a error frame.</p><p>I have sent only Extended Frames. Data Bytes all 0x00. In the first message i have set nibble 0 of the can identifier to 0xF. In wireshark nibble 6 was 0xF. In the second message i have set nibble 1 of the can identifier to 0xF. In wireshark nibble 7 was 0xF (there are the additional frame informations in wireshark)</p><p>And so on...</p><p>My hardware is custom and im implementing the Lawicel/SLCAN protocol. It is a serial ASCII protocol.</p><p>I'm using the SLCAN kernel module which is the interface between the serial interface and SocketCAN</p></div><div id="comment-53431-info" class="comment-info"><span class="comment-age">(14 Jun '16, 01:39)</span> casartar</div></div><span id="53440"></span><div id="comment-53440" class="comment"><div id="post-53440-score" class="comment-score"></div><div class="comment-text"><p>I'm still confused by the pictures.</p><p>I've thought that the two screenshots are from the same actual sequence of CAN frames, which is why I've thought that the frame order is wrong (because the <code>F</code> is travelling a different path in the Wireshark screenshot than in the can-utils picture).</p><p>And I wanted a capture file rather than a screenshot because one thing is the order of the fields in the packet dissection pane (the middle one) and the other thing is their order in the packet bytes pane (the lower one which is missing on your screenshot).</p><p>If you click a row in the dissection pane, the corresponding bytes in the packet bytes pane get highlighted. So to see where the issue comes from, I need to compare the order of the bytes in the packet bytes pane with the can-utils capture and with the dissection. This should tell whether it is an issue of endianness (byte order) when generating the capture <del>file</del>stream or an issue of the dissector.</p></div><div id="comment-53440-info" class="comment-info"><span class="comment-age">(14 Jun '16, 08:35)</span> sindy</div></div><span id="53455"></span><div id="comment-53455" class="comment"><div id="post-53455-score" class="comment-score"></div><div class="comment-text"><p>I finaly managed to get a capture file from wireshark (at least i hope so) <a href="https://www.cloudshark.org/captures/11a2cb7ff337">https://www.cloudshark.org/captures/11a2cb7ff337</a></p><p>The screenshots are from the same actual sequence of CAN frames. The frame order is okay. Its just the nibble and byte order in the CAN identifier which is not correct.</p><p>I thought about the endianness but it would not explain way the nibbles in one byte are switched.</p></div><div id="comment-53455-info" class="comment-info"><span class="comment-age">(15 Jun '16, 00:47)</span> casartar</div></div><span id="53458"></span><div id="comment-53458" class="comment not_top_scorer"><div id="post-53458-score" class="comment-score"></div><div class="comment-text"><p>To me the nibbles do not seem swapped:</p><p>slcan:</p><pre><code>00 00 00 0f ...
+00 00 00 f0 ...
+00 00 0f 00 ...
+00 00 f0 00 ...</code></pre><p>Wireshark (or rather capture file contents):</p><pre><code>0f 00 00 80 08 88 ff ff 00 00 00 00 00 00 00 00
+f0 00 00 80 08 88 ff ff 00 00 00 00 00 00 00 00
+00 0f 00 80 08 88 ff ff 00 00 00 00 00 00 00 00
+00 f0 00 80 08 88 ff ff 00 00 00 00 00 00 00 00</code></pre><p>So if you revert the order of the first four bytes (which means if you change their endianness), the nibbles stay at their places, because endianness affects only bytes, not the bits inside them. Order of bits is a difference between "telecom" (most significant bit first) and "datacom" (least significant bit first) serialization and thus is in most cases only interesting on the wire. Exceptions exist but they are mostly related to processing telecom frames using packet network means and correction of bit order is normally part of such setup.</p><p>Wireshark always shows the packet contents as it is stored in the pcap file (or as it was coming to its input). Respecting the endianness of multi-byte fields is a matter of the dissector, not of the capture. So here, the dissector assumes network order (MSB first), but the first four bytes were arriving to the input in intel order (LSB first). What does the CAN specification say about the endianness of this 4-byte field?</p></div><div id="comment-53458-info" class="comment-info"><span class="comment-age">(15 Jun '16, 03:17)</span> sindy</div></div><span id="54266"></span><div id="comment-54266" class="comment not_top_scorer"><div id="post-54266-score" class="comment-score"></div><div class="comment-text"><p>Same problem here on Arch Linux, amd64 architecture. Endian conversion of first 4 bytes makes Wireshark display identifier correctly, I used "edit packet" feature to confirm.</p><p>E.g. "df 07 00 00" --&gt; "00 00 07 df" did the trick.</p><p>Makes useless text in column info "RTR: 0x1f070000" to "STD: 0x000007df" which is correct and filters (can.id==0x7df) now work as well. Haven't used Wireshark before but there are older(?) screenshots where Wireshark was doing good:</p><p>Article <a href="http://skpang.co.uk/blog/archives/1141">http://skpang.co.uk/blog/archives/1141</a></p><p>screenshot: <a href="http://skpang.co.uk/blog/archives/1141/wireshark1">http://skpang.co.uk/blog/archives/1141/wireshark1</a></p></div><div id="comment-54266-info" class="comment-info"><span class="comment-age">(24 Jul '16, 11:16)</span> SocketCANuser</div></div><span id="54479"></span><div id="comment-54479" class="comment not_top_scorer"><div id="post-54479-score" class="comment-score"></div><div class="comment-text"><p>After studying some more SocketCAN stuff my current conclusion is that the Wireshark component for parsing SocketCAN canid+flags (first 4 bytes) somehow assumes wrong endianness. Big endian instead of native?</p><p>Probably nothing to do with SLCAN device as data source since standard can-utils (cansniffer, candump) always show correct data. I am using original <strong>CANUSB</strong> device and standard Linux <strong>slcan</strong> kernel module.</p><p>Neither kernel <a href="https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/plain/Documentation/networking/can.txt?id=HEAD">SocketCAN txt document</a> nor include file <a href="https://github.com/linux-can/can-utils/blob/master/include/linux/can.h">can.h</a> specifiy any endianness at all.</p><p>Excerpt from <a href="https://github.com/linux-can/can-utils/blob/master/include/linux/can.h">can.h</a>:</p><pre><code>/*
+ * Controller Area Network Identifier structure
+ *
+ * bit 0-28 : CAN identifier (11/29 bit)
+ * bit 29   : error message frame flag (0 = data frame, 1 = error message)
+ * bit 30   : remote transmission request flag (1 = rtr frame)
+ * bit 31   : frame format flag (0 = standard 11 bit, 1 = extended 29 bit)
+ */
+typedef __u32 canid_t;
+
+struct can_frame {
+    canid_t can_id;  /* 32 bit CAN_ID + EFF/RTR/ERR flags */
+    __u8    can_dlc; /* frame payload length in byte (0 .. CAN_MAX_DLEN) */
+    __u8    data[CAN_MAX_DLEN] __attribute__((aligned(8)));
+};</code></pre></div><div id="comment-54479-info" class="comment-info"><span class="comment-age">(01 Aug '16, 07:10)</span> SocketCANuser</div></div><span id="54489"></span><div id="comment-54489" class="comment not_top_scorer"><div id="post-54489-score" class="comment-score"></div><div class="comment-text"><p>Libpcap, when capturing on a PF_CAN/SOCK_RAW/CAN_RAW socket, puts the <code>can_id</code> field in network byte order - big-endian - so the <code>can_id</code> field in a pcap or pcapng file should be in big-endian byte order, <em>regardless</em> of whether you captured on a big-endian or little-endian host.</p><p>If the capturing isn't being done by Wireshark (or TShark or dumpcap or tcpdump or any other program using libpcap to capture traffic), and whatever program is writing the pcap file isn't writing the <code>can_id</code> field in big-endian form, that program is buggy and needs to be fixed.</p></div><div id="comment-54489-info" class="comment-info"><span class="comment-age">(01 Aug '16, 19:50)</span> Guy Harris ♦♦</div></div></div><div id="comment-tools-53398" class="comment-tools"><span class="comments-showing"> showing 5 of 9 </span> <a href="#" class="show-all-comments-link">show 4 more comments</a></div><div class="clear"></div><div id="comment-53398-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="54999"></span>
+
+<div id="answer-container-54999" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-54999-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Libpcap was specifying a link-layer header type of "SocketCAN with a big-endian CAN ID/flags field" for all captures, but only when capturing on a PF_CAN/SOCK_RAW/CAN_RAW socket was it put in big-endian form; the others provided it in host-endian form.</p><p>I've 1) checked changes into libpcap to add a new link-layer header type of "SocketCAN with a host-endian CAN ID/flags field" and use that for all forms of SocketCAN-header packets other than the ones where it's explicitly byte-swapped and 2) checked in changes to Wireshark (master, 2.2, and 2.0 branches) to handle both of those link-layer header types and to add a "byte-swap the CAN ID" preference to handle older captures.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>19 Aug '16, 16:46</strong></p><img src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Guy%20Harris&#39;s gravatar image" /><p>Guy Harris ♦♦<br />
+<span class="score" title="17443 reputation points"><span>17.4k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">●</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">●</span><span class="badgecount">196</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Guy Harris has 216 accepted answers">19%</span></p></div></div><div id="comments-container-54999" class="comments-container"></div><div id="comment-tools-54999" class="comment-tools"></div><div class="clear"></div><div id="comment-54999-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

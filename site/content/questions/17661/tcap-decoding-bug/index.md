@@ -1,0 +1,60 @@
++++
+type = "question"
+title = "TCAP Decoding Bug"
+description = '''Hi ! I can see that Wireshark has a problem decoding TCAP packet (showing only DATA and hex stream), if tcap packet is longer than 127 bytes. Usually TCAP is set of tag/len/data constructors, where tag and len are 1-byte, but they support extensions as well (len high bit is set to 1 and continuing o...'''
+date = "2013-01-14T06:05:00Z"
+lastmod = "2013-01-14T08:32:00Z"
+weight = 17661
+keywords = [ "tcap", "map", "ss7", "cap" ]
+aliases = [ "/questions/17661" ]
+osqa_answers = 0
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [TCAP Decoding Bug](/questions/17661/tcap-decoding-bug)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-17661-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi !</p><p>I can see that Wireshark has a problem decoding TCAP packet (showing only DATA and hex stream), if tcap packet is longer than 127 bytes. Usually TCAP is set of tag/len/data constructors, where tag and len are 1-byte, but they support extensions as well (len high bit is set to 1 and continuing on a next bytes)</p></div><div id="question-tags" class="tags-container tags">tcap map ss7 cap</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>14 Jan '13, 06:05</strong></p><img src="https://secure.gravatar.com/avatar/049954c19a42f88823709640897cb958?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="ahmediukas&#39;s gravatar image" /><p>ahmediukas<br />
+<span class="score" title="21 reputation points">21</span><span title="5 badges"><span class="badge1">●</span><span class="badgecount">5</span></span><span title="6 badges"><span class="silver">●</span><span class="badgecount">6</span></span><span title="10 badges"><span class="bronze">●</span><span class="badgecount">10</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="ahmediukas has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 14 Jan '13, 14:12</p><img src="https://secure.gravatar.com/avatar/e0564001bb7deb960d5d9d9c1e0ba074?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="JeffMorriss&#39;s gravatar image" /><p>JeffMorriss ♦<br />
+<span class="score" title="6219 reputation points"><span>6.2k</span></span><span title="5 badges"><span class="silver">●</span><span class="badgecount">5</span></span><span title="72 badges"><span class="bronze">●</span><span class="badgecount">72</span></span></p></div></div><div id="comments-container-17661" class="comments-container"><span id="17663"></span><div id="comment-17663" class="comment"><div id="post-17663-score" class="comment-score"></div><div class="comment-text"><p>What version are you using? Do you mean the <em>packet</em> is more than 127 octets long?</p><p>I'm currently looking at a TCAP message that is (after being reassembled) 374 octets long. A sample capture--which you could upload to e.g., <a href="http://cloudshark.org">http://cloudshark.org</a> --would help.</p></div><div id="comment-17663-info" class="comment-info"><span class="comment-age">(14 Jan '13, 06:46)</span> JeffMorriss ♦</div></div><span id="17668"></span><div id="comment-17668" class="comment"><div id="post-17668-score" class="comment-score"></div><div class="comment-text"><p>I am using the latest version (just downloaded for this case).</p><p>Here is the sample: <a href="http://public.alesfree.com/sample.pcap">http://public.alesfree.com/sample.pcap</a></p><p>and printscreen of what is decoded <a href="http://public.alesfree.com/sample.jpg">http://public.alesfree.com/sample.jpg</a></p></div><div id="comment-17668-info" class="comment-info"><span class="comment-age">(14 Jan '13, 08:15)</span> ahmediukas</div></div><span id="17669"></span><div id="comment-17669" class="comment"><div id="post-17669-score" class="comment-score"></div><div class="comment-text"><p>I think the problem is in begining 6281a7</p><p>Usually 0x81 would mean length (62 is tag), but since it uses high bit (128), other bits (1) tells how many length octets are following defining the length (which is a7 in this case)</p></div><div id="comment-17669-info" class="comment-info"><span class="comment-age">(14 Jan '13, 08:16)</span> ahmediukas</div></div></div><div id="comment-tools-17661" class="comment-tools"></div><div class="clear"></div><div id="comment-17661-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="17670"></span>
+
+<div id="answer-container-17670" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-17670-score" class="post-score" title="current number of votes">2</div></div></td><td><div class="item-right"><div class="answer-body"><p>Thanks for the sample capture. Actually the problem is simpler: the Called and Calling SSNs are both 146 and the Camel dissector does not, for some reason, register for that SSN.</p><p>Go to Edit-&gt;Preferences-&gt;Protocols-&gt;Camel and add 146 to the list of SSNs there. With that change my Wireshark shows a Camel initialDP.</p><p>(Does anyone know why Camel doesn't register for SSN 146--which is its registered SSN?)</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>14 Jan '13, 08:32</strong></p><img src="https://secure.gravatar.com/avatar/e0564001bb7deb960d5d9d9c1e0ba074?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="JeffMorriss&#39;s gravatar image" /><p>JeffMorriss ♦<br />
+<span class="score" title="6219 reputation points"><span>6.2k</span></span><span title="5 badges"><span class="silver">●</span><span class="badgecount">5</span></span><span title="72 badges"><span class="bronze">●</span><span class="badgecount">72</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="JeffMorriss has 103 accepted answers">27%</span></p></div></div><div id="comments-container-17670" class="comments-container"><span id="17674"></span><div id="comment-17674" class="comment"><div id="post-17674-score" class="comment-score"></div><div class="comment-text"><p>Ah, i was only looking for fragmentation in sccp chunks, even didnt check the ssn's :) Thx for hint I also deleted 6-9 in camel as this is for gsm map ssn's</p></div><div id="comment-17674-info" class="comment-info"><span class="comment-age">(14 Jan '13, 13:28)</span> ahmediukas</div></div><span id="17676"></span><div id="comment-17676" class="comment"><div id="post-17676-score" class="comment-score">1</div><div class="comment-text"><p>(BTW I clicked the check box to indicate that my answer was Accepted so this question no longer shows up in the list of unanswered questions.)</p></div><div id="comment-17676-info" class="comment-info"><span class="comment-age">(14 Jan '13, 14:11)</span> JeffMorriss ♦</div></div><span id="17704"></span><div id="comment-17704" class="comment"><div id="post-17704-score" class="comment-score"></div><div class="comment-text"><p>I fixed the Camel dissector so that it registers for SSN 146 (instead of 6-9) in r47097. That change will show up in the development builds and Wireshark 1.10.0.</p></div><div id="comment-17704-info" class="comment-info"><span class="comment-age">(15 Jan '13, 08:45)</span> JeffMorriss ♦</div></div><span id="17798"></span><div id="comment-17798" class="comment"><div id="post-17798-score" class="comment-score"></div><div class="comment-text"><p>Jeff, maybe is simillar issue, Wireshark does not show what primitive holds data 0a0101 before the last two MTP's filler nulls. When I click on it, it just tells SCCP packet, but i dont see where excactly (neither in TCAP). Here is example: <a href="http://cloudshark.org/captures/eab9fe741ab8">http://cloudshark.org/captures/eab9fe741ab8</a></p></div><div id="comment-17798-info" class="comment-info"><span class="comment-age">(20 Jan '13, 16:09)</span> ahmediukas</div></div><span id="17821"></span><div id="comment-17821" class="comment"><div id="post-17821-score" class="comment-score">1</div><div class="comment-text"><p>Hmmm, it would appear to me that the sender has stuck another SCCP parameter on the end of the Unitdata. UDTs have only 3 parameters (they don't support optional parameters) so I'd say the sender has a bug. Well, even if it's not supposed to be a parameter the sender still has a bug.</p><p>The parameter (if that's what it's supposed to be) would be a Release Cause (0x0a) of length 1 (the first 0x01) with a value of End User Congestion (the 2nd 0x01).</p><p>(I suppose the SCCP dissector could do a better job of warning of such weirdness but...)</p></div><div id="comment-17821-info" class="comment-info"><span class="comment-age">(21 Jan '13, 11:50)</span> JeffMorriss ♦</div></div><span id="24734"></span><div id="comment-24734" class="comment not_top_scorer"><div id="post-24734-score" class="comment-score"></div><div class="comment-text"><p>thanks JeffMorriss ♦</p></div><div id="comment-24734-info" class="comment-info"><span class="comment-age">(15 Sep '13, 23:14)</span> Sridhar Kumar N</div></div></div><div id="comment-tools-17670" class="comment-tools"><span class="comments-showing"> showing 5 of 6 </span> <a href="#" class="show-all-comments-link">show 1 more comments</a></div><div class="clear"></div><div id="comment-17670-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

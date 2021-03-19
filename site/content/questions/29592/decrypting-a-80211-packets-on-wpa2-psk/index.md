@@ -1,0 +1,81 @@
++++
+type = "question"
+title = "Decrypting a 802.11 packets on WPA2-PSK"
+description = '''Hi everyone, First off I&#x27;d like to thank everyone for providing such great answers on Q&amp;amp;A, it has really helped me get up and running with Wireshark. I&#x27;m currently running Wireshark 1.10.2 on Lubuntu with wireless drivers that support monitor mode. I&#x27;ve verified this by running sudo airmon-ng st...'''
+date = "2014-02-09T21:21:00Z"
+lastmod = "2014-08-27T14:55:00Z"
+weight = 29592
+keywords = [ "802.11", "ubuntu", "wlan", "decryption", "wpa2" ]
+aliases = [ "/questions/29592" ]
+osqa_answers = 3
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Decrypting a 802.11 packets on WPA2-PSK](/questions/29592/decrypting-a-80211-packets-on-wpa2-psk)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-29592-score" class="post-score" title="current number of votes">2</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi everyone,</p><p>First off I'd like to thank everyone for providing such great answers on Q&amp;A, it has really helped me get up and running with Wireshark.</p><p>I'm currently running Wireshark 1.10.2 on Lubuntu with wireless drivers that support monitor mode. I've verified this by running sudo airmon-ng start mon0 and it has started mon0 on device wlan0.</p><p>I've been using mon0 to capture network traffic for say 5-10 minutes, I've verified that the capture has all 4 packets for the EAPOL protocol so it has captured my wireless handshake completely. However when trying to decrypt this data I seem to have no luck... I've been able to successfully decrypt the sample capture file so I know I'm following the correct process. I've tried to decrypt using wpa-pwd and wpa-psk (pre shared key generated) (my network is using WPA2-PSK) and none of the data actually changes after the decrypt. I can also confirm that after logging into a website even on my local machine it doesn't capture the cookies (verified by filter http.cookie contains "datr") however I believe this is because the decrypt wasn't successful. Basically my aim is to sniff my local network for HTTP cookies.</p><p>On another note, I've confirmed that my adapter is running mon0 and it's enabled however in the Wireshark interface list it says that monitor mode is disabled on mon0? Do I have to enable this from within Wireshark as well?</p><p>I appreciate all the help given :)</p><p>Thanks! Andrew</p></div><div id="question-tags" class="tags-container tags">802.11 ubuntu wlan decryption wpa2</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>09 Feb '14, 21:21</strong></p><img src="https://secure.gravatar.com/avatar/751c6bba0c3a82852cfe7c332f4cb71f?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="sseeker&#39;s gravatar image" /><p>sseeker<br />
+<span class="score" title="41 reputation points">41</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">●</span><span class="badgecount">4</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="sseeker has no accepted answers">0%</span></p></div></div><div id="comments-container-29592" class="comments-container"></div><div id="comment-tools-29592" class="comment-tools"></div><div class="clear"></div><div id="comment-29592-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+3 Answers:
+
+</div>
+
+</div>
+
+<span id="29621"></span>
+
+<div id="answer-container-29621" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-29621-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>Please 'experiment' with the following options (switch them on or off), as they can have an effect on decryption.</p><blockquote><p>Edit -&gt; Preferences -&gt; IEEE 802.11 -&gt; Assume Packets have FCS<br />
+Edit -&gt; Preferences -&gt; IEEE 802.11 -&gt; Ignore the protection bit</p></blockquote><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>10 Feb '14, 05:18</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></br></p></div><div class="post-update-info post-update-info-edited"><p>edited 10 Feb '14, 05:18</p></div></div><div id="comments-container-29621" class="comments-container"><span id="29626"></span><div id="comment-29626" class="comment"><div id="post-29626-score" class="comment-score"></div><div class="comment-text"><p>Hi Kurt,</p><p>Sorry I should have mentioned, I've already experimented with these settings and it didn't seem to make any difference. I'll try again and get back to you :)</p><p>Thanks, Andrew</p></div><div id="comment-29626-info" class="comment-info"><span class="comment-age">(10 Feb '14, 06:03)</span> sseeker</div></div><span id="29637"></span><div id="comment-29637" class="comment"><div id="post-29637-score" class="comment-score"></div><div class="comment-text"><p>would it be possible to post a sample capture file (at google drive, dropbox, cloudshark.org), plus the WPA2 passphrase?</p></div><div id="comment-29637-info" class="comment-info"><span class="comment-age">(10 Feb '14, 07:56)</span> Kurt Knochner ♦</div></div><span id="29681"></span><div id="comment-29681" class="comment"><div id="post-29681-score" class="comment-score"></div><div class="comment-text"><p>Sure Kurt I have the file available however do you have an email I can send the share link to? Would prefer not to post it publicly.</p><p>Thanks, Andrew</p></div><div id="comment-29681-info" class="comment-info"><span class="comment-age">(11 Feb '14, 03:23)</span> sseeker</div></div><span id="29683"></span><div id="comment-29683" class="comment"><div id="post-29683-score" class="comment-score"></div><div class="comment-text"><p>see my profile (click on my name).</p></div><div id="comment-29683-info" class="comment-info"><span class="comment-age">(11 Feb '14, 03:45)</span> Kurt Knochner ♦</div></div><span id="29687"></span><div id="comment-29687" class="comment"><div id="post-29687-score" class="comment-score"></div><div class="comment-text"><p>Hi Kurt,</p><p>I've sent the output file, passphrase and SSID to your email.</p><p>Thanks, Andrew</p></div><div id="comment-29687-info" class="comment-info"><span class="comment-age">(11 Feb '14, 04:52)</span> sseeker</div></div><span id="29706"></span><div id="comment-29706" class="comment not_top_scorer"><div id="post-29706-score" class="comment-score"></div><div class="comment-text"><p>It works out of the box on my system with Wireshark 1.10.5 and 1.11.2 (Windows XP SP3 32bit). If I filter for 'http' <strong>without</strong> the WPA-PWD, there are no frames. If I enter the WPA-PWD, there are a lot of decrypted frames containing http (and other protocols as well).</p><p>It also works on Ubuntu 12.04 with Wireshark 1.10.0.</p><p>So, if it does not work on Lubuntu, there is probably something missing in your Wireshark version. Please post the output of <code>wireshark -v</code>. Maybe your version is built without the required crypto libraries !?!</p><p>Are you sure you entered the passphrase in the right way? I just added the password (without the SSID) like this.</p><blockquote><p>Edit -&gt; Preferences -&gt; Protocols -&gt; IEEE 802.11 -&gt; Decryption Keys -&gt; New -&gt; wpa-pwd</p></blockquote><p>I left the IEEE 802.11 options at the default values.</p><p>BTW: You did enable/check the option 'Enable decryption', right?</p></div><div id="comment-29706-info" class="comment-info"><span class="comment-age">(11 Feb '14, 07:32)</span> Kurt Knochner ♦</div></div><span id="38933"></span><div id="comment-38933" class="comment not_top_scorer"><div id="post-38933-score" class="comment-score"></div><div class="comment-text"><p>For anyone else reading this, make sure you disable and then enable wireless on a client you want to see the traffic from while the capture is running as if you don't capture the initial handshake between the client and the AP you cannot decrypt the traffic even with the psk.</p></div><div id="comment-38933-info" class="comment-info"><span class="comment-age">(07 Jan '15, 19:28)</span> hourglasssand</div></div></div><div id="comment-tools-29621" class="comment-tools"><span class="comments-showing"> showing 5 of 7 </span> <a href="#" class="show-all-comments-link">show 2 more comments</a></div><div class="clear"></div><div id="comment-29621-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="35821"></span>
+
+<div id="answer-container-35821" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-35821-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>This tutorial works for me : <a href="http://www.lovemytool.com/blog/2010/05/wireshark-and-tshark-decrypt-sample-capture-file-by-joke-snelders.html">http://www.lovemytool.com/blog/2010/05/wireshark-and-tshark-decrypt-sample-capture-file-by-joke-snelders.html</a></p><p>But I can't use "wpa-pwd". I have to connect to the web site <a href="http://www.wireshark.org/tools/,">http://www.wireshark.org/tools/,</a> recover the WPA PSK from (1)Password and (2)ESSID. Then in wireshark, just enter this WPA PSK in "wpa-psk" and as soon as u clicked on Ok, all is decrypted ;)</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>27 Aug '14, 14:55</strong></p><img src="https://secure.gravatar.com/avatar/f29686d1bef003de07f5bd30bf39d7d0?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="hgzevf&#39;s gravatar image" /><p>hgzevf<br />
+<span class="score" title="16 reputation points">16</span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="hgzevf has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 27 Aug '14, 14:57</p></div></div><div id="comments-container-35821" class="comments-container"><span id="36633"></span><div id="comment-36633" class="comment"><div id="post-36633-score" class="comment-score"></div><div class="comment-text"><p>Thanks !!! You saved my life.</p></div><div id="comment-36633-info" class="comment-info"><span class="comment-age">(26 Sep '14, 04:24)</span> mojito</div></div></div><div id="comment-tools-35821" class="comment-tools"></div><div class="clear"></div><div id="comment-35821-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="29612"></span>
+
+<div id="answer-container-29612" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-29612-score" class="post-score" title="current number of votes">-1</div></div></td><td><div class="item-right"><div class="answer-body"><p>If you are using the Windows version of Wireshark and you have an AirPcap adapter you can add decryption keys using the wireless toolbar. Visit the <a href="http://wiki.wireshark.org/HowToDecrypt802.11">LINK</a> it must Work.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>10 Feb '14, 03:46</strong></p><img src="https://secure.gravatar.com/avatar/7a7c81f94a4020ece8ee84d0f66c3367?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="adamali&#39;s gravatar image" /><p>adamali<br />
+<span class="score" title="25 reputation points">25</span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="adamali has no accepted answers">0%</span></p></div></div><div id="comments-container-29612" class="comments-container"><span id="29615"></span><div id="comment-29615" class="comment"><div id="post-29615-score" class="comment-score"></div><div class="comment-text"><p>As per your other answer please not that the OP is using Lubuntu so anything about the windows version and AirPCap is irrelevant.</p></div><div id="comment-29615-info" class="comment-info"><span class="comment-age">(10 Feb '14, 04:01)</span> grahamb ♦</div></div><span id="29620"></span><div id="comment-29620" class="comment"><div id="post-29620-score" class="comment-score"></div><div class="comment-text"><p>Hi Adamali,</p><p>"I'm currently running Wireshark 1.10.2 on Lubuntu" - Not on Windows. Thanks for your response anyway :)</p><p>-Andrew</p></div><div id="comment-29620-info" class="comment-info"><span class="comment-age">(10 Feb '14, 04:35)</span> sseeker</div></div></div><div id="comment-tools-29612" class="comment-tools"></div><div class="clear"></div><div id="comment-29612-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

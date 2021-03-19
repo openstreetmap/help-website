@@ -1,0 +1,87 @@
++++
+type = "question"
+title = "Need advice on using Wireshark + aircrack-ng"
+description = '''Hi! I am making acquiantance with wireless security and attacks and was told to run some tests with aircrack-ng and wireshark. So I installed both of them and ran airmon to switch wi-fi adapter to monitor mode: sudo airmon-ng start ra0 (this is my dwa-140 usb wi-fi) The wi-fi adapter seems to have r...'''
+date = "2012-10-07T11:14:00Z"
+lastmod = "2012-10-08T12:46:00Z"
+weight = 14758
+keywords = [ "sniffing", "wireshark" ]
+aliases = [ "/questions/14758" ]
+osqa_answers = 2
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Need advice on using Wireshark + aircrack-ng](/questions/14758/need-advice-on-using-wireshark-aircrack-ng)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-14758-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi! I am making acquiantance with wireless security and attacks and was told to run some tests with aircrack-ng and wireshark.</p><p>So I installed both of them and ran airmon to switch wi-fi adapter to monitor mode: sudo airmon-ng start ra0 (this is my dwa-140 usb wi-fi)</p><p>The wi-fi adapter seems to have restarted after that. Guess that's ok.</p><p>After that I ran wireshark as a superuser, chose the ra0 adapter and tried to sniff the test open network. I have my PC connected to it (via dwa-140) and an HTC phone as well as some other stranger PCs. Wireshark runs on my PC.</p><p>The problem is that when I login to %<a href="http://site.com">site.com</a>% with a PC browser, I can see the cookies sent to it over http in Wireshark. But when I do the same thing with an Opera browser on my HTC, there is nothing detected. I know that other PCs are also sending data to the site, but I can't see anything from them as well.</p><p>I'd like to know what I'm doing wrong. Will be thankful for any advice.</p><p>P.S. This runs on Ubuntu 12.04.1</p><p>UPD: here is the output I get when startin ra0</p><pre><code>[email protected]:~$ sudo airmon-ng start ra0
+[sudo] password for svz:
+
+Found 5 processes that could cause trouble.
+If airodump-ng, aireplay-ng or airtun-ng stops working after
+a short period of time, you may want to kill (some of) them!
+
+PID Name
+887 avahi-daemon
+889 avahi-daemon
+1621    wpa_supplicant
+19718   NetworkManager
+20488   dhclient
+Process with PID 20488 (dhclient) is running on interface ra0
+
+Interface   Chipset     Driver
+
+ra0     Ralink 2560 PCI rt2500 (monitor mode enabled)</code></pre></div><div id="question-tags" class="tags-container tags">sniffing wireshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>07 Oct '12, 11:14</strong></p><img src="https://secure.gravatar.com/avatar/67f0c44837a0f107b54f0a960943304c?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="svz&#39;s gravatar image" /><p>svz<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="svz has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 08 Oct '12, 10:25</p></div></div><div id="comments-container-14758" class="comments-container"><span id="14765"></span><div id="comment-14765" class="comment"><div id="post-14765-score" class="comment-score"></div><div class="comment-text"><p>What does the <code>sudo airmon-ng start ra0</code> command print when you run it? (Show <em>all</em> the output.)</p></div><div id="comment-14765-info" class="comment-info"><span class="comment-age">(07 Oct '12, 16:42)</span> Guy Harris ♦♦</div></div><span id="14766"></span><div id="comment-14766" class="comment"><div id="post-14766-score" class="comment-score"></div><div class="comment-text"><p>Sorry, don't have my PC nearby now. Will update the post in like 10 hours with full info. Actually <code>airmon</code> says that there is a number of processes that might iterfere with it like <code>network manager, dhclient</code> and a few more. I tried to stop them, but they seem to restart all the time. Actually, I do get some packets from other PCs, but not the ones I need. And I know that there should be some.</p></div><div id="comment-14766-info" class="comment-info"><span class="comment-age">(08 Oct '12, 00:12)</span> svz</div></div><span id="14778"></span><div id="comment-14778" class="comment"><div id="post-14778-score" class="comment-score"></div><div class="comment-text"><p>Updated the post with <code>airmon-ng</code> output</p></div><div id="comment-14778-info" class="comment-info"><span class="comment-age">(08 Oct '12, 10:25)</span> svz</div></div></div><div id="comment-tools-14758" class="comment-tools"></div><div class="clear"></div><div id="comment-14758-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="14781"></span>
+
+<div id="answer-container-14781" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-14781-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>After that I ran wireshark as a superuser, chose the ra0 adapter and tried to sniff the test open network.</p></blockquote><p>You should capture on mon0 instead of ra0! 'airmon-ng start ra0' will create that "monitoring" interface (mon0), if your ra0 adapter supports that!</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>08 Oct '12, 11:37</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div></div><div id="comments-container-14781" class="comments-container"><span id="14783"></span><div id="comment-14783" class="comment"><div id="post-14783-score" class="comment-score"></div><div class="comment-text"><p>Umm.. I don't see a mon0 iterface here. How can I figure out if my ra0 is capable of doing such a thing? Airmon states that monitor mode was enabled. Does this make any sense if there is no mon0?</p></div><div id="comment-14783-info" class="comment-info"><span class="comment-age">(08 Oct '12, 11:49)</span> svz</div></div><span id="14785"></span><div id="comment-14785" class="comment"><div id="post-14785-score" class="comment-score"></div><div class="comment-text"><p>If airmon-ng had created a monitoring interface, rather than just putting <code>ra0</code> into monitor mode, I think it would have printed a message indicating that. For interfaces with mac80211 drivers, it'll create a monitoring interface (VIF), but for non-mac80211 drivers I'm not sure it can do that.</p><p>I'd expect a mac80211 driver to call the interface <code>wlan0</code>, not <code>ra0</code>.</p><p>In addition, I've found that, if a <code>mon0</code> interface is created, the "regular" interface isn't put into monitor mode, so the daemons listed don't "helpfully" turn monitor mode off, otherwise it does get turned off.</p></div><div id="comment-14785-info" class="comment-info"><span class="comment-age">(08 Oct '12, 11:53)</span> Guy Harris ♦♦</div></div></div><div id="comment-tools-14781" class="comment-tools"></div><div class="clear"></div><div id="comment-14781-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="14792"></span>
+
+<div id="answer-container-14792" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-14792-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>At least according to <a href="https://help.ubuntu.com/community/WifiDocs/Device/DWA-140">the WifiDocs/Device/DWA-140 page in the Ubuntu Community Help Wiki</a>, the default driver for that adapter is the rt2800usb driver. The "Successful use" section of that page seems to suggest a mac80211 driver, as the output of the <code>iwconfig</code> command includes a <code>wlan0</code> device.</p><p><a href="http://wireless.kernel.org/en/users/Drivers/rt2800usb">The Linux Wireless page for the rt2800usb driver</a> says:</p><blockquote><p>After working with the IPW ieee80211 stack which was merged into the kernel, the rt2x00 team decided to move over to the newer Devicescape ieee80211 stack. This stack provided much better support for non-firmware wireless devices, and offered features the IPW stack never did. The last release with the IPW ieee80211 stack was rt2x00 Beta3, after that rt2x00 was redesigned to use the Devicescape 80211 stack, which has been renamed to mac80211.</p><p>The mac80211-stack was included in to the kernel 2.6.22 and on January 24th 2008, Linux Kernel 2.6.24 was released, and it was the first mainline kernel that included the rt2x00 driver.</p></blockquote><p>which further suggests it's using the mac80211 stack.</p><p><a href="https://help.ubuntu.com/community/WifiDocs/Driver/RalinkRT2500">The WifiDocs/Driver/RalinkRT2500 page in the Ubuntu Community Help Wiki</a> speaks of much older Ubuntu releases using a "rt2500" driver, which provides interfaces named ra<em>N</em>, e.g. <code>ra0</code>.</p><p><a href="http://ubuntuforums.org/showthread.php?t=1659919">This page on the Ubuntu forums</a> says</p><blockquote><p>I've found instructions for downloading and installing the RaLink driver <a href="http://ubuntuforums.org/showthread.php?t=1592731&amp;page=2">http://ubuntuforums.org/showthread.php?t=1592731&amp;page=2</a> and have done so. The modified driver module loads but 'iwconfig' lists the interface as 'ra0' instead of 'wlan0'. So named, network-manager and network-manager-applet ignore it.</p></blockquote><p>which suggests that you may be using that driver rather than the standard driver; following that link goes to a page that speaks of that driver as coming from Ralink. Perhaps Ralink's driver doesn't support mac80211.</p><p>As per my comment on another answer, NetworkManager, from some stuff I've done while debugging some issues caused by some Linux distributions not building recent versions of libpcap with libnl, so that they don't use the mac80211 mechanisms to go into monitor mode, so that instead of creating a <code>mon0</code> interface separate from the <code>wlan0</code> interface, they fall back on the old mechanism and put <code>wlan0</code> itself into monitor mode, NetworkManager "helpfully" responds to this "problem" by turning monitor mode back off on <code>wlan0</code>. If you're using the Ralink driver, and it doesn't support mac80211 (as, given the <code>ra0</code> name for the interface, I suspect it doesn't), then airmon-ng may be turning monitor mode on for <code>ra0</code> and NetworkManager may be "helpfully" turning it back off again.</p><p>(Dear 802.11 hardware vendors: mac80211 is your friend. If you must provide your own drivers for your adapters, embrace it.)</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>08 Oct '12, 12:46</strong></p><img src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Guy%20Harris&#39;s gravatar image" /><p>Guy Harris ♦♦<br />
+<span class="score" title="17443 reputation points"><span>17.4k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">●</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">●</span><span class="badgecount">196</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Guy Harris has 216 accepted answers">19%</span></p></div></div><div id="comments-container-14792" class="comments-container"><span id="14794"></span><div id="comment-14794" class="comment"><div id="post-14794-score" class="comment-score"></div><div class="comment-text"><p>Thank you for your response. I'll try to use the <code>rt2800</code> driver instead and disable the <code>Network Manager</code> and report back. As I just discovered this thing is Rev.B3 and uses an RT5392 chipset, so rt2800 driver won't do.</p></div><div id="comment-14794-info" class="comment-info"><span class="comment-age">(08 Oct '12, 13:24)</span> svz</div></div><span id="14796"></span><div id="comment-14796" class="comment"><div id="post-14796-score" class="comment-score"></div><div class="comment-text"><p>If whatever driver you use creates a <code>wlan0</code> interface, it may not be necessary to disable NetworkManager - it might mean it's a mac80211 driver, in which case it won't put <code>wlan0</code> into monitor mode, it'll create a monitor-mode <code>mon0</code> adapter.</p></div><div id="comment-14796-info" class="comment-info"><span class="comment-age">(08 Oct '12, 13:41)</span> Guy Harris ♦♦</div></div><span id="14798"></span><div id="comment-14798" class="comment"><div id="post-14798-score" class="comment-score"></div><div class="comment-text"><p>There is no wlan0 interface with my current driver. After stopping newtwork manager with <code>stop network-manager</code> my problem is that nothing happens after I start airmon-ng. It just outputs an empty line instead of <code>ra0     Ralink 2560 PCI rt2500 (monitor mode enabled)</code> and there is no network connection as well.</p></div><div id="comment-14798-info" class="comment-info"><span class="comment-age">(08 Oct '12, 14:01)</span> svz</div></div></div><div id="comment-tools-14792" class="comment-tools"></div><div class="clear"></div><div id="comment-14792-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

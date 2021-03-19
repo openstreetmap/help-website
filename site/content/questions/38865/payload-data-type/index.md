@@ -1,0 +1,223 @@
++++
+type = "question"
+title = "Payload data type"
+description = '''Hi sharks, what kind of data type are the payload data? is it possible to translate it into readable format? How can i do this? i tried to take the hex-data and convert it into text, than i got just: r¼ãZ•BZ¼w_edœMè5§Sƒ0rÀ4ŒR‘ò }mÊ8¥ä!õÓÒ:Ïà™^àì®ë”D†Õª[½nÎLáÇO¸öÎ,zuWõÕ‚ìÕ|Nž ðnJÕ?Ð²‹5‘EþrÎ...'''
+date = "2015-01-03T05:07:00Z"
+lastmod = "2015-01-04T02:19:00Z"
+weight = 38865
+keywords = [ "payload" ]
+aliases = [ "/questions/38865" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Payload data type](/questions/38865/payload-data-type)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-38865-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count">1</div></div></td><td><div id="item-right"><div class="question-body"><p>Hi sharks,</p><p>what kind of data type are the payload data? is it possible to translate it into readable format? How can i do this?</p><p>i tried to take the hex-data and convert it into text, than i got just:</p><pre><code>r¼ãZ•BZ¼w_edœMè5§Sƒ0rÀ4ŒR‘ò  }mÊ8¥ä!õÓÒ:Ïà™^àì®ë”D†Õª[½nÎLáÇO¸öÎ,zuWõÕ‚ìÕ|Nž   ðnJÕ?Ð²‹5‘EþrÎ±Á?þÎH&amp;fC‰¾Gùm˜²V”@ÈÚ9_†)w{¦Xhd±E(nù,Ó¸ž2ŽZHg˜°‚š˜†=~ô˜[Å£ºŽþÊc-Ú
+˜ÓB¿qhþ &gt;;?ýšé¶Eë8{õ2íE±Ë³*Ž%ÜÖó,4•~ÿjàE¾õöa¬‘tHÞ; X–\GVòòZÑï¦ƒ[email protected]}ŸžAëmýi‹e‰ißævøè`íW&amp;ø¸#ÇX$¾’ üÊµÈÜŸç]©šì#aêÓd“B‡®ÿ÷Ân†ŒÄø�îð[gÝÃ×Jf¡Í$¾Ön%±¸å‘&#39;qÎ”Ú®šîSû…&amp;[ë2.Ãs&lt;Ådo“±„¥2r ÕcWN#jÞ{ÒÚ–í%!.•\æÄ¥uxý4á£Ò—æí:&amp;þjIX#»ÍºÏ:©mI\F©¶W~Ò­ºi”Ä3M
+œ‡WÌ?Ä%_|Ÿ}|ª4?›‚÷‚A–LÞÓþ6FC&amp;&quot;Ô]Íbxe»s+åUdª
+ïtÝw!¾&lt;•š–ôèIQ¡TwIŸïþ‡Øi°ëøéÊ|¨@{t£ø¬÷hä0µ…ß™á‡FáI£õÔ=‰d&amp;&quot;.ÜÓGSÚÝýÌUäš½ý_2§Èq`Ã¡ýE:bwséµy`ÿ½…QeÅà&#39;&lt;ÓØ\ÑÎÚžUäÕÅR|xTàqÑœ&lt;ÅÌšL{I§!žíÊ›¸Lò£–uÑ  ˆ—3`ZB¥R Â’UÂ?!TG
+RéíüÎ ”áåŒóASú]mœî·*rñ,Åywê¯ª¿y‚ûoH&#39;,*Þ‡Ô™6¹«fã¬=¶1¼k�i.©‘bó³6LÒ2Ã[email protected]´ƒëgdÌHVÛ[email protected]øí§D—…ê=Fr¶!u·ÒÂF3³¥)÷¾Â¦ƒØ?ëV‡Ù:ËÏ ›¤‰SS NE-=¢u–¯yU¤�jš,.MØýïüÅ¬Ü×u¤Qè(b8èÐšÌw×
+@›qŒŠíŒÔ_ÞMä}NPJxQ&quot;FÕ¯Ò±:ôÌ­*±éIn(.g„yé†Ÿ.¬µ$DµüüùÞaVÉS%Î1ehn]Ì„¸QGÂ¸´`Œö9µI“náª¦iòº07¿@‹@4„GûÚžmQ–(Â&quot;ïPpÇ2on!Ÿ2.0R¶5ÓÇ&amp;£3ÝH°@óÚ`µxjãßéófçÓ‚ó£Fq¡éëUb‹0f×¦0)q—
+ºI‰‚í¶É¸ÎË·{=×êZ\z¼?%k®Bd^QÌôBc/ff‹R^o]æ)$èÁd®rê‹Gp+4ö¤ù!ôJ6O°ÎRä™€=¶ ªs/{¹êHíÂ£Ó%^?Qó46›Ã¹ðà—sB´/Ñ¼pkØžóÇeì ßw×tLfY:•íðí×&lt;;!O&#39;Ê]åKÞ*þ»p;ô)á’¿CpŒúÕq±  3&#39;KtO®Å9Q[email protected]¹›&#39;Kåä?à÷­vÝ’|6Õ-g”h)ÝÃq¾SŒÌ[email protected]#Sñ%lp› |ºO
+kC©nÇotË¶£JÓ‚[˜r’Ua)o†&quot;®Jã0’Ší&lt;t8ŒÛ5ãÀÜSºqŒ+„    (Å~YZ;yÜÊˆœ–ã&lt;Žv¬ää´ølVnË¡1z†½¼KRæC!LÄ¼é6Ý‘Àø§+ƒ÷z²M
+¬sÐç9fC]æ,e4Zª
+0&lt;zdp¶Š¦Õ,Ô¤y›Gb”äî ®µ;²Yì|˜</code></pre><p>How can i convert it into a readable format?</p><p>thanks in advance</p></div><div id="question-tags" class="tags-container tags">payload</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>03 Jan '15, 05:07</strong></p><img src="https://secure.gravatar.com/avatar/002636064b32493db6dd0db6f2bb76e2?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="sharky111&#39;s gravatar image" /><p>sharky111<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="sharky111 has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 03 Jan '15, 10:49</p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span></p></div></div><div id="comments-container-38865" class="comments-container"><span id="38867"></span><div id="comment-38867" class="comment"><div id="post-38867-score" class="comment-score"></div><div class="comment-text"><p>Where does that hex come from? Have you just copied the contents of a pcap file? If so that's a binary file and you'll need to use an application or library that can read a pcap file.</p></div><div id="comment-38867-info" class="comment-info"><span class="comment-age">(03 Jan '15, 10:48)</span> grahamb ♦</div></div><span id="38869"></span><div id="comment-38869" class="comment"><div id="post-38869-score" class="comment-score"></div><div class="comment-text"><p>This hex is just the payload data from a packet(output from wireshark under the tab data). Which program can translate it. Is it not possible to do it in wireshark?</p></div><div id="comment-38869-info" class="comment-info"><span class="comment-age">(04 Jan '15, 00:12)</span> sharky111</div></div><span id="38875"></span><div id="comment-38875" class="comment"><div id="post-38875-score" class="comment-score"></div><div class="comment-text"><p>what is the protocol?</p></div><div id="comment-38875-info" class="comment-info"><span class="comment-age">(04 Jan '15, 03:00)</span> Kurt Knochner ♦</div></div></div><div id="comment-tools-38865" class="comment-tools"></div><div class="clear"></div><div id="comment-38865-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="38872"></span>
+
+<div id="answer-container-38872" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-38872-score" class="post-score" title="current number of votes">2</div></div></td><td><div class="item-right"><div class="answer-body"><p>The "data" dissector in Wireshark is a fallback that just displays the hex values when no other dissector can be found that will dissect the data correctly.</p><p>There are a few reasons why the "data" isn't being dissected:</p><ol><li>The data is from a protocol that Wireshark doesn't currently support. Someone will need to write a dissector for it.</li><li>The data is from a protocol that is supported by Wireshark, but it's on a non-standard port or transport that isn't supported or configured by your copy of Wireshark. If you know what the data is meant to be, then you might try using "Decode As ..." to dissect the data.</li><li>Thee data is from a protocol that is supported by Wireshark, but the heuristic detection of it fails for some reason. Again "Decode As ..." might help.</li><li>Some other reason.</li></ol><p>Do you know what the data is meant to represent? Can you show the packet tree for one of the frames with the hex data, rather than the hex data itself (Hint use File -&gt; Export Packet Dissections -&gt; As Plain Text, set the Packet Range to the Selected Packet and set the Packet Details droplist to "All Expanded") ?</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>04 Jan '15, 02:19</strong></p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="grahamb has 274 accepted answers">22%</span></p></div></div><div id="comments-container-38872" class="comments-container"><span id="38878"></span><div id="comment-38878" class="comment"><div id="post-38878-score" class="comment-score"></div><div class="comment-text"><p>i tried all "decode as" types but none of that solved my problem: its a packet from a android apk which always gives me an error. so, i tried to understand what data is beeing send to the server xxxxxxx. its a tcp packet.</p><p>this is the total output of the packet:</p><pre><code>No.     Time           Source                Destination           Protocol Length Info
+26 14.915039000   xxxxxxxxx        192.168.153.101       TCP      1514   9339 &gt; 33875 [ACK] Seq=5311 Ack=237 Win=122 Len=1448 TSval=2044139457 TSecr=1003022
+
+Frame 26: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits) on interface 0
+    Interface id: 0
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan  3, 2015 00:09:06.224505000 Mitteleuropäische Zeit
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1420240146.224505000 seconds
+    [Time delta from previous captured frame: 0.000066000 seconds]
+    [Time delta from previous displayed frame: 0.000066000 seconds]
+    [Time since reference or first frame: 14.915039000 seconds]
+    Frame Number: 26
+    Frame Length: 1514 bytes (12112 bits)
+    Capture Length: 1514 bytes (12112 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp:data]
+    [Coloring Rule Name: TCP]
+    [Coloring Rule String: tcp]
+Ethernet II, Src: 52:16:d8:a9:80:47 (52:16:d8:a9:80:47), Dst: 34:be:00:24:64:14 (34:be:00:24:64:14)
+    Destination: 34:be:00:24:64:14 (34:be:00:24:64:14)
+        Address: 34:be:00:24:64:14 (34:be:00:24:64:14)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 52:16:d8:a9:80:47 (52:16:d8:a9:80:47)
+        Address: 52:16:d8:a9:80:47 (52:16:d8:a9:80:47)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IP (0x0800)
+Internet Protocol Version 4, Src: xxxxxxxx (xxxxxxxx), Dst: 192.168.153.101 (192.168.153.101)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00: Not-ECT (Not ECN-Capable Transport))
+    Total Length: 1500
+    Identification: 0xfd00 (64768)
+    Flags: 0x02 (Don&#39;t Fragment)
+    Fragment offset: 0
+    Time to live: 34
+    Protocol: TCP (6)
+    Header checksum: 0x4920 [correct]
+    Source: xxxxxx (xxxxxxxxx)
+    Destination: 192.168.153.101 (192.168.153.101)
+    [Source GeoIP: Unknown]
+    [Destination GeoIP: Unknown]
+Transmission Control Protocol, Src Port: 9339 (9339), Dst Port: 33875 (33875), Seq: 5311, Ack: 237, Len: 1448
+    Source port: 9339 (9339)
+    Destination port: 33875 (33875)
+    [Stream index: 0]
+    Sequence number: 5311    (relative sequence number)
+    [Next sequence number: 6759    (relative sequence number)]
+    Acknowledgment number: 237    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x010 (ACK)
+    Window size value: 122
+    [Calculated window size: 122]
+    [Window size scaling factor: -1 (unknown)]
+    Checksum: 0xf24f [validation disabled]
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+    [SEQ/ACK analysis]
+Data (1448 bytes)
+
+0000  72 bc e3 08 5a 95 42 5a bc 77 5f 65 64 9c 4d e8   r...Z.BZ.w_ed.M.
+0010  35 a7 53 83 0b 30 72 c0 34 8c 52 91 f2 7f 09 7d   5.S..0r.4.R....}
+0020  6d ca 38 08 a5 e4 21 f5 d3 d2 3a cf e0 99 13 03   m.8...!...:.....
+0030  5e e0 ec ae eb 94 44 04 86 d5 aa 5b bd 07 6e ce   ^.....D....[..n.
+0040  4c e1 c7 07 4f b8 06 f6 ce 2c 7a 75 57 f5 d5 82   L...O....,zuW...
+0050  ec d5 7c 4e 9e 09 f0 6e 4a d5 3f d0 b2 8b 35 91   ..|N...nJ.?...5.
+0060  19 45 fe 72 ce b1 c1 3f fe ce 48 26 66 43 89 be   .E.r...?..H&amp;fC..
+0070  47 16 f9 6d 98 b2 56 94 40 c8 06 da 39 5f 01 1b   [email protected]_..
+0080  86 18 29 77 04 7b a6 58 19 03 68 64 b1 45 8f 28   ..)w.{.X..hd.E.(
+0090  6e 90 7f f9 2c 17 d3 b8 9e 32 15 8e 5a 48 67 98   n...,....2..ZHg.
+00a0  b0 82 9a 98 86 3d 7e f4 98 9d 5b c5 a3 8f 10 ba   .....=~...[.....
+00b0  8e fe ca 63 2d da 0d 11 98 05 d3 42 bf 71 68 fe   ...c-......B.qh.
+00c0  a0 3e 02 19 9d 3b 1b 3f fd 9a e9 11 b6 45 eb 38   .&gt;...;.?.....E.8
+00d0  7b f5 32 ed 45 b1 17 cb 0b b3 2a 8e 25 dc d6 f3   {.2.E.....*.%...
+00e0  2c 34 95 7e ff 6a e0 45 be f5 f6 61 ac 91 74 07   ,4.~.j.E...a..t.
+00f0  48 de 3b 20 58 96 02 5c 47 01 56 f2 f2 04 5a d1   H.; X..\G.V...Z.
+0100  ef a6 10 83 7a 40 7d 9f 9e 41 eb 6d fd 81 69 8b   [email protected]}..A.m..i.
+0110  65 89 69 df e6 76 f8 e8 60 01 ed 57 26 f8 03 b8   e.i..v..`..W&amp;...
+0120  23 c7 58 24 be 92 a0 0c fc 1d ca 1c b5 c8 dc 8f   #.X$............
+0130  0c 9f 1a e7 5d a9 08 9a ec 23 61 ea d3 64 93 42   ....]....#a..d.B
+0140  87 ae ff f7 c2 6e 86 8c c4 f8 00 ee f0 5b 18 67   .....n.......[.g
+0150  dd c3 d7 4a 66 a1 cd 24 be d6 6e 25 b1 b8 e5 18   ...Jf..$..n%....
+0160  91 27 71 ce 94 da ae 9a ee 53 fb 7f 85 26 11 5b   .&#39;q......S...&amp;.[
+0170  eb 32 2e 17 c3 73 3c c5 64 6f 93 b1 84 a5 13 32   .2...s&lt;.do.....2
+0180  72 a0 d5 63 57 4e 16 23 6a de 7b d2 da 96 ed 25   r..cWN.#j.{....%
+0190  21 2e 14 95 08 5c e6 c4 a5 12 75 78 fd 34 e1 a3   !....\....ux.4..
+01a0  d2 97 e6 0b ed 3a 26 fe 6a 49 58 23 bb cd ba cf   .....:&amp;.jIX#....
+01b0  0e 3a a9 6d 49 5c 46 a9 b6 57 7e d2 ad 1a ba 69   .:.mI\F..W~....i
+01c0  94 c4 33 4d 0d 9c 87 57 cc 3f c4 25 5f 7c 9f 7d   ..3M...W.?.%_|.}
+01d0  7c aa 34 3f 9b 1a 82 1b f7 82 41 96 4c de d3 14   |.4?......A.L...
+01e0  fe 36 46 43 26 22 d4 5d cd 62 78 65 bb 73 2b e5   .6FC&amp;&quot;.].bxe.s+.
+01f0  12 55 64 1d aa 0a ef 74 dd 77 21 be 3c 95 06 9a   .Ud....t.w!.&lt;...
+0200  12 96 1b f4 e8 49 51 0f a1 54 77 49 9f ef fe 87   .....IQ..TwI....
+0210  d8 0b 69 b0 8d eb f8 e9 ca 7c a8 40 14 7b 74 a3   ..i......|[email protected]{t.
+0220  f8 ac f7 68 e4 81 7f 30 1d b5 85 9d 0b df 99 e1   ...h...0........
+0230  87 07 46 e1 49 a3 f5 d4 3d 89 64 26 22 2e dc d3   ..F.I...=.d&amp;&quot;...
+0240  90 47 53 da 01 dd fd cc 55 e4 9a bd fd 5f 32 a7   .GS.....U...._2.
+0250  c8 71 60 1f c3 a1 fd 45 3a 62 0f 77 73 e9 b5 0c   .q`....E:b.ws...
+0260  79 1d 60 ff bd 85 51 65 c5 e0 27 3c d3 d8 5c d1   y.`...Qe..&#39;&lt;..\.
+0270  17 ce da 9e 55 e4 d5 c5 52 7c 78 54 e0 71 d1 9c   ....U...R|xT.q..
+0280  3c c5 cc 9a 4c 08 08 7b 0e 49 a7 21 9e ed ca 9b   &lt;...L..{.I.!....
+0290  7f b8 4c f2 a3 96 75 d1 09 88 97 33 8d 60 5a 42   ..L...u....3.`ZB
+02a0  a5 52 a0 c2 1e 92 55 c2 3f 19 21 9d 54 11 47 0d   .R....U.?.!.T.G.
+02b0  52 e9 ed 1d fc 0f ce a0 94 e1 e5 81 8c f3 41 53   R.............AS
+02c0  fa 5d 6d 9c ee b7 2a 72 f1 2c c5 79 77 ea af aa   .]m...*r.,.yw...
+02d0  bf 79 82 fb 6f 48 27 2c 2a de 87 d4 99 36 b9 ab   .y..oH&#39;,*....6..
+02e0  8d 66 e3 ac 3d b6 31 bc 6b 00 69 2e a9 91 62 f3   .f..=.1.k.i...b.
+02f0  b3 36 4c d2 32 c3 59 40 b4 83 eb 67 64 1f 81 0b   [email protected]
+0300  cc 48 56 db 78 40 39 f8 ed a7 44 97 85 ea 1c 3d   [email protected]=
+0310  46 72 b6 21 75 b7 d2 c2 46 33 b3 a5 29 f7 be 19   Fr.!u...F3..)...
+0320  c2 a6 83 d8 3f eb 0b 56 87 d9 3a cb 81 cf 20 1f   ....?..V..:... .
+0330  9b a4 89 53 53 a0 4e 0b 45 2d 3d a2 75 96 af 79   ...SS.N.E-=.u..y
+0340  90 55 a4 00 6a 9a 2c 2e 4d 12 d8 fd ef fc c5 ac   .U..j.,.M.......
+0350  dc d7 75 a4 51 e8 8d 28 62 38 e8 d0 9a cc 77 d7   ..u.Q..(b8....w.
+0360  8f 0d 40 9b 71 8c 8a 16 ed 8c d4 5f de 4d e4 7d   [email protected]_.M.}
+0370  4e 50 4a 78 03 51 22 46 d5 af d2 b1 3a f4 1d 19   NPJx.Q&quot;F....:...
+0380  cc ad 2a 06 b1 e9 49 6e 28 2e 67 84 79 e9 86 9f   ..*...In(.g.y...
+0390  2e ac b5 24 44 b5 fc fc f9 de 61 56 c9 53 14 25   ...$D.....aV.S.%
+03a0  19 01 ce 31 65 68 6e 5d cc 84 b8 51 14 8d 47 19   ...1ehn]...Q..G.
+03b0  c2 b8 b4 60 1b 8c f6 7f 1f 39 b5 49 93 6e e1 aa   ...`.....9.I.n..
+03c0  8f a6 69 f2 ba 30 02 37 bf 40 8b 16 40 13 34 02   [email protected]@.4.
+03d0  84 47 05 10 fb da 9e 6d 51 96 18 28 c2 22 ef 50   .G.....mQ..(.&quot;.P
+03e0  70 c7 32 6f 6e 21 9f 1b 32 2e 08 30 52 b6 35 d3   p.2on!..2..0R.5.
+03f0  c7 26 a3 33 dd 48 1a b0 40 1c f3 da 60 b5 90 0f   .&amp;[email protected]`...
+0400  78 6a e3 df e9 f3 66 e7 d3 1f 82 f3 a3 46 71 a1   xj....f......Fq.
+0410  e9 eb 55 62 8b 30 66 d7 0c a6 05 30 29 08 71 90   ..Ub.0f....0).q.
+0420  97 0d ba 49 89 82 ed b6 c9 b8 ce cb b7 7b 3d d7   ...I.........{=.
+0430  9d ea 5a 03 5c 7a bc 3f 25 6b 03 ae 42 16 64 0f   ..Z.\z.?%k..B.d.
+0440  5e 51 cc f4 42 63 2f 66 66 8b 19 52 5e 6f 5d e6   ^Q..Bc/ff..R^o].
+0450  29 24 e8 c1 64 ae 72 ea 8b 47 70 2b 34 f6 a4 f9   )$..d.r..Gp+4...
+0460  0b 21 f4 4a 36 4f b0 ce 52 e4 99 80 3d b6 20 aa   .!.J6O..R...=. .
+0470  73 2f 7b b9 ea 48 ed c2 a3 d3 25 5e 3f 51 f3 34   s/{..H....%^?Q.4
+0480  36 1a 9b c3 b9 f0 e0 05 97 73 42 b4 2f d1 bc 70   6........sB./..p
+0490  6b 1b d8 9e f3 c7 65 ec 20 df 77 d7 74 4c 66 02   k.....e. .w.tLf.
+04a0  59 3a 95 ed f0 ed d7 3c 0f 3b 1a 21 4f 27 ca 5d   Y:.....&lt;.;.!O&#39;.]
+04b0  16 e5 4b de 03 2a fe bb 70 3b f4 29 0b e1 92 bf   ..K..*..p;.)....
+04c0  43 70 8c 1c fa d5 71 b1 09 33 27 4b 74 4f ae c5   Cp....q..3&#39;KtO..
+04d0  39 51 7f 36 03 40 1a b9 9b 27 4b e5 e4 3f e0 f7   [email protected]&#39;K..?..
+04e0  ad 76 dd 92 10 7c 36 d5 2d 0e 67 94 68 29 dd c3   .v...|6.-.g.h)..
+04f0  71 be 53 06 8c 02 cc 1f 66 40 23 53 f1 25 6c 0c   [email protected]#S.%l.
+0500  70 9b 09 7c ba 4f 0a 6b 43 8d a9 90 6e 07 01 c7   p..|.O.kC...n...
+0510  6f 74 cb b6 a3 4a d3 82 5b 98 72 92 55 61 11 29   ot...J..[.r.Ua.)
+0520  6f 04 86 22 ae 17 4a 1a e3 30 92 8a ed 0e 3c 74   o..&quot;..J..0....&lt;t
+0530  38 8c db 35 e3 c0 dc 53 ba 71 04 0c 8c 2b 84 09   8..5...S.q...+..
+0540  28 c5 7e 59 5a 3b 79 dc ca 88 9c 96 e3 3c 9d 8e   (.~YZ;y......&lt;..
+0550  76 ac e4 e4 b4 f8 1a 6c 56 6e cb a1 31 7a 86 bd   v......lVn..1z..
+0560  bc 4b 52 e6 43 21 4c c4 bc e9 36 dd 91 c0 f8 a7   .KR.C!L...6.....
+0570  2b 08 83 f7 7a b2 4d 0d ac 73 d0 e7 39 66 43 5d   +...z.M..s..9fC]
+0580  e6 2c 65 34 5a aa 0a 30 3c 7a 64 70 b6 8a 8f a6   .,e4Z..0&lt;zdp....
+0590  d5 2c 0b d4 a4 79 9b 47 04 62 94 0f e4 ee 09 ae   .,...y.G.b......
+05a0  b5 3b 15 b2 59 ec 7c 98                           .;..Y.|.
+    Data: 72bce3085a95425abc775f65649c4de835a753830b3072c0...
+    [Length: 1448]</code></pre></div><div id="comment-38878-info" class="comment-info"><span class="comment-age">(04 Jan '15, 09:21)</span> sharky111</div></div><span id="38879"></span><div id="comment-38879" class="comment"><div id="post-38879-score" class="comment-score"></div><div class="comment-text"><p>According to google, TCP port 9339 is used by the game Clash of Clans. If that's the Android app you're trying to decode, Wireshark has no dissector for that game's protocol (assuming it's a proprietary protocol).</p></div><div id="comment-38879-info" class="comment-info"><span class="comment-age">(04 Jan '15, 09:51)</span> Hadriel</div></div></div><div id="comment-tools-38872" class="comment-tools"></div><div class="clear"></div><div id="comment-38872-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

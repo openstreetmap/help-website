@@ -1,0 +1,82 @@
++++
+type = "question"
+title = "Saving TCP Stream data asks for multiple output files"
+description = '''I am trying to save TCP Stream data (from the Follow TCP Stream window). When I have done so in the past, it asks for a single output file and saves the data there. I am trying to do so currently and when I enter a file name, it saves out data (it appears to be all of it) and then asks for another f...'''
+date = "2013-09-19T09:32:00Z"
+lastmod = "2013-09-20T07:55:00Z"
+weight = 24959
+keywords = [ "saveas", "follow.tcp.stream", "partial" ]
+aliases = [ "/questions/24959" ]
+osqa_answers = 0
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [Saving TCP Stream data asks for multiple output files](/questions/24959/saving-tcp-stream-data-asks-for-multiple-output-files)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-24959-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I am trying to save TCP Stream data (from the Follow TCP Stream window). When I have done so in the past, it asks for a single output file and saves the data there. I am trying to do so currently and when I enter a file name, it saves out data (it appears to be all of it) and then asks for another file name. I tried entering this other file name, and it saves another file and then asks again for a file name. I cancelled out at that point. My questions is why is this happening and how do I fix it if it's an error?</p><p>Note: the TCP stream in question includes a partial file.</p><p>Edit: I just noticed that output files are consistently 33K, while the file I'm trying to save is much larger. Do I have to save out many files and stitch them together, or is there a way to save it out together?</p><p>Thanks.</p></div><div id="question-tags" class="tags-container tags">saveas follow.tcp.stream partial</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>19 Sep '13, 09:32</strong></p><img src="https://secure.gravatar.com/avatar/2660de2071eecafe574d5e60c0ef22c4?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="aring3&#39;s gravatar image" /><p>aring3<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">●</span><span class="badgecount">4</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="aring3 has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 19 Sep '13, 09:36</p></div></div><div id="comments-container-24959" class="comments-container"><span id="24965"></span><div id="comment-24965" class="comment"><div id="post-24965-score" class="comment-score"></div><div class="comment-text"><p>Which version of Wireshark are you using?</p><p>Can you describe in more detail exactly what you're doing, or confirm that you are doing the following:</p><ul><li>Right-click: Follow TCP Stream (containing a partial file)</li><li>From the "Follow TCP Stream" window, SaveAs: &lt;somefile&gt;</li><li>At this point you are asked for another filename?</li></ul></div><div id="comment-24965-info" class="comment-info"><span class="comment-age">(19 Sep '13, 11:40)</span> cmaynard ♦♦</div></div><span id="24972"></span><div id="comment-24972" class="comment"><div id="post-24972-score" class="comment-score"></div><div class="comment-text"><p>Yes, that is the order of steps I am taking.</p></div><div id="comment-24972-info" class="comment-info"><span class="comment-age">(19 Sep '13, 13:27)</span> aring3</div></div><span id="24981"></span><div id="comment-24981" class="comment"><div id="post-24981-score" class="comment-score"></div><div class="comment-text"><p>what is your OS and Wireshark version??</p></div><div id="comment-24981-info" class="comment-info"><span class="comment-age">(20 Sep '13, 00:48)</span> Kurt Knochner ♦</div></div><span id="25030"></span><div id="comment-25030" class="comment"><div id="post-25030-score" class="comment-score"></div><div class="comment-text"><p>Sorry for the delay... Windows 8, Wireshark: Version 1.10.2 (SVN Rev 51934 from /trunk-1.10)</p></div><div id="comment-25030-info" class="comment-info"><span class="comment-age">(20 Sep '13, 07:18)</span> aring3</div></div><span id="25032"></span><div id="comment-25032" class="comment"><div id="post-25032-score" class="comment-score"></div><div class="comment-text"><p>What is the output of <code>tshark -v</code>?</p></div><div id="comment-25032-info" class="comment-info"><span class="comment-age">(20 Sep '13, 07:28)</span> cmaynard ♦♦</div></div><span id="25033"></span><div id="comment-25033" class="comment not_top_scorer"><div id="post-25033-score" class="comment-score"></div><div class="comment-text"><blockquote><p>Windows 8 Wireshark:</p></blockquote><p>maybe related to that. 1.10.2 does not show that behavior on WinXP and Win7. Some further questions:</p><ul><li>What was the protocol in use</li><li>How did you save the file (raw, ascii, etc.)</li></ul></div><div id="comment-25033-info" class="comment-info"><span class="comment-age">(20 Sep '13, 07:33)</span> Kurt Knochner ♦</div></div><span id="25034"></span><div id="comment-25034" class="comment not_top_scorer"><div id="post-25034-score" class="comment-score"></div><div class="comment-text"><p>TShark 1.10.2 (SVN Rev 51934 from /trunk-1.10)</p><p>Copyright 1998-2013 Gerald Combs [email protected] and contributors. This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p><p>Compiled (64-bit) with GLib 2.34.1, with WinPcap (4_1_3), with libz 1.2.5, without POSIX capabilities, without libnl, with SMI 0.4.8, with c-ares 1.9.1, with Lua 5.1, without Python, with GnuTLS 2.12.18, with Gcrypt 1.4.6, without Kerberos, with GeoIP.</p><p>Running on 64-bit Windows 8, build 9200, without WinPcap. Intel(R) Core(TM) i7-3740QM CPU @ 2.70GHz, with 16280MB of physical memory.</p><p>Built using Microsoft Visual C++ 10.0 build 40219</p></div><div id="comment-25034-info" class="comment-info"><span class="comment-age">(20 Sep '13, 07:33)</span> aring3</div></div><span id="25037"></span><div id="comment-25037" class="comment not_top_scorer"><div id="post-25037-score" class="comment-score"></div><div class="comment-text"><p>Protocol: HTTP</p><p>Files Saved from 'Follow TCP Stream' window, set to Raw (only half of the conversation selected).</p></div><div id="comment-25037-info" class="comment-info"><span class="comment-age">(20 Sep '13, 07:36)</span> aring3</div></div><span id="25039"></span><div id="comment-25039" class="comment not_top_scorer"><div id="post-25039-score" class="comment-score"></div><div class="comment-text"><p>Like Kurt, I'm not running Windows 8 either, so if it's a Windows 8 64-bit specific problem, then it might be hard to determine the problem.</p><p>On the other hand, if it's data-related, then someone here might have a better chance at being able to help you. But that would require us having access to your capture file. Can you share the capture file on <a href="http://cloudshark.org/">cloudshark</a> (or somewhere else)?</p></div><div id="comment-25039-info" class="comment-info"><span class="comment-age">(20 Sep '13, 07:43)</span> cmaynard ♦♦</div></div><span id="25043"></span><div id="comment-25043" class="comment not_top_scorer"><div id="post-25043-score" class="comment-score"></div><div class="comment-text"><p>So apparently that was a key piece of information that should have been provided in the steps above. The default is to save the entire conversation, not half of it. In any case, I can't reproduce this on either Windows 7 64 with trunk-52156 or 1.10.2. So, it could be data, OS and/or 32/64 related.</p></div><div id="comment-25043-info" class="comment-info"><span class="comment-age">(20 Sep '13, 07:55)</span> cmaynard ♦♦</div></div><span id="25044"></span><div id="comment-25044" class="comment not_top_scorer"><div id="post-25044-score" class="comment-score"></div><div class="comment-text"><blockquote><p>I can't reproduce this on either Windows 7 64 with trunk-52156 or 1.10.2. So, it could be data, OS and/or 32/64 related.</p></blockquote><p>With the file posted in my answer, I can reproduce it on Win7 SP1 x64 and on WinXP SP3, both Wireshark 1.10.x</p></div><div id="comment-25044-info" class="comment-info"><span class="comment-age">(20 Sep '13, 08:00)</span> Kurt Knochner ♦</div></div></div><div id="comment-tools-24959" class="comment-tools"><span class="comments-showing"> showing 5 of 11 </span> <a href="#" class="show-all-comments-link">show 6 more comments</a></div><div class="clear"></div><div id="comment-24959-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="25042"></span>
+
+<div id="answer-container-25042" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-25042-score" class="post-score" title="current number of votes">2</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>Protocol: HTTP<br />
+Files Saved from 'Follow TCP Stream' window, set to Raw (only half of the conversation selected).</p></blockquote><p>Oops. I can confirm that behavior for HTTP and raw on WinXP, Wireshark 1.10.2. That behavior is <strong>not</strong> in 1.8.x and 1.9.x. Furthermore, "Follow TCP stream" does not show the whole bytes of the conversation. Looks like a bug to me. Please file a bug report at <a href="https://bugs.wireshark.org">https://bugs.wireshark.org</a> with detailed information and a reference to this question.</p><p>Tested with the following file: <a href="http://cloudshark.org/captures/a6a0b45e27b4">http://cloudshark.org/captures/a6a0b45e27b4</a></p><p>Output of Follow TCP Stream, although there is <strong>much</strong> more date in the conversation. The drop-down menu shows the amount of bytes.</p><p><img src="https://osqa-ask.wireshark.org/upfiles/screenshot_25042_1.png" alt="alt text" /></p><pre><code>GET /questions/24959/saving-tcp-stream-data-asks-for-multiple-output-files?page=1&amp;focusedAnswerId=25040 HTTP/1.1
+Host: ask.wireshark.org
+User-Agent: Mozilla/5.0 (Windows NT 5.1; rv:23.0) Gecko/20100101 Firefox/23.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://ask.wireshark.org/questions/24959/saving-tcp-stream-data-asks-for-multiple-output-files
+Cookie: csrftoken=590805e894346483607ff267f0f3060e; __utma=87653150.789311463.1341826171.1379663512.1379686799.123; __utmz=87653150.1379663512.122.84.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); __utma=46672567.1970875656.1349803632.1379674521.1379684705.1311; __utmz=46672567.1378213091.1245.47.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); sessionid=b983c963ccf227d4cdec86c982ac8ac3; __cfduid=de27e1d8844e9eaaa9784a06947ed363b1371810007; cf_retry=1373864693631; greeting_set=True; __utmc=87653150; __utmc=46672567; __utmb=46672567.57.10.1379684705; __utmb=87653150.9.10.1379686799
+Connection: keep-alive
+Cache-Control: max-age=0
+
+HTTP/1.1 200 OK
+Server: cloudflare-nginx
+Date: Fri, 20 Sep 2013 14:44:12 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Cookie,Accept-Encoding
+Set-Cookie: csrftoken=590805e894346483607ff267f0f3060e; expires=Fri, 19-Sep-2014 14:44:11 GMT; Max-Age=31449600; Path=/
+X-Frame-Options: SAMEORIGIN
+CF-RAY: b0f4ad1f4df01b0
+Content-Encoding: gzip</code></pre><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>20 Sep '13, 07:55</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></br></p></img></div><div class="post-update-info post-update-info-edited"><p>edited 20 Sep '13, 08:04</p></div></div><div id="comments-container-25042" class="comments-container"><span id="25045"></span><div id="comment-25045" class="comment"><div id="post-25045-score" class="comment-score"></div><div class="comment-text"><p>OK, I can confirm the problem on Windows 7 64 using that capture file. Thanks. (And sorry for moving your answer to a comment - you quoted OP and I mistakenly thought OP had incorrectly posted his comment as an answer).</p></div><div id="comment-25045-info" class="comment-info"><span class="comment-age">(20 Sep '13, 08:01)</span> cmaynard ♦♦</div></div><span id="25046"></span><div id="comment-25046" class="comment"><div id="post-25046-score" class="comment-score"></div><div class="comment-text"><blockquote><p>And sorry for moving your answer to a comment -</p></blockquote><p>never mind.</p></div><div id="comment-25046-info" class="comment-info"><span class="comment-age">(20 Sep '13, 08:05)</span> Kurt Knochner ♦</div></div><span id="25047"></span><div id="comment-25047" class="comment"><div id="post-25047-score" class="comment-score"></div><div class="comment-text"><p>Filed. Thanks. I'll grab an older version for now.</p><p>Edit: For the records. <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=9170">Bug 9170</a></p></div><div id="comment-25047-info" class="comment-info"><span class="comment-age">(20 Sep '13, 08:15)</span> aring3</div></div></div><div id="comment-tools-25042" class="comment-tools"></div><div class="clear"></div><div id="comment-25042-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

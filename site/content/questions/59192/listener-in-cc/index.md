@@ -1,0 +1,66 @@
++++
+type = "question"
+title = "Listener in C++/C"
+description = '''I have currently created a GUI for a module I am working on which is in the qt/ui project - Is there a way to listen to the packets which are being dissected and get the proto-tree for the ones I want? Would this be a job for a post-dissector or a listener? Any help would be appreciated! Thanks in a...'''
+date = "2017-01-31T11:45:00Z"
+lastmod = "2017-01-31T14:42:00Z"
+weight = 59192
+keywords = [ "development", "listener", "code", "postdissector" ]
+aliases = [ "/questions/59192" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Listener in C++/C](/questions/59192/listener-in-cc)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-59192-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I have currently created a GUI for a module I am working on which is in the qt/ui project - Is there a way to listen to the packets which are being dissected and get the proto-tree for the ones I want?</p><p>Would this be a job for a post-dissector or a listener?</p><p>Any help would be appreciated!</p><p>Thanks in advance!</p><p>ModuleMan</p></div><div id="question-tags" class="tags-container tags">development listener code postdissector</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>31 Jan '17, 11:45</strong></p><img src="https://secure.gravatar.com/avatar/3b7eb282c454b776eac0e960a3798043?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="ModuleMan&#39;s gravatar image" /><p>ModuleMan<br />
+<span class="score" title="21 reputation points">21</span><span title="7 badges"><span class="badge1">●</span><span class="badgecount">7</span></span><span title="7 badges"><span class="silver">●</span><span class="badgecount">7</span></span><span title="11 badges"><span class="bronze">●</span><span class="badgecount">11</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="ModuleMan has no accepted answers">0%</span></p></div></div><div id="comments-container-59192" class="comments-container"></div><div id="comment-tools-59192" class="comment-tools"></div><div class="clear"></div><div id="comment-59192-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="59195"></span>
+
+<div id="answer-container-59195" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-59195-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>Ah - this answers the question I just asked on your other post.</p><p>If you need access to all protocols in the stack, post-dissector is the right way to go. If you plan to insert your dissector at a particular point in the protocol stack (i.e. a standard dissector and not a post-dissector) then it will see all protocols before it in the dissector list, but not those that come after.</p><p>Wireshark scans a trace file twice and, by default, it only produces a protocol tree on the second scan. You post dissector can check for the second scan like this:</p><pre><code>static int dissect_foo(tvbuff_t *buffer, packet_info *pinfo, proto_tree *tree _U_)
+{
+  if (PINFO_FD_VISITED(pinfo)) /* returns true on the second scan */
+  {
+    /* Your code goes here */
+  }
+  return 0;
+}</code></pre><p>You can force the production of a protocol tree during the first scan by registering a fake tap. See the function init_globals(void) in packet-transum.c of the transum project. You'll find transum in the git master branch. A tap like this has a small performance impact.</p><p>You probably need to use the Wireshark Development mailing list for anything more detailed. Some very clever people hang out on this list.</p><p>Best regards...Paul</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>31 Jan '17, 14:42</strong></p><img src="https://secure.gravatar.com/avatar/2e1b4057f2ff59fe059b23cc6571abaf?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="PaulOfford&#39;s gravatar image" /><p>PaulOfford<br />
+<span class="score" title="131 reputation points">131</span><span title="28 badges"><span class="badge1">●</span><span class="badgecount">28</span></span><span title="32 badges"><span class="silver">●</span><span class="badgecount">32</span></span><span title="37 badges"><span class="bronze">●</span><span class="badgecount">37</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="PaulOfford has 5 accepted answers">11%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 31 Jan '17, 14:44</p></div></div><div id="comments-container-59195" class="comments-container"><span id="59196"></span><div id="comment-59196" class="comment"><div id="post-59196-score" class="comment-score"></div><div class="comment-text"><p>How would I include this code in my GUI - I dont have pinfo or any of the other parameters for the function you described so I am confused as to how I would go about going from my conversation item(conv_item_t), I mentioned in my other post's comment to creating this function.</p><p>Thanks you for your response!</p><p>PS. I have emailed on the development mailing list but no one has got back to me as of yet</p></div><div id="comment-59196-info" class="comment-info"><span class="comment-age">(31 Jan '17, 14:51)</span> ModuleMan</div></div><span id="59197"></span><div id="comment-59197" class="comment"><div id="post-59197-score" class="comment-score">1</div><div class="comment-text"><blockquote><p>Wireshark scans a trace file twice and, by default, it only produces a protocol tree on the second scan.</p></blockquote><p>More accurately, Wireshark will probably dissect at least some packets more than once and is not guaranteed to produce, or <em>not</em> to produce, a protocol tree on any of those dissections. Make as few assumptions as possible about 1) how many times packets are dissected or 2) whether the tree argument will be null in any of those dissections.</p><p>The only safe assumption is that, when the file is read, every packet will be dissected, in order, and <code>PINFO_FD_VISITED(pinfo)</code> will be false in that pass and true in all other dissections - at least until a "redissect" pass is made, at which point another pass is made over the file, dissecting each packet, in order, with <code>PINFO_FD_VISITED(pinfo)</code> being false and true in dissections after that (until the next "redissect" pass).</p><p>A "redissect" pass is performed if, for example, a protocol preference is changed, as that could affect the results of dissection of packets - and the results of the dissection of a packet for the protocol whose preference is changed could affect the results of the dissection of a packet that <em>doesn't</em> include that protocol, so no simple optimization is possible there.</p></div><div id="comment-59197-info" class="comment-info"><span class="comment-age">(31 Jan '17, 14:52)</span> Guy Harris ♦♦</div></div><span id="59198"></span><div id="comment-59198" class="comment"><div id="post-59198-score" class="comment-score"></div><div class="comment-text"><p>@Guy Harris: Would it be easier to integrate lua and run wslua scripts in my c++ and work from there? If so how would I do it? Of course that is if this method is not recommended.</p></div><div id="comment-59198-info" class="comment-info"><span class="comment-age">(31 Jan '17, 15:18)</span> ModuleMan</div></div><span id="59202"></span><div id="comment-59202" class="comment"><div id="post-59202-score" class="comment-score">1</div><div class="comment-text"><p>Guy, Thanks for the clarification. I hadn't realised the decision to generate a protocol tree is so complex. It may explain why I can't get TRANSUM to work with Tshark.</p><p>ModuleMan, I think we need to understand what you are trying to achieve. If I were to use your module (when it's finished), what would it give me?</p><p>Best regards...Paul</p></div><div id="comment-59202-info" class="comment-info"><span class="comment-age">(31 Jan '17, 23:18)</span> PaulOfford</div></div><span id="59203"></span><div id="comment-59203" class="comment"><div id="post-59203-score" class="comment-score"></div><div class="comment-text"><p>@PaulOfford: using -2 parameter should help you having TRANSUM working with TShark</p></div><div id="comment-59203-info" class="comment-info"><span class="comment-age">(01 Feb '17, 01:33)</span> Pascal Quantin</div></div><span id="59204"></span><div id="comment-59204" class="comment not_top_scorer"><div id="post-59204-score" class="comment-score"></div><div class="comment-text"><p>Hi Pascal, Yeh that's a nice idea but unfortunately it doesn't fix it - I always run tshark and transum with that parameter. I'll raise a Bugzilla report.</p></div><div id="comment-59204-info" class="comment-info"><span class="comment-age">(01 Feb '17, 01:39)</span> PaulOfford</div></div><span id="59206"></span><div id="comment-59206" class="comment not_top_scorer"><div id="post-59206-score" class="comment-score"></div><div class="comment-text"><p>@PaulOfford : I am basically making a web browser agnostic developers tools (similar to chrome an firefox). When a user opens my module from the analyse menu of Wireshark a dialog box will appear which will show all the active TCP connections (in a similar to the way the Conversations Dialog works) on that network interface.</p><p>From there they will be able to right click one of the conversations and click an analyse option which I have created. This will open another dialog box which will show all the packets within that conversation (through the use of a listener or post dissector) and will be able to see the proto-tree for each of those packets in a pop-out dialog / another GUI section.</p></div><div id="comment-59206-info" class="comment-info"><span class="comment-age">(01 Feb '17, 02:38)</span> ModuleMan</div></div><span id="59227"></span><div id="comment-59227" class="comment not_top_scorer"><div id="post-59227-score" class="comment-score"></div><div class="comment-text"><blockquote><p>a dialog box will appear which will show all the active TCP connections</p></blockquote><p>Where "active" presumably means either "have traffic in the capture" or "have traffic, but no final FIN, in the capture".</p></div><div id="comment-59227-info" class="comment-info"><span class="comment-age">(01 Feb '17, 09:51)</span> Guy Harris ♦♦</div></div><span id="59238"></span><div id="comment-59238" class="comment not_top_scorer"><div id="post-59238-score" class="comment-score"></div><div class="comment-text"><p>@ModuleMan: Unfortunately I don't have experience writing anything that directly manipulates the UI. The LUA API provides functions to generate sub windows - see <a href="https://wiki.wireshark.org/LuaAPI/GUI">https://wiki.wireshark.org/LuaAPI/GUI</a></p><p>It would be worth checking if there is an equivalent for C dissectors. Producing all your code as a dissector/plugin would be better as changing the ui/qt code sounds like it could lead to a lot of maintenance work.</p></div><div id="comment-59238-info" class="comment-info"><span class="comment-age">(01 Feb '17, 23:42)</span> PaulOfford</div></div></div><div id="comment-tools-59195" class="comment-tools"><span class="comments-showing"> showing 5 of 9 </span> <a href="#" class="show-all-comments-link">show 4 more comments</a></div><div class="clear"></div><div id="comment-59195-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

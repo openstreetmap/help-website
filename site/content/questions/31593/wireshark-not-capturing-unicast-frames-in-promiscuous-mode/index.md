@@ -1,0 +1,70 @@
++++
+type = "question"
+title = "Wireshark not capturing unicast frames in promiscuous mode"
+description = '''Hi, I have a test set up in which my test board is connected to a machine on which Wireshark is installed. I see that my unicast (and multicast) frames are not captured by the Wireshark. However, all my broadcast frames are captured properly by it. Please let me know whether there is any setting par...'''
+date = "2014-04-07T04:16:00Z"
+lastmod = "2014-04-08T22:11:00Z"
+weight = 31593
+keywords = [ "unicast" ]
+aliases = [ "/questions/31593" ]
+osqa_answers = 2
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Wireshark not capturing unicast frames in promiscuous mode](/questions/31593/wireshark-not-capturing-unicast-frames-in-promiscuous-mode)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-31593-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi,</p><p>I have a test set up in which my test board is connected to a machine on which Wireshark is installed. I see that my unicast (and multicast) frames are not captured by the Wireshark. However, all my broadcast frames are captured properly by it. Please let me know whether there is any setting particular for unicast or multicast frames so that they are captured. I do believe that the crc for the unicast and multicast frames are correct because i had the same test setup connected to an ixia and have seen that ixia is collecting and reporting those frames. So i think we can drop the possibility of my nic dropping packets with wrong crc (unless it drops for some other reason).</p><p>I have promiscuous mode enabled for my interface. Is there a way to ensure that the promiscuous mode of the Wireshark is active on Windows 7 and it is not overridden (overridden by administrative rights)?</p><p>I would also like to know the scenarios where in my nic will drop the frames apart from erroneous crc.</p><p>Please also note that am not using any capture filters</p><p>Any help is appreciated!!!</p></div><div id="question-tags" class="tags-container tags">unicast</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>07 Apr '14, 04:16</strong></p><img src="https://secure.gravatar.com/avatar/e7d566c97adbee1a09ad4458551f4e13?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Hafiz219&#39;s gravatar image" /><p>Hafiz219<br />
+<span class="score" title="1 reputation points">1</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Hafiz219 has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 07 Apr '14, 04:24</p></div></div><div id="comments-container-31593" class="comments-container"><span id="31608"></span><div id="comment-31608" class="comment"><div id="post-31608-score" class="comment-score"></div><div class="comment-text"><p>This is on Ethernet, not Wi-Fi, correct? (Promiscuous mode does not work very well at all on Wi-Fi adapters on Windows.)</p></div><div id="comment-31608-info" class="comment-info"><span class="comment-age">(07 Apr '14, 20:00)</span> Guy Harris ♦♦</div></div><span id="31611"></span><div id="comment-31611" class="comment"><div id="post-31611-score" class="comment-score"></div><div class="comment-text"><p>How exactly is your test board connected to the PC?</p><p>Do you see the frames if you run Wireshark in non-promiscuous mode?</p></div><div id="comment-31611-info" class="comment-info"><span class="comment-age">(07 Apr '14, 22:25)</span> Kurt Knochner ♦</div></div><span id="31612"></span><div id="comment-31612" class="comment"><div id="post-31612-score" class="comment-score"></div><div class="comment-text"><p>@Guy Harris: Yes, my test is on ethernet and not on wifi.</p></div><div id="comment-31612-info" class="comment-info"><span class="comment-age">(07 Apr '14, 23:21)</span> Hafiz219</div></div><span id="31613"></span><div id="comment-31613" class="comment"><div id="post-31613-score" class="comment-score"></div><div class="comment-text"><p>@Kurt: I tried with non-promiscuous mode setting and still am not able to capture the unicast frames. However, am still able to capture broadcast frames. The test board is connected to the PC via an ethernet cable. I have also tried connecting an ixia to the PC with Wireshark and pumping packets directly to PC.</p></div><div id="comment-31613-info" class="comment-info"><span class="comment-age">(07 Apr '14, 23:46)</span> Hafiz219</div></div></div><div id="comment-tools-31593" class="comment-tools"></div><div class="clear"></div><div id="comment-31593-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="31601"></span>
+
+<div id="answer-container-31601" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-31601-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Generate some traffic and in the Windows CMD type "netstat -e" several times to see which counter increases. If you see no discards, no errors and the unicast counter is increasing, try MS Network Monitor and check if it captures the traffic. Also try disabling any endpoint security software you may have installed.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>07 Apr '14, 12:42</strong></p><img src="https://secure.gravatar.com/avatar/721b9692d2a30fc3b386b7fae9a44220?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Roland&#39;s gravatar image" /><p>Roland<br />
+<span class="score" title="764 reputation points">764</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="4 badges"><span class="silver">●</span><span class="badgecount">4</span></span><span title="15 badges"><span class="bronze">●</span><span class="badgecount">15</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Roland has 9 accepted answers">13%</span></p></div></div><div id="comments-container-31601" class="comments-container"><span id="31614"></span><div id="comment-31614" class="comment"><div id="post-31614-score" class="comment-score"></div><div class="comment-text"><p>Thanks Roland for the suggestion. I tried using the netstat -e option. So whenever i pump packets from an ixia or my test board the unicast packet count is incremented. I do not see any discards or errors. However, the observation is that the unicast packet count increments by a multiple of 4. For example, if i sent 10 frames, the unicast frame count increases by 40. If the number of frames sent is 100, the unicast frame count increases by 400 and so on.... Is this the expected behavior? Can i assume that my nic is not dropping any of the incoming unicast packets since my unicast frame count is incremented?</p></div><div id="comment-31614-info" class="comment-info"><span class="comment-age">(08 Apr '14, 00:10)</span> Hafiz219</div></div><span id="31643"></span><div id="comment-31643" class="comment"><div id="post-31643-score" class="comment-score"></div><div class="comment-text"><p>The behaviour is expected but I don't know why it does that. If you don't see errors or discards it is safe to assume that the NIC is not dropping the packets. Have you tried Network Monitor?</p></div><div id="comment-31643-info" class="comment-info"><span class="comment-age">(08 Apr '14, 11:45)</span> Roland</div></div><span id="31669"></span><div id="comment-31669" class="comment"><div id="post-31669-score" class="comment-score"></div><div class="comment-text"><p>Roland, I haven't tried the Network Monitor yet. But i had tried disabling the endpoint security software that i was running. I still do not see unicast frames captured by wireshark.</p></div><div id="comment-31669-info" class="comment-info"><span class="comment-age">(09 Apr '14, 06:18)</span> Hafiz219</div></div></div><div id="comment-tools-31601" class="comment-tools"></div><div class="clear"></div><div id="comment-31601-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="31657"></span>
+
+<div id="answer-container-31657" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-31657-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>The test board is connected to the PC via an ethernet cable</p></blockquote><p>Sounds like your test board is either not doing ARP or it is doing it in the wrong way. Do you see any ARP requests in Wireshark?</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>08 Apr '14, 22:11</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div></div><div id="comments-container-31657" class="comments-container"><span id="31668"></span><div id="comment-31668" class="comment"><div id="post-31668-score" class="comment-score"></div><div class="comment-text"><p>Kurt, I do see ARP request in Wireshark. But the source for ARP requests is the machine running wireshark itself. Am now connecting ixia directly to the machine running wireshark. Is there anyway to ensure that the ARP is done correctly? Is it possible to turn off the address resolution? If so, can you please let me know how to do that?</p></div><div id="comment-31668-info" class="comment-info"><span class="comment-age">(09 Apr '14, 06:16)</span> Hafiz219</div></div><span id="31688"></span><div id="comment-31688" class="comment"><div id="post-31688-score" class="comment-score"></div><div class="comment-text"><blockquote><p>Is there anyway to ensure that the ARP is done correctly?</p></blockquote><p>sure, post the capture file somewhere (google drive, dropbox, cloudshark.org) and we will tell you. Please add information about your environment here, like:</p><ul><li>MAC and IP of the test board</li><li>MAC and IP of the PC</li><li>how is sending and who is receiving data</li></ul><blockquote><p>Is it possible to turn off the address resolution?</p></blockquote><p>On your test board? I don't know! Please ask the vendor. However, it would not make much sense to disable that!</p><p>On you PC? Well, you can't disable just ARP on Windows, at least I don't know a way how to do it, and it wouldn't make much sense, as you would not be able to resolve the MAC address of the 'other' side.</p><p>You can however set a static ARP entry. See <code>arp -h</code> (you would need option -s).</p></div><div id="comment-31688-info" class="comment-info"><span class="comment-age">(09 Apr '14, 13:58)</span> Kurt Knochner ♦</div></div></div><div id="comment-tools-31657" class="comment-tools"></div><div class="clear"></div><div id="comment-31657-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

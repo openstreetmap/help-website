@@ -1,0 +1,31 @@
++++
+type = "question"
+title = "Start wireshark gui with a pre-configured display filter already applied"
+description = '''I am trying to automate some testing for a couple of users. They require that wireshark starts automatically when they run a shell script. I have that part working. But they have a request for having a filter already enabled when they start the wireshark gui. For example ip.src == W.X.Y.Z So the que...'''
+date = "2010-12-06T16:36:00Z"
+lastmod = "2010-12-06T16:36:00Z"
+weight = 1264
+keywords = [ "automatically", "display-filter" ]
+aliases = [ "/questions/1264" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Start wireshark gui with a pre-configured display filter already applied](/questions/1264/start-wireshark-gui-with-a-pre-configured-display-filter-already-applied)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-1264-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I am trying to automate some testing for a couple of users. They require that wireshark starts automatically when they run a shell script. I have that part working.</p><p>But they have a request for having a filter already enabled when they start the wireshark gui. For example ip.src == W.X.Y.Z</p><p>So the question is: Is it possible to start wireshark from command line and automatically have a display filter already applied when wireshark comes up?</p><p>Thanks for the help in advance.</p></div><div id="question-tags" class="tags-container tags">automatically display-filter</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>06 Dec '10, 16:36</strong></p><img src="https://secure.gravatar.com/avatar/20021b1136be38625920bed5747fc94a?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="ValkyrieHrist&#39;s gravatar image" /><p>ValkyrieHrist<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="ValkyrieHrist has no accepted answers">0%</span></p></div></div><div id="comments-container-1264" class="comments-container"><span id="1265"></span><div id="comment-1265" class="comment"><div id="post-1265-score" class="comment-score"></div><div class="comment-text"><p>This is not an answer since you clearly indicate you want to have a default display filter loaded. This seems to work fine with capture filter syntax ( -f "ip src W.X.Y.Z ). However, at least in 1.4, I am unable to load a default display filter by command line ( -R "ip.addr==W.X.Y.Z" ). I know this is in the "processing" parameter. However, unlike resolution, it seems to only work when pulling a file in with ( -R &lt;filename&gt; ). It may be by design. I hope someone has an answer for you.</p></div><div id="comment-1265-info" class="comment-info"><span class="comment-age">(06 Dec '10, 17:21)</span> Paul Stewart</div></div><span id="3201"></span><div id="comment-3201" class="comment"><div id="post-3201-score" class="comment-score"></div><div class="comment-text"><p>In theory, "-R filter_expression" could be used to automatically apply a display filter, but I don't know enough about gtk programming to know for sure or to be able to implement this myself. You might want to file an enhancement bug request for this at https://bugs.wireshark.org/bugzilla/, and if it's possible and if there's sufficient interest, perhaps someone will implement it for you.</p></div><div id="comment-3201-info" class="comment-info"><span class="comment-age">(29 Mar '11, 07:44)</span> cmaynard ♦♦</div></div><span id="3233"></span><div id="comment-3233" class="comment"><div id="post-3233-score" class="comment-score"></div><div class="comment-text"><p>Actually, "-R filter_expression" adds a <em>read</em> filter, which, when you read the file in, discards packets that don't match; that means that you can't then <em>change</em> the filter within the same Wireshark session, e.g. remove it and see all the packets. This may or may not be what the person who asked the original question wants.</p></div><div id="comment-3233-info" class="comment-info"><span class="comment-age">(30 Mar '11, 10:26)</span> Guy Harris ♦♦</div></div><span id="3274"></span><div id="comment-3274" class="comment"><div id="post-3274-score" class="comment-score"></div><div class="comment-text"><p>Right, that's the behavior of "-R" when reading a capture file. When starting Wireshark from the command-line but not reading a capture file, then "-R" is currently ignored. I was throwing out the idea that "-R"'s behavior could possibly be modified to meet the needs of the OP. (Either that, or a new option could be added, but since "-R" is not used in that case anyway, I thought it could be, which would avoid having to add another option.)</p></div><div id="comment-3274-info" class="comment-info"><span class="comment-age">(01 Apr '11, 08:12)</span> cmaynard ♦♦</div></div></div><div id="comment-tools-1264" class="comment-tools"></div><div class="clear"></div><div id="comment-1264-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

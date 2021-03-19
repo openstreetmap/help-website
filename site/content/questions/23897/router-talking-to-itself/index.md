@@ -1,0 +1,32 @@
++++
+type = "question"
+title = "router talking to itself"
+description = '''hi router is sending this all the time ..is this normal ? 188 25.296651000 BelkinIn_dc:47:9d BelkinIn_dc:47:9d 0xffff 252 Ethernet II '''
+date = "2013-08-21T02:16:00Z"
+lastmod = "2013-08-21T02:16:00Z"
+weight = 23897
+keywords = [ "oxffff" ]
+aliases = [ "/questions/23897" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [router talking to itself](/questions/23897/router-talking-to-itself)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-23897-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>hi router is sending this all the time ..is this normal ?</p><pre><code>188 25.296651000    BelkinIn_dc:47:9d   BelkinIn_dc:47:9d   0xffff  252 Ethernet II</code></pre></div><div id="question-tags" class="tags-container tags">oxffff</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>21 Aug '13, 02:16</strong></p><img src="https://secure.gravatar.com/avatar/c9930159877525e74bcfc7351bee546c?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="cevery&#39;s gravatar image" /><p>cevery<br />
+<span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="cevery has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 21 Aug '13, 13:23</p><img src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Guy%20Harris&#39;s gravatar image" /><p>Guy Harris ♦♦<br />
+<span class="score" title="17443 reputation points"><span>17.4k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">●</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">●</span><span class="badgecount">196</span></span></p></div></div><div id="comments-container-23897" class="comments-container"><span id="23928"></span><div id="comment-23928" class="comment"><div id="post-23928-score" class="comment-score"></div><div class="comment-text"><p>That certainly looks odd - not only because the source and destination addresses are the same unicast address (all the entries in the current trunk's "manuf" file for "BelkinIn" are unicast), but also because the protocol field has 0xffff.</p><p>Could you show us the hex dump contents of the entire packet?</p></div><div id="comment-23928-info" class="comment-info"><span class="comment-age">(21 Aug '13, 13:43)</span> Guy Harris ♦♦</div></div></div><div id="comment-tools-23897" class="comment-tools"></div><div class="clear"></div><div id="comment-23897-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

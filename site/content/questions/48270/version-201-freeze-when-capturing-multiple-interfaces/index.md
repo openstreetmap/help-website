@@ -1,0 +1,31 @@
++++
+type = "question"
+title = "Version 2.0.1 freeze when capturing multiple interfaces"
+description = '''On Windows, when capturing from multiple interfaces, if you try to stop the capture, Wireshark just freezes and must be forcefully closed. Is this a known bug? Version 2.0.1 (v2.0.1-0-g59ea380 from master)'''
+date = "2015-12-04T09:56:00Z"
+lastmod = "2015-12-04T09:56:00Z"
+weight = 48270
+keywords = [ "freeze" ]
+aliases = [ "/questions/48270" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Version 2.0.1 freeze when capturing multiple interfaces](/questions/48270/version-201-freeze-when-capturing-multiple-interfaces)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-48270-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>On Windows, when capturing from multiple interfaces, if you try to stop the capture, Wireshark just freezes and must be forcefully closed. Is this a known bug?</p><p>Version 2.0.1 (v2.0.1-0-g59ea380 from master)</p></div><div id="question-tags" class="tags-container tags">freeze</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>04 Dec '15, 09:56</strong></p><img src="https://secure.gravatar.com/avatar/d2ddaa4ccb4e58c470c0eb3bc39005e1?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="DJX&#39;s gravatar image" /><p>DJX<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="DJX has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 14 Jan '16, 12:01</p></div></div><div id="comments-container-48270" class="comments-container"><span id="49224"></span><div id="comment-49224" class="comment"><div id="post-49224-score" class="comment-score"></div><div class="comment-text"><p>Happens in version 2.0.0 and version 2.0.1</p></div><div id="comment-49224-info" class="comment-info"><span class="comment-age">(14 Jan '16, 12:00)</span> DJX</div></div><span id="49229"></span><div id="comment-49229" class="comment"><div id="post-49229-score" class="comment-score"></div><div class="comment-text"><p>Works fine for me on Win 10 using 1Gb wired and 802.11.a wireless. What OS, are you using WinPcap 4.1.3 (check the Wireshark Help -&gt; About Wireshark dialog) and what interface types are you capturing on?</p></div><div id="comment-49229-info" class="comment-info"><span class="comment-age">(14 Jan '16, 16:10)</span> grahamb ♦</div></div><span id="49230"></span><div id="comment-49230" class="comment"><div id="post-49230-score" class="comment-score"></div><div class="comment-text"><p>Version 2.0.1 (v2.0.1-0-g59ea380 from master-2.0)</p><p>Copyright 1998-2015 Gerald Combs [email protected] and contributors. License GPLv2+: GNU GPL version 2 or later <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p><p>Compiled (64-bit) with Qt 5.3.2, with WinPcap (4_1_3), with libz 1.2.8, with GLib 2.42.0, with SMI 0.4.8, with c-ares 1.9.1, with Lua 5.2, with GnuTLS 3.2.15, with Gcrypt 1.6.2, with MIT Kerberos, with GeoIP, with QtMultimedia, with AirPcap.</p><p>Running on 64-bit Windows Server 2008 R2 Service Pack 1, build 7601, with locale C, with WinPcap version 4.1.3 (packet.dll version 4.1.0.2980), based on libpcap version 1.0 branch 1_0_rel0b (20091008), with GnuTLS 3.2.15, with Gcrypt 1.6.2, without AirPcap. Intel(R) Core(TM)2 Quad CPU Q9650 @ 3.00GHz, with 8191MB of physical memory.</p><p>Built using Microsoft Visual C++ 12.0 build 31101</p><p>Intel ET in LACP Marvell 88E8056 in LACP</p></div><div id="comment-49230-info" class="comment-info"><span class="comment-age">(14 Jan '16, 16:21)</span> DJX</div></div><span id="49266"></span><div id="comment-49266" class="comment"><div id="post-49266-score" class="comment-score"></div><div class="comment-text"><p>All looks fairly vanilla, does it also happen with the legacy version (wireshark-gtk.exe)?</p></div><div id="comment-49266-info" class="comment-info"><span class="comment-age">(15 Jan '16, 15:21)</span> grahamb ♦</div></div><span id="49272"></span><div id="comment-49272" class="comment"><div id="post-49272-score" class="comment-score"></div><div class="comment-text"><p>It may just be too much traffic hitting the card. Try to capture with dumpcap instead. I just added a section on that at the bottom of this blog post:</p><p><a href="https://blog.packet-foo.com/2013/05/the-notorious-wireshark-out-of-memory-problem/">https://blog.packet-foo.com/2013/05/the-notorious-wireshark-out-of-memory-problem/</a></p></div><div id="comment-49272-info" class="comment-info"><span class="comment-age">(16 Jan '16, 07:22)</span> Jasper ♦♦</div></div></div><div id="comment-tools-48270" class="comment-tools"></div><div class="clear"></div><div id="comment-48270-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

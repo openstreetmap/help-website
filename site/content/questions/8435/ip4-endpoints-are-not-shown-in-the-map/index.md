@@ -1,0 +1,59 @@
++++
+type = "question"
+title = "IP4 Endpoints are not shown in the MAP"
+description = '''I use Wireshark 1.6.5 with Ubuntu 10.04. Opening existing pcap files and using Statistics - Endpoints - IPv4 the result by clicking the button - MAP - is the following. Ipmap.html from /tmp/.... will be opened by browser Google Chrome (failure: GoogleChrome cannot be started as root). After deinstal...'''
+date = "2012-01-17T06:53:00Z"
+lastmod = "2012-01-18T01:38:00Z"
+weight = 8435
+keywords = [ "map", "showing", "endpoints" ]
+aliases = [ "/questions/8435" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [IP4 Endpoints are not shown in the MAP](/questions/8435/ip4-endpoints-are-not-shown-in-the-map)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-8435-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I use Wireshark 1.6.5 with Ubuntu 10.04. Opening existing pcap files and using Statistics - Endpoints - IPv4 the result by clicking the button - MAP - is the following. Ipmap.html from /tmp/.... will be opened by browser Google Chrome (failure: GoogleChrome cannot be started as root). After deinstalling Google Chrome the result by clicking the button -MAP - the browser OPERA starts, but shows not the mapdata, coming from ipmap.txt over ipmap.html. Empty world. Deinstalling the Browsers Google Chrome and Opera, the file ipmap.html is opened by the installed Firefox 9.0 Browser with correct locations.</p><p>Is there any way to configure Wireshark 1.6.5, that the function MAP opens automatically only Firefox.</p><p>Thanks for any ideas,</p><p>Thomas Wiedemann</p></div><div id="question-tags" class="tags-container tags">map showing endpoints</div><div id="question-controls" class="post-controls"><div class="community-wiki">This question is marked "community wiki".</div></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>17 Jan '12, 06:53</strong></p><img src="https://secure.gravatar.com/avatar/0827cad2801866423f44909176837d00?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="macschussel&#39;s gravatar image" /><p>macschussel<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="macschussel has no accepted answers">0%</span></p></div></div><div id="comments-container-8435" class="comments-container"></div><div id="comment-tools-8435" class="comment-tools"></div><div class="clear"></div><div id="comment-8435-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="8445"></span>
+
+<div id="answer-container-8445" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-8445-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>Wireshark (at least when build with XdgUtils avaiable) uses xdg-open as a portable means of opening the desktop users preferred web browser. If not build with xdg-open present, it provides you a preference to set your own browser from the application.</p><p>Maybe this supports the case of having that option always, defaulting to xdg-open.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>18 Jan '12, 01:38</strong></p><img src="https://secure.gravatar.com/avatar/2337f0406681e5c72ea0e6f1f0d6c0b0?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jaap&#39;s gravatar image" /><p>Jaap ♦<br />
+<span class="score" title="11680 reputation points"><span>11.7k</span></span><span title="16 badges"><span class="silver">●</span><span class="badgecount">16</span></span><span title="101 badges"><span class="bronze">●</span><span class="badgecount">101</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Jaap has 155 accepted answers">14%</span></p></div></div><div id="comments-container-8445" class="comments-container"><span id="8450"></span><div id="comment-8450" class="comment"><div id="post-8450-score" class="comment-score"></div><div class="comment-text"><p>Thank you for your answer. I solved the problem with following command:</p><p>opening terminal</p><p>sudo update-alternatives --config x-www-browser</p><p>changing from alternative 0 (/usr/bin/google-chrome auto-modus) to alternative 1 (/usr/bin/firefox manual mode)</p><p>Map-Function within Wireshark opens the map within firefox, wonderful ::))))</p></div><div id="comment-8450-info" class="comment-info"><span class="comment-age">(18 Jan '12, 02:28)</span> macschussel</div></div></div><div id="comment-tools-8445" class="comment-tools"></div><div class="clear"></div><div id="comment-8445-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

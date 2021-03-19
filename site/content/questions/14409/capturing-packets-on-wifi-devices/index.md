@@ -1,0 +1,82 @@
++++
+type = "question"
+title = "Capturing packets on wifi devices"
+description = '''I have a cisco router with a port mirroring function. I set it up so my wifi traffic is being mirrored to a port in which my computer is connected to with wireshark running. This used to work for me back in the day, but I dont know why its not working anymore. Are their some sort of IP Address confl...'''
+date = "2012-09-20T14:42:00Z"
+lastmod = "2012-09-24T15:58:00Z"
+weight = 14409
+keywords = [ "wifi", "port", "mirroring", "mirror" ]
+aliases = [ "/questions/14409" ]
+osqa_answers = 3
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Capturing packets on wifi devices](/questions/14409/capturing-packets-on-wifi-devices)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-14409-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I have a cisco router with a port mirroring function. I set it up so my wifi traffic is being mirrored to a port in which my computer is connected to with wireshark running. This used to work for me back in the day, but I dont know why its not working anymore. Are their some sort of IP Address conflict that I may be running in to? Or some sort of setting that I am not aware of? I'm trying to get traces off of an Ipad connected to wifi, however im getting 0 packets even thought I am 100% sure its set up correctly.</p></div><div id="question-tags" class="tags-container tags">wifi port mirroring mirror</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>20 Sep '12, 14:42</strong></p><img src="https://secure.gravatar.com/avatar/b2b29f1e3ba5acf43ed5e8aafc70b272?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="jake11241&#39;s gravatar image" /><p>jake11241<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="jake11241 has no accepted answers">0%</span></p></div></div><div id="comments-container-14409" class="comments-container"></div><div id="comment-tools-14409" class="comment-tools"></div><div class="clear"></div><div id="comment-14409-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+3 Answers:
+
+</div>
+
+</div>
+
+<span id="14411"></span>
+
+<div id="answer-container-14411" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-14411-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>First, welcome to Wireshark.</p><p>Wireshark places the interface in promiscous mode to sniff, which means it will receive every frame on the channel, if you're seeing nothing then it hasn't even come close to IP yet and there are more fundemental issuses to resolve.</p><p>Check your hardware isn't broken (check the cables and switch), recheck your set up of the mirror. If these two check out OK then you'll need to give us a lot more detail.</p><p>If you're using Windows for this then I'd suggest trying linux or unix as their network stacks are very well understood and highly documented, this would also rule out OS interaction.</p><p>It may be all round easier for you to just sniff the airwaves.</p><p>Passive WiFi sniffing is a bit of a dead donkey when it comes to debugging network issues as there's no way to account for the specific environment at the receiving antenna of interest, but is none the less very educational.</p><p>This would be the same for using a "mirrored" port, you would of couse know if the iPad was responding correctly, but not if it was receiving correctly.</p><p>So I guess it all depends on what you want to do with wireshark, just poke around to see what's happening, check out an unreliable communication channel or look at the specifics of a protocol implementation?</p><p>So long as it's not checking out an unreliable connection then you can get a laptop, connect to the WiFi and inhale every packet in the room.</p><p>Cheers, Craig.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>20 Sep '12, 16:03</strong></p><img src="https://secure.gravatar.com/avatar/7f557535084abef24cd30661f9daefad?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="CTNOBLE&#39;s gravatar image" /><p>CTNOBLE<br />
+<span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="3 badges"><span class="silver">●</span><span class="badgecount">3</span></span><span title="6 badges"><span class="bronze">●</span><span class="badgecount">6</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="CTNOBLE has no accepted answers">0%</span></p></div></div><div id="comments-container-14411" class="comments-container"><span id="14413"></span><div id="comment-14413" class="comment"><div id="post-14413-score" class="comment-score"></div><div class="comment-text"><p>CTNOBLE, can I contact you through email and possibly further investigate this possibly remotely?</p></div><div id="comment-14413-info" class="comment-info"><span class="comment-age">(20 Sep '12, 17:53)</span> jake11241</div></div><span id="14414"></span><div id="comment-14414" class="comment"><div id="post-14414-score" class="comment-score">1</div><div class="comment-text"><p>Sure, ipsen200&lt;at&gt;hotmail&lt;dot&gt;com It is likely I won't be able to respond to your e-mail immediately though.</p><p>I understand the need for secrecy when it comes to network security, but I would like to encourage you to share as much as possible on the forum so that any other users who encounter a similar problem to your own can benefit.</p></div><div id="comment-14414-info" class="comment-info"><span class="comment-age">(20 Sep '12, 18:55)</span> CTNOBLE</div></div><span id="14415"></span><div id="comment-14415" class="comment"><div id="post-14415-score" class="comment-score"></div><div class="comment-text"><p>@jake11241, I converted your answer to a comment, that's the way this site works best, please review the FAQ.</p><p>And I agree with @CTNOBLE, please keep the conversation on <a href="http://ask.wireshark.org">ask.wireshark.org</a> as much as possible for others to learn as you might learn from other question AND answers :-)</p></div><div id="comment-14415-info" class="comment-info"><span class="comment-age">(20 Sep '12, 23:24)</span> SYN-bit ♦♦</div></div><span id="14431"></span><div id="comment-14431" class="comment"><div id="post-14431-score" class="comment-score"></div><div class="comment-text"><p>Quite new to the site, thank you. I'm running Windows 7, Wireshark version 1.6.10. Im using a Cisco router RV110W with port mirroring function. This used to work flawlessly a couple months ago, and all of a sudden its not working. Originally I thought it was a problem with the router itself because Ports 1 and 2 were not working. I talked to Cisco and got it replaced, but the same problem persists :/</p></div><div id="comment-14431-info" class="comment-info"><span class="comment-age">(21 Sep '12, 07:34)</span> jake11241</div></div></div><div id="comment-tools-14411" class="comment-tools"></div><div class="clear"></div><div id="comment-14411-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="14444"></span>
+
+<div id="answer-container-14444" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-14444-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>I'm going to refer you to the cisco Admin manual: <a href="http://www.cisco.com/en/US/docs/routers/csbr/rv110w/administration/guide/rv110w_admin.pdf">http://www.cisco.com/en/US/docs/routers/csbr/rv110w/administration/guide/rv110w_admin.pdf</a></p><p>page 124.</p><p>"The LAN host (PC) should use a static IP address to avoid any issues with port mirroring"</p><p>Are you using a static IP on your PC?</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>21 Sep '12, 16:39</strong></p><img src="https://secure.gravatar.com/avatar/7f557535084abef24cd30661f9daefad?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="CTNOBLE&#39;s gravatar image" /><p>CTNOBLE<br />
+<span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="3 badges"><span class="silver">●</span><span class="badgecount">3</span></span><span title="6 badges"><span class="bronze">●</span><span class="badgecount">6</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="CTNOBLE has no accepted answers">0%</span></p></div></div><div id="comments-container-14444" class="comments-container"><span id="14488"></span><div id="comment-14488" class="comment"><div id="post-14488-score" class="comment-score"></div><div class="comment-text"><p>Yes I'm using a Static IP for both the wifi device and my PC.</p><p>Heres a picture of what Im seeing when trying to gether captures off my wifi device.</p><p><img src="https://osqa-ask.wireshark.org/upfiles/ipad.PNG" alt="alt text" /></p></div><div id="comment-14488-info" class="comment-info"><span class="comment-age">(24 Sep '12, 15:46)</span> jake11241</div></div><span id="14489"></span><div id="comment-14489" class="comment"><div id="post-14489-score" class="comment-score"></div><div class="comment-text"><p>I was not allowed to post a picture on a comment, so please refer to my answer below for a response to this comment :)</p></div><div id="comment-14489-info" class="comment-info"><span class="comment-age">(24 Sep '12, 15:47)</span> jake11241</div></div><span id="14497"></span><div id="comment-14497" class="comment"><div id="post-14497-score" class="comment-score"></div><div class="comment-text"><p>Well, The host is sending out MDNS packets, looking for sv-ipad-2, so, can I assume that these packets are coming from your PC?</p><p>Are there other devices on your wireless network? If so then can you try to get a capture from them?</p></div><div id="comment-14497-info" class="comment-info"><span class="comment-age">(25 Sep '12, 02:15)</span> CTNOBLE</div></div></div><div id="comment-tools-14444" class="comment-tools"></div><div class="clear"></div><div id="comment-14444-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="14491"></span>
+
+<div id="answer-container-14491" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-14491-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>I'm trying to get traces off of an Ipad connected to wifi, however im getting 0 packets even thought <strong>I am 100% sure its set up correctly</strong>.</p></blockquote><p>Are you really sure? I don't see an option to mirror the Wifi traffic.</p><blockquote><p><code>https://www.cisco.com/web/sbtg/gui_mockups/RV110W/default.asp.htm</code><br />
+<code>Administration -&gt; Diagnostics -&gt; Port Mirroring</code><br />
+</p></blockquote><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>24 Sep '12, 15:58</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></br></p></img></div></div><div id="comments-container-14491" class="comments-container"><span id="14492"></span><div id="comment-14492" class="comment"><div id="post-14492-score" class="comment-score"></div><div class="comment-text"><p>Yes, because this worked flawlessly a couple months ago. So I know it does work</p><p><img src="https://osqa-ask.wireshark.org/upfiles/Port_Mirror.PNG" alt="alt text" /></p></div><div id="comment-14492-info" class="comment-info"><span class="comment-age">(24 Sep '12, 16:03)</span> jake11241</div></div></div><div id="comment-tools-14491" class="comment-tools"></div><div class="clear"></div><div id="comment-14491-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

@@ -1,0 +1,70 @@
++++
+type = "question"
+title = "How to analyse througput, packet loss, RTT rather than go through the graph of built-in feature of wireshark?"
+description = '''Hi, I am doing research project to find out the TCP performance using New Reno, Compound TCP, Westwood and Cubic variant of TCP. I have included Wireshark as a network analysis tool; however it is beneficial in certain situations to check the network performance, but every matrices is not clearly de...'''
+date = "2011-08-12T02:48:00Z"
+lastmod = "2011-08-15T15:25:00Z"
+weight = 5675
+keywords = [ "performance", "throughput", "tcp", "rtt" ]
+aliases = [ "/questions/5675" ]
+osqa_answers = 2
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [How to analyse througput, packet loss, RTT rather than go through the graph of built-in feature of wireshark?](/questions/5675/how-to-analyse-througput-packet-loss-rtt-rather-than-go-through-the-graph-of-built-in-feature-of-wireshark)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-5675-score" class="post-score" title="current number of votes">2</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi, I am doing research project to find out the TCP performance using New Reno, Compound TCP, Westwood and Cubic variant of TCP. I have included Wireshark as a network analysis tool; however it is beneficial in certain situations to check the network performance, but every matrices is not clearly defined. Kindly, can anyone here help me to find out all these matrices mentioned in title? I am very tense because having limited time to submit my project.</p><p>seeks positive reply!</p><p>Thanks</p></div><div id="question-tags" class="tags-container tags">performance throughput tcp rtt</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>12 Aug '11, 02:48</strong></p><img src="https://secure.gravatar.com/avatar/e76e585ac43bd38c430e58e73fec680d?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="sur&#39;s gravatar image" /><p>sur<br />
+<span class="score" title="31 reputation points">31</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">●</span><span class="badgecount">5</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="sur has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 26 Feb '12, 21:40</p><img src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="cmaynard&#39;s gravatar image" /><p>cmaynard ♦♦<br />
+<span class="score" title="9361 reputation points"><span>9.4k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">●</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">●</span><span class="badgecount">142</span></span></p></div></div><div id="comments-container-5675" class="comments-container"></div><div id="comment-tools-5675" class="comment-tools"></div><div class="clear"></div><div id="comment-5675-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="5678"></span>
+
+<div id="answer-container-5678" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-5678-score" class="post-score" title="current number of votes">4</div></div></td><td><div class="item-right"><div class="answer-body"><p>So if I understand your problem correctly you want to know how to determine Throughput, Packet loss and RTT with Wireshark?</p><p>First of all, you should isolate the TCP session you want to analyze. You can do that by using the Conversations Statistic (in the Statistics menu) and filter the conversation from the TCP tab. The use the popup menu to filter the conversation. The conversation statistic can also tell you the <strong>throughput</strong> per TCP session right away (bps A-&gt;B and bps B-&gt;A).</p><p>For the <strong>packet loss</strong> you can then append the conversation filter with "<code>and tcp.analysis.lost_segment</code>", then look at the status bar to see how many packets match the filter ("Displayed:" value).</p><p>The <strong>RTT</strong> can be determined by finding out how long it took for the Three Way Handshake, meaning that you set a Time reference to the SYN and then read the relative time of the third packet (ACK). That will give you the initial RTT; if you want the various RTT values for the length of the communication you should use the Statistics -&gt; TCP Stream Graph -&gt; Round Trip Time Graph.</p><p>On a side note: I think RTT and packet loss values are not that important when comparing stack types, because the stack has little to no influence over what happens in transit (delays and packet drops in the network infrastructure). Keep an eye on the mechanisms dealing with recovery from packet loss (including "how fast was the problem solved, and how bad was the impact on time/throughput"); these are much more interesting.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>12 Aug '11, 05:52</strong></p><img src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jasper&#39;s gravatar image" /><p>Jasper ♦♦<br />
+<span class="score" title="23806 reputation points"><span>23.8k</span></span><span title="5 badges"><span class="badge1">●</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">●</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">●</span><span class="badgecount">284</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Jasper has 263 accepted answers">18%</span></p></div></div><div id="comments-container-5678" class="comments-container"><span id="5694"></span><div id="comment-5694" class="comment"><div id="post-5694-score" class="comment-score"></div><div class="comment-text"><p>Thanks Jasper,</p><p>Jasper could U share any captured file to illustrate more in detail all the relevant matrices as I discussed in my request. Please explain briefly, that how to analyse throughput of whole captured file. As I know by applying particular filter we can capture particular connection n by viewing statics summary we can analyse the throughput which defines most f things but don't know how to calculate exactly. Similarly, for packet loss by applying tcp.analysis.lost_segment, how to calculate total packet loss in whole in large captured file where packet losses are more than one. Actually I am working on simple topology, consist of only one router and three servers, HTTP Server, SMTP Server, n Streaming Server. Delay n packet loss is employed such as 20ms, 1.5%, 30ms 2.5%,40 3.5%, 50ms 4.5% respectively. Each employed parameters(delay and packet loss) are tested five times on each said variant of TCP(said in request). Everything is done at the moment but strucked at how to analyse things accurately although I captured all relevant packets by applying particular capture filter i.e. http filter for http, rtcp(real time tcp) for streaming and smtp for smtp. Kindly explain in clear and in easier way because I am having very short time to complete report.</p><p>Once Again Thanks for your concern.</p><p>waiting for response!</p><p>sur</p></div><div id="comment-5694-info" class="comment-info"><span class="comment-age">(12 Aug '11, 15:39)</span> sur</div></div><span id="5695"></span><div id="comment-5695" class="comment"><div id="post-5695-score" class="comment-score"></div><div class="comment-text"><p>First of all, I converted your answer to a comment to keep this a Q&amp;A flow.</p><p>Second, you should be aware that this is a forum to help with questions and problems, not the Report-O-Matic that does your homework for you ;-)</p><p>Third, I do not have trace files for you; if you need any you can get them at the Wireshark repository at http://wiki.wireshark.org/SampleCaptures.</p><p>Finally, I think I gave quite accurate steps to get the metrics for single connections. I doubt it makes much sense to look for metrics over a whole trace file since the flows will be too different in nature. But a few hints:</p></div><div id="comment-5695-info" class="comment-info"><span class="comment-age">(12 Aug '11, 16:45)</span> Jasper ♦♦</div></div><span id="5696"></span><div id="comment-5696" class="comment"><div id="post-5696-score" class="comment-score"></div><div class="comment-text"><p>To get the throughput you calculate the amount of bytes transfered divide by time it took, aka "Cummulative bytes / relative time" (you can add those as columns to the Wireshark packet list).</p><p>Total packet loss is easy: filter on tcp.analysis.lost-segment and divide "displayed packets" by "packets" * 100% (read "displayed" and "packets" from the status bar). That way you get a percentage of lost packets for the whole trace.</p><p>I still think it makes sense to do this per TCP flow, not on a complete trace file. You can draw averages later if you need to get single results per trace.</p></div><div id="comment-5696-info" class="comment-info"><span class="comment-age">(12 Aug '11, 16:53)</span> Jasper ♦♦</div></div></div><div id="comment-tools-5678" class="comment-tools"></div><div class="clear"></div><div id="comment-5678-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="5706"></span>
+
+<div id="answer-container-5706" class="answer answered-by-owner">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-5706-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Thanks for your comments!</p><p>I want to evaluate full captured file rather to analyse single TCP connection which wireshark clearly does though enough material is available for single connection evaluation. How to calculate matrices (Throughput, packet loss, RTT) for full captured file. And one thing more it would not be question if it would not be a problem -:)</p><p>Anyway thanks for your concern</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>15 Aug '11, 15:25</strong></p><img src="https://secure.gravatar.com/avatar/e76e585ac43bd38c430e58e73fec680d?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="sur&#39;s gravatar image" /><p>sur<br />
+<span class="score" title="31 reputation points">31</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">●</span><span class="badgecount">5</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="sur has no accepted answers">0%</span></p></div></div><div id="comments-container-5706" class="comments-container"></div><div id="comment-tools-5706" class="comment-tools"></div><div class="clear"></div><div id="comment-5706-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

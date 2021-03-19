@@ -1,0 +1,60 @@
++++
+type = "question"
+title = "DNS server changes automatically?"
+description = '''I&#x27;m observing a problem related to DNS server. I see my machine changes it&#x27;s DNS server IP to some private ip-address automatically. I looked at the wireshark capture. I don&#x27;t find any DHCP or DNS packets that could&#x27;ve looked suspicious.  I&#x27;ve uploaded capture @ http://www.filedropper.com/ram  Below...'''
+date = "2015-03-05T03:14:00Z"
+lastmod = "2015-03-05T16:09:00Z"
+weight = 40274
+keywords = [ "dns" ]
+aliases = [ "/questions/40274" ]
+osqa_answers = 0
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [DNS server changes automatically?](/questions/40274/dns-server-changes-automatically)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-40274-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I'm observing a problem related to DNS server. I see my machine changes it's DNS server IP to some private ip-address automatically. I looked at the wireshark capture. I don't find any DHCP or DNS packets that could've looked suspicious.</p><p>I've uploaded capture @ http://www.filedropper.com/ram</p><p>Below is the snapshot of the problem, I'm talking about. If you notice in below capture, you see the PC 10.190.38.85 starts sending DNS packets to 192.168.19.1 instead of corporate DNS-server 10.190.12.27.</p><p>I tried looking at DHCP packets, but there aren't any except some DHCP inform.</p><p>Is it possible to force client to start using new DNS server, with out DHCP packets?</p><p><img src="https://osqa-ask.wireshark.org/upfiles/dns-issue.jpg" alt="alt text" /></p></div><div id="question-tags" class="tags-container tags">dns</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>05 Mar '15, 03:14</strong></p><img src="https://secure.gravatar.com/avatar/5c59321a66976ba615e1a50b46a4d209?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Ramprasad&#39;s gravatar image" /><p>Ramprasad<br />
+<span class="score" title="20 reputation points">20</span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="11 badges"><span class="silver">●</span><span class="badgecount">11</span></span><span title="15 badges"><span class="bronze">●</span><span class="badgecount">15</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Ramprasad has no accepted answers">0%</span></p></img></div></div><div id="comments-container-40274" class="comments-container"><span id="40275"></span><div id="comment-40275" class="comment"><div id="post-40275-score" class="comment-score"></div><div class="comment-text"><p>Missed to mention:</p><p>It's not just the capture, even on interface configuration new DNS server ip is seen.</p><p><code> Ethernet adapter Local Area Connection:</code></p><p><code></code></p><p><code>Connection-specific DNS Suffix  . : root.pri    Description . . . . . . . . . . . : Intel(R) Ethernet Connection I217-LM    Physical Address. . . . . . . . . : F0-1F-AF-37-91-5D    DHCP Enabled. . . . . . . . . . . : Yes    Autoconfiguration Enabled . . . . : Yes    IPv4 Address. . . . . . . . . . . : 10.190.38.85(Preferred)    Subnet Mask . . . . . . . . . . . : 255.255.254.0    Lease Obtained. . . . . . . . . . : 04 March 2015 18:30:44    Lease Expires . . . . . . . . . . : 06 March 2015 18:30:44    Default Gateway . . . . . . . . . : 10.190.39.254    DHCPv4 Class ID . . . . . . . . . : CSR    DHCP Server . . . . . . . . . . . : 10.190.12.35    DNS Servers . . . . . . . . . . . : 192.168.19.1                                        192.168.19.1    Primary WINS Server . . . . . . . : 10.147.1.1    Secondary WINS Server . . . . . . : 10.147.1.6    NetBIOS over Tcpip. . . . . . . . : Enabled</code></p><p>I place the capture files in the below location</p></div><div id="comment-40275-info" class="comment-info"><span class="comment-age">(05 Mar '15, 03:16)</span> Ramprasad</div></div><span id="40293"></span><div id="comment-40293" class="comment"><div id="post-40293-score" class="comment-score"></div><div class="comment-text"><p>Looks like a Windows config issue. How is the Wireshark community supposed to help with this?</p></div><div id="comment-40293-info" class="comment-info"><span class="comment-age">(05 Mar '15, 09:09)</span> Kurt Knochner ♦</div></div><span id="40294"></span><div id="comment-40294" class="comment"><div id="post-40294-score" class="comment-score"></div><div class="comment-text"><p>It's not windows config issue. It changes automatically. I was thinking some thing triggered this &amp; can be figured out from network capture.</p><p>And moreever I see this forum addressing issues, not strictly related to wireshark, but some protocol understanding issues as well. If I'm on wrong page, I would restrain from posting...</p></div><div id="comment-40294-info" class="comment-info"><span class="comment-age">(05 Mar '15, 10:03)</span> Ramprasad</div></div><span id="40297"></span><div id="comment-40297" class="comment"><div id="post-40297-score" class="comment-score"></div><div class="comment-text"><p>Can you share a capture in a publicly accessible spot, e.g. <a href="http://cloudshark.org">CloudShark</a>? This allows anyone to look at the capture, even away from our Wireshark machine.</p></div><div id="comment-40297-info" class="comment-info"><span class="comment-age">(05 Mar '15, 10:59)</span> Jaap ♦</div></div></div><div id="comment-tools-40274" class="comment-tools"></div><div class="clear"></div><div id="comment-40274-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="40309"></span>
+
+<div id="answer-container-40309" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-40309-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>It's not windows config issue. It changes automatically.</p></blockquote><p>it is a config issue, no matter if the change happens manually or automatically. There is no network protocol I know of, besides DHCP, to change the DNS servers of a system. As you mentioned it already, there is no DHCP traffic in the capture file (besides a single frame which is unrelated).</p><p>So, my guess is: There is a piece of software on your system that changes the DNS config for whatever reason. Could be legitimate or malware, while malware would not make much sense with that DNS IP addresses.</p><blockquote><p>I was thinking some thing triggered this &amp; can be figured out from network capture.</p></blockquote><p>No. There is nothing in the capture file that could explain it. So, this is most likely a local windows and/or software problem.</p><blockquote><p>And moreover I see this forum addressing issues, not strictly related to wireshark, but some protocol understanding issues as well. <strong>If I'm on wrong page, I would restrain from posting...</strong></p></blockquote><p>No need to be upset ;-) I'm among those here who tries to help even with problems that are not related to Wireshark at all. However, your problem is by no means related to any network problem, so there is nothing you/we can do to troubleshoot this with Wireshark nor with any other network troubleshooting ;-)</p><p>Again: This is a local windows config problem and/or a software problem on that system.</p><p>Are you using any kind of VPN clients (SSL, IPSEC)? If so, try to disable, better uninstall them and then check if the problem persists. VPN clients often change DNS settings. Usually they do it only on their own virtual VPN nic/adapter, but who knows ...</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>05 Mar '15, 16:09</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div></div><div id="comments-container-40309" class="comments-container"><span id="40350"></span><div id="comment-40350" class="comment"><div id="post-40350-score" class="comment-score"></div><div class="comment-text"><p>Thanks Kurt.</p><p>These problems are seen on corporate machines which have antivirus installed. And not on just one machine, but on multiple machines this problem was reported at the same time.</p><p>And my IT department says it's due to someone misconfigured one of test laptops which contained ubuntu. Then I spoke to that engineer whose ubuntu laptop was causing this...all he knows is IT has removed the line "dns=dnsmasq" in networkmanager.conf file. And after this change, users wouldn't experience this problem. I did little search on google to findout what this dnsmasw is, but couldn't findout any answer which could cause this. Thus I thought network capture may help, but I couldn't figure out myself. So came here for help!</p><p>Thus, I never thought it could've caused by malware/virus. But as you elaborated, as the network capture isn't hinting on anything, I would provide this feedback to IT.</p><p>Thanks Again for the help!</p></div><div id="comment-40350-info" class="comment-info"><span class="comment-age">(07 Mar '15, 09:25)</span> Ramprasad</div></div></div><div id="comment-tools-40309" class="comment-tools"></div><div class="clear"></div><div id="comment-40309-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

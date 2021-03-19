@@ -1,0 +1,31 @@
++++
+type = "question"
+title = "No dropped packet"
+description = '''Can anyone tell me what is happening when I try to connect to the database using port 44000 and why it is not connecting even though I see the ACK; Here is the capture in plain text. Can you help: No. Time Source Destination Protocol Info  45 9.206394 192.168.1.27 192.168.19.14 TCP 53710 &amp;gt; 44000 ...'''
+date = "2011-03-25T07:08:00Z"
+lastmod = "2011-03-25T07:08:00Z"
+weight = 3120
+keywords = [ "unlocked" ]
+aliases = [ "/questions/3120" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [No dropped packet](/questions/3120/no-dropped-packet)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-3120-score" class="post-score" title="current number of votes">-1</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Can anyone tell me what is happening when I try to connect to the database using port 44000 and why it is not connecting even though I see the ACK;</p><p>Here is the capture in plain text. Can you help:</p><p>No. Time Source Destination Protocol Info 45 9.206394 192.168.1.27 192.168.19.14 TCP 53710 &gt; 44000 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=2 SACK_PERM=1</p><p>Frame 45: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) Ethernet II, Src: Dell_9f:db:d9 (b8:ac:6f:9f:db:d9), Dst: Adtran_3d:a1:98 (00:a0:c8:3d:a1:98) Internet Protocol, Src: 192.168.1.27 (192.168.1.27), Dst: 192.168.19.14 (192.168.19.14) Transmission Control Protocol, Src Port: 53710 (53710), Dst Port: 44000 (44000), Seq: 0, Len: 0</p><p>No. Time Source Destination Protocol Info 46 9.208663 192.168.19.14 192.168.1.27 TCP 44000 &gt; 53710 [SYN, ACK] Seq=0 Ack=1 Win=5840 Len=0 MSS=1460 SACK_PERM=1 WS=2</p><p>Frame 46: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) Ethernet II, Src: Adtran_3d:a1:98 (00:a0:c8:3d:a1:98), Dst: Dell_9f:db:d9 (b8:ac:6f:9f:db:d9) Internet Protocol, Src: 192.168.19.14 (192.168.19.14), Dst: 192.168.1.27 (192.168.1.27) Transmission Control Protocol, Src Port: 44000 (44000), Dst Port: 53710 (53710), Seq: 0, Ack: 1, Len: 0</p><p>No. Time Source Destination Protocol Info 47 9.208720 192.168.1.27 192.168.19.14 TCP 53710 &gt; 44000 [ACK] Seq=1 Ack=1 Win=262140 Len=0</p><p>Frame 47: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) Ethernet II, Src: Dell_9f:db:d9 (b8:ac:6f:9f:db:d9), Dst: Adtran_3d:a1:98 (00:a0:c8:3d:a1:98) Internet Protocol, Src: 192.168.1.27 (192.168.1.27), Dst: 192.168.19.14 (192.168.19.14) Transmission Control Protocol, Src Port: 53710 (53710), Dst Port: 44000 (44000), Seq: 1, Ack: 1, Len: 0</p><p><strong><em>No. Time Source Destination Protocol Info 51 9.470464 192.168.1.27 192.168.19.14 TCP 53710 &gt; 44000 [PSH, ACK] Seq=1 Ack=1 Win=262140 Len=148 Frame 51: 202 bytes on wire (1616 bits), 202 bytes captured (1616 bits) Ethernet II, Src: Dell_9f:db:d9 (b8:ac:6f:9f:db:d9), Dst: Adtran_3d:a1:98 (00:a0:c8:3d:a1:98) Internet Protocol, Src: 192.168.1.27 (192.168.1.27), Dst: 192.168.19.14 (192.168.19.14) Transmission Control Protocol, Src Port: 53710 (53710), Dst Port: 44000 (44000), Seq: 1, Ack: 1, Len: 148 Data (148 bytes) 0000 80 92 01 03 01 00 69 00 00 00 20 00 00 39 00 00 ......i... ..9.. 0010 38 00 00 35 00 00 16 00 00 13 00 00 0a 07 00 c0 8..5............ 0020 00 00 33 00 00 32 00 00 2f 00 00 07 05 00 80 03 ..3..2../....... 0030 00 80 00 00 66 00 00 05 00 00 04 01 00 80 08 00 ....f........... 0040 80 00 00 63 00 00 62 00 00 61 00 00 15 00 00 12 ...c..b..a...... 0050 00 00 09 06 00 40 00 00 65 00 00 64 00 00 60 00 [email protected]`. 0060 00 14 00 00 11 00 00 08 00 00 06 04 00 80 00 00 ................ 0070 03 02 00 80 af 2b 19 8b 51 68 02 f9 df 9a 1e 9d .....+..Qh...... 0080 36 7d 70 a8 54 0c 0b 0c e2 7a 55 cf 37 2c 59 16 6}p.T....zU.7,Y. 0090 ab 9c f8 da .... No. Time Source Destination Protocol Info 52 9.472640 192.168.19.14 192.168.1.27 TCP 44000 &gt; 53710 [ACK] Seq=1 Ack=149 Win=6912 Len=0 Frame 52: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) Ethernet II, Src: Adtran_3d:a1:98 (00:a0:c8:3d:a1:98), Dst: Dell_9f:db:d9 (b8:ac:6f:9f:db:d9) Internet Protocol, Src: 192.168.19.14 (192.168.19.14), Dst: 192.168.1.27 (192.168.1.27) Transmission Control Protocol, Src Port: 44000 (44000), Dst Port: 53710 (53710), Seq: 1, Ack: 149, Len: 0</em></strong></p><p>No. Time Source Destination Protocol Info 53 9.662426 Dell_a9:c8:2c Broadcast ARP Who has 192.168.1.188? Tell 192.168.1.29</p></div><div id="question-tags" class="tags-container tags">unlocked</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>25 Mar '11, 07:08</strong></p><img src="https://secure.gravatar.com/avatar/4d6a3a30db58bacca74ab259f0732e28?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="zevans2001&#39;s gravatar image" /><p>zevans2001<br />
+<span class="score" title="0 reputation points">0</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="zevans2001 has no accepted answers">0%</span></p></div></div><div id="comments-container-3120" class="comments-container"><span id="3126"></span><div id="comment-3126" class="comment"><div id="post-3126-score" class="comment-score"></div><div class="comment-text"><p>that looks like the trace file posted in "decipher please" to me. :-(</p></div><div id="comment-3126-info" class="comment-info"><span class="comment-age">(25 Mar '11, 09:04)</span> packethunter</div></div></div><div id="comment-tools-3120" class="comment-tools"></div><div class="clear"></div><div id="comment-3120-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

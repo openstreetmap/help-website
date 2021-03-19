@@ -1,0 +1,59 @@
++++
+type = "question"
+title = "E-CGI decoding incorrect for PLMN ID in Location Service Request"
+description = '''This is version 1.12.0 of Wireshark. We are seeing the Location-Service-Request message is not decoding the byte stream correctly for MNC. Byte sequence: 65 27 43 Decoded  pLMNidentity: 652743  MCC: 567  MNC: 342 ----------&amp;gt; must be 234'''
+date = "2014-10-10T11:21:00Z"
+lastmod = "2014-10-10T14:35:00Z"
+weight = 36966
+keywords = [ "mnc", "lcsap" ]
+aliases = [ "/questions/36966" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [E-CGI decoding incorrect for PLMN ID in Location Service Request](/questions/36966/e-cgi-decoding-incorrect-for-plmn-id-in-location-service-request)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-36966-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>This is version 1.12.0 of Wireshark. We are seeing the Location-Service-Request message is not decoding the byte stream correctly for MNC.</p><p>Byte sequence: 65 27 43</p><p>Decoded pLMNidentity: 652743 MCC: 567 MNC: 342 ----------&gt; must be 234</p></div><div id="question-tags" class="tags-container tags">mnc lcsap</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>10 Oct '14, 11:21</strong></p><img src="https://secure.gravatar.com/avatar/9fe3de7d3e2c34d607db28cafd053fc0?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="akrishnaswamy&#39;s gravatar image" /><p>akrishnaswamy<br />
+<span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="akrishnaswamy has no accepted answers">0%</span></p></div></div><div id="comments-container-36966" class="comments-container"></div><div id="comment-tools-36966" class="comment-tools"></div><div class="clear"></div><div id="comment-36966-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="36969"></span>
+
+<div id="answer-container-36969" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-36969-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>The current decoding is in line with our current understanding of the spec. See <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=7952">bug 7952</a> for details.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>10 Oct '14, 14:35</strong></p><img src="https://secure.gravatar.com/avatar/713f24fd877861260b71ecd455018625?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Pascal%20Quantin&#39;s gravatar image" /><p>Pascal Quantin<br />
+<span class="score" title="5544 reputation points"><span>5.5k</span></span><span title="10 badges"><span class="silver">●</span><span class="badgecount">10</span></span><span title="60 badges"><span class="bronze">●</span><span class="badgecount">60</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Pascal Quantin has 92 accepted answers">30%</span></p></div></div><div id="comments-container-36969" class="comments-container"></div><div id="comment-tools-36969" class="comment-tools"></div><div class="clear"></div><div id="comment-36969-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

@@ -1,0 +1,32 @@
++++
+type = "question"
+title = "why there are 3 RSSI values in the radiotap header for a dual-antenna wireless card"
+description = '''packets are captured using tcpdump on a DLINK DIR825-B1 router, then I opened up the pcap file using Wireshark, an found that the 32bit bitmap of radiotap header is extended twice, and it contains three SSI signal fields. Wireshark&#x27;s RSSI column only shows the value of the last one. For example, one...'''
+date = "2014-06-20T09:14:00Z"
+lastmod = "2014-06-20T09:14:00Z"
+weight = 33994
+keywords = [ "wireless", "rssi", "802.11n" ]
+aliases = [ "/questions/33994" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [why there are 3 RSSI values in the radiotap header for a dual-antenna wireless card](/questions/33994/why-there-are-3-rssi-values-in-the-radiotap-header-for-a-dual-antenna-wireless-card)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-33994-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>packets are captured using tcpdump on a DLINK DIR825-B1 router, then I opened up the pcap file using Wireshark, an found that the 32bit bitmap of radiotap header is extended twice, and it contains three SSI signal fields. Wireshark's RSSI column only shows the value of the last one. For example, one captured radiotap shows that the first RSSI is -18dBm, the second is -24dBm and the third is -19dBm. I feel very confused, if for each antenna there is one RSSI value, there should be two RSSI values, why there are three RSSI values?</p><p>The driver I use is ath9k.</p></div><div id="question-tags" class="tags-container tags">wireless rssi 802.11n</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>20 Jun '14, 09:14</strong></p><img src="https://secure.gravatar.com/avatar/e18d21f51ab456d57a0b81a80537c82a?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="neodreamer&#39;s gravatar image" /><p>neodreamer<br />
+<span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="neodreamer has no accepted answers">0%</span></p></div></div><div id="comments-container-33994" class="comments-container"><span id="34023"></span><div id="comment-34023" class="comment"><div id="post-34023-score" class="comment-score"></div><div class="comment-text"><p>Some questions:</p><ul><li><p>is it possible to post a sample capture file somewhere (google drive, dropbox, cloudshark.org)?</p></li><li><p>What is the firmware on that router (dd-wrt, openwrt, etc.)?<br />
+</p></li><li><p>How did you capture (exact tcpdump parameters)?</p></li></ul></div><div id="comment-34023-info" class="comment-info"><span class="comment-age">(21 Jun '14, 17:09)</span> Kurt Knochner ♦</div></div><span id="34140"></span><div id="comment-34140" class="comment"><div id="post-34140-score" class="comment-score"></div><div class="comment-text"><p>the sample pcap file can be downloaded here: <a href="http://198.56.183.230/ar9223.pcap">http://198.56.183.230/ar9223.pcap</a></p></div><div id="comment-34140-info" class="comment-info"><span class="comment-age">(24 Jun '14, 16:39)</span> neodreamer</div></div><span id="34141"></span><div id="comment-34141" class="comment"><div id="post-34141-score" class="comment-score"></div><div class="comment-text"><p>firmware is openwrt</p><p>the command line to do the capture is: tcpdump -i mon0 -w ar9223.pcap</p></div><div id="comment-34141-info" class="comment-info"><span class="comment-age">(24 Jun '14, 16:42)</span> neodreamer</div></div><span id="34145"></span><div id="comment-34145" class="comment"><div id="post-34145-score" class="comment-score"></div><div class="comment-text"><p>What's the kernel version for the version of OpenWRT you're using? There might be a driver bug where it's adding more antenna signal values than there are antennas.</p></div><div id="comment-34145-info" class="comment-info"><span class="comment-age">(24 Jun '14, 18:52)</span> Guy Harris ♦♦</div></div><span id="34152"></span><div id="comment-34152" class="comment"><div id="post-34152-score" class="comment-score"></div><div class="comment-text"><blockquote><p>can be downloaded here: <a href="http://198.56.183.230/ar9223.pcap">http://198.56.183.230/ar9223.pcap</a></p></blockquote><p>There is no reply from the server!</p></div><div id="comment-34152-info" class="comment-info"><span class="comment-age">(25 Jun '14, 02:16)</span> Kurt Knochner ♦</div></div><span id="34233"></span><div id="comment-34233" class="comment not_top_scorer"><div id="post-34233-score" class="comment-score"></div><div class="comment-text"><p>Kernel version is 3.10.36 I have no problem download the pcap file from <a href="http://198.56.183.230/ar9223.pcap">http://198.56.183.230/ar9223.pcap</a></p></div><div id="comment-34233-info" class="comment-info"><span class="comment-age">(26 Jun '14, 11:56)</span> neodreamer</div></div></div><div id="comment-tools-33994" class="comment-tools"><span class="comments-showing"> showing 5 of 6 </span> <a href="#" class="show-all-comments-link">show 1 more comments</a></div><div class="clear"></div><div id="comment-33994-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

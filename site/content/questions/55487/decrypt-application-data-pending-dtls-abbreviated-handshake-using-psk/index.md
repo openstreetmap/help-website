@@ -1,0 +1,61 @@
++++
+type = "question"
+title = "Decrypt application data pending DTLS abbreviated handshake using PSK"
+description = '''Hi, I try to decrypt application data after an abbreviated handshake on DTLS using PSK (TLS_PSK_WITH_AES_128_CCM_8).  My capture contain the first full handshake followed by decrypted application data.  Then an abbreviated handshake, followed by several application data. Problems:  All the handshake...'''
+date = "2016-09-12T07:03:00Z"
+lastmod = "2017-01-31T09:11:00Z"
+weight = 55487
+keywords = [ "psk", "abbreviated", "dtls", "handshake", "dissector" ]
+aliases = [ "/questions/55487" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Decrypt application data pending DTLS abbreviated handshake using PSK](/questions/55487/decrypt-application-data-pending-dtls-abbreviated-handshake-using-psk)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-55487-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi,</p><p>I try to decrypt application data after an abbreviated handshake on DTLS using PSK (TLS_PSK_WITH_AES_128_CCM_8). My capture contain the first full handshake followed by decrypted application data. Then an abbreviated handshake, followed by several application data.</p><p><strong>Problems:</strong></p><ol><li>All the handshaked messages from abbreviated handshake are considered as Encrypted Handshake Message. (This is not a renegociation, this is an abbreviated handshake (epoch 0), so this should not be considered as an Encrypted Hanshake Message ?)<br />
+</li><li>Application Data can not be decrypted.</li></ol><p>I use wireshark 2.2.0 on debian. I get the same behavior on MacOS same wireshark version.</p><p>I see there is a commit about abbreviated handshake in master : <a href="https://github.com/wireshark/wireshark/commit/10e84a612b629341acd9cd20876517e5bab63d37">https://github.com/wireshark/wireshark/commit/10e84a612b629341acd9cd20876517e5bab63d37</a> I compiled master (v2.3.0rc0-663-gcea1737) and get the same issue.</p><p>Any idea ?</p><p>Simon</p></div><div id="question-tags" class="tags-container tags">psk abbreviated dtls handshake dissector</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>12 Sep '16, 07:03</strong></p><img src="https://secure.gravatar.com/avatar/ea2daf298c30c94bf4fa1608c2028c3b?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="sbern&#39;s gravatar image" /><p>sbern<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="sbern has no accepted answers">0%</span> </br></p></div><div class="post-update-info post-update-info-edited"><p>edited 13 Sep '16, 05:56</p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span></p></div></div><div id="comments-container-55487" class="comments-container"><span id="55519"></span><div id="comment-55519" class="comment"><div id="post-55519-score" class="comment-score"></div><div class="comment-text"><p>Can you post your ssl debug log, or even better can you share a capture in a publicly accessible spot, e.g. <a href="http://cloudshark.org">CloudShark</a>?</p></div><div id="comment-55519-info" class="comment-info"><span class="comment-age">(13 Sep '16, 05:58)</span> grahamb ♦</div></div><span id="55526"></span><div id="comment-55526" class="comment"><div id="post-55526-score" class="comment-score"></div><div class="comment-text"><p>The capture is available <a href="https://framadrop.org/r/iEdP5xJuYX#eH7iUmMEoko6nRDGsOvNoIKsBOVXE8fnWzgjPb6GBr8=">here</a></p></div><div id="comment-55526-info" class="comment-info"><span class="comment-age">(13 Sep '16, 09:39)</span> sbern</div></div><span id="55538"></span><div id="comment-55538" class="comment"><div id="post-55538-score" class="comment-score"></div><div class="comment-text"><p>For decryption issues it would be helpful if you could also include the PSK that can be used to decrypt the pcap.</p></div><div id="comment-55538-info" class="comment-info"><span class="comment-age">(13 Sep '16, 15:31)</span> Lekensteyn</div></div><span id="55554"></span><div id="comment-55554" class="comment"><div id="post-55554-score" class="comment-score"></div><div class="comment-text"><p>Sry, here is the psk value : cf93a7b3e0d86382749ed25a7a2493e3</p></div><div id="comment-55554-info" class="comment-info"><span class="comment-age">(14 Sep '16, 06:01)</span> sbern</div></div><span id="55937"></span><div id="comment-55937" class="comment"><div id="post-55937-score" class="comment-score"></div><div class="comment-text"><p>@grahamb, @Lekensteyn, did you find anything ?</p></div><div id="comment-55937-info" class="comment-info"><span class="comment-age">(28 Sep '16, 02:13)</span> sbern</div></div><span id="55938"></span><div id="comment-55938" class="comment not_top_scorer"><div id="post-55938-score" class="comment-score"></div><div class="comment-text"><p>@sbern Yes, it has something to do with the CCM cipher mode that is in use. I have reproduced a TLS capture with a bunch of AESCCM(8) ciphers and will eventually fix it, but first I'll try to fix an issue with the RSA keys dialog. I will keep you updated.</p></div><div id="comment-55938-info" class="comment-info"><span class="comment-age">(28 Sep '16, 04:30)</span> Lekensteyn</div></div><span id="59133"></span><div id="comment-59133" class="comment not_top_scorer"><div id="post-59133-score" class="comment-score"></div><div class="comment-text"><p>@sbern I found the issue (CCM cipher was not correctly configured) and have a possible fix (but it needs to be polished). Can you open a bugreport at <a href="https://bugs.wireshark.org/bugzilla/">https://bugs.wireshark.org/bugzilla/</a> and upload a sample capture plus PSK? The link you posted is dead.</p></div><div id="comment-59133-info" class="comment-info"><span class="comment-age">(29 Jan '17, 08:00)</span> Lekensteyn</div></div><span id="59145"></span><div id="comment-59145" class="comment not_top_scorer"><div id="post-59145-score" class="comment-score"></div><div class="comment-text"><p>@Lekensteyn, I opened an issue : <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13370">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13370</a></p><p>I'm not totally sure if I uploaded exactly the same capture. I hope this one will do the job.</p></div><div id="comment-59145-info" class="comment-info"><span class="comment-age">(30 Jan '17, 06:00)</span> sbern</div></div></div><div id="comment-tools-55487" class="comment-tools"><span class="comments-showing"> showing 5 of 8 </span> <a href="#" class="show-all-comments-link">show 3 more comments</a></div><div class="clear"></div><div id="comment-55487-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="59184"></span>
+
+<div id="answer-container-59184" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-59184-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Thanks for reporting the bug (<a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13370)!">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13370)!</a></p><p>The issue was that the capture contains a new session on the same source/destination address/port tuple. When decryption is enabled, Wireshark thinks that all following traffic is encrypted. Though in your case, there is actually a new session (which starts unencrypted).</p><p>Under the assumption that traffic is encrypted, Wireshark starts decrypting the traffic which results in garbage (since it was not really encrypted). Hence the confusing "Encrypted Handshake Message" interpretations. Normally the message authentication code (MAC) check would catch this and prevent the garbage from being used, but this check is limited to non-AEAD ciphers in Wireshark 2.2.x.</p><p>Correct validation of the authentication tag for AEAD ciphers like AES-CCM-8 (and also AES-GCM) is added to the current development version (<a href="https://code.wireshark.org/review/gitweb?p=wireshark.git;a=commit;h=17b98fe759be92019af9b870b0f1bc00f0337972">v2.3.0rc0-2204-g8938a311ea</a>) and will interpret the capture correctly. This fix will be released with Wireshark 2.4 (will be released in summer of 2017).</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>31 Jan '17, 09:11</strong></p><img src="https://secure.gravatar.com/avatar/285b1f0f4caadc088a38c40aea22feba?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Lekensteyn&#39;s gravatar image" /><p>Lekensteyn<br />
+<span class="score" title="2213 reputation points"><span>2.2k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="7 badges"><span class="silver">●</span><span class="badgecount">7</span></span><span title="24 badges"><span class="bronze">●</span><span class="badgecount">24</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Lekensteyn has 32 accepted answers">30%</span></p></div></div><div id="comments-container-59184" class="comments-container"></div><div id="comment-tools-59184" class="comment-tools"></div><div class="clear"></div><div id="comment-59184-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

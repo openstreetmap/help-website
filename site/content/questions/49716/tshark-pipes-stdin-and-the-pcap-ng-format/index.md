@@ -1,0 +1,31 @@
++++
+type = "question"
+title = "tshark, pipes (stdin) and the pcap-ng format"
+description = '''I&#x27;ve been using the program sflowtool to process a live stream of sflow packets and dump these packets in a standard pcap format for analysis using tshark. This has been working well, but I need to decorate these packets with additional port information from the sflow packet itself.  To do this I&#x27;ve...'''
+date = "2016-02-02T04:36:00Z"
+lastmod = "2016-02-02T04:36:00Z"
+weight = 49716
+keywords = [ "pipe", "pcap-ng", "tshark", "stdin" ]
+aliases = [ "/questions/49716" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [tshark, pipes (stdin) and the pcap-ng format](/questions/49716/tshark-pipes-stdin-and-the-pcap-ng-format)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-49716-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I've been using the program sflowtool to process a live stream of sflow packets and dump these packets in a standard pcap format for analysis using tshark. This has been working well, but I need to decorate these packets with additional port information from the sflow packet itself.</p><p>To do this I've modified sflowtool to dump packets out in a pcap-ng format, allowing me to add port information using the optional comment in the enhanced packet block. However, tshark doesn't seem to support processing of pcap-ng format via a stdin pipe. I do realise that the tshark man page does mention that "Data read from pipes must be in the standard pcap format", however, the wireshark wiki under the section CaptureSetup/Pipes mentions that:</p><p>"This only works with the de facto standard libpcap format version 2.4, as described in Development/LibpcapFileFormat, and with the standard pcap-ng format"</p><p>Is there something I'm missing? whats the best way for me to process a live feed of pcap-ng formatted packets using tshark?</p><p>Thanks.</p></div><div id="question-tags" class="tags-container tags">pipe pcap-ng tshark stdin</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>02 Feb '16, 04:36</strong></p><img src="https://secure.gravatar.com/avatar/923ec3878f3ae9cff7e9130e9b3d1518?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Fordo&#39;s gravatar image" /><p>Fordo<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Fordo has no accepted answers">0%</span></p></div></div><div id="comments-container-49716" class="comments-container"><span id="49718"></span><div id="comment-49718" class="comment"><div id="post-49718-score" class="comment-score">1</div><div class="comment-text"><p>I've come across the same issue and got no answer to the related part of <a href="https://ask.wireshark.org/questions/45821/ethernet-and-lapd-traffic-in-single-common-capture-file-howto">this question</a>. I've finally decided not to file a "nice to have" bug because practically the importance was low for me (no need to process such captures online).</p><p>But it should not actually be a big issue as both Wireshark and tshark, if set to capture from interfaces rather than read from a file, spawn dumpcap as the actual capturing process and read the data from its output. And a single instance of dumpcap captures packets from several interfaces simultaneously, so it should be sending the data to Wireshark or tshark as pcap-ng. So if you feel like that, file a "nice to have" bug at <a href="https://bugs.wireshark.org/bugzilla/">the Wireshark Bugzilla</a> yourself.</p></div><div id="comment-49718-info" class="comment-info"><span class="comment-age">(02 Feb '16, 05:12)</span> sindy</div></div><span id="49720"></span><div id="comment-49720" class="comment"><div id="post-49720-score" class="comment-score">1</div><div class="comment-text"><p>See <a href="https://www.wireshark.org/lists/wireshark-dev/201507/msg00107.html">https://www.wireshark.org/lists/wireshark-dev/201507/msg00107.html</a> and <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=11370">https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=11370</a></p></div><div id="comment-49720-info" class="comment-info"><span class="comment-age">(02 Feb '16, 06:06)</span> Anders ♦</div></div><span id="49729"></span><div id="comment-49729" class="comment"><div id="post-49729-score" class="comment-score"></div><div class="comment-text"><p>Thanks for both comments. Anders, reading between the lines, it appears that a bug request has been entered but it's of such low priority that nothing is being done about it? Is it possible to raise the priority of this issue as it appears that a number of users are requesting it?</p></div><div id="comment-49729-info" class="comment-info"><span class="comment-age">(02 Feb '16, 07:50)</span> Fordo</div></div><span id="49731"></span><div id="comment-49731" class="comment"><div id="post-49731-score" class="comment-score"></div><div class="comment-text"><p>Like every thing in open source it requires some one to take interest in the mather and spend their free time to implement it.</p></div><div id="comment-49731-info" class="comment-info"><span class="comment-age">(02 Feb '16, 08:05)</span> Anders ♦</div></div></div><div id="comment-tools-49716" class="comment-tools"></div><div class="clear"></div><div id="comment-49716-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

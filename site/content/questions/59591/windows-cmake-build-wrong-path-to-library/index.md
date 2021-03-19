@@ -1,0 +1,60 @@
++++
+type = "question"
+title = "Windows CMake Build - Wrong Path to library"
+description = '''Hello, I am trying to build wireshark for Windows 7. During the build process, CMake finds the modules GMODULE2 and GTHREAD2 in the wrong locations which then causes build/linker errors in the msbuild step. For GMODULE2, CMake finds the following:  /usr/include/glib-2.0;/usr/lib/glib-2.0/include (fo...'''
+date = "2017-02-21T13:39:00Z"
+lastmod = "2017-02-22T05:56:00Z"
+weight = 59591
+keywords = [ "build_error", "glib", "cmake", "build" ]
+aliases = [ "/questions/59591" ]
+osqa_answers = 0
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [Windows CMake Build - Wrong Path to library](/questions/59591/windows-cmake-build-wrong-path-to-library)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-59591-score" class="post-score" title="current number of votes">1</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hello,</p><p>I am trying to build wireshark for Windows 7. During the build process, CMake finds the modules GMODULE2 and GTHREAD2 in the wrong locations which then causes build/linker errors in the msbuild step.</p><p>For GMODULE2, CMake finds the following:</p><ul><li><code>/usr/include/glib-2.0;/usr/lib/glib-2.0/include</code> (for includes)</li><li><code>gmodule-2.0;glib-2.0;intl</code> (for libs)</li></ul><p>However, it should be looking under:</p><ul><li><code>&lt; ws-base-dir &gt;/Wireshark-win64-libs-2.2/gtk2/include/glib-2.0</code> (for includes)</li><li><code>&lt; ws-base-dir &gt;/Wireshark-win64-libs-2.2/gtk2/lib/gmodule-2.0.lib</code> (for libs)</li></ul><p>The same issue occurs for GTHREAD2, but does not occur for other modules such as GLIB2 and GNUTILS.</p><p>Could this have something to do with pkg-config and Cflags in the downloaded Wireshark-win64-libs-2.2/lib/pkgconfig directory? I noticed that there are no Cflags for gmodule-2.0.pc and gthread-2.0.pc, while there are Cflags for other modules such as glib-2.0.pc.</p><p>I'm also open to suggestions as to other possible causes of this problem.</p><p>Thank you</p></div><div id="question-tags" class="tags-container tags">build_error glib cmake build</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>21 Feb '17, 13:39</strong></p><img src="https://secure.gravatar.com/avatar/31b9027065b02d45a08a5e9910e94c89?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="plinli&#39;s gravatar image" /><p>plinli<br />
+<span class="score" title="26 reputation points">26</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="5 badges"><span class="bronze">●</span><span class="badgecount">5</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="plinli has no accepted answers">0%</span></p></div></div><div id="comments-container-59591" class="comments-container"><span id="59611"></span><div id="comment-59611" class="comment"><div id="post-59611-score" class="comment-score"></div><div class="comment-text"><p>I am working with Wireshark 2.2.4. Windows 32 and 64 bits.</p><p>Before running CMake, I set the <code>WIRESHARK_BASE_DIR</code> environment variable to my Wireshark base directory.</p><p>I found that <code>GMODULE2_HINTS</code> is set to the correct module path, but that <code>GMODULE2_INCLUDE_DIRS</code> and <code>GMODULE2_LIBRARIES</code> already have the erroneous libs and includes values prior to calling the <code>find_path()</code> and <code>find_library()</code> functions, respectively. The same occurs for GTHREAD2.</p><p>To clarify, by "Common issues in this area occur because Cygwin or Git user commands have been added to the path", do you mean the Windows environment variable %PATH% or are you referring to an internal CMake variable?</p><p>Also, is there an alternative solution that does not require changing the path?</p><p>Thank you.</p></div><div id="comment-59611-info" class="comment-info"><span class="comment-age">(22 Feb '17, 07:35)</span> plinli</div></div><span id="59616"></span><div id="comment-59616" class="comment"><div id="post-59616-score" class="comment-score">1</div><div class="comment-text"><p>The Windows PATH, but now I think on it I can't actually recall that causing issues with finding libraries and headers, mostly executables.</p><p>I do think it's something in your environment though. I debug these issues by placing CMake <code>message(SEND_ERROR "CMake var xxx is $cmake_var_xxx")</code> into the modules and CMakeLists.txt files.</p><p>Are you sure that you've either removed the offending lines from, or deleted the file entirely, CMakeCache.txt in the build dir before rerunning CMake? CMake won't look anew for things it's already found.</p></div><div id="comment-59616-info" class="comment-info"><span class="comment-age">(22 Feb '17, 09:59)</span> grahamb ♦</div></div><span id="59618"></span><div id="comment-59618" class="comment"><div id="post-59618-score" class="comment-score">1</div><div class="comment-text"><p>Also, don't forget that you can always check the buildbot <code>stdio</code> logs and compare the buildbot's environment, etc. with your own. There are logs for each step by each buidbot, so look at those that are relevant to you. See: <a href="https://buildbot.wireshark.org/wireshark-master/waterfall">https://buildbot.wireshark.org/wireshark-master/waterfall</a></p></div><div id="comment-59618-info" class="comment-info"><span class="comment-age">(22 Feb '17, 11:33)</span> cmaynard ♦♦</div></div><span id="59633"></span><div id="comment-59633" class="comment"><div id="post-59633-score" class="comment-score"></div><div class="comment-text"><p>My Windows %PATH% variable does include Cygwin (specifically, <code>c:\cygwin\bin</code>)</p><p>Even if I remove the build directory including the CMakeCache.txt within it, the errors still occur.</p><p>However, if I call <code>unset(&lt;VAR&gt; CACHE)</code> on the <code>GMODULE2_FOUND</code>, <code>GMODULE2_INCLUDE_DIRS</code> and <code>GMODULE2_LIBRARIES</code> variables, then CMake is able to find the correct paths using the <code>find_path()</code> and <code>find_library()</code> functions.</p><p>I've compared the CMakeCache.txt of the successful and unsuccessful builds and found the following:</p><ul><li><code>GMODULE2_INCLUDE_DIRS:PATH</code> and <code>GMODULE2_LIBRARIES:FILEPATH</code> are defined in the successful build, but do not exists in the erroneous one.</li><li><code>GMODULE2_FOUND:INTERNAL</code>, <code>GMODULE2_INCLUDE_DIRS:INTERNAL</code> and <code>GMODULE2_LIBRARIES:INTERNAL</code> are defined and set to the incorrect values in the failed build and do not exist in the successful one.</li></ul><p>Do you have any ideas as to why this might occur? and why the env vars might be initialized to the wrong values?</p><p>Thanks.</p></div><div id="comment-59633-info" class="comment-info"><span class="comment-age">(23 Feb '17, 08:12)</span> plinli</div></div><span id="59634"></span><div id="comment-59634" class="comment"><div id="post-59634-score" class="comment-score">1</div><div class="comment-text"><p>I guess you should verify that if the Cygwin bin directory is NOT on the path whether the CMake behaviour changes.</p></div><div id="comment-59634-info" class="comment-info"><span class="comment-age">(23 Feb '17, 09:04)</span> grahamb ♦</div></div></div><div id="comment-tools-59591" class="comment-tools"></div><div class="clear"></div><div id="comment-59591-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="59604"></span>
+
+<div id="answer-container-59604" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-59604-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>What version of Wireshark?</p><p>The Windows CMake build doesn't make use of the pkg-config files.</p><p>Wireshark provides a CMake module <code>FindWSWinLibs</code> that adds CMake "hints" for required libraries by searching the Wireshark libraries directory. The directory is specified by use of environment variables <code>WIRESHARK_BASE_DIR</code> or <code>WIRESHARK_LIB_DIR</code> (the latter is an architecture specific version).<br />
+</p><p>These "hints" are then added to the search path for a particular library, and then the CMake <code>find_path()</code> and <code>find_library()</code> calls attempt to locate includes and libs.</p><p>Common issues in this area occur because Cygwin or Git user commands have been added to the path. Can you determine if you do have something on your path that would lead to these erroneous libs and includes?</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>22 Feb '17, 05:56</strong></p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="grahamb has 274 accepted answers">22%</span> </br></p></div></div><div id="comments-container-59604" class="comments-container"><span id="59663"></span><div id="comment-59663" class="comment"><div id="post-59663-score" class="comment-score"></div><div class="comment-text"><p>Removing Cygwin from %PATH% fixed the problem. Thank you.</p></div><div id="comment-59663-info" class="comment-info"><span class="comment-age">(24 Feb '17, 07:59)</span> plinli</div></div><span id="59665"></span><div id="comment-59665" class="comment"><div id="post-59665-score" class="comment-score">1</div><div class="comment-text"><p>@plinli</p><p>I've moved things around so we have a clear answer.</p><p>If an answer has solved your issue, please accept the answer for the benefit of other users by clicking the checkmark icon next to the answer. Please read the FAQ for more information.</p></div><div id="comment-59665-info" class="comment-info"><span class="comment-age">(24 Feb '17, 08:15)</span> grahamb ♦</div></div></div><div id="comment-tools-59604" class="comment-tools"></div><div class="clear"></div><div id="comment-59604-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

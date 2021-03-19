@@ -1,0 +1,65 @@
++++
+type = "question"
+title = "Determine TCP window size / bytes received from Ethernet frame?"
+description = '''my task was to retrieve certain information from this frame. 01 28 c7 f9 6c e2 11 34 b4 c9 ad 20 08 00 45 00 04 ce a2 dd 30 01 48 06 12 2e 9e 41 6e df 80 77 f0 d4 32 77 00 53 01 10 01 11 01 02 21 22 70 14 01 01 10 cd 00 00 02 04 01 04 01 03 03 02 10 01 20 79 ef 21 df e1 12 67 23 12 ae ff ff 45 70 02...'''
+date = "2016-05-03T14:19:00Z"
+lastmod = "2016-05-03T15:39:00Z"
+weight = 52197
+keywords = [ "received", "bytes", "homework", "tcpwindowsize" ]
+aliases = [ "/questions/52197" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Determine TCP window size / bytes received from Ethernet frame?](/questions/52197/determine-tcp-window-size-bytes-received-from-ethernet-frame)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-52197-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>my task was to retrieve certain information from this frame.</p><pre><code>01 28 c7 f9 6c e2 11 34 b4 c9 ad 20 08 00 45 00
+04 ce a2 dd 30 01 48 06 12 2e 9e 41 6e df 80 77
+f0 d4 32 77 00 53 01 10 01 11 01 02 21 22 70 14
+01 01 10 cd 00 00 02 04 01 04 01 03 03 02 10 01
+20 79 ef 21 df e1 12 67 23 12 ae ff ff 45 70 02</code></pre>I was able to pull out header lengths and frag offsets and answer every other question except for Determine the window size and determine total bytes received from host. Even after plugging it into a packet decoder like <a href="https://www.gasmi.net/hpd/">https://www.gasmi.net/hpd/</a><br />
+Any ideas on how to solve for these? Thanks community!</div><div id="question-tags" class="tags-container tags">received bytes homework tcpwindowsize</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>03 May '16, 14:19</strong></p><img src="https://secure.gravatar.com/avatar/867bac396c370ab671a6b47e22d84305?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="murph%20fish&#39;s gravatar image" /><p>murph fish<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="murph fish has no accepted answers">0%</span> </br></p></div><div class="post-update-info post-update-info-edited"><p>edited 03 May '16, 20:14</p><img src="https://secure.gravatar.com/avatar/071fe61f64868d98bdf4eb060b63b6ca?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jim%20Aragon&#39;s gravatar image" /><p>Jim Aragon<br />
+<span class="score" title="7187 reputation points"><span>7.2k</span></span><span title="7 badges"><span class="badge1">●</span><span class="badgecount">7</span></span><span title="33 badges"><span class="silver">●</span><span class="badgecount">33</span></span><span title="118 badges"><span class="bronze">●</span><span class="badgecount">118</span></span></p></div></div><div id="comments-container-52197" class="comments-container"></div><div id="comment-tools-52197" class="comment-tools"></div><div class="clear"></div><div id="comment-52197-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="52204"></span>
+
+<div id="answer-container-52204" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-52204-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>I was assigned a homework assignment</p></blockquote><p>And, given that the purpose of a homework assignment is to determine what the person to whom the assignment was given knows - i.e., what <em>you</em> know - we shouldn't give you an answer, but should point you in the right direction to look for an answer.</p><p>The first 14 bytes of data are the Ethernet header; there's a "type/length" field that indicates what comes after it.</p><p>If it has a value that indicates that it's IPv4, what comes after that is an IPv4 header; that header has a field that indicates what comes after the IPv4 header.</p><p>If that field indicates that it's TCP, what comes after the IPv4 header is a TCP segment header; from that you can determine the information you're looking for.</p><p>Find some descriptions of the headers in question - the text for your class probably either has those descriptions or tells you where to find them - and use them to analyze the packet.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>03 May '16, 15:39</strong></p><img src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Guy%20Harris&#39;s gravatar image" /><p>Guy Harris ♦♦<br />
+<span class="score" title="17443 reputation points"><span>17.4k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">●</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">●</span><span class="badgecount">196</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Guy Harris has 216 accepted answers">19%</span></p></div></div><div id="comments-container-52204" class="comments-container"><span id="52207"></span><div id="comment-52207" class="comment"><div id="post-52207-score" class="comment-score">1</div><div class="comment-text"><p>And, no, editing your question to remove "I was assigned a homework assignment" doesn't mean people won't know you were given a homework assignment. You can't undo that....</p></div><div id="comment-52207-info" class="comment-info"><span class="comment-age">(03 May '16, 18:05)</span> Guy Harris ♦♦</div></div><span id="52228"></span><div id="comment-52228" class="comment"><div id="post-52228-score" class="comment-score"></div><div class="comment-text"><p>^^ I am not looking for an answer here but I need more direction than that. I have no idea where to look for window size and such. I believe it is under options but I can't find it</p></div><div id="comment-52228-info" class="comment-info"><span class="comment-age">(04 May '16, 08:21)</span> murph fish</div></div><span id="52229"></span><div id="comment-52229" class="comment"><div id="post-52229-score" class="comment-score"></div><div class="comment-text"><p>Google on "window size" and see what protocol contains a window size field. In the packet decoder, expand that protocol and inspect ALL the fields.</p><p>Or just expand every section in the protocol decoder one by one and go through the list looking at each field. It's there.</p><p>And since this is a Wireshark Q &amp; A site: It might be easier to load the packets into Wireshark and examine the fields there than using an online protocol decoder.</p></div><div id="comment-52229-info" class="comment-info"><span class="comment-age">(04 May '16, 08:39)</span> Jim Aragon</div></div><span id="52231"></span><div id="comment-52231" class="comment"><div id="post-52231-score" class="comment-score"></div><div class="comment-text"><p>^^ That is the other problem. When loaded into wireshark I get a malformed packet. It doesn't show the TCP segment where I would find the window information.</p></div><div id="comment-52231-info" class="comment-info"><span class="comment-age">(04 May '16, 08:48)</span> murph fish</div></div><span id="52232"></span><div id="comment-52232" class="comment not_top_scorer"><div id="post-52232-score" class="comment-score"></div><div class="comment-text"><p>Well, what <em>does</em> it show in Wireshark? I.e. are some of the layers displayed properly, and only TCP is malformed? How exactly did you "load it into Wireshark"?</p></div><div id="comment-52232-info" class="comment-info"><span class="comment-age">(04 May '16, 12:08)</span> sindy</div></div><span id="52233"></span><div id="comment-52233" class="comment not_top_scorer"><div id="post-52233-score" class="comment-score"></div><div class="comment-text"><p><a href="https://www.gasmi.net/hpd/">https://www.gasmi.net/hpd/</a> turns the packet into something that it hands to the Wireshark dissector. It's reporting some errors, and it's correct to do so.</p><p>You might want to tell the instructor about the problems in that frame.</p></div><div id="comment-52233-info" class="comment-info"><span class="comment-age">(04 May '16, 12:32)</span> Guy Harris ♦♦</div></div><span id="52235"></span><div id="comment-52235" class="comment not_top_scorer"><div id="post-52235-score" class="comment-score"></div><div class="comment-text"><p>Well, my reason for "asking" was to point out that @murph fish may have not chosen the proper encapsulation when importing the frame, but yes, importing it as any other encapsulation type than Ethernet causes it to be dissected even less successfully. Maybe there is a copy-paste error as the dissection shows several distinct issues, not just a single one?</p></div><div id="comment-52235-info" class="comment-info"><span class="comment-age">(04 May '16, 12:57)</span> sindy</div></div><span id="52237"></span><div id="comment-52237" class="comment not_top_scorer"><div id="post-52237-score" class="comment-score"></div><div class="comment-text"><p>@Guy Harris @sindy Thank you both for your replies. This is why I reached out to the forum here. The scenario was host B receives an Ethernet frame from Host A. He then only gave the Ethernet Frame as a hexadecimal string like the one I posted above. No copy and paste mistakes either. If in that case it is confirmed that something is wrong with the data itself then I am happy to accept that answer because I think I am missing info as well. Oh and sindy I loaded it into wireshark using something I found on git hub which worked for other examples but not the one posted above. Thanks again, really appreciate it.</p></div><div id="comment-52237-info" class="comment-info"><span class="comment-age">(04 May '16, 13:18)</span> murph fish</div></div><span id="52239"></span><div id="comment-52239" class="comment"><div id="post-52239-score" class="comment-score">1</div><div class="comment-text"><p>Okay, so let me just draw your attention to the fact that Wireshark can import from hex dump directly, using <code>File -&gt; Import from Hex Dump</code>. The only thing you need to do is to save the hex stream into a text file, replace the end of line characters with spaces, and prepend the resulting single line of hex data with <code>0000</code> (including the space) to indicate the offset of the first byte. If you'd need to import several packets, you'd just leave empty lines between them.</p><p>Using the information obtained from the Wireshark dissection, are you able to explain to your instructor what exactly is wrong with the packet and why the TCP window size cannot be found in it? Maybe that was the actual goal of the assignment :-)</p></div><div id="comment-52239-info" class="comment-info"><span class="comment-age">(04 May '16, 13:29)</span> sindy</div></div></div><div id="comment-tools-52204" class="comment-tools"><span class="comments-showing"> showing 5 of 9 </span> <a href="#" class="show-all-comments-link">show 4 more comments</a></div><div class="clear"></div><div id="comment-52204-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

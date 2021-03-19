@@ -1,0 +1,60 @@
++++
+type = "question"
+title = "display filter for hostname version 1.8.3"
+description = '''I am at a loss. I am trying to do the following as either a capture filter or a display filter and neither works: host pjsip.lab According to everything I have read it looks right, but it won&#x27;t apply. Any help would be great. Robert'''
+date = "2012-10-26T09:41:00Z"
+lastmod = "2012-10-26T18:02:00Z"
+weight = 15295
+keywords = [ "filter", "host", "hostname" ]
+aliases = [ "/questions/15295" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [display filter for hostname version 1.8.3](/questions/15295/display-filter-for-hostname-version-183)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-15295-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I am at a loss. I am trying to do the following as either a capture filter or a display filter and neither works:</p><p>host pjsip.lab</p><p>According to everything I have read it looks right, but it won't apply.</p><p>Any help would be great.</p><p>Robert</p></div><div id="question-tags" class="tags-container tags">filter host hostname</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>26 Oct '12, 09:41</strong></p><img src="https://secure.gravatar.com/avatar/6b4b1c66c5a92060230ce15f680a5625?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Robert11314&#39;s gravatar image" /><p>Robert11314<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Robert11314 has no accepted answers">0%</span></p></div></div><div id="comments-container-15295" class="comments-container"></div><div id="comment-tools-15295" class="comment-tools"></div><div class="clear"></div><div id="comment-15295-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="15299"></span>
+
+<div id="answer-container-15299" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-15299-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>What error message do you get? "host pjsip.lab" is a capture filter, not a display filter. The syntax is valid, but Wireshark must be able to resolve the host name to an IP address. On my computer, Wireshark gives an error because "host.pjsip.lab" does not resolve.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>26 Oct '12, 18:02</strong></p><img src="https://secure.gravatar.com/avatar/071fe61f64868d98bdf4eb060b63b6ca?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jim%20Aragon&#39;s gravatar image" /><p>Jim Aragon<br />
+<span class="score" title="7187 reputation points"><span>7.2k</span></span><span title="7 badges"><span class="badge1">●</span><span class="badgecount">7</span></span><span title="33 badges"><span class="silver">●</span><span class="badgecount">33</span></span><span title="118 badges"><span class="bronze">●</span><span class="badgecount">118</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Jim Aragon has 70 accepted answers">24%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 26 Oct '12, 18:16</p><img src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Guy%20Harris&#39;s gravatar image" /><p>Guy Harris ♦♦<br />
+<span class="score" title="17443 reputation points"><span>17.4k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">●</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">●</span><span class="badgecount">196</span></span></p></div></div><div id="comments-container-15299" class="comments-container"></div><div id="comment-tools-15299" class="comment-tools"></div><div class="clear"></div><div id="comment-15299-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

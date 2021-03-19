@@ -1,0 +1,71 @@
++++
+type = "question"
+title = "how to find missing http response"
+description = '''Hello  i have cap file so how can find those packets which response didn&#x27;t came. Thanks Regards Mudasser'''
+date = "2013-03-18T23:27:00Z"
+lastmod = "2013-03-19T09:47:00Z"
+weight = 19632
+keywords = [ "missing", "http", "response", "find" ]
+aliases = [ "/questions/19632" ]
+osqa_answers = 2
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [how to find missing http response](/questions/19632/how-to-find-missing-http-response)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-19632-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hello i have cap file so how can find those packets which response didn't came.</p><p>Thanks</p><p>Regards Mudasser</p></div><div id="question-tags" class="tags-container tags">missing http response find</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>18 Mar '13, 23:27</strong></p><img src="https://secure.gravatar.com/avatar/606252e8dfea9cac0294fa56234519a1?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="togreatmind&#39;s gravatar image" /><p>togreatmind<br />
+<span class="score" title="1 reputation points">1</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="3 badges"><span class="silver">●</span><span class="badgecount">3</span></span><span title="4 badges"><span class="bronze">●</span><span class="badgecount">4</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="togreatmind has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 19 Mar '13, 10:08</p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span></p></div></div><div id="comments-container-19632" class="comments-container"></div><div id="comment-tools-19632" class="comment-tools"></div><div class="clear"></div><div id="comment-19632-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="19634"></span>
+
+<div id="answer-container-19634" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-19634-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>What protocol you are looking at to find missing response?</p><p>If it is to find missing HTTP response packets for HTTP requests</p><p>One way or analyzing is by going to MENU Statistics &gt; HTTP &gt; Load Distribution and click create stat</p><p>The output gives HTTP Requests to server and HTTP Responses from server where one will get a chance to compare and identify for what request the response is missing.</p><p>The other way is to display tcp.analysis.flags(duplicate acknowledgements,retransmissions,fast retransmissions etc...)which are generated when an error condition occurs.These packets are really helpful in identifying the error zone.You can play with export information in status bar(the bottom pane) to quickly check these error conditions.</p><p>Hope this helps</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>18 Mar '13, 23:52</strong></p><img src="https://secure.gravatar.com/avatar/2b038237e64839261fcc88e9fdef2b68?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="krishnayeddula&#39;s gravatar image" /><p>krishnayeddula<br />
+<span class="score" title="629 reputation points">629</span><span title="35 badges"><span class="badge1">●</span><span class="badgecount">35</span></span><span title="41 badges"><span class="silver">●</span><span class="badgecount">41</span></span><span title="48 badges"><span class="bronze">●</span><span class="badgecount">48</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="krishnayeddula has 3 accepted answers">6%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 19 Mar '13, 09:36</p></div></div><div id="comments-container-19634" class="comments-container"><span id="19640"></span><div id="comment-19640" class="comment"><div id="post-19640-score" class="comment-score"></div><div class="comment-text"><p>I am not able to find those packets which response was missing.means all those packets which dont have response. by mention solution i am not able to find can anyone explain in detail as i am new in wireshark</p><p>Thanks Regards Mudasser</p></div><div id="comment-19640-info" class="comment-info"><span class="comment-age">(19 Mar '13, 05:55)</span> togreatmind</div></div><span id="19643"></span><div id="comment-19643" class="comment"><div id="post-19643-score" class="comment-score"></div><div class="comment-text"><p>what protocol are you interested in? We need to know that as "reponse was missing" has a different meaning for different protocols!!</p></div><div id="comment-19643-info" class="comment-info"><span class="comment-age">(19 Mar '13, 06:38)</span> Kurt Knochner ♦</div></div><span id="19644"></span><div id="comment-19644" class="comment"><div id="post-19644-score" class="comment-score"></div><div class="comment-text"><p>I am asking about HTTP</p></div><div id="comment-19644-info" class="comment-info"><span class="comment-age">(19 Mar '13, 07:06)</span> togreatmind</div></div><span id="19650"></span><div id="comment-19650" class="comment"><div id="post-19650-score" class="comment-score"></div><div class="comment-text"><p>Please try to make this aspect clear in your question "how to find missing HTTP Response" will give a better picture to the reader than "how to find missing response" There are protocols which follows request and response model other than HTTP.</p></div><div id="comment-19650-info" class="comment-info"><span class="comment-age">(19 Mar '13, 08:46)</span> krishnayeddula</div></div></div><div id="comment-tools-19634" class="comment-tools"></div><div class="clear"></div><div id="comment-19634-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="19652"></span>
+
+<div id="answer-container-19652" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-19652-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>I am asking about HTTP</p></blockquote><p>If you mean: There is no HTTP response to a HTTP request, then there is (unfortunately) no easy way to do that in Wireshark, as there is no HTTP protocol flow analysis, similar to TCP SEQ/ACK analysis.</p><p>Can you please add why you need that information (what kind of problem are you analyzing)? Maybe there is a another way to solve your problem.</p><p>One idea: You could write a Lua Listener for HTTP. Within that Listener it would be possible to record all HTTP requests and check if there is a (valid) response for each request. But that coding needs to be done (not very hard, but not very easy either), unless you find some ready to use Lua script for this.</p><p><strong>UPDATE</strong>:</p><p>please check the latest development version.</p><p>According to the answer of @JeffMorris to <a href="http://ask.wireshark.org/questions/19410/how-can-i-see-how-long-takes-from-when-the-http-get-message-was-sent-until-the-http-ok-reply-was-received">this question</a>, there is a functionality (implemented in <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=8287">bug8287</a>) that will calculate the delta time between a HTTP request and the response. That feature might help to identify "missing responses" by filtering/sorting on those delta times.</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>19 Mar '13, 09:47</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div><div class="post-update-info post-update-info-edited"><p>edited 21 Mar '13, 09:40</p></div></div><div id="comments-container-19652" class="comments-container"><span id="19657"></span><div id="comment-19657" class="comment"><div id="post-19657-score" class="comment-score"></div><div class="comment-text"><p>Kurt, Will comparing requests vs responses using Statistics &gt; HTTP &gt; Load Distribution and click create stat can give any slight hint? If the ratio between request and response is not equal to 1 then we can move further to verify whether the object got cached for that particular flow or whether it got lost.If it is lost tcp.analysis can help us to debug further correct?</p></div><div id="comment-19657-info" class="comment-info"><span class="comment-age">(19 Mar '13, 11:18)</span> krishnayeddula</div></div><span id="19659"></span><div id="comment-19659" class="comment"><div id="post-19659-score" class="comment-score"></div><div class="comment-text"><blockquote><p>If the ratio between request and response is not equal to 1</p></blockquote><p>yes, that might/will be a sign for a "missing repsonse" (either not there or not captured!). However, the OP already knows that (or assumes it) and now he/she is looking for a method to find the occurrences in the capture file. Unfortunately there is no simple way (I know of) to find those "missing responses", except the Lua scripting I mentioned. You can also use tshark and some external scripts, but that's just another way of scripting ;-)</p><blockquote><p>If it is lost tcp.analysis can help us to debug further correct?</p></blockquote><p>If you can assume that it got lost, yes. If just the server crashed after it got the request, you won't find the "missing response" with a TCP analysis.</p></div><div id="comment-19659-info" class="comment-info"><span class="comment-age">(19 Mar '13, 13:51)</span> Kurt Knochner ♦</div></div><span id="19716"></span><div id="comment-19716" class="comment"><div id="post-19716-score" class="comment-score"></div><div class="comment-text"><p>see the UPDATE in my answer.</p></div><div id="comment-19716-info" class="comment-info"><span class="comment-age">(21 Mar '13, 09:40)</span> Kurt Knochner ♦</div></div></div><div id="comment-tools-19652" class="comment-tools"></div><div class="clear"></div><div id="comment-19652-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

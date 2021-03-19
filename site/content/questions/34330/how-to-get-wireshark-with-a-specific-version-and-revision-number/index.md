@@ -1,0 +1,59 @@
++++
+type = "question"
+title = "How to get Wireshark with a specific version and revision number?"
+description = '''I&#x27;m trying to get a specific revision (33624) of a specific version (1.1.2) of Wireshark. However, I&#x27;m still not able to find it. It seems it is not in the repository as I searched under the tag section for Wireshark1.1.2 or V1.1.2 and no matches were found. I found it though in the Wireshark all ve...'''
+date = "2014-07-01T14:54:00Z"
+lastmod = "2014-07-01T15:08:00Z"
+weight = 34330
+keywords = [ "git", "checkout", "wireshark", "revision" ]
+aliases = [ "/questions/34330" ]
+osqa_answers = 0
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [How to get Wireshark with a specific version and revision number?](/questions/34330/how-to-get-wireshark-with-a-specific-version-and-revision-number)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-34330-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I'm trying to get a specific revision (33624) of a specific version (1.1.2) of Wireshark. However, I'm still not able to find it.</p><p>It seems it is not in the <a href="https://code.wireshark.org/review/gitweb?p=wireshark.git;a=tags">repository</a> as I searched under the tag section for Wireshark1.1.2 or V1.1.2 and no matches were found. I found it though in the <a href="http://www.wireshark.org/download/src/all-versions/">Wireshark all versions</a> but it seems (from the svnversion.h file contained in the downloaded version) it has revision number 27238 which is not the one that I want.</p><p>I know that by using "clone <a href="https://code.wireshark.org/review/wireshark">https://code.wireshark.org/review/wireshark"</a> I'll get the latest version of Wireshark but how can I get the specific version with the specific revision number that I need.</p><p>Thanks in advance.</p></div><div id="question-tags" class="tags-container tags">git checkout wireshark revision</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>01 Jul '14, 14:54</strong></p><img src="https://secure.gravatar.com/avatar/5642d9fe33d29ee47043f7e5796e67aa?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="flora&#39;s gravatar image" /><p>flora<br />
+<span class="score" title="156 reputation points">156</span><span title="31 badges"><span class="badge1">●</span><span class="badgecount">31</span></span><span title="33 badges"><span class="silver">●</span><span class="badgecount">33</span></span><span title="38 badges"><span class="bronze">●</span><span class="badgecount">38</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="flora has 2 accepted answers">100%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 01 Jul '14, 15:00</p></div></div><div id="comments-container-34330" class="comments-container"></div><div id="comment-tools-34330" class="comment-tools"></div><div class="clear"></div><div id="comment-34330-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="34331"></span>
+
+<div id="answer-container-34331" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-34331-score" class="post-score" title="current number of votes">2</div></div></td><td><div class="item-right"><div class="answer-body"><p>Once you have your clone, type</p><pre><code>git checkout 7ca6e3a655ebe935a1470a51c6498f9c76161905</code></pre><p>This is the revision corresponding to SVN revision 33624.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>01 Jul '14, 15:08</strong></p><img src="https://secure.gravatar.com/avatar/713f24fd877861260b71ecd455018625?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Pascal%20Quantin&#39;s gravatar image" /><p>Pascal Quantin<br />
+<span class="score" title="5544 reputation points"><span>5.5k</span></span><span title="10 badges"><span class="silver">●</span><span class="badgecount">10</span></span><span title="60 badges"><span class="bronze">●</span><span class="badgecount">60</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Pascal Quantin has 92 accepted answers">30%</span></p></div></div><div id="comments-container-34331" class="comments-container"><span id="34335"></span><div id="comment-34335" class="comment"><div id="post-34335-score" class="comment-score"></div><div class="comment-text"><p>Thank you so much for your quick response!</p><p>I tried what you suggested and I got a folder named wireshark. after installing it, I found its version (1.5.0) in the about tab in the help menu. I tried to find the revision number (Just to double check the downloaded is revision number 33624) but I wasn't able to.</p><p>I checked svnversion.h file and found the following content only</p><p>/ <em>#define SVNVERSION ""</em> / / <em>#define SVNPATH ""</em> /</p><p>Do you know other place or way where I could check the revision number for what I just cloned and installed from git?</p></div><div id="comment-34335-info" class="comment-info"><span class="comment-age">(01 Jul '14, 16:49)</span> flora</div></div><span id="34337"></span><div id="comment-34337" class="comment"><div id="post-34337-score" class="comment-score"></div><div class="comment-text"><p>This hash does correspond to SVN revision 33624. You can double check it by typing "git log -r 7ca6e3a655ebe935a1470a51c6498f9c76161905". The svn-&gt;git conversion is adding the subversion number in the comments.</p><p>svnversion.h cannot be generated properly has you are working on a git clone and not a subversion one. And by that time git support was not here.</p><p>It seems that the revision you asked for does not correspond to a commit in 1.1.X branch. You should double check which revision you need.</p></div><div id="comment-34337-info" class="comment-info"><span class="comment-age">(01 Jul '14, 23:39)</span> Pascal Quantin</div></div><span id="34340"></span><div id="comment-34340" class="comment"><div id="post-34340-score" class="comment-score"></div><div class="comment-text"><p>Thanks for your explanation. In deed, I'm testing a five years old patch for Wireshark. In the patch file the mentioned revision number is (336424). In a related README file about it, the patch's author mentioned wireshark version 1.1.2 revision number (27128). I've these two questions now:</p><p>Q1: Are the revision numbers unique across all branches? Is it possible for a specific number to represent two different commits in two different branches?</p><p>Q2: How did you get that hash? Is it complicated to get it? It seems that I need to get also the commit that corresponds to revision number(27128)</p><p>Thank you so much your are saving me a lot of time!</p></div><div id="comment-34340-info" class="comment-info"><span class="comment-age">(02 Jul '14, 01:53)</span> flora</div></div><span id="34342"></span><div id="comment-34342" class="comment"><div id="post-34342-score" class="comment-score"></div><div class="comment-text"><p>subversion revision numbers are unique within a repository, so two branches within the same repository cannot have the same revision number. There is something wrong with this README file.</p><p>to search for a revision, the easiest is probably to launch gitk and type "27128" in the search box. it will highlight all the commits containing this string.</p></div><div id="comment-34342-info" class="comment-info"><span class="comment-age">(02 Jul '14, 02:03)</span> Pascal Quantin</div></div><span id="34343"></span><div id="comment-34343" class="comment"><div id="post-34343-score" class="comment-score"></div><div class="comment-text"><p>SVN repository revision numbers are valid across the whole repository, i.e. all branches. They indicate a state of the repo.</p><p>Git hashes indicate "The hash of the git tree that represents the whole repository at the time of the commit". See <a href="http://www.gitguys.com/topics/commits-and-referring-to-commits/">http://www.gitguys.com/topics/commits-and-referring-to-commits/</a></p><p>In Jan 2014 we moved from svn to git, the git repo tracked the entire svn history as indicated by @Pascal.</p></div><div id="comment-34343-info" class="comment-info"><span class="comment-age">(02 Jul '14, 02:12)</span> grahamb ♦</div></div><span id="34366"></span><div id="comment-34366" class="comment not_top_scorer"><div id="post-34366-score" class="comment-score"></div><div class="comment-text"><p>Thanks Pascal and grahamb for your clear explanations. I like the gitk tool. I've never used it before and I found it useful.</p></div><div id="comment-34366-info" class="comment-info"><span class="comment-age">(02 Jul '14, 15:39)</span> flora</div></div><span id="34381"></span><div id="comment-34381" class="comment not_top_scorer"><div id="post-34381-score" class="comment-score"></div><div class="comment-text"><p>I've also just discovered <code>git log --grep=&lt;pattern&gt;</code> to use a regular expression for searching commit messages.</p></div><div id="comment-34381-info" class="comment-info"><span class="comment-age">(03 Jul '14, 04:39)</span> grahamb ♦</div></div></div><div id="comment-tools-34331" class="comment-tools"><span class="comments-showing"> showing 5 of 7 </span> <a href="#" class="show-all-comments-link">show 2 more comments</a></div><div class="clear"></div><div id="comment-34331-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

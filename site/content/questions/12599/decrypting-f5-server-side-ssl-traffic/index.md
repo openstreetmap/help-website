@@ -1,0 +1,87 @@
++++
+type = "question"
+title = "Decrypting F5 Server side SSL Traffic"
+description = '''Im a beginner in decrypting SSL traffic but im able to decrypt normal client to server SSL traffic. The problem im encountering is when I try to decrypt SSL traffic bridged from an F5 to the Server. I was expecting the F5 to just re-established the connection in the same method as a client to the F5...'''
+date = "2012-07-11T03:15:00Z"
+lastmod = "2012-07-11T04:17:00Z"
+weight = 12599
+keywords = [ "ssl", "https", "f5", "bridged", "decryption" ]
+aliases = [ "/questions/12599" ]
+osqa_answers = 2
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Decrypting F5 Server side SSL Traffic](/questions/12599/decrypting-f5-server-side-ssl-traffic)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-12599-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Im a beginner in decrypting SSL traffic but im able to decrypt normal client to server SSL traffic. The problem im encountering is when I try to decrypt SSL traffic bridged from an F5 to the Server. I was expecting the F5 to just re-established the connection in the same method as a client to the F5.</p><p>All I see are:</p><pre><code>TLSv1 Client Hello
+TLSv1 Server Hello
+TLSv1 Change Cipher Spec
+TLSv1 Encrypted Handshake Message</code></pre><p>What I normally see is:</p><pre><code>TLSv1    Client Hello
+TLSv1    Server Hello
+TLSv1    Client Key Exchange, Change Cipher Spec
+TLSv1    Change Cipher Spec, Finished
+TLSv1    Certificate, Server Hello Done</code></pre><p>The purpose of this is I want to diagnose encrypted health checks to see why they failing. Any Ideas? Thanks for your Help.</p></div><div id="question-tags" class="tags-container tags">ssl https f5 bridged decryption</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>11 Jul '12, 03:15</strong></p><img src="https://secure.gravatar.com/avatar/922434b5387a9532b68519b4d3d0c8ea?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Fishlogic&#39;s gravatar image" /><p>Fishlogic<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Fishlogic has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 11 Jul '12, 05:24</p><img src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="SYN-bit&#39;s gravatar image" /><p>SYN-bit ♦♦<br />
+<span class="score" title="17094 reputation points"><span>17.1k</span></span><span title="9 badges"><span class="badge1">●</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">●</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">●</span><span class="badgecount">245</span></span></p></div></div><div id="comments-container-12599" class="comments-container"></div><div id="comment-tools-12599" class="comment-tools"></div><div class="clear"></div><div id="comment-12599-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="12609"></span>
+
+<div id="answer-container-12609" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-12609-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>The difference in the SSL Handshake is caused by the fact that the F5 reuses the initial full SSL handshake to the server and therefor only uses a short handshake to the server to not overload it. That's why you don't see the ClientKeyExchange message. And because you don't have the ClientKeyExchange, you can't do decryption.</p><p>You can change the ServerSSL profile to not cache SSL sessions for troubleshooting purposes. But beware that this will increase the CPU load on the server as each SSL session from the F5 to the server will now need to do a full SSL handshake which is very CPU intensive.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>11 Jul '12, 04:17</strong></p><img src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="SYN-bit&#39;s gravatar image" /><p>SYN-bit ♦♦<br />
+<span class="score" title="17094 reputation points"><span>17.1k</span></span><span title="9 badges"><span class="badge1">●</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">●</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">●</span><span class="badgecount">245</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="SYN-bit has 174 accepted answers">20%</span></p></div></div><div id="comments-container-12609" class="comments-container"><span id="12630"></span><div id="comment-12630" class="comment"><div id="post-12630-score" class="comment-score"></div><div class="comment-text"><p>Thanks I saw your answer just as I posted the other one, caching turned off and captures being taken as I type..</p></div><div id="comment-12630-info" class="comment-info"><span class="comment-age">(11 Jul '12, 06:29)</span> Fishlogic</div></div><span id="12631"></span><div id="comment-12631" class="comment"><div id="post-12631-score" class="comment-score"></div><div class="comment-text"><p>You're welcome, I hope it will solve your issue!</p><p>I converted your answer to a comment. Please review the FAQ of this site and use "Add new Comment" instead of posting a new answer when you respond to an answer or comment. That's how this site works best...</p></div><div id="comment-12631-info" class="comment-info"><span class="comment-age">(11 Jul '12, 06:46)</span> SYN-bit ♦♦</div></div><span id="12634"></span><div id="comment-12634" class="comment"><div id="post-12634-score" class="comment-score"></div><div class="comment-text"><p>Caching turned off but im still recieving the same traffic in the capture, Cache Size set to 0. Does the VIP need to be diabled / enabled after the cache is disabled?</p></div><div id="comment-12634-info" class="comment-info"><span class="comment-age">(11 Jul '12, 08:31)</span> Fishlogic</div></div><span id="12638"></span><div id="comment-12638" class="comment"><div id="post-12638-score" class="comment-score"></div><div class="comment-text"><p>Does the ClientHello from the F5 to the backend server have a SessionID (so SessionIdLength &gt; 0)? If so, the F5 is indeed reusing an older session. I would expect that change to be active inmediately. However I'm not sure. I would need to check on my LTM-VE.</p></div><div id="comment-12638-info" class="comment-info"><span class="comment-age">(11 Jul '12, 14:03)</span> SYN-bit ♦♦</div></div><span id="12639"></span><div id="comment-12639" class="comment"><div id="post-12639-score" class="comment-score"></div><div class="comment-text"><p>I just read your question again, are you troubleshooting production traffic or the health checks? If you are trying to decrypt the health checks (monitors), then you can only make the F5 stop reusing the old SSL session by turning of caching on the server side.</p></div><div id="comment-12639-info" class="comment-info"><span class="comment-age">(11 Jul '12, 14:43)</span> SYN-bit ♦♦</div></div><span id="12640"></span><div id="comment-12640" class="comment not_top_scorer"><div id="post-12640-score" class="comment-score"></div><div class="comment-text"><p>Or you can capture long enough to get a full handshake. On my server I needed to wait 300 seconds for a new full handshake (from my apache config: SSLSessionCacheTimeout 300)</p></div><div id="comment-12640-info" class="comment-info"><span class="comment-age">(11 Jul '12, 15:21)</span> SYN-bit ♦♦</div></div></div><div id="comment-tools-12609" class="comment-tools"><span class="comments-showing"> showing 5 of 6 </span> <a href="#" class="show-all-comments-link">show 1 more comments</a></div><div class="clear"></div><div id="comment-12609-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="12601"></span>
+
+<div id="answer-container-12601" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-12601-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>I was expecting the F5 to just re-established the connection in the same method as a client to the F5.</p></blockquote><p>That's not the case. It depends on the settings in th "client ssl profile" (frontend) and the "sever ssl profile" (backend).</p><blockquote><p>The problem im encountering is when I try to decrypt SSL traffic bridged from an F5 to the Server</p></blockquote><p>If you want to decrypt the SSL/TLS session between the loadbalancer and the nodes, you need to have the private key, installed on the nodes, unless it's the same as the one installed on the load balancer. Furthermore, you must ensure, that the loadbalancer is NOT using any SSL/TLS ciphers with DH (Diffie Hellman) authentication, as you cannot decrypt that. You need to change the CIPHERS in the "server ssl profile" (the one you configured for the virtual server). See the <a href="http://support.f5.com/kb/en-us/solutions/public/13000/100/sol13171.html">F5 SOL13171</a>.</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>11 Jul '12, 03:42</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div></div><div id="comments-container-12601" class="comments-container"><span id="12616"></span><div id="comment-12616" class="comment"><div id="post-12616-score" class="comment-score"></div><div class="comment-text"><p>The same cert/key is used on the nodes and the 'server ssl profile'.</p><p>Does the following mean it's using them all ?</p><pre><code>Parameter Definition 
+!SSLv2    Do not use SSL version 2 
+ALL       Use all SSL ciphers in the default SSL stack 
+!DH       Do not use DH ciphers 
+!ADH      Do not use ADH ciphers 
+!EDH      Do not use EDH ciphers 
+!MD5      Do not use MD5 ciphers 
+!EXPORT   Do not use EXPORT grade (weak) ciphers 
+!DES      Do not use DES ciphers 
+@SPEED    Order the cipher preference by speed</code></pre><p>The node to F5 'TLSv1 Record Layer: Handshake Protocol: Server Hello' is using the following</p><p>Cipher Suite: TLS_RSA_WITH_AES_128_CBC_SHA</p><p>I also Found this on Dev Central which kind of explains what im seeing still doesnt tell me if i can decrypt it though</p><p>"The server can decrypt stuff from the F5 (Client) because the shared session key (That's actually used to encrypt the traffic) is negotiated as part of the key exchange where the server uses it's own private key. The client side key doesn't get involved). The session between the LTM and the server is a completely different TLS (Or SSL) session from the client - LTM connection."</p></div><div id="comment-12616-info" class="comment-info"><span class="comment-age">(11 Jul '12, 05:07)</span> Fishlogic</div></div><span id="12621"></span><div id="comment-12621" class="comment"><div id="post-12621-score" class="comment-score"></div><div class="comment-text"><p>(I converted your answer to a comment, please see the FAQ for more details)</p><p>The ciphersuite is not the issue here, please see my answer below...</p></div><div id="comment-12621-info" class="comment-info"><span class="comment-age">(11 Jul '12, 05:23)</span> SYN-bit ♦♦</div></div><span id="12628"></span><div id="comment-12628" class="comment"><div id="post-12628-score" class="comment-score"></div><div class="comment-text"><blockquote><p>Does the following mean it's using them all ?</p></blockquote><p>the ! means logical NOT. So it's NOT using any of them.</p><blockquote><p>Cipher Suite: TLS_RSA_WITH_AES_128_CBC_SHA</p></blockquote><p>As SYN-Bit said, in this case the cipher is not your problem.</p><blockquote><p>because the shared session key (That's actually used to encrypt the traffic) <strong>is negotiated as part of the key exchange</strong> where the server uses it's own private key</p></blockquote><p>that's the reason why you can't decrpyt it. See answer of SNY-Bit.</p><p>Anyway, IF the server uses a different private key than the one you imported into the loadbalancer, please use the key of the server to decrypt the communication between the lodabalancer and the node.</p></div><div id="comment-12628-info" class="comment-info"><span class="comment-age">(11 Jul '12, 06:15)</span> Kurt Knochner ♦</div></div><span id="12636"></span><div id="comment-12636" class="comment"><div id="post-12636-score" class="comment-score"></div><div class="comment-text"><p>Sorry have quite got the hang of the Forum ... What about</p><p>ALL Use all SSL ciphers in the default SSL stack</p></div><div id="comment-12636-info" class="comment-info"><span class="comment-age">(11 Jul '12, 08:53)</span> Fishlogic</div></div></div><div id="comment-tools-12601" class="comment-tools"></div><div class="clear"></div><div id="comment-12601-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

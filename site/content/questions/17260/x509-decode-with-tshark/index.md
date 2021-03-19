@@ -1,0 +1,87 @@
++++
+type = "question"
+title = "x509 decode with tshark"
+description = '''Hello. I have a great problem using tshark. A have a pcap file with SSL certificate. After pressing «Decode as -&amp;gt; Certificate » in Wireshark i see something like picture below. Every field have its real name.  But when im trying to open and decode this cert file in tshark – a see something like t...'''
+date = "2012-12-27T02:14:00Z"
+lastmod = "2012-12-27T02:41:00Z"
+weight = 17260
+keywords = [ "decode", "x509", "tshark" ]
+aliases = [ "/questions/17260" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [x509 decode with tshark](/questions/17260/x509-decode-with-tshark)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-17260-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p><strong>Hello. I have a great problem using tshark. A have a pcap file with SSL certificate. After pressing «Decode as -&gt; Certificate » in Wireshark i see something like picture below. Every field have its real name.</strong></p><p><img src="https://osqa-ask.wireshark.org/upfiles/rrr.jpg" alt="alt text" /></p><p><strong>But when im trying to open and decode this cert file in tshark – a see something like the next picture – fields are decoded correctly, but I don`t see field names – <em>subjectPublicKey</em> e.t.c! I start tshark with a command like this:</strong></p><p><strong>C:\ tshark.exe –r D:\cert.cap -d ber.syntax==,x509af -T pdml -V &gt; <a href="http://res.txt">res.txt</a></strong></p><pre><code>    &lt;**field name=&quot;&quot;** show=&quot;SEQUENCE&quot; size=&quot;137&quot; pos=&quot;34&quot; value=&quot;310b3009060355040613023836310f300d0603550408130666756a69616e310f300d060355040713067869616d656e3110300e060355040a13077965616c696e6b31143012060355040b130b646576656c6f706d656e743110300e060355040313077965616c696e6b311e301c06092a864886f70d010901160f787978407965616c696e6b2e636f6d&quot;&gt;
+      &lt;**field name=&quot;&quot;** show=&quot;SET&quot; size=&quot;15&quot; pos=&quot;49&quot; value=&quot;300d0603550408130666756a69616e&quot;&gt;
+        &lt;**field name=&quot;&quot;** show=&quot;SEQUENCE&quot; size=&quot;13&quot; pos=&quot;51&quot; value=&quot;0603550408130666756a69616e&quot;&gt;
+          &lt;field name=&quot;ber.unknown.OID&quot; showname=&quot;OID: 2.5.4.8 (id-at-stateOrProvinceName)&quot; size=&quot;3&quot; pos=&quot;53&quot; show=&quot;2.5.4.8&quot; value=&quot;550408&quot;/&gt;
+          &lt;field name=&quot;ber.unknown.PrintableString&quot; showname=&quot;PrintableString: fujian&quot; size=&quot;6&quot; pos=&quot;58&quot; show=&quot;fujian&quot; value=&quot;66756a69616e&quot;/&gt;
+      &lt;field name=&quot;&quot; show=&quot;SET&quot; size=&quot;15&quot; pos=&quot;66&quot; value=&quot;300d060355040713067869616d656e&quot;&gt;
+        &lt;field name=&quot;&quot; show=&quot;SEQUENCE&quot; size=&quot;13&quot; pos=&quot;68&quot; value=&quot;060355040713067869616d656e&quot;&gt;
+          &lt;field name=&quot;ber.unknown.OID&quot; showname=&quot;OID: 2.5.4.7 (id-at-localityName)&quot; size=&quot;3&quot; pos=&quot;70&quot; show=&quot;2.5.4.7&quot; value=&quot;550407&quot;/&gt;</code></pre>&lt;/pdml&gt;<p>****Please, answer me, how can I decode x509 certificate in tshark and take all information about certificate in the output file. Please write example of a command for tshark for x509 certificate!</p><p>It is very important for me – I`ve been trying to find answer during 3 weeks – but results are still next to zero! With a great regards, Dmitriy.****</p></div><div id="question-tags" class="tags-container tags">decode x509 tshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>27 Dec '12, 02:14</strong></p><img src="https://secure.gravatar.com/avatar/873f9ebc712f66b3f98cf4a2c13d68e7?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="pemolux&#39;s gravatar image" /><p>pemolux<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="pemolux has no accepted answers">0%</span></p></img></div></div><div id="comments-container-17260" class="comments-container"></div><div id="comment-tools-17260" class="comment-tools"></div><div class="clear"></div><div id="comment-17260-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="17261"></span>
+
+<div id="answer-container-17261" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-17261-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>The best you can do in tshark is to run one of these commands and parse the output.</p><blockquote><p><code>tshark -nr ssl.pcap -R "ssl.handshake.certificates"  -T pdml</code><br />
+<code>tshark -nr ssl.pcap -R "ssl.handshake.certificates"  -V</code><br />
+</p></blockquote><p>The will contain all you are interested in. The 'fields' may differ in format and naming, but they are all there.</p><p>BTW: What is your tshark version (tshark -v). You may need to upgrade to get the full functionality!</p><p><strong>UPDATE</strong></p><p>after some conversation, I figured out that a certificate file (test.cer) was loaded into Wireshark.</p><blockquote><p>I have a certificate - I post my real test certificate here (<a href="http://files.mail.ru/U9AG66)">http://files.mail.ru/U9AG66)</a></p></blockquote><p>well that is a <strong>certificate</strong> and <strong>not a pcap</strong> file. Wireshark is absolutely the wrong tool to decode that file.</p><p>What you need is <strong>openssl</strong></p><blockquote><p><code>openssl x509 -inform der -in test.cer -text</code><br />
+</p></blockquote><p>You can download it from <a href="http://www.openssl.org/related/binaries.html">openssl.org</a> (windows) your by installing it with our standard linux package manager (apt-get, yum. etc.)</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>27 Dec '12, 02:41</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></br></p></div><div class="post-update-info post-update-info-edited"><p>edited 27 Dec '12, 23:27</p></div></div><div id="comments-container-17261" class="comments-container"><span id="17262"></span><div id="comment-17262" class="comment"><div id="post-17262-score" class="comment-score"></div><div class="comment-text"><p>Thank you for your answe, Kurt! I use the latest stable version 1.8.4. I has tried your commands, but nothing new... I don't see any field names - only their values, as i see before.</p></div><div id="comment-17262-info" class="comment-info"><span class="comment-age">(27 Dec '12, 03:47)</span> pemolux</div></div><span id="17264"></span><div id="comment-17264" class="comment"><div id="post-17264-score" class="comment-score"></div><div class="comment-text"><p>strange, I do see all of them. They are indeed 'encoded', but easy to parse.</p><p><strong>My example</strong>: SSL/TLS on google</p><blockquote><p><code>https://www.cloudshark.org/captures/3d893662f9fe</code><br />
+</p></blockquote><p><strong>Output of</strong> <code>tshark -nr google_ssl.pcap -R "ssl.handshake.certificates"  -T pdml</code><br />
+</p><blockquote><p><code>http://pastebin.com/sfDfd7GK</code><br />
+</p></blockquote><p><strong>Output of</strong> <code>tshark -nr google_ssl.pcap -R "ssl.handshake.certificates"  -V</code><br />
+</p><blockquote><p><code>http://pastebin.com/SWmscAX2</code><br />
+</p></blockquote><p>If you look at that output, what are you missing?</p></div><div id="comment-17264-info" class="comment-info"><span class="comment-age">(27 Dec '12, 05:00)</span> Kurt Knochner ♦</div></div><span id="17268"></span><div id="comment-17268" class="comment"><div id="post-17268-score" class="comment-score"></div><div class="comment-text"><p>Thanks! I don`t see values "name" - first values of "field". For example - container</p><p><strong>field name="x509af.subjectPublicKeyInfo" showname="subjectPublicKeyInfo" size="162" pos="264" show="" value=""</strong></p><p>i see like a</p><p><strong>field name="" showname="" size="162" pos="264" show="" value=""</strong></p><p>More the over, when try to parse certificate with your command, tshark don`t print any results. When I try to parse with option -d ber.syntax==,x509af, as I wrote before - it works, but do not print field names.</p><p>Could you try to parse your cert with my code sample? <strong>C:\ tshark.exe –r D:\cert.cap -d ber.syntax==,x509af -T pdml -V &gt; <a href="http://res.txt">res.txt</a></strong></p><p>It`s very interest for me - will my problem repeat on your computer?</p><p>With Great Regards, Dmitriy</p></div><div id="comment-17268-info" class="comment-info"><span class="comment-age">(27 Dec '12, 05:27)</span> pemolux</div></div><span id="17272"></span><div id="comment-17272" class="comment"><div id="post-17272-score" class="comment-score">1</div><div class="comment-text"><blockquote><p>Thanks! I don`t see values "name" - first values of "field". For example - container</p></blockquote><p>well, I do see them:</p><p>from: <code>http://pastebin.com/sfDfd7GK</code><br />
+</p><p><strong>issuer:</strong> <code>&lt;field name="x509af.issuer" showname="issuer: rdnSequence (0)" size="72" pos="55" show="0"</code><br />
+<strong>validity:</strong> <code>&lt;field name="x509af.validity" showname="validity" size="32" pos="127" show="" value=""</code><br />
+<strong>not Before:</strong> <code>&lt;field name="x509af.notBefore" showname="notBefore: utcTime (0)" size="15" pos="129" show="0" value="</code></p><p>from: <code>http://pastebin.com/SWmscAX2</code><br />
+</p><p><strong>issuer</strong>: <code>issuer: rdnSequence (0)</code><br />
+<strong>validity</strong>:</p><pre><code>                       validity
+                            notBefore: utcTime (0)
+                                utcTime: 04-05-13 00:00:00 (UTC)
+                            notAfter: utcTime (0)
+                                utcTime: 14-05-12 23:59:59 (UTC)</code></pre><p>You just need to extract the data of those fields. The format is different with <code>-V</code> and <code>-T pdml</code>, but the content is the same.</p><p>So again, what is exactly missing in the output of tshark?<br />
+</p><blockquote><p>More the over, when try to parse certificate with your command, tshark don`t print any results.</p></blockquote><p>some questions:</p><ul><li>Did you check my sample files, or did you try to re-create the output with your capture file?</li><li>is your sample a HTTPS connection or something different?</li><li>Does it use the standard port 443 or a different port (you mentioned 'decode as')?</li><li>Can you post your capture file somewhere?</li></ul><blockquote><p>Could you try to parse your cert with my code sample? C:\ tshark.exe –r D:\cert.cap -d ber.syntax==,x509af -T pdml -V &gt; <a href="http://res.txt">res.txt</a></p></blockquote><p>The output is the same as with my command, just a lot more, as you did not restrict it to 'ssl.handshake.certificate'.</p></div><div id="comment-17272-info" class="comment-info"><span class="comment-age">(27 Dec '12, 06:36)</span> Kurt Knochner ♦</div></div><span id="17276"></span><div id="comment-17276" class="comment"><div id="post-17276-score" class="comment-score"></div><div class="comment-text"><p>First of all, take my regards for your help!</p><p>My real situation descrided below:</p><p>1) I have a certificate - I post my real test certificate here (<a href="http://files.mail.ru/U9AG66)">http://files.mail.ru/U9AG66)</a></p><p>2) If I change it`s extension to *.pcap, then open this file with WireShark, then make "Decode as... -&gt; Certificate" - I will have good result, something like the first picture in my first post.</p><p><strong>Now I want take the same results by tshark for this test.pcap file.</strong></p><p>3) I start tshark with my command: <strong>C:\Program Files\Wireshark\tshark.exe –r D:\cert.pcap -d ber.syntax==,x509af -T pdml -V &gt; <a href="http://res.txt">res.txt</a></strong></p><p>Here is the value of <a href="http://res.txt">res.txt</a> - <a href="http://pastebin.com/EUVcpjXd">http://pastebin.com/EUVcpjXd</a></p><p>4) I start tshark with your command: <strong>C:\Program Files\Wireshark\tshark.exe -nr D:\cert.pcap -R "ssl.handshake.certificates" -T pdml &gt; <a href="http://res.txt">res.txt</a></strong></p><p>Here is the value of <a href="http://res.txt">res.txt</a> - <a href="http://pastebin.com/qdFDaNGX">http://pastebin.com/qdFDaNGX</a></p><p><strong>As you can see the first sample have not field names. The second sample don`t have any decoded values at all. This is the real situation and I want find design for THIS situation. I could try to parse it without field names, but it will became a big problem</strong></p></div><div id="comment-17276-info" class="comment-info"><span class="comment-age">(27 Dec '12, 11:29)</span> pemolux</div></div><span id="17277"></span><div id="comment-17277" class="comment not_top_scorer"><div id="post-17277-score" class="comment-score"></div><div class="comment-text"><blockquote><p>1) I have a certificate - I post my real test certificate here (<a href="http://files.mail.ru/U9AG66)">http://files.mail.ru/U9AG66)</a></p></blockquote><p><strong>well</strong> that is a <strong>certificate</strong> and <strong>not a pcap</strong> file. <strong>Wireshark</strong> is absolutely the <strong>wrong tool</strong> to decode that file.</p><p>What you need is <strong>openssl</strong></p><blockquote><p><code>openssl x509 -inform der -in test.cer -text</code><br />
+</p></blockquote><p>You can download it from <a href="http://www.openssl.org/related/binaries.html">openssl.org</a> (windows) your by installing it with our standard linux package manager (apt-get, yum. etc.)</p><p>Regards<br />
+Kurt</p></div><div id="comment-17277-info" class="comment-info"><span class="comment-age">(27 Dec '12, 11:37)</span> Kurt Knochner ♦</div></div></div><div id="comment-tools-17261" class="comment-tools"><span class="comments-showing"> showing 5 of 6 </span> <a href="#" class="show-all-comments-link">show 1 more comments</a></div><div class="clear"></div><div id="comment-17261-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

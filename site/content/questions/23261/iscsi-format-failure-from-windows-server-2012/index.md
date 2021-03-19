@@ -1,0 +1,126 @@
++++
+type = "question"
+title = "iSCSI Format Failure from Windows Server 2012"
+description = '''I don&#x27;t expect anyone to be able to help me with this, but I didn&#x27;t expect any help last time I posted a message yet was pleasantly surpised to get a very spot-on answer. This one is a bit tougher though.  I&#x27;ve been working on an iSCSI server, mostly just for fun. Been chipping away at it in my spar...'''
+date = "2013-07-22T15:36:00Z"
+lastmod = "2016-11-14T04:48:00Z"
+weight = 23261
+keywords = [ "windows", "iscsi", "format", "scsi", "2012" ]
+aliases = [ "/questions/23261" ]
+osqa_answers = 6
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [iSCSI Format Failure from Windows Server 2012](/questions/23261/iscsi-format-failure-from-windows-server-2012)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-23261-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I don't expect anyone to be able to help me with this, but I didn't expect any help last time I posted a message yet was pleasantly surpised to get a very spot-on answer.</p><p>This one is a bit tougher though.<br />
+</p><p>I've been working on an iSCSI server, mostly just for fun. Been chipping away at it in my spare time. I've managed to get through a lot of things. The Device is seen by Windows Server 2012. I can connect to it. I can initialize a disk. I can create partitions on the disk as far as I can tell (windows's own cache could be lying to itself about some of those things). But the actual formatting of the volume is where I run into trouble.<br />
+</p><p>I've implemented all forms of ModeSense, ReadCapacity, Read, Write, Data-In, and Data-out. Also implemented a task-management class which seems to be functioning as intended.... but by golly, I just have no idea why this is still failing.</p><p>Some clues and relevant information:<br />
+1) For starters, <a href="http://files.digitaltundra.com/iscsi-bad-format.pcapng">here's the capture</a></p><p>2) Windows Server 2012 Successfully completes the "Gather information" step and the "Create new partition" step, but during the "Format Volume" Step reports "Failed to format volume - One or more parameter values passed to the method were invalid."</p><p>3) The failure occurs immediately AFTER Packet Number 6384 which I verified with breakpoints.<br />
+4) Packet 6384 is the longest Read operation during the process (128 blocks -- 65536 bytes).<br />
+5) This Read operation follows a write operation to the same LBA of the same length (128 blocks -- 65536 bytes)<br />
+6) The write operation is also the longest write operation of the entire process up to the point of failure. It is the first write operation to be &gt;= 128 blocks.<br />
+7) There are other multi-block read and write operations that do not return errors, which to the best of my knowledge point the finger away from the Task-management system. I'll try to briefly and succinctly describe how the task management system works<br />
+7a).The long writes will send up to 8192 bytes in the first request, but the "Final" flag in the PDU will NOT be set.<br />
+7b). The Absense of the "Final" flag causes a task to be registered in a list, indexed by the "InitiatorTaskTag"<br />
+7c). "DataOut" PDUs follow the Write request and reference the InitiatorTAskTag which keeps information about the origin of the write request. The data-out packets are written using an offset of the original Task.<br />
+7d). If the DataOut packet has the "Final" flag set, the task is cleared at the end of its operation.<br />
+<br />
+</p><p>All of that internal stuff kinda seems to be working, but the format still fails. I've been looking at this problem for quite some time and I'm out of ideas and will need to shelve it for a while. Unfortunately, I think that any one of these 6000+ packets could potentially be causing the problem. I wish windows would just tell me WHICH parameter is incorrect.<br />
+</p></div><div id="question-tags" class="tags-container tags">windows iscsi format scsi 2012</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>22 Jul '13, 15:36</strong></p><img src="https://secure.gravatar.com/avatar/cfb47fa5874edfbcb04379b1c97a81d2?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="ev1lr0b0t&#39;s gravatar image" /><p>ev1lr0b0t<br />
+<span class="score" title="1 reputation points">1</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">●</span><span class="badgecount">4</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="ev1lr0b0t has one accepted answer">50%</span> </br></br></p></div><div class="post-update-info post-update-info-edited"><p>edited 22 Jul '13, 15:44</p></div></div><div id="comments-container-23261" class="comments-container"><span id="23263"></span><div id="comment-23263" class="comment"><div id="post-23263-score" class="comment-score"></div><div class="comment-text"><blockquote><p>The failure occurs immediately AFTER <strong>Packet Number 40943</strong></p></blockquote><p>The posted capture file ends at frame 6442</p><blockquote><p>but I didn't expect any help last time I posted a message</p></blockquote><p>BTW: What was your user name last time?</p></div><div id="comment-23263-info" class="comment-info"><span class="comment-age">(22 Jul '13, 15:43)</span> Kurt Knochner ♦</div></div><span id="23265"></span><div id="comment-23265" class="comment"><div id="post-23265-score" class="comment-score"></div><div class="comment-text"><p>I fixed the errant packet numbers in an edit. The exported packet numbers were different than what was displayed on my screen. I was unable to login with the account I used before for some reason. evilrobot.</p></div><div id="comment-23265-info" class="comment-info"><span class="comment-age">(22 Jul '13, 15:46)</span> ev1lr0b0t</div></div><span id="23266"></span><div id="comment-23266" class="comment"><div id="post-23266-score" class="comment-score"></div><div class="comment-text"><p>BTW thanks for looking. 6384 is the last packet before the error (a reply to a Read(10) request that is 128 blocks. --Jason</p></div><div id="comment-23266-info" class="comment-info"><span class="comment-age">(22 Jul '13, 15:50)</span> ev1lr0b0t</div></div></div><div id="comment-tools-23261" class="comment-tools"></div><div class="clear"></div><div id="comment-23261-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+6 Answers:
+
+</div>
+
+</div>
+
+<span id="23337"></span>
+
+<div id="answer-container-23337" class="answer accepted-answer answered-by-owner">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-23337-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>The wireshark capture might not show it. But after some prodding and poking and creating volumes of varying sizes, I determined that my WRITE operations were not writing the proper amount of data. I discovered this by comparing the subsequent READ operation that followed the WRITE operation. The fact is that the write operation would actually only write the first block to disk.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>24 Jul '13, 11:29</strong></p><img src="https://secure.gravatar.com/avatar/cfb47fa5874edfbcb04379b1c97a81d2?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="ev1lr0b0t&#39;s gravatar image" /><p>ev1lr0b0t<br />
+<span class="score" title="1 reputation points">1</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="4 badges"><span class="bronze">●</span><span class="badgecount">4</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="ev1lr0b0t has one accepted answer">50%</span> </br></br></p></div></div><div id="comments-container-23337" class="comments-container"><span id="23365"></span><div id="comment-23365" class="comment"><div id="post-23365-score" class="comment-score"></div><div class="comment-text"><p>would you mind to post one capture file with a failure and one with a successful operation?</p><p>I wonder if the problem would be visible in the capture file. This would be a good chance to learn something more about iSCSI (for me) ;-)</p></div><div id="comment-23365-info" class="comment-info"><span class="comment-age">(25 Jul '13, 11:28)</span> Kurt Knochner ♦</div></div><span id="23366"></span><div id="comment-23366" class="comment"><div id="post-23366-score" class="comment-score"></div><div class="comment-text"><p>I got sorta past that point, but unfortunately I don't yet have 100% success. My current issue is as big of a pain in the butt as my previous issue. Part of my problem is that I cannot find any sample captures that show Read() operations that exceed the MaxRecvDataLength value negotiated during login. It kinda seems like that for some reason my login negotiation is being ignored by the client, even though it matches the sample I used practically byte for byte. When talking to the Target that I reverse engineered, the client never requests more than 128 blocks of data per read (65536 bytes) which also matches the MacRecvDataLength negotiated during login. However, when talking to MY target, it will request up to 256 blocks, and my response to this request causes the client to reset the connection with no warnings or messages logged. I respond with Data-In followed by Data-In with the Final bit set. (2 PDUs). Maybe I need to try 3 PDUs sending a separate PDU for the status.... I dunno... running out of ideas.</p></div><div id="comment-23366-info" class="comment-info"><span class="comment-age">(25 Jul '13, 11:34)</span> ev1lr0b0t</div></div></div><div id="comment-tools-23337" class="comment-tools"></div><div class="clear"></div><div id="comment-23337-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="23267"></span>
+
+<div id="answer-container-23267" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-23267-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>In frame 6385 the 'client' (172.16.0.82) sends a SCSI Mode Sense. This packet is ACKed in the next frame. However, then the 'server' (172.16.0.33) does not react for 119 seconds!! Then it ACKs a packet that is not in the capture file (see frame 6387). This is totally different to previous behavior in the capture file. If we can assume that the capture file is complete (<strong>can we?</strong>), there seems to be a bug in the iSCSI server implementation. However, I don't think you will find the reason for the problem just by looking at the capture file, as neither the inactivity for 119 seconds can be explained with the observed behavior in the capture file nor the ACK for an unseen packet.</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>22 Jul '13, 15:57</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></br></p></div><div class="post-update-info post-update-info-edited"><p>edited 22 Jul '13, 16:04</p></div></div><div id="comments-container-23267" class="comments-container"><span id="23269"></span><div id="comment-23269" class="comment"><div id="post-23269-score" class="comment-score"></div><div class="comment-text"><p>The 119 second pause is the breakpoint. I didn't notice the ACK issue, I'm not sure I ever handle them... I think they're handled at the TCP layer if I'm not mistaken, and therefore I have no control over them. Whether I break on it for 119 seconds or not.. it fails in the same place in the same way. So I'm not sure that'll help me. Maybe I can find some insight with your help, however. Thanks for looking. -- Jason</p></div><div id="comment-23269-info" class="comment-info"><span class="comment-age">(22 Jul '13, 16:30)</span> ev1lr0b0t</div></div><span id="23271"></span><div id="comment-23271" class="comment"><div id="post-23271-score" class="comment-score"></div><div class="comment-text"><blockquote><p>The 119 second pause is the breakpoint.</p></blockquote><p>Ah, that's O.K. then.</p><blockquote><p>I didn't notice the ACK issue, I'm not sure I ever handle them... I think they're handled at the TCP layer if I'm not mistaken,</p></blockquote><p>Yes, and the TCP layer should not ACK something it did not receive, if that was the case !?! Anyway, I'm not sure if this could be caused by a bug in your code as well.</p><blockquote><p>Whether I break on it for 119 seconds or not.. it fails in the same place in the same way.</p></blockquote><p>Can you please post a capture file without a breakpoint and 'add' some information about the frame where you think the problem shows up?</p></div><div id="comment-23271-info" class="comment-info"><span class="comment-age">(22 Jul '13, 16:38)</span> Kurt Knochner ♦</div></div><span id="23273"></span><div id="comment-23273" class="comment"><div id="post-23273-score" class="comment-score"></div><div class="comment-text"><p>I will, but probably won't be able to get to it until tomorrow. Thanks again.</p></div><div id="comment-23273-info" class="comment-info"><span class="comment-age">(22 Jul '13, 17:35)</span> ev1lr0b0t</div></div><span id="57374"></span><div id="comment-57374" class="comment"><div id="post-57374-score" class="comment-score"></div><div class="comment-text"><p>119 seconds delay would cause the initiator's upper layer timer to expire and it should perform some type of SCSI layer error recover if a frame was not received.</p><p>However, if there there was some type of protocol error in the frame that was not captured then it would be normal of the initiator to close the TCP connection provided that the 2 devices were operating at error recovery level 0.<br />
+</p><p>NOT the iSCSI standard requires devices that only support error level 0 to close the connection when a protocol error is encountered</p></div><div id="comment-57374-info" class="comment-info"><span class="comment-age">(14 Nov '16, 03:10)</span> LouD</div></div></div><div id="comment-tools-23267" class="comment-tools"></div><div class="clear"></div><div id="comment-23267-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="42494"></span>
+
+<div id="answer-container-42494" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-42494-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>We've run into the same issue when assigning SAS disks (LUN's) to a server. Turned out that when automount is disabled (which we had because we don't want to see all SAS disks as drive letters since they're mounted in directories) this happened. So enabling automount through diskpart fixed the issue immediately. After assigning the disks to the directories we disabled automount again and all was well.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>18 May '15, 03:44</strong></p><img src="https://secure.gravatar.com/avatar/12b3fc9c44e4e2f966015984c01e541c?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="binbash&#39;s gravatar image" /><p>binbash<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="binbash has no accepted answers">0%</span> </br></br></p></div></div><div id="comments-container-42494" class="comments-container"></div><div id="comment-tools-42494" class="comment-tools"></div><div class="clear"></div><div id="comment-42494-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="42652"></span>
+
+<div id="answer-container-42652" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-42652-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>For what it's worth, there was a bug in version 1.0.37 (and presumably earlier) of "tgt" on linux that prevented Windows initiators from being able to format.</p><p>(<a href="http://lists.wpkg.org/pipermail/stgt/2013-May/012368.html)">http://lists.wpkg.org/pipermail/stgt/2013-May/012368.html)</a></p><p>This also seems to have caused problems with file contents for a CentOS 7 guest running with the iscsi device as a root disk in OpenStack. Other guests seem to be fine.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>25 May '15, 10:43</strong></p><img src="https://secure.gravatar.com/avatar/8c3d7f08e5189b2ec5041ddce8304fed?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="cbf123&#39;s gravatar image" /><p>cbf123<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="cbf123 has no accepted answers">0%</span> </br></br></p></div></div><div id="comments-container-42652" class="comments-container"></div><div id="comment-tools-42652" class="comment-tools"></div><div class="clear"></div><div id="comment-42652-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="57361"></span>
+
+<div id="answer-container-57361" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-57361-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Hi I faced the same issue and finally I found that using Microsoft bridged NIC was behind all issues, I removed all NIC from bridge and gave dedicated IPs, this reaolved it with immediate action. Regards,</p><p>Ayed</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>13 Nov '16, 06:47</strong></p><img src="https://secure.gravatar.com/avatar/dc73ada0c6f7a5e9c5cdba73b8edd9f3?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Ayed&#39;s gravatar image" /><p>Ayed<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Ayed has no accepted answers">0%</span> </br></br></p></div></div><div id="comments-container-57361" class="comments-container"></div><div id="comment-tools-57361" class="comment-tools"></div><div class="clear"></div><div id="comment-57361-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="57377"></span>
+
+<div id="answer-container-57377" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-57377-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Sorry, I am reposting this because I posted it in a wrong location</p><p>119 seconds delay would cause the initiator's upper layer timer to expire and it should perform some type of SCSI layer error recover if a frame was not received. Since there is no SCSI layer error recovery I am guessing the frame was not sent. Unless there was some type of iSCSI protocol error in the frame - then it would be normal of the initiator to close the TCP connection provided that the 2 devices were operating at error recovery level 0.</p><p>NOT the iSCSI standard requires devices that only support error level 0 to close the connection when a protocol error is encountered.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>14 Nov '16, 04:48</strong></p><img src="https://secure.gravatar.com/avatar/b2d0183529e31bcca9461e7348206c16?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="LouD&#39;s gravatar image" /><p>LouD<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="LouD has no accepted answers">0%</span> </br></br></p></div><div class="post-update-info post-update-info-edited"><p>edited 14 Nov '16, 06:34</p><img src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="sindy&#39;s gravatar image" /><p>sindy<br />
+<span class="score" title="6049 reputation points"><span>6.0k</span></span><span title="4 badges"><span class="badge1">●</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">●</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">●</span><span class="badgecount">51</span></span></br></p></div></div><div id="comments-container-57377" class="comments-container"></div><div id="comment-tools-57377" class="comment-tools"></div><div class="clear"></div><div id="comment-57377-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

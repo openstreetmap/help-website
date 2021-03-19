@@ -1,0 +1,31 @@
++++
+type = "question"
+title = "Wireshark stops capturing after random number of seconds using tshark"
+description = '''Hi, I&#x27;ve been using wireshark on a laptop to count the number of people walking past with mobile phones over a weekend. I&#x27;m using a usb wifi dongle for the capture as the on board wifi chip doesn&#x27;t appear to be compatible with wireshark. I use tshark within the command prompt and specify the amount ...'''
+date = "2016-06-15T18:58:00Z"
+lastmod = "2016-06-15T18:58:00Z"
+weight = 53485
+keywords = [ "tshark", "wireshark" ]
+aliases = [ "/questions/53485" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Wireshark stops capturing after random number of seconds using tshark](/questions/53485/wireshark-stops-capturing-after-random-number-of-seconds-using-tshark)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-53485-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi,</p><p>I've been using wireshark on a laptop to count the number of people walking past with mobile phones over a weekend. I'm using a usb wifi dongle for the capture as the on board wifi chip doesn't appear to be compatible with wireshark.</p><p>I use tshark within the command prompt and specify the amount of time to collect. The pcap file closes off at the correct time, however on some weekends the count appears to just stop randomly. Sometimes it's after an hour, sometimes it's after 40 hours. The lack of consistency in the problem is making troubleshooting difficult.</p><p>I've tried using dumpcap instead of tshark but the count stopped after 10 minutes. I've tried a laptop with 16gb or ram rather than the 8gb in my normal laptop, but it didn't make a difference.</p><p>Any ideas?</p><p>Thanks.</p></div><div id="question-tags" class="tags-container tags">tshark wireshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>15 Jun '16, 18:58</strong></p><img src="https://secure.gravatar.com/avatar/e3ed895d7006b6a9e42e035c85c85ea5?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="richelle&#39;s gravatar image" /><p>richelle<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="richelle has no accepted answers">0%</span></p></div></div><div id="comments-container-53485" class="comments-container"><span id="53488"></span><div id="comment-53488" class="comment"><div id="post-53488-score" class="comment-score">1</div><div class="comment-text"><p>Would you share what operating system you are using along with the USB hardware you have chosen to deploy?</p><p>With this information, troubleshooting might be possible.</p></div><div id="comment-53488-info" class="comment-info"><span class="comment-age">(16 Jun '16, 02:03)</span> Bob Jones</div></div><span id="53491"></span><div id="comment-53491" class="comment"><div id="post-53491-score" class="comment-score"></div><div class="comment-text"><p>Thanks Bob.</p><p>I'm running windows 10 and using the netgear A6200 USB adaptor: <a href="http://www.netgear.com.au/home/products/networking/wifi-adapters/a6200.aspx?cid=gwmng">http://www.netgear.com.au/home/products/networking/wifi-adapters/a6200.aspx?cid=gwmng</a></p></div><div id="comment-53491-info" class="comment-info"><span class="comment-age">(16 Jun '16, 02:27)</span> richelle</div></div><span id="53492"></span><div id="comment-53492" class="comment"><div id="post-53492-score" class="comment-score"></div><div class="comment-text"><p>Does this sound like it is happening to you?</p><p><a href="https://community.netgear.com/t5/WiFi-Adapters/A6200-Disconnecting-on-Windows-10/td-p/981072">https://community.netgear.com/t5/WiFi-Adapters/A6200-Disconnecting-on-Windows-10/td-p/981072</a></p><p>I assume you are not using monitor mode as the only way to do so with that chipset on Windows/Wireshark would be with npcap but you don't say anything about it. However, to do what you want I assume you looking for probes and/or unique MAC addresses, so you need monitor mode.</p><p>I have good better luck with PCI-based devices than USB, but end up having to USB all the time, even though the crash often. Please share a little more about your test process.</p></div><div id="comment-53492-info" class="comment-info"><span class="comment-age">(16 Jun '16, 02:52)</span> Bob Jones</div></div><span id="53493"></span><div id="comment-53493" class="comment"><div id="post-53493-score" class="comment-score"></div><div class="comment-text"><p>@richelle: Your answer has been converted to a comment as that's how this site works. Please read the FAQ for more information.</p></div><div id="comment-53493-info" class="comment-info"><span class="comment-age">(16 Jun '16, 04:27)</span> Jaap ♦</div></div></div><div id="comment-tools-53485" class="comment-tools"></div><div class="clear"></div><div id="comment-53485-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

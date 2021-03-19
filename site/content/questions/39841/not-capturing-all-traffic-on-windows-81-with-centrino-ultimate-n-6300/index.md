@@ -1,0 +1,59 @@
++++
+type = "question"
+title = "Not capturing all traffic on Windows 8.1 with Centrino Ultimate-N 6300"
+description = '''Hi, I&#x27;m using an Intel Centrino Ultimate-N 6300 AGN network adapter on Windows 8.1. I&#x27;m trying to capture the traffic from my mobile phone(s) which are all connected to my home network. I&#x27;ve switched the various phones (iPhone/ Android &amp;amp; Windows) onto airplane mode so I&#x27;m definitely going via th...'''
+date = "2015-02-12T13:43:00Z"
+lastmod = "2015-02-13T00:09:00Z"
+weight = 39841
+keywords = [ "nothing", "being", "captured" ]
+aliases = [ "/questions/39841" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Not capturing all traffic on Windows 8.1 with Centrino Ultimate-N 6300](/questions/39841/not-capturing-all-traffic-on-windows-81-with-centrino-ultimate-n-6300)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-39841-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi,</p><p>I'm using an Intel Centrino Ultimate-N 6300 AGN network adapter on Windows 8.1. I'm trying to capture the traffic from my mobile phone(s) which are all connected to my home network. I've switched the various phones (iPhone/ Android &amp; Windows) onto airplane mode so I'm definitely going via the WiFi. I've got the interface set to capture in promiscuous mode.</p><p>However I am not capturing any thing from the phones other than ARP packets outbound from the phones but no responses and no other packets. I suspect that my network card (or the driver) simply doesn't have the capability to be "truly promiscuous" (to coin a phrase) - would anyone have any insight into this please?</p><p>Thank you in advance</p><p>JG</p></div><div id="question-tags" class="tags-container tags">nothing being captured</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>12 Feb '15, 13:43</strong></p><img src="https://secure.gravatar.com/avatar/01ca2986d5258868ea47192067729928?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="joaneybee&#39;s gravatar image" /><p>joaneybee<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="joaneybee has no accepted answers">0%</span></p></div></div><div id="comments-container-39841" class="comments-container"></div><div id="comment-tools-39841" class="comment-tools"></div><div class="clear"></div><div id="comment-39841-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="39844"></span>
+
+<div id="answer-container-39844" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-39844-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>I suspect that my network card (or the driver) simply doesn't have the capability to be "truly promiscuous" (to coin a phrase)</p></blockquote><p>It's called "monitor mode", and the <em>adapter</em> probably supports it, and there's a good chance that the driver does. However, <em>WinPcap</em>, which Wireshark uses to capture traffic on Windows, doesn't support monitor mode.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>13 Feb '15, 00:09</strong></p><img src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Guy%20Harris&#39;s gravatar image" /><p>Guy Harris ♦♦<br />
+<span class="score" title="17443 reputation points"><span>17.4k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">●</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">●</span><span class="badgecount">196</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Guy Harris has 216 accepted answers">19%</span></p></div></div><div id="comments-container-39844" class="comments-container"><span id="39857"></span><div id="comment-39857" class="comment"><div id="post-39857-score" class="comment-score"></div><div class="comment-text"><p>Hi Guy, Thanks so much for your speedy response. So, does this mean that I can't use Wireshark on Windows 8.1 to capture wireless traffic? Should I switch over to Linux or some other O/S?</p><p>Kind regards, Joan</p></div><div id="comment-39857-info" class="comment-info"><span class="comment-age">(13 Feb '15, 13:03)</span> joaneybee</div></div><span id="39859"></span><div id="comment-39859" class="comment"><div id="post-39859-score" class="comment-score"></div><div class="comment-text"><p>You can, but only with the an <a href="http://www.riverbed.com/products/performance-management-control/network-performance-management/wireless-packet-capture.html">AirPcap adapter</a> (which does not work as a regular Wi-Fi adapter, just as a packet-capture adapter).</p><p>The alternatives are:</p><ol><li>use another program on Windows that can use the Windows Vista and later mechanisms for monitor-mode capturing, such as <a href="http://www.microsoft.com/en-us/download/details.aspx?id=4865">Microsoft Network Monitor</a>, <a href="http://www.microsoft.com/en-us/download/details.aspx?id=44226">Microsoft Message Analyzer</a>, or various other applications;</li><li>use another operating system, such as Linux.</li></ol><p>Note that you could use Linux under a virtualizer such as Parallels Workstation or VMware Workstation, and use a USB Wi-Fi adapter - start Linux in a virtual machine, plug the USB stick in, and tell Parallels/VMware to attach it to the virtual machine rather than the Windows host (I'm assuming that works in both Parallels and VMware; it works in VMware Fusion on OS X).</p></div><div id="comment-39859-info" class="comment-info"><span class="comment-age">(13 Feb '15, 14:26)</span> Guy Harris ♦♦</div></div><span id="39860"></span><div id="comment-39860" class="comment"><div id="post-39860-score" class="comment-score"></div><div class="comment-text"><p>Guy, Thank you so much. You are a mine of information - thank you for sharing.</p><p>Kindest regards,</p><p>Joan</p></div><div id="comment-39860-info" class="comment-info"><span class="comment-age">(13 Feb '15, 16:34)</span> joaneybee</div></div><span id="40015"></span><div id="comment-40015" class="comment"><div id="post-40015-score" class="comment-score"></div><div class="comment-text"><p>Hi Guy,</p><p>Back again!!</p><p>I've now tried a variety of configurations and still to no avail!</p><ol><li>Windows 8.1 &amp; Centrino Ultimate 6300-N wireless adapter</li><li>Windows 8.1 Host, Virtual Box with Kali Linux Guest, bridged Centrino wireless adapter</li><li>Windows 8.1 Host, Virtual Box with Kali Linux Guest, RT73 USB Wlan adapter</li><li>Kali Linux Host with Centrino wireless adapter</li><li>Kali Linux Host with RT73 USB Wlan adapter</li><li>Windows 8.1 &amp; Windows Message Analyzer (each adapter tried with this).</li></ol><p>None of these configurations are either seeing or capturing the mobile phone packets.</p><p>What on earth am I doing wrong here? If I purchase an AirPCap device will it be able to do what I need (eg capture the mobile device traffic)?</p><p>Sorry for sounding completely dumb here, I've no doubt the issue is between keyboard and chair (!) but I'm at a complete loss as to what to do next, and would really appreciate a steer.</p><p>Kind regards,</p><p>Joan</p></div><div id="comment-40015-info" class="comment-info"><span class="comment-age">(22 Feb '15, 15:19)</span> joaneybee</div></div><span id="40017"></span><div id="comment-40017" class="comment"><div id="post-40017-score" class="comment-score"></div><div class="comment-text"><p>Running Wireshark on Windows without AirPcap, you will not be able to capture in monitor mode; there's nothing you can do there.</p><p>Running Network Monitor or Message Analyzer on Windows, you might be able to capture in monitor mode <em>if</em> the adapter's driver correctly supports the "Native 802.11 Wireless LAN" feature, including the "Network Monitor Operation Mode"; many drivers apparently do <em>not</em> support that. I don't know which ones do and which ones don't; you'll have to ask the vendor. Even if they <em>do</em> support it, if you're capturing on a "protected" network - i.e., one using WEP or WPA/WPA2, so that the traffic on the network is encrypted in order to make it harder to sniff - they might not support decrypting the traffic, so it might not look as if you're seeing the traffic. If you save the file in Network Monitor or pcap format, you may be able to read the file in Wireshark <a href="http://wiki.wireshark.org/HowToDecrypt802.11">and, if you supply the network's password and, for WPA/WPA2, you have captured the "EAPOL handshake", you might be able to decrypt it in Wireshark</a>.</p><p>Running Wireshark on Linux on a virtual machine, you might be able to capture in monitor mode, although <a href="http://wiki.wireshark.org/CaptureSetup/WLAN#Linux">you may have to use airmon-ng to turn monitor mode on</a> and, if you then capture on the monitor-mode device airmon-ng creates, you will have the same problems with "protected" networks as described in the previous paragraph.</p><p>Running Wireshark on Windows with an AirPcap device, you should be able to capture the traffic, but, again, decryption is necessary. I'm not sure whether the AirPcap card can do the decryption itself or not but, if so, you'll need to supply the network's password and, for WPA/WPA2, you'll have to capture the "EAPOL handshake".</p></div><div id="comment-40017-info" class="comment-info"><span class="comment-age">(22 Feb '15, 19:11)</span> Guy Harris ♦♦</div></div></div><div id="comment-tools-39844" class="comment-tools"></div><div class="clear"></div><div id="comment-39844-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

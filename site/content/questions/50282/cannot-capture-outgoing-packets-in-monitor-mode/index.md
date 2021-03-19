@@ -1,0 +1,31 @@
++++
+type = "question"
+title = "Cannot capture outgoing packets in monitor mode"
+description = '''When running in monitor mode, Wireshark does not capture outgoing packets. For example, when pinging another computer on my network, I can only see the replies. When I&#x27;m not in monitor mode, however, I can see both incoming and outgoing packets. Any ideas what might be causing this? I&#x27;m running Wire...'''
+date = "2016-02-17T12:49:00Z"
+lastmod = "2016-02-17T12:49:00Z"
+weight = 50282
+keywords = [ "outgoing", "wifi", "mac", "monitor" ]
+aliases = [ "/questions/50282" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Cannot capture outgoing packets in monitor mode](/questions/50282/cannot-capture-outgoing-packets-in-monitor-mode)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-50282-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>When running in monitor mode, Wireshark does not capture outgoing packets. For example, when pinging another computer on my network, I can only see the replies. When I'm not in monitor mode, however, I can see both incoming and outgoing packets. Any ideas what might be causing this?</p><p>I'm running Wireshark 2.0.1 on a Macbook Pro running OS X 10.11.2. I do not have any firewall, VPN, or AV software running. I've turned off WiFi encryption temporarily for the captures.</p></div><div id="question-tags" class="tags-container tags">outgoing wifi mac monitor</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>17 Feb '16, 12:49</strong></p><img src="https://secure.gravatar.com/avatar/cd79355789b7535d2a7c4661c7d3b22c?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="freyr&#39;s gravatar image" /><p>freyr<br />
+<span class="score" title="11 reputation points">11</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="6 badges"><span class="bronze">●</span><span class="badgecount">6</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="freyr has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 17 Feb '16, 13:27</p></div></div><div id="comments-container-50282" class="comments-container"><span id="50290"></span><div id="comment-50290" class="comment"><div id="post-50290-score" class="comment-score"></div><div class="comment-text"><p>Did you try the suggestions in the followink link: <a href="https://ask.wireshark.org/questions/27296/wireshark-only-capturing-incoming-packets">https://ask.wireshark.org/questions/27296/wireshark-only-capturing-incoming-packets</a></p></div><div id="comment-50290-info" class="comment-info"><span class="comment-age">(17 Feb '16, 19:50)</span> Amato_C</div></div><span id="50293"></span><div id="comment-50293" class="comment"><div id="post-50293-score" class="comment-score"></div><div class="comment-text"><p>I suspect that in monitor mode, the wireless driver may not record the sent frames at all, as the assumption is that when you use monitoring mode, the capturing device is not taking part in the communication but only listens. But this is nothing more than an idea.</p></div><div id="comment-50293-info" class="comment-info"><span class="comment-age">(17 Feb '16, 22:28)</span> sindy</div></div><span id="50307"></span><div id="comment-50307" class="comment"><div id="post-50307-score" class="comment-score"></div><div class="comment-text"><p>Amato_C I have disabled any software that might interfere. That post alludes to TCP/IP offloading... I don't know whether that could be causing an issue with monitor mode, but I haven't been able to find any indication that the MacBook does offloading.</p></div><div id="comment-50307-info" class="comment-info"><span class="comment-age">(18 Feb '16, 08:45)</span> freyr</div></div><span id="50309"></span><div id="comment-50309" class="comment"><div id="post-50309-score" class="comment-score"></div><div class="comment-text"><p>@freyr = disabled or uninstalled? There is a difference. Please uninstall all software that hooks into the TCP/IP stack.</p></div><div id="comment-50309-info" class="comment-info"><span class="comment-age">(18 Feb '16, 09:14)</span> Amato_C</div></div><span id="50310"></span><div id="comment-50310" class="comment"><div id="post-50310-score" class="comment-score"></div><div class="comment-text"><p>@amato_c I completely uninstalled Cisco AnyConnect VPN software, because I noticed it was still running a process even after I exited the application. I do not have any AV or firewall software installed, and OS X's built in firewall is turned off. I'm hoping the Cisco software / my IT department didn't surreptitiously install anything else that's running in the background. My coworker's laptop has the exact same issue. I will try repeating this with my personal MacBook over the weekend.</p></div><div id="comment-50310-info" class="comment-info"><span class="comment-age">(18 Feb '16, 09:20)</span> freyr</div></div></div><div id="comment-tools-50282" class="comment-tools"></div><div class="clear"></div><div id="comment-50282-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

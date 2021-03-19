@@ -1,0 +1,60 @@
++++
+type = "question"
+title = "Dongle supporting WiFi promiscuous mode"
+description = '''Hello, I need to trace between two WiFi devices, connected to the same A.P. I do&#x27;t need to trace at radio level, but I just need (want!) to see from Ethernet level, so I guess I simply need a WiFi card/adapter/dongle able to accept &quot;promiscuous&quot; mode. Yes, I red carefully (I hope) &quot;WLAN (IEEE 802.11...'''
+date = "2017-03-24T03:24:00Z"
+lastmod = "2017-03-24T03:36:00Z"
+weight = 60306
+keywords = [ "promiscuous", "wifi", "linux" ]
+aliases = [ "/questions/60306" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Dongle supporting WiFi promiscuous mode](/questions/60306/dongle-supporting-wifi-promiscuous-mode)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-60306-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hello, I need to trace between two WiFi devices, connected to the same A.P. I do't need to trace at radio level, but I just need (want!) to see from Ethernet level, so I guess I simply need a WiFi card/adapter/dongle able to accept "promiscuous" mode.</p><p>Yes, I red carefully (I hope) "WLAN (IEEE 802.11) capture setup" paragrph, but I am confused: I don't need to capture radio-level, I don't need to capture all SSID's but I need to see packets not directed to me. Can you confirm promiscuous mode is <em>NOT</em> what I need?</p><p>I tried: Intel Link 5100 AGN Linksys Wireless-G Qualcomm Atheros AR928X</p><p>With all of them, I don't see all packets and it looks they fail to enter promiscuous mode: once I see the very first ARP-RQ, I don't see anything else between the two devices. I see some other random messages from other devices.</p><p>Curiously, with ifconfig wlp3s0, I see the board is NOT in promiscuous mode once Wireshark is started. I close Wireshark, i force the board in promiscuous mode, I restart Wireshark but I still see only broadcast.</p><p>Any suggestions for USB WiFi dongles with divers implementing promiscuous mode (Linux)?</p><p>Thanks.</p></div><div id="question-tags" class="tags-container tags">promiscuous wifi linux</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>24 Mar '17, 03:24</strong></p><img src="https://secure.gravatar.com/avatar/8018465f5c1a669502d4b5c23d04c0b1?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="resca&#39;s gravatar image" /><p>resca<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="resca has no accepted answers">0%</span></p></div></div><div id="comments-container-60306" class="comments-container"></div><div id="comment-tools-60306" class="comment-tools"></div><div class="clear"></div><div id="comment-60306-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="60307"></span>
+
+<div id="answer-container-60307" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-60307-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>I think you will need monitor AND promiscuous mode on the wifi adapter. Promiscuous mode is great if the actual ethernet frames you are looking for (i.e. from the other devices under review) are available at the network interface - they would be passed up for analysis. However, just like in a wired switch environment, if they are not at the interface promiscuous mode won't help.</p><p>Imagine the WiFi adapter will filter out unicast frames not destined for your host, much as an ethernet bridge/switch will do. You might find some exceptions, but all of the adapters I have used have this filter on by default. To remove this filter, you want to put the adapter in monitor mode. I realize you don't want everything, but with a wifi adapter in monitor + promiscuous mode, I think you will get everything and then it becomes a filter exercise to isolate what you want. Luckily, Wireshark does a fantastic job with display filters.</p><p>Another option is two APs with a wired link in between. Have a wireless client on one AP, and a wireless client on the second AP. You could sniff the wire connecting the APs with a mirror port/tap/whatever, and get the data between the devices that way. This has the option of not needing to decrypt traffic, assuming you are using WPA2 on your wireless links. The downside is having to configure/manage two APs.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>24 Mar '17, 03:36</strong></p><img src="https://secure.gravatar.com/avatar/0a47ef51dd9c9996d194a4983295f5a4?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Bob%20Jones&#39;s gravatar image" /><p>Bob Jones<br />
+<span class="score" title="1014 reputation points"><span>1.0k</span></span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="5 badges"><span class="silver">●</span><span class="badgecount">5</span></span><span title="15 badges"><span class="bronze">●</span><span class="badgecount">15</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Bob Jones has 19 accepted answers">21%</span></p></div></div><div id="comments-container-60307" class="comments-container"><span id="60314"></span><div id="comment-60314" class="comment"><div id="post-60314-score" class="comment-score"></div><div class="comment-text"><p>Thanks, Bob!</p><p>From your words, I learned something I didn't even imagined: the adapter itself works as a "switch" and, of course, in that case Promiscuous is useless. Just for my culture, if you like to answer: once 2 WiFi devices "know" themselves, do the packets between them travel "directly" or are them received and re-sent from the A.P.? In the first case I wonder how two devices too far away (but each one close enough to the A.P.) talk...!</p><p>I managed to enable monitor mode, and it works fine and with Wireshark I see [I guess] all the packets on "my" channel. This is very fine. I am quite familiar with MAC level but I don't know anything about 802.11...</p><p>I noticed in 802.11 preferences, I can set "Enable decryption". At that point, I imagined I could see decoded MAC, but it seems not the case. Am I correct to think Wireshark is happy to decode MAC once data is decrypted?</p><p>My problem is just one WiFi device (ESP386) that fails even ARP with <em>any</em> device connected in WiFi but works fine with devices connected to the Access Point on a wired port (i.e. PC -&gt; LAN -&gt; Access Point -&gt; ESP). Of course, the two cabled A.P.'s trick was my first try and it works fine, but also the devices work, so was useless to investigate on my problem.</p></div><div id="comment-60314-info" class="comment-info"><span class="comment-age">(24 Mar '17, 07:49)</span> resca</div></div><span id="60322"></span><div id="comment-60322" class="comment"><div id="post-60322-score" class="comment-score"></div><div class="comment-text"><p>I think you need <em>both</em> monitor and promiscuous mode. Monitor mode to capture everything, and then the wifi device has to pass up all it sees, and not filter anything. See, for example, the discussion here: <a href="https://ask.wireshark.org/questions/53260/cannot-capture-frames-other-than-broadcast-or-multicast-over-wlan">https://ask.wireshark.org/questions/53260/cannot-capture-frames-other-than-broadcast-or-multicast-over-wlan</a></p><p>In typical, infrastructure-based, 802.11 wifi, frames do not travel from client to client. They traverse through the AP, and their is a field in the 802.11 header which can indicate the direction:</p><p>ToDS means frame from a client to an AP FromDS means frame from an AP to one or more clients</p><p>Ad hoc networks would allow communication between devices. In the infrastructure case, for example, if you ping from one wifi client to another, you would see each frame twice: once from client1 to AP, then AP to client2.<br />
+</p><p>Decryption is often possible if setup the right way. If you need decryption, see <a href="https://wiki.wireshark.org/HowToDecrypt802.11">https://wiki.wireshark.org/HowToDecrypt802.11</a></p><p>There will be special things you need to do so that you can decrypt, but it is possible. If you are investigating arp and specific application behavior, you may need to decrypt. However, to prove you only have one-way communication you might be able to make that call without decryption. For instance, if you know you are sending arp requests, and you see data from to the client on wifi, you can probably guess at least some of them are you arp requests. If you get NOTHING in return, i.e. no data frames from client, then you can be pretty sure the arp is not getting an answer. The difficulty comes in when there are some data frames from the client, and you need to see if any of them are arp responses or not.</p></div><div id="comment-60322-info" class="comment-info"><span class="comment-age">(25 Mar '17, 08:19)</span> Bob Jones</div></div><span id="60323"></span><div id="comment-60323" class="comment"><div id="post-60323-score" class="comment-score"></div><div class="comment-text"><p>Ok, I just reached my goal! Great tool! Basically, I was just missing a note to set "Assume Packets have FCS" in 802.11 preferences and I had simply undecoded raw data. Once done that, I see IP, TCP and all the stuff I need. Fantastic. Thanks again for your suggestions.</p></div><div id="comment-60323-info" class="comment-info"><span class="comment-age">(25 Mar '17, 09:07)</span> resca</div></div><span id="60324"></span><div id="comment-60324" class="comment"><div id="post-60324-score" class="comment-score"></div><div class="comment-text"><p>Anyway, I have a "regular" home network with one Ap.&gt; and several devices: laptop, phones, ESP, etc. (infrastructure? For sure NOT and AdHoc) and with Wireshark I see no duplicate packets, i.e. for a Ping I see one ECHO-REQUEST with source and destination of the two devices (no access point address anywhere) and one ECHO-REPLY between the two devices. At the beginning I was tracing "inside" the A.P. with a software sniffing tool and I could't see any packets between the two units, save for the very first handshake. So, I am still quite confused on WiFi behavior. By the way, the A.P. is internal in a fantastic MikroTik router.</p></div><div id="comment-60324-info" class="comment-info"><span class="comment-age">(25 Mar '17, 09:15)</span> resca</div></div></div><div id="comment-tools-60307" class="comment-tools"></div><div class="clear"></div><div id="comment-60307-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

@@ -1,0 +1,59 @@
++++
+type = "question"
+title = "Decoding SNMP trap OIDs and values"
+description = '''Hi All, How do I get Wireshark to decode the octet strings circled red as ASCII? Many thanks in advance!'''
+date = "2017-03-14T05:00:00Z"
+lastmod = "2017-03-14T05:40:00Z"
+weight = 60056
+keywords = [ "snmptrap" ]
+aliases = [ "/questions/60056" ]
+osqa_answers = 0
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [Decoding SNMP trap OIDs and values](/questions/60056/decoding-snmp-trap-oids-and-values)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-60056-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi All,</p><p>How do I get Wireshark to decode the octet strings circled red as ASCII?</p><p>Many thanks in advance!<img src="https://osqa-ask.wireshark.org/upfiles/trap.png" alt="alt text" /></p></div><div id="question-tags" class="tags-container tags">snmptrap</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>14 Mar '17, 05:00</strong></p><img src="https://secure.gravatar.com/avatar/4c43e04f0ef8eacb2a3173436cb432f0?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Dmitriy&#39;s gravatar image" /><p>Dmitriy<br />
+<span class="score" title="21 reputation points">21</span><span title="6 badges"><span class="badge1">●</span><span class="badgecount">6</span></span><span title="7 badges"><span class="silver">●</span><span class="badgecount">7</span></span><span title="11 badges"><span class="bronze">●</span><span class="badgecount">11</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Dmitriy has no accepted answers">0%</span></p></img></div><div class="post-update-info post-update-info-edited"><p>edited 14 Mar '17, 08:41</p></div></div><div id="comments-container-60056" class="comments-container"></div><div id="comment-tools-60056" class="comment-tools"></div><div class="clear"></div><div id="comment-60056-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="60059"></span>
+
+<div id="answer-container-60059" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-60059-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>You'll need to supply the MIB for the relevant OID's. See the Wireshark Wiki page on <a href="https://wiki.wireshark.org/SNMP">SNMP</a> for more info.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>14 Mar '17, 05:40</strong></p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="grahamb has 274 accepted answers">22%</span></p></div></div><div id="comments-container-60059" class="comments-container"><span id="60060"></span><div id="comment-60060" class="comment"><div id="post-60060-score" class="comment-score"></div><div class="comment-text"><p>Many thanks: just realised they're custom, so no surprise )</p></div><div id="comment-60060-info" class="comment-info"><span class="comment-age">(14 Mar '17, 05:43)</span> Dmitriy</div></div><span id="60063"></span><div id="comment-60063" class="comment"><div id="post-60063-score" class="comment-score"></div><div class="comment-text"><p>Just tried linking all 3 MIBs (BROADHOP-MIB, BROADHOP-NOTIFICATION-MIB, BROADHOP-QNS-MIB) as explained w/o any luck:</p><p>"in the the "Preferences" dialog opened by the "Edit ==&gt; Preferences" menu item, under the topic "Name resolution", you will find a button "SMI (MIB amd PIB) Modules" which opens an editing window where you can add/remove modules. The name of the file you add to the "mibs" directory mentioned above must be the same as the module name itself (found in the MIB itself at the start, just before "DEFINITIONS ::=BEGIN")."</p><p>I cannot see my OIDs in any of the MIBs though. Should they show up there exactly as they are, e.g. 1.3.6.1.4.1.26878.100.1.1.7?</p></div><div id="comment-60063-info" class="comment-info"><span class="comment-age">(14 Mar '17, 08:06)</span> Dmitriy</div></div><span id="60064"></span><div id="comment-60064" class="comment"><div id="post-60064-score" class="comment-score">1</div><div class="comment-text"><p>MIBs are usually part of a hierarchy, so at the top of the MIB there will be an <code>IMPORTS</code> section that imports definitions from other mibs, then there will be definitions that add on to those imports.</p><p>So the OID <code>1.3.6.1.4.1</code> is <em>enterprises</em> from RFC1155-SMI, which also defines <em>iso, org, dod, internet, private</em> which is the <code>1.3.6.1.4</code> part, <code>26878</code> is the organisation (BROADHOP), probably in the BROADHOP-MIB, and then the <code>100.1.1.7</code> will be defined in parts in the series of BROADHOP MIB's.</p><p>There are various MIB explorer tools that will show the OID's in a GUI or you can parse the MIB files by hand. Wireshark will require all MIB files in the chain to resolve a specific OID.</p></div><div id="comment-60064-info" class="comment-info"><span class="comment-age">(14 Mar '17, 08:39)</span> grahamb ♦</div></div><span id="60065"></span><div id="comment-60065" class="comment"><div id="post-60065-score" class="comment-score"></div><div class="comment-text"><p>Thank you - I think I can decode them manually now:</p><p>BROADHOP-MIB file starts with this, referring to SNMPv2-SMI as you mentioned:</p><p>BROADHOP-MIB DEFINITIONS ::= BEGIN</p><p>IMPORTS MODULE-IDENTITY, OBJECT-TYPE, NOTIFICATION-TYPE, enterprises, Integer32 FROM SNMPv2-SMI DisplayString FROM SNMPv2-TC;</p><p>Further down I can see 26878 defined:</p><p>broadhop MODULE-IDENTITY</p><p>...&lt;removed&gt;...</p><pre><code>::= { enterprises 26878 }</code></pre><p>and then the next 3 positions:</p><p>broadhopCommon OBJECT IDENTIFIER ::= { broadhop 100 }</p><p>broadhopCommonNotificationsGroup OBJECT IDENTIFIER ::= { broadhopCommon 1 }</p><p>broadhopNotificationParameters OBJECT IDENTIFIER ::= { broadhopCommonNotificationsGroup 1 }</p><p>and finally individual parameters, e.g. 7 is broadhopComponentName, 8 is broadhopComponentTime and so on.</p><p>Now wondering why Wireshark cannot do the same automatically...</p></div><div id="comment-60065-info" class="comment-info"><span class="comment-age">(14 Mar '17, 08:56)</span> Dmitriy</div></div><span id="60067"></span><div id="comment-60067" class="comment"><div id="post-60067-score" class="comment-score">1</div><div class="comment-text"><p>The library used to resolve the OID to name is very strict about MIB conformance to the standard. I've seen many MIBs that violate one or another rule, thereby rejected by libsmi. Wireshark can be tuned to suppress these errors, so may have this problem too. Using smilint (or visiting simpleweb) allows you to test the MIBs conformance. Oh, one more thing, have you ticked 'enable OID resolution', and restarted Wireshark?</p></div><div id="comment-60067-info" class="comment-info"><span class="comment-age">(14 Mar '17, 09:57)</span> Jaap ♦</div></div><span id="60068"></span><div id="comment-60068" class="comment not_top_scorer"><div id="post-60068-score" class="comment-score"></div><div class="comment-text"><p>Jaap:</p><p>Surely I didn't: that worked a treat - many thanks!</p><p>grahamb:</p><p>It'd be great to add this "tick Enable OID resolution" step into the howto if possible.</p></div><div id="comment-60068-info" class="comment-info"><span class="comment-age">(14 Mar '17, 10:11)</span> Dmitriy</div></div><span id="60072"></span><div id="comment-60072" class="comment not_top_scorer"><div id="post-60072-score" class="comment-score"></div><div class="comment-text"><p>Anyone can request editing privileges for the wiki. From the front page of the Wiki:</p><blockquote>If you are a member of the EditorGroup you can edit this wiki. To become an editor, create an account and send a request to [email protected] which includes your wiki username.</blockquote></div><div id="comment-60072-info" class="comment-info"><span class="comment-age">(14 Mar '17, 10:42)</span> grahamb ♦</div></div><span id="60073"></span><div id="comment-60073" class="comment not_top_scorer"><div id="post-60073-score" class="comment-score"></div><div class="comment-text"><p>If an answer has solved your issue, please accept the answer for the benefit of other users by clicking the checkmark icon next to the answer. Please read the FAQ for more information.</p></div><div id="comment-60073-info" class="comment-info"><span class="comment-age">(14 Mar '17, 10:43)</span> grahamb ♦</div></div><span id="60074"></span><div id="comment-60074" class="comment not_top_scorer"><div id="post-60074-score" class="comment-score"></div><div class="comment-text"><p>grahamb:</p><p>Done.</p></div><div id="comment-60074-info" class="comment-info"><span class="comment-age">(14 Mar '17, 10:56)</span> Dmitriy</div></div></div><div id="comment-tools-60059" class="comment-tools"><span class="comments-showing"> showing 5 of 9 </span> <a href="#" class="show-all-comments-link">show 4 more comments</a></div><div class="clear"></div><div id="comment-60059-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

@@ -1,0 +1,70 @@
++++
+type = "question"
+title = "Wireshark does not run on OSX 10.6.4"
+description = '''I just downloaded and installed wire shark on Mac OSX 10.6.4 when I opened it the first time it gave me a messege that it will require a few minutes to start up. It never did start up, and double clicking the icon does nothing. It simply wont start. what did I do wrong?'''
+date = "2011-06-12T11:36:00Z"
+lastmod = "2012-04-19T14:27:00Z"
+weight = 4528
+keywords = [ "osx", "mac", "installation" ]
+aliases = [ "/questions/4528" ]
+osqa_answers = 2
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Wireshark does not run on OSX 10.6.4](/questions/4528/wireshark-does-not-run-on-osx-1064)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-4528-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I just downloaded and installed wire shark on Mac OSX 10.6.4 when I opened it the first time it gave me a messege that it will require a few minutes to start up. It never did start up, and double clicking the icon does nothing. It simply wont start. what did I do wrong?</p></div><div id="question-tags" class="tags-container tags">osx mac installation</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>12 Jun '11, 11:36</strong></p><img src="https://secure.gravatar.com/avatar/f349fb894b82c1e6b9c4d651218743c4?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="iwaschosen&#39;s gravatar image" /><p>iwaschosen<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="iwaschosen has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 19 Apr '12, 12:24</p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span></p></div></div><div id="comments-container-4528" class="comments-container"></div><div id="comment-tools-4528" class="comment-tools"></div><div class="clear"></div><div id="comment-4528-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="4531"></span>
+
+<div id="answer-container-4531" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-4531-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>See the <a href="http://ask.wireshark.org/questions/4146/mac-osx-installation#answer-container-4156">answer</a> to a similar question.</p><p>You should check your syslog for any errors from Wireshark. Alternatively, you can try starting Wireshark from the command line, where you might see error messages that are not captured in the syslog.</p><p>There are a few ways to check your syslog:</p><ul><li>From Terminal, enter: <code>syslog -C | grep wireshark</code></li><li>From Terminal, enter: <code>/Applications/Utilities/Console.app/Contents/MacOS/Console &amp;</code></li><li>From Finder, navigate to <code>/Applications/Utilities/Console.app/Contents/MacOS/Console</code></li></ul><p>To start Wireshark from the command line, simply enter <code>wireshark</code> from Terminal (assuming the binary is in your path). You should see some kind of error message printed at the Terminal as soon as Wireshark crashes.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>12 Jun '11, 19:48</strong></p><img src="https://secure.gravatar.com/avatar/362ba1008ad9a075d1556d33e97dfed6?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="helloworld&#39;s gravatar image" /><p>helloworld<br />
+<span class="score" title="3149 reputation points"><span>3.1k</span></span><span title="4 badges"><span class="badge1">●</span><span class="badgecount">4</span></span><span title="20 badges"><span class="silver">●</span><span class="badgecount">20</span></span><span title="41 badges"><span class="bronze">●</span><span class="badgecount">41</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="helloworld has 28 accepted answers">28%</span></p></div></div><div id="comments-container-4531" class="comments-container"><span id="4532"></span><div id="comment-4532" class="comment"><div id="post-4532-score" class="comment-score"></div><div class="comment-text"><p>thanks, I managed to get the crash report,</p><p>Dyld Error Message: Library not loaded: /usr/X11/lib/libfreetype.6.dylib Referenced from: /Users/michal/Desktop/Wireshark.app/Contents/Resources/bin/wireshark-bin Reason: Incompatible library version: wireshark-bin requires version 13.0.0 or later, but libfreetype.6.dylib provides version 10.0.0</p><p>where can I obtain the required library?</p></div><div id="comment-4532-info" class="comment-info"><span class="comment-age">(12 Jun '11, 20:33)</span> iwaschosen</div></div><span id="4533"></span><div id="comment-4533" class="comment"><div id="post-4533-score" class="comment-score"></div><div class="comment-text"><p>Install <a href="http://www.macports.org/">MacPorts</a>, and then enter from Terminal: <code>sudo port install freetype</code></p></div><div id="comment-4533-info" class="comment-info"><span class="comment-age">(12 Jun '11, 20:52)</span> helloworld</div></div><span id="4534"></span><div id="comment-4534" class="comment"><div id="post-4534-score" class="comment-score"></div><div class="comment-text"><p>I just did a system update, and wireshark now opens properly and runs thanks a lot!</p></div><div id="comment-4534-info" class="comment-info"><span class="comment-age">(12 Jun '11, 21:03)</span> iwaschosen</div></div><span id="10300"></span><div id="comment-10300" class="comment"><div id="post-10300-score" class="comment-score"></div><div class="comment-text"><p>I just downloaded the latest version of wireshark and ran sudo port install freetype, but wireshark now requires 14.0.0 or later and freetype only updates to 13.0.0, you guys have really got to start thinking through your dependencies better and the impact they have on us mere mortals who are just trying to use your software.</p></div><div id="comment-10300-info" class="comment-info"><span class="comment-age">(19 Apr '12, 12:11)</span> WantaKnow</div></div><span id="10307"></span><div id="comment-10307" class="comment"><div id="post-10307-score" class="comment-score"></div><div class="comment-text"><p>freetype is part of OS X's X11 package, and, if Wireshark's using that version of freetype, a MacPorts update won't help. If you're not running the latest version of Snow Leopard, there will be a problem because, as per <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=5937">bug 5937</a>, the GTK+ library we supply with Wireshark is built against the libraries in the OS version on the buildbot, not the ones in the SDK.</p></div><div id="comment-10307-info" class="comment-info"><span class="comment-age">(19 Apr '12, 14:25)</span> Guy Harris ♦♦</div></div><span id="10309"></span><div id="comment-10309" class="comment not_top_scorer"><div id="post-10309-score" class="comment-score"></div><div class="comment-text"><p>Yes, with the dmgs from <a href="http://wireshark.org">wireshark.org</a>, a software update to the latest version of OS X (matching what's on the buildbot that built the dmg) would help. A MacPorts update will probably <em>not</em> update the version of libfreetype that came with the system, and thus will probably <em>not</em> help.</p></div><div id="comment-10309-info" class="comment-info"><span class="comment-age">(19 Apr '12, 14:39)</span> Guy Harris ♦♦</div></div></div><div id="comment-tools-4531" class="comment-tools"><span class="comments-showing"> showing 5 of 6 </span> <a href="#" class="show-all-comments-link">show 1 more comments</a></div><div class="clear"></div><div id="comment-4531-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="10308"></span>
+
+<div id="answer-container-10308" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-10308-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Wireshark was built against, I suspect, 10.6.8; as the GTK+ library that comes with the Wireshark dmgs from <a href="http://wireshark.org">wireshark.org</a> is built against the libraries in the OS version on the buildbot, not the ones in the Snow Leopard SDK, this means that the resulting Wireshark may not work on older versions of Snow Leopard. This is <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=5937">bug 5937</a>.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>19 Apr '12, 14:27</strong></p><img src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Guy%20Harris&#39;s gravatar image" /><p>Guy Harris ♦♦<br />
+<span class="score" title="17443 reputation points"><span>17.4k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">●</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">●</span><span class="badgecount">196</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Guy Harris has 216 accepted answers">19%</span></p></div></div><div id="comments-container-10308" class="comments-container"><span id="10310"></span><div id="comment-10310" class="comment"><div id="post-10310-score" class="comment-score"></div><div class="comment-text"><p>Even some 10.6.8 systems are not able to support wireshark. Perhaps the person doing the build had a newer flavor of GTK+ library and if so I would love to see a post that walks through getting it installed on my 10.6.8 system. I tried but couldn't get all of the dependencies resolved. Do you really need to build against the dev box libs, couldn't you just have a stock set of libs you compile against on a build box?</p></div><div id="comment-10310-info" class="comment-info"><span class="comment-age">(19 Apr '12, 14:39)</span> WantaKnow</div></div><span id="10313"></span><div id="comment-10313" class="comment"><div id="post-10313-score" class="comment-score"></div><div class="comment-text"><blockquote><p>I tried but couldn't get all of the dependencies resolved.</p></blockquote><p>Have you tried just running the <code>macosx-setup.sh</code> script in the top-level source directory? It <em>should</em> download, build, and install the support libraries. If it doesn't, file a bug in <a href="http://bugs.wireshark.org">the Wireshark bugzilla</a>.</p><blockquote><p>Do you really need to build against the dev box libs, couldn't you just have a stock set of libs you compile against on a build box?</p></blockquote><p>That's exactly what <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=5937">bug 5937</a> is all about; the "stock set" would be the set in the Snow Leopard SDK.</p></div><div id="comment-10313-info" class="comment-info"><span class="comment-age">(19 Apr '12, 15:03)</span> Guy Harris ♦♦</div></div></div><div id="comment-tools-10308" class="comment-tools"></div><div class="clear"></div><div id="comment-10308-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

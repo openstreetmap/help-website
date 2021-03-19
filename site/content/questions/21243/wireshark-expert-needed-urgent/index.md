@@ -1,0 +1,81 @@
++++
+type = "question"
+title = "wireshark expert needed - URGENT"
+description = '''we have a pesky problem with our Internet up and download speed. this problem has brought our business to it&#x27;s knees. I&#x27;ve spoken to a half-dozen tech support people... including our ISP and no one can diagnose the problem. our isp says it is caused by outgoing traffic from one or both of our comput...'''
+date = "2013-05-17T14:26:00Z"
+lastmod = "2013-05-20T06:52:00Z"
+weight = 21243
+keywords = [ "wireshark", "speed", "internet" ]
+aliases = [ "/questions/21243" ]
+osqa_answers = 3
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [wireshark expert needed - URGENT](/questions/21243/wireshark-expert-needed-urgent)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-21243-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>we have a pesky problem with our Internet up and download speed. this problem has brought our business to it's knees. I've spoken to a half-dozen tech support people... including our ISP and no one can diagnose the problem.</p><p>our isp says it is caused by outgoing traffic from one or both of our computers. Wireshark may be able to identify the problem but I don't know how to use it.</p><p>I'm willing to pay a consulting fee if someone can logon to one or both of our computers to diagnose the problem.</p><p>call me at 360.264.5248 [email protected] www.ingmancompany.com</p></div><div id="question-tags" class="tags-container tags">wireshark speed internet</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>17 May '13, 14:26</strong></p><img src="https://secure.gravatar.com/avatar/93cb7dde026008d04bebec86fa88fadf?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="jeffingman&#39;s gravatar image" /><p>jeffingman<br />
+<span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="jeffingman has no accepted answers">0%</span></p></div></div><div id="comments-container-21243" class="comments-container"></div><div id="comment-tools-21243" class="comment-tools"></div><div class="clear"></div><div id="comment-21243-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+3 Answers:
+
+</div>
+
+</div>
+
+<span id="21244"></span>
+
+<div id="answer-container-21244" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-21244-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>I've sent you an email. However, if the link is really saturated, it will be difficult to take over your computers.</p><p>Are you using any file-sharing software? Online backup services? Online storage that synchronizes (dropbox, etc).</p><p>It could also be that you are infected and that your computer(s) are part of a botnet. Are you running a good virus scanner and malware scanner?</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>17 May '13, 15:57</strong></p><img src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="SYN-bit&#39;s gravatar image" /><p>SYN-bit ♦♦<br />
+<span class="score" title="17094 reputation points"><span>17.1k</span></span><span title="9 badges"><span class="badge1">●</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">●</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">●</span><span class="badgecount">245</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="SYN-bit has 174 accepted answers">20%</span></p></div></div><div id="comments-container-21244" class="comments-container"><span id="21246"></span><div id="comment-21246" class="comment"><div id="post-21246-score" class="comment-score"></div><div class="comment-text"><p>I've had several techs logon to this machine and run it remotely... usually our speed is good enough to do that much</p><p>We have Norton Internet Security updated daily. We have paid support from them and they've checked my computer completely.</p><p>We use BackBlaze. We do have a sql server database hosted by our application provider in Texas. Data gets passed back and forth thru the day. But I'd say our generated and received data would pale when compared with most kids phone activity.</p><p>I'll be at my desk by 7 Pacific tomorrow. Call me at 360.264.5248.</p><p>jeff</p></div><div id="comment-21246-info" class="comment-info"><span class="comment-age">(17 May '13, 16:40)</span> jeffingman</div></div><span id="21248"></span><div id="comment-21248" class="comment"><div id="post-21248-score" class="comment-score"></div><div class="comment-text"><p>OK, if the link is not saturated, how do you describe the "pesky problem with our Internet up and download speed"? What actions on the Internet have a problematic speed? And is it bad continuously or intermittently?</p><p>Tomorrow at 7 AM pacific is 16:00 CEST I believe. I'm not available at that time. I will be available later tomorrow (3PM pacific time or so) or on Sunday. Is that an option too?</p></div><div id="comment-21248-info" class="comment-info"><span class="comment-age">(17 May '13, 16:52)</span> SYN-bit ♦♦</div></div><span id="21250"></span><div id="comment-21250" class="comment"><div id="post-21250-score" class="comment-score"></div><div class="comment-text"><p>The pesky problem is download speeds ranging from 1-8 megs. When it slows below 4k our database access slows. That's the basic issue.</p><p>There is no detectable pattern.</p><p>I should be here all weekend. 3 tomorrow works... please confirm. you have my email [email protected]</p></div><div id="comment-21250-info" class="comment-info"><span class="comment-age">(17 May '13, 17:12)</span> jeffingman</div></div></div><div id="comment-tools-21244" class="comment-tools"></div><div class="clear"></div><div id="comment-21244-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="21296"></span>
+
+<div id="answer-container-21296" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-21296-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>I don't want to interfere with the work @SYN-bit is doing for you as I'm sure he will identify the problem for you.</p><p>Nevertheless here are some thoughts to consider.</p><blockquote><p>our isp says it is <strong>caused</strong> by <strong>outgoing traffic</strong> from one or both of our computers. The pesky problem is <strong>download speeds</strong> ranging from 1-8 megs. When it slows</p></blockquote><p>well, if you have <strong>download</strong> problems, then the <strong>outgoing</strong> traffic should not be the root cause of the problem, unless that <strong>outgoing</strong> traffic totally fills up the whole pipe (bandwidth), which makes is hard/impossible for the ACKs of the <strong>incoming/downloading</strong> traffic to get through to the server. That would be rather unusual and unlikely.</p><blockquote><p>There is <strong>no detectable pattern</strong>.</p></blockquote><p>Sounds like 'something' uses the same pipe.</p><p>By any chance, your are not connected to the internet via a cable TV network, are you? If so, then that's a known and common problem in certain setups, as the TV cable is a shared medium up to a certain point and if someone else in the same building starts a large download all other users of the same connection will suffer from that download. The same holds true for DSL in certain setups.</p><p>So, how exactly are you connected to the internet?</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>20 May '13, 03:53</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div><div class="post-update-info post-update-info-edited"><p>edited 20 May '13, 03:54</p></div></div><div id="comments-container-21296" class="comments-container"><span id="21302"></span><div id="comment-21302" class="comment"><div id="post-21302-score" class="comment-score"></div><div class="comment-text"><p>Kurt:</p><p>I am still working on this issue with @SYN-bit. So far we have not solved the issue.</p><p>We have DSL service from a local telephone company. They have monitored outgoing traffic and at times see enough going out that they believe it is blocking the incoming pipe.</p><p>Jeff Ingman [email protected]</p></div><div id="comment-21302-info" class="comment-info"><span class="comment-age">(20 May '13, 05:30)</span> jeffingman</div></div><span id="21303"></span><div id="comment-21303" class="comment"><div id="post-21303-score" class="comment-score"></div><div class="comment-text"><blockquote><p>We have DSL service from a local telephone company. T</p></blockquote><p>well, as there is <strong>no pattern</strong> for the traffic problems, please think about the <strong>shared link</strong> from the <strong><a href="http://en.wikipedia.org/wiki/Digital_subscriber_line_access_multiplexer">DSLAM</a></strong> up to the ISP network/backbone. Sometimes ISPs sell more bandwidth to their customers as that link can provide in a worst case scenario (all users requesting their 'promised' bandwidth). If that is the case and (several) other DSL users (connected to the same DSLAM) start large downloads, you will be affected as well. If there is enough bandwidth for the up-link it could be cross-talk between some wire pairs (however that's a rather unusual technical problem!). Please ask your ISP if they can rule out those two scenarios. But don't expect to get a 'fully honest' answer, if they do over-provisioning ;-))</p><blockquote><p>They have <strong>monitored outgoing traffic</strong> and at times see <strong>enough going out</strong> that they believe it is <strong>blocking the incoming</strong> pipe.</p></blockquote><p>that is not impossible, but rather unlikely. Nevertheless, if they see that kind of problem, you should be able to see the same with Wireshark on your local LAN. The problem is to catch a situation where it happens. @SYN-bit will help you with that. I just wanted to bring in some thoughts you might not have come up with yet.</p><p>Regards<br />
+Kurt</p></div><div id="comment-21303-info" class="comment-info"><span class="comment-age">(20 May '13, 06:14)</span> Kurt Knochner ♦</div></div></div><div id="comment-tools-21296" class="comment-tools"></div><div class="clear"></div><div id="comment-21296-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="21305"></span>
+
+<div id="answer-container-21305" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-21305-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Good Morning, If there is a router or modem in the mix, I's say verify your layer 1 statistics on your circuit. It's very likely it could be dirty. (CRC, Drops, and such)</p><p>There is also the option of introducing Quality of Service / Policing for traffic.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>20 May '13, 06:52</strong></p><img src="https://secure.gravatar.com/avatar/e9c7000c596be276b76f2eb55a221e70?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="b1b3tt3r&#39;s gravatar image" /><p>b1b3tt3r<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="b1b3tt3r has no accepted answers">0%</span> </br></p></div></div><div id="comments-container-21305" class="comments-container"></div><div id="comment-tools-21305" class="comment-tools"></div><div class="clear"></div><div id="comment-21305-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

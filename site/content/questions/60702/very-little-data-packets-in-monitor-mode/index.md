@@ -1,0 +1,31 @@
++++
+type = "question"
+title = "Very little data packets in monitor mode."
+description = '''I&#x27;m trying to setup a proof of concept for indoor positioning using WIFI. The idea is to place a few WIFI adapters in several locations in a small building, each tracking signal strength and MAC address and storing it in a database. Based on the signal strength to different adapters at the same time...'''
+date = "2017-04-10T06:28:00Z"
+lastmod = "2017-04-10T06:28:00Z"
+weight = 60702
+keywords = [ "wireless", "kali-linux", "monitor-mode" ]
+aliases = [ "/questions/60702" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Very little data packets in monitor mode.](/questions/60702/very-little-data-packets-in-monitor-mode)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-60702-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I'm trying to setup a proof of concept for indoor positioning using <code>WIFI</code>. The idea is to place a few <code>WIFI</code> adapters in several locations in a small building, each tracking signal strength and <code>MAC</code> address and storing it in a database. Based on the signal strength to different adapters at the same time, we can get an (in)accurate position of the device (<code>MAC</code>).</p><p>There are two <code>SSIDs</code> in the building, both with <code>WPA-PWD</code> encryption. There will also be devices that are not associated with the network. Since I don't want to install 3 adapters on each location (one for each network) I want to get the signal strength in monitor mode and only switch the channel between the two <code>SSIDs</code>.</p><p>Using <code>Kali</code> and <code>tshark</code> i'm able to capture the signal strength using:</p><pre><code>tshark -i mon0 -T fields -e wlan.sa -e radiotap.dbm_antsignal</code></pre><p>The problem however is that I receive very little data from my test device (android phone). If I open the <code>WIFI</code> manager and it start scanning for networks in the area I capture the broadcast packets, but no other data at all. I suspected it to be because of the <code>WPA</code> encryption and changed to an open network and it worked. I see a constant stream of packets from my android phone.</p><p>I turned back to the <code>WPA</code> network and setup <code>tshark</code> using decryption</p><pre><code>tshark -i mon0 -o wlan.enable_decryption:TRUE -o &quot;uat:80211_keys:\&quot;wpa-pwd\&quot;,\&quot;Passphrase:SSID\&quot;&quot;</code></pre><p>I disconnected my phone from the network, enabled monitor mode and then reconnected the device, to make sure I received the <code>four-way handshake</code>. Now I do receive some data packets, but nowhere near the amount I'm actually sending/downloading. At moments I receive about 10 a minute and then nothing at all for a few minutes.</p><p>I tried with the folowing setups</p><ul><li><code>Kali linux</code> in <code>VMWare</code> on windows 10, with an <code>ALFA AWUS036H</code> (RT8187 chipset)</li><li>I dont receive any data packets from <code>WPA</code> protected networks</li><li><code>Kali linux ARM</code> on <code>Raspberry Pi 3 model b</code>, same USB adapter</li><li>I dont receive any data packets from <code>WPA</code> protected networks</li><li><code>Kali linux</code> live boot USB, <code>Qualcomm Atheros AR938x</code> adapter</li><li>I receive a few datapackets from <code>WPA</code> protected networks</li></ul><p>My questions:</p><ol><li>Is decrypting necessary if I only want <code>MAC</code> and signal strength?</li><li>Why don't I receive most of the data packets being sent?</li><li>Is there a better way to use <code>WIFI</code> for <code>IPS</code>?</li></ol></div><div id="question-tags" class="tags-container tags">wireless kali-linux monitor-mode</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>10 Apr '17, 06:28</strong></p><img src="https://secure.gravatar.com/avatar/313980c5c01ddb36a889b71e4104f177?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="DrZiggy&#39;s gravatar image" /><p>DrZiggy<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="DrZiggy has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 10 Apr '17, 06:28</p></div></div><div id="comments-container-60702" class="comments-container"></div><div id="comment-tools-60702" class="comment-tools"></div><div class="clear"></div><div id="comment-60702-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

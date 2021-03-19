@@ -1,0 +1,60 @@
++++
+type = "question"
+title = "What is the window scaling graph showing exactly and how to use it"
+description = '''This question focuses on the graph produced by: Statistics -&amp;gt; TCP StreamGraph -&amp;gt; Window Scaling Graph I&#x27;m sure this should be simple, but I&#x27;m confused by what this graph is showing me and I can&#x27;t find documentation explicitly stating what the graph displays. Is this a graph of: a) The size of ...'''
+date = "2013-12-06T22:27:00Z"
+lastmod = "2013-12-07T07:22:00Z"
+weight = 27883
+keywords = [ "rwin", "tcp" ]
+aliases = [ "/questions/27883" ]
+osqa_answers = 0
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [What is the window scaling graph showing exactly and how to use it](/questions/27883/what-is-the-window-scaling-graph-showing-exactly-and-how-to-use-it)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-27883-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>This question focuses on the graph produced by:</p><p>Statistics -&gt; TCP StreamGraph -&gt; Window Scaling Graph</p><p>I'm sure this should be simple, but I'm confused by what this graph is showing me and I can't find documentation explicitly stating what the graph displays. Is this a graph of:</p><p>a) The size of the receive window regardless of the number of unacked bytes.</p><p>or</p><p>b) The size of the window minus the number of unacked bytes</p><p>Here's the question I'm trying to answer: there's a bottleneck in a network I'm analyzing from packet captures. I looked at various things and noticed that the TCP receive window from the Wireshark window scaling graph from one host was very erratic. That is, instead of being a smooth line maxed out at a certain value like I'm used to seeing, it rapidly oscillated in value. I thought this was a clear indication that the host's receive buffer was being maxed out and that TCP flow control was throttling the throughput via the receive window. A graph of the bandwidth over time seemed to corroborate this theory since it seemed to follow the same trend as the window scaling graph.</p><p>However, someone else looked at the window scaling graph and doubted my conclusion because the receive window in the chart never went to zero, and therefore thought that the sender would never be impacted by the window. Their impression of the graph was that it was showing the window with respect to unacknowledged data, and since it never went to zero, the sender would never stop sending data because of it.</p><p>Can someone help bring clarity to this for me?</p><p>Thanks!</p></div><div id="question-tags" class="tags-container tags">rwin tcp</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>06 Dec '13, 22:27</strong></p><img src="https://secure.gravatar.com/avatar/2e4763f0cc8124d677d249a99800950a?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="firebush&#39;s gravatar image" /><p>firebush<br />
+<span class="score" title="21 reputation points">21</span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">●</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">●</span><span class="badgecount">7</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="firebush has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 06 Dec '13, 22:28</p></div></div><div id="comments-container-27883" class="comments-container"></div><div id="comment-tools-27883" class="comment-tools"></div><div class="clear"></div><div id="comment-27883-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="27890"></span>
+
+<div id="answer-container-27890" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-27890-score" class="post-score" title="current number of votes">3</div></div></td><td><div class="item-right"><div class="answer-body"><p>The window scaling graph shows what you mentioned in option a.)</p><blockquote><p>The size of the advertized receive window incl. scaling factor.</p></blockquote><p>So, basically the graph tells you how well the receiver can handle the received data.</p><ul><li>a 'flat line' means the receiver did not adjust it's window size, hence it had no problem at all to handle the incoming bytes fast enough.</li><li>an 'oscillating' graph (like a saw tooth) means: The receiver advertized a smaller window size, as it was not able to handle the incoming traffic fast enough, hence the buffer got filled up. By lowering the window size, it tells the sender about that fact. The sender may or may not take action in that case. Most certainly it would be clever to send less data at once. However, you'll often see no reaction at all in real world scenarios. It depends on the OS and applications in use.</li></ul><p>The reason for an oscillating window size are many fold. Think about a system that does not only receive data and store then somewhere (maybe with RAM caching), but also need to process the data as soon as they are received (like doing calculations, printing data if it is a printer, etc.). In that case the receiver might get more data than it can process in a defined time slot and then it would lower the receive window, to let the sender know.</p><p>So, the oscillating window size alone does not necessarily have an effect on the throughput. If the window size does not drop to far (let's say 10-20%), the sender can still send data fast enough in most cases. It <strong>will have</strong> an effect on links with a very high RTT, where the sender could potentially fill the whole pipe with one receive window. If in that case the receive window gets smaller, it <strong>will have</strong> an effect on throughput.</p><p>Anyway: Throughput problems are more often related to packet loss than to windows size updates, unless the receive window drops to far (near 0 or to 0). In that case it will obviously have an effect on throughput.</p><p>So, to figure out what's going on in your TCP connection you need to look at several things</p><ul><li>RTT (see TCP RTT graph)</li><li>Window updates (Window scaling graph + Expert messages: Zero Window, etc.)</li><li>Packet loss (Expert messages: DUP ACK, Retransmission, etc.)</li></ul><p>Those things, <strong>together</strong>, will affect your throughput.</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>07 Dec '13, 07:22</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div></div><div id="comments-container-27890" class="comments-container"><span id="27894"></span><div id="comment-27894" class="comment"><div id="post-27894-score" class="comment-score"></div><div class="comment-text"><p>Thanks for the quick reply, Kurt! Great answer. A small request: it looks like you're quoting something when you give that definition of the window scaling graph. Mind indicating or linking where that came from? That may help me or someone else in the future. Thanks again!</p></div><div id="comment-27894-info" class="comment-info"><span class="comment-age">(07 Dec '13, 10:18)</span> firebush</div></div><span id="27928"></span><div id="comment-27928" class="comment"><div id="post-27928-score" class="comment-score"></div><div class="comment-text"><blockquote><p>looks like you're quoting something when you give that definition of the window scaling graph</p></blockquote><p>Mainly I quoted your definition as it was correct ;-)</p><p>The rest comes from my memory. If you want a link to that, you'll need a class 3 neuro interlink with a mid range subspace transmitter, powered by a quantum point energy cell. I'm not sure if that is available at RadioShack in this region of the Galaxy...</p></div><div id="comment-27928-info" class="comment-info"><span class="comment-age">(08 Dec '13, 13:45)</span> Kurt Knochner ♦</div></div><span id="28082"></span><div id="comment-28082" class="comment"><div id="post-28082-score" class="comment-score"></div><div class="comment-text"><p>I don't need to go to RadioShack. I'll just use the one in my garage. :)</p></div><div id="comment-28082-info" class="comment-info"><span class="comment-age">(13 Dec '13, 09:19)</span> firebush</div></div><span id="28083"></span><div id="comment-28083" class="comment"><div id="post-28083-score" class="comment-score"></div><div class="comment-text"><p>Fine. Plug it in and join me for a journey through a weird world of bit, bytes, protocols and other silly stuff.... ;-)</p></div><div id="comment-28083-info" class="comment-info"><span class="comment-age">(13 Dec '13, 09:22)</span> Kurt Knochner ♦</div></div><span id="28086"></span><div id="comment-28086" class="comment"><div id="post-28086-score" class="comment-score"></div><div class="comment-text"><p>Danger, Will Robinson, danger! :-D</p></div><div id="comment-28086-info" class="comment-info"><span class="comment-age">(13 Dec '13, 11:04)</span> Jasper ♦♦</div></div><span id="28087"></span><div id="comment-28087" class="comment not_top_scorer"><div id="post-28087-score" class="comment-score"></div><div class="comment-text"><p>Yep, beware!!!</p><p>My secret nickname is <strong>Rex Kramer - Danger Seeker</strong>. I'm always there were it hurts. In the late seventies I played myself in one of those B-movies...</p></div><div id="comment-28087-info" class="comment-info"><span class="comment-age">(13 Dec '13, 11:32)</span> Kurt Knochner ♦</div></div><span id="28090"></span><div id="comment-28090" class="comment not_top_scorer"><div id="post-28090-score" class="comment-score"></div><div class="comment-text"><p>Kentucky Fried Movie FTW! :-)</p></div><div id="comment-28090-info" class="comment-info"><span class="comment-age">(13 Dec '13, 12:52)</span> Jasper ♦♦</div></div></div><div id="comment-tools-27890" class="comment-tools"><span class="comments-showing"> showing 5 of 7 </span> <a href="#" class="show-all-comments-link">show 2 more comments</a></div><div class="clear"></div><div id="comment-27890-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

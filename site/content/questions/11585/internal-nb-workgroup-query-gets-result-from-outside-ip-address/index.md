@@ -1,0 +1,59 @@
++++
+type = "question"
+title = "Internal NB workgroup query gets result from outside IP address&gt;"
+description = '''Please have a look at this screenshot. http://i.imgur.com/0rqCt.png?1 I am wondering why a local netbios query would result in a outside Colorado based IP being returned. Thanks, Pluribus'''
+date = "2012-06-03T12:54:00Z"
+lastmod = "2012-06-03T13:47:00Z"
+weight = 11585
+keywords = [ "security", "ubuntu", "netbios" ]
+aliases = [ "/questions/11585" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Internal NB workgroup query gets result from outside IP address&gt;](/questions/11585/internal-nb-workgroup-query-gets-result-from-outside-ip-address)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-11585-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Please have a look at this screenshot.</p><p><a href="http://i.imgur.com/0rqCt.png?1">http://i.imgur.com/0rqCt.png?1</a></p><p>I am wondering why a local netbios query would result in a outside Colorado based IP being returned.</p><p>Thanks,</p><p>Pluribus</p></div><div id="question-tags" class="tags-container tags">security ubuntu netbios</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>03 Jun '12, 12:54</strong></p><img src="https://secure.gravatar.com/avatar/2b1d4ebc68ff2908f81bbfd9a43aaf78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="pluribus&#39;s gravatar image" /><p>pluribus<br />
+<span class="score" title="1 reputation points">1</span><span title="4 badges"><span class="badge1">●</span><span class="badgecount">4</span></span><span title="4 badges"><span class="silver">●</span><span class="badgecount">4</span></span><span title="6 badges"><span class="bronze">●</span><span class="badgecount">6</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="pluribus has no accepted answers">0%</span></p></div></div><div id="comments-container-11585" class="comments-container"></div><div id="comment-tools-11585" class="comment-tools"></div><div class="clear"></div><div id="comment-11585-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="11590"></span>
+
+<div id="answer-container-11590" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-11590-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>That's down to the name resolution done by IP 192.168.1.1, possibly your router. The two A records returned are 69.16.143.110 and 184.106.15.239 and neither of them seem to have much to do with the name "WORKGOUP" which comes from the default workgroup for a non-domain windows machine.</p><p>Wireshark shows the subsequent SYN requests with destination "WORKGROUP" due to the A records returned by the preceding DNS queries populating the name cache.</p><p><strong>Edit</strong></p><p>The IP addresses returned from the query are due to the user's ISP <a href="http://en.wikipedia.org/wiki/DNS_hijacking">hijacking</a> dns queries for unknown hosts. TimeWarner / RoadRunner dumbness.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>03 Jun '12, 13:47</strong></p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="grahamb has 274 accepted answers">22%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 04 Jun '12, 01:47</p></div></div><div id="comments-container-11590" class="comments-container"><span id="11593"></span><div id="comment-11593" class="comment"><div id="post-11593-score" class="comment-score"></div><div class="comment-text"><p>Thanks for the rapid reply. I am not sure I understood fully.</p><p>In a nutshell are you saying the events are not related to a lookup for "workgroup?"</p><p>Is this normal behavior that I am just not grasping?</p></div><div id="comment-11593-info" class="comment-info"><span class="comment-age">(03 Jun '12, 13:54)</span> pluribus</div></div><span id="11594"></span><div id="comment-11594" class="comment"><div id="post-11594-score" class="comment-score"></div><div class="comment-text"><p>Also when i do a</p><p>ping workgroup PING workgroup (69.16.143.110) 56(84) bytes of data.</p><p>why would my DNS server resolve the word "workgroup" to anything? I am confused.</p><hr /><p>I just got it, this is part of my ISP advertising, all unknown names return this landing page at 69.16.143.110.</p><p>Ok one mystery solved, time to edit resolv.conf to something a little better like 8.8.8.8</p></div><div id="comment-11594-info" class="comment-info"><span class="comment-age">(03 Jun '12, 14:00)</span> pluribus</div></div><span id="11595"></span><div id="comment-11595" class="comment"><div id="post-11595-score" class="comment-score"></div><div class="comment-text"><p>Looks a little odd to me, why is your dns resolver returning those A records? Does the machine at 192.168.1.1 run a full dns resolver or is it just forwarding queries?</p></div><div id="comment-11595-info" class="comment-info"><span class="comment-age">(03 Jun '12, 14:01)</span> grahamb ♦</div></div><span id="11596"></span><div id="comment-11596" class="comment"><div id="post-11596-score" class="comment-score"></div><div class="comment-text"><p>192.168.1.1 is a wireless router. If you navigate the the IP it is sort of like an ad for the ISP. So, if I ping anything at all with no TLD it will resolve to that IP. It is odd imo too, the 192.168.1.1 has no DNS server enabled on it. When I changed /etc/resolv.conf to read 8.8.8.8 instead of localhost the issue went away. Now when i "ping workgroup" i get the message "unknown host."</p><p>If any behavior seems odd please let me know what tests I can run because I have def been having strange expriences on the network lately including a lot of BAD TCP traffic and some other alarming traffic.</p></div><div id="comment-11596-info" class="comment-info"><span class="comment-age">(03 Jun '12, 14:06)</span> pluribus</div></div><span id="11598"></span><div id="comment-11598" class="comment"><div id="post-11598-score" class="comment-score"></div><div class="comment-text"><p>That'll be an ISP "enhancement" then, that instead of returning "unknown host" as required, they instead return the IP address of a landing page to throw advertising at you.</p><p>Searching for "DNS landing page" will get you many similar complaints. What is your ISP?</p></div><div id="comment-11598-info" class="comment-info"><span class="comment-age">(03 Jun '12, 14:11)</span> grahamb ♦</div></div><span id="11600"></span><div id="comment-11600" class="comment not_top_scorer"><div id="post-11600-score" class="comment-score"></div><div class="comment-text"><p>timewarner / roadrunner</p><p>btw to test it, i changed my router's DNS servers to opendns and google.</p><p>now when i ping workgroup I get this</p><p>PING workgroup (67.215.65.132) 56(84) bytes of data. 64 bytes from <a href="http://hit-nxdomain.opendns.com">hit-nxdomain.opendns.com</a> (67.215.65.132): icmp_req=1 ttl=51 time=15.7 ms 64 bytes from <a href="http://hit-nxdomain.opendns.com">hit-nxdomain.opendns.com</a> (67.215.65.132): icmp_req=2 ttl=51 time=15.0 ms</p></div><div id="comment-11600-info" class="comment-info"><span class="comment-age">(03 Jun '12, 14:33)</span> pluribus</div></div><span id="11601"></span><div id="comment-11601" class="comment not_top_scorer"><div id="post-11601-score" class="comment-score"></div><div class="comment-text"><p>That IP is another landing page, if you pop it into your browser, same idea. "Enhancement" , not unlike the rootkit enhancement know as computrace that has been put on millions of computers sold by HP. Dell. Lenovo, etc. All infected with a lojack device from Absolute Software that can be turned into a trojan by an attacker. Gotta love the manufactured consent of all these wonderful enchancement.</p><p>Thanks to wireshark I am finding and eliminating all these enhancements one at a time.</p></div><div id="comment-11601-info" class="comment-info"><span class="comment-age">(03 Jun '12, 14:33)</span> pluribus</div></div><span id="11605"></span><div id="comment-11605" class="comment not_top_scorer"><div id="post-11605-score" class="comment-score"></div><div class="comment-text"><p>those "enhancements" are a key feature of opendns. They try to filter your DNS requests for typos, malware sites and other things. Based on the result they will return an IP address of a landing page (malware, unknown host, etc.) or the right web site (typo). It's kind of a managed, enhanced DNS. Some people love it, some hate it ;-) However, the behaviour of your ISP is plain dumb. Resolving a single host query (not a FQDN) to an external landing page is a really bad idea and calls for trouble.</p></div><div id="comment-11605-info" class="comment-info"><span class="comment-age">(04 Jun '12, 01:27)</span> Kurt Knochner ♦</div></div></div><div id="comment-tools-11590" class="comment-tools"><span class="comments-showing"> showing 5 of 8 </span> <a href="#" class="show-all-comments-link">show 3 more comments</a></div><div class="clear"></div><div id="comment-11590-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

@@ -1,0 +1,31 @@
++++
+type = "question"
+title = "Dissect all AVP in Diameter protocol by tshark with 100% CPU"
+description = '''Hi everyone,  I&#x27;m using tshark to dissect Diameter pcap by this command: tshark -d sctp.port==8732,diameter -i 4 -P -w ./port_2.pcap -b filesize:128000  but by doing this, some AVPs aren&#x27;t dissected. I didn&#x27;t face this problem with Camel. After that, I changed the command: tshark -d sctp.port==8732,...'''
+date = "2017-10-27T22:15:00Z"
+lastmod = "2017-10-27T22:15:00Z"
+weight = 64315
+keywords = [ "diameter", "tshark" ]
+aliases = [ "/questions/64315" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Dissect all AVP in Diameter protocol by tshark with 100% CPU](/questions/64315/dissect-all-avp-in-diameter-protocol-by-tshark-with-100-cpu)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-64315-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi everyone, I'm using tshark to dissect Diameter pcap by this command:</p><pre><code>tshark -d sctp.port==8732,diameter -i 4 -P -w ./port_2.pcap -b filesize:128000</code></pre><p>but by doing this, some AVPs aren't dissected. I didn't face this problem with Camel. After that, I changed the command:</p><pre><code>tshark -d sctp.port==8732,diameter -i 4 -P -w ./port_2.pcap -b filesize:128000 -T fields -e &quot;diameter.Session-Id&quot;</code></pre><p>My objective is to force the dissector going through all AVP. But in this way, it always spends 100% CPU and slow down the progress (like using filter). So I modified the source code of tshark.c by adding "print_details = TRUE" and remove the option "-T fields -e "diameter.Session-Id" in the command. It works but CPU still high (90%). Running with Camel, it spend only ~ 40% CPU</p><p>Can you help me to find the way to force the dissector going through all AVP (by tshark or changing code) without using options like filter so that it can make my program faster?</p><p>Thank you for your help.</p><p>P/S: I also try -V option, it works but CPU still 100% :-s</p></div><div id="question-tags" class="tags-container tags">diameter tshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>27 Oct '17, 22:15</strong></p><img src="https://secure.gravatar.com/avatar/824a7342f59ff90e6040505b38626416?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="hoangsonk49&#39;s gravatar image" /><p>hoangsonk49<br />
+<span class="score" title="81 reputation points">81</span><span title="28 badges"><span class="badge1">●</span><span class="badgecount">28</span></span><span title="29 badges"><span class="silver">●</span><span class="badgecount">29</span></span><span title="33 badges"><span class="bronze">●</span><span class="badgecount">33</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="hoangsonk49 has 2 accepted answers">28%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 28 Oct '17, 04:37</p></div></div><div id="comments-container-64315" class="comments-container"><span id="64323"></span><div id="comment-64323" class="comment"><div id="post-64323-score" class="comment-score"></div><div class="comment-text"><blockquote><p>some AVPs aren't dissected</p></blockquote><p>"Aren't dissected" in what sense? That command isn't doing a verbose dissection, so I wouldn't expect <em>any</em> AVPs to show up in the TShark output. If you want the output of TShark to show the AVPs, you'd need to use the -V flag, to show the detailed dissection.</p><p>What exactly are you trying to do here?</p></div><div id="comment-64323-info" class="comment-info"><span class="comment-age">(28 Oct '17, 15:25)</span> Guy Harris ♦♦</div></div><span id="64324"></span><div id="comment-64324" class="comment"><div id="post-64324-score" class="comment-score"></div><div class="comment-text"><blockquote><p>P/S: I also try -V option, it works but CPU still 100% :-s</p></blockquote><p>Yes, packet dissection is a CPU-intensive process.</p></div><div id="comment-64324-info" class="comment-info"><span class="comment-age">(28 Oct '17, 15:26)</span> Guy Harris ♦♦</div></div><span id="64325"></span><div id="comment-64325" class="comment"><div id="post-64325-score" class="comment-score"></div><div class="comment-text"><p>What do you mean "go through all the AVPs?" *shark will dissect the AVPs that it needs to based on what you ask it to do.</p><p>For example if you ask it to print all the AVPs (e.g., with <code>-V</code>) then it will (necessarily) dissect all the AVPs.</p><p>If, however, you ask it to only print the packet summaries (<code>-P</code>) it probably won't need to dissect many AVPs at all (if any) since it's not building a decode tree.</p></div><div id="comment-64325-info" class="comment-info"><span class="comment-age">(28 Oct '17, 15:29)</span> JeffMorriss ♦</div></div></div><div id="comment-tools-64315" class="comment-tools"></div><div class="clear"></div><div id="comment-64315-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

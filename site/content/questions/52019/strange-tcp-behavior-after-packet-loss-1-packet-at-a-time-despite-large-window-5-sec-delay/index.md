@@ -1,0 +1,60 @@
++++
+type = "question"
+title = "Strange TCP behavior after packet loss - 1 packet at a time despite large window, 5 sec delay"
+description = '''Looking for any TCP experts to help explain this! pcap: https://www.dropbox.com/s/9kk81d59ub1njwe/LB%20nstrace1-6-stream8only.cap?dl=0  We are troubleshooting a slowness issue involving traffic through a load balancer, and we have found a smoking gun where a 9k file is being transferred, hits some p...'''
+date = "2016-04-27T08:31:00Z"
+lastmod = "2016-04-27T10:47:00Z"
+weight = 52019
+keywords = [ "delay", "slow", "retransmission", "tcp" ]
+aliases = [ "/questions/52019" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Strange TCP behavior after packet loss - 1 packet at a time despite large window, 5 sec delay](/questions/52019/strange-tcp-behavior-after-packet-loss-1-packet-at-a-time-despite-large-window-5-sec-delay)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-52019-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Looking for any TCP experts to help explain this!</p><p>pcap: <a href="https://www.dropbox.com/s/9kk81d59ub1njwe/LB%20nstrace1-6-stream8only.cap?dl=0">https://www.dropbox.com/s/9kk81d59ub1njwe/LB%20nstrace1-6-stream8only.cap?dl=0</a></p><p>We are troubleshooting a slowness issue involving traffic through a load balancer, and we have found a smoking gun where a 9k file is being transferred, hits some packet loss, but then after what looks like successful retransmission, see what appears to be the load balancer sending 1 packet at a time, after waiting about 5 sec each packet. The result is that it takes 35 sec to transfer a 9k file (7 packets * 5 sec).</p><p>In the attached capture, you see:</p><ol><li>normal TCP behavior, and the lb attempting to transfer the file to the client (frames 15-22)</li><li>some packet loss; the client ACKS for frame 15, about 7 packets back</li><li>a pattern of:<ul><li>client ACKs for the lb to retransmit some data</li><li>lb ACKs that request</li><li>lb waits 5 sec</li><li>lb transmits the requested data (this pattern in frames 28-41)</li></ul></li></ol><p>I am confused, because: - the window size is fine (66640) - yet the load balancer is transmitting only one packet before waiting for an ACK - the lb waits 5 sec (an eternity) and never speeds up upon subsequent quick ACKs from the client</p><p>I also noted that SACK is actively being used (frames 27-28). Maybe that's confusing something.</p><p>Can anyone explain what is going on here? What are the possible mechanisms in modern TCP that <em>should</em>, after some packet loss, be reducing the # packets sent, and/or increasing the time between sent packets? Could one of these be going haywire? Anyone seen something like this?</p><p>The lb is a NetScaler.</p><p>Thanks! :-) Shawn</p></div><div id="question-tags" class="tags-container tags">delay slow retransmission tcp</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>27 Apr '16, 08:31</strong></p><img src="https://secure.gravatar.com/avatar/725945d72ff9d8d165919f75019c9084?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="shawncarroll&#39;s gravatar image" /><p>shawncarroll<br />
+<span class="score" title="0 reputation points">0</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="shawncarroll has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 27 Apr '16, 10:29</p><img src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jasper&#39;s gravatar image" /><p>Jasper ♦♦<br />
+<span class="score" title="23806 reputation points"><span>23.8k</span></span><span title="5 badges"><span class="badge1">●</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">●</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">●</span><span class="badgecount">284</span></span></p></div></div><div id="comments-container-52019" class="comments-container"></div><div id="comment-tools-52019" class="comment-tools"></div><div class="clear"></div><div id="comment-52019-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="52021"></span>
+
+<div id="answer-container-52021" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-52021-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>First, a small hint - if you're tracking strange TCP behavior you should not capture on any of the nodes involved. As far as I can tell you captured on the loadbalancer (10.166.28.40), which may not exactly show what was really sent on the wire. Always use an additional PC or a professional capture device to get a fully passive reading via TAP or SPAN port. It's the only way not to be fooled by a device you suspect of doing things the wrong way (and, I have to add this, is <strong>especially</strong> true for loadbalancers and traffic shapers, because they do really crazy stuff with TCP sometimes)</p><p>Now, for the retransmission in frame 23 - it looks like it's for frame 15 based on sequence and acknowledge numbers as well as the TCP payload. My guess is that the retransmission was triggered by a retransmission timeout timer not seeing an ACK for frame 15. In 24 you get the ACK, very likely for the retransmission, not the original. In 26 the server tries to continue with data following frame 22, based on the sequence numbers seen, but the client tells it to send frame 16 again. It looks like it never got any of the 1466 byte frames at all, and they get now retransmitted one by one.</p><p>The problem here is in fact that it takes 5 seconds for <strong>each</strong> of the retransmitted frames. This again looks like the retransmission timer having to run out each single time.</p><p>My advice:</p><ol><li><p>Do simultaneous captures at the client and the server to be able to compare what they see and what they don't. Use additional laptops for this; do not capture on client or server. Check <a href="https://blog.packet-foo.com/2014/05/the-drawbacks-of-local-packet-captures/">this blog post</a> for reasons why.</p></li><li><p>Check the loadbalancer for mechanisms that would reject or drop retransmissions from either side if it still has the original in it's own buffers. I have seen loadbalanchers receiving retransmissions and saying "no, I still have an unacknowledged copy of this packet myself. I'll drop the retransmission and keep waiting for an ack for the original I already sent.", which lead to a timely retransmission being blocked by the device in the middle.</p></li></ol></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>27 Apr '16, 10:47</strong></p><img src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jasper&#39;s gravatar image" /><p>Jasper ♦♦<br />
+<span class="score" title="23806 reputation points"><span>23.8k</span></span><span title="5 badges"><span class="badge1">●</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">●</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">●</span><span class="badgecount">284</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Jasper has 263 accepted answers">18%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 27 Apr '16, 10:53</p></div></div><div id="comments-container-52021" class="comments-container"><span id="52023"></span><div id="comment-52023" class="comment"><div id="post-52023-score" class="comment-score"></div><div class="comment-text"><p>Thanks Jasper, this is illuminating.</p><p>Does the RTO of 4.87 sec make sense to you? Why would it be this high in the first place? I thought it would be a smaller multiple of the round trip time (about 150 msec)</p><p>I think right now the LB is using the default, which is supposed to be Reno or enhanced Reno.</p></div><div id="comment-52023-info" class="comment-info"><span class="comment-age">(27 Apr '16, 13:56)</span> shawncarroll</div></div><span id="52026"></span><div id="comment-52026" class="comment"><div id="post-52026-score" class="comment-score">1</div><div class="comment-text"><p>An RTO of more than 3 sec is unusual, yes, but not in a range I'd find highly suspicious. Maybe someone "tuned" something somewhere.</p><p>And no, most stacks today do a hard coded 3 sec RTO, because it almost never happens - except for the lost odd packet at the end of a transmission (which means there's no packet following the lost packet with which you can spot that there's a gap). All other situations are recovered via fast retransmission or SACK.</p><p>With behavior like you're seeing I always investigate the "middleboxes", e.g. your loadbalancer. Current client and server TCP stacks just do not behave the way you're seeing in your trace.</p></div><div id="comment-52026-info" class="comment-info"><span class="comment-age">(27 Apr '16, 15:44)</span> Jasper ♦♦</div></div><span id="52283"></span><div id="comment-52283" class="comment"><div id="post-52283-score" class="comment-score">1</div><div class="comment-text"><p>Just following up on this in case anyone is following along, after not much motion at all on the part of Citrix, finally this known bug was identified as being the probable cause, with the recommendation to update to a certain firmware version to fix.</p><p>"Retransmission Timeout Causes Network Latency on SSL Connections Through NetScaler" http://support.citrix.com/article/CTX205656</p><p>Thanks Jasper!! :-) Shawn</p></div><div id="comment-52283-info" class="comment-info"><span class="comment-age">(06 May '16, 12:58)</span> shawncarroll</div></div></div><div id="comment-tools-52021" class="comment-tools"></div><div class="clear"></div><div id="comment-52021-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

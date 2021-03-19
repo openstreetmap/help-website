@@ -1,0 +1,72 @@
++++
+type = "question"
+title = "capturing of line based text data"
+description = '''i am trying to filter the line-based text data out of the captured packets using tshark.  tshark -i 3 -R data-text-lines -V  Using the command above would get me a whole data packet, but I would like to extract the line-based text only. Is it possible to obtain only the line based text? Or else any ...'''
+date = "2012-05-21T01:38:00Z"
+lastmod = "2012-05-21T08:58:00Z"
+weight = 11168
+keywords = [ "tshark" ]
+aliases = [ "/questions/11168" ]
+osqa_answers = 2
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [capturing of line based text data](/questions/11168/capturing-of-line-based-text-data)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-11168-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>i am trying to filter the line-based text data out of the captured packets using <code>tshark</code>.</p><pre><code>tshark -i 3 -R data-text-lines -V</code></pre><p>Using the command above would get me a whole data packet, but I would like to extract the line-based text only. Is it possible to obtain only the line based text? Or else any advice for doing that?</p></div><div id="question-tags" class="tags-container tags">tshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>21 May '12, 01:38</strong></p><img src="https://secure.gravatar.com/avatar/833507cd2948959d2509e176424d3251?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="sharkblue&#39;s gravatar image" /><p>sharkblue<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="sharkblue has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 21 May '12, 02:09</p><img src="https://secure.gravatar.com/avatar/362ba1008ad9a075d1556d33e97dfed6?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="helloworld&#39;s gravatar image" /><p>helloworld<br />
+<span class="score" title="3149 reputation points"><span>3.1k</span></span><span title="4 badges"><span class="badge1">●</span><span class="badgecount">4</span></span><span title="20 badges"><span class="silver">●</span><span class="badgecount">20</span></span><span title="41 badges"><span class="bronze">●</span><span class="badgecount">41</span></span></p></div></div><div id="comments-container-11168" class="comments-container"></div><div id="comment-tools-11168" class="comment-tools"></div><div class="clear"></div><div id="comment-11168-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="11184"></span>
+
+<div id="answer-container-11184" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-11184-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Are you only looking for the content of a web page and want to search for patterns within that text? If so, please use this command:</p><pre><code>tshark -i 2 -T fields -e text port 80| find &quot;your text&quot;</code></pre><p>You can extend the output with IP addresses or any other fields:</p><pre><code>tshark -i 2 -T fields -e ip.src -e ip.dst -e text port 80| find &quot;your text&quot;` </code></pre><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>21 May '12, 08:58</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div><div class="post-update-info post-update-info-edited"><p>edited 21 May '12, 14:06</p><img src="https://secure.gravatar.com/avatar/362ba1008ad9a075d1556d33e97dfed6?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="helloworld&#39;s gravatar image" /><p>helloworld<br />
+<span class="score" title="3149 reputation points"><span>3.1k</span></span><span title="4 badges"><span class="badge1">●</span><span class="badgecount">4</span></span><span title="20 badges"><span class="silver">●</span><span class="badgecount">20</span></span><span title="41 badges"><span class="bronze">●</span><span class="badgecount">41</span></span></p></div></div><div id="comments-container-11184" class="comments-container"><span id="11189"></span><div id="comment-11189" class="comment"><div id="post-11189-score" class="comment-score"></div><div class="comment-text"><p>You can also use the <a href="http://wiki.wireshark.org/DisplayFilters?highlight=contains"><code>contains</code></a> operator in your display filter (which removes the dependency on a second command):</p><pre><code>tshark -i 3 -R &quot;data-text-lines contains &#39;{your text}&#39; &quot; -e data-text-lines</code></pre><p>or <a href="http://wiki.wireshark.org/DisplayFilters?highlight=matches"><code>matches</code></a> (for matching with regular expression):</p><pre><code>tshark -i 3 -R &quot;data-text-lines matches &#39;{regex}&#39; &quot; -e data-text-lines</code></pre></div><div id="comment-11189-info" class="comment-info"><span class="comment-age">(21 May '12, 14:20)</span> helloworld</div></div></div><div id="comment-tools-11184" class="comment-tools"></div><div class="clear"></div><div id="comment-11184-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="11169"></span>
+
+<div id="answer-container-11169" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-11169-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>Use the <a href="http://www.wireshark.org/docs/man-pages/tshark.html#t_pdml_psml_ps_text_fields"><code>-T fields</code></a> parameter, and specify <code>data-text-lines</code> as a <a href="http://www.wireshark.org/docs/man-pages/tshark.html#e_field"><code>-e</code> field</a>:</p><pre><code>tshark -i 3 -R data-text-lines -T fields -e data-text-lines</code></pre></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>21 May '12, 02:14</strong></p><img src="https://secure.gravatar.com/avatar/362ba1008ad9a075d1556d33e97dfed6?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="helloworld&#39;s gravatar image" /><p>helloworld<br />
+<span class="score" title="3149 reputation points"><span>3.1k</span></span><span title="4 badges"><span class="badge1">●</span><span class="badgecount">4</span></span><span title="20 badges"><span class="silver">●</span><span class="badgecount">20</span></span><span title="41 badges"><span class="bronze">●</span><span class="badgecount">41</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="helloworld has 28 accepted answers">28%</span></p></div></div><div id="comments-container-11169" class="comments-container"><span id="11176"></span><div id="comment-11176" class="comment"><div id="post-11176-score" class="comment-score"></div><div class="comment-text"><p>i have used the above cmd , but it only shows</p><p>c:\Program Files\Wireshark&gt;tshark -i 2 -R data-text-lines -T fields -e data-text -lines Capturing on Microsoft Line-based text data: application/x-www-form-urlencoded Line-based text data: application/x-javascript Line-based text data: text/html ...</p><p>Below is a extract of the script information from line-based text data which i hope i could extract out without the chuck encoding. would it be possible with another filter ?</p></div><div id="comment-11176-info" class="comment-info"><span class="comment-age">(21 May '12, 07:09)</span> sharkblue</div></div><span id="11177"></span><div id="comment-11177" class="comment"><div id="post-11177-score" class="comment-score"></div><div class="comment-text"><p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx cc0 4c d3 64 3c 8e 21 0d 84 47 e0 2e 94 46 31 d5 95 L.d&lt;.!..G...F1.. 0cd0 5a 18 48 c1 6d 3e 0d 93 11 c5 6e a2 4f 38 7e 73 Z.H.m&gt;....n.O8~s 0ce0 2c 8b 6d a6 be 61 71 29 c8 93 3a 01 d4 80 47 47 ,.m..aq)..:...GG 0cf0 ba 94 0e 41 3d 02 95 9e 4e b2 d9 38 49 4f 79 96 ...A=...N..8IOy.</p></div><div id="comment-11177-info" class="comment-info"><span class="comment-age">(21 May '12, 07:09)</span> sharkblue</div></div><span id="11178"></span><div id="comment-11178" class="comment"><div id="post-11178-score" class="comment-score"></div><div class="comment-text"><p>............................. [truncated] &lt;meta name="robots" content="noodp, noydir"/&gt;&lt;meta name="descri ption" content=" FPeople use Facebook style=" position:absolute;="" top:-1000="" 0px;="" width:0px;="" height:0px;"=""&gt;</p><div><div><div href="http://static.ak.fbcdn.net">static.ak.fbcdn.net\/rsrc.php\/v2\/yU\/r\/iyBtuT5z-Pk.css</div></div></div></div><div id="comment-11178-info" class="comment-info"><span class="comment-age">(21 May '12, 07:09)</span> sharkblue</div></div><span id="11179"></span><div id="comment-11179" class="comment"><div id="post-11179-score" class="comment-score"></div><div class="comment-text"><p>i would like to capture the specific part using a filter //truncated] &lt;meta name="robots" content="noodp, noydir"/&gt;&lt;meta name="descri ption" content=" FPeople use Facebook style=" position:absolute;=""//</p></div><div id="comment-11179-info" class="comment-info"><span class="comment-age">(21 May '12, 07:11)</span> sharkblue</div></div><span id="52598"></span><div id="comment-52598" class="comment"><div id="post-52598-score" class="comment-score"></div><div class="comment-text"><p><code>c480c480c48012c480c480c480c480614dc3be103d3dc3a2c3a963c3adc295c29538c38ec282c28a337fc2a81fc2883838496e0fc3afc2a60b310e59265d6ac39a61646d696e</code></p></div><div id="comment-52598-info" class="comment-info"><span class="comment-age">(15 May '16, 14:07)</span> Rama15</div></div><span id="52602"></span><div id="comment-52602" class="comment not_top_scorer"><div id="post-52602-score" class="comment-score"></div><div class="comment-text"><p>Any additional information? Or are we supposed to decode what you ask for from that hex string?</p></div><div id="comment-52602-info" class="comment-info"><span class="comment-age">(15 May '16, 14:43)</span> sindy</div></div></div><div id="comment-tools-11169" class="comment-tools"><span class="comments-showing"> showing 5 of 6 </span> <a href="#" class="show-all-comments-link">show 1 more comments</a></div><div class="clear"></div><div id="comment-11169-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

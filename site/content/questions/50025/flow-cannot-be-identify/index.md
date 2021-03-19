@@ -1,0 +1,60 @@
++++
+type = "question"
+title = "Flow cannot be identify ?"
+description = '''Hi, I&#x27;ve checked the attack type from this packet (721619.pcap) and now I&#x27;m impossible to identify this attack or behavior. Help me to understand.  Cloudshark link ( https://www.cloudshark.org/captures/50e23e13bb31 ). ip.src == 172.17.107.32 &amp;amp;&amp;amp; ip.dst == 25.4.5.116 Can anybody clarify me the...'''
+date = "2016-02-09T12:39:00Z"
+lastmod = "2016-02-09T13:32:00Z"
+weight = 50025
+keywords = [ "spurious", "retransmission" ]
+aliases = [ "/questions/50025" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Flow cannot be identify ?](/questions/50025/flow-cannot-be-identify)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-50025-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi,</p><p>I've checked the attack type from this packet (721619.pcap) and now I'm impossible to identify this attack or behavior. Help me to understand.<br />
+</p><p>Cloudshark link ( <a href="https://www.cloudshark.org/captures/50e23e13bb31">https://www.cloudshark.org/captures/50e23e13bb31</a> ).</p><p>ip.src == 172.17.107.32 &amp;&amp; ip.dst == 25.4.5.116</p><p><strong>Can anybody clarify me the attack type and way of identifying simply ?</strong></p><p>I have no idea on this</p><p><img src="https://osqa-ask.wireshark.org/upfiles/SackPerm.PNG" alt="alt text" /></p></div><div id="question-tags" class="tags-container tags">spurious retransmission</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>09 Feb '16, 12:39</strong></p><img src="https://secure.gravatar.com/avatar/ff7c46d7b334bbb8fa01a5eef4ea3b14?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Bhagya&#39;s gravatar image" /><p>Bhagya<br />
+<span class="score" title="4 reputation points">4</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="6 badges"><span class="bronze">●</span><span class="badgecount">6</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Bhagya has no accepted answers">0%</span> </br></p></img></div></div><div id="comments-container-50025" class="comments-container"></div><div id="comment-tools-50025" class="comment-tools"></div><div class="clear"></div><div id="comment-50025-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="50029"></span>
+
+<div id="answer-container-50029" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-50029-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>A display filter <code>tcp.stream == 507</code> (meaningful only on this particular capture!) shows you that the client 172...32 attempts to set up a TCP (SMTP) connection to the server 25...116 by sending a SYN packet, but the server rejects the attempt, possibly because the public IP behind which the private machine is is not on the server's white list. This is one of measures a SMTP server may take against receiving spam.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>09 Feb '16, 13:32</strong></p><img src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="sindy&#39;s gravatar image" /><p>sindy<br />
+<span class="score" title="6049 reputation points"><span>6.0k</span></span><span title="4 badges"><span class="badge1">●</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">●</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">●</span><span class="badgecount">51</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="sindy has 110 accepted answers">24%</span></p></div></div><div id="comments-container-50029" class="comments-container"><span id="50048"></span><div id="comment-50048" class="comment"><div id="post-50048-score" class="comment-score"></div><div class="comment-text"><p>So this could be a spam mail ?</p><p>Can you explain what is called here as "Spurious re-transmission" ?</p><p>Those packet doesn't shown details in Follow TCP stream. But Statistics&gt;Conversations&gt;IPv4 show Bytes are delivered from B -&gt; A. So which could be taken from here.</p><ul><li>I'm stranger to these fields. Still completing 3rd year at university. Sometimes this questions might be primary.</li></ul></div><div id="comment-50048-info" class="comment-info"><span class="comment-age">(10 Feb '16, 04:05)</span> Bhagya</div></div><span id="50057"></span><div id="comment-50057" class="comment"><div id="post-50057-score" class="comment-score"></div><div class="comment-text"><p>The key here is the <em>context</em>. As the whole capture is full of SMTP transmission attempts, mostly rejected with reference to spamming databases, and as the SYN packet is sent towards TCP port 25 which is the standard port on which a SMTP service listens, you can reasonably assume that the SYN was an attempt to send an email using SMTP. Whether it would have been spam or not is another issue and you can only suppose here.</p><p>As for explanation of what Wireshark means by a "spurious retransmission", @Jasper has written <a href="https://blog.packet-foo.com/2013/06/spurious-retransmissions/comment-page-1/">a nice article explaining the topic</a> - in your case, the 172...32 sends a SYN from the same source port to the same destination socket although it has already received a response to it before (the RST, ACK packet from the 25...116).</p><p><em>Why</em> the 172...32 behaves like this is something what Wireshark cannot tell you. Wireshark always only shows you <em>what</em> has happened.</p></div><div id="comment-50057-info" class="comment-info"><span class="comment-age">(10 Feb '16, 07:52)</span> sindy</div></div><span id="50073"></span><div id="comment-50073" class="comment"><div id="post-50073-score" class="comment-score"></div><div class="comment-text"><p>I got cleared. First would like to thanks for kind response. It's great help for me.</p><p>So, this is transferred to both sides but 25.4.5.116 is not sent SYN-ACK packets. But RST, ACK is showing that connection Reset (terminated) and again 172..32 has sent same packet (Spurious re-transmission). Right ?</p><p>So this could be a spam attempt to enter to mail server ?</p><p>or another party is getting attempt to handle the mail server as d-Dos attack ?</p><p>what is called from tcp.stream == 507 ?</p></div><div id="comment-50073-info" class="comment-info"><span class="comment-age">(10 Feb '16, 11:51)</span> Bhagya</div></div><span id="50077"></span><div id="comment-50077" class="comment"><div id="post-50077-score" class="comment-score"></div><div class="comment-text"><blockquote><p>what is called from tcp.stream == 507 ?</p></blockquote><p>Wireshark's tcp dissector numbers the individual tcp sessions (streams) as it finds their first packets in the capture. So tcp.stream == 507 shows all packets of the 507th tcp session which the dissector has found.</p><blockquote><p>So this could be a spam attempt to enter to mail server ? or another party is getting attempt to handle the mail server as d-Dos attack?</p></blockquote><p>Again: this can only be guessed <em>in the context of the rest of the capture</em>. Without the context, it may be:</p><ul><li><p>an attempt of 172...32 to send (forward) a "legal" e-mail message to/via 25...116, which has failed because the destination server has a temporary problem or wrong configuration or has the public IP behind which the 172...32 is hidden on a blacklist</p></li><li><p>an attempt of 172...32 to send (forward) a spam e-mail message to/via 25...116, which has failed because the destination server has a temporary problem or wrong configuration or has the public IP behind which the 172...32 is hidden on a blacklist</p></li><li><p>an attempt to DDoS the 25...116</p></li></ul><p>When taking the context into account, the most likely case becomes the second one. The capture shows many messages to be sent to different SMTP servers, which is very suspicious unless the 172...32 is a SMTP server itself (see my response to your other question regarding the same capture); if it would be a DDoS attempt, I would expect to see much more than just three SYN attempts towards the 25...16 during the 1'45" of the capture.</p><blockquote><p>So, this is transferred to both sides but 25.4.5.116 is not sent SYN-ACK packets. But RST, ACK is showing that connection Reset (terminated) and again 172..32 has sent same packet (Spurious re-transmission). Right ?</p></blockquote><p>I'll try to reword what you wrote: the capture shows traffic going in both directions but 25.4.5.116 does not accept the connection by responding the SYN with SYN-ACK. Instead, it rejects the connection by responding with a RST, ACK packet. Due to the fact that there was the response, the Wireshark tcp dissector analyzes the next transmission of the SYN packet from the same source socket to the same destination socket with the same absolute sequence number as a <em>spurious</em> retransmission; if there would have been no response, the dissector would have marked the retransmission of the SYN as a plain, not spurious, one.</p></div><div id="comment-50077-info" class="comment-info"><span class="comment-age">(10 Feb '16, 14:27)</span> sindy</div></div><span id="50110"></span><div id="comment-50110" class="comment"><div id="post-50110-score" class="comment-score"></div><div class="comment-text"><p>Thanks a lot. It's marvelous answer for me and good fit to the question.</p><p>Anyway I was in analyzing these today and finally it was easy to understand that spam emails sending attempt was taken and but it wasn't succeeded due to the server rejections.</p><p>According to response reset packets have sent and connection terminated. So could not be established connection and 3 attempts were useless. Briefly I think it could be the scenario here ?</p></div><div id="comment-50110-info" class="comment-info"><span class="comment-age">(11 Feb '16, 10:30)</span> Bhagya</div></div><span id="50120"></span><div id="comment-50120" class="comment not_top_scorer"><div id="post-50120-score" class="comment-score"></div><div class="comment-text"><p>Briefly - yes.</p></div><div id="comment-50120-info" class="comment-info"><span class="comment-age">(11 Feb '16, 22:00)</span> sindy</div></div></div><div id="comment-tools-50029" class="comment-tools"><span class="comments-showing"> showing 5 of 6 </span> <a href="#" class="show-all-comments-link">show 1 more comments</a></div><div class="clear"></div><div id="comment-50029-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

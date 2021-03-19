@@ -1,0 +1,71 @@
++++
+type = "question"
+title = "Excessive LLMNR packets from one workstation"
+description = '''We have one workstation which sends out 40 LLMNR packets every 30 seconds (marked &quot;Standard query A&quot;) It&#x27;s been checked every way possible for malware and rootkits, I feel pretty confident that it&#x27;s clean. But what gives? None of the other machines on our network broadcast anywhere near this much. O...'''
+date = "2012-10-11T11:36:00Z"
+lastmod = "2012-11-15T12:51:00Z"
+weight = 14940
+keywords = [ "llmnr", "excessive" ]
+aliases = [ "/questions/14940" ]
+osqa_answers = 2
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Excessive LLMNR packets from one workstation](/questions/14940/excessive-llmnr-packets-from-one-workstation)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-14940-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>We have one workstation which sends out 40 LLMNR packets every 30 seconds (marked "Standard query A") It's been checked every way possible for malware and rootkits, I feel pretty confident that it's clean. But what gives? None of the other machines on our network broadcast anywhere near this much. Or am I obsessing over nothing?</p><p>-Roger</p></div><div id="question-tags" class="tags-container tags">llmnr excessive</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>11 Oct '12, 11:36</strong></p><img src="https://secure.gravatar.com/avatar/62658b62f3173070742afa0e42b2776f?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Shrubber&#39;s gravatar image" /><p>Shrubber<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Shrubber has no accepted answers">0%</span></p></div></div><div id="comments-container-14940" class="comments-container"><span id="14955"></span><div id="comment-14955" class="comment"><div id="post-14955-score" class="comment-score"></div><div class="comment-text"><p>You mean LLMNR query? If so, does the workstation get a response?</p></div><div id="comment-14955-info" class="comment-info"><span class="comment-age">(12 Oct '12, 01:42)</span> rakki</div></div><span id="14961"></span><div id="comment-14961" class="comment"><div id="post-14961-score" class="comment-score"></div><div class="comment-text"><p>Yes, Standard query A, The workstation being queried is online, but I haven't seen any responses. Both systems are working Windows 7 pro workstations. There are files being shared, which works fine regardless. Thinking of turning off LLMNR completely on both workstations..</p></div><div id="comment-14961-info" class="comment-info"><span class="comment-age">(12 Oct '12, 05:55)</span> Shrubber</div></div><span id="19703"></span><div id="comment-19703" class="comment"><div id="post-19703-score" class="comment-score"></div><div class="comment-text"><p>At some point i had these LLMNR 10-random-character multicasts flooding the network with a rate of 30 packets per second, all coming from one workstation.</p></div><div id="comment-19703-info" class="comment-info"><span class="comment-age">(21 Mar '13, 03:44)</span> Joop</div></div></div><div id="comment-tools-14940" class="comment-tools"></div><div class="clear"></div><div id="comment-14940-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="14984"></span>
+
+<div id="answer-container-14984" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-14984-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Please take a look at the following question and my answer</p><blockquote><p><code>http://ask.wireshark.org/questions/12840/weird-nbns-queries</code><br />
+</p></blockquote><p>Those queries could well be generated by a feature of the chrome browser. It does random name lookups for some purpose.</p><p>What do the LLMNR queries look like in your network? Are they for random names? If so, please check if Chrome is running on that system. If so, close the browser and the check if the LLMNR queries stop.</p><p>If the name queries are not random (and Chrome is not used), can you please post a sample capture of the queries somewhere (<a href="http://cloudshark.org">cloudshark.org</a>)?</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>13 Oct '12, 01:46</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></br></p></div></div><div id="comments-container-14984" class="comments-container"></div><div id="comment-tools-14984" class="comment-tools"></div><div class="clear"></div><div id="comment-14984-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="15938"></span>
+
+<div id="answer-container-15938" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-15938-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Random name lookups(DNS/NBNS/LLMNR) related to Chrome can occur when using a proxy auto-config script on your network. Changing the proxy settings to disable automatic configuration is one way to test/workaround that behavior.</p><p>Chrome does random, 10 character name lookups on startup in an effort to prevent nefarious activities of some ISP's. However, if the PAC script has an error Chrome will re-rerun it... repeatedly. Subsequently any name lookups in the script would be called until Chrome is shutdown.</p><p>The fix is already in the first release channel. A few random lookups during the first page load are normal though. <a href="https://tools.google.com/dlpage/chromesxs">https://tools.google.com/dlpage/chromesxs</a></p><p>-Todd</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>15 Nov '12, 12:51</strong></p><img src="https://secure.gravatar.com/avatar/11aa499cf2f81b154d4157cc01767db8?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Tenu1000&#39;s gravatar image" /><p>Tenu1000<br />
+<span class="score" title="1 reputation points">1</span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Tenu1000 has no accepted answers">0%</span></p></div></div><div id="comments-container-15938" class="comments-container"></div><div id="comment-tools-15938" class="comment-tools"></div><div class="clear"></div><div id="comment-15938-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

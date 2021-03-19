@@ -1,0 +1,59 @@
++++
+type = "question"
+title = "wireshark says this packet is malformed but our engineers agree it is ok"
+description = '''wireshark says this packet is malformed but our engineers agree it is ok so what do I do ? Should I raise a bug ? Packet 1833 - look at ptp section, I&#x27;ve highlighted the lengthField (you can see this in the bytes at the end as well). Apparently it is malformed after there - however when we look at t...'''
+date = "2012-07-05T03:47:00Z"
+lastmod = "2012-07-05T04:00:00Z"
+weight = 12454
+keywords = [ "cancel", "grant", "malformed", "ptp" ]
+aliases = [ "/questions/12454" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [wireshark says this packet is malformed but our engineers agree it is ok](/questions/12454/wireshark-says-this-packet-is-malformed-but-our-engineers-agree-it-is-ok)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-12454-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>wireshark says this packet is malformed but our engineers agree it is ok so what do I do ? Should I raise a bug ?</p><p>Packet 1833 - look at ptp section, I've highlighted the lengthField (you can see this in the bytes at the end as well). Apparently it is malformed after there - however when we look at the 1588 ptp spec it all seems to be ok. <img src="https://osqa-ask.wireshark.org/upfiles/mal1833.jpg" alt="alt text" /></p></div><div id="question-tags" class="tags-container tags">cancel grant malformed ptp</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>05 Jul '12, 03:47</strong></p><img src="https://secure.gravatar.com/avatar/72d02f1455de21e593de0b1e4acdb969?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="adetheheat&#39;s gravatar image" /><p>adetheheat<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="adetheheat has no accepted answers">0%</span></p></img></div></div><div id="comments-container-12454" class="comments-container"><span id="12456"></span><div id="comment-12456" class="comment"><div id="post-12456-score" class="comment-score"></div><div class="comment-text"><p>what are the last two bytes 0x00 0x00?? They don't get dissected.</p></div><div id="comment-12456-info" class="comment-info"><span class="comment-age">(05 Jul '12, 04:45)</span> Kurt Knochner ♦</div></div><span id="12457"></span><div id="comment-12457" class="comment"><div id="post-12457-score" class="comment-score"></div><div class="comment-text"><p>in the 1588 standard they say the 1st of the 2 bytes is 4 bits is the message type (should be 0 in my case) and the next 4 bits is reserved. The 2nd byte is also reserved. So 00 00 is correct</p></div><div id="comment-12457-info" class="comment-info"><span class="comment-age">(05 Jul '12, 05:11)</span> adetheheat</div></div><span id="12458"></span><div id="comment-12458" class="comment"><div id="post-12458-score" class="comment-score"></div><div class="comment-text"><p>it also says the length should be 2. Section 16.1.4.3 of ptp standard</p></div><div id="comment-12458-info" class="comment-info"><span class="comment-age">(05 Jul '12, 05:12)</span> adetheheat</div></div><span id="12459"></span><div id="comment-12459" class="comment"><div id="post-12459-score" class="comment-score"></div><div class="comment-text"><p>for CANCEL_UNICAST_TRANSMISSION TLV specification</p></div><div id="comment-12459-info" class="comment-info"><span class="comment-age">(05 Jul '12, 05:12)</span> adetheheat</div></div><span id="12461"></span><div id="comment-12461" class="comment"><div id="post-12461-score" class="comment-score"></div><div class="comment-text"><p>can you provide a free link to the specs?</p></div><div id="comment-12461-info" class="comment-info"><span class="comment-age">(05 Jul '12, 06:46)</span> Kurt Knochner ♦</div></div><span id="12462"></span><div id="comment-12462" class="comment not_top_scorer"><div id="post-12462-score" class="comment-score"></div><div class="comment-text"><p>Attached is the spec for the tlv bit at the end taken from the ptp 1588 standard: <img src="https://osqa-ask.wireshark.org/upfiles/canceltlv.jpg" alt="alt text" /></p></div><div id="comment-12462-info" class="comment-info"><span class="comment-age">(05 Jul '12, 07:42)</span> adetheheat</div></div><span id="12463"></span><div id="comment-12463" class="comment not_top_scorer"><div id="post-12463-score" class="comment-score"></div><div class="comment-text"><p>16.1.4.3.3 messageType (Enumeration4) The value of messageType shall indicate the type of unicast message transmission to be canceled. The coding of the enumeration is identical to that used in the messageType field of message headers; see 13.3.2.2 (below):</p><p>Message type Message class Value (hex) Sync Event 0 Delay_Req Event 1 Pdelay_Req Event 2 Pdelay_Resp Event 3 Reserved — 4-7 Follow_Up General 8 Delay_Resp General 9 Pdelay_Resp_Follow_Up General A Announce General B Signaling General C Management General D Reserved — E-F</p></div><div id="comment-12463-info" class="comment-info"><span class="comment-age">(05 Jul '12, 07:45)</span> adetheheat</div></div><span id="12465"></span><div id="comment-12465" class="comment not_top_scorer"><div id="post-12465-score" class="comment-score"></div><div class="comment-text"><p>can't do that I'm afraid. I've got a bug report raised about this - it's sort of already known about from the replies I've got so far.</p></div><div id="comment-12465-info" class="comment-info"><span class="comment-age">(05 Jul '12, 08:40)</span> adetheheat</div></div><span id="12466"></span><div id="comment-12466" class="comment not_top_scorer"><div id="post-12466-score" class="comment-score"></div><div class="comment-text"><p>Bug raised so won't be updating this thread further</p></div><div id="comment-12466-info" class="comment-info"><span class="comment-age">(05 Jul '12, 08:42)</span> adetheheat</div></div><span id="12467"></span><div id="comment-12467" class="comment not_top_scorer"><div id="post-12467-score" class="comment-score"></div><div class="comment-text"><p>For the record, the bug ID is <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=7437">7437</a> and the difficulty in fixing it is the lack of free access to the spec. I think that adetheheat has provided enough info to fix this though.</p></div><div id="comment-12467-info" class="comment-info"><span class="comment-age">(05 Jul '12, 08:48)</span> grahamb ♦</div></div><span id="12476"></span><div id="comment-12476" class="comment not_top_scorer"><div id="post-12476-score" class="comment-score"></div><div class="comment-text"><p>google: <code>"16.1.4.3" ptp</code> -&gt; 2nd link ;-)</p></div><div id="comment-12476-info" class="comment-info"><span class="comment-age">(06 Jul '12, 00:04)</span> Kurt Knochner ♦</div></div></div><div id="comment-tools-12454" class="comment-tools"><span class="comments-showing"> showing 5 of 11 </span> <a href="#" class="show-all-comments-link">show 6 more comments</a></div><div class="clear"></div><div id="comment-12454-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="12455"></span>
+
+<div id="answer-container-12455" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-12455-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Please raise a bug at the Wireshark <a href="https://bugs.wireshark.org/bugzilla/">Bugzilla</a> database, with references to the protocol specification and a sample capture illustrating the issue. If the capture contains information that you don't want made public, mark the bug as private (Advanced fields) to restrict access to the capture to core developers.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>05 Jul '12, 04:00</strong></p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="grahamb has 274 accepted answers">22%</span></p></img></div></div><div id="comments-container-12455" class="comments-container"></div><div id="comment-tools-12455" class="comment-tools"></div><div class="clear"></div><div id="comment-12455-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

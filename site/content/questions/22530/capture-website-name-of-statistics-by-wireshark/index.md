@@ -1,0 +1,60 @@
++++
+type = "question"
+title = "Capture website name of statistics  by Wireshark ?"
+description = '''Hi everyone . My boss want me to give the report of the top 10 websites usage by employees. I&#x27;m thinking of using Wireshark to capture the Http request and store into a database for statistics. Please help ? Regards Henry'''
+date = "2013-07-01T19:16:00Z"
+lastmod = "2013-07-01T21:27:00Z"
+weight = 22530
+keywords = [ "capture", "http" ]
+aliases = [ "/questions/22530" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Capture website name of statistics by Wireshark ?](/questions/22530/capture-website-name-of-statistics-by-wireshark)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-22530-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi everyone .</p><p>My boss want me to give the report of the top 10 websites usage by employees. I'm thinking of using Wireshark to capture the Http request and store into a database for statistics. Please help ?</p><p>Regards</p><p>Henry</p></div><div id="question-tags" class="tags-container tags">capture http</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>01 Jul '13, 19:16</strong></p><img src="https://secure.gravatar.com/avatar/f328854ddc5d5b2f81493b00c9157ff2?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Qu%E1%BB%91c%20Hu%E1%BB%B3nh%20Tr%E1%BA%A5n&#39;s gravatar image" /><p>Quốc Huỳnh Trấn<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Quốc Huỳnh Trấn has no accepted answers">0%</span></p></div></div><div id="comments-container-22530" class="comments-container"></div><div id="comment-tools-22530" class="comment-tools"></div><div class="clear"></div><div id="comment-22530-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="22531"></span>
+
+<div id="answer-container-22531" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-22531-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Wireshark is a network troubleshooting tool. As such, it is very useful to analyze network and/or application (performance) problems. It also provides some kind of statistics, however not those you are asking for. You <strong>can</strong> create that kind of statistics, however Wireshark will only give you the URLs and the IP addresses (<strong>not</strong> any employee accounts/names). You will then need a tool to build your statistics, usually a small script (Perl, Python, Poweshell). Furthermore Wireshark is not meant to be running for a long time (hours, days, weeks) as it will build internal data structure and continuously consume RAM until the system runs out of memory, which is usually not a problem for network troubleshooting, but it is a problem for long-term monitoring solutions.</p><p>So, Wireshark is probably not the right tool for you. If you use a HTTP proxy in your company, you will get those stats for "free", as the most proxies (commercial and open source) will provide all kind of "Top xxx stats". Also, if you enable authentication on the proxy, you will see the requests by user name/account and not just be IP address. IP address can change, think of DHCP or manual changes by a user to hide his/her tracks.</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>01 Jul '13, 21:27</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div></div><div id="comments-container-22531" class="comments-container"></div><div id="comment-tools-22531" class="comment-tools"></div><div class="clear"></div><div id="comment-22531-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

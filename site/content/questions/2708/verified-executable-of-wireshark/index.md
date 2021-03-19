@@ -1,0 +1,59 @@
++++
+type = "question"
+title = "Verified Executable of Wireshark"
+description = '''My concern is that while i am using Wireshark latest Windows x64 edition and try to verify the Wireshark executable the procexp (Sysinternals Tool) is showing me that cannot be verified. So i am wondering if the Wireshark executables are digitally signed or not. Because if they are may i am using a ...'''
+date = "2011-03-07T22:36:00Z"
+lastmod = "2011-03-07T23:03:00Z"
+weight = 2708
+keywords = [ "executable", "verified" ]
+aliases = [ "/questions/2708" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Verified Executable of Wireshark](/questions/2708/verified-executable-of-wireshark)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-2708-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>My concern is that while i am using Wireshark latest Windows x64 edition and try to verify the Wireshark executable the procexp (Sysinternals Tool) is showing me that cannot be verified.</p><p>So i am wondering if the Wireshark executables are digitally signed or not. Because if they are may i am using a an executable that is infected.</p></div><div id="question-tags" class="tags-container tags">executable verified</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>07 Mar '11, 22:36</strong></p><img src="https://secure.gravatar.com/avatar/6d9ba473554b6db520aa760d449060f4?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="KonstantinosA&#39;s gravatar image" /><p>KonstantinosA<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="KonstantinosA has no accepted answers">0%</span></p></div></div><div id="comments-container-2708" class="comments-container"></div><div id="comment-tools-2708" class="comment-tools"></div><div class="clear"></div><div id="comment-2708-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="2709"></span>
+
+<div id="answer-container-2709" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-2709-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>The aren't digitally signed. What you can do is verify the signatures of the various files distributed. You can find the signatures <a href="http://www.wireshark.org/download/SIGNATURES-1.4.4.txt">here</a>.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>07 Mar '11, 23:03</strong></p><img src="https://secure.gravatar.com/avatar/2337f0406681e5c72ea0e6f1f0d6c0b0?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jaap&#39;s gravatar image" /><p>Jaap ♦<br />
+<span class="score" title="11680 reputation points"><span>11.7k</span></span><span title="16 badges"><span class="silver">●</span><span class="badgecount">16</span></span><span title="101 badges"><span class="bronze">●</span><span class="badgecount">101</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Jaap has 155 accepted answers">14%</span></p></div></div><div id="comments-container-2709" class="comments-container"></div><div id="comment-tools-2709" class="comment-tools"></div><div class="clear"></div><div id="comment-2709-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

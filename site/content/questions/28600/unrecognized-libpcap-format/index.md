@@ -1,0 +1,89 @@
++++
+type = "question"
+title = "unrecognized libpcap format"
+description = '''Hello, I&#x27;m running this command to display traffic in the remote host : ssh root@IP_adress &#x27;tshark -f &quot;port !22&quot; -w -&#x27; | wireshark -k -i -  with some hosts it works fine but with some other hosts it returns this error : unrecognized libpcap format  Could you help me please? Thank you.'''
+date = "2014-01-06T06:49:00Z"
+lastmod = "2016-07-08T16:23:00Z"
+weight = 28600
+keywords = [ "ssh", "tshark" ]
+aliases = [ "/questions/28600" ]
+osqa_answers = 4
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [unrecognized libpcap format](/questions/28600/unrecognized-libpcap-format)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-28600-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hello,</p><p>I'm running this command to display traffic in the remote host :</p><pre><code>ssh [email protected]_adress &#39;tshark -f &quot;port !22&quot; -w -&#39; | wireshark -k -i -</code></pre><p>with some hosts it works fine but with some other hosts it returns this error :</p><pre><code>unrecognized libpcap format</code></pre><p>Could you help me please?</p><p>Thank you.</p></div><div id="question-tags" class="tags-container tags">ssh tshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>06 Jan '14, 06:49</strong></p><img src="https://secure.gravatar.com/avatar/59ec72900a3f3007a45053926d910c34?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Manou&#39;s gravatar image" /><p>Manou<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Manou has no accepted answers">0%</span></p></div></div><div id="comments-container-28600" class="comments-container"></div><div id="comment-tools-28600" class="comment-tools"></div><div class="clear"></div><div id="comment-28600-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+4 Answers:
+
+</div>
+
+</div>
+
+<span id="28605"></span>
+
+<div id="answer-container-28605" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-28605-score" class="post-score" title="current number of votes">3</div></div></td><td><div class="item-right"><div class="answer-body"><p>It is likely that not all hosts are running the same version of Wireshark. For those hosts returning the <strong><em>unrecognized libpcap format</em></strong> error, my guess is that <code>tshark</code> is writing pcap-ng output by default, but there are known problems with Wireshark attempting to read pcap-ng data from a pipe.</p><p>To force <code>tshark</code> to write pcap output instead of pcap-ng output, try passing the <code>-F pcap</code> option to <code>tshark</code>.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>06 Jan '14, 08:44</strong></p><img src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="cmaynard&#39;s gravatar image" /><p>cmaynard ♦♦<br />
+<span class="score" title="9361 reputation points"><span>9.4k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">●</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">●</span><span class="badgecount">142</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="cmaynard has 108 accepted answers">20%</span></p></div></div><div id="comments-container-28605" class="comments-container"><span id="28614"></span><div id="comment-28614" class="comment"><div id="post-28614-score" class="comment-score"></div><div class="comment-text"><p>Hello,</p><p>Thank you for your reply. When passing -F pcap option I have this output:</p><p><code> tshark: "pcap" isn't a valid capture file type tshark: The available capture file types for the "-F" flag are:     5views - InfoVista 5View capture     btsnoop - Symbian OS btsnoop     commview - TamoSoft CommView     dct2000 - Catapult DCT2000 trace (.out format)     erf - Endace ERF capture     eyesdn - EyeSDN USB S0/E1 ISDN trace format     k12text - K12 text file     lanalyzer - Novell LANalyzer     libpcap - Wireshark/tcpdump/... - libpcap     modlibpcap - Modified tcpdump - libpcap     netmon1 - Microsoft NetMon 1.x     netmon2 - Microsoft NetMon 2.x     nettl - HP-UX nettl trace     ngsniffer - NA Sniffer (DOS)     ngwsniffer_1_1 - NA Sniffer (Windows) 1.1     ngwsniffer_2_0 - NA Sniffer (Windows) 2.00x     niobserver - Network Instruments Observer     nokialibpcap - Nokia tcpdump - libpcap      nseclibpcap - Wireshark - nanosecond libpcap     nstrace10 - NetScaler Trace (Version 1.0)     nstrace20 - NetScaler Trace (Version 2.0)     pcapng - Wireshark - pcapng     rf5 - Tektronix K12xx 32-bit .rf5 format     rh6_1libpcap - RedHat 6.1 tcpdump - libpcap     snoop - Sun snoop     suse6_3libpcap - SuSE 6.3 tcpdump - libpcap     visual - Visual Networks traffic capture</code></p></div><div id="comment-28614-info" class="comment-info"><span class="comment-age">(07 Jan '14, 01:35)</span> Manou</div></div><span id="28616"></span><div id="comment-28616" class="comment"><div id="post-28616-score" class="comment-score"></div><div class="comment-text"><p>Looks like your version of tshark (which is?) uses the flag <code>libpcap</code>.</p></div><div id="comment-28616-info" class="comment-info"><span class="comment-age">(07 Jan '14, 02:09)</span> grahamb ♦</div></div><span id="28618"></span><div id="comment-28618" class="comment"><div id="post-28618-score" class="comment-score"></div><div class="comment-text"><p>I just noticed that tshark versions are different: In my local machine I have TShark 1.6.7 and in the remote host I have TShark 1.8.10 so it could be the cause of this problem.</p></div><div id="comment-28618-info" class="comment-info"><span class="comment-age">(07 Jan '14, 02:36)</span> Manou</div></div><span id="28619"></span><div id="comment-28619" class="comment"><div id="post-28619-score" class="comment-score"></div><div class="comment-text"><p>Just ensure that the tshark instance that is generating the traffic has the appropriate -F flag (<code>libpcap</code> | <code>pcap</code>). That will produce output that Wireshark can consume.</p></div><div id="comment-28619-info" class="comment-info"><span class="comment-age">(07 Jan '14, 02:47)</span> grahamb ♦</div></div></div><div id="comment-tools-28605" class="comment-tools"></div><div class="clear"></div><div id="comment-28605-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="28631"></span>
+
+<div id="answer-container-28631" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-28631-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>Don't use tshark to capture, use dumpcap. Check <a href="http://wiki.wireshark.org/CaptureSetup/Pipes">the wiki</a> for other suggestions, use the sharkfin maybe?</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>07 Jan '14, 06:52</strong></p><img src="https://secure.gravatar.com/avatar/2337f0406681e5c72ea0e6f1f0d6c0b0?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jaap&#39;s gravatar image" /><p>Jaap ♦<br />
+<span class="score" title="11680 reputation points"><span>11.7k</span></span><span title="16 badges"><span class="silver">●</span><span class="badgecount">16</span></span><span title="101 badges"><span class="bronze">●</span><span class="badgecount">101</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Jaap has 155 accepted answers">14%</span></p></div></div><div id="comments-container-28631" class="comments-container"><span id="28705"></span><div id="comment-28705" class="comment"><div id="post-28705-score" class="comment-score"></div><div class="comment-text"><p>Hello,</p><p>Thank you Jaap for your answer. The problem has been solved by using this command :</p><pre><code>ssh [email protected] tcpdump -U -s0 -w - &#39;not port 22&#39; | wireshark -k -i -</code></pre><p>So I just used tcpdump instead of tshark and it resolve the problem.</p><p>Thank You</p></div><div id="comment-28705-info" class="comment-info"><span class="comment-age">(09 Jan '14, 01:59)</span> Manou</div></div><span id="28709"></span><div id="comment-28709" class="comment"><div id="post-28709-score" class="comment-score"></div><div class="comment-text"><p>Apart from the correct observation, for a host of other reasons, that tcpdump is a better tool for pure capture tasks, it works because tcpdump always generates pcap output, hence no need for the appropriate flag.</p><p>Until tcpdump starts to output pcapng (I have no idea if this is likely to happen).</p></div><div id="comment-28709-info" class="comment-info"><span class="comment-age">(09 Jan '14, 02:26)</span> grahamb ♦</div></div><span id="53950"></span><div id="comment-53950" class="comment"><div id="post-53950-score" class="comment-score"></div><div class="comment-text"><blockquote><p>Until tcpdump starts to output pcapng (I have no idea if this is likely to happen).</p></blockquote><p>If you're a Mac (or Hackintosh :-)) user, it already happened, if you're running a recent enough OS, although it's not the default (unless you're capturing from the "any" device or from a pktap device).</p><p>Support for writing pcapng files will probably happen in the main libpcap code base at some point, and tcpdump will support it (with a <code>-P</code> flag, for Mac OS X, err, OS X, err, macOS compatibility; it won't do so by default, for compatibility with everything else).</p></div><div id="comment-53950-info" class="comment-info"><span class="comment-age">(08 Jul '16, 18:29)</span> Guy Harris ♦♦</div></div></div><div id="comment-tools-28631" class="comment-tools"></div><div class="clear"></div><div id="comment-28631-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="28607"></span>
+
+<div id="answer-container-28607" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-28607-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Are all hosts listed in your "known_hosts" file? If not, there will be a fingerprint check which disrupts the libpcap format. Can you log in with ssh manually into each of the failing hosts to make sure they are listed in your "known_hosts" file?</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>06 Jan '14, 12:54</strong></p><img src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="SYN-bit&#39;s gravatar image" /><p>SYN-bit ♦♦<br />
+<span class="score" title="17094 reputation points"><span>17.1k</span></span><span title="9 badges"><span class="badge1">●</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">●</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">●</span><span class="badgecount">245</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="SYN-bit has 174 accepted answers">20%</span></p></div></div><div id="comments-container-28607" class="comments-container"><span id="28615"></span><div id="comment-28615" class="comment"><div id="post-28615-score" class="comment-score"></div><div class="comment-text"><p>Hello,</p><p>Thank you for your reply.</p><p>All hosts are listed in my "known_hosts" file and I can easily connect with ssh to all hosts. This problem is only with wireshark.</p></div><div id="comment-28615-info" class="comment-info"><span class="comment-age">(07 Jan '14, 01:37)</span> Manou</div></div></div><div id="comment-tools-28607" class="comment-tools"></div><div class="clear"></div><div id="comment-28607-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="53948"></span>
+
+<div id="answer-container-53948" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-53948-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>I think that issue was because of libpcap version. The libpcap version for tshark and wireshark were different. That is why you were getting 'unrecognized libpcap format'. It works with tcpdump, because they both uses same libpcap version.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>08 Jul '16, 16:23</strong></p><img src="https://secure.gravatar.com/avatar/eb1f7ec6b449125cc51ad199044dfb6f?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="ashuaeron&#39;s gravatar image" /><p>ashuaeron<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="ashuaeron has no accepted answers">0%</span></p></div></div><div id="comments-container-53948" class="comments-container"><span id="53951"></span><div id="comment-53951" class="comment"><div id="post-53951-score" class="comment-score"></div><div class="comment-text"><p>Nope. Wireshark doesn't use libpcap to read or write capture files, it uses its own code. Chris Maynard's answer is the correct answer; we really need to fix the error message in the short term (and, if possible, support reading both pcap and pcapng data from the pipe in the long term).</p></div><div id="comment-53951-info" class="comment-info"><span class="comment-age">(08 Jul '16, 18:31)</span> Guy Harris ♦♦</div></div></div><div id="comment-tools-53948" class="comment-tools"></div><div class="clear"></div><div id="comment-53948-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

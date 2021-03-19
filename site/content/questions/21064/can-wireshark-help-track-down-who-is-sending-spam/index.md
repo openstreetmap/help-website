@@ -1,0 +1,100 @@
++++
+type = "question"
+title = "Can Wireshark help track down who is sending spam"
+description = '''For the last 24 hours, I have seen email in the queue that is spam. My firewall is preventing most of them from being sent out. I have done the following to try and remove the problem. I shut down all the computers in the building down 1 at a time, including servers. The only computer running was th...'''
+date = "2013-05-09T09:56:00Z"
+lastmod = "2013-05-14T02:46:00Z"
+weight = 21064
+keywords = [ "spam" ]
+aliases = [ "/questions/21064" ]
+osqa_answers = 4
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Can Wireshark help track down who is sending spam](/questions/21064/can-wireshark-help-track-down-who-is-sending-spam)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-21064-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>For the last 24 hours, I have seen email in the queue that is spam. My firewall is preventing most of them from being sent out. I have done the following to try and remove the problem. I shut down all the computers in the building down 1 at a time, including servers. The only computer running was the exchange server and the firewall. The firewall I'm using is Untangle. The queue was still filling up. I turned the firewall off and the queue stopped filling up. I ran Rootkit scanners, I ran ESET, and several others and malwarebytes. The only thing found was several Trojans. I cleaned them up and rescanned the system again. I flushed out the queue and restarted the server. I left around 3 am this morning. When I came back in around 11:30, I looked in the queue and it was filling up again. So either someone has hacked one of the accounts on the server or found an exploit. I have all the latest service packs and updates installed for the server. I need to find out how this queue is getting filled up.</p><p>Can wireshark figure this out for me, or is there something else I can use to find the problem? Also I ran netstat -an and port 25 has about 20 established connections. I did do an IP trace on several of the IP's and a few are coming in from Switzerland and several arab counties.</p><p>Thanks to anyone who can help.</p></div><div id="question-tags" class="tags-container tags">spam</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>09 May '13, 09:56</strong></p><img src="https://secure.gravatar.com/avatar/1bf12fa53f2c57889ae846454960de69?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="pac0124&#39;s gravatar image" /><p>pac0124<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="pac0124 has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 09 May '13, 11:10</p><img src="https://secure.gravatar.com/avatar/071fe61f64868d98bdf4eb060b63b6ca?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jim%20Aragon&#39;s gravatar image" /><p>Jim Aragon<br />
+<span class="score" title="7187 reputation points"><span>7.2k</span></span><span title="7 badges"><span class="badge1">●</span><span class="badgecount">7</span></span><span title="33 badges"><span class="silver">●</span><span class="badgecount">33</span></span><span title="118 badges"><span class="bronze">●</span><span class="badgecount">118</span></span></p></div></div><div id="comments-container-21064" class="comments-container"></div><div id="comment-tools-21064" class="comment-tools"></div><div class="clear"></div><div id="comment-21064-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+4 Answers:
+
+</div>
+
+</div>
+
+<span id="21068"></span>
+
+<div id="answer-container-21068" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-21068-score" class="post-score" title="current number of votes">2</div></div></td><td><div class="item-right"><div class="answer-body"><p>Have you checked the mail server logs? (Yes, if the server is hacked, the logs could be hacked as well, but it's a place to start.) Most mail servers have different logging levels. You could increase the log level for more detail while you're troubleshooting this problem.</p><p>Are these messages in the inbound queue being queued for local delivery (to your users)? Or are they in the outbound queue for off-site delivery to non-local users?</p><blockquote>Also I ran netstat -an and port 25 has about 20 established connections. I did do an IP trace on several of the IP's and a few are coming in from Switzerland and several arab counties.</blockquote><p>Are you sure your mail server is not configured as an open relay? If so, and the spammers have discovered it, you're likely to be blacklisted pretty soon, so I'd double-check the server configuration immediately.</p><p>Yes, in answer to your question, if you capture all the traffic to and from your mail server, you could use Wireshark to figure out where it's coming from, but I'd start with the server and firewall logs first.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>09 May '13, 11:09</strong></p><img src="https://secure.gravatar.com/avatar/071fe61f64868d98bdf4eb060b63b6ca?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jim%20Aragon&#39;s gravatar image" /><p>Jim Aragon<br />
+<span class="score" title="7187 reputation points"><span>7.2k</span></span><span title="7 badges"><span class="badge1">●</span><span class="badgecount">7</span></span><span title="33 badges"><span class="silver">●</span><span class="badgecount">33</span></span><span title="118 badges"><span class="bronze">●</span><span class="badgecount">118</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Jim Aragon has 70 accepted answers">24%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 09 May '13, 13:00</p></div></div><div id="comments-container-21068" class="comments-container"><span id="21069"></span><div id="comment-21069" class="comment"><div id="post-21069-score" class="comment-score">1</div><div class="comment-text"><p>My first thought too, based on the question, is that the server is acting as an open relay.</p><p>Have a look at <a href="http://www.spamhelp.org/shopenrelay/">http://www.spamhelp.org/shopenrelay/</a></p></div><div id="comment-21069-info" class="comment-info"><span class="comment-age">(09 May '13, 12:48)</span> SYN-bit ♦♦</div></div><span id="21071"></span><div id="comment-21071" class="comment"><div id="post-21071-score" class="comment-score">1</div><div class="comment-text"><blockquote><p>Are you sure your mail server is not configured as an open relay?</p></blockquote><p>@pac0124: That's a good one. telnet to your mail server on port 25 and try to send an e-mail to a domain that does not belong to you. If the mail server accepts that, you're doomed ;-)</p><pre><code>telnet 1.2.3.4 25
+
+220 mx.mydomain.net
+HELO mail.spammer.com
+250 mx.mydomain.net
+MAIL FROM: [email protected]
+250 OK
+RCPT TO: [email protected]microsoft.com
+250 OK  &lt;&lt;===== THIS should not happen on your server!!</code></pre></div><div id="comment-21071-info" class="comment-info"><span class="comment-age">(09 May '13, 12:53)</span> Kurt Knochner ♦</div></div></div><div id="comment-tools-21068" class="comment-tools"></div><div class="clear"></div><div id="comment-21068-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="21065"></span>
+
+<div id="answer-container-21065" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-21065-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>The <strong>only</strong> thing found was a <strong>several Trojans</strong>.</p></blockquote><p>Hm....</p><blockquote><p>or is there something else I can use to find the problem.</p></blockquote><p>If there is already a firewall, why not simply checking the logs who sends the spam mails?</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>09 May '13, 10:00</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div></div><div id="comments-container-21065" class="comments-container"></div><div id="comment-tools-21065" class="comment-tools"></div><div class="clear"></div><div id="comment-21065-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="21130"></span>
+
+<div id="answer-container-21130" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-21130-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>Even if your server is not an open relay, you might have a email account that is compromised. I had that on a server once where some wiseguy created a test account called "[email protected]", and the password was also set to (guess what?) "test". Since it was the default domain, anyone coming in with user "test" and password "test" was now authorized. It didn't take long until some malicious external scans found that account and abused it, sending tens of thousands of messages in a couple of minutes.</p><p>My advice: capture at the mail server (any NIC that is has an IP address), filter on SMTP and check who is delivering tons of messages. If you're really getting slammed with SPAM mails it should be relatively easy to spot, either by scrolling through the packets or by using the conversation statistics/TCP. Whenever I had a case like this the SPAM conversations really stood out by the sheer number of recipients given - keep in mind that a TCP session for SMTP delivery can have hundreds or thousands recipients, you do not need to create that many single sessions. Check what account is used to do it. Remove the account or set a strong password.</p><p><strong>Update</strong>: I just tried to build a filter that could spot SMTP delivery where neither sender nor recipient have an email address of your company - which is a typical thing for SPAM as long as they're not using a hacked account including the email address. Try this display filter to see if anything comes up (replace "yourcompany.com" with your mail domain:</p><pre><code>smtp.data.fragment.count &gt; 0 and not (imf.address contains &quot;yourcompany.com&quot;)</code></pre><p>If you have multiple domains you need to exclude them as well, e.g.</p><pre><code>smtp.data.fragment.count &gt; 0 and not (imf.address contains &quot;yourcompany.com&quot; or imf.address contains &quot;theothercompany.com&quot;)</code></pre><p>Maybe it will help you spot the bad stuff.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>14 May '13, 02:46</strong></p><img src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jasper&#39;s gravatar image" /><p>Jasper ♦♦<br />
+<span class="score" title="23806 reputation points"><span>23.8k</span></span><span title="5 badges"><span class="badge1">●</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">●</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">●</span><span class="badgecount">284</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Jasper has 263 accepted answers">18%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 14 May '13, 03:02</p></div></div><div id="comments-container-21130" class="comments-container"></div><div id="comment-tools-21130" class="comment-tools"></div><div class="clear"></div><div id="comment-21130-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="21117"></span>
+
+<div id="answer-container-21117" class="answer answered-by-owner">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-21117-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Update, I was able to monitor the firewall over the weekend when no one was in the office. The problem of trying to find the IP in the logs was because there was a lot of e-mail going out the door from our own users. By not having anyone here, I noticed 1 IP address was connected to us. I did an IP trace and it verified that it was coming from Sweden. We don't email anyone from there, so I created a rule in the firewall to block the IP. We have been spam free for the last 8 hours today.</p><p>Prior to finding the IP, I did a test using telnet and another website to test for open relay. I was not able to relay any emails. Whoever was doing this is using some sort of exploit (all updates up to date), a virus (I did scan every server and every computer with two different AV/malware scanners and found nothing), or hacked account (which I changed the accounts that have any kind of admin permissions) before I found the IP from Sweden. So I'm really not sure how the spam is getting relayed. Anyone have any ideas as to how this might have happened?</p><p>I would like to thank Kurt and Jim for your suggestions and help.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>13 May '13, 13:27</strong></p><img src="https://secure.gravatar.com/avatar/1bf12fa53f2c57889ae846454960de69?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="pac0124&#39;s gravatar image" /><p>pac0124<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="pac0124 has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 13 May '13, 15:30</p><img src="https://secure.gravatar.com/avatar/071fe61f64868d98bdf4eb060b63b6ca?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jim%20Aragon&#39;s gravatar image" /><p>Jim Aragon<br />
+<span class="score" title="7187 reputation points"><span>7.2k</span></span><span title="7 badges"><span class="badge1">●</span><span class="badgecount">7</span></span><span title="33 badges"><span class="silver">●</span><span class="badgecount">33</span></span><span title="118 badges"><span class="bronze">●</span><span class="badgecount">118</span></span></p></div></div><div id="comments-container-21117" class="comments-container"><span id="21118"></span><div id="comment-21118" class="comment"><div id="post-21118-score" class="comment-score"></div><div class="comment-text"><p>would you mind to post the IP address of your mail server (or send it via e-mail - see my profile)?</p></div><div id="comment-21118-info" class="comment-info"><span class="comment-age">(13 May '13, 13:50)</span> Kurt Knochner ♦</div></div></div><div id="comment-tools-21117" class="comment-tools"></div><div class="clear"></div><div id="comment-21117-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

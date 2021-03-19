@@ -1,0 +1,70 @@
++++
+type = "question"
+title = "How to make wireshark parse ethernet frame over MPLS as no CW?"
+description = '''I have an Ethernet over MPLS over UDP packet. Wireshark wrongly parses it as it contains CW.  Below is the pcap file. Since the UDP port is 51234 instead of 6635 as defined, I use following LUA script to make wireshark to parse the UDP payload as MPLS mplsoudp_proto = Proto(&quot;mplsoudp&quot;,&quot;Mpls over UDP...'''
+date = "2016-02-04T19:09:00Z"
+lastmod = "2016-02-04T23:17:00Z"
+weight = 49875
+keywords = [ "mpls", "cw" ]
+aliases = [ "/questions/49875" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [How to make wireshark parse ethernet frame over MPLS as no CW?](/questions/49875/how-to-make-wireshark-parse-ethernet-frame-over-mpls-as-no-cw)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-49875-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I have an Ethernet over MPLS over UDP packet. Wireshark wrongly parses it as it contains CW. Below is the pcap file. Since the UDP port is 51234 instead of 6635 as defined, I use following LUA script to make wireshark to parse the UDP payload as MPLS</p><pre><code>mplsoudp_proto = Proto(&quot;mplsoudp&quot;,&quot;Mpls over UDP&quot;)
+local dis_mpls = Dissector.get(&quot;mpls&quot;)
+function mplsoudp_proto.dissector(buffer,pinfo,tree)
+    dis_mpls:call(buffer,pinfo,tree)
+end
+udp_table = DissectorTable.get(&quot;udp.port&quot;)
+udp_table:add(51234,mplsoudp_proto)
+udp_table:add(6635,mplsoudp_proto)</code></pre><p><a href="https://onedrive.live.com/redir?resid=DCB291F7224C3741!182&amp;authkey=!AAa_6r-uzbzrWn0&amp;ithint=file%2cpcap">https://onedrive.live.com/redir?resid=DCB291F7224C3741!182&amp;authkey=!AAa_6r-uzbzrWn0&amp;ithint=file%2cpcap</a></p><p>Wireshark parses it as CW is present although it actually doesn't.</p><p><img src="https://osqa-ask.wireshark.org/upfiles/ScreenShot_1.png" alt="alt text" /></p><p>Tried disable "Ethernet PW (with CW)"/"Ethernet PW(CW heuristic)". The MPLS payload is simply shown as Data. Is there any way to make Wireshark parse this packet as no CW is present?</p><p><img src="https://osqa-ask.wireshark.org/upfiles/ScreenShot_3.png" alt="alt text" /></p><p>Thanks</p></div><div id="question-tags" class="tags-container tags">mpls cw</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>04 Feb '16, 19:09</strong></p><img src="https://secure.gravatar.com/avatar/b7590de43adb375f2d9c6ba1f98b72cf?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="yacare&#39;s gravatar image" /><p>yacare<br />
+<span class="score" title="21 reputation points">21</span><span title="6 badges"><span class="badge1">●</span><span class="badgecount">6</span></span><span title="6 badges"><span class="silver">●</span><span class="badgecount">6</span></span><span title="11 badges"><span class="bronze">●</span><span class="badgecount">11</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="yacare has no accepted answers">0%</span></p></img></div><div class="post-update-info post-update-info-edited"><p>edited 04 Feb '16, 19:22</p></div></div><div id="comments-container-49875" class="comments-container"></div><div id="comment-tools-49875" class="comment-tools"></div><div class="clear"></div><div id="comment-49875-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="49881"></span>
+
+<div id="answer-container-49881" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-49881-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>In your first step, you've made a complex equivalent of "Decode as", telling the UDP dissector that it should invoke the mpls dissector also for <code>udp.dstport == 51234</code>.</p><p>By disabling the heuristic dissector <code>Ethernet PW (CW heuristic)</code>, you've only stolen the MPLS dissector the tool allowing it to find out how to handle the payload.</p><p>So to compensate, you must use another "decode as" (or its equivalent in Lua), and similarly as if you would be configuring an MPLS switch/router, you have to say that packets with <code>mpls.label == 18</code> (in your particular case) shall be dissected as <code>Ethernet PW (no CW)</code>.</p><p>I don't think there is a reason to do this using Lua unless you want to use Lua to provide a better heuristic, allowing you to choose between <code>Ethernet PW (no CW)</code> and <code>Ethernet PW (with CW)</code> yourself on the fly. However if you <em>can</em> put together a heuristic more accurate than the existing one, I'm sure gents would happily integrate it.</p><p>I also don't think there is a need to create a special protocol name (MPLSoUDP) when you the only thing you actually needed to do was</p><pre><code>local dis_mpls = Dissector.get(&quot;mpls&quot;)
+local udp_table = DissectorTable.get(&quot;udp.port&quot;)
+udp_table:add(51234,dis_mpls)</code></pre><p>and then, if you insist on use of Lua to create static "Decode as" equivalents,</p><pre><code>local dis_eth = Dissector.get(&quot;eth&quot;)
+local mpls_table = DissectorTable.get(&quot;mpls.label&quot;)
+mpls_table:add(18,dis_eth)</code></pre></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>04 Feb '16, 23:17</strong></p><img src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="sindy&#39;s gravatar image" /><p>sindy<br />
+<span class="score" title="6049 reputation points"><span>6.0k</span></span><span title="4 badges"><span class="badge1">●</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">●</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">●</span><span class="badgecount">51</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="sindy has 110 accepted answers">24%</span></p></img></div><div class="post-update-info post-update-info-edited"><p>edited 04 Feb '16, 23:21</p></div></div><div id="comments-container-49881" class="comments-container"><span id="49899"></span><div id="comment-49899" class="comment"><div id="post-49899-score" class="comment-score"></div><div class="comment-text"><p>Hi Sindy,</p><p>Thanks for the reply. To make life easier, I don't want to use Lua when possible. :) The challenge I have it not how to make wireshark to parse UDP payload as MPLS. What I have been trying to figure out is how to parse the MPLS payload as ethernet with CW.</p><p>Looks like the packet matches some pattern such that Wireshark believes the bytes followed the MPLS header is a CW instead of the dst MAC. Unfortunately, this is not the case. Is there any way to correct it?</p><p>Matching label value in Lua doesn't seems feasible as I have lots of packets like this but having different MPLS label values.</p><p>Thanks,</p></div><div id="comment-49899-info" class="comment-info"><span class="comment-age">(05 Feb '16, 11:15)</span> yacare</div></div><span id="49901"></span><div id="comment-49901" class="comment"><div id="post-49901-score" class="comment-score"></div><div class="comment-text"><blockquote><p>What I have been trying to figure out is how to parse the MPLS payload as ethernet with CW ... as I have lots of packets like this but having different MPLS label values.</p></blockquote><p>I think you wanted to write "without CW", but that's not the essence. The essence is that the same way like the server-side TCP port distinguishes between different services using TCP transport, the MPLS label distinguishes between virtual paths, each potentially carrying a different protocol.</p><p>So the requirement above is quite similar to "I want to be able to tell Wireshark to decode all TCP packets as HTTP because I have lots of HTTP packets using various TCP ports at server side". Both make sense in particular context but it is not a typical application case.</p><p>You may want to file a "nice to have" category bug at <a href="https://bugs.wireshark.org/bugzilla/">Wireshark bugzilla</a>, asking for a generic mechanism allowing this; some kind of reserved index value (such as <code>other</code>) for the dissector tables might be a useful way allowing you to set a default dissector (using <code>Decode as...</code> or Lua <code>dissectortable:add</code>) which could still be overridden by the individual ones.</p><p>Until someone implements this or something alike, you'll have to run <code>dissectortable:add</code> in a cycle in Lua to fill the relevant dissector table with pointers to the same dissector for all possible index values. I admit that for a 20-bit MPLS label, doing so may take some time and use some memory.</p></div><div id="comment-49901-info" class="comment-info"><span class="comment-age">(05 Feb '16, 12:52)</span> sindy</div></div><span id="49905"></span><div id="comment-49905" class="comment"><div id="post-49905-score" class="comment-score"></div><div class="comment-text"><p>Thanks. It is good to know there is no easy solution here. I guess this is more because of the way MPLS header is designed. There is no indication on what the payload would be. Applications have to take a guess. This causes lots of issues like load balancing etc. :(</p></div><div id="comment-49905-info" class="comment-info"><span class="comment-age">(05 Feb '16, 13:33)</span> yacare</div></div><span id="49906"></span><div id="comment-49906" class="comment"><div id="post-49906-score" class="comment-score"></div><div class="comment-text"><blockquote><p>Applications have to take a guess.</p></blockquote><p>I would disagree - it is only an issue for <em>monitoring</em> applications, such as Wireshark. The real applications using MPLS don't need to guess because they know. The sending application (if we may call an edge router an application) knows what label to assign to the traffic, the receiving application knows what kind of payload it expects, and the transit elements between these two endpoints don't care, because they just choose the interface to which to forward a packet up to the value of the label and it is irrelevant for them what the payload is. So any kind of explicit payload type identifier included into each packet would be just a waste of bandwidth.</p></div><div id="comment-49906-info" class="comment-info"><span class="comment-age">(05 Feb '16, 13:57)</span> sindy</div></div><span id="49966"></span><div id="comment-49966" class="comment"><div id="post-49966-score" class="comment-score"></div><div class="comment-text"><p>It is not only for monitoring applications. For better load balancing purpose, the routers in the middle may want to know more about the MPLS payload. For instance, rfc6790 has to add another MPLS label in order to address this.</p></div><div id="comment-49966-info" class="comment-info"><span class="comment-age">(08 Feb '16, 07:25)</span> yacare</div></div><span id="49985"></span><div id="comment-49985" class="comment not_top_scorer"><div id="post-49985-score" class="comment-score"></div><div class="comment-text"><p>I'm not sure whether it is still a Wireshark-related discussion, but when reading the RFC 6790's section "Motivation", I can see it points in the same direction I've suggested above - it should not be the transit LSR's job to analyze each packet's contents, as asking it to do so contradicts the original idea of MPLS as a means of simplification of the routing process in the transit network.</p><p>Yes, nowadays MPLS is mainly used for other reasons than the mapping of payload protocols' native addresses to simple routing labels, yet still the instruction what a transit LSR should do with a packet with a given label gets to it "out-of-band" - i.e. using either manual configuration or some configuration management communication, but definitely not inside each individual traffic packet. So even if the transit LSR has to analyse the packet contents in order to choose between several possible routes, the contents encapsulation scheme is invariant for any given label, and so the LSR should not depend on heuristic when handling packets but should get the information about the encapsulation scheme the same way it has got the information about its local route set for that label.</p></div><div id="comment-49985-info" class="comment-info"><span class="comment-age">(08 Feb '16, 13:22)</span> sindy</div></div></div><div id="comment-tools-49881" class="comment-tools"><span class="comments-showing"> showing 5 of 6 </span> <a href="#" class="show-all-comments-link">show 1 more comments</a></div><div class="clear"></div><div id="comment-49881-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

@@ -1,0 +1,31 @@
++++
+type = "question"
+title = "how to decode l2tpv3 trace ？ which protocol should be chosen in &quot;decode as&quot; menu ?"
+description = '''how to decode l2tpv3 trace ？  which protocol should be chosen in &quot;decode as&quot; menu ?  thanks'''
+date = "2013-03-08T01:03:00Z"
+lastmod = "2013-03-08T01:03:00Z"
+weight = 19297
+keywords = [ "l2tpv3" ]
+aliases = [ "/questions/19297" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [how to decode l2tpv3 trace ？ which protocol should be chosen in "decode as" menu ?](/questions/19297/how-to-decode-l2tpv3-trace-which-protocol-should-be-chosen-in-decode-as-menu)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-19297-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>how to decode l2tpv3 trace ？ which protocol should be chosen in "decode as" menu ?</p><p>thanks</p></div><div id="question-tags" class="tags-container tags">l2tpv3</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>08 Mar '13, 01:03</strong></p><img src="https://secure.gravatar.com/avatar/f40477f4de750009bc107d3116e598ed?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Stanley%20Wu&#39;s gravatar image" /><p>Stanley Wu<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Stanley Wu has no accepted answers">0%</span></p></div></div><div id="comments-container-19297" class="comments-container"></div><div id="comment-tools-19297" class="comment-tools"></div><div class="clear"></div><div id="comment-19297-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

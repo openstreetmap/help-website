@@ -1,0 +1,79 @@
++++
+type = "question"
+title = "Ixia timestamp trailer support"
+description = '''hello, when capturing traffic timestamed by ixia NTO5288 i can see the trailer without any problem. however, after trimming the payload and computing a new CRC to the packet i can&#x27;t see trailer in wireshark, although the packet length is 15 bytes longer and going through the HEX data i can find the ...'''
+date = "2015-04-16T07:18:00Z"
+lastmod = "2015-04-17T09:22:00Z"
+weight = 41489
+keywords = [ "timestamp", "ixia", "trimming" ]
+aliases = [ "/questions/41489" ]
+osqa_answers = 3
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [Ixia timestamp trailer support](/questions/41489/ixia-timestamp-trailer-support)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-41489-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>hello,</p><p>when capturing traffic timestamed by ixia NTO5288 i can see the trailer without any problem. however, after trimming the payload and computing a new CRC to the packet i can't see trailer in wireshark, although the packet length is 15 bytes longer and going through the HEX data i can find the trailer but it can't be displayed correctly.</p><p>is there a way to pull out this information and display it?</p></div><div id="question-tags" class="tags-container tags">timestamp ixia trimming</div><div id="question-controls" class="post-controls"><div class="community-wiki">This question is marked "community wiki".</div></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>16 Apr '15, 07:18</strong></p><img src="https://secure.gravatar.com/avatar/b530a23fe230c4c1c127a5e055599de1?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Roni%20Pollak&#39;s gravatar image" /><p>Roni Pollak<br />
+<span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">●</span><span class="badgecount">4</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Roni Pollak has no accepted answers">0%</span></p></div></div><div id="comments-container-41489" class="comments-container"><span id="41490"></span><div id="comment-41490" class="comment"><div id="post-41490-score" class="comment-score"></div><div class="comment-text"><p>Can you show a capture before and after the trimming you talk about?</p></div><div id="comment-41490-info" class="comment-info"><span class="comment-age">(16 Apr '15, 08:05)</span> Jaap ♦</div></div><span id="41514"></span><div id="comment-41514" class="comment"><div id="post-41514-score" class="comment-score"></div><div class="comment-text"><p>There's no reliable way to detect that a packet has an Ixia trailer, so Wireshark is forced to use heuristics to try to guess whether there's a trailer or not. Editing the packet probably changed it in some way that causes the heuristics to fail; that might be a bug in the heuristics, or it might be a consequence of the editing not being done in a way that would make the heuristics work (for example, you might not have set the packet length and captured length fields for that packet in the modified capture file so that they correspond to the changed packet length).</p><p>That's why we'd need to see the capture files from before and after the trimming - to figure out what's the cause and how it would need to be fixed.</p></div><div id="comment-41514-info" class="comment-info"><span class="comment-age">(16 Apr '15, 17:35)</span> Guy Harris ♦♦</div></div><span id="41519"></span><div id="comment-41519" class="comment"><div id="post-41519-score" class="comment-score"></div><div class="comment-text"><p>hi,</p><p>thanks for the quick responses.</p><p>i do i upload the files? it's my first post at this site and i am not familiar with it.</p><p>roni</p></div><div id="comment-41519-info" class="comment-info"><span class="comment-age">(16 Apr '15, 21:38)</span> Roni Pollak</div></div><span id="41527"></span><div id="comment-41527" class="comment"><div id="post-41527-score" class="comment-score"></div><div class="comment-text"><p>Please upload it to google drive, dropbox or cloudshark.org and post the link here.</p></div><div id="comment-41527-info" class="comment-info"><span class="comment-age">(17 Apr '15, 02:04)</span> Kurt Knochner ♦</div></div><span id="41531"></span><div id="comment-41531" class="comment"><div id="post-41531-score" class="comment-score"></div><div class="comment-text"><p>hi,</p><p>here are the files:</p><p><a href="https://www.dropbox.com/sh/ym0z8be2ehxpexl/AAAwvct5X5Y75D58gKqPk-2za?dl=0">https://www.dropbox.com/sh/ym0z8be2ehxpexl/AAAwvct5X5Y75D58gKqPk-2za?dl=0</a></p><p><a href="https://www.dropbox.com/sh/ym0z8be2ehxpexl/AAAwvct5X5Y75D58gKqPk-2za?dl=0">pcap files</a></p><p>thanks,</p><p>roni</p></div><div id="comment-41531-info" class="comment-info"><span class="comment-age">(17 Apr '15, 04:00)</span> Roni Pollak</div></div></div><div id="comment-tools-41489" class="comment-tools"></div><div class="clear"></div><div id="comment-41489-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+3 Answers:
+
+</div>
+
+</div>
+
+<span id="41543"></span>
+
+<div id="answer-container-41543" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-41543-score" class="post-score" title="current number of votes">2</div></div></td><td><div class="item-right"><div class="answer-body"><p>If I change the Ethernet protocol preference "Fixed ethernet trailer length" to 19, this decodes for me. Otherwise the ethernet dissector doesn't see any trailer, as the IP dissector doesn't get as many bytes as its length field indicates, so never returns any bytes back to the ethernet dissector to consider as trailer...</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>17 Apr '15, 09:12</strong></p><img src="https://secure.gravatar.com/avatar/4b31b42b2960269c605715bae6547459?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="MartinM&#39;s gravatar image" /><p>MartinM<br />
+<span class="score" title="167 reputation points">167</span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="7 badges"><span class="bronze">●</span><span class="badgecount">7</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="MartinM has 3 accepted answers">33%</span></p></div></div><div id="comments-container-41543" class="comments-container"><span id="41549"></span><div id="comment-41549" class="comment"><div id="post-41549-score" class="comment-score"></div><div class="comment-text"><p>Hello,</p><p>thanks all for you help. MartinM's suggestion solved my issue - thanks Martin</p><p>have a nice weekend, roni</p></div><div id="comment-41549-info" class="comment-info"><span class="comment-age">(17 Apr '15, 12:52)</span> Roni Pollak</div></div></div><div id="comment-tools-41543" class="comment-tools"></div><div class="clear"></div><div id="comment-41543-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="41542"></span>
+
+<div id="answer-container-41542" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-41542-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Hi Roni</p><p>You could convert the file to text (i.e. save at K12 format) and then parse through the file to determine the timestamp with a script. This is one way that I've done exactly this in the past.</p><p>Thanks, Ollie</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>17 Apr '15, 08:33</strong></p><img src="https://secure.gravatar.com/avatar/82592252629f31189fd133c1287532a6?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Ollie%20Sheridan&#39;s gravatar image" /><p>Ollie Sheridan<br />
+<span class="score" title="5 reputation points">5</span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Ollie Sheridan has no accepted answers">0%</span></p></div></div><div id="comments-container-41542" class="comments-container"></div><div id="comment-tools-41542" class="comment-tools"></div><div class="clear"></div><div id="comment-41542-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="41544"></span>
+
+<div id="answer-container-41544" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-41544-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>it might be a consequence of the editing not being done in a way that would make the heuristics work</p></blockquote><p>It is. Ethernet packets have a field that can be used as a type field or a length field; for IP packets, it's used as a type field, so the only length field that can be used to determine whether the Ethernet packet has a trailer is the length field in the IP header, and that wasn't changed as part of the editing process.</p><p>Why are you trimming the payload here?</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>17 Apr '15, 09:22</strong></p><img src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Guy%20Harris&#39;s gravatar image" /><p>Guy Harris ♦♦<br />
+<span class="score" title="17443 reputation points"><span>17.4k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">●</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">●</span><span class="badgecount">196</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Guy Harris has 216 accepted answers">19%</span></p></div></div><div id="comments-container-41544" class="comments-container"><span id="41545"></span><div id="comment-41545" class="comment"><div id="post-41545-score" class="comment-score"></div><div class="comment-text"><p>My understanding is that it is a feature of the monitoring switch to effectively set a snaplen, but maintain the ethernet trailer with the timestamp information. Is there a neater way making it work than changing the ethernet preference "Fixed ethernet trailer length" that I suggested in an answer a few minutes ago?</p></div><div id="comment-41545-info" class="comment-info"><span class="comment-age">(17 Apr '15, 09:26)</span> MartinM</div></div><span id="41546"></span><div id="comment-41546" class="comment"><div id="post-41546-score" class="comment-score"></div><div class="comment-text"><p>I'm obligated to record all streams 24*7 so I have to get rid of the payload.</p><p>MartinM,how do I set what you suggested?</p></div><div id="comment-41546-info" class="comment-info"><span class="comment-age">(17 Apr '15, 10:44)</span> Roni Pollak</div></div><span id="41547"></span><div id="comment-41547" class="comment"><div id="post-41547-score" class="comment-score">1</div><div class="comment-text"><p>The cleanest way to do this would be to get a new LINKTYPE_ value from [email protected], with packets <em>beginning</em> with the Ixia trailer and having the Ethernet packet <em>following</em> it, and have the program that records the streams move the trailer to the beginning, truncate the rest of the packet and <em>discard</em> the FCS, and write the packets out with a length that reflects the on-the-wire packet length and a "captured length" that's the actual number of packet data bytes.</p></div><div id="comment-41547-info" class="comment-info"><span class="comment-age">(17 Apr '15, 11:04)</span> Guy Harris ♦♦</div></div></div><div id="comment-tools-41544" class="comment-tools"></div><div class="clear"></div><div id="comment-41544-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

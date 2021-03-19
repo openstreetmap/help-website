@@ -1,0 +1,59 @@
++++
+type = "question"
+title = "Connection reset RST,ACK"
+description = '''Hi, Hopefully you can help me with this. I have an application that works on one of my machines but it doesn&#x27;t work on my VPS. When I run it on VPS the connection fails and it looks like it is being reset by client. Please take a look at traces from both machines: not working: https://s18.postimg.or...'''
+date = "2016-11-10T00:11:00Z"
+lastmod = "2016-11-10T02:00:00Z"
+weight = 57240
+keywords = [ "connection_reset", "connection" ]
+aliases = [ "/questions/57240" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Connection reset RST,ACK](/questions/57240/connection-reset-rstack)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-57240-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi,</p><p>Hopefully you can help me with this. I have an application that works on one of my machines but it doesn't work on my VPS. When I run it on VPS the connection fails and it looks like it is being reset by client. Please take a look at traces from both machines: not working: <a href="https://s18.postimg.org/5obwjkz2h/not_working.png">https://s18.postimg.org/5obwjkz2h/not_working.png</a> working: <a href="https://s22.postimg.org/9r49a6w0x/working.png">https://s22.postimg.org/9r49a6w0x/working.png</a></p><p>I have a suspicion that has something to do with NAT but according to my hosting provider that's not the case. Any ideas what might cause connection to reset?</p><p>Many thanks Peter</p></div><div id="question-tags" class="tags-container tags">connection_reset connection</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>10 Nov '16, 00:11</strong></p><img src="https://secure.gravatar.com/avatar/710199f49170f4b4bb131c6bb9a6f1cd?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="cr4zy1w4n&#39;s gravatar image" /><p>cr4zy1w4n<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="cr4zy1w4n has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 10 Nov '16, 01:09</p></div></div><div id="comments-container-57240" class="comments-container"></div><div id="comment-tools-57240" class="comment-tools"></div><div class="clear"></div><div id="comment-57240-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="57244"></span>
+
+<div id="answer-container-57244" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-57244-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>The screenshot of the "not working" part is showing that the client aborts the connection with a reset after 2 seconds. It's unclear why, because after the handshake it should be the client to send it's SSL handshake, or any kind of request.</p><p>My guess is that in the packets between those two seconds something happens that leads to the abort, but since you filtered the trace I really can't say what it might be. It would be better to have a capture file to look at if you can provide it (use <a href="https://www.tracewrangler.com/">TraceWrangler</a> to anonymize it, if possible/required), e.g. putting in on <a href="https://www.cloudshark.org/">CloudShark</a>.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>10 Nov '16, 02:00</strong></p><img src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jasper&#39;s gravatar image" /><p>Jasper ♦♦<br />
+<span class="score" title="23806 reputation points"><span>23.8k</span></span><span title="5 badges"><span class="badge1">●</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">●</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">●</span><span class="badgecount">284</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Jasper has 263 accepted answers">18%</span></p></div></div><div id="comments-container-57244" class="comments-container"><span id="57245"></span><div id="comment-57245" class="comment"><div id="post-57245-score" class="comment-score"></div><div class="comment-text"><p>please find full anonymized trace below <a href="https://www.cloudshark.org/captures/e3e4e2413bf2">https://www.cloudshark.org/captures/e3e4e2413bf2</a> ip address of remote server that app needs to communicate with is 209.126.122.72</p></div><div id="comment-57245-info" class="comment-info"><span class="comment-age">(10 Nov '16, 02:16)</span> cr4zy1w4n</div></div><span id="57246"></span><div id="comment-57246" class="comment"><div id="post-57246-score" class="comment-score">1</div><div class="comment-text"><p>Interesting, the client doesn't do <strong>anything</strong> apparently, just kills the connection after two seconds. So this seems to be an issue with the application on the client - the network doesn't show any problem that could cause this.</p></div><div id="comment-57246-info" class="comment-info"><span class="comment-age">(10 Nov '16, 02:24)</span> Jasper ♦♦</div></div><span id="57251"></span><div id="comment-57251" class="comment"><div id="post-57251-score" class="comment-score"></div><div class="comment-text"><p>thanks for looking at the trace, indeed something weird is going on. I can copy the application to another client with the same OS and settings and it will work just fine. Worst thing is that app developer claims this is a network problem. I will play with it a bit more just to see if I can work it out. Thanks!</p></div><div id="comment-57251-info" class="comment-info"><span class="comment-age">(10 Nov '16, 02:55)</span> cr4zy1w4n</div></div><span id="57252"></span><div id="comment-57252" class="comment"><div id="post-57252-score" class="comment-score"></div><div class="comment-text"><p>Well, it may be a "network problem" within the network stack behavior of the client. So I'd still say it's a client problem, even if it's not an application problem. But it's not something the network itself does wrong, that much is pretty clear.</p><p>Try to find out what the differences between hosts are, e.g. compare the routing tables etc</p></div><div id="comment-57252-info" class="comment-info"><span class="comment-age">(10 Nov '16, 03:03)</span> Jasper ♦♦</div></div><span id="57253"></span><div id="comment-57253" class="comment"><div id="post-57253-score" class="comment-score"></div><div class="comment-text"><p>main difference is IP addressing. Not working host is on public IP and it looks like its behind transparent proxy (can't confirm as hosting provider didn't want to give me any details) working client is on private IP.</p></div><div id="comment-57253-info" class="comment-info"><span class="comment-age">(10 Nov '16, 03:19)</span> cr4zy1w4n</div></div><span id="57254"></span><div id="comment-57254" class="comment not_top_scorer"><div id="post-57254-score" class="comment-score"></div><div class="comment-text"><p>You did capture on the client, right? So if the client doesn't send a meaningful packet after the handshake and you're on the client, the transparent proxy seems irrelevant... It would be different if the capture was taken on the server.</p><p>Are there any security products that are different? Sometimes AV/Personal Firewalls/Host IDS systems can interfere...</p></div><div id="comment-57254-info" class="comment-info"><span class="comment-age">(10 Nov '16, 03:39)</span> Jasper ♦♦</div></div><span id="57370"></span><div id="comment-57370" class="comment not_top_scorer"><div id="post-57370-score" class="comment-score"></div><div class="comment-text"><p>I managed to work it out.. one of the dll files application is using was corrupted and stopped the app from working correctly. Nothing to do with networking whatsoever :) Thanks for your help anyways!</p></div><div id="comment-57370-info" class="comment-info"><span class="comment-age">(13 Nov '16, 23:37)</span> cr4zy1w4n</div></div><span id="57372"></span><div id="comment-57372" class="comment not_top_scorer"><div id="post-57372-score" class="comment-score"></div><div class="comment-text"><p>I'd agree with Jasper here. Just looking at the connections to 209.126.122.72, we see the working 3-way handshake, followed by a client Reset after 2 seconds. This would appear to be client timeout.</p><p>There's no evidence whatsoever that there is a network problem to that server - because after the handshake we are waiting for the client to make its request. The client application seems to go away after asking for the TCP connection.</p><p>If a firewall was involved, we perhaps wouldn't expect to see the successful 3-way handshakes. After that there are no client packets to block.</p><p>I notice that the SYN-ACKs have a TTL of 51, meaning that they come from something 13 hops away. Would that be the real server or something else?</p><p>I did notice that the client's SYN for the second connection doesn't support Window Scaling whereas the first and third ones do. I have no idea if this has any relevance.</p><p>Your RDP connection to 151.80.169.249 does contain frequent "out-of-order" or "overtaken" packets (as indicated by the Selective ACKs). Again, there's no evidence that this has any impact on the RDP performance or on the original problem - but may be something else worth investigating.</p></div><div id="comment-57372-info" class="comment-info"><span class="comment-age">(14 Nov '16, 00:31)</span> Philst</div></div></div><div id="comment-tools-57244" class="comment-tools"><span class="comments-showing"> showing 5 of 8 </span> <a href="#" class="show-all-comments-link">show 3 more comments</a></div><div class="clear"></div><div id="comment-57244-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

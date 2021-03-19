@@ -1,0 +1,60 @@
++++
+type = "question"
+title = "Collisions"
+description = '''Is there any way to see how many pacekt collisions there are?'''
+date = "2010-12-01T18:48:00Z"
+lastmod = "2010-12-01T20:15:00Z"
+weight = 1196
+keywords = [ "collisions", "packet" ]
+aliases = [ "/questions/1196" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Collisions](/questions/1196/collisions)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-1196-score" class="post-score" title="current number of votes">1</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Is there any way to see how many pacekt collisions there are?</p></div><div id="question-tags" class="tags-container tags">collisions packet</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>01 Dec '10, 18:48</strong></p><img src="https://secure.gravatar.com/avatar/9b2c995dfe29af1e96397d5367175e9f?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="braddog&#39;s gravatar image" /><p>braddog<br />
+<span class="score" title="16 reputation points">16</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="braddog has no accepted answers">0%</span></p></div></div><div id="comments-container-1196" class="comments-container"></div><div id="comment-tools-1196" class="comment-tools"></div><div class="clear"></div><div id="comment-1196-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="1197"></span>
+
+<div id="answer-container-1197" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-1197-score" class="post-score" title="current number of votes">2</div></div></td><td><div class="item-right"><div class="answer-body"><p>Not from the nic. Some server drivers may have visible counters, but not (usually) on end user PCs. You can see it from the switch side if you have managed switches.</p><p>In this day and age, if you are seeing collisions, then you have a duplex mismatch. These are late collisions and is detrimental to performance.</p><p>If you have a half duplex network, collisions are 100,000% <em>NORMAL</em> and nothing to worry about.<br />
+</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>01 Dec '10, 20:15</strong></p><img src="https://secure.gravatar.com/avatar/63805f079ac429902641cad9d7cd69e8?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="hansangb&#39;s gravatar image" /><p>hansangb<br />
+<span class="score" title="791 reputation points">791</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="6 badges"><span class="silver">●</span><span class="badgecount">6</span></span><span title="19 badges"><span class="bronze">●</span><span class="badgecount">19</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="hansangb has 7 accepted answers">12%</span> </br></p></div></div><div id="comments-container-1197" class="comments-container"></div><div id="comment-tools-1197" class="comment-tools"></div><div class="clear"></div><div id="comment-1197-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

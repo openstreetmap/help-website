@@ -1,0 +1,71 @@
++++
+type = "question"
+title = "Filter for dropped unexpected syn packets"
+description = '''We are investigating an issue which where we have a client application (from Azure) accessing our webservers. The application is experiencing intermitted time-outs when connecting to our server. When we view our logs we do not see those attempts that time-out. We only see succesfull attempts. We hav...'''
+date = "2017-03-09T05:15:00Z"
+lastmod = "2017-03-12T15:49:00Z"
+weight = 59957
+keywords = [ "azure", "dropped", "packet", "syn" ]
+aliases = [ "/questions/59957" ]
+osqa_answers = 2
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Filter for dropped unexpected syn packets](/questions/59957/filter-for-dropped-unexpected-syn-packets)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-59957-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>We are investigating an issue which where we have a client application (from Azure) accessing our webservers. The application is experiencing intermitted time-outs when connecting to our server. When we view our logs we do not see those attempts that time-out. We only see succesfull attempts. We have not been able to figure out where these requests fail. Whether it's our Firewall or Load Balancers that is dropping the traffic for whatever reason. I came accross this case: <a href="http://serverfault.com/questions/732008/outbound-packets-dropping-timeouts-only-with-azure">http://serverfault.com/questions/732008/outbound-packets-dropping-timeouts-only-with-azure</a> and also <a href="https://blogs.msdn.microsoft.com/mast/2015/07/13/azure-snat/">https://blogs.msdn.microsoft.com/mast/2015/07/13/azure-snat/</a> This looks exaclty like our issue but I need to prove to Azure that this is the case.From the microsoft blog in the example on server side, this is said: <em>The server has already an ESTABLISHED connection, so when it receives a SYN packet from CLIENT VIP:54321 it will ignore and drop it. At this point in time, we’ve ended up with two broken connections: The original that has been idle for 4+ minutes and the new one.</em><br />
+I want to see this happening. What filter would I use?</p></div><div id="question-tags" class="tags-container tags">azure dropped packet syn</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>09 Mar '17, 05:15</strong></p><img src="https://secure.gravatar.com/avatar/88192e8b53dbb5bf57fffef3dd9ee409?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Michellangelo&#39;s gravatar image" /><p>Michellangelo<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Michellangelo has no accepted answers">0%</span> </br></p></div><div class="post-update-info post-update-info-edited"><p>edited 09 Mar '17, 05:16</p></div></div><div id="comments-container-59957" class="comments-container"></div><div id="comment-tools-59957" class="comment-tools"></div><div class="clear"></div><div id="comment-59957-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="59973"></span>
+
+<div id="answer-container-59973" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-59973-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>The SYN that gets dropped will probably be flagged as an out-of-order packet by wireshark. If you use the filter tcp.flags.syn == 1 to display only SYN packets and SYN/ACK packets, you may be able to find it by scrolling through and looking for any packets flagged as out-of-order (or searching with tcp.analysis.out_of_order) or where there is a SYN without a SYN/ACK response.<br />
+</p><p>It might also get flagged in wireshark as a reused port. You could try doing a search using the filter tcp.analysis.reused_ports.</p><p>Of course, if you are behind a firewall, then these SYN packets might not even be making it to your server so you may not see them at all, but might want to check your FW logs.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>09 Mar '17, 14:24</strong></p><img src="https://secure.gravatar.com/avatar/ba1199f4d360c53a6cc8aa6aa5da37c8?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="ryber&#39;s gravatar image" /><p>ryber<br />
+<span class="score" title="146 reputation points">146</span><span title="4 badges"><span class="badge1">●</span><span class="badgecount">4</span></span><span title="5 badges"><span class="silver">●</span><span class="badgecount">5</span></span><span title="9 badges"><span class="bronze">●</span><span class="badgecount">9</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="ryber has one accepted answer">16%</span> </br></p></div></div><div id="comments-container-59973" class="comments-container"><span id="59977"></span><div id="comment-59977" class="comment"><div id="post-59977-score" class="comment-score"></div><div class="comment-text"><p>Thanks Ryber.</p><p>The difficulty is to find the right place to capture this traffic. To make it more clear, this is the setup <strong>(internet)-[router]-[firewall]-[load balancer]-[webserver]</strong> Brief explanation. The router only routes the traffic to our firewall. The firewall NATs the traffic to a private ip. The load-balancer decrypts the traffic and forwards it to any available webserver. The time-out requests from the client never reach our load-balancer. So where is the traffic dropped if it even reaches our network. Right now my capture is on the outside interface of our Firewall. Here I see many retransmission and ports reused. I do not see any out-of-order packets. In my firewall logs I do not see any drops at all. Not sure where to look.</p></div><div id="comment-59977-info" class="comment-info"><span class="comment-age">(10 Mar '17, 04:16)</span> Michellangelo</div></div><span id="59986"></span><div id="comment-59986" class="comment"><div id="post-59986-score" class="comment-score"></div><div class="comment-text"><p>Could you share us a trace? <a href="https://blog.packet-foo.com/2016/11/the-wireshark-qa-trace-file-sharing-tutorial/">https://blog.packet-foo.com/2016/11/the-wireshark-qa-trace-file-sharing-tutorial/</a></p></div><div id="comment-59986-info" class="comment-info"><span class="comment-age">(10 Mar '17, 07:31)</span> Christian_R</div></div><span id="59990"></span><div id="comment-59990" class="comment"><div id="post-59990-score" class="comment-score"></div><div class="comment-text"><p>The "port reused" are probably the SYN packets form the duplicate 4-Tuple connections. If you are not seeing anything on your FW to indicate they are being dropped (or your load balancer for that matter), your best bet is to take a packet capture on the internal interface of your firewall and/or the external interface of your load balancer. You can then identify the packets that get flagged "port reused" and see if they are present after the firewall. If you see them between the FW and load balancer, the next step would be to take a capture on the link between the load balancer and server(s).</p></div><div id="comment-59990-info" class="comment-info"><span class="comment-age">(10 Mar '17, 08:14)</span> ryber</div></div></div><div id="comment-tools-59973" class="comment-tools"></div><div class="clear"></div><div id="comment-59973-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="60020"></span>
+
+<div id="answer-container-60020" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-60020-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>In the <a href="https://blogs.msdn.microsoft.com/mast/2015/07/13/azure-snat/">Azure Blog about SNAT</a> it states that Azure is using a shared VIP for outgoing connections, reserving 160 ports per VM. As they also say they will keep a connection in TIME_WAIT state for a couple of minutes. Then it says:</p><blockquote><p>The first question you might have already may be What happens if I simultaneously use the 160 ports? Well, if none of them has been freed yet the system will assign more ports on a best-effort basis, but as soon as one becomes free it will available again for use.</p></blockquote><p>So, if you open up enough connections, you can deplete your 160 port block and are then confronted with the best effort service for outgoing connections. At the end of the article it states:</p><blockquote><p>Before we go, we should probably also acknowledge another long-standing problem with this design. Since Azure allocates these outgoing ports in batches of 160, it is possible that the creation of a new batch of 160 may not happen fast enough and an outgoing connection attempt will fail. We typically only see this under very high load (almost always load testing), but if you fall victim to this, the solution is the same – use a PIP.</p></blockquote><p>So basically you won't be able to detect these network timeouts in your network, as they are already dropped within the Azure network. The only way to make sure you don't run into these timeouts seems to be to configure a PIP for each of the Azure VM's</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>12 Mar '17, 15:49</strong></p><img src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="SYN-bit&#39;s gravatar image" /><p>SYN-bit ♦♦<br />
+<span class="score" title="17094 reputation points"><span>17.1k</span></span><span title="9 badges"><span class="badge1">●</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">●</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">●</span><span class="badgecount">245</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="SYN-bit has 174 accepted answers">20%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 12 Mar '17, 15:50</p></div></div><div id="comments-container-60020" class="comments-container"><span id="60088"></span><div id="comment-60088" class="comment"><div id="post-60088-score" class="comment-score"></div><div class="comment-text"><p>You are correct I wont be able to see when the traffic gets dropped from the remote location (Azure) On the other hand I should be able to see unexpected SYN packets being dropped. These will be dropped when the Server has an ESTABLISHED connection.</p><blockquote><p>The server has already an ESTABLISHED connection, so when it receives a SYN packet from CLIENT</p></blockquote><p>The question is how I will filter these in a capture.</p></div><div id="comment-60088-info" class="comment-info"><span class="comment-age">(15 Mar '17, 06:17)</span> Michellangelo</div></div><span id="60100"></span><div id="comment-60100" class="comment"><div id="post-60100-score" class="comment-score"></div><div class="comment-text"><p>Whenever Wireshark sees a TCP/SYN for an IP/PORT combination that it has already seen, it will mark it as "[TCP ports reused]" (filter: <code>tcp.analysis.reused_ports</code>).</p><p>Wireshark does not keep state so it can not (yet) make a distinction between the SYN following a FIN in the previous session and a SYN in the middle of an active session.</p><p>You could use some tshark scripting or a LUA script within WIreshark to filter on SYN's that follow a non-closed session on the same IP/PORT combination.</p></div><div id="comment-60100-info" class="comment-info"><span class="comment-age">(15 Mar '17, 13:53)</span> SYN-bit ♦♦</div></div></div><div id="comment-tools-60020" class="comment-tools"></div><div class="clear"></div><div id="comment-60020-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

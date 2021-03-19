@@ -1,0 +1,59 @@
++++
+type = "question"
+title = "Client ignoring re-transmission request"
+description = '''I have come across an issue of backups failing from a netbackup windows client. Blame the network kicks in. A lot of troubleshooting got down to the attached flow trace. Just wondering has anyone come across a similar situation where the client fails to send a packet and ignores the request for re-t...'''
+date = "2017-03-08T03:04:00Z"
+lastmod = "2017-03-08T04:23:00Z"
+weight = 59913
+keywords = [ "dup-ack" ]
+aliases = [ "/questions/59913" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Client ignoring re-transmission request](/questions/59913/client-ignoring-re-transmission-request)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-59913-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I have come across an issue of backups failing from a netbackup windows client. Blame the network kicks in. A lot of troubleshooting got down to the attached flow trace. Just wondering has anyone come across a similar situation where the client fails to send a packet and ignores the request for re-transmission. Seems like a software bug to me. The trace was done on the Cisco switch port connected to the client. near the top packet missing, servers asks for the missing packet Acknowledgment number: 1355609 , the client just keeps transmitting the next packet, total of 44 ACK's before the client closes the connection. Server Calculated window size: 14398, no scaling (-1) client got to Sequence number: 1639849 before resetting the connection</p><p>Looks like the client is ignoring TCP protocol standards, just wondered if anyone else has come across similar issue <img src="https://osqa-ask.wireshark.org/upfiles/dupack_Kl9yTsB.jpg" alt="alt text" /></p></div><div id="question-tags" class="tags-container tags">dup-ack</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>08 Mar '17, 03:04</strong></p><img src="https://secure.gravatar.com/avatar/489a6a32aee57b686e033ca433fd1a99?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="kirky755&#39;s gravatar image" /><p>kirky755<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="kirky755 has no accepted answers">0%</span></p></img></div></div><div id="comments-container-59913" class="comments-container"><span id="59914"></span><div id="comment-59914" class="comment"><div id="post-59914-score" class="comment-score"></div><div class="comment-text"><p>Can you post a capture of the full conversation, from SYN to RST, e.g. on Cloudshark? If you worry about sensitive details, sanitize your PCAP first:</p><p><a href="https://blog.packet-foo.com/2016/11/the-wireshark-qa-trace-file-sharing-tutorial/">https://blog.packet-foo.com/2016/11/the-wireshark-qa-trace-file-sharing-tutorial/</a></p></div><div id="comment-59914-info" class="comment-info"><span class="comment-age">(08 Mar '17, 03:08)</span> Jasper ♦♦</div></div><span id="59917"></span><div id="comment-59917" class="comment"><div id="post-59917-score" class="comment-score"></div><div class="comment-text"><p>I can't attach the whole trace, was only capturing 96 bytes of each packets and still ended up with 30x40mb files. Here is a link to the last 1000 odd packets. the kit is on the same network, IP's randomised with TraceWrangler <a href="https://www.dropbox.com/s/o7mu80z0hrvs35v/ad-02_end_anon.pcapng?dl=0">https://www.dropbox.com/s/o7mu80z0hrvs35v/ad-02_end_anon.pcapng?dl=0</a></p></div><div id="comment-59917-info" class="comment-info"><span class="comment-age">(08 Mar '17, 03:27)</span> kirky755</div></div></div><div id="comment-tools-59913" class="comment-tools"></div><div class="clear"></div><div id="comment-59913-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="59920"></span>
+
+<div id="answer-container-59920" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-59920-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>Interesting. It looks like there is only one packet lost right before packet 1148, and the duplicate ACKs are ingored. You can see the SACK option accurately tracking the remaining incoming packets up to packet 1387, so basically the receiver got everything except for 1 segment.</p><p>In 1394, the receiver tries again (after waiting close to 3 seconds, because no more packets came in it could react to) to signal the missing segment. And now it gets really strange: the ACK in packet 1395 to packet 1394 has the exact same (old!) sequence number 1357057 as packet 1148, even though the sender should have used 1640225, which would the the correct number. Then it sends an ACK-RST with the same (incorrect) sequence number again, tearing down the connection.</p><p>This is really weird TCP behavior. My guess is that there is some device between sender and receiver messing up the sequence numbers (and maybe not handling the SACK option correctly). What I would try to do is to get a simultaneous capture on both ends to compare what each node sends and receives. I bet there is some modification happening in between that you can spot that way.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>08 Mar '17, 04:23</strong></p><img src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jasper&#39;s gravatar image" /><p>Jasper ♦♦<br />
+<span class="score" title="23806 reputation points"><span>23.8k</span></span><span title="5 badges"><span class="badge1">●</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">●</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">●</span><span class="badgecount">284</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Jasper has 263 accepted answers">18%</span></p></div></div><div id="comments-container-59920" class="comments-container"><span id="59943"></span><div id="comment-59943" class="comment"><div id="post-59943-score" class="comment-score"></div><div class="comment-text"><p>I agree, this is very unusual behaviour.</p><p>Just a couple more observations to add to the analysis:</p><p>Window Scaling is obviously in play, because we end up with 280+ KB of selectively ACKed client data.</p><p>Server packet #1394 carries SACK information - but also has 5 bytes of data payload. This is the only "data" that we see from the server.</p><p>Packet #1395 is a normal (200ms delayed) ACK from the client, acknowledging those 5 data bytes. This is the only evidence that the server's SACKs have been received at the client. Even if all the other server SACKs weren't received, we now know that at least this one was.</p><p>The client's Reset is around 1.5 secs after that ACK. Could the Reset have been triggered by the application, perhaps in response to those 5 bytes?</p><p>Can @kirky755 look at those 5 bytes and determine if they are an application layer error message? Or contain something that might provide a clue to all this?</p><p>The client/server TTLs are, respectively, 128/64. The minimum RTT is also just 0.1ms. These facts point to the client and server being very close and probably on the same subnet (despite the "wrangled" IP addresses).</p><p>Alternatively, could the "client" here be a middlebox as suggested by Jasper - and the real backup device is somewhere beyond that? If so, the middlebox would have to be terminating the TCP connection.</p><p>Regardless of all that, we do have a case where a receiver fails to retransmit a missing packet despite 43+1 SACKs (plus the last 5 byte data packet also containing SACK information).</p><p>I'm very keen to know what is in those 5 bytes!</p></div><div id="comment-59943-info" class="comment-info"><span class="comment-age">(08 Mar '17, 19:04)</span> Philst</div></div><span id="59950"></span><div id="comment-59950" class="comment"><div id="post-59950-score" class="comment-score"></div><div class="comment-text"><p>Jasper/Philst</p><p>Thank you for your concise updates. The kit was connected to just Cisco L2 two switches so should not modify the packets. I have the other end trace so will take a look. You have given me so much information thank you, I'm always trying to learn more on tcp traces. Will report back anything I can find.</p></div><div id="comment-59950-info" class="comment-info"><span class="comment-age">(09 Mar '17, 01:35)</span> kirky755</div></div><span id="60032"></span><div id="comment-60032" class="comment"><div id="post-60032-score" class="comment-score"></div><div class="comment-text"><p>Just an update, totally forgot window scale is in the SYN packets, the window looks to be just over 1Mb when trace fails so way more room in buffer before expected ACK. I couldn't get any info on that last 5 bytes the server sends. I looked at a couple of other failed traces but they didn't seem to have any data in the final ACK's so not sure if the server got a error code away on this time only. Backup team informed me the netbackup version is end of life and has no support now!! There is a plan to upgrade, but would have been nice to raise a support call on Vertias. May try get Unix team to switch off windows scaling on the Media server, having a smaller window see if there is a difference in operation on the missing packet issue.</p><p>In SYN's Client Window scale: 8 (multiply by 256) Kind: Window Scale (3) Length: 3 Shift count: 8 [Multiplier: 256]</p><p>Server Window scale: 7 (multiply by 128) Kind: Window Scale (3) Length: 3 Shift count: 7 [Multiplier: 128]</p><p>Thanks for all the info, I learnt a lot investigating this.</p></div><div id="comment-60032-info" class="comment-info"><span class="comment-age">(13 Mar '17, 08:42)</span> kirky755</div></div></div><div id="comment-tools-59920" class="comment-tools"></div><div class="clear"></div><div id="comment-59920-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

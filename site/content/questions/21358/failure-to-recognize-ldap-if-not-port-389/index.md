@@ -1,0 +1,72 @@
++++
+type = "question"
+title = "Failure to recognize LDAP if not port 389?"
+description = '''I am using AD LDS (Active Directory Lightweight Services) and connecting to it using ldp.exe (from microsoft). I am using port 50000. I am able to authenticate successfully and capture the traffic. However, wireshark interprets as TCP not LDAP and in the info field it does not say bind request, etc....'''
+date = "2013-05-21T15:41:00Z"
+lastmod = "2013-06-10T08:33:00Z"
+weight = 21358
+keywords = [ "lds", "ldap" ]
+aliases = [ "/questions/21358" ]
+osqa_answers = 2
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Failure to recognize LDAP if not port 389?](/questions/21358/failure-to-recognize-ldap-if-not-port-389)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-21358-score" class="post-score" title="current number of votes">1</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I am using AD LDS (Active Directory Lightweight Services) and connecting to it using ldp.exe (from microsoft). I am using port 50000. I am able to authenticate successfully and capture the traffic. However, wireshark interprets as TCP not LDAP and in the info field it does not say bind request, etc. Is this due to the port that I am using?</p><p>Thanks.</p></div><div id="question-tags" class="tags-container tags">lds ldap</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>21 May '13, 15:41</strong></p><img src="https://secure.gravatar.com/avatar/ed4374aa147ed1279961c32dccfe9e85?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="malhenry&#39;s gravatar image" /><p>malhenry<br />
+<span class="score" title="21 reputation points">21</span><span title="5 badges"><span class="badge1">●</span><span class="badgecount">5</span></span><span title="5 badges"><span class="silver">●</span><span class="badgecount">5</span></span><span title="9 badges"><span class="bronze">●</span><span class="badgecount">9</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="malhenry has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 10 Jun '13, 23:57</p><img src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Guy%20Harris&#39;s gravatar image" /><p>Guy Harris ♦♦<br />
+<span class="score" title="17443 reputation points"><span>17.4k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">●</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">●</span><span class="badgecount">196</span></span></p></div></div><div id="comments-container-21358" class="comments-container"></div><div id="comment-tools-21358" class="comment-tools"></div><div class="clear"></div><div id="comment-21358-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="21359"></span>
+
+<div id="answer-container-21359" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-21359-score" class="post-score" title="current number of votes">5</div></div></td><td><div class="item-right"><div class="answer-body"><p>You can either change the default port for LDAP in the preferences (click on protocols and then search for LDAP).</p><p>Or you can rightclick on a packet and use "Decode As..."</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>21 May '13, 15:45</strong></p><img src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="SYN-bit&#39;s gravatar image" /><p>SYN-bit ♦♦<br />
+<span class="score" title="17094 reputation points"><span>17.1k</span></span><span title="9 badges"><span class="badge1">●</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">●</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">●</span><span class="badgecount">245</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="SYN-bit has 174 accepted answers">20%</span></p></div></div><div id="comments-container-21359" class="comments-container"><span id="21607"></span><div id="comment-21607" class="comment"><div id="post-21607-score" class="comment-score"></div><div class="comment-text"><p>Decode works....thanks.</p></div><div id="comment-21607-info" class="comment-info"><span class="comment-age">(30 May '13, 09:02)</span> malhenry</div></div><span id="21828"></span><div id="comment-21828" class="comment"><div id="post-21828-score" class="comment-score"></div><div class="comment-text"><p>Hi,</p><p>Your answer above was working for awhile. In fact it seemed to look at all of the packets in the capture and change the appropriate ones to LDAP which was great.</p><p>Today for some reason I cannot decode the packets in new streams. I am pretty certain that I am capturing the correct packet stream. Do you know what I could be doing wrong?</p><p>Thanks.</p></div><div id="comment-21828-info" class="comment-info"><span class="comment-age">(07 Jun '13, 14:25)</span> malhenry</div></div><span id="21836"></span><div id="comment-21836" class="comment"><div id="post-21836-score" class="comment-score"></div><div class="comment-text"><p>Can you post the new capture somewhere we can look at it, maybe <a href="http://cloudshark.org">Cloudshark</a>?</p></div><div id="comment-21836-info" class="comment-info"><span class="comment-age">(08 Jun '13, 12:21)</span> grahamb ♦</div></div><span id="21873"></span><div id="comment-21873" class="comment"><div id="post-21873-score" class="comment-score"></div><div class="comment-text"><p>I would rather not post the traffic. Could you possibly tell me what to look for or possible explanations of my problem? I appreciate your help. I just bought the Wireshark 101 book and am finding it to be a good read so far...</p></div><div id="comment-21873-info" class="comment-info"><span class="comment-age">(10 Jun '13, 06:25)</span> malhenry</div></div><span id="21874"></span><div id="comment-21874" class="comment"><div id="post-21874-score" class="comment-score"></div><div class="comment-text"><p>It might be easier if you explain what you see and do, i.e. your displays and actions from choosing a packet to right click on and use "Decode As ...". Also describe the source and dest ports of the packets and which is the ldap server.</p></div><div id="comment-21874-info" class="comment-info"><span class="comment-age">(10 Jun '13, 06:33)</span> grahamb ♦</div></div><span id="21877"></span><div id="comment-21877" class="comment not_top_scorer"><div id="post-21877-score" class="comment-score"></div><div class="comment-text"><p>Ok. I goto x.x.x.31 and start a wireshark capture Then I go to my Ldap server, y.y.y.151, and start wireshark Then I go to .31 and run ldp.exe to successfully connect and bind. Then on each machine: I stop wireshark filter: ip.host eq y.y.y.151 I see the 3 way handshake packets So I right click the 4th packet, decode as &gt; transport tab &gt; LDAP I do not see any tcp packets get transformed to ldap packets</p><p>Thanks.</p></div><div id="comment-21877-info" class="comment-info"><span class="comment-age">(10 Jun '13, 08:03)</span> malhenry</div></div><span id="21878"></span><div id="comment-21878" class="comment not_top_scorer"><div id="post-21878-score" class="comment-score"></div><div class="comment-text"><p>My ldap server is using SSL on port 50005. Maybe SSL is preventing a proper decode to LDAP?</p></div><div id="comment-21878-info" class="comment-info"><span class="comment-age">(10 Jun '13, 08:06)</span> malhenry</div></div><span id="21879"></span><div id="comment-21879" class="comment not_top_scorer"><div id="post-21879-score" class="comment-score"></div><div class="comment-text"><p>I can go to another ldap server that is not running SSL and decode the TCP packets successfully as LDAP using the method above. So is SSL preventing my from decoding to LDAP? Thanks.</p></div><div id="comment-21879-info" class="comment-info"><span class="comment-age">(10 Jun '13, 08:18)</span> malhenry</div></div><span id="21880"></span><div id="comment-21880" class="comment not_top_scorer"><div id="post-21880-score" class="comment-score"></div><div class="comment-text"><p>Ran ssl with the second ldap server (where I could decode non-ssl to ldap). This time I could not decode packets. So it appears that decode to LDAP will not work if packets are coming over SSL. Can you please confirm this is correct? Thanks.</p></div><div id="comment-21880-info" class="comment-info"><span class="comment-age">(10 Jun '13, 08:26)</span> malhenry</div></div></div><div id="comment-tools-21359" class="comment-tools"><span class="comments-showing"> showing 5 of 9 </span> <a href="#" class="show-all-comments-link">show 4 more comments</a></div><div class="clear"></div><div id="comment-21359-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="21882"></span>
+
+<div id="answer-container-21882" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-21882-score" class="post-score" title="current number of votes">2</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>My ldap server is using SSL on port 50005. Maybe SSL is preventing a proper decode to LDAP?</p></blockquote><p>the LDAP dissector is only able to detect the LDAP protocol if it is able to read the communication, which is impossible if the communication is encrypted.</p><blockquote><p>So it appears that decode to LDAP will not work if packets are coming over SSL. Can you please confirm this is correct?</p></blockquote><p>confirmed.</p><p>HOWEVER: You can decrypt the SSL data, if you have access to the private key of the SSL server (your LDAP server). Is that the case?</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>10 Jun '13, 08:33</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div><div class="post-update-info post-update-info-edited"><p>edited 10 Jun '13, 08:35</p></div></div><div id="comments-container-21882" class="comments-container"><span id="21886"></span><div id="comment-21886" class="comment"><div id="post-21886-score" class="comment-score"></div><div class="comment-text"><p>lets say that I can. What would be my next steps? Some kind of IKEv2 config? If I go down this route, will I be able to decode as LDAP?</p></div><div id="comment-21886-info" class="comment-info"><span class="comment-age">(10 Jun '13, 10:22)</span> malhenry</div></div><span id="21890"></span><div id="comment-21890" class="comment"><div id="post-21890-score" class="comment-score"></div><div class="comment-text"><p>Take a look at these links:</p><blockquote><p><code>http://wiki.wireshark.org/SSL</code><br />
+<code>http://www.youtube.com/watch?v=vQtur8fqErI</code></p></blockquote></div><div id="comment-21890-info" class="comment-info"><span class="comment-age">(10 Jun '13, 11:33)</span> Kurt Knochner ♦</div></div><span id="21901"></span><div id="comment-21901" class="comment"><div id="post-21901-score" class="comment-score"></div><div class="comment-text"><p>Awesome...thanks!</p></div><div id="comment-21901-info" class="comment-info"><span class="comment-age">(10 Jun '13, 14:08)</span> malhenry</div></div></div><div id="comment-tools-21882" class="comment-tools"></div><div class="clear"></div><div id="comment-21882-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

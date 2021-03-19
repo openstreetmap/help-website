@@ -1,0 +1,70 @@
++++
+type = "question"
+title = "Custom Development Question"
+description = '''Sorry about the newbie question - but I am trying get a handle on the power of Wire Shark. I am wondering if it is possible to create a custom user interface for Wire Shark, where as a user wouldn&#x27;t need to interact with it directly? If so, are there any tutorials and other resources I can use to in...'''
+date = "2014-06-20T15:37:00Z"
+lastmod = "2014-06-21T16:08:00Z"
+weight = 34002
+keywords = [ "development", "gui" ]
+aliases = [ "/questions/34002" ]
+osqa_answers = 2
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Custom Development Question](/questions/34002/custom-development-question)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-34002-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Sorry about the newbie question - but I am trying get a handle on the power of Wire Shark. I am wondering if it is possible to create a custom user interface for Wire Shark, where as a user wouldn't need to interact with it directly? If so, are there any tutorials and other resources I can use to investigate this further?</p><p>Thank you in advance!</p></div><div id="question-tags" class="tags-container tags">development gui</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>20 Jun '14, 15:37</strong></p><img src="https://secure.gravatar.com/avatar/3c6e4a4358b8a036646d9a97d3829917?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="JGo&#39;s gravatar image" /><p>JGo<br />
+<span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="JGo has no accepted answers">0%</span></p></div></div><div id="comments-container-34002" class="comments-container"><span id="34004"></span><div id="comment-34004" class="comment"><div id="post-34004-score" class="comment-score">1</div><div class="comment-text"><p>Well, the whole <em>point</em> of the Wireshark application is to be interacted with by a user.</p><p>However, the core dissection capability of Wireshark is in a library. That library is used both by the Wireshark GUI application and the TShark command-line application, and could be used by other programs - but be aware that the API for that library is <em>not</em> fixed and is subject to significant, incompatible change between major releases of Wireshark.</p><p>What sort of custom interface are you thinking of here?</p></div><div id="comment-34004-info" class="comment-info"><span class="comment-age">(20 Jun '14, 17:18)</span> Guy Harris ♦♦</div></div><span id="34008"></span><div id="comment-34008" class="comment"><div id="post-34008-score" class="comment-score"></div><div class="comment-text"><p>The UI that I am being asked to develop is meant to take events that occur in Wire Shark and present them in a non-technical manner for non-technical users. My hope is that by using Wireshark I can find events that occur on the network and then create a front-end that would present those events using plain English. Maybe the best way to illustrate this is with a small use case. Pretend that Wireshark identified a network pattern that indicated a threat/event of some sort; the idea would be to then make my application aware of that threat and my application would translate the event into a workflow that was relevant and presented in a UI that assumed no knowledge of networks or the underlying technologies. The net of it is that I would like to use Wireshark as my backend engine, so that I don't have to recreate all the amazingly great things it does. I have been thinking of maybe using WinPCap as an alternative if I can't use WireShark, but am not that familiar with it and have to believe that Wireshark is more advanced overall, given the WinPCap is just a networking library. The warning you give about the stability of the Wireshark library, changing between releases though is a little vexing, but still might be viable if we can track the changes and deal with them in our releases...obviously not ideal. If there are other alternatives or approaches I would be happy to hear about them...thanks for taking the time to post the reply above...truly appreciated.</p></div><div id="comment-34008-info" class="comment-info"><span class="comment-age">(20 Jun '14, 17:59)</span> JGo</div></div></div><div id="comment-tools-34002" class="comment-tools"></div><div class="clear"></div><div id="comment-34002-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="34018"></span>
+
+<div id="answer-container-34018" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-34018-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>My hope is that by using Wireshark I can <strong>find events that occur on the network</strong> and then create a <strong>front-end that would present those events</strong> using plain English.</p></blockquote><p>that sounds more like an IDS (intrusion detection system) than a network troubleshooting tool (Wireshark). If that is the case, Wireshark is probably not the best tool for you. Wireshark was developed as a tool to do network troubleshooting by looking at frames. It supports that process by the huge number of protocol dissectors, which makes if also interesting as a tool for network security. However some internals have been created with a 'manual' troubleshooting tool in mind, so it's possible use as an IDS are kind of limited.</p><p>So, your options are:</p><ul><li>use libwireshark in your code and see how far you can get. See the links in my answer to another question: <a href="http://ask.wireshark.org/questions/33630/library-for-display-filters">http://ask.wireshark.org/questions/33630/library-for-display-filters</a></li><li>use tshark to print some of the dissector results. Then parse that output with your tool and create 'human readable' results. See the answer of @hoangsonk49 in the following question: <a href="http://ask.wireshark.org/questions/25091/wireshark-tshark-out-of-memory-problem#33959">http://ask.wireshark.org/questions/25091/wireshark-tshark-out-of-memory-problem#33959</a> . He claims, that he has managed to run tshark for ~9 months to analyze network 'event', though that are (most certainly) different events than the ones you are looking for. Nevertheless, maybe you can use his method as well.</li><li>use a real IDS like <a href="https://www.snort.org/">snort</a>, <a href="http://www.bro.org/">bro</a> or <a href="http://suricata-ids.org/">suricata</a></li></ul><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>21 Jun '14, 16:08</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div></div><div id="comments-container-34018" class="comments-container"></div><div id="comment-tools-34018" class="comment-tools"></div><div class="clear"></div><div id="comment-34018-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="34009"></span>
+
+<div id="answer-container-34009" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-34009-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Currently, Wireshark doesn't have a lot of code to identify network patterns.</p><p>It has a framework, the "expert info" mechanism, into which code to identify network patterns could be plugged.</p><p>What you'd do, <em>if</em> you'd developed a sufficiently rich set of "expert info" code and added it to Wireshark, would be to make a UI for libwireshark that, unlike the Wireshark UI for libwireshark, read a capture, extracted the expert info, and somehow presented that to the user.</p><p>It sounds as if there'd be a <em>lot</em> of work in the "somehow presented that to the user" part, however, if the goal is to present this information to someone with "no knowledge of networks or the underlying technologies".</p><p>And, yes, WinPcap isn't much of an alternative; libpcap/WinPcap are what Wireshark uses to capture traffic, but all it gets from them is raw packet data - libwireshark dissects the raw packet data it gets from libpcap/WinPcap.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>20 Jun '14, 18:21</strong></p><img src="https://secure.gravatar.com/avatar/f93de7000747ab5efb5acd3034b2ebd7?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Guy%20Harris&#39;s gravatar image" /><p>Guy Harris ♦♦<br />
+<span class="score" title="17443 reputation points"><span>17.4k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="35 badges"><span class="silver">●</span><span class="badgecount">35</span></span><span title="196 badges"><span class="bronze">●</span><span class="badgecount">196</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Guy Harris has 216 accepted answers">19%</span></p></div></div><div id="comments-container-34009" class="comments-container"><span id="34011"></span><div id="comment-34011" class="comment"><div id="post-34011-score" class="comment-score"></div><div class="comment-text"><p>Thank you again for the great feedback and guidance. I think I am going to download Wireshark and spend some time getting to know it and make sure it ultimately the right tool to solve the problem I am trying to tackle. After that I'll start playing with the libraries you mention and see if it works for what we are trying to develop. Sorry for the cryptic examples of what we are building but I am barred from revealing too much in this forum. Truly appreciate your help and if I can repay the favor please feel free to reach out directly at [email protected]</p></div><div id="comment-34011-info" class="comment-info"><span class="comment-age">(20 Jun '14, 18:59)</span> JGo</div></div><span id="34014"></span><div id="comment-34014" class="comment"><div id="post-34014-score" class="comment-score">1</div><div class="comment-text"><p>You should also note that the Wireshark suite is distributed under <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL 2</a>. Linking to libwireshark would make a combined work and if you distribute it outside of your company then you must make the source code of the combined work available.</p></div><div id="comment-34014-info" class="comment-info"><span class="comment-age">(21 Jun '14, 11:44)</span> grahamb ♦</div></div><span id="34015"></span><div id="comment-34015" class="comment"><div id="post-34015-score" class="comment-score"></div><div class="comment-text"><p>...and must not restrict the redistribution of the combined work by its recipients. (I.e., the combined work can't be sold under a "you can't give this away and you can't reverse-engineer it" license.)</p></div><div id="comment-34015-info" class="comment-info"><span class="comment-age">(21 Jun '14, 11:48)</span> Guy Harris ♦♦</div></div></div><div id="comment-tools-34009" class="comment-tools"></div><div class="clear"></div><div id="comment-34009-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

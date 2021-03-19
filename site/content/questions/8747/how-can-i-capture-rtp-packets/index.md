@@ -1,0 +1,32 @@
++++
+type = "question"
+title = "How can I capture RTP packets?"
+description = '''For a project that I have to submit, I have to stream between two computers (with RTP protocol) using VLC media player, and then capture the packets with Wireshark in order to evaluate eventual packet losses. I have got two questions:   As a first step, I tried to use the same computer both for send...'''
+date = "2012-02-01T09:19:00Z"
+lastmod = "2012-02-01T09:19:00Z"
+weight = 8747
+keywords = [ "streaming", "rtp", "capture-setup" ]
+aliases = [ "/questions/8747" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [How can I capture RTP packets?](/questions/8747/how-can-i-capture-rtp-packets)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-8747-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>For a project that I have to submit, I have to stream between two computers (with RTP protocol) using VLC media player, and then capture the packets with Wireshark in order to evaluate eventual packet losses. I have got two questions:</p><ul><li><p>As a first step, I tried to use the same computer both for sending and for receiving the stream; I opened the RTP network stream in another window of VLC media player and the video is effectively shown. However, Wireshark captured the transmitted/received packets, but it shows them in the log file as a list of UDP packets (layer 4 instead of layer 7). Thus, I don't have access to any sequence number and, consequently, I can't find out anything about eventual packet losses. How can I set up Wireshark in order to have displayed the protocol used at layer 7 instead or 4? Or anyway, how can I have displayed the RTP sequence of packets instead of the UDP ones?</p></li><li><p>Alternatively does anyone know any active source of online streaming that broadcasts using RTP protocol and that would allow me to perform a capture of RTP packets? RTSP is also acceptable. In other words, I need to obtain a Wireshark log file with some consecutive sequence numbers in order to evaluate the packet losses.</p></li></ul></div><div id="question-tags" class="tags-container tags">streaming rtp capture-setup</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>01 Feb '12, 09:19</strong></p><img src="https://secure.gravatar.com/avatar/85ded1c61204e1d2a00b056af84e378b?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="lbxande&#39;s gravatar image" /><p>lbxande<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="lbxande has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 01 Feb '12, 10:00</p><img src="https://secure.gravatar.com/avatar/fe1cf996b30e896dc95ca3cd47ac7406?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="multipleinterfaces&#39;s gravatar image" /><p>multipleinte...<br />
+<span class="score" title="1321 reputation points"><span>1.3k</span></span><span title="15 badges"><span class="badge1">●</span><span class="badgecount">15</span></span><span title="23 badges"><span class="silver">●</span><span class="badgecount">23</span></span><span title="40 badges"><span class="bronze">●</span><span class="badgecount">40</span></span></p></div></div><div id="comments-container-8747" class="comments-container"><span id="8749"></span><div id="comment-8749" class="comment"><div id="post-8749-score" class="comment-score"></div><div class="comment-text"><p>Have you verified that the UDP packets in your capture are, in fact, the RTP packets you are interested in, and have you also verified that they are not encrypted? Moreover, what platform are you attempting this on; Windows does not deliver loopback (local) traffic in a way that Wireshark will receive it.</p></div><div id="comment-8749-info" class="comment-info"><span class="comment-age">(01 Feb '12, 10:02)</span> multipleinte...</div></div><span id="8757"></span><div id="comment-8757" class="comment"><div id="post-8757-score" class="comment-score">1</div><div class="comment-text"><p>Ther is noting on the UDP level indicating that the packet contains RTP so Wireshark can't find that out unless the control signaling is seen and the dissector for that control protocol is coded to set up "RTP converations". You can hoever use "Decode as" and select RTP if those packets are RTP. There is also an RTP preference "Try to heuristically find RTP packets" but it's prone to make misstakes e.g catch stuff that is not RTP.</p></div><div id="comment-8757-info" class="comment-info"><span class="comment-age">(01 Feb '12, 12:41)</span> Anders ♦</div></div></div><div id="comment-tools-8747" class="comment-tools"></div><div class="clear"></div><div id="comment-8747-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

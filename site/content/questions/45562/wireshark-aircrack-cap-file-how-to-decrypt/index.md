@@ -1,0 +1,31 @@
++++
+type = "question"
+title = "Wireshark aircrack cap file how to decrypt"
+description = '''Hi i have a captured file form a wifi network i get through aircrack. So i have many questions how can i find the key in all this mess i read alot but i bearly uderstand. So please someone explain to me how to find the passphrase or the key that i need to decrypt and get the password. Please help'''
+date = "2015-09-01T05:59:00Z"
+lastmod = "2015-09-01T05:59:00Z"
+weight = 45562
+keywords = [ "capture", "aircrack", "wireshark" ]
+aliases = [ "/questions/45562" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Wireshark aircrack cap file how to decrypt](/questions/45562/wireshark-aircrack-cap-file-how-to-decrypt)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-45562-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi i have a captured file form a wifi network i get through aircrack. So i have many questions how can i find the key in all this mess i read alot but i bearly uderstand. So please someone explain to me how to find the passphrase or the key that i need to decrypt and get the password. Please help</p></div><div id="question-tags" class="tags-container tags">capture aircrack wireshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>01 Sep '15, 05:59</strong></p><img src="https://secure.gravatar.com/avatar/c496f379ebe6176ad276fbec7160123a?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="7h364m3&#39;s gravatar image" /><p>7h364m3<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="7h364m3 has no accepted answers">0%</span></p></div></div><div id="comments-container-45562" class="comments-container"><span id="45563"></span><div id="comment-45563" class="comment"><div id="post-45563-score" class="comment-score">1</div><div class="comment-text"><p>What's the network encryption - WEP, WPA, WPA2? And, more importantly, why do you have to brute force the password?</p></div><div id="comment-45563-info" class="comment-info"><span class="comment-age">(01 Sep '15, 07:17)</span> Jasper ♦♦</div></div><span id="45566"></span><div id="comment-45566" class="comment"><div id="post-45566-score" class="comment-score"></div><div class="comment-text"><p>The network encryption is WPA2.I want just to experiment and achieve new skills :)</p></div><div id="comment-45566-info" class="comment-info"><span class="comment-age">(01 Sep '15, 07:43)</span> 7h364m3</div></div><span id="45568"></span><div id="comment-45568" class="comment"><div id="post-45568-score" class="comment-score"></div><div class="comment-text"><p>bwt I readed for that I need a dictionary for this but I can do this with aircrack too.So my question is there another way to decrypt the password without dictionary using Wireshark.I just need to learn how :)</p></div><div id="comment-45568-info" class="comment-info"><span class="comment-age">(01 Sep '15, 09:02)</span> 7h364m3</div></div><span id="45573"></span><div id="comment-45573" class="comment"><div id="post-45573-score" class="comment-score"></div><div class="comment-text"><p>Wireshark is not the tool for you - it assumes you know the keys.</p></div><div id="comment-45573-info" class="comment-info"><span class="comment-age">(01 Sep '15, 11:32)</span> Jasper ♦♦</div></div><span id="45595"></span><div id="comment-45595" class="comment"><div id="post-45595-score" class="comment-score"></div><div class="comment-text"><p>Which keys I have captured the wpa2 handshake.</p></div><div id="comment-45595-info" class="comment-info"><span class="comment-age">(02 Sep '15, 06:08)</span> 7h364m3</div></div><span id="45596"></span><div id="comment-45596" class="comment not_top_scorer"><div id="post-45596-score" class="comment-score"></div><div class="comment-text"><p>The handshake is not enough, you need the WLAN password. Wireshark decodes packets for known passwords, it doesn't bruteforce.</p></div><div id="comment-45596-info" class="comment-info"><span class="comment-age">(02 Sep '15, 07:28)</span> Jasper ♦♦</div></div><span id="45597"></span><div id="comment-45597" class="comment not_top_scorer"><div id="post-45597-score" class="comment-score"></div><div class="comment-text"><p>ok thanks for the information</p></div><div id="comment-45597-info" class="comment-info"><span class="comment-age">(02 Sep '15, 07:37)</span> 7h364m3</div></div></div><div id="comment-tools-45562" class="comment-tools"><span class="comments-showing"> showing 5 of 7 </span> <a href="#" class="show-all-comments-link">show 2 more comments</a></div><div class="clear"></div><div id="comment-45562-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

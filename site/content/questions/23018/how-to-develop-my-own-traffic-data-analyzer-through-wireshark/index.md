@@ -1,0 +1,72 @@
++++
+type = "question"
+title = "How to develop my own traffic data analyzer through wireshark"
+description = '''In my department, we have implemented a new communication protocol. Now, we want to analyze the data traffic in order to show it clearly to the students.  We think we can develop a new filter, specific to our protocol, in Wireshark, but we are not sure about this possibility. So we have a few questi...'''
+date = "2013-07-16T07:17:00Z"
+lastmod = "2013-07-16T07:24:00Z"
+weight = 23018
+keywords = [ "protocol", "dissector", "traffic", "self-created", "wireshark" ]
+aliases = [ "/questions/23018" ]
+osqa_answers = 2
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [How to develop my own traffic data analyzer through wireshark](/questions/23018/how-to-develop-my-own-traffic-data-analyzer-through-wireshark)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-23018-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count">1</div></div></td><td><div id="item-right"><div class="question-body"><p>In my department, we have implemented a new communication protocol. Now, we want to analyze the data traffic in order to show it clearly to the students.</p><p>We think we can develop a new filter, specific to our protocol, in Wireshark, but we are not sure about this possibility. So we have a few question...</p><p>Is possible to develop your own wireshark in order to analyse the traffic of your self-created network protocol? Which are the required libraries? And programming language?</p><p>Thanks in advanced, Alex.</p></div><div id="question-tags" class="tags-container tags">protocol dissector traffic self-created wireshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>16 Jul '13, 07:17</strong></p><img src="https://secure.gravatar.com/avatar/186a21846499dfc2947d359b6fe650f2?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="aleshark&#39;s gravatar image" /><p>aleshark<br />
+<span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="aleshark has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 16 Jul '13, 07:29</p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span></p></div></div><div id="comments-container-23018" class="comments-container"></div><div id="comment-tools-23018" class="comment-tools"></div><div class="clear"></div><div id="comment-23018-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="23022"></span>
+
+<div id="answer-container-23022" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-23022-score" class="post-score" title="current number of votes">2</div></div></td><td><div class="item-right"><div class="answer-body"><p>What you are describing is a Wireshark dissector. There are a few methods to create a dissector, you can look at my SharkFest'13 presentation <a href="http://sharkfest.wireshark.org/sharkfest.13/presentations/PA-10_Writing-a-Wireshark-Dissector_Graham-Bloice.zip">"PA-10: Writing a Wireshark Dissector"</a> that is downloadable from the SharkFest website, for an introduction to writing a dissector using WSGD, Lua or a traditional C based dissectors.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>16 Jul '13, 07:24</strong></p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="grahamb has 274 accepted answers">22%</span></p></div></div><div id="comments-container-23022" class="comments-container"><span id="23027"></span><div id="comment-23027" class="comment"><div id="post-23027-score" class="comment-score"></div><div class="comment-text"><p>I haven't seen your presentation before. Nice work!</p></div><div id="comment-23027-info" class="comment-info"><span class="comment-age">(16 Jul '13, 07:35)</span> Kurt Knochner ♦</div></div><span id="23029"></span><div id="comment-23029" class="comment"><div id="post-23029-score" class="comment-score"></div><div class="comment-text"><p>Thanks, come to SharkFest and hear it live!</p></div><div id="comment-23029-info" class="comment-info"><span class="comment-age">(16 Jul '13, 07:38)</span> grahamb ♦</div></div><span id="23031"></span><div id="comment-23031" class="comment"><div id="post-23031-score" class="comment-score"></div><div class="comment-text"><p>maybe next year. will see...</p></div><div id="comment-23031-info" class="comment-info"><span class="comment-age">(16 Jul '13, 07:39)</span> Kurt Knochner ♦</div></div><span id="23043"></span><div id="comment-23043" class="comment"><div id="post-23043-score" class="comment-score"></div><div class="comment-text"><p>you should. Just do a talk, and skip the conference fee ;-)</p><p>It's the best conference of the year for network analysts IMHO. I'm still slightly annoyed that I didn't start attending back in 2008 :-)</p></div><div id="comment-23043-info" class="comment-info"><span class="comment-age">(16 Jul '13, 08:05)</span> Jasper ♦♦</div></div><span id="23045"></span><div id="comment-23045" class="comment"><div id="post-23045-score" class="comment-score"></div><div class="comment-text"><p>If I find an interesting subject, maybe I'm going to apply for a slot ;-)) Suggestions are welcome...</p></div><div id="comment-23045-info" class="comment-info"><span class="comment-age">(16 Jul '13, 08:07)</span> Kurt Knochner ♦</div></div><span id="23053"></span><div id="comment-23053" class="comment not_top_scorer"><div id="post-23053-score" class="comment-score"></div><div class="comment-text"><p>I'll let you know when the time comes ;-)</p></div><div id="comment-23053-info" class="comment-info"><span class="comment-age">(16 Jul '13, 10:38)</span> Jasper ♦♦</div></div><span id="23055"></span><div id="comment-23055" class="comment not_top_scorer"><div id="post-23055-score" class="comment-score"></div><div class="comment-text"><p>Thanks for the answers but, I have been questioned myself this afternoon about...</p><p>Wireshark Generic Dissector (WSGD) allows dissection of a protocol based on a text file description and doesn't require development enviroment, as you say in your conference, but... "It needs to copy the appropriate version of the plugin".</p><p>Let me explain myself...</p><p>generic.dll allows, according to <a href="http://wsgd.free.fr/">http://wsgd.free.fr/</a> to describe two protocols named "Example1" and "Example2". So if I want to build up my own protocol analyzer, I guess I must rebuilt a new generic.dll or whatever with the description of my protocol layers, and after that, define my protocol (.wsgd) and its fields (.fdesc). Am I wrong?</p></div><div id="comment-23055-info" class="comment-info"><span class="comment-age">(16 Jul '13, 12:18)</span> aleshark</div></div><span id="23058"></span><div id="comment-23058" class="comment not_top_scorer"><div id="post-23058-score" class="comment-score"></div><div class="comment-text"><p>No need to build the DLL yourself, but you must use a matching DLL for your version of Wireshark. The only parts you have to create are the two text files; .wsgd &amp; .fdesc.</p></div><div id="comment-23058-info" class="comment-info"><span class="comment-age">(16 Jul '13, 15:41)</span> grahamb ♦</div></div></div><div id="comment-tools-23022" class="comment-tools"><span class="comments-showing"> showing 5 of 8 </span> <a href="#" class="show-all-comments-link">show 3 more comments</a></div><div class="clear"></div><div id="comment-23022-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="23019"></span>
+
+<div id="answer-container-23019" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-23019-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>Please have a look at the <a href="http://wsgd.free.fr/">Generic Wireshark Dissector</a>.</p><blockquote><p><a href="http://wsgd.free.fr/">http://wsgd.free.fr/</a></p></blockquote><p>It's a very easy way to add protocol support for new protocols.</p><p>The other way would be to write your own dissector.</p><blockquote><p><a href="http://wiki.wireshark.org/Development">http://wiki.wireshark.org/Development</a><br />
+<a href="http://www.wireshark.org/docs/wsdg_html_chunked/ChDissectAdd.html">http://www.wireshark.org/docs/wsdg_html_chunked/ChDissectAdd.html</a></p></blockquote><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>16 Jul '13, 07:21</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></br></p></div></div><div id="comments-container-23019" class="comments-container"><span id="23023"></span><div id="comment-23023" class="comment"><div id="post-23023-score" class="comment-score"></div><div class="comment-text"><p>Plus, there had been a talk at this year's Sharkfest by Graham Bloice, which you can find at <a href="http://sharkfest.wireshark.org/sharkfest.13/index.html">http://sharkfest.wireshark.org/sharkfest.13/index.html</a></p></div><div id="comment-23023-info" class="comment-info"><span class="comment-age">(16 Jul '13, 07:25)</span> Jasper ♦♦</div></div><span id="23025"></span><div id="comment-23025" class="comment"><div id="post-23025-score" class="comment-score"></div><div class="comment-text"><p>I'm sorry I'm so slow at typing my response, beaten by Kurt and Jasper today :-(</p></div><div id="comment-23025-info" class="comment-info"><span class="comment-age">(16 Jul '13, 07:28)</span> grahamb ♦</div></div><span id="23032"></span><div id="comment-23032" class="comment"><div id="post-23032-score" class="comment-score"></div><div class="comment-text"><p>Graham, no worries, your clock is running with a 1 hour delay. Not your fault :-)</p><p>Also, a good answer always takes time.</p></div><div id="comment-23032-info" class="comment-info"><span class="comment-age">(16 Jul '13, 07:44)</span> Jasper ♦♦</div></div><span id="23033"></span><div id="comment-23033" class="comment"><div id="post-23033-score" class="comment-score"></div><div class="comment-text"><p>Never, mind. I'll slow down my typing/answering speed in order for others to have a chance to answer as well ;-))</p></div><div id="comment-23033-info" class="comment-info"><span class="comment-age">(16 Jul '13, 07:45)</span> Kurt Knochner ♦</div></div></div><div id="comment-tools-23019" class="comment-tools"></div><div class="clear"></div><div id="comment-23019-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

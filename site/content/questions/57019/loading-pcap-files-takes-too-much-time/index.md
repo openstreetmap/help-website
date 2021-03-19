@@ -1,0 +1,31 @@
++++
+type = "question"
+title = "loading pcap files takes too much time"
+description = '''I just tried opening a pcap file is just 20 MB. But its taking too much time to load. I waited morethan 20 mins after that cancelled. I checked the option - Resolve network addresses which is already disabled.  Please help.'''
+date = "2016-11-05T15:42:00Z"
+lastmod = "2016-11-05T15:42:00Z"
+weight = 57019
+keywords = [ "opening" ]
+aliases = [ "/questions/57019" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [loading pcap files takes too much time](/questions/57019/loading-pcap-files-takes-too-much-time)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-57019-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I just tried opening a pcap file is just 20 MB. But its taking too much time to load. I waited morethan 20 mins after that cancelled.</p><p>I checked the option - Resolve network addresses which is already disabled.</p><p>Please help.</p></div><div id="question-tags" class="tags-container tags">opening</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>05 Nov '16, 15:42</strong></p><img src="https://secure.gravatar.com/avatar/fe211cd44f87b3adb73f8b9cfb456039?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Ramesh%20Sundaram&#39;s gravatar image" /><p>Ramesh Sundaram<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Ramesh Sundaram has no accepted answers">0%</span></p></div></div><div id="comments-container-57019" class="comments-container"><span id="57021"></span><div id="comment-57021" class="comment"><div id="post-57021-score" class="comment-score"></div><div class="comment-text"><blockquote><p>I checked the option - Resolve network addresses which is already disabled.</p></blockquote><p>This suggests that you open the file using <code>File -&gt; Open</code> from inside an already running Wireshark, i.e. that the issue is really the opening of that file rather than start of Wireshark.</p><p>Leaving aside things like corrupt Wireshark binary, the most likely case is that some dissector has a problem with the file. What version of Wireshark do you use, on what operating system? And can you publish the problematic file on some plain file publishing service and edit your question with a login-free link to it?</p></div><div id="comment-57021-info" class="comment-info"><span class="comment-age">(06 Nov '16, 01:22)</span> sindy</div></div><span id="57050"></span><div id="comment-57050" class="comment"><div id="post-57050-score" class="comment-score"></div><div class="comment-text"><p>Thank you for your response!</p><p>I am using latest wireshark version 2.2.1.</p><p>I tried the following, Uninstalled 2.2.1 and installed old version 1.12.4. Then same file, I am able to open quickly. what could be the issue? Please help me to resolve this dissector issue. Also I observed, problem is not with the specific file. Once I encountered this issue, I am facing this loading issues with all other files too.</p><p>To rectify this issue, I need to go back old version after uninstalling 2.2.1 and again update to the latest version 2.2.1. If I do so, my issue getting resolved. I am able to load the file within a second !</p></div><div id="comment-57050-info" class="comment-info"><span class="comment-age">(07 Nov '16, 06:28)</span> Ramesh Sundaram</div></div><span id="57051"></span><div id="comment-57051" class="comment"><div id="post-57051-score" class="comment-score"></div><div class="comment-text"><p>The way you describe it now it sounds more like some issue with the profile (preferences) where some settings are stored between Wireshark runs.</p><p>So you need to identify the activity which causes the 2.2.1 to get from the OK state to the failed one:</p><ul><li><p>is it always the same capture file which is the <strong>first one to not load</strong>,</p></li><li><p>is it always the same capture file which is the <strong>last one to be open properly</strong>,</p></li><li><p>is it the same protocol preference (or <code>Decode as...</code>) setting while viewing the last file before the issue occurs,</p></li></ul><p>and then <a href="https://bugs.wireshark.org/bugzilla/enter_bug.cgi">file a bug</a>, describing the activity which causes the issue and attaching the capture file if relevant.</p><p>Just to be sure (and it doesn't seem to be the case), can you check whether a mere reboot without uninstalling the 2.2.1 is sufficient to open the files quickly again in 2.2.1?</p></div><div id="comment-57051-info" class="comment-info"><span class="comment-age">(07 Nov '16, 07:00)</span> sindy</div></div></div><div id="comment-tools-57019" class="comment-tools"></div><div class="clear"></div><div id="comment-57019-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

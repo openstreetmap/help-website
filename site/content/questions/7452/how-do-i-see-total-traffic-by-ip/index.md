@@ -1,0 +1,59 @@
++++
+type = "question"
+title = "how do I see total traffic by IP"
+description = '''I want to know how to see the total traffic (byte/packet count) to/from each IP. After I determine that, I will probably want to drill in and see the traffic by protocol/port for an IP. Basically I want to know what IP addresses are accounting for the large traffic and then will want to see what pro...'''
+date = "2011-11-15T16:32:00Z"
+lastmod = "2011-11-15T18:23:00Z"
+weight = 7452
+keywords = [ "ip", "total", "traffic" ]
+aliases = [ "/questions/7452" ]
+osqa_answers = 0
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [how do I see total traffic by IP](/questions/7452/how-do-i-see-total-traffic-by-ip)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-7452-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I want to know how to see the total traffic (byte/packet count) to/from each IP. After I determine that, I will probably want to drill in and see the traffic by protocol/port for an IP. Basically I want to know what IP addresses are accounting for the large traffic and then will want to see what protocol is the culpret.</p><p>Is there an easy way to do this?</p><p>Thanks,</p></div><div id="question-tags" class="tags-container tags">ip total traffic</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>15 Nov '11, 16:32</strong></p><img src="https://secure.gravatar.com/avatar/99839340e445fad2b28a11589d896340?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="johntaves&#39;s gravatar image" /><p>johntaves<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="4 badges"><span class="bronze">●</span><span class="badgecount">4</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="johntaves has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 15 Nov '11, 16:34</p></div></div><div id="comments-container-7452" class="comments-container"></div><div id="comment-tools-7452" class="comment-tools"></div><div class="clear"></div><div id="comment-7452-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="7456"></span>
+
+<div id="answer-container-7456" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-7456-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>How about using "Statistics -&gt; Endpoints" as a starting point? You can sort on any of the columns, including packets, bytes, etc.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>15 Nov '11, 18:23</strong></p><img src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="cmaynard&#39;s gravatar image" /><p>cmaynard ♦♦<br />
+<span class="score" title="9361 reputation points"><span>9.4k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">●</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">●</span><span class="badgecount">142</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="cmaynard has 108 accepted answers">20%</span></p></div></div><div id="comments-container-7456" class="comments-container"></div><div id="comment-tools-7456" class="comment-tools"></div><div class="clear"></div><div id="comment-7456-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

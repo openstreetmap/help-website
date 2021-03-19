@@ -1,0 +1,69 @@
++++
+type = "question"
+title = "Routers changing the packet window size?"
+description = '''I&#x27;m having a problem in the company network, where server is receiving a high number of Zero Window-packets. Now, I understand that this would be quite normal if the client is too busy to handle the incoming flow.  But here&#x27;s the thing, I captured the traffic from client&#x27;s end simultaneously with se...'''
+date = "2012-02-02T23:46:00Z"
+lastmod = "2012-02-05T07:04:00Z"
+weight = 8799
+keywords = [ "router", "zero-window", "wireshark" ]
+aliases = [ "/questions/8799" ]
+osqa_answers = 2
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Routers changing the packet window size?](/questions/8799/routers-changing-the-packet-window-size)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-8799-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I'm having a problem in the company network, where server is receiving a high number of Zero Window-packets. Now, I understand that this would be quite normal if the client is too busy to handle the incoming flow.</p><p>But here's the thing, I captured the traffic from client's end simultaneously with server's end and there were none zero window-packets leaving from client. So somewhere on the path the packet window size had changed to zero which keeps stopping the flow.</p><p>Could it be that some node on the way is changing that window size to ease its own load?</p><p>Any help/ideas appreciated.</p></div><div id="question-tags" class="tags-container tags">router zero-window wireshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>02 Feb '12, 23:46</strong></p><img src="https://secure.gravatar.com/avatar/387f58c09269aee8709bb3d68f33ea93?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="rakki&#39;s gravatar image" /><p>rakki<br />
+<span class="score" title="0 reputation points">0</span><span title="5 badges"><span class="badge1">●</span><span class="badgecount">5</span></span><span title="5 badges"><span class="silver">●</span><span class="badgecount">5</span></span><span title="8 badges"><span class="bronze">●</span><span class="badgecount">8</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="rakki has no accepted answers">0%</span></p></div></div><div id="comments-container-8799" class="comments-container"></div><div id="comment-tools-8799" class="comment-tools"></div><div class="clear"></div><div id="comment-8799-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="8800"></span>
+
+<div id="answer-container-8800" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-8800-score" class="post-score" title="current number of votes">2</div></div></td><td><div class="item-right"><div class="answer-body"><p>The only device that comes to mind right away is a traffic shaper/management system that might decide to change some TCP layer values. I've seen that in a couple of analysis cases where a Packeteer appliance (now a product of BlueCoat) fumbled around with the window size - and I say "fumble", because it did pretty stupid things, like dropping a clients real window size from 64k to 200 bytes (a.k.a. a "Silly Window"), which caused huge artificial delay issues.</p><p>You might want to check if there is any such device in the communication path, and do a capture left and right of it to see if it mangles the packets. Routers/Switches usually do not do this, because they're only working on layers 2 and 3.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>03 Feb '12, 00:05</strong></p><img src="https://secure.gravatar.com/avatar/c578ba2967741f25aebd6afef702f432?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Jasper&#39;s gravatar image" /><p>Jasper ♦♦<br />
+<span class="score" title="23806 reputation points"><span>23.8k</span></span><span title="5 badges"><span class="badge1">●</span><span class="badgecount">5</span></span><span title="51 badges"><span class="silver">●</span><span class="badgecount">51</span></span><span title="284 badges"><span class="bronze">●</span><span class="badgecount">284</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Jasper has 263 accepted answers">18%</span></p></div></div><div id="comments-container-8800" class="comments-container"><span id="8801"></span><div id="comment-8801" class="comment"><div id="post-8801-score" class="comment-score"></div><div class="comment-text"><p>Thank you for the quick answer. I'll check on that and start doing captures on the path. I'll let you know if I find the cause of the problem.</p></div><div id="comment-8801-info" class="comment-info"><span class="comment-age">(03 Feb '12, 00:11)</span> rakki</div></div><span id="8864"></span><div id="comment-8864" class="comment"><div id="post-8864-score" class="comment-score">1</div><div class="comment-text"><p>Other devices that might be changing the receive window are application layer proxies (including most loadbalancers)</p></div><div id="comment-8864-info" class="comment-info"><span class="comment-age">(06 Feb '12, 15:42)</span> SYN-bit ♦♦</div></div><span id="8888"></span><div id="comment-8888" class="comment"><div id="post-8888-score" class="comment-score"></div><div class="comment-text"><p>Thanks, SYNbit. There actually is a loadbalancer on the network and I was wondering if that could be the problem.</p></div><div id="comment-8888-info" class="comment-info"><span class="comment-age">(08 Feb '12, 02:12)</span> rakki</div></div><span id="8889"></span><div id="comment-8889" class="comment not_top_scorer"><div id="post-8889-score" class="comment-score"></div><div class="comment-text"><p>You might want to go and do two captures simultaneously, recording what goes in and what comes out of the loadbalancer (if it is a device with two interfaces). If you have only one interface where both client request and the same load balanced request goes to the servers you can do it with one single capture. Then you need to find the same packets and compare their TCP headers to see if they were mangled.</p></div><div id="comment-8889-info" class="comment-info"><span class="comment-age">(08 Feb '12, 02:21)</span> Jasper ♦♦</div></div><span id="8891"></span><div id="comment-8891" class="comment not_top_scorer"><div id="post-8891-score" class="comment-score"></div><div class="comment-text"><p>You mean doing a capture in the balancer? Stupid question btw: Do these loadbalancers have their own ip? ie. if I'm doing a traceroute, do I see them on the path or are they switch-type components?</p></div><div id="comment-8891-info" class="comment-info"><span class="comment-age">(08 Feb '12, 02:40)</span> rakki</div></div><span id="8893"></span><div id="comment-8893" class="comment"><div id="post-8893-score" class="comment-score">1</div><div class="comment-text"><p>That all depends on the way they have been configured. They can operate routed, one-armed or transparant (bridged). Some brands (like F5) let you do capturing on the box itself.</p><p>Welcome to the wonderful world of network analysis :-)</p></div><div id="comment-8893-info" class="comment-info"><span class="comment-age">(08 Feb '12, 03:37)</span> SYN-bit ♦♦</div></div><span id="8896"></span><div id="comment-8896" class="comment not_top_scorer"><div id="post-8896-score" class="comment-score"></div><div class="comment-text"><p>We've had issues with certain "features" of the NetScalers doing this to us. I've not seen any of our wan "accelerators" do this yet - I'm not sure why a shaper would decide to insert 0-window adverts into a healthy stream. Perhaps it's configured with "guards" to prevent over saturation of a link, or service?</p></div><div id="comment-8896-info" class="comment-info"><span class="comment-age">(08 Feb '12, 04:59)</span> GeonJay</div></div><span id="8899"></span><div id="comment-8899" class="comment not_top_scorer"><div id="post-8899-score" class="comment-score"></div><div class="comment-text"><p>Beats me. The rate to the servers isn't anything drastic. And also I've noticed that the amount of zero window-packets doesn't relate at all to the data rate.</p></div><div id="comment-8899-info" class="comment-info"><span class="comment-age">(08 Feb '12, 05:18)</span> rakki</div></div><span id="8907"></span><div id="comment-8907" class="comment"><div id="post-8907-score" class="comment-score">1</div><div class="comment-text"><p>Well, since a LB can be acting as an application layer proxy, it has TCP buffers on the server and on the client side. Of the connection on the server side is fast while it is slow on the client side, the TCP receive buffers on the serverside of the LB can be filled up pretty quick, resulting in zero-window ACKs.</p></div><div id="comment-8907-info" class="comment-info"><span class="comment-age">(08 Feb '12, 10:09)</span> SYN-bit ♦♦</div></div></div><div id="comment-tools-8800" class="comment-tools"><span class="comments-showing"> showing 5 of 9 </span> <a href="#" class="show-all-comments-link">show 4 more comments</a></div><div class="clear"></div><div id="comment-8800-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="8834"></span>
+
+<div id="answer-container-8834" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-8834-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>In her <a href="http://sharkfest.wireshark.org/sharkfest.11/presentations/I-9_Chappell-Troubleshooting_Tips_and_Tricks_for_TCP_IP_Networks.pdf">Troubleshooting Tips and Tricks for TCP/IP Networks</a> presentation at Sharkfest '11, <a href="http://ask.wireshark.org/users/7/lchappell/">Laura Chappell</a> mentioned the problem with certain interconnecting devices changing and/or removing altogether certain TCP options, such as window scaling and SACK options. Perhaps this is what is happening in your case.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>05 Feb '12, 07:04</strong></p><img src="https://secure.gravatar.com/avatar/55158e2322c4e365a5e0a4a0ac3fbcef?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="cmaynard&#39;s gravatar image" /><p>cmaynard ♦♦<br />
+<span class="score" title="9361 reputation points"><span>9.4k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="38 badges"><span class="silver">●</span><span class="badgecount">38</span></span><span title="142 badges"><span class="bronze">●</span><span class="badgecount">142</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="cmaynard has 108 accepted answers">20%</span></p></div></div><div id="comments-container-8834" class="comments-container"></div><div id="comment-tools-8834" class="comment-tools"></div><div class="clear"></div><div id="comment-8834-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

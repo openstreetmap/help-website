@@ -1,0 +1,63 @@
++++
+type = "question"
+title = "How to clearly verify that program work through a VPN ?"
+description = '''Hi, I want to see that a program work nicely with a VPN. The programm will pass totaly on a different IP, but I don&#x27;t know how check it with WireShark. Thanks.'''
+date = "2014-06-05T16:59:00Z"
+lastmod = "2014-06-09T10:21:00Z"
+weight = 33489
+keywords = [ "vpncheckipprogram" ]
+aliases = [ "/questions/33489" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [How to clearly verify that program work through a VPN ?](/questions/33489/how-to-clearly-verify-that-program-work-through-a-vpn)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-33489-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi,</p><p>I want to see that a program work nicely with a VPN. The programm will pass totaly on a different IP, but I don't know how check it with WireShark.</p><p>Thanks.</p></div><div id="question-tags" class="tags-container tags">vpncheckipprogram</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>05 Jun '14, 16:59</strong></p><img src="https://secure.gravatar.com/avatar/c5b4caa92c4e781140373d8dbb3fff2b?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="vincreu&#39;s gravatar image" /><p>vincreu<br />
+<span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="vincreu has no accepted answers">0%</span></p></div></div><div id="comments-container-33489" class="comments-container"><span id="33491"></span><div id="comment-33491" class="comment"><div id="post-33491-score" class="comment-score"></div><div class="comment-text"><p>Please add more details about your vpn setup, the application/program and what kind of 'proof' you expect to get with Wireshark.</p></div><div id="comment-33491-info" class="comment-info"><span class="comment-age">(05 Jun '14, 21:32)</span> Kurt Knochner ♦</div></div><span id="33503"></span><div id="comment-33503" class="comment"><div id="post-33503-score" class="comment-score"></div><div class="comment-text"><p>Hi,</p><p>the VPN is "privatetunnel".com . I am in Belgium and in connect in Canada with the VPN. The program is a poker room. I pLay poker in Russia with the VPN.</p><p>The site "privatetunnel" says to me that I can verify that the poker room connect in a russia's IP with WireShark.</p><p>He says :</p><p>Generally speaking, you can capture on the TAP-32 adapter that is created and analyze the traffic flow on the adapter for signs that your connection is tunneled properly.</p><p>And don't know how to do.</p><p>Thanks.</p></div><div id="comment-33503-info" class="comment-info"><span class="comment-age">(06 Jun '14, 06:03)</span> vincreu</div></div><span id="33540"></span><div id="comment-33540" class="comment"><div id="post-33540-score" class="comment-score"></div><div class="comment-text"><p>Help</p></div><div id="comment-33540-info" class="comment-info"><span class="comment-age">(07 Jun '14, 16:43)</span> vincreu</div></div><span id="33544"></span><div id="comment-33544" class="comment"><div id="post-33544-score" class="comment-score"></div><div class="comment-text"><p>"Generally speaking, you can capture on the TAP-32 adapter that is created and analyze the traffic flow on the adapter for signs that your connection is tunneled properly.</p><p>And don't know how to do." Do what?</p><p>So is the TAP-32 adapter created and you cannot trace it? Or could you trace it but cannot interpret the capture file?</p></div><div id="comment-33544-info" class="comment-info"><span class="comment-age">(08 Jun '14, 02:19)</span> mrEEde</div></div><span id="33579"></span><div id="comment-33579" class="comment"><div id="post-33579-score" class="comment-score"></div><div class="comment-text"><p>So how can I verify if all the program pass through the VPN ?</p><p>Thanks.</p></div><div id="comment-33579-info" class="comment-info"><span class="comment-age">(09 Jun '14, 06:46)</span> vincreu</div></div></div><div id="comment-tools-33489" class="comment-tools"></div><div class="clear"></div><div id="comment-33489-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="33585"></span>
+
+<div id="answer-container-33585" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-33585-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>but I don't know how check it with WireShark.</p></blockquote><p>You don't need Wireshark for that. I'm not even sure if WinPcap would show traffic for that the 'TAP-32' VPN adapter.</p><blockquote><p>So how can I verify if all the program pass through the VPN ?</p></blockquote><p>Check the routes on your client in a DoS box:</p><blockquote><p>route print</p></blockquote><p>If the default route (0.0.0.0) 'points' to the VPN adapter, the whole internet traffic is directed into the VPN.</p><blockquote><p>that I can verify that the poker room connect in a russia's IP</p></blockquote><p>Just surf to the following site, while you are connected to the VPN and check if the IP address that is shown, belongs to an ISP from Russia.</p><blockquote><p><a href="http://www.whatismyip.com/">http://www.whatismyip.com/</a></p></blockquote><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>09 Jun '14, 10:21</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div></div><div id="comments-container-33585" class="comments-container"><span id="33909"></span><div id="comment-33909" class="comment"><div id="post-33909-score" class="comment-score"></div><div class="comment-text"><p>I write "route print" in cmd, then I see on the "list of interface" :</p><p><strong><em>19...xx xx xx xx xx xx...Tap adapter V9 for private tunnel</em></strong></p><p><strong><em>8...yy yy yy yy yy yy...Microsoft wi-fi direct virtual adapter</em></strong></p><p><strong><em>(...)</em></strong></p><p>Is it a proof that all the program, not only the internet-navigator, work on the russian ip throught the VPN ?</p><p>Thanks.</p></div><div id="comment-33909-info" class="comment-info"><span class="comment-age">(17 Jun '14, 13:31)</span> vincreu</div></div><span id="33912"></span><div id="comment-33912" class="comment"><div id="post-33912-score" class="comment-score"></div><div class="comment-text"><p>No! The existence of the VPN adapter is no proof at all. It's important that the route 0.0.0.0 (or similar routes) '<strong>use</strong>' that adapter. Can you please post the output of the following command, if you are unable to determine that yourself?</p><blockquote><p>route print</p></blockquote></div><div id="comment-33912-info" class="comment-info"><span class="comment-age">(17 Jun '14, 14:50)</span> Kurt Knochner ♦</div></div><span id="33929"></span><div id="comment-33929" class="comment"><div id="post-33929-score" class="comment-score"></div><div class="comment-text"><p>VPN Private Tunnel connect from belgium to Switzerland 'Zurick'.</p><p>I hide many of the information that seems secrete. If it's usefull to give it, just tell me ^^. Thanks</p><p><img src="http://imageshack.com/a/img819/1334/pzmt.png" alt="alt text" /></p></div><div id="comment-33929-info" class="comment-info"><span class="comment-age">(18 Jun '14, 07:03)</span> vincreu</div></div><span id="33931"></span><div id="comment-33931" class="comment"><div id="post-33931-score" class="comment-score"></div><div class="comment-text"><p>If I access the URL you posted</p><blockquote><p><a href="http://imagizer.imageshack.us/a/img819/1334/pzmt.png">http://imagizer.imageshack.us/a/img819/1334/pzmt.png</a></p></blockquote><p>I get nothing but: STATUS_403</p></div><div id="comment-33931-info" class="comment-info"><span class="comment-age">(18 Jun '14, 09:47)</span> Kurt Knochner ♦</div></div><span id="33934"></span><div id="comment-33934" class="comment"><div id="post-33934-score" class="comment-score"></div><div class="comment-text"><p><img src="http://imageshack.com/a/img841/7796/qc9z.png" alt="alt text" /></p></div><div id="comment-33934-info" class="comment-info"><span class="comment-age">(18 Jun '14, 10:16)</span> vincreu</div></div><span id="33941"></span><div id="comment-33941" class="comment not_top_scorer"><div id="post-33941-score" class="comment-score"></div><div class="comment-text"><p>as you can see, there are two network routes to the VPN adapter:</p><blockquote><p>0.0.0.0/128.0.0.0 ==&gt; 5.5.0.1<br />
+128.0.0.0/128.0.0.0 ==&gt; 5.5.0.1<br />
+</p></blockquote><p>As the network routes have precedence over the default route (0.0.0.0/0.0.0.0), the whole traffic is routed into the VPN tunnel.</p><p>So, the answer to your question is: Yes, everything is routed into the VPN (as expected).</p><p>Regards<br />
+Kurt</p></div><div id="comment-33941-info" class="comment-info"><span class="comment-age">(18 Jun '14, 14:23)</span> Kurt Knochner ♦</div></div><span id="33946"></span><div id="comment-33946" class="comment not_top_scorer"><div id="post-33946-score" class="comment-score"></div><div class="comment-text"><p>Ok thanks you very much that help me !</p><p>Thx.</p></div><div id="comment-33946-info" class="comment-info"><span class="comment-age">(18 Jun '14, 16:36)</span> vincreu</div></div><span id="33951"></span><div id="comment-33951" class="comment not_top_scorer"><div id="post-33951-score" class="comment-score"></div><div class="comment-text"><p>Hint: If a supplied answer resolves your question can you please "accept" it by clicking the checkmark icon next to it. This highlights good answers for the benefit of subsequent users with the same or similar questions. For extra points you can up vote the answer (thumb up).</p></div><div id="comment-33951-info" class="comment-info"><span class="comment-age">(19 Jun '14, 01:24)</span> Kurt Knochner ♦</div></div></div><div id="comment-tools-33585" class="comment-tools"><span class="comments-showing"> showing 5 of 8 </span> <a href="#" class="show-all-comments-link">show 3 more comments</a></div><div class="clear"></div><div id="comment-33585-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

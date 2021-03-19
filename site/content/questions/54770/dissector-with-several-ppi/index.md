@@ -1,0 +1,74 @@
++++
+type = "question"
+title = "dissector with several ppi"
+description = '''Hi, I have lua script which decode pcap files. This script uses dissector table &quot;sctp.ppi&quot;. But now I understand that I should decode more then one type of ppi (not only M3UA (sctp.ppi=3) but at the same time M2PA (sctp.ppi=5)). Here is the part of the code: local sctp_tbl = DissectorTable.get(&quot;sctp...'''
+date = "2016-08-12T05:41:00Z"
+lastmod = "2016-08-12T06:08:00Z"
+weight = 54770
+keywords = [ "lua", "sctp", "dissector", "pcap" ]
+aliases = [ "/questions/54770" ]
+osqa_answers = 0
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [dissector with several ppi](/questions/54770/dissector-with-several-ppi)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-54770-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><h2 id="hi">Hi,</h2><p>I have lua script which decode pcap files. This script uses dissector table "sctp.ppi". But now I understand that I should decode more then one type of ppi (not only M3UA (sctp.ppi=3) but at the same time M2PA (sctp.ppi=5)). Here is the part of the code:</p><pre><code>local sctp_tbl = DissectorTable.get(&quot;sctp.ppi&quot;)
+sctp_dissector = sctp_tbl:get_dissector(3) (variable is defined previously)
+sctp_tbl:set (3,proxy) --proxy - it is my own protocol by which I will replace the original protocol &quot;M3UA&quot;</code></pre><p>Could you please give an advise how can i do it. I tryed the following:</p><pre><code>local sctp_tbl = DissectorTable.get(&quot;sctp.ppi&quot;)
+sctp_dissector = sctp_tbl:get_dissector(3)
+sctp_dissector = sctp_tbl:get_dissector(5)
+sctp_tbl:set (3,proxy)
+sctp_tbl:set (5,proxy)</code></pre><p>But it does not work correctly. this part of code works for sctp.ppi=5 and does not work for sctp.ppi=3.</p><h2 id="any-help-is-appreciated">Any help is appreciated</h2></div><div id="question-tags" class="tags-container tags">lua sctp dissector pcap</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>12 Aug '16, 05:41</strong></p><img src="https://secure.gravatar.com/avatar/2d7d6eacf9c502b9188b233cb3e1d8ff?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="domeno&#39;s gravatar image" /><p>domeno<br />
+<span class="score" title="21 reputation points">21</span><span title="6 badges"><span class="badge1">●</span><span class="badgecount">6</span></span><span title="6 badges"><span class="silver">●</span><span class="badgecount">6</span></span><span title="11 badges"><span class="bronze">●</span><span class="badgecount">11</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="domeno has no accepted answers">0%</span></p></div></div><div id="comments-container-54770" class="comments-container"></div><div id="comment-tools-54770" class="comment-tools"></div><div class="clear"></div><div id="comment-54770-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="54772"></span>
+
+<div id="answer-container-54772" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-54772-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><ol><li>it is not <code>sctp_tbl:set</code> but <code>sctp_tbl:add</code> (see <a href="https://wiki.wireshark.org/LuaAPI/Dissector#DissectorTable">the Lua API Wiki</a>). The name is slightly misleading as if a row with the same index value already exists in the dissector table, it is replaced by the "added" one.</li><li>I'm not sure what do you want to achieve by overwriting the contents of <code>sctp_dissector</code> by the second <code>sctp_tbl:get</code>. If you want to store the handle to the original dissector, you have to use two distinct variables as theoretically, different original dissectors may be used for <code>PPI == 5</code> and <code>PPI == 3</code>.</li></ol></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>12 Aug '16, 06:08</strong></p><img src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="sindy&#39;s gravatar image" /><p>sindy<br />
+<span class="score" title="6049 reputation points"><span>6.0k</span></span><span title="4 badges"><span class="badge1">●</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">●</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">●</span><span class="badgecount">51</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="sindy has 110 accepted answers">24%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 12 Aug '16, 06:10</p></div></div><div id="comments-container-54772" class="comments-container"><span id="54857"></span><div id="comment-54857" class="comment"><div id="post-54857-score" class="comment-score"></div><div class="comment-text"><p>Thanks for your answer. But I would like to have one dissector for two PPIs (for <code>sctp.ppi==3</code> and <code>sctp.ppi==5</code>). I think that I create one dissector and add two PPIs by the following commands:</p><pre><code>local sctp_tbl = DissectorTable.get(&quot;sctp.ppi&quot;)
+sctp_dissector = sctp_tbl:get_dissector(3)
+sctp_tbl:add (5,sctp_dissector)</code></pre><p>As with <code>GSM_MAP</code>. In <code>GSM_MAP</code> I do the following:</p><pre><code>local sccp_tbl = DissectorTable.get(&quot;sccp.ssn&quot;)
+tcap_dissector = sccp_tbl:get_dissector(9)
+sccp_tbl:set (&quot;6-9&quot;,proxy)</code></pre><p>And I thought that that the same commands will help me to solve the problem with sccp.ppi</p><p>Can you give me some advice?</p></div><div id="comment-54857-info" class="comment-info"><span class="comment-age">(16 Aug '16, 04:51)</span> domeno</div></div><span id="54858"></span><div id="comment-54858" class="comment"><div id="post-54858-score" class="comment-score"></div><div class="comment-text"><p>Sure you can add the same dissector to as many PPIs as you want. My original Answer suggested that. I only did not understand why you were saving the link to original dissector for ppi == 3 and for ppi == 5 into the same variable, as you were effectively storing only the second one, overwriting the link to the first one with the new one.</p><p>So the complete code would be:</p><pre><code>local sctp_tbl = DissectorTable.get(&quot;sctp.ppi&quot;)
+orig_sctp dissector_for_3 = sctp_tbl:get_dissector(3)
+orig_sctp_dissector_for_5 = sctp_tbl:get_dissector(5)
+sctp_tbl:add(3,proxy)
+sctp_tbl:add(5,proxy)</code></pre><p>(or you might also use a table for the links to the original dissectors if you prefer that).</p><p>And back then I haven't found the DissectorTable:set method in the doc, but it seems to be present there. So maybe there is an issue with <code>:set</code> when there is no dissector for the value of <code>index</code> which you are replacing? I know for sure that <code>:add(index,new_dissector)</code> replaces the existing dissector for <code>index</code> if it exists (which is what <code>:set</code> is expected to do) or adds it if no dissector existed for <code>index</code> before. For the same index, there is always just one dissector in the table. If you want/need to chain them, you have to do it algorithmically, which is the reason for storing the links to the original ones.</p></div><div id="comment-54858-info" class="comment-info"><span class="comment-age">(16 Aug '16, 05:06)</span> sindy</div></div><span id="54860"></span><div id="comment-54860" class="comment"><div id="post-54860-score" class="comment-score"></div><div class="comment-text"><p>Thanks for your comments. They are very helpful for me. But there is only one problem: in my lua script I parse pcap file with the tshark and lua. I have my own protocol "proxy" by which I replace the original protocol and inside the proxy dissector (new protocol) I use the created original dissector (in my case it was "tcap_dissector"):</p><p>function proxy.dissector(tvbuf,pinfo,root)</p><pre><code>tcap_dissector:call(tvbuf,pinfo,root)   
+local num_vlan_id_field = vlan_id()</code></pre><p>But if I create more then two dissectors then I will have to call the parsing od the file two times: first by "orig_sctp dissector_for_3" and sercondly by "orig_sctp dissector_for_5". It is not suitable for me. Or I can create an if statement in lua script to choose what dissector to use according to the value in specific field?</p><p>Friendly speaking I am beginner in lua script and dissectors then It will be great if you give me some advices to solve problem with two dissectors and one time analyze the pcap file.</p></div><div id="comment-54860-info" class="comment-info"><span class="comment-age">(16 Aug '16, 05:49)</span> domeno</div></div><span id="54862"></span><div id="comment-54862" class="comment"><div id="post-54862-score" class="comment-score"></div><div class="comment-text"><p>Of course you can use <code>if</code> in Lua to choose the necessary original dissector. The point is how to convey the information about which one to use. To do that, you would either need to refer to the <code>sctp.ppi</code> field from within your dissector and use the value to choose the right original dissector, or you would have to register two individual dissector functions <code>proxy_3</code> and <code>proxy_5</code>, which may be just thin wrappers calling a common code with an additional parameter (3 or 5). I cannot see any clear advantage of any of these two methods. In a single Lua script you can create as many dissector functions as you want, i.e. you don't need to split your code into several files.</p></div><div id="comment-54862-info" class="comment-info"><span class="comment-age">(16 Aug '16, 05:58)</span> sindy</div></div><span id="54904"></span><div id="comment-54904" class="comment"><div id="post-54904-score" class="comment-score"></div><div class="comment-text"><p>First of all thank you for your help. I used "if" statement in Lua script and now I use different dissectors according to the value of the field sctp.ppi (or in wireshark sctp.data_payload_proto_id).</p><p>But for the future purpose I want to know is there a method to use dissector for any value of the "sctp.ppi"? It is not comfortable to create N dissectors for N different values of sctp.ppi.</p></div><div id="comment-54904-info" class="comment-info"><span class="comment-age">(17 Aug '16, 03:35)</span> domeno</div></div><span id="54906"></span><div id="comment-54906" class="comment not_top_scorer"><div id="post-54906-score" class="comment-score"></div><div class="comment-text"><p>I'm not sure I get you right. So now you have a single dissector function, registered for both <code>ppi == 3</code> and <code>ppi == 5</code>, and this single function first fetches the contents of <code>sctp.data_payload_proto_id</code> and then, based on that value, it chooses the right part of its code using <code>if</code>?</p><p>Because your next question suggests that your problem is not that you need to <strong>create</strong> many dissector functions but that you have to <strong>register</strong> a dissector function individually for each ppi value into the dissection table. If this is a correct understanding, then the only answer is that the <code>DissectorTable:set</code> should support ranges according to the documentation, but I have never tested it myself. The table as such does not support ranges: if you eventually succeed with a <code>:set</code> of a range from 5 to 7, you'll end up with three individual rows in the table.</p></div><div id="comment-54906-info" class="comment-info"><span class="comment-age">(17 Aug '16, 03:49)</span> sindy</div></div><span id="54950"></span><div id="comment-54950" class="comment not_top_scorer"><div id="post-54950-score" class="comment-score"></div><div class="comment-text"><p>Unfortunately the solution with using :set was unsuccessful. In my case it does not work for dissector table "sctp.ppi". I decided to create all dissectors for any value of sctp.ppi and create long "if" statement to choose what dissector to use according to the value of the field.</p><p>Thank for your help!</p></div><div id="comment-54950-info" class="comment-info"><span class="comment-age">(18 Aug '16, 07:44)</span> domeno</div></div></div><div id="comment-tools-54772" class="comment-tools"><span class="comments-showing"> showing 5 of 7 </span> <a href="#" class="show-all-comments-link">show 2 more comments</a></div><div class="clear"></div><div id="comment-54772-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

@@ -1,0 +1,60 @@
++++
+type = "question"
+title = "What is wrong with SYN+ACK causing SYN retransmission but looks fine in WireShark?"
+description = '''  While working with an embedded TCPIP stack, I modified the stack not to switch to the new IP address immediately when the DHCP lease is obtained so the system can coordinate with another system that the IP address is changing and reconnect.   When the system comes up in static IP mode, I can conne...'''
+date = "2013-01-07T09:16:00Z"
+lastmod = "2013-01-07T10:30:00Z"
+weight = 17502
+keywords = [ "syn", "syn+ack", "retransmission", "wireshark" ]
+aliases = [ "/questions/17502" ]
+osqa_answers = 0
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [What is wrong with SYN+ACK causing SYN retransmission but looks fine in WireShark?](/questions/17502/what-is-wrong-with-synack-causing-syn-retransmission-but-looks-fine-in-wireshark)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-17502-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><ul><li><p>While working with an embedded TCPIP stack, I modified the stack not to switch to the new IP address immediately when the DHCP lease is obtained so the system can coordinate with another system that the IP address is changing and reconnect.</p></li><li><p>When the system comes up in static IP mode, I can connect to it from my Linux 3.2 (Ubuntu) system fine. The WireShark capture is attached. link:<a href="http://www.cloudshark.org/captures/3b0e11bf2c6c">static-good-syn.pcap</a></p></li><li><p>When the system comes up in DHCP mode, the DHCP exchange works fine but then I cannot connect to the system from my Linux workstation. I send the SYN fine and the system responds with the SYN+ACK but the workstation just keeps resending the SYN. link:<a href="http://www.cloudshark.org/captures/8e185c123eea">dhcp-bad-syn.pcap</a></p></li></ul><p>Is there something wrong with the SYN+ACK frame?</p><p>Thanks</p></div><div id="question-tags" class="tags-container tags">syn syn+ack retransmission wireshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>07 Jan '13, 09:16</strong></p><img src="https://secure.gravatar.com/avatar/6c7ff6b58d8399db804fa403bd6f2c75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="brownslink&#39;s gravatar image" /><p>brownslink<br />
+<span class="score" title="6 reputation points">6</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="5 badges"><span class="bronze">●</span><span class="badgecount">5</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="brownslink has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 07 Jan '13, 10:19</p></div></div><div id="comments-container-17502" class="comments-container"><span id="17503"></span><div id="comment-17503" class="comment"><div id="post-17503-score" class="comment-score"></div><div class="comment-text"><p>Please upload your capture files to <a href="http://www.cloudshark.org">www.cloudshark.org</a> and paste the links here in a comment to your question.</p><p>(beware of uploading capture files that might contain sensitive data)</p></div><div id="comment-17503-info" class="comment-info"><span class="comment-age">(07 Jan '13, 09:20)</span> SYN-bit ♦♦</div></div></div><div id="comment-tools-17502" class="comment-tools"></div><div class="clear"></div><div id="comment-17502-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="17510"></span>
+
+<div id="answer-container-17510" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-17510-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>The DST MAC address in the SYN,ACK packet is <strong>ff:ff:ff:ff:ff:ff</strong> (instead of 00:c0:49:63:6c:ea). That's the only thing I can see. What is the OS of 192.168.60.1? Maybe it does not like that (and drops the SYN,ACK packet), although I believe that this would work with the most IP stacks, unless there is some TCP/IP offloading in place on 192.168.60.1 !?!</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>07 Jan '13, 10:30</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div><div class="post-update-info post-update-info-edited"><p>edited 07 Jan '13, 10:44</p></div></div><div id="comments-container-17510" class="comments-container"><span id="17514"></span><div id="comment-17514" class="comment"><div id="post-17514-score" class="comment-score"></div><div class="comment-text"><p>192.168.60.1 is my (K)Ubuntu workstation. I couldn't find anything in the ethtool output or under /proc/sys/net/core that referred to offloading.</p><p>I will fix up the outgoing DST MAC address and see if that fixes it.</p><p>Thanks</p></div><div id="comment-17514-info" class="comment-info"><span class="comment-age">(07 Jan '13, 10:52)</span> brownslink</div></div><span id="17518"></span><div id="comment-17518" class="comment"><div id="post-17518-score" class="comment-score">1</div><div class="comment-text"><blockquote><p>I couldn't find anything in the ethtool output</p></blockquote><p>Did you run ethtool with the option <strong><code>-k</code></strong>?</p><blockquote><p>I will fix up the outgoing DST MAC address and see if that fixes it.</p></blockquote><p>O.K.</p><ul><li>Where did you capture the traffic?</li><li>Do you have any firewall enabled on KUbuntu (iptables, <strong>ebtables</strong>)?</li><li>what is your KUbuntu version (lsb_release -a)</li></ul></div><div id="comment-17518-info" class="comment-info"><span class="comment-age">(07 Jan '13, 11:01)</span> Kurt Knochner ♦</div></div><span id="17528"></span><div id="comment-17528" class="comment"><div id="post-17528-score" class="comment-score"></div><div class="comment-text"><p>Correcting the TCPIP stack to put the DST MAC DID correct the problem.</p><ul><li>I captured the traffic on my Kubuntu system</li><li>There is no firewall enabled</li><li>I am running Ubuntu 12.04.1 LTS</li></ul><p>The output of ethtool -k is as follows</p><ul><li>Offload parameters for eth0:</li><li>rx-checksumming: on</li><li>tx-checksumming: on</li><li>scatter-gather: on</li><li>tcp-segmentation-offload: off</li><li>udp-fragmentation-offload: off</li><li>generic-segmentation-offload: on</li><li>generic-receive-offload: on</li><li>large-receive-offload: off</li><li>rx-vlan-offload: off</li><li>tx-vlan-offload: off</li><li>ntuple-filters: off</li><li>receive-hashing: off</li></ul></div><div id="comment-17528-info" class="comment-info"><span class="comment-age">(07 Jan '13, 13:07)</span> brownslink</div></div><span id="17530"></span><div id="comment-17530" class="comment"><div id="post-17530-score" class="comment-score"></div><div class="comment-text"><p>Kurt -</p><p>I know that you stated that my original SYN-ACK sequence should have worked, but if you decide that this is not the case, I hope that you file a request for WireShark to validate that the SYN-ACK should not be an Ethernet broadcast. The fact that WireShark showed this frame as a valid acknowledgement to the SYN packet threw me.</p><p>Thanks for your help. Roland</p></div><div id="comment-17530-info" class="comment-info"><span class="comment-age">(07 Jan '13, 13:44)</span> brownslink</div></div><span id="17533"></span><div id="comment-17533" class="comment"><div id="post-17533-score" class="comment-score"></div><div class="comment-text"><p>I don't think this is a problem/bug of Wireshark, as the TCP segment was correct and that's what Wireshark reported. The OS declined to accept the packet for a yet unknown reason. You could file a bug report to Ubuntu or Linus Torvalds (good luck with that ;-)), but I don't think they will do anything, as the main error was the sender using the wrong mac address ;-)</p><blockquote><p>Correcting the TCPIP stack to put the DST MAC DID correct the problem.</p></blockquote><p>Good.</p><p><strong>HINT:</strong> If a supplied answer resolves your question can you please "accept" it by clicking the checkmark icon next to it. This highlights good answers for the benefit of subsequent users with the same or similar questions.</p></div><div id="comment-17533-info" class="comment-info"><span class="comment-age">(07 Jan '13, 14:06)</span> Kurt Knochner ♦</div></div><span id="17537"></span><div id="comment-17537" class="comment not_top_scorer"><div id="post-17537-score" class="comment-score"></div><div class="comment-text"><p>OK - But I can understand the Ubuntu stack requiring a SYN-ACK addressed directly to it. That is probably the way I would code it to attempt to harden against any false positives.</p><p>It seems like WireShark might want to upgrade its overall frame analysis to match the sophistication of that of the Linux kernel.</p><p>Cheers and thanks again.</p></div><div id="comment-17537-info" class="comment-info"><span class="comment-age">(07 Jan '13, 14:24)</span> brownslink</div></div></div><div id="comment-tools-17510" class="comment-tools"><span class="comments-showing"> showing 5 of 6 </span> <a href="#" class="show-all-comments-link">show 1 more comments</a></div><div class="clear"></div><div id="comment-17510-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

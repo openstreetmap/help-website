@@ -1,0 +1,60 @@
++++
+type = "question"
+title = "Unable to capture en0 on Mac"
+description = '''Hi all, I&#x27;ve tried changing permissions but I don&#x27;t think that&#x27;s the problem I have. I&#x27;m quite new to WireShark and am very much stumped by this. When I install WireShark and load it up, I see the following capture options: awdl0, thunderbolt bridge: bridge0, utun0, p2p0 and lookback io0. Basically,...'''
+date = "2016-01-03T04:36:00Z"
+lastmod = "2016-01-06T09:18:00Z"
+weight = 48806
+keywords = [ "mac", "macosx" ]
+aliases = [ "/questions/48806" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Unable to capture en0 on Mac](/questions/48806/unable-to-capture-en0-on-mac)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-48806-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi all,</p><p>I've tried changing permissions but I don't think that's the problem I have. I'm quite new to WireShark and am very much stumped by this. When I install WireShark and load it up, I see the following capture options: awdl0, thunderbolt bridge: bridge0, utun0, p2p0 and lookback io0. Basically, no en0. Yet when I go to capture&gt;options&gt;manage interfaces, I can see en0 and others, yet it won't let me tick the box which says show.</p><p>Any advance would be appreciated.</p><p>So pictures are here;</p><ol><li>The wireshark opening screen:<img src="http://imageshack.com/a/img910/1319/NUKhXa.png" alt="alt text" /></li><li>Capture&gt;options: <img src="http://imageshack.com/a/img907/3317/V3YBAy.png" alt="alt text" /></li><li>Capture&gt;options&gt;manage interfaces: <img src="http://imageshack.com/a/img911/3861/c8dMMq.png" alt="alt text" /></li></ol><p>I am unable to tick the box in for en0 in 3)</p></div><div id="question-tags" class="tags-container tags">mac macosx</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>03 Jan '16, 04:36</strong></p><img src="https://secure.gravatar.com/avatar/af7537b7f555ecd845937889784b7d1a?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Blake&#39;s gravatar image" /><p>Blake<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="3 badges"><span class="bronze">●</span><span class="badgecount">3</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Blake has no accepted answers">0%</span></p></img></div><div class="post-update-info post-update-info-edited"><p>edited 06 Jan '16, 08:17</p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span></p></img></div></div><div id="comments-container-48806" class="comments-container"><span id="48816"></span><div id="comment-48816" class="comment"><div id="post-48816-score" class="comment-score"></div><div class="comment-text"><blockquote><p>When I install WireShark and load it up, I see the following capture options: awdl0, thunderbolt bridge: bridge0, utun0, p2p0 and lookback io0. Basically, no en0.</p></blockquote><p>Is that on the main screen, or on the Capture-&gt;Options list, or both?</p></div><div id="comment-48816-info" class="comment-info"><span class="comment-age">(03 Jan '16, 15:23)</span> Guy Harris ♦♦</div></div><span id="48844"></span><div id="comment-48844" class="comment"><div id="post-48844-score" class="comment-score"></div><div class="comment-text"><p>Both, but if I go into capture&gt;options&gt;manage interfaces, I can see en0.</p></div><div id="comment-48844-info" class="comment-info"><span class="comment-age">(04 Jan '16, 09:26)</span> Blake</div></div><span id="48855"></span><div id="comment-48855" class="comment"><div id="post-48855-score" class="comment-score"></div><div class="comment-text"><p>Do either of the two lists of interfaces allow you to scroll them? If so, and you scroll them to find the end of the list, is en0 at the end of the list?</p></div><div id="comment-48855-info" class="comment-info"><span class="comment-age">(04 Jan '16, 17:27)</span> Guy Harris ♦♦</div></div><span id="48882"></span><div id="comment-48882" class="comment"><div id="post-48882-score" class="comment-score"></div><div class="comment-text"><blockquote><p>Yet when I go to capture&gt;options&gt;manage interfaces, I can see en0 and others, yet it won't let me tick the box which says show.</p></blockquote><p>Could you paste a screenshot of that?</p></div><div id="comment-48882-info" class="comment-info"><span class="comment-age">(05 Jan '16, 13:27)</span> Christian_R</div></div><span id="48913"></span><div id="comment-48913" class="comment"><div id="post-48913-score" class="comment-score"></div><div class="comment-text"><p>Sure. Uploaded pictures in my original post. Many thanks for any help here.</p></div><div id="comment-48913-info" class="comment-info"><span class="comment-age">(06 Jan '16, 08:05)</span> Blake</div></div><span id="48914"></span><div id="comment-48914" class="comment not_top_scorer"><div id="post-48914-score" class="comment-score"></div><div class="comment-text"><p>To Guy Harris: Scrolling doesn't help as my list of interfaces isn't that large. I've uploaded some pictures to make it clearer.</p></div><div id="comment-48914-info" class="comment-info"><span class="comment-age">(06 Jan '16, 08:06)</span> Blake</div></div><span id="48921"></span><div id="comment-48921" class="comment not_top_scorer"><div id="post-48921-score" class="comment-score"></div><div class="comment-text"><p>What do the commands <code>ifconfig -a</code> and <code>tcpdump -D</code> print?</p></div><div id="comment-48921-info" class="comment-info"><span class="comment-age">(06 Jan '16, 10:00)</span> Guy Harris ♦♦</div></div><span id="48943"></span><div id="comment-48943" class="comment not_top_scorer"><div id="post-48943-score" class="comment-score"></div><div class="comment-text"><p>Are you able to capture in command line? Is "en0" listed in the command "/Applications/Wireshark\ 2.0.1rc0.app/Contents/MacOS/tshark -D"? Can you show us the result of: ls -als /dev/bpf0 ls -als /dev/bpf1 ls -als /dev/bpf2 ls -als /dev/bpf3</p></div><div id="comment-48943-info" class="comment-info"><span class="comment-age">(07 Jan '16, 06:14)</span> TomLaBaude</div></div></div><div id="comment-tools-48806" class="comment-tools"><span class="comments-showing"> showing 5 of 8 </span> <a href="#" class="show-all-comments-link">show 3 more comments</a></div><div class="clear"></div><div id="comment-48806-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="48916"></span>
+
+<div id="answer-container-48916" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-48916-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><p>It is the same like my system. You have to do the following steps:</p><ol><li>Click into the checkbox for the <code>en0</code> Interface shown in <code>screenshot 3</code>.</li><li>Click the <code>OK</code> button in <code>screenshot 3</code></li><li>After that you should be able to use the interface <code>en0</code>.</li></ol><p>Remark: As I can see in your screenshots the interface <code>en0</code> is set to "<code>not show</code>". The <code>checkmark</code> is <code>nearly white</code> coloured as you can see at the interface lo0.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>06 Jan '16, 09:18</strong></p><img src="https://secure.gravatar.com/avatar/3b24b339fc62fb46dced6a443d3202ea?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Christian_R&#39;s gravatar image" /><p>Christian_R<br />
+<span class="score" title="1830 reputation points"><span>1.8k</span></span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="6 badges"><span class="silver">●</span><span class="badgecount">6</span></span><span title="25 badges"><span class="bronze">●</span><span class="badgecount">25</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Christian_R has 25 accepted answers">16%</span></p></img></div></div><div id="comments-container-48916" class="comments-container"><span id="48917"></span><div id="comment-48917" class="comment"><div id="post-48917-score" class="comment-score"></div><div class="comment-text"><p>Also in the remarks:</p><blockquote>I am unable to tick the box in for en0 in 3)</blockquote></div><div id="comment-48917-info" class="comment-info"><span class="comment-age">(06 Jan '16, 09:24)</span> grahamb ♦</div></div><span id="48920"></span><div id="comment-48920" class="comment"><div id="post-48920-score" class="comment-score"></div><div class="comment-text"><p>@Grahamb: I had the same feeling while I have tested it.</p></div><div id="comment-48920-info" class="comment-info"><span class="comment-age">(06 Jan '16, 09:44)</span> Christian_R</div></div></div><div id="comment-tools-48916" class="comment-tools"></div><div class="clear"></div><div id="comment-48916-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

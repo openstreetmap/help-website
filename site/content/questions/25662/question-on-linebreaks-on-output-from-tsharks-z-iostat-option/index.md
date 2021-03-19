@@ -1,0 +1,70 @@
++++
+type = "question"
+title = "Question on linebreaks on output from tshark&#x27;s -z io,stat option"
+description = '''Hello, I&#x27;ve done up a script that reads a capture file with tshark&#x27;s -z io,stat argument, where the goal is to be able to generate statistics on several different display filter search criteria with a single pass on the capture file itself (automatically-generated capture files of predictable name a...'''
+date = "2013-10-04T20:53:00Z"
+lastmod = "2013-10-07T12:21:00Z"
+weight = 25662
+keywords = [ "stats", "tshark" ]
+aliases = [ "/questions/25662" ]
+osqa_answers = 2
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [Question on linebreaks on output from tshark's -z io,stat option](/questions/25662/question-on-linebreaks-on-output-from-tsharks-z-iostat-option)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-25662-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hello,</p><p>I've done up a script that reads a capture file with tshark's -z io,stat argument, where the goal is to be able to generate statistics on several different display filter search criteria with a single pass on the capture file itself (automatically-generated capture files of predictable name and timestamp, where the script users tshark to get the stats off of that time period and pushes it to a line in a .csv file). This was a slightly tedious effort due to every added display filter increasing the line count in the output of the tshark query, which also changes which line of output the statistics themselves are generated in.</p><p>Anyway my question is this:</p><p>Right now it looks like all outputs of this command will put the statistiics onto a single, very long line even when dozens of display filters are used in the query. Is it a safe assumption with current Wireshark/Tshark versions (in this example, 1.8.6) that the io,stats printout will put all stats on a single very-long line, or will it break the line at some upper limit and use a second line? If it does, what is that upper limit? The reason is I'm making that one-line assumption at the moment and don't want my scripts to break if they're calling a hundred different display filters.</p><p>Related question - any way we could lose the text art in that output and just pump out a nice clean delimited line of stats in the order requested?</p></div><div id="question-tags" class="tags-container tags">stats tshark</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>04 Oct '13, 20:53</strong></p><img src="https://secure.gravatar.com/avatar/f533c5f20f9c9afbf4b03de08a100e11?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Quadratic&#39;s gravatar image" /><p>Quadratic<br />
+<span class="score" title="1885 reputation points"><span>1.9k</span></span><span title="6 badges"><span class="badge1">●</span><span class="badgecount">6</span></span><span title="9 badges"><span class="silver">●</span><span class="badgecount">9</span></span><span title="28 badges"><span class="bronze">●</span><span class="badgecount">28</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Quadratic has 23 accepted answers">13%</span></p></div></div><div id="comments-container-25662" class="comments-container"></div><div id="comment-tools-25662" class="comment-tools"></div><div class="clear"></div><div id="comment-25662-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="25726"></span>
+
+<div id="answer-container-25726" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-25726-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>Yes I tried to break it last night but it does seem to be always one line. I'm 'relatively' confident that I'm safe there</p></blockquote><p>You can be safe. I've just checked the source code. There is no limit (besides available RAM), so you can rely on a single line.</p><p>See <code>iostat_draw()</code> in <a href="http://anonsvn.wireshark.org/viewvc/trunk-1.10/ui/cli/tap-iostat.c?revision=50712&amp;view=co">tap-iostat.c</a>. The required space for the column data is requested via g_malloc() and the column data itself is printed in small pieces with printf, column by column, so there is not even a large string that needs to be handled internally.</p><p>There is also no limit from the OS, at least I cannot imagine one, because if there was a limit you would not be able to pipe large amounts of data via STDOUT/STDIN into another program, which is obviously not the case on any of the current OSes.</p><p>Regarding the fancy ASCII art. You can simply convert that to CSV with this one liner on Linux and similar OSes.</p><pre><code>   tshark -nr input.pcap  -z io,stat,1 -q | grep &#39;&lt;&gt;&#39; | sed &#39;s/ &lt;&gt; */;/&#39; | sed &#39;s/^| *//&#39; | sed &#39;s/ *| */;/g&#39;</code></pre><p>It might not be the best and fastest, nor the most elegant regexp, but it works ;-)</p><p>Regards<br />
+Kurt</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>07 Oct '13, 12:21</strong></p><img src="https://secure.gravatar.com/avatar/23b7bf5b13bc2c98b2e8aa9869ca5d75?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Kurt%20Knochner&#39;s gravatar image" /><p>Kurt Knochner ♦<br />
+<span class="score" title="24767 reputation points"><span>24.8k</span></span><span title="10 badges"><span class="badge1">●</span><span class="badgecount">10</span></span><span title="39 badges"><span class="silver">●</span><span class="badgecount">39</span></span><span title="237 badges"><span class="bronze">●</span><span class="badgecount">237</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Kurt Knochner has 344 accepted answers">15%</span> </br></p></div><div class="post-update-info post-update-info-edited"><p>edited 07 Oct '13, 12:24</p></div></div><div id="comments-container-25726" class="comments-container"><span id="25731"></span><div id="comment-25731" class="comment"><div id="post-25731-score" class="comment-score"></div><div class="comment-text"><p>Thanks, yes I'm not familiar enough with WS's source code to know where to look there.</p><p>Oh, and for the line catch, as it's just one line the more efficient way is probably to grab the line number as it's directly related to the number of display filters being called. Then just a single 's/|/,/g' to delimit on commas and a '/[^0-9,]//g' to turn it into the raw stats without all the ASCII junk. The only worry I had was an extra line break breaking that '# of filters -&gt; line to grab' relation.</p></div><div id="comment-25731-info" class="comment-info"><span class="comment-age">(07 Oct '13, 14:33)</span> Quadratic</div></div><span id="25733"></span><div id="comment-25733" class="comment"><div id="post-25733-score" class="comment-score"></div><div class="comment-text"><p>How about this?</p><pre><code>tsahrk ... |grep &#39;&lt;&gt;&#39; | sed &#39;s/[|&lt;&gt;]//g&#39;</code></pre><p>does not create a CSV, but the output is easy to parse, like perl split() on whitespace.</p></div><div id="comment-25733-info" class="comment-info"><span class="comment-age">(07 Oct '13, 14:45)</span> Kurt Knochner ♦</div></div><span id="25735"></span><div id="comment-25735" class="comment"><div id="post-25735-score" class="comment-score"></div><div class="comment-text"><p>Would work, though a grep function will never be as efficient as just telling the script what line to read from. My method finds the line as a simple linear function of the number of display filters that the user wants to build stats for.</p></div><div id="comment-25735-info" class="comment-info"><span class="comment-age">(07 Oct '13, 15:22)</span> Quadratic</div></div><span id="25736"></span><div id="comment-25736" class="comment"><div id="post-25736-score" class="comment-score"></div><div class="comment-text"><blockquote><p>as just telling the script what line to read from</p></blockquote><p>Ah, you're reading the tshark output directly. Well, that's the way I would have done it as well. I thought you were looking for ASCII art free output. Never mind ;-)</p></div><div id="comment-25736-info" class="comment-info"><span class="comment-age">(07 Oct '13, 15:28)</span> Kurt Knochner ♦</div></div><span id="25972"></span><div id="comment-25972" class="comment"><div id="post-25972-score" class="comment-score"></div><div class="comment-text"><p>Yeah, I get the ASCII-free output by doing a perl split function on the | delimiter once I point to the right line. It becomes a CSV later once I sort the stats I actually care about from the line.</p></div><div id="comment-25972-info" class="comment-info"><span class="comment-age">(14 Oct '13, 10:01)</span> Quadratic</div></div></div><div id="comment-tools-25726" class="comment-tools"></div><div class="clear"></div><div id="comment-25726-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="25667"></span>
+
+<div id="answer-container-25667" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-25667-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>I just tested this on OSX, I was able to create lines with a length of &gt;50000 characters with the "io,stat" option. I assume (without looking at the source code) that there is no limit in tshark itself, but that there might be a limit imposed by the OS.</p><p>Regarding the "pretty printing", AFAIK this is hardcoded. You could file an enhancement request to add an option to csv'ify the output.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>05 Oct '13, 01:11</strong></p><img src="https://secure.gravatar.com/avatar/7901a94d8fdd1f9f47cda9a32fcfa177?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="SYN-bit&#39;s gravatar image" /><p>SYN-bit ♦♦<br />
+<span class="score" title="17094 reputation points"><span>17.1k</span></span><span title="9 badges"><span class="badge1">●</span><span class="badgecount">9</span></span><span title="57 badges"><span class="silver">●</span><span class="badgecount">57</span></span><span title="245 badges"><span class="bronze">●</span><span class="badgecount">245</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="SYN-bit has 174 accepted answers">20%</span></p></div></div><div id="comments-container-25667" class="comments-container"><span id="25672"></span><div id="comment-25672" class="comment"><div id="post-25672-score" class="comment-score"></div><div class="comment-text"><p>Thanks. Yes I tried to break it last night but it does seem to be always one line. I'm 'relatively' confident that I'm safe there.</p><p>I've also submitted an enhancement request for the output. It's not really a big deal to account for the variable line count and stats position based on user display filters present, but my feeling here is that the output for a human user is kind of silly as well since you're presented with a long line of ASCII art that breaks several times across the screen, meanwhile it's not intuitive to grab the stats in a script either so it kind of misses both audiences a bit.</p></div><div id="comment-25672-info" class="comment-info"><span class="comment-age">(05 Oct '13, 18:35)</span> Quadratic</div></div></div><div id="comment-tools-25667" class="comment-tools"></div><div class="clear"></div><div id="comment-25667-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

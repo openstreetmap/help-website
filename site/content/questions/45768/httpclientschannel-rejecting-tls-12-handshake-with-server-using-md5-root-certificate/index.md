@@ -1,0 +1,38 @@
++++
+type = "question"
+title = "[closed] HttpClient/Schannel rejecting TLS 1.2 handshake with server using MD5 root certificate"
+description = '''We enabled SchUseStrongCrypto in the registry on a Windows Server 2008 R2 server. After the change, we noted that HTTP requests to another, third-party server made using .NET HttpClient no longer worked. The registry change altered the protocol used from TLS 1.0 to TLS 1.2. Schannel logged the follo...'''
+date = "2015-09-10T13:22:00Z"
+lastmod = "2015-09-10T13:22:00Z"
+weight = 45768
+keywords = [ "schannel", "ssl", ".net", "windows2008", "md5" ]
+aliases = [ "/questions/45768" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [\[closed\] HttpClient/Schannel rejecting TLS 1.2 handshake with server using MD5 root certificate](/questions/45768/httpclientschannel-rejecting-tls-12-handshake-with-server-using-md5-root-certificate)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-45768-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>We <a href="http://stackoverflow.com/a/28502562/1062614">enabled SchUseStrongCrypto</a> in the registry on a Windows Server 2008 R2 server. After the change, we noted that HTTP requests to another, third-party server made using .NET HttpClient no longer worked. The registry change altered the protocol used from TLS 1.0 to TLS 1.2. Schannel logged the following error to the system event log: "The following fatal alert was generated: 40. The internal error state is 252."</p><p>Some research with Wireshark revealed a situation very similar to the one outlined in <a href="http://blogs.msdn.com/b/friis/archive/2012/08/29/tls-1-2-handshake-failure.aspx">this blog post</a>: our server was sending a TCP RST after receiving the remote server certificate, presumably because the root certificate sent by the remote server uses MD5 as its hash algorithm and no signature algorithms using MD5 were listed in our ClientHello. By <a href="https://technet.microsoft.com/en-us/library/Dn786418.aspx#BKMK_SchannelTR_TLS12">disabling TLS 1.2</a> in the registry (the <a href="https://tools.ietf.org/html/rfc5246#section-7.4.1.4.1">signature_algorithms extension</a> is specific to TLS 1.2), we were able to force the connection to be made over TLS 1.1 and eveything worked happily.</p><p>However, there are several aspects of the situation I don't understand. When running the same application on a Windows Server 2016 Technical Preview 2 server with SchUseStrongCrypto also enabled, the connection was made using TLS 1.2 just fine, despite the same signature algorithms being sent in the ClientHello, albeit in a different order. Both servers have .NET 4.6 installed and the application targets 4.6.</p><p>Why did the connection work on one server and not the other, despite both saying they wouldn't accept MD5 certs? Additionally, Wireshark revealed that on the 2008 R2 server Internet Explorer 11 (which is not governed by the .NET SchUseStrongCrypto flag but which uses Schannel) is also failing to make the initial TLS 1.2 connection, but rather than sending a RST it sends a FIN and then tries and successfully makes a TLS 1.0 connection (on the 2016 server IE11 uses TLS 1.2 successfully)--what governs whether/how HttpClient performs the same fallback? Finally, how are signature algorithms specified and ordered (i.e. like you can select and order cipher suites in gpedit.msc), and what should the client's behavior be when it receives a certificate that doesn't match any of the signature algorithms it said it was willing to use?</p><p>An SSL Labs report on the remote server revealed that everything except IE 6 (as expected) successfully negotiated with it, with Windows 8.1+ and OS X platforms using TLS 1.2. Another thing I noticed from the report is that the remote server's certificate chain actually includes two self-signed certs, the more proximal of which uses SHA1 rather than MD5, so there are two "paths". The first path is reported as "trusted" because the first self-signed cert is "in trust store"; the second is "not trusted" because the problematic MD5 cert, which is the ultimate root of the chain, is "not in trust store". This implies to me that other HTTP clients, like the browsers that SSL Labs tests, use the first path and ignore the MD5 cert.</p><p>Ultimately, this seems to be due to some fundamental difference between the two versions of Windows (maybe in Schannel), but is that difference documented or configurable anywhere?</p></div><div id="question-tags" class="tags-container tags">schannel ssl .net windows2008 md5</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>10 Sep '15, 13:22</strong></p><img src="https://secure.gravatar.com/avatar/f42d1416ea421ade94ed7ef2a23e9a09?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="ejohnson&#39;s gravatar image" /><p>ejohnson<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="ejohnson has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>closed 11 Sep '15, 02:42</p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span></p></div></div><div id="comments-container-45768" class="comments-container"><span id="45783"></span><div id="comment-45783" class="comment"><div id="post-45783-score" class="comment-score"></div><div class="comment-text"><p>Wouldn't this question be better handled on a windows forum?</p></div><div id="comment-45783-info" class="comment-info"><span class="comment-age">(11 Sep '15, 02:42)</span> grahamb ♦</div></div><span id="45789"></span><div id="comment-45789" class="comment"><div id="post-45789-score" class="comment-score"></div><div class="comment-text"><p>Okay. Just looking for help from knowledgeable people.</p></div><div id="comment-45789-info" class="comment-info"><span class="comment-age">(11 Sep '15, 07:42)</span> ejohnson</div></div></div><div id="comment-tools-45768" class="comment-tools"></div><div class="clear"></div><div id="comment-45768-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+<div class="question-status" style="margin-bottom:15px">
+
+### The question has been closed for the following reason "Question is off-topic or not relevant" by grahamb 11 Sep '15, 02:42
+
+</div>
+
+</div>
+
+</div>
+

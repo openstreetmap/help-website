@@ -1,0 +1,64 @@
++++
+type = "question"
+title = "Diameter AVP is shown as UNKNOWN in Wireshark Trace"
+description = '''Hi, I am trying to decode the Diameter AVP code 1016 ( QoS-INformation ) , The trace shows as UNKNOWN AVP.. AVP Code: 1016 Unknown AVP, if you know what this is you can add it to the dictionary.xml I checked in the dictionary file. The entry is very much present in the dictionary.xml  &amp;lt;avp name=&quot;...'''
+date = "2016-08-30T03:31:00Z"
+lastmod = "2016-08-30T05:45:00Z"
+weight = 55196
+keywords = [ "diameter", "avp", "unknown" ]
+aliases = [ "/questions/55196" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [Diameter AVP is shown as UNKNOWN in Wireshark Trace](/questions/55196/diameter-avp-is-shown-as-unknown-in-wireshark-trace)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-55196-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi, I am trying to decode the Diameter AVP code 1016 ( QoS-INformation ) , The trace shows as UNKNOWN AVP..</p><p>AVP Code: 1016 Unknown AVP, if you know what this is you can add it to the dictionary.xml</p><p>I checked in the dictionary file. The entry is very much present in the dictionary.xml</p><pre><code> &lt;avp name=&quot;QoS-Information&quot; code=&quot;1016&quot; mandatory=&quot;must&quot; may-encrypt=&quot;yes&quot; vendor-bit=&quot;must&quot; vendor-id=&quot;TGPP&quot;&gt;</code></pre><p>Please help me how do I decode the AVP in Wireshark??</p></div><div id="question-tags" class="tags-container tags">diameter avp unknown</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>30 Aug '16, 03:31</strong></p><img src="https://secure.gravatar.com/avatar/5c5ec9c4996a7fa7ec950145e0c44e07?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="sgajjala&#39;s gravatar image" /><p>sgajjala<br />
+<span class="score" title="6 reputation points">6</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="sgajjala has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 30 Aug '16, 10:53</p><img src="https://secure.gravatar.com/avatar/e0564001bb7deb960d5d9d9c1e0ba074?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="JeffMorriss&#39;s gravatar image" /><p>JeffMorriss ♦<br />
+<span class="score" title="6219 reputation points"><span>6.2k</span></span><span title="5 badges"><span class="silver">●</span><span class="badgecount">5</span></span><span title="72 badges"><span class="bronze">●</span><span class="badgecount">72</span></span></p></div></div><div id="comments-container-55196" class="comments-container"></div><div id="comment-tools-55196" class="comment-tools"></div><div class="clear"></div><div id="comment-55196-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="55202"></span>
+
+<div id="answer-container-55202" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-55202-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>I think the application sending the avp is buggy and should be changed to set the vendor bit and include the vendor ID. Changing wireshark is the wrong way to go.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>30 Aug '16, 05:45</strong></p><img src="https://secure.gravatar.com/avatar/2d3d425a7a829209431fb38d326b53af?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Anders&#39;s gravatar image" /><p>Anders ♦<br />
+<span class="score" title="4578 reputation points"><span>4.6k</span></span><span title="9 badges"><span class="silver">●</span><span class="badgecount">9</span></span><span title="52 badges"><span class="bronze">●</span><span class="badgecount">52</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Anders has 56 accepted answers">17%</span></p></div></div><div id="comments-container-55202" class="comments-container"><span id="55200"></span><div id="comment-55200" class="comment"><div id="post-55200-score" class="comment-score"></div><div class="comment-text"><p>I just removed the flags vendor-bit="must" and vendor-id="TGPP" from the above definition. Now wireshark shows the correct decode.. Is it the right way to do it??</p></div><div id="comment-55200-info" class="comment-info"><span class="comment-age">(30 Aug '16, 04:59)</span> sgajjala</div></div><span id="55203"></span><div id="comment-55203" class="comment"><div id="post-55203-score" class="comment-score"></div><div class="comment-text"><p>Agreed - QoS-Information is not an IANA-specified AVP it's a 3GPP defined. Wireshark is highlighting that the sender is in error.</p></div><div id="comment-55203-info" class="comment-info"><span class="comment-age">(30 Aug '16, 06:43)</span> JeffMorriss ♦</div></div><span id="55214"></span><div id="comment-55214" class="comment"><div id="post-55214-score" class="comment-score"></div><div class="comment-text"><p>No. Se above.</p></div><div id="comment-55214-info" class="comment-info"><span class="comment-age">(30 Aug '16, 10:48)</span> Anders ♦</div></div><span id="55221"></span><div id="comment-55221" class="comment"><div id="post-55221-score" class="comment-score"></div><div class="comment-text"><p>Thanks Anders and jeffMorriss for the info. I am sending the DIAMETER CCR Request with the below xml file..</p><p>&lt;command name="CCR"&gt; &lt;avp name="Session-Id" value="value_is_replaced"&gt; &lt;/avp&gt; &lt;avp name="Vendor-Specific-Application-Id"&gt; &lt;avp name="Vendor-Id" value="10415"&gt;&lt;/avp&gt; &lt;avp name="Auth-Application-Id" value="16777266"&gt;&lt;/avp&gt; &lt;/avp&gt; &lt;avp name="Auth-Session-State" value="1"&gt; &lt;/avp&gt; &lt;avp name="Origin-Host" value="seagull"&gt; &lt;/avp&gt; &lt;avp name="Origin-Realm" value="ims.hpintelco.org"&gt; &lt;/avp&gt; &lt;avp name="Destination-Realm" value="ims.hpintelco.org"&gt; &lt;/avp&gt; &lt;avp name="Framed-IP-Address" value="0x0A0A0A0A"&gt; &lt;/avp&gt; &lt;avp name="User-Equipment-Info"&gt; &lt;avp name="User-Equipment-Info-Type" value="1"&gt; &lt;/avp&gt; &lt;avp name="User-Equipment-Info-Value" value="0x050102030A0B"&gt; &lt;/avp&gt; &lt;/avp&gt; &lt;avp name="Qos-Information"&gt; &lt;avp name="Qos-Class-Identifier" value="1"&gt; &lt;/avp&gt; &lt;avp name="Max-Requested-Bandwidth-UL" value="123"&gt; &lt;/avp&gt; &lt;avp name="Max-Requested-Bandwidth-DL" value="456"&gt; &lt;/avp&gt; &lt;avp name="Guaranteed-Bitrate-UL" value="789"&gt; &lt;/avp&gt; &lt;avp name="Guaranteed-Bitrate-DL" value="012"&gt; &lt;/avp&gt; &lt;avp name="Bearer-Identifier" value="Sudhakar"&gt; &lt;/avp&gt; &lt;avp name="Allocation-Retention-Priority"&gt; &lt;avp name="Priority-Level" value="1"&gt; &lt;/avp&gt; &lt;avp name="Pre-emption-Capability" value="0"&gt; &lt;/avp&gt; &lt;avp name="Pre-emption-Vulnerability" value="1"&gt; &lt;/avp&gt; &lt;/avp&gt; &lt;avp name="APN-Aggregate-Max-Bitrate-UL" value="123"&gt; &lt;/avp&gt; &lt;avp name="APN-Aggregate-Max-Bitrate-DL" value="456"&gt; &lt;/avp&gt; &lt;/avp&gt;</p><p>I am setting the Vendor Id to 10415 which is TGPP as per dictionary.xml in wireshark</p><p>&lt;vendor vendor-id="TGPP" code="10415" name="3GPP"/&gt;</p><p>It matches the Vendor Id with the dictionary. The trace is shown as UNKNOWN</p><p>Please check the screenshot attached.. <img src="https://osqa-ask.wireshark.org/upfiles/UNKNOWN_1016.png" alt="alt text" /></p><p>Let me know how do I get the Vendor Id corrected in my CCR Request so that wireshark decodes it properly?? Thanks, Gajjala</p></div><div id="comment-55221-info" class="comment-info"><span class="comment-age">(30 Aug '16, 21:57)</span> sgajjala</div></div><span id="55229"></span><div id="comment-55229" class="comment"><div id="post-55229-score" class="comment-score"></div><div class="comment-text"><p>You have to use the Vendor ID as part of the header of your QoS-Information AVP. I.e. in the AVP's flags, bit "vendor-specific" must be set and, corresponding to that, a four-octet Vendor ID (0x000028af which equals to 10415) must be inserted at the right place, i.e. after the three octets of AVP length. How to express that in your xml source is, however, not a Wireshark question. Maybe <code>&lt;avp name="Qos-Information" vendor-id="10415"&gt;</code> will do the trick, and maybe it won't.</p></div><div id="comment-55229-info" class="comment-info"><span class="comment-age">(31 Aug '16, 03:24)</span> sindy</div></div><span id="55266"></span><div id="comment-55266" class="comment not_top_scorer"><div id="post-55266-score" class="comment-score"></div><div class="comment-text"><p>I need to figure out how to send the Vendor-Id in the AVP QoS-Information. If you see my above xml file, the vendor-Id field is also mentioned as a separate AVP but not under QoS-Information AVP.</p><p>Anyone worked on Seagull tool scenario file will be able to help me out.. Any leads ??</p></div><div id="comment-55266-info" class="comment-info"><span class="comment-age">(01 Sep '16, 04:42)</span> sgajjala</div></div><span id="55267"></span><div id="comment-55267" class="comment not_top_scorer"><div id="post-55267-score" class="comment-score"></div><div class="comment-text"><p>Tested the scenario by adding Vendor-Id filed under QoS-Infomation AVP but no luck.</p></div><div id="comment-55267-info" class="comment-info"><span class="comment-age">(01 Sep '16, 04:44)</span> sgajjala</div></div><span id="55268"></span><div id="comment-55268" class="comment not_top_scorer"><div id="post-55268-score" class="comment-score"></div><div class="comment-text"><p>As said, this is far beyond the scope of this site. However, it seems to me that you'll just have to extend the dictionary part of Seagull's configuration by defining (or maybe extending an existing definition of) your <code>Qos-Information</code> AVP before using it in your <code>&lt;command&gt;</code>.</p><p>As the header field <code>Vendor-ID</code> is already defined (as an optional one) in the default <code>&lt;body&gt;</code> definition, you only have to extend the list of avps in the <code>&lt;dictionary&gt;</code> section with the following one (or, if it exists, modify it accordingly):</p><pre><code>&lt;define name=&quot;Qos-Information&quot; type=&quot;Grouped&quot;&gt;
+  &lt;setfield name=&quot;avp-code&quot; value=&quot;1016&quot;&gt;&lt;/setfield&gt;
+  &lt;setfield name=&quot;flags&quot; value=&quot;192&quot;&gt;&lt;/setfield&gt;
+  &lt;setfield name=&quot;Vendor-ID&quot; value=&quot;10415&quot;&gt;&lt;/setfield&gt;
+&lt;/define&gt;</code></pre><p>This should be the only change necessary.</p></div><div id="comment-55268-info" class="comment-info"><span class="comment-age">(01 Sep '16, 05:25)</span> sindy</div></div></div><div id="comment-tools-55202" class="comment-tools"><span class="comments-showing"> showing 5 of 8 </span> <a href="#" class="show-all-comments-link">show 3 more comments</a></div><div class="clear"></div><div id="comment-55202-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

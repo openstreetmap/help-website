@@ -1,0 +1,71 @@
++++
+type = "question"
+title = "Newbie learning TCP :)  P 1:102(101) ack 1 ??"
+description = '''Newbie alert! Hello everyone! first post in this forum, hope everyone is doing great! Wanted to see if someone could shed some light got this trace, and I have been staring at them for a long time and I still can not find a conclusion 12:57:25.365277 IP 1.1.1.1.1111 &amp;gt; 2.2.2.2.2222: S 2848279040:2...'''
+date = "2015-12-05T12:59:00Z"
+lastmod = "2015-12-05T13:39:00Z"
+weight = 48298
+keywords = [ "sack" ]
+aliases = [ "/questions/48298" ]
+osqa_answers = 0
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [Newbie learning TCP :) P 1:102(101) ack 1 ??](/questions/48298/newbie-learning-tcp-p-1102101-ack-1)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-48298-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Newbie alert!</p><p>Hello everyone! first post in this forum, hope everyone is doing great!</p><p>Wanted to see if someone could shed some light</p><p>got this trace, and I have been staring at them for a long time and I still can not find a conclusion</p><pre><code>12:57:25.365277 IP 1.1.1.1.1111 &gt; 2.2.2.2.2222: S 2848279040:2848279040(0) win 5840 &lt;mss 1460,sackOK,timestamp 7117332 0,nop,wscale 7&gt;   
+12:57:25.368977 IP 2.2.2.2.2222 &gt; 1.1.1.1.1111: S 1373424911:1373424911(0) ack 2848279041 win 5792 &lt;mss 1460,sackOK,timestamp 517157 7117332,nop,wscale 7&gt;   
+12:57:25.368992 IP 1.1.1.1.1111 &gt; 2.2.2.2.2222: . ack 1 win 46 &lt;nop,nop,timestamp 7117332 517157&gt;   
+12:57:25.373612 IP 1.1.1.1.1111 &gt; 2.2.2.2.2222: P 1:102(101) ack 1 win 46 &lt;nop,nop,timestamp 7117333 517157&gt;   
+12:57:25.377440 IP 2.2.2.2.2222 &gt; 1.1.1.1.1111: . ack 102 win 46 &lt;nop,nop,timestamp 517158 7117333&gt;   
+12:57:25.432908 IP 2.2.2.2.2222 &gt; 1.1.1.1.1111: P 1449:2260(811) ack 102 win 46 &lt;nop,nop,timestamp 517164 7117333&gt;   
+12:57:25.432924 IP 1.1.1.1.1111 &gt; 2.2.2.2.2222: . ack 1 win 46 &lt;nop,nop,timestamp 7117339 517158,nop,nop,sack 1 {1449:2260}&gt;   
+13:00:24.941805 IP 2.2.2.2.2222 &gt; 1.1.1.1.1111: F 2260:2260(0) ack 102 win 46 &lt;nop,nop,timestamp 535114 7117339&gt;</code></pre><p>my reassoning so far is that the normal 3-way handshake happened on the first 3 line entries</p><p>then 1.1.1.1.1111 sends to 2.2.2.2.2222: P 1:102(101bytes)<br />
+next 2.2.2.2.2222 tells 1.1.1.1.1111: OK ACK, he got 101 bytes he expects to see on the next seq 102<br />
+then 2.2.2.2.2222 sends 1.1.1.1.1111: P(ush)acket of 1449:2260(811bytes)</p><p>now the confusing part is line 6 1.1.1.1.1111 &gt; 2.2.2.2.2222: . ack 1 win 46 &lt;nop,nop,timestamp 7117339="" 517158,nop,nop,sack="" 1="" {1449:2260}=""&gt;</p><p>What is sack 1 for here? we got already that at<br />
+12:57:25.373612 IP 1.1.1.1.1111 &gt; 2.2.2.2.2222: P 1:102(101) ack 1</p><p>sorry, I am a mess, still learning TCP as i go, I have read tons of documentation, seen videos, and so on and concepts are still not fitting.</p><p>thank you for your help Ppcap</p></div><div id="question-tags" class="tags-container tags">sack</div><div id="question-controls" class="post-controls"><div class="community-wiki">This question is marked "community wiki".</div></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>05 Dec '15, 12:59</strong></p><img src="https://secure.gravatar.com/avatar/5002cb544de33c526f994599d3ae391f?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="ppcap&#39;s gravatar image" /><p>ppcap<br />
+<span class="score" title="16 reputation points">16</span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="3 badges"><span class="silver">●</span><span class="badgecount">3</span></span><span title="7 badges"><span class="bronze">●</span><span class="badgecount">7</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="ppcap has one accepted answer">50%</span> </br></br></p></div><div class="post-update-info post-update-info-edited"><p>edited 06 Dec '15, 09:33</p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span></br></p></div></div><div id="comments-container-48298" class="comments-container"><span id="48299"></span><div id="comment-48299" class="comment"><div id="post-48299-score" class="comment-score"></div><div class="comment-text"><p>just in case the interface messed with the format <a href="http://pastebin.com/tCDh91TR">http://pastebin.com/tCDh91TR</a></p><p>Thank you again</p></div><div id="comment-48299-info" class="comment-info"><span class="comment-age">(05 Dec '15, 13:07)</span> ppcap</div></div><span id="48300"></span><div id="comment-48300" class="comment"><div id="post-48300-score" class="comment-score"></div><div class="comment-text"><p>So what exactly is your question?</p></div><div id="comment-48300-info" class="comment-info"><span class="comment-age">(05 Dec '15, 13:23)</span> Christian_R</div></div><span id="48301"></span><div id="comment-48301" class="comment"><div id="post-48301-score" class="comment-score"></div><div class="comment-text"><p>Christian, thanks for looking at this. What is confusing from this trace for me is line 6 1.1.1.1.1111 &gt; 2.2.2.2.2222: . ack 1 win 46 &lt;nop,nop,timestamp 7117339="" 517158,nop,nop,sack="" 1="" {1449:2260}=""&gt;</p><p>What does this exactly means? sack 1 means for me that we got that pkt, and now after 0:02:59.508881 2.2.2.2 closes it?</p><p>Anything you could think about?</p></div><div id="comment-48301-info" class="comment-info"><span class="comment-age">(05 Dec '15, 13:28)</span> ppcap</div></div></div><div id="comment-tools-48298" class="comment-tools"></div><div class="clear"></div><div id="comment-48298-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="48302"></span>
+
+<div id="answer-container-48302" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-48302-score" class="post-score" title="current number of votes">0</div></div></td><td><div class="item-right"><div class="answer-body"><blockquote><p>What is sack 1 for here?</p></blockquote><p>The SACK is there because a packet (or more) got lost.</p><p>Line 4 says that 1.1.1.1 has sent bytes 1-102 of payload. It is ACKed by line 5 - this time without SACK because there is no gap in the data.</p><p>Line 6 says that a packet carrying payload bytes 1449 - 2260 has arrived, which implies that the packet(s) carrying payload bytes 1 to 1448 have not arrived yet because it is the very first packet to carry payload since the 3-way handshake took place. Therefore, 1.1.1.1 sends a SACK, informing 2.2.2.2 about the loss and about the fact that it is enough to retransmit the missing part of the data and that there is no need to retransmit also bytes 1449 to 2260 as 1.1.1.1 has already got them.</p><p>See more about SACK purpose <a href="http://packetlife.net/blog/2010/jun/17/tcp-selective-acknowledgments-sack/">in this illustrative blog post</a>.</p><p>As for your additional question,<br />
+</p><blockquote><p>now after 0:02:59.508881 2.2.2.2 closes it?</p></blockquote><p>it depends on the application using the tcp session how it reacts to the fact that the missing data have not been delivered within those 3 minutes. If it wasn't a forged capture (as I suspect) but a real life one, in this situation a nicely written application would terminate the session with a Reset rather than Finish, to indicate to the remote application that there was an error.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>05 Dec '15, 13:39</strong></p><img src="https://secure.gravatar.com/avatar/00fc6e2633725bd871ff636f0175eabc?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="sindy&#39;s gravatar image" /><p>sindy<br />
+<span class="score" title="6049 reputation points"><span>6.0k</span></span><span title="4 badges"><span class="badge1">●</span><span class="badgecount">4</span></span><span title="8 badges"><span class="silver">●</span><span class="badgecount">8</span></span><span title="51 badges"><span class="bronze">●</span><span class="badgecount">51</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="sindy has 110 accepted answers">24%</span> </br></p></div><div class="post-update-info post-update-info-edited"><p>edited 05 Dec '15, 14:40</p></div></div><div id="comments-container-48302" class="comments-container"><span id="48303"></span><div id="comment-48303" class="comment"><div id="post-48303-score" class="comment-score"></div><div class="comment-text"><p>Thank you Sindy, it seems that after the edit, the capture was changed. <a href="http://pastebin.com/tCDh91TR">http://pastebin.com/tCDh91TR</a></p><p>12:57:25.432924 IP 1.1.1.1.1111 &gt; 2.2.2.2.2222: . ack 1 win 46 &lt;nop,nop,timestamp 7117339="" 517158,nop,nop,sack="" 1="" {1449:2260}=""&gt;</p><p>so you mean that probably something went missing between line 5 and 6?</p></div><div id="comment-48303-info" class="comment-info"><span class="comment-age">(05 Dec '15, 14:05)</span> ppcap</div></div><span id="48304"></span><div id="comment-48304" class="comment"><div id="post-48304-score" class="comment-score">1</div><div class="comment-text"><p>I was editing the question only so that the newlines would be shown, so the contents hasn't changed.</p><p>And yes, I really mean what I've written, i.e. that a packet or more have <em>surely</em>, not probably, been lost between "line 4" and "line 6" of your <a href="http://pastebin.com/tCDh91TR">pastebin link</a>. Tcpdump shows clearly which range of bytes of the payload was present in each of the packets.</p></div><div id="comment-48304-info" class="comment-info"><span class="comment-age">(05 Dec '15, 14:15)</span> sindy</div></div><span id="48306"></span><div id="comment-48306" class="comment"><div id="post-48306-score" class="comment-score"></div><div class="comment-text"><p>Thank you for sharing knowledge</p></div><div id="comment-48306-info" class="comment-info"><span class="comment-age">(05 Dec '15, 14:18)</span> ppcap</div></div><span id="48307"></span><div id="comment-48307" class="comment"><div id="post-48307-score" class="comment-score"></div><div class="comment-text"><p>Oops... I now get what you meant by "capture was changed". No, it has not changed, I'm blind and I've thought both lines 4 and 6 were describing payload transmission in the same direction.</p><p>But this mistake does not change the conclusion: between the initial 3-way handshake and the packet on line 6, there is no packet in the same direction as packet on line 6 which would carry any of bytes 1-1448 of that direction's payload.</p><p>So I've edited the answer accordingly.</p></div><div id="comment-48307-info" class="comment-info"><span class="comment-age">(05 Dec '15, 14:22)</span> sindy</div></div><span id="48308"></span><div id="comment-48308" class="comment"><div id="post-48308-score" class="comment-score"></div><div class="comment-text"><p>I guess what may be confusing for you is that the <em>absolute</em> seq number does not start from 1 but from a random value, so you've thought it was normal that the counting of payload bytes would not start from 1 either, but that is a misunderstanding of the seq interpretation.</p><p>The SYN == 1 in the first packet says that the <em>absolute</em> seq value in that packet should be remembered for the lifetime of the session. The difference between the absolute seq value of each of the following packets and the absolute value from the SYN packet then makes the <em>relative</em> seq number of that packet. The relative seq number is in fact a counter of payload bytes, starting from 1 rather than 0 because the absolute seq is incremented by 1 during the initial 3-way handshake. Tcpdump displays the <em>absolute</em> seq values for the packets with SYN == 1, but it then switches over to displaying <em>relative</em> ones (1:102, 1449:2260 in our case). This is done for comfort of reading; it goes so far that the first value of the first:last range is actually not a value transmitted inside the packet but calculated as "last (which is the relative seq) minus payload size".</p></div><div id="comment-48308-info" class="comment-info"><span class="comment-age">(05 Dec '15, 14:54)</span> sindy</div></div></div><div id="comment-tools-48302" class="comment-tools"></div><div class="clear"></div><div id="comment-48302-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

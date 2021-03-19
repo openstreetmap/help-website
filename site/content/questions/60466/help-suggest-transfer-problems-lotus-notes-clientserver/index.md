@@ -1,0 +1,69 @@
++++
+type = "question"
+title = "Help suggest transfer problems Lotus Notes client/server"
+description = '''I have problems with transfers between a Lotus Notes client (192.168.1.11) and server (192.168.2.21). I see some ACKed unseen segments, retransmissions, duplicate ACKs etc and after a while the transfer goes down. Any ideas why this might be? https://www.cloudshark.org/captures/b59f824f3caf Apprecia...'''
+date = "2017-03-30T23:30:00Z"
+lastmod = "2017-04-02T11:19:00Z"
+weight = 60466
+keywords = [ "lotus", "notes", "segments", "unseen", "retransmissions" ]
+aliases = [ "/questions/60466" ]
+osqa_answers = 2
+osqa_accepted = true
++++
+
+<div class="headNormal">
+
+# [Help suggest transfer problems Lotus Notes client/server](/questions/60466/help-suggest-transfer-problems-lotus-notes-clientserver)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-60466-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>I have problems with transfers between a Lotus Notes client (192.168.1.11) and server (192.168.2.21). I see some ACKed unseen segments, retransmissions, duplicate ACKs etc and after a while the transfer goes down. Any ideas why this might be?</p><p><a href="https://www.cloudshark.org/captures/b59f824f3caf">https://www.cloudshark.org/captures/b59f824f3caf</a></p><p>Appreciate any feedback that can help me find the problem :-)</p></div><div id="question-tags" class="tags-container tags">lotus notes segments unseen retransmissions</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>30 Mar '17, 23:30</strong></p><img src="https://secure.gravatar.com/avatar/56e5e44d5dc2d9ad0bb4e0ced530c56b?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="cepheidlight&#39;s gravatar image" /><p>cepheidlight<br />
+<span class="score" title="26 reputation points">26</span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="2 badges"><span class="silver">●</span><span class="badgecount">2</span></span><span title="7 badges"><span class="bronze">●</span><span class="badgecount">7</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="cepheidlight has no accepted answers">0%</span></p></div></div><div id="comments-container-60466" class="comments-container"><span id="60497"></span><div id="comment-60497" class="comment"><div id="post-60497-score" class="comment-score"></div><div class="comment-text"><p>The ACKed unseen segments is an indice that you have not captured those packets. But there RST packets, those could be part of the problem. But it is hard to tell why they were sent, maybe they are application releated.</p></div><div id="comment-60497-info" class="comment-info"><span class="comment-age">(31 Mar '17, 12:30)</span> Christian_R</div></div></div><div id="comment-tools-60466" class="comment-tools"></div><div class="clear"></div><div id="comment-60466-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="60527"></span>
+
+<div id="answer-container-60527" class="answer accepted-answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-60527-score" class="post-score" title="current number of votes">2</div></div></td><td><div class="item-right"><div class="answer-body"><p>The trace shows IP fragmented packets arriving at the trace point. The ip.len of those arriving packets is 1420 bytes so we know this is the bottleneck link's MTU size. As the following fragments do not show up at the trace point , and probably won't make it to the destination - this will certainly cause trouble.</p><p>The inbound SYN_ACK's MSS is set to 1400 indicating a (FW/VPN) device has adjusted the original MSS from 1460 to 1400. Unfortunately this was not enough to avoid fragmentation. a reduction to 1380 bytes would have been required to avoid fragmentation.</p><p>If fixing this device is not in your scope you can add a host route and reduce the MTU size to 1420 to circumvent this problem.</p><p>Regards Matthias .</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>02 Apr '17, 11:19</strong></p><img src="https://secure.gravatar.com/avatar/5500bd1decb766660522dfb347eedc49?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="mrEEde&#39;s gravatar image" /><p>mrEEde<br />
+<span class="score" title="3892 reputation points"><span>3.9k</span></span><span title="15 badges"><span class="badge1">●</span><span class="badgecount">15</span></span><span title="22 badges"><span class="silver">●</span><span class="badgecount">22</span></span><span title="70 badges"><span class="bronze">●</span><span class="badgecount">70</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="mrEEde has 48 accepted answers">20%</span></p></div></div><div id="comments-container-60527" class="comments-container"></div><div id="comment-tools-60527" class="comment-tools"></div><div class="clear"></div><div id="comment-60527-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="60514"></span>
+
+<div id="answer-container-60514" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-60514-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>There are many packets that were on the wire but not captured by your sniffer. Those are the "unseen" segments and they do not affect any real life problem that you may have. About 64 KB of data was missing in this way.</p><p>Here is the order of events at the end of the TCP connections in this trace file (using the connection with client port 50310 as the example):</p><ul><li>Packet flow runs normally and data packets are sent in both directions.</li><li>All client packets up to #172 are ACKed by the server.</li><li>Client packet #174 contains 54 bytes of data - but we never see a server ACK for it. [Could the server's ACK have been lost in the network?]</li><li>After a 300 ms RTO, the client retransmits the #174 data in #175.</li><li>One RTT after that, we get a Duplicate Selective ACK (D-SACK) from the server informing us that it had already received #174. [Again suggesting that the server's ACK was lost].</li><li>This D-SACK is also a normal ACK for the #174 data, so everything should be OK now.</li><li>One minute later, the client sends a Final, #177. [After a 60 second timeout?]</li><li>At the same time, the client begins a new TCP connection with a SYN, #178.</li><li>Also at the exact same time (not one RTT later), we receive a Final (#179) from the server. [It must also have a 60 second timeout?]</li><li>The client immediately ACKs the server's Final (#180), but we never see a server ACK to the client's Final. [Could that also have been lost in the network?]</li><li>After another 2 minutes (and continued activity on the new connections), the client sends a Reset (#218).</li></ul><p>It would appear that your throughput is being affected by those regular 60 second gaps, which are caused by those timeouts before the client's Final. The connection closure mechanism is not performed correctly from the client's viewpoint, causing it to issue the Reset, but we have a new connection operating during this period and so flow isn't affected. It could be that some of the server's ACK packets are being lost. However, there are no indications of any of the server's data packets being lost.</p><p>Could it be possible that your client doesn't properly understand D-SACKs? Once it has received one, it goes into limbo until issuing the Final?</p><p>You could test this by disabling the Selective ACK capability at either your client or server (only need to disable at one end).</p><p>Without SACK support, the D-SACKs should become ordinary ACKs and may allow your client to continue the flow on the original TCP connection. You'll still suffer the 300ms RTO, but that's better than the additional 60 second timeouts to the Finals.</p><p>Google it to find the relevant Registry settings for your Windows client.</p><p>Another thing you could try is either:</p><ul><li>Decreasing your server's Delayed-ACK time (so that it is lower than the client's RTO).</li><li>Increasing your client's Retransmission Timeout value (to be longer than the server's Delayed-ACK timer).</li></ul></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>01 Apr '17, 23:04</strong></p><img src="https://secure.gravatar.com/avatar/35a0c1d0cf15b9d54d73bf54ae28abcd?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Philst&#39;s gravatar image" /><p>Philst<br />
+<span class="score" title="431 reputation points">431</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="6 badges"><span class="silver">●</span><span class="badgecount">6</span></span><span title="16 badges"><span class="bronze">●</span><span class="badgecount">16</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Philst has 6 accepted answers">27%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 02 Apr '17, 05:59</p></div></div><div id="comments-container-60514" class="comments-container"><span id="60515"></span><div id="comment-60515" class="comment"><div id="post-60515-score" class="comment-score"></div><div class="comment-text"><p>I think there is a problem with wireshark's calculation of relative sequence numbers. Packet Numbver 16 shows the 'real' sequence number instead of the relative one. This is causing the 'previous segment not captured' messages</p></div><div id="comment-60515-info" class="comment-info"><span class="comment-age">(02 Apr '17, 00:05)</span> mrEEde</div></div><span id="60523"></span><div id="comment-60523" class="comment"><div id="post-60523-score" class="comment-score"></div><div class="comment-text"><p>There really are lots of packets not captured by the sniffer @mrEEde. I also used a commercial packet analysis tool to examine this trace file.</p></div><div id="comment-60523-info" class="comment-info"><span class="comment-age">(02 Apr '17, 06:01)</span> Philst</div></div><span id="60525"></span><div id="comment-60525" class="comment"><div id="post-60525-score" class="comment-score">1</div><div class="comment-text"><p>Wireshark makes a mess of the relative sequence numbers in packet 16 because the packet is marked as an IP fragment and the code that adjusts sequence numbers to be relative from the sequence base (SYN or first packet in the stream) is not run on a fragmented packet. I've raised a Bugzilla item for this, <a href="https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13550">bug 13550</a>.</p></div><div id="comment-60525-info" class="comment-info"><span class="comment-age">(02 Apr '17, 09:07)</span> grahamb ♦</div></div></div><div id="comment-tools-60514" class="comment-tools"></div><div class="clear"></div><div id="comment-60514-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

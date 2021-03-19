@@ -1,0 +1,61 @@
++++
+type = "question"
+title = "VS2010 - How to import the source files correct | Add multiple bytes in one item"
+description = '''Hello, I&#x27;m new to WireShark devolopment; forgive my noob question ;) I couldn&#x27;t found it on this site, so I ask here. I&#x27;m able to build and run WireShark; I can also debug it in VS 2010. But i can&#x27;t get rid of the red underlines in VS2010 under many functions. VS2010 can&#x27;t find my source files. Is t...'''
+date = "2013-07-03T05:27:00Z"
+lastmod = "2013-07-03T05:44:00Z"
+weight = 22597
+keywords = [ "items", "multiple", "vs2010" ]
+aliases = [ "/questions/22597" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [VS2010 - How to import the source files correct | Add multiple bytes in one item](/questions/22597/vs2010-how-to-import-the-source-files-correct-add-multiple-bytes-in-one-item)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-22597-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hello,</p><p>I'm new to WireShark devolopment; forgive my noob question ;) I couldn't found it on this site, so I ask here.</p><p>I'm able to build and run WireShark; I can also debug it in VS 2010. But i can't get rid of the red underlines in VS2010 under many functions. VS2010 can't find my source files. Is there anywhere a tutorial that describes how to import the source files from an existing executable, and setup the right folders?</p><p>Second question:</p><p>I add items to the tree with</p><pre><code>        proto_tree_add_item(foo_tree, bhcp_data3,       tvb, 21, 4, ENC_LITTLE_ENDIAN); 
+        proto_tree_add_item(foo_tree, bhcp_data3id,     tvb, 25, 1, ENC_BIG_ENDIAN);    
+        proto_tree_add_item(foo_tree, bhcp_data3idx,    tvb, 26, 1, ENC_BIG_ENDIAN);</code></pre><p>No I have three items, but I want it like this "Data %d contains %d on index: %d". Because i've multiple data items in one packet; I want it as small as possible. It must be possible; but how? Can someone explain this with an example?</p><p>I really appreciate any help</p></div><div id="question-tags" class="tags-container tags">items multiple vs2010</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>03 Jul '13, 05:27</strong></p><img src="https://secure.gravatar.com/avatar/e7866212f60723048e158a82a1cdae8f?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Johnny321&#39;s gravatar image" /><p>Johnny321<br />
+<span class="score" title="11 reputation points">11</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="2 badges"><span class="bronze">●</span><span class="badgecount">2</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Johnny321 has no accepted answers">0%</span></p></div></div><div id="comments-container-22597" class="comments-container"></div><div id="comment-tools-22597" class="comment-tools"></div><div class="clear"></div><div id="comment-22597-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+One Answer:
+
+</div>
+
+</div>
+
+<span id="22598"></span>
+
+<div id="answer-container-22598" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-22598-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>For the first item see Bills answer to <a href="http://ask.wireshark.org/questions/8660/wireshark-building-and-debugging-on-visual-c-or-visual-studio">this</a> question (you did search before posting your question?)</p><p>Edit: I actually use WinDbg for debugging as I only need to point it to the source files once and it then finds everything else.</p><p>For the second (you should really raise it as a separate question as others won't be able to search for it easily) have a look at <code>proto_tree_add_text()</code> although you should read the notes about it in README.dissector. You could add it as a label with the individual values below it as a subtree. When viewing packets from your protocol you don't need to expand the subtree to see the data values you need.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>03 Jul '13, 05:44</strong></p><img src="https://secure.gravatar.com/avatar/d2a7e24ca66604c749c7c88c1da8ff78?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="grahamb&#39;s gravatar image" /><p>grahamb ♦<br />
+<span class="score" title="19834 reputation points"><span>19.8k</span></span><span title="3 badges"><span class="badge1">●</span><span class="badgecount">3</span></span><span title="30 badges"><span class="silver">●</span><span class="badgecount">30</span></span><span title="206 badges"><span class="bronze">●</span><span class="badgecount">206</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="grahamb has 274 accepted answers">22%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 03 Jul '13, 05:46</p></div></div><div id="comments-container-22598" class="comments-container"><span id="22608"></span><div id="comment-22608" class="comment"><div id="post-22608-score" class="comment-score"></div><div class="comment-text"><p>Hello Graham,</p><p>The answer in your links says this:</p><p><em>Once you've done the above you can use all the normal VS functionality to open source files, to do source level debugging actions such as setting breakpoints, starting and stepping through the program and so on...</em></p><p>I cannot open source files than; importing the created BSC doesn't change anything :(</p></div><div id="comment-22608-info" class="comment-info"><span class="comment-age">(03 Jul '13, 07:16)</span> Johnny321</div></div><span id="22609"></span><div id="comment-22609" class="comment"><div id="post-22609-score" class="comment-score"></div><div class="comment-text"><p>The bsc is only for searching symbols (e.g, Find All References) and isn't need for debugging. All the debug info is in the pdb files.</p><p>Can't you open source files using "File | Open"?</p></div><div id="comment-22609-info" class="comment-info"><span class="comment-age">(03 Jul '13, 07:23)</span> grahamb ♦</div></div><span id="22610"></span><div id="comment-22610" class="comment"><div id="post-22610-score" class="comment-score"></div><div class="comment-text"><p>I can open the files, but I don't get the references OK. If i want to open 'packet.h' for example; I get this message: <img src="https://osqa-ask.wireshark.org/upfiles/error.png" alt="alt text" /></p><p>I've already added WireShark folder to the 'include directories'.</p></div><div id="comment-22610-info" class="comment-info"><span class="comment-age">(03 Jul '13, 07:33)</span> Johnny321</div></div><span id="22615"></span><div id="comment-22615" class="comment"><div id="post-22615-score" class="comment-score"></div><div class="comment-text"><p>Note that the dialog is looking for epan/etypes.h, but the source path list only includes epan/dissectors.</p><p>I don't think adding directories to the "Include directories" is what you want, maybe add the top level Wireshark directory to the solution properties Common Properties | Debug Source Files list.</p></div><div id="comment-22615-info" class="comment-info"><span class="comment-age">(03 Jul '13, 09:03)</span> grahamb ♦</div></div><span id="22631"></span><div id="comment-22631" class="comment"><div id="post-22631-score" class="comment-score"></div><div class="comment-text"><p>How is doing other people this :S. I'm not used to use VS2010; but it's an impossible program. Have anyone a project file or something. This took me already a couple days, with no one step further.</p></div><div id="comment-22631-info" class="comment-info"><span class="comment-age">(03 Jul '13, 23:06)</span> Johnny321</div></div><span id="22632"></span><div id="comment-22632" class="comment not_top_scorer"><div id="post-22632-score" class="comment-score"></div><div class="comment-text"><p>Your "answer" has been converted to a comment as that's how this site works. Please read the FAQ for more information.</p><p>As mentioned above, for all the years I've been working on Wireshark, I've never used Visual Studio for debugging, I've used WinDbg.</p><p>After your question though, I tried VS 2010 Express and to my surprise it all worked, I could set a breakpoint in my dissector, and when the breakpoint was hit, could step through and VS would open the appropriate source files as required.</p><p>How I did this:</p><ol><li>Built Wireshark in the usual manner using nmake.</li><li>Open VS2010EE and from the File | Open | Project/Solution dialog selected Wireshark.exe from the wireshark-gtk2 directory created by the build.</li><li>Right click the Solution 'Wireshark' (1 project) item in Solution Explorer and select Properties from the menu.</li><li>Under Common Properties | Debug Source Files added an entry pointing to the top of my Wireshark source tree.</li><li>Opened the source file for my dissector using File | Open | File.</li><li>Placed a breakpoint in my main dissector function.</li><li>Started debugging using Debug | Start Debugging.</li><li>When VS finished loading all the symbols* it could obtain, from Wireshark loaded a capture with traffic for my dissector.</li><li>Bingo, breakpoint hit. I can step and inspect values as required.</li></ol><p>*I may, in the past, have modified the VS defaults for symbols. Currently, under Tools | Options | Debugging Symbols, I have a single entry for "Microsoft Symbol Servers", and a local directory to cache the symbols in. You'll need a working internet connection to cache the symbols the first time you start a debugging session, and it may take some time to download the symbol files so the first start may be slow. Check the "Output" window in VS to see the progress of loading the symbols. Subsequent runs (if the symbols are cached) are much quicker to load.</p><p>Note that this setup doesn't give you symbol cross-references, that is done by creating the .sbr files during the build as discussed in the other question I linked to.</p></div><div id="comment-22632-info" class="comment-info"><span class="comment-age">(04 Jul '13, 01:31)</span> grahamb ♦</div></div><span id="23047"></span><div id="comment-23047" class="comment not_top_scorer"><div id="post-23047-score" class="comment-score"></div><div class="comment-text"><p>@Johnny321: If a supplied answer resolves your question can you please "accept" it by clicking the checkmark icon next to it. This highlights good answers for the benefit of subsequent users with the same or similar questions.</p></div><div id="comment-23047-info" class="comment-info"><span class="comment-age">(16 Jul '13, 08:11)</span> Kurt Knochner ♦</div></div></div><div id="comment-tools-22598" class="comment-tools"><span class="comments-showing"> showing 5 of 7 </span> <a href="#" class="show-all-comments-link">show 2 more comments</a></div><div class="clear"></div><div id="comment-22598-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+

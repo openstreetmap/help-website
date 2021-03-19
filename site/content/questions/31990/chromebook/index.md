@@ -1,0 +1,31 @@
++++
+type = "question"
+title = "chromebook"
+description = '''does wireshark work on hp chromebook on same home network as Samsung laptop'''
+date = "2014-04-19T08:05:00Z"
+lastmod = "2014-04-19T08:05:00Z"
+weight = 31990
+keywords = [ "quizzer" ]
+aliases = [ "/questions/31990" ]
+osqa_answers = 0
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [chromebook](/questions/31990/chromebook)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-31990-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>does wireshark work on hp chromebook on same home network as Samsung laptop</p></div><div id="question-tags" class="tags-container tags">quizzer</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>19 Apr '14, 08:05</strong></p><img src="https://secure.gravatar.com/avatar/11a6f754bcae57a573060880804000e4?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="quizzer&#39;s gravatar image" /><p>quizzer<br />
+<span class="score" title="1 reputation points">1</span><span title="1 badges"><span class="badge1">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="silver">●</span><span class="badgecount">1</span></span><span title="1 badges"><span class="bronze">●</span><span class="badgecount">1</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="quizzer has no accepted answers">0%</span></p></div></div><div id="comments-container-31990" class="comments-container"></div><div id="comment-tools-31990" class="comment-tools"></div><div class="clear"></div><div id="comment-31990-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+</div>
+

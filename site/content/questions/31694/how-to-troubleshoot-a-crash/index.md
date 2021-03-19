@@ -1,0 +1,124 @@
++++
+type = "question"
+title = "how to troubleshoot a crash?"
+description = '''Hi, Is there a good writeup on how to troubleshoot Wireshark crashes, preferably covering all major operating systems? I have Wireshark running NOT capturing live traffic but analyzing a pcap file (less than 1MB). It was doing fine for a while. Then it crashed. I have a suspicion that it may be caus...'''
+date = "2014-04-09T16:37:00Z"
+lastmod = "2014-04-09T18:50:00Z"
+weight = 31694
+keywords = [ "lua", "crash" ]
+aliases = [ "/questions/31694" ]
+osqa_answers = 2
+osqa_accepted = false
++++
+
+<div class="headNormal">
+
+# [how to troubleshoot a crash?](/questions/31694/how-to-troubleshoot-a-crash)
+
+</div>
+
+<div id="main-body">
+
+<div id="askform">
+
+<table id="question-table" style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-31694-score" class="post-score" title="current number of votes">0</div><div id="favorite-count" class="favorite-count"></div></div></td><td><div id="item-right"><div class="question-body"><p>Hi,</p><p>Is there a good writeup on how to troubleshoot Wireshark crashes, preferably covering all major operating systems?</p><p>I have Wireshark running NOT capturing live traffic but analyzing a pcap file (less than 1MB). It was doing fine for a while. Then it crashed. I have a suspicion that it may be caused by an error in the Lua dissector I wrote, but I have no idea what's the error.</p><p>I didn't start from a console, so no info there. I did get the crash report, but it makes no sense to me, as seen below.</p><p>My questions: what evidences can we get after a crash, and how to make sense of them, without having 10 years of experience in this field?</p><p>partial crash report:</p><pre><code>Process:         Wireshark [7020]
+Path:            /Applications/Wireshark.app/Contents/MacOS/Wireshark
+Identifier:      org.wireshark.Wireshark
+Version:         1.11.3-1864-geef0fa6 (1.11.3-1864-geef0fa6)
+Code Type:       X86-64 (Native)
+Parent Process:  launchd [181]
+Responsible:     Wireshark [7020]
+User ID:         502
+
+Date/Time:       2014-04-03 17:12:29.978 -0500
+OS Version:      Mac OS X 10.9.2 (13C64)
+Report Version:  11
+Anonymous UUID:  3C1BACD2-261C-95A3-7B77-F6E256111417
+
+Sleep/Wake UUID: 4CC28C83-FB62-4ACB-A214-181F8BE906E8
+
+Crashed Thread:  0  Dispatch queue: com.apple.main-thread
+
+Exception Type:  EXC_BREAKPOINT (SIGTRAP)
+Exception Codes: 0x0000000000000002, 0x0000000000000000
+
+Application Specific Information:
+wireshark 1.11.3-1864-geef0fa6 (wireshark-1.11.3-rc1-1864-geef0fa6-dirty from unknown)
+
+Compiled (64-bit) with Qt 5.2.1 with GLib 2.36.0, with libpcap, with libz 1.2.3,
+without POSIX capabilities, with SMI 0.4.8, without c-ares, without ADNS, with
+Lua 5.1, without Python, with GnuTLS 2.12.19, with Gcrypt 1.5.0, with MIT
+Kerberos, with GeoIP, without PortAudio, with AirPcap.
+
+Running on Mac OS X 10.9.2, build 13C64 (Darwin 13.1.0), without locale, with
+libpcap version 1.3.0 - Apple version 41, with libz 1.2.5, GnuTLS 2.12.19,
+Gcrypt 1.5.0, without AirPcap.
+      Intel(R) Core(TM) i7-3615QM CPU @ 2.30GHz
+
+Built using llvm-gcc 4.2.1 (Based on Apple Inc. build 5658) (LLVM build
+2336.9.00).
+
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   libglib-2.0.0.dylib             0x000000010811005b g_logv + 1371
+1   libglib-2.0.0.dylib             0x00000001081102dd g_log + 381
+2   libwireshark.0.dylib            0x00000001035d7289 proto_register_field_init + 57
+3   libwireshark.0.dylib            0x00000001035d7fd1 proto_register_field_array + 161
+4   libwireshark.0.dylib            0x00000001040feb33 Proto_commit + 579
+5   libwireshark.0.dylib            0x0000000104114652 wslua_init + 1058
+6   org.wireshark.Wireshark         0x0000000103199c17 main + 1879
+7   org.wireshark.Wireshark         0x0000000103132cb4 start + 52</code></pre></div><div id="question-tags" class="tags-container tags">lua crash</div><div id="question-controls" class="post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>asked <strong>09 Apr '14, 16:37</strong></p><img src="https://secure.gravatar.com/avatar/b18cada3e3589f311e24f5ffbd1737bc?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="YXI&#39;s gravatar image" /><p>YXI<br />
+<span class="score" title="21 reputation points">21</span><span title="18 badges"><span class="badge1">●</span><span class="badgecount">18</span></span><span title="20 badges"><span class="silver">●</span><span class="badgecount">20</span></span><span title="23 badges"><span class="bronze">●</span><span class="badgecount">23</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="YXI has no accepted answers">0%</span></p></div><div class="post-update-info post-update-info-edited"><p>edited 09 Apr '14, 17:09</p><img src="https://secure.gravatar.com/avatar/d02f20c18a7742ec73a666f1974bf6dc?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Hadriel&#39;s gravatar image" /><p>Hadriel<br />
+<span class="score" title="2652 reputation points"><span>2.7k</span></span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">●</span><span class="badgecount">9</span></span><span title="39 badges"><span class="bronze">●</span><span class="badgecount">39</span></span></p></div></div><div id="comments-container-31694" class="comments-container"></div><div id="comment-tools-31694" class="comment-tools"></div><div class="clear"></div><div id="comment-31694-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+------------------------------------------------------------------------
+
+<div class="tabBar">
+
+<span id="sort-top"></span>
+
+<div class="headQuestions">
+
+2 Answers:
+
+</div>
+
+</div>
+
+<span id="31702"></span>
+
+<div id="answer-container-31702" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-31702-score" class="post-score" title="current number of votes">2</div></div></td><td><div class="item-right"><div class="answer-body"><p>I suppose I should actually try to answer the question being asked. :)</p><p>I don't know if there's a good write-up on troubleshooting wireshark crashes in particular, but I'll try to give the 30-second simplifies overview. Ultimately though, this requires some basic understanding of programming, and the C language in particular, because you'd have to look into <a href="https://code.wireshark.org/review/gitweb?p=wireshark.git;a=tree">the source code</a> itself.</p><p>Basically what I do is start with the exception type and crash dump stack trace (or sometimes called a backtrace).</p><p>This is the exception type:</p><pre><code>Exception Type:  EXC_BREAKPOINT (SIGTRAP)</code></pre><p>That tells you a <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man3/signal.3.html">SIGTRAP</a> was issued, either on purpose or due to an exception. In this case it's not that helpful, because you could guess that from the stack trace... but sometimes it is useful, for divide by zero, memory errors, etc.</p><p>This is the stack trace:</p><pre><code>0   libglib-2.0.0.dylib             0x000000010811005b g_logv + 1371
+1   libglib-2.0.0.dylib             0x00000001081102dd g_log + 381
+2   libwireshark.0.dylib            0x00000001035d7289 proto_register_field_init + 57
+3   libwireshark.0.dylib            0x00000001035d7fd1 proto_register_field_array + 161
+4   libwireshark.0.dylib            0x00000001040feb33 Proto_commit + 579
+5   libwireshark.0.dylib            0x0000000104114652 wslua_init + 1058
+6   org.wireshark.Wireshark         0x0000000103199c17 main + 1879
+7   org.wireshark.Wireshark         0x0000000103132cb4 start + 52</code></pre><p>What a stack trace tells you is the last set of functions, in reverse order, that were called and are in the call stack. I.e., it stopped in <code>g_logv()</code>, which it got to from within <code>g_log()</code>, which it got to from within <code>proto_register_field_init()</code>, etc. (note that it's not all functions the program executed, just the ones still on the stack, meaning the ones to still be returned from and popped from the stack)</p><p>Those are literally the function names from within the source code - if the program was compiled with full debug symbols, you'd even see source code filenames and such. The hex numbers to the left of the function names are the program counter addresses, which won't be helpful.</p><p>The names on the left tell you which program/library it's executing for that function. "<code>libglib-2.0.0.dylib</code>" is the <a href="https://developer.gnome.org/glib/">Glib</a> library, while "<code>libwireshark.0.dylib</code>" is the core Wireshark library, and "<code>org.wireshark.Wireshark</code>" is the Wireshark application itself (or really a symbolic link to it). The "<code>dylib</code>" extension tells you it's a dynamic library in Mac (similar to a "DLL" dynamic linked library in Windows, and a "so" shared object in Linux).</p><p>So using the stack trace you gave, I can tell the crash happens during the internal registering of Lua fields. Because I know that's what <code>Proto_commit()</code> does, when it is calling <code>proto_register_field_array()</code>.</p><p>Technically the "crash" occurs in <code>g_logv()</code> in the sense of that's the function that caused the SIGTRAP, but that's really just a <a href="https://developer.gnome.org/glib/">Glib</a> function that was called by <code>g_log()</code> which is another Glib function, and that one was apparently called by <code>proto_register_field_init()</code>. I say "apparently", because it was something that is really a macro or inlined, because there is no direct call to <code>g_log()</code> inside <code>proto_register_field_init()</code>.</p><p>With full debug symbols it's a lot easier to figure out exactly where it happened, because you'd get the source code line numbers too. But ultimately it's not really telling you <em>why</em> it crashed, in the sense of what was the root cause - it's more telling you <em>how</em> it crashed.</p><p>My guess is it's actually "<code>g_error()</code>" being called, <strong>on purpose</strong>, inside <code>proto_register_field_init()</code>... because it encountered something that is a programming error and needs to be fixed. <code>g_error()</code> is a macro, not a function, so it won't show up in the stack trace. (a macro is a pre-processor directive during compilation) In fact <code>proto_register_field_init()</code> doesn't even directly call <code>g_error()</code>, so it could be being called via one of the other macros used in <code>proto_register_field_init()</code>, or via some function that the compiler chose to inline. (by "inline" I mean it didn't keep the function separate, but instead moved its logic into the calling function, to increase performance)</p><p>The fact that it crashes is really a C-code programming error, not a Lua one - the Wireshark Lua API C-code tries to prevent actual crashes for bad Lua scripts, by doing verification checking before calling the rest of the C-code.</p><p>So it's probably some incorrect Lua <code>ProtoField</code> in the script, that isn't being properly verified by the C-code. Of course ultimately the Lua script itself is probably wrong too, or maybe it's a fine Lua script and there's some bug in the Wirehark Lua API code. (it could just be a bug - that field registration code was changed recently... although more recently than your version I think... 1.11.3-rc1-1864 isn't very recent)</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>09 Apr '14, 18:50</strong></p><img src="https://secure.gravatar.com/avatar/d02f20c18a7742ec73a666f1974bf6dc?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Hadriel&#39;s gravatar image" /><p>Hadriel<br />
+<span class="score" title="2652 reputation points"><span>2.7k</span></span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">●</span><span class="badgecount">9</span></span><span title="39 badges"><span class="bronze">●</span><span class="badgecount">39</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Hadriel has 30 accepted answers">18%</span></p></div></div><div id="comments-container-31702" class="comments-container"><span id="31712"></span><div id="comment-31712" class="comment"><div id="post-31712-score" class="comment-score"></div><div class="comment-text"><p>Thanks. That is a very helpful crash course (no pun intended) with an example.</p><p>Your mentioning of my build being old alerted me to check the build info in the crash report. Then I realized that this is not the crash report for what happened yesterday. However, when I went to ~/Library/Logs/DiagnosticReport yesterday, there was only one crash report, the one I uploaded. It was from last week! Why there was no crash reports for the crashes happened yesterday? Could they be found somewhere else on my Mac?</p><p>You also mentioned that "if the program was compiled with full debug symbols" ... I thought the Wireshark binaries we download are already compiled with debugging turned on. That's not the case in the nightly builds? What do we have to do to have the full debug symbols?</p><p>Thanks.</p></div><div id="comment-31712-info" class="comment-info"><span class="comment-age">(10 Apr '14, 08:53)</span> YXI</div></div><span id="31725"></span><div id="comment-31725" class="comment"><div id="post-31725-score" class="comment-score"></div><div class="comment-text"><p>You asked:</p><pre><code>Could they be found somewhere else on my Mac?</code></pre><p>They might be in <code>/Library/Logs/DiagonosticReports</code> (note the lack of a <code>~</code> tilde), but they really should be where you said. You can also view them in the Console app instead of in a terminal - i.e., Applications-&gt;Utilities-&gt;Console.</p><hr /><pre><code>What do we have to do to have the full debug symbols?</code></pre><p>You have to compile it yourself. I get full debug symbols with the one I compile locally.</p><p>Most programs aren't released with full debug symbols, because it increases the size of the program quite a bit. (and commercial products don't do it so they don't reveal internal stuff)</p></div><div id="comment-31725-info" class="comment-info"><span class="comment-age">(10 Apr '14, 10:55)</span> Hadriel</div></div><span id="31729"></span><div id="comment-31729" class="comment"><div id="post-31729-score" class="comment-score"></div><div class="comment-text"><p>BTW, please submit this as a bug - Wireshark really isn't supposed to crash even with a wrong Lua script.</p><p>You don't need to include your whole script - just the portion that creates the <code>ProtoField</code>s, i.e. the part that does this type of thing:</p><pre><code>local foo = ProtoField.new(...)
+local bar = ProtoField.uint16(...)</code></pre></div><div id="comment-31729-info" class="comment-info"><span class="comment-age">(10 Apr '14, 12:12)</span> Hadriel</div></div><span id="31731"></span><div id="comment-31731" class="comment"><div id="post-31731-score" class="comment-score"></div><div class="comment-text"><p>To compile it with full debug symbols, do you simply change the Makefile? I see in the Makefile there are two flag sets: CFLAG = -g ... CFLAG_FOR_BUILD = ... So do I just add "-g" to CFLAG_FOR_BUILD?</p><p>I'm not going to submit a bug now as I don't have a relevant crash report. The crash report I have is from last week (couldn't find another one even following your new advice) and I have since changed my ProtoFields quite a bit. I will submit a bug report if Wireshark crashes again after the rebuild with debug symbols and also with Wireshark launched through gdb. That way you guys will have some stuff to work with. It will probably be done in the Linux system. If it crashes in Linux, it should also do it in Mac and Windows, right (assuming they all come from exactly the same version of source code)?</p></div><div id="comment-31731-info" class="comment-info"><span class="comment-age">(10 Apr '14, 12:50)</span> YXI</div></div><span id="31732"></span><div id="comment-31732" class="comment"><div id="post-31732-score" class="comment-score"></div><div class="comment-text"><p>You asked:</p><pre><code> So do I just add &quot;-g&quot; to CFLAG_FOR_BUILD?</code></pre><p>No you shouldn't have to. The Makefile is auto-generated by the <code>configure</code> script, so as long as you did <code>autogen.sh</code> followed by <code>configure</code>, then just doing <code>make</code> after that should work.</p><hr /><pre><code>If it crashes in Linux, it should also do it in Mac and Windows, right?</code></pre><p>Not necessarily, no. It might not even crash consistently every time in Mac... for example if a Lua object being garbage collected is causing the issue, then it's a roll of the dice. (though I don't think that's the case here)</p></div><div id="comment-31732-info" class="comment-info"><span class="comment-age">(10 Apr '14, 13:01)</span> Hadriel</div></div><span id="31795"></span><div id="comment-31795" class="comment not_top_scorer"><div id="post-31795-score" class="comment-score"></div><div class="comment-text"><p>Just read the official INSTALL instructions came in the source tarball and there was no mention of running autogen.sh before running ./configure.<br />
+So is the act of running autogen.sh before configure that ensures the debug symbols will be added for the compile?</p></div><div id="comment-31795-info" class="comment-info"><span class="comment-age">(14 Apr '14, 09:14)</span> YXI</div></div><span id="31797"></span><div id="comment-31797" class="comment not_top_scorer"><div id="post-31797-score" class="comment-score"></div><div class="comment-text"><p>I don't know which exact script is necessary to eventually get the Makefiles to generate full debug symbols. <code>autogen.sh</code> runs <code>libtool</code>, <code>automake</code>, and <code>autoconf</code>, which are GNU tools for figuring out platform-specific stuff and generating the appropriate inputs to the rest of the <code>make</code> process (and thus eventually the Makefiles generated by <code>configure</code>).</p><p>If I recall right, just running <code>configure</code> might be ok because I seem to recall it will actually run <code>autogen.sh</code> itself if it doesn't find the right info already. Personally I always run <code>autogen.sh</code> myself instead of just only <code>configure</code>, because I'm used to doing it. <code>:)</code></p></div><div id="comment-31797-info" class="comment-info"><span class="comment-age">(14 Apr '14, 10:41)</span> Hadriel</div></div><span id="31798"></span><div id="comment-31798" class="comment not_top_scorer"><div id="post-31798-score" class="comment-score"></div><div class="comment-text"><p>Yeah, I think autogen.sh is probably not needed. I just scanned through configure script and seems to have autoconf and automake stuff in there already.</p></div><div id="comment-31798-info" class="comment-info"><span class="comment-age">(14 Apr '14, 11:47)</span> YXI</div></div><span id="31809"></span><div id="comment-31809" class="comment not_top_scorer"><div id="post-31809-score" class="comment-score"></div><div class="comment-text"><p>FYI: The default <code>CFLAGS</code> from a <code>./configure</code> include <code>-g -O2</code> (debug symbols plus optimization).</p><p>Sometimes when debugging with gdb, it's useful to disable optimization: i.e., use <code>-g -O0</code> so that the code being debugged matches the source code.</p><p>This can be done easily as follows:</p><pre><code>CFLAGS=&#39;-g -O0&#39; ./configure [your options]</code></pre><p>Note that disabling optimization may possibly cause the code to work differently: e.g. not crash when using -O2 causes a crash.</p><p>Also: when <code>-O2</code> is used, certain additional compile time checks are performed.</p><p>======</p><p>re: use of <code>autogen.sh</code></p><p>I believe that downloading and building from the Wireshark "source tarball" does not require that <code>./autogen.sh</code> be run.</p><p>If the Wireshark sources are downloaded from the git repository, <code>./autogen.sh</code> will need to be run before running <code>./configure</code></p><p>As noted previously, any further source changes requiring <code>./autogen.sh</code> to be rerun will be automatically handled when doing a <code>make</code>.</p></div><div id="comment-31809-info" class="comment-info"><span class="comment-age">(14 Apr '14, 16:17)</span> Bill Meier ♦♦</div></div></div><div id="comment-tools-31702" class="comment-tools"><span class="comments-showing"> showing 5 of 9 </span> <a href="#" class="show-all-comments-link">show 4 more comments</a></div><div class="clear"></div><div id="comment-31702-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<span id="31700"></span>
+
+<div id="answer-container-31700" class="answer">
+
+<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><div id="post-31700-score" class="post-score" title="current number of votes">1</div></div></td><td><div class="item-right"><div class="answer-body"><p>Generally you're not expected to debug a crash yourself - I mean it's great if you can, but I don't think it's a big deal if you don't. Just submit a new bug in <a href="https://bugs.wireshark.org/bugzilla/">bugs.wireshark.org</a>, with the info you provided above.</p><p>Usually it helps to have the capture file that caused the crash, but in this case it's not a capture file - it's something wrong happening inside Wireshark during startup, when it's trying to internally register the <code>ProtoField</code>s from your Lua script. (After all the Lua scripts are loaded and executed, Wireshark internally registers the protocols and fields created by the scripts)</p><p>It may well be something incorrect in your Lua script, but it still shouldn't crash. It should just generate an error and continue; preferably it should fail while loading your Lua script, before even trying to register the field(s) internally.</p><p>So to help debug this you need to attach the Lua script itself to the bug ticket - or some minimal version of the script with just enough to cause the crash. Like even just the portion of the script that creates <code>ProtoField</code>s will probably be enough to figure it out - you don't need to include the dissector function or anything else really.</p></div><div class="answer-controls post-controls"></div><div class="post-update-info-container"><div class="post-update-info post-update-info-user"><p>answered <strong>09 Apr '14, 17:24</strong></p><img src="https://secure.gravatar.com/avatar/d02f20c18a7742ec73a666f1974bf6dc?s=32&amp;d=identicon&amp;r=g" class="gravatar" width="32" height="32" alt="Hadriel&#39;s gravatar image" /><p>Hadriel<br />
+<span class="score" title="2652 reputation points"><span>2.7k</span></span><span title="2 badges"><span class="badge1">●</span><span class="badgecount">2</span></span><span title="9 badges"><span class="silver">●</span><span class="badgecount">9</span></span><span title="39 badges"><span class="bronze">●</span><span class="badgecount">39</span></span><br />
+<span class="accept_rate" title="Rate of the user&#39;s accepted answers">accept rate:</span> <span title="Hadriel has 30 accepted answers">18%</span> </br></p></div></div><div id="comments-container-31700" class="comments-container"></div><div id="comment-tools-31700" class="comment-tools"></div><div class="clear"></div><div id="comment-31700-form-container" class="comment-form-container"></div><div class="clear"></div></div></td></tr></tbody></table>
+
+</div>
+
+<div class="paginator-container-left">
+
+</div>
+
+</div>
+
+</div>
+
