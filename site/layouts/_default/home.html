@@ -1,6 +1,10 @@
 {{ define "main" }}
 
-{{ $paginator := .Paginate (where .Site.Pages "Type" "question").Reverse }}
+<h3>
+  <a href="/index.xml">All Questions <img src="/images/feed-icon-small.png"></a>
+</h3>
+
+{{ $paginator := .Paginate (where .Site.Pages "Type" "question").ByLastmod.Reverse }}
 {{ range $paginator.Pages }}
 {{ $q_status := "unanswered" }}
 {{ if gt .Params.osqa_answers 0 }}
