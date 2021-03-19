@@ -43,7 +43,7 @@ Notable directories are:
 # Maintenance
 
 You need [Hugo](https://gohugo.io) to generate the site.
-You additionally need Python 3, the (BeautifulSoup/)[https://www.crummy.com/software/BeautifulSoup/] Python module, and (Pandoc)[https://pandoc.org/] to regeneate the questions.
+You additionally need Python 3, the [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) Python module, and [Pandoc](https://pandoc.org/) to regeneate the questions.
 
 To generate the site, run `hugo` in the `site` directory.
 Output will be written to `site/public`.
