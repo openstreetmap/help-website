@@ -13,7 +13,7 @@ osqa_accepted = false
 
 <div class="headNormal">
 
-# [Pretty Lost - Network Dissconnections](/questions/41994/pretty-lost-network-dissconnections)
+# [\[ Content removed \]](/questions/41994/pretty-lost-network-dissconnections)
 
 </div>
 
@@ -36,22 +36,6 @@ osqa_accepted = false
 0 Answers:
 
 </div>
-
-</div>
-
-<span id="42104"></span>
-
-<div id="answer-container-42104" class="answer">
-
-<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><span id="post-42104-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span><div id="post-42104-score" class="post-score" title="current number of votes">1</div><span id="post-42104-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span></div></td><td><div class="item-right"></div></td></tr></tbody></table>
-
-</div>
-
-<span id="42118"></span>
-
-<div id="answer-container-42118" class="answer">
-
-<table style="width:100%;"><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td style="width: 30px; vertical-align: top"><div class="vote-buttons"><span id="post-42118-upvote" class="ajax-command post-vote up" rel="nofollow" title="I like this post (click again to cancel)"> </span><div id="post-42118-score" class="post-score" title="current number of votes">0</div><span id="post-42118-downvote" class="ajax-command post-vote down" rel="nofollow" title="I dont like this post (click again to cancel)"> </span></div></td><td><div class="item-right"></div></td></tr></tbody></table>
 
 </div>
 
