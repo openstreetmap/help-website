@@ -1,4 +1,4 @@
-#!usr/bin/env python3
+#!/usr/bin/env python3
 #
 # convert-questions.py
 # Convert OSQA HTML questions to commonmark.
@@ -27,7 +27,10 @@ import time
 class Question:
     def __init__(self, import_file):
         self.import_file = import_file
-        (number, self.slug) = import_file.removesuffix('.html').split('.', maxsplit=2)
+        base = import_file.removesuffix('.html')
+        parts = base.split('.', maxsplit=1)
+        number = parts[0]
+        self.slug = parts[1] if len(parts) > 1 else ""
         self.number = int(number)
         self.title = None
         self.answers = 0
@@ -49,7 +52,7 @@ def convert_question(question, questions_dir, content_dir):
     with open(os.path.join(questions_dir, question.import_file), 'r', encoding='utf-8') as import_f:
         html_body = import_f.read()
     soup = BeautifulSoup(html_body, 'html.parser')
-    question.title = quote_toml(soup.find('title').string).removesuffix(' - Wireshark Q&amp;A')
+    question.title = quote_toml(soup.find('title').string).removesuffix(' - OSM Help')
     q_description = quote_toml(soup.find('meta', {'name': 'description'})['content'])
     q_keywords = soup.find('meta', {'name': 'keywords'})['content']
 
@@ -156,7 +159,7 @@ def main():
     parser.add_argument('--log-file', default=None, help='Log file')
     parser.add_argument('--parallel', type=int, default=4, help='Number of concurrent workers to use.')
     parser.add_argument('--start-question', type=int, default=1, help='First question to import')
-    parser.add_argument('--stop-question', type=int, default=64400, help='Last question to import')
+    parser.add_argument('--stop-question', type=int, default=88268, help='Last question to import')
     args = parser.parse_args()
 
     args.import_directory = os.path.normpath(args.import_directory)

@@ -1,4 +1,4 @@
-#!usr/bin/env python3
+#!/usr/bin/env python3
 #
 # fetch-upfiles.py
 # Import uploads from an OSQA site based on imported questions.
@@ -18,7 +18,7 @@ import time
 import urllib.request, urllib.error, urllib.parse
 
 
-osqa_ask_url = 'https://osqa-ask.wireshark.org'
+osqa_ask_url = 'https://help.openstreetmap.org'
 invalid_chars_re = re.compile('[^A-Za-z0-9-_=+,.%~]')
 
 
@@ -30,7 +30,7 @@ def open_url(url, encoding=None):
     '''Open a URL.
     Returns the tuple (body, status).
     '''
-    req_headers = { 'User-Agent': 'Wireshark import-from-osqa' }
+    req_headers = { 'User-Agent': 'OpenStreetMap import-from-osqa' }
     body = ''
     try:
         req = urllib.request.Request(url, headers=req_headers)
@@ -49,16 +49,25 @@ def open_url(url, encoding=None):
 
 
 def fetch_upfile(upfile_name, upfiles_dir):
-    (uf_body, status) = open_url(f'{osqa_ask_url}/upfiles/{urllib.parse.quote(upfile_name)}')
-
-    if not uf_body or status != 200:
-        logging.critical(f'Failed to fetch {upfile_name}: {status}')
-        return
-
-    with open(os.path.join(upfiles_dir, upfile_name), 'wb') as upfile_f:
-        upfile_f.write(uf_body)
-    logging.info(f'Fetched upfile {upfile_name}, {len(uf_body)} bytes.')
-
+    max_retries = 3
+    url = f'{osqa_ask_url}/upfiles/{urllib.parse.quote(upfile_name)}'
+    for attempt in range(1, max_retries + 1):
+        uf_body, status = open_url(url)
+        if status == 200 and uf_body:
+            with open(os.path.join(upfiles_dir, upfile_name), 'wb') as upfile_f:
+                upfile_f.write(uf_body)
+            logging.info(f'Fetched upfile {upfile_name}, {len(uf_body)} bytes.')
+            return
+        elif status == 404:
+            logging.critical(f'Upfile {upfile_name} returned 404.')
+            return
+        else:
+            if attempt < max_retries:
+                logging.warning(f'Failed to fetch {upfile_name} (attempt {attempt}, status {status}), retrying...')
+                time.sleep(2)
+            else:
+                logging.critical(f'Failed to fetch {upfile_name} after {max_retries} attempts: status {status}')
+                return
 
 def find_upfiles(question_file):
     upfiles = set()
@@ -70,7 +79,7 @@ def find_upfiles(question_file):
 
 
 def main():
-    exit_err('This script is no longer relevant.')
+    # exit_err('This script is no longer relevant.')
 
     top_dir = os.path.join(os.path.dirname(__file__), '..')
 

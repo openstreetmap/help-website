@@ -18,10 +18,10 @@ import time
 import urllib.request, urllib.error, urllib.parse
 
 
-osqa_ask_url = 'https://osqa-ask.wireshark.org'
+osqa_ask_url = 'https://help.openstreetmap.org'
 invalid_chars_re = re.compile('[^A-Za-z0-9-_=+,.%~]')
 manual_fixes = {
-    63646: {'from': 'THIS-IS-PCAP-file.jpg]', 'to': 'THIS-IS-PCAP-file.jpg'},
+#    63646: {'from': 'THIS-IS-PCAP-file.jpg]', 'to': 'THIS-IS-PCAP-file.jpg'},
 }
 
 def exit_err(message):
@@ -32,7 +32,7 @@ def open_url(url, encoding=None):
     '''Open a URL.
     Returns the tuple (body, response_url, status).
     '''
-    req_headers = { 'User-Agent': 'Wireshark import-from-osqa' }
+    req_headers = { 'User-Agent': 'OpenStreetMap import-from-osqa' }
     try:
         req = urllib.request.Request(url, headers=req_headers)
         response = urllib.request.urlopen(req)
@@ -53,31 +53,50 @@ def open_url(url, encoding=None):
 
 
 def fetch_question(question, questions_dir):
-    question_url = f'{osqa_ask_url}/questions/{question}'
-    (body, response_url, status) = open_url(question_url, encoding='UTF-8')
-    if status == 200:
-        q_filename = ''
-        if response_url.startswith(question_url + '/'):
-            q_filename = response_url[len(question_url)+1:]
-        if len(q_filename) < 1:
-            exit_err(f"Invalid response URL for question {question}: {response_url}")
-        q_filename = f'{question}.' + invalid_chars_re.sub('_', q_filename).lower() + '.html'
-        if question in manual_fixes:
-            replace = manual_fixes[question]
-            body = body.replace(replace['from'], replace['to'])
-            logging.info(f'Replaced {replace["from"]} with {replace["to"]} in question {question}')
-        with open(os.path.join(questions_dir, q_filename), 'w') as html_f:
-            html_f.write(body)
-        logging.info(f'Fetched {question} as {q_filename}, {len(body)} bytes.')
-        return True
-    elif status == 404:
-        logging.info(f'Question {question} returned 404.')
-    else:
-        logging.critical(f'Question {question_url} returned {status}')
-    return False
+    max_retries = 3
+    for attempt in range(1, max_retries + 1):
+        question_url = f'{osqa_ask_url}/questions/{question}'
+        try:
+            (body, response_url, status) = open_url(question_url, encoding='UTF-8')
+        except Exception as e:
+            if attempt < max_retries:
+                logging.warning(f'Error fetching question {question} (attempt {attempt}): {e}. Retrying...')
+                time.sleep(2)
+                continue
+            else:
+                logging.critical(f'Failed to fetch question {question} after {max_retries} attempts: {e}')
+                return False
+
+        if status == 200:
+            q_filename = ''
+            if response_url.startswith(question_url + '/'):
+                q_filename = response_url[len(question_url)+1:]
+            # if len(q_filename) < 1:
+            #     exit_err(f"Invalid response URL for question {question}: {response_url}")
+            q_filename = f'{question}.' + invalid_chars_re.sub('_', q_filename).lower() + '.html'
+            q_filename = q_filename.replace('..', '.')
+            if question in manual_fixes:
+                replace = manual_fixes[question]
+                body = body.replace(replace['from'], replace['to'])
+                logging.info(f'Replaced {replace["from"]} with {replace["to"]} in question {question}')
+            with open(os.path.join(questions_dir, q_filename), 'w') as html_f:
+                html_f.write(body)
+            logging.info(f'Fetched {question} as {q_filename}, {len(body)} bytes.')
+            return True
+        elif status == 404:
+            logging.info(f'Question {question} returned 404.')
+            return False
+        else:
+            if attempt < max_retries:
+                logging.warning(f'Question {question_url} returned {status} (attempt {attempt}). Retrying...')
+                time.sleep(2)
+                continue
+            else:
+                logging.critical(f'Question {question_url} returned {status} after {max_retries} attempts.')
+                return False
 
 def main():
-    exit_err('This script is no longer relevant.')
+    # exit_err('This script is no longer relevant.')
 
     top_dir = os.path.join(os.path.dirname(__file__), '..')
 
