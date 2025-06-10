@@ -1,6 +1,6 @@
 FROM docker.io/hugomods/hugo:debian-base-0.147.8 AS hugo
 
-COPY . /src
+COPY site /src
 
 RUN hugo build \
         --minify \
